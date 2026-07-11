@@ -134,6 +134,29 @@ async function processFile(parsed: ParsedFile): Promise<ConvertedPage> {
 }
 
 // ---------------------------------------------------------------------------
+// Namespace resolution
+// ---------------------------------------------------------------------------
+
+const NAMESPACE_MAP: Record<string, number> = {
+  MediaWiki: 8,
+  Template: 10,
+  Help: 12,
+  Category: 14,
+};
+
+function resolveNamespace(title: string): number {
+  const colon = title.indexOf(':');
+  if (colon === -1) return 0;
+  return NAMESPACE_MAP[title.slice(0, colon)] ?? 0;
+}
+
+function resolveContentModel(title: string): { model: string; format: string } {
+  if (title.endsWith('.css')) return { model: 'css', format: 'text/css' };
+  if (title.endsWith('.js')) return { model: 'javascript', format: 'text/javascript' };
+  return { model: 'wikitext', format: 'text/x-wiki' };
+}
+
+// ---------------------------------------------------------------------------
 // XML assembly
 // ---------------------------------------------------------------------------
 
@@ -156,17 +179,23 @@ function buildXml(pages: ConvertedPage[]): string {
   siteinfo.ele('case').txt('first-letter');
   const namespaces = siteinfo.ele('namespaces');
   namespaces.ele('namespace', { key: '0', case: 'first-letter' });
+  namespaces.ele('namespace', { key: '8', case: 'first-letter' }).txt('MediaWiki');
+  namespaces.ele('namespace', { key: '10', case: 'first-letter' }).txt('Template');
+  namespaces.ele('namespace', { key: '12', case: 'first-letter' }).txt('Help');
+  namespaces.ele('namespace', { key: '14', case: 'first-letter' }).txt('Category');
 
   for (const page of pages) {
+    const ns = resolveNamespace(page.title);
     const pageEl = root.ele('page');
     pageEl.ele('title').txt(page.title);
-    pageEl.ele('ns').txt('0');
+    pageEl.ele('ns').txt(String(ns));
     const revision = pageEl.ele('revision');
     revision.ele('timestamp').txt(timestamp);
     const contributor = revision.ele('contributor');
     contributor.ele('username').txt('Importer');
-    revision.ele('model').txt('wikitext');
-    revision.ele('format').txt('text/x-wiki');
+    const { model, format } = resolveContentModel(page.title);
+    revision.ele('model').txt(model);
+    revision.ele('format').txt(format);
     const bytes = Buffer.byteLength(page.body, 'utf8');
     revision
       .ele('text', { bytes: String(bytes), 'xml:space': 'preserve' })
