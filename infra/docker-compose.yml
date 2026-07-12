@@ -1,3 +1,7 @@
+# Pin the compose project name so container/volume names (qwiki_mediawiki-db)
+# stay stable regardless of where this file lives or what the checkout is named.
+name: qwiki
+
 services:
   mediawiki:
     image: mediawiki

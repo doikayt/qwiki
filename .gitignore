@@ -16,3 +16,6 @@ coverage/
 *.old
 *.png
 
+
+# MediaWiki images bind mount (created by docker at runtime)
+infra/images/

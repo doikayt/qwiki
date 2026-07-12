@@ -1,3 +1,8 @@
+<!-- TOC:START -->
+<!-- TOC:END -->
+
+
+
 # qwiki
 
 Bootstrap a MediaWiki from local Markdown files.
@@ -24,7 +29,7 @@ tool, not a sync tool.
 ### 1. Start a fresh local wiki
 
 ```bash
-bash scripts/fresh-install.sh
+bash infra/scripts/fresh-install.sh
 ```
 
 This tears down any existing wiki, runs the MediaWiki installer, and brings
@@ -35,7 +40,7 @@ Default admin credentials: `Admin` / `AdminPass123`
 ### 2. Deploy content
 
 ```bash
-bash scripts/import-content.sh
+bash infra/scripts/import-content.sh
 ```
 
 This converts `example-content/` and pushes all pages to the wiki via the
@@ -126,19 +131,19 @@ Use them on any page with `{{EvaluationCriteria|cost_notes=Low|risk_notes=Medium
 
 ## Local Docker environment
 
-The `scripts/` and `docker-compose.yml` provide a self-contained local wiki
-for content development and testing.
+The `infra/` directory (`scripts/`, `docker-compose.yml`, `LocalSettings.php`)
+provides a self-contained local wiki for content development and testing.
 
 | Script | What it does |
 |---|---|
-| `scripts/fresh-install.sh` | Full reset: tear down containers, wipe DB volume, reinstall |
-| `scripts/import-content.sh` | Deploy `example-content/` to the running wiki |
-| `scripts/bounce.sh` | Restart containers (flushes APCu/ResourceLoader cache) |
-| `scripts/wipe.sh` | Tear down containers and volumes without reinstalling |
+| `infra/scripts/fresh-install.sh` | Full reset: tear down containers, wipe DB volume, reinstall |
+| `infra/scripts/import-content.sh` | Deploy `example-content/` to the running wiki |
+| `infra/scripts/bounce.sh` | Restart containers (flushes APCu/ResourceLoader cache) |
+| `infra/scripts/wipe.sh` | Tear down containers and volumes without reinstalling |
 
 ### Configuration
 
-Edit `LocalSettings.php` before running `fresh-install.sh`:
+Edit `infra/LocalSettings.php` before running `fresh-install.sh`:
 
 - `$wgSitename` — your wiki's display name
 - `$wgMetaNamespace` — namespace prefix (no spaces)

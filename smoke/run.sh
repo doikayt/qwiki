@@ -7,7 +7,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 echo "==> Checking wiki is up..."
 if ! curl -sf --max-time 5 "$WIKI_URL" > /dev/null; then
-  echo "ERROR: Wiki not reachable at $WIKI_URL — run scripts/fresh-install.sh first"
+  echo "ERROR: Wiki not reachable at $WIKI_URL — run infra/scripts/fresh-install.sh first"
   exit 1
 fi
 echo "    OK"
@@ -62,7 +62,7 @@ api_edit "Category:Mammals" "Sample leaf category.
 [[Category:Animals]]"
 
 echo "==> Bouncing containers..."
-bash "$(dirname "$0")/../scripts/bounce.sh"
+bash "$(dirname "$0")/../infra/scripts/bounce.sh"
 
 echo "==> Waiting for wiki..."
 until curl -sf --max-time 2 "$WIKI_URL" > /dev/null; do sleep 1; done
