@@ -50,6 +50,12 @@ would copy as their starting point.
   root category, two subcategories, a handful of pages, one system page)
 - `spike-content/system/common-css.md` kept — demonstrates the
   `raw: true` + system page pattern
+- `example-content/templates/` added — demonstrates templates as
+  first-class content via `raw: true` + `Template:` namespace title.
+  Worked example: `Template:EvaluationCriteria` — a reusable table
+  for evaluating tools against Cost, Risk, and Accessibility criteria.
+  Authors drop `{{EvaluationCriteria|cost_notes=...|risk_notes=...}}`
+  into any page to get a consistently structured table.
 - `smoke/` folds in as `example-content/smoke/` or is documented
   alongside as the minimal one-category test
 - Frontmatter schema documented inline via comments in the example files
@@ -71,6 +77,8 @@ with the following changes:
   - Prerequisites (Node 18+, Docker)
   - Quickstart: fresh-install + deploy example content
   - Frontmatter schema reference (title, categories, redirect_from, raw)
+  - Templates: how to author and deploy reusable wiki macros via
+    `Template:` namespace pages with `raw: true`
   - CLI usage and MW_PASSWORD env var
   - How the Docker dev environment works
   - How to adapt example-content for your own wiki
