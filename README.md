@@ -22,10 +22,17 @@
 
 Bootstrap a MediaWiki from local Markdown files.
 
-**For:** technical teams who have a lot of content in their heads and want to
-get a wiki off the ground fast — without being slowed down by the wiki web UI.
-Write and restructure pages with grep, sed, and your editor. When you're ready,
-deploy everything to a running MediaWiki in one command.
+**For:** technical teams or individuals who have a clear idea of
+
+- the wiki content that they want to publish, and
+- the general guardrails and formatting guidelines they wish to establish
+  for that content's ongoing maintenance
+
+…but have not yet nailed down a complete picture of how they wish to
+structure it. Get the wiki off the ground fast — without being slowed down
+by the wiki web UI. Write and restructure pages with grep, sed, and your
+editor. When you're ready, deploy everything to a running MediaWiki in one
+command.
 
 Once the wiki is live, normal wiki editing takes over. qwiki is a bootstrap
 tool, not a sync tool.
