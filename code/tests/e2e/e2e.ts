@@ -13,7 +13,7 @@ import { spawnSync } from 'node:child_process';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..', '..');
+const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..', '..', '..');
 const WIKI_URL = 'http://localhost:8080';
 const CONTENT_DIR = resolve(repoRoot, 'example/wiki-content-files');
 
