@@ -18,7 +18,7 @@ echo "    OK"
 export MW_PASSWORD="${MW_PASSWORD:-AdminPass123}"
 
 echo "==> Deploying content..."
-(cd "$REPO_ROOT" && npx tsx src/cli.ts "$CONTENT_DIR" --wiki "$WIKI_URL" --user Admin)
+(cd "$REPO_ROOT" && npx tsx code/src/cli.ts "$CONTENT_DIR" --wiki "$WIKI_URL" --user Admin)
 
 echo "==> Bouncing containers to flush APCu/ResourceLoader cache..."
 bash "$SCRIPT_DIR/bounce.sh"
