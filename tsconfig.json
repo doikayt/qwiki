@@ -2,9 +2,9 @@
   "extends": "./node_modules/@datalackey/typescript-build-config/src/tsconfig.base.json",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDir": "code/src",
     "types": ["node"]
   },
-  "include": ["src"]
+  "include": ["code/src"]
 }
 

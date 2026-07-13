@@ -15,13 +15,13 @@
     "node": ">=22"
   },
   "scripts": {
-    "qwiki": "npx tsx src/cli.ts",
+    "qwiki": "npx tsx code/src/cli.ts",
     "build": "tsc -p tsconfig.json",
     "prepack": "npm run build",
-    "lint": "eslint src",
-    "format": "prettier --write src",
+    "lint": "eslint code/src",
+    "format": "prettier --write code/src",
     "test": "vitest run",
-    "test:e2e": "tsx tests/e2e/e2e.ts",
+    "test:e2e": "tsx code/tests/e2e/e2e.ts",
     "ci": "npm run check-markdown-docs && npm test && npm run test:e2e",
     "update-all-format": "npm run format && npm run update-markdown-docs",
     "update-markdown-docs": "autogen-markdown-doc update README.md",
