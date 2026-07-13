@@ -1,10 +1,12 @@
 <!-- TOC:START -->
 - [qwiki](#qwiki)
   - [Prerequisites](#prerequisites)
-  - [Quickstart](#quickstart)
+  - [How To Use](#how-to-use)
+    - [Install](#install)
+    - [Run](#run)
+  - [Local Development Quickstart](#local-development-quickstart)
     - [1. Start a fresh local wiki](#1-start-a-fresh-local-wiki)
     - [2. Deploy content](#2-deploy-content)
-    - [3. Use qwiki directly](#3-use-qwiki-directly)
   - [Content directory layout](#content-directory-layout)
     - [Frontmatter reference](#frontmatter-reference)
     - [Namespace detection](#namespace-detection)
@@ -53,7 +55,34 @@ tool, not a sync tool.
 
 ---
 
-## Quickstart
+## How To Use
+
+### Install
+
+```bash
+npm install --save-dev @datalackey/qwiki
+```
+
+### Run
+
+```bash
+MW_PASSWORD=<wiki-password> npx qwiki <content-dir> --wiki <url> --user <username>
+```
+
+| Argument | Required | Description |
+|---|---|---|
+| `<content-dir>` | yes | Path to your Markdown content directory |
+| `--wiki` | yes | Base URL of the running MediaWiki instance |
+| `--user` | yes | Wiki username with write access |
+
+The password is always passed via `MW_PASSWORD` — never as a flag.
+
+See [Content directory layout](#content-directory-layout) for how to structure
+your Markdown files.
+
+---
+
+## Local Development Quickstart
 
 ### 1. Start a fresh local wiki
 
@@ -74,16 +103,6 @@ bash infra/scripts/import-content.sh
 
 This converts `example/wiki-content-files/` and pushes all pages to the wiki via the
 MediaWiki API. Open `http://localhost:8080` and hard-refresh to see the result.
-
-### 3. Use qwiki directly
-
-```bash
-MW_PASSWORD=AdminPass123 npx tsx code/src/cli.ts ./my-content \
-                        --wiki http://localhost:8080 --user Admin
-```
-
-Password is always passed via the `MW_PASSWORD` environment variable —
-never as a flag.
 
 ---
 
