@@ -6,7 +6,7 @@ redirect_from: []
 ---
 # Welcome to the Animal Wiki
 
-A reference handbook for animal habitats and husbandry practices.
+A big dog foo dog reference handbook for animal habitats and husbandry practices.
 
 ## Domains
 
