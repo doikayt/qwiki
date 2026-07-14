@@ -155,4 +155,7 @@ wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'CategoryTree' );
 $wgCategoryTreeSidebarRoot = 'Domains'; # CHANGE: root category key for sidebar tree (must match your top-level Category:X)
 
+wfLoadExtension( 'Cargo' );
+wfLoadExtension( 'PageForms' );
+
 $wgShowExceptionDetails = true; # Disable in production

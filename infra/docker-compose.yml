@@ -11,6 +11,8 @@ services:
     volumes:
       - ./images:/var/www/html/images
       - ./LocalSettings.php:/var/www/html/LocalSettings.php
+      - ./extensions/PageForms:/var/www/html/extensions/PageForms
+      - ./extensions/Cargo:/var/www/html/extensions/Cargo
     depends_on:
       - database
 
