@@ -63,8 +63,8 @@ would copy as their starting point.
 ### 3. The tool (src/)
 
 **Step 0 — standard tooling baseline (do this first):**
-qwiki must conform to the standard @datalackey TypeScript project prototype:
-- Install `@datalackey/typescript-build-config` as devDependency; let its
+qwiki must conform to the standard @doikayt TypeScript project prototype:
+- Install `@doikayt/typescript-build-config` as devDependency; let its
   post-install script generate ESLint, Prettier, and tsconfig config files
 - Add Vitest for testing
 - Add `engines: { "node": ">=18" }` to package.json

@@ -1,5 +1,5 @@
 {
-  "extends": "./node_modules/@datalackey/typescript-build-config/src/tsconfig.base.json",
+  "extends": "./node_modules/@doikayt/typescript-build-config/src/tsconfig.base.json",
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "code/src",

@@ -15,7 +15,7 @@
 set -euo pipefail
 
 CHANGESET_DIR=".changeset"
-PACKAGES=("@datalackey/qwiki")
+PACKAGES=("@doikayt/qwiki")
 
 # Skip if a manually-authored changeset already exists
 EXISTING=$(find "$CHANGESET_DIR" -name "*.md" ! -name "README.md" | wc -l)

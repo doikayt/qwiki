@@ -1,5 +1,5 @@
 {
-  "name": "@datalackey/qwiki",
+  "name": "@doikayt/qwiki",
   "version": "0.1.4",
   "description": "Bootstrap a MediaWiki from local Markdown files",
   "bin": {
@@ -35,8 +35,8 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
-    "@datalackey/autogen-markdown-doc": "^1.4.11",
-    "@datalackey/typescript-build-config": "^0.1.7",
+    "@doikayt/autogen-markdown-doc": "^1.4.17",
+    "@doikayt/typescript-build-config": "^0.1.9",
     "@types/node": "^22.20.1",
     "tsx": "4.23.0",
     "typescript": "~6.0.3",
