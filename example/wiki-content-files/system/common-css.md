@@ -8,16 +8,13 @@ raw: true
 #mw-panel {
   width: 16em !important;
 }
-#content {
-  margin-left: 17em !important;
-}
+#content,
 #footer {
   margin-left: 17em !important;
 }
-#mw-head,
-#mw-head-base,
-#mw-page-base {
-  left: 16em !important;
+#left-navigation,
+#mw-head-base {
+  margin-left: 16em !important;
 }
 
 /* CategoryTree sidebar: match nav link size and prevent wrapping */
