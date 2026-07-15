@@ -5,18 +5,21 @@ import { convert } from "pandoc-wasm";
 
 export type ContentModel = "wikitext" | "css" | "javascript";
 
+/** Produced by convertDir() from a single Markdown file; consumed by deploy(). */
 export interface Page {
     title: string;
     body: string;
     model: ContentModel;
 }
 
+/** Infer MediaWiki content model from the title suffix (.css/.js), else wikitext. */
 function modelForTitle(title: string): ContentModel {
     if (title.endsWith(".css")) return "css";
     if (title.endsWith(".js")) return "javascript";
     return "wikitext";
 }
 
+/** Recursively collect every `*.md` file path under dir. */
 function findMarkdownFiles(dir: string): string[] {
     const results: string[] = [];
     for (const entry of readdirSync(dir, { withFileTypes: true })) {
@@ -27,6 +30,14 @@ function findMarkdownFiles(dir: string): string[] {
     return results;
 }
 
+/**
+ * Walk dir for Markdown files and turn each into one or more wiki Page(s).
+ * `raw: true` frontmatter sends the body verbatim (CSS/JS/template wikitext
+ * that must not go through pandoc); otherwise the body is converted
+ * markdown -> mediawiki and `categories:` frontmatter is appended as
+ * `[[Category:X]]` tags. Each `redirect_from:` entry produces an extra
+ * `#REDIRECT [[title]]` page.
+ */
 export async function convertDir(dir: string): Promise<Page[]> {
     const files = findMarkdownFiles(dir);
     if (files.length === 0) throw new Error(`No .md files found under: ${dir}`);

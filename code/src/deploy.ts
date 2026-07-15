@@ -1,14 +1,21 @@
 import type { Page } from "./convert.js";
 
+/** Produced by cli.ts from parsed CLI args; consumed by deploy(). */
 export interface DeployOptions {
     wiki: string;
     user: string;
     password: string;
 }
 
+/**
+ * Session cookie store for the MediaWiki API. MediaWiki ties both the login
+ * handshake and the resulting authenticated session to cookies, so every
+ * request in deploy() must reuse the same jar in sequence.
+ */
 class CookieJar {
     private jar = new Map<string, string>();
 
+    /** Merge any Set-Cookie headers from a response into the jar. */
     absorb(res: Response): void {
         const getAll = (res.headers as Headers & { getSetCookie?(): string[] }).getSetCookie;
         const raw: string[] =
@@ -24,11 +31,13 @@ class CookieJar {
         }
     }
 
+    /** Serialize the jar as a `Cookie:` request header value. */
     header(): string {
         return [...this.jar.entries()].map(([k, v]) => `${k}=${v}`).join("; ");
     }
 }
 
+/** GET `<wiki>/api.php` with the given query params, forcing JSON output. */
 async function apiGet(
     wiki: string,
     jar: CookieJar,
@@ -42,6 +51,7 @@ async function apiGet(
     return res.json() as Promise<Record<string, unknown>>;
 }
 
+/** POST `<wiki>/api.php` with the given form params, forcing JSON output. */
 async function apiPost(
     wiki: string,
     jar: CookieJar,
@@ -57,6 +67,12 @@ async function apiPost(
     return res.json() as Promise<Record<string, unknown>>;
 }
 
+/**
+ * Authenticate against the MediaWiki Action API and write every page via
+ * `action=edit` - the same call a human edit through the wiki UI produces.
+ * Sequence: fetch a login token, clientlogin, fetch a CSRF token, then one
+ * edit POST per page (idempotent - re-running overwrites with current content).
+ */
 export async function deploy(pages: Page[], opts: DeployOptions): Promise<void> {
     const { wiki, user, password } = opts;
     const jar = new CookieJar();

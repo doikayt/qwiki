@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 import { convertDir } from "./convert.js";
 import { deploy } from "./deploy.js";
 
+/** Print usage and exit non-zero. */
 function usage(): never {
     process.stderr.write(
         "Usage: qwiki <content-dir> --wiki <url> --user <username>\n" +
@@ -11,6 +12,7 @@ function usage(): never {
     process.exit(1);
 }
 
+/** Parse positional content-dir and --wiki/--user flags; exits via usage() if invalid. */
 function parseArgs(): { contentDir: string; wiki: string; user: string } {
     const args = process.argv.slice(2);
     const contentDir = args[0];
@@ -27,6 +29,7 @@ function parseArgs(): { contentDir: string; wiki: string; user: string } {
     return { contentDir: resolve(process.cwd(), contentDir), wiki, user };
 }
 
+/** Entry point: parse args, convert the content dir, deploy to the wiki. */
 async function main(): Promise<void> {
     const { contentDir, wiki, user } = parseArgs();
     const password = process.env["MW_PASSWORD"];

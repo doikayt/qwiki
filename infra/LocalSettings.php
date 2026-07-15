@@ -145,6 +145,7 @@ wfLoadSkin( 'Vector' );
 # The following extensions were automatically enabled:
 wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'ConfirmEdit' );
+wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'TitleBlacklist' );
 
