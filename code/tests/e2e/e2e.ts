@@ -21,9 +21,6 @@ const CONTENT_DIR = resolve(repoRoot, 'example/wiki-content-files');
 // The rendered sidebar HTML must contain a link to each.
 const EXPECTED_SIDEBAR_LINKS = [
   'Evaluation_Criteria',
-  'Habitats',
-  'Care_and_Husbandry',
-  'Why_Animals',
 ];
 
 function run(label: string, cmd: string, args: string[]): void {

@@ -8,9 +8,6 @@ raw: true
 * navigation
 ** mainpage|mainpage-description
 ** Evaluation Criteria|Evaluation criteria used across this wiki
-** Habitats|Habitats
-** Care and Husbandry|Care and husbandry
-** Why Animals|Our namesake
 ** Project:New Submission|New Submission
 * SEARCH
 * TOOLBOX

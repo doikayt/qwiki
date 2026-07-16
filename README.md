@@ -111,6 +111,10 @@ bash infra/scripts/import-content.sh
 This converts `example/wiki-content-files/` and pushes all pages to the wiki via the
 MediaWiki API. Open `http://localhost:8080` and hard-refresh to see the result.
 
+Importing is additive — pages are created or updated but never deleted. To
+remove a page, either delete it manually in the wiki UI, or run
+`fresh-install.sh` to wipe and reimport from scratch.
+
 ---
 
 ## Content directory layout
