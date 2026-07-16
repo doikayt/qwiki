@@ -1,5 +1,13 @@
 # @datalackey/qwiki
 
+## 0.1.7
+
+### Patch Changes
+
+-   - fix: header issues
+    - fix(ci): update reachability probe URL for New Submission rename
+    - fix(wiki): fix intra-wiki links, rename "Add New Tool" to "New Submission"
+
 ## 0.1.6
 
 ### Patch Changes
