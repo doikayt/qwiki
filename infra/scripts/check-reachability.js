@@ -41,7 +41,7 @@ function baseUrl() {
 // Special pages must use /index.php/ — the short-URL rewrite is broken for them.
 const PROBES = [
     { path: "/index.php/Main_Page",                       sentinel: "This page was last edited" },
-    { path: "/index.php/DoikaytFieldGuide:Add_New_Tool",  sentinel: "This page was last edited" },
+    { path: "/index.php/DoikaytFieldGuide:New_Submission", sentinel: "This page was last edited" },
     // Must include a target page — PageForms returns HTTP 400 for a bare
     // Special:FormEdit/<form>. Same URL the e2e specs navigate to.
     { path: "/index.php/Special:FormEdit/Tool/PW_Validation_Test", sentinel: 'id="pfForm"' },
