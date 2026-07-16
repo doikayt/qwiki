@@ -36,11 +36,16 @@
     "pandoc-wasm": "1.1.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.61.1",
     "@changesets/cli": "^2.31.0",
     "@doikayt/autogen-markdown-doc": "^1.4.17",
     "@doikayt/typescript-build-config": "^0.1.9",
+    "@fontsource-variable/noto-sans-hebrew": "^5.2.8",
+    "@fontsource/noto-sans-hebrew": "^5.2.8",
+    "@playwright/test": "^1.61.1",
+    "@resvg/resvg-js": "^2.6.2",
     "@types/node": "^22.20.1",
+    "opentype.js": "^2.0.0",
+    "pngjs": "^7.0.0",
     "tsx": "4.23.0",
     "typescript": "~6.0.3",
     "vitest": "^4.1.10"
