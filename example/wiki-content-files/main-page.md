@@ -16,7 +16,7 @@ agenda of Doikat Mobilization Labs. [TBD: need link]
 
 ### Profile
 
-IT staff and volunteers at such organization who are tasked with the:
+IT staff and volunteers (_technicians_) at such organization who are tasked with the:
 
 - identification,
 - evaluation,
@@ -26,7 +26,7 @@ IT staff and volunteers at such organization who are tasked with the:
 
 ### Proficiency Assumptions 
 
-Baseline technical skills. At minimum, you should be a 'power user', comfortable with:
+The technician should be at least at 'power user' level, comfortable with:
 
 - config files
 - command line directives
@@ -37,7 +37,7 @@ Baseline technical skills. At minimum, you should be a 'power user', comfortable
 ### Your Unique Challenges
 
 Recommendations here will prioritize products/services that meet 
-constraints your colleagues in corporate, government and military settings don't have to deal with:
+constraints technicians in corporate, government and military settings don't have to deal with:
 
 - shoe-string budgets,
 - deplatforming risks, and
@@ -50,8 +50,8 @@ these factor into our structured protocol for recommending new products and serv
 ## Site Organization 
 
 Content is organized as a shallow hierarchy, moving from broad generalized domains
-of organizational concern to operational areas within a domain  -- with, potentially,
-an intervening sub-area  -- all the way down to the level of individual tools (one per page).
+of organizational concern to operational areas within a domain  (and potentially,
+an intervening sub-area)  --  all the way down to the level of individual tools (one per page).
 
 **Domain** → 
     **Operational Area** → 

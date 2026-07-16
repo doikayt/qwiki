@@ -102,16 +102,20 @@ raw: true
 		var $url = $( 'input[name="Tool[url]"]' );
 		if ( !$url.length ) { return; }
 
-		var url = getFullUrl();
-		if ( !url ) { return; }
-
+		var domain = $url.val().trim();
 		var msg = null;
-		if ( probeResult === false ) {
-			msg = 'URL is not reachable. Please verify the address.';
-		} else if ( probeResult === null ) {
-			showStatus( 'Checking…', 'gray' );
-			probe( url );
-			msg = 'Verifying URL reachability — please try saving again in a moment.';
+
+		if ( !domain ) {
+			msg = 'URL is required.';
+		} else {
+			var url = getFullUrl();
+			if ( probeResult === false ) {
+				msg = 'URL is not reachable. Please verify the address.';
+			} else if ( probeResult === null ) {
+				showStatus( 'Checking…', 'gray' );
+				probe( url );
+				msg = 'Verifying URL reachability — please try saving again in a moment.';
+			}
 		}
 
 		if ( msg ) {
@@ -147,7 +151,9 @@ raw: true
 	} );
 }() );
 
-/* Require amount when pricing is not 'free'. */
+/* Amount / pricing cross-validation. Two rules:
+   1. pricing=free + non-zero amount → error (amount must be blank for free tools)
+   2. pricing!=free + blank or zero amount → error (amount is required) */
 ( function () {
 	'use strict';
 
@@ -155,7 +161,22 @@ raw: true
 		var $pricing = $( '[name="Tool[pricing]"]' );
 		var $amount  = $( '[name="Tool[amount]"]' );
 		if ( !$pricing.length || !$amount.length ) { return; }
-		if ( $pricing.val().trim() !== 'free' && !( $amount.val() || '' ).trim() ) {
+
+		var pricing = $pricing.val().trim();
+		var amount  = ( $amount.val() || '' ).trim();
+		var numericAmount = parseFloat( amount );
+
+		if ( pricing === 'free' && amount && numericAmount > 0 ) {
+			args.numErrors++;
+			$( '<tr class="pf-error-row"><td colspan="2">Free tools must have a blank amount.</td></tr>' )
+				.insertAfter( $amount.closest( 'tr' ) );
+			setTimeout( function () {
+				var $e = $( '.pf-error-row' ).first();
+				if ( $e.length ) { $e[ 0 ].scrollIntoView( { behavior: 'smooth', block: 'nearest' } ); }
+			}, 0 );
+		}
+
+		if ( pricing !== 'free' && ( !amount || numericAmount === 0 ) ) {
 			args.numErrors++;
 			$( '<tr class="pf-error-row"><td colspan="2">Amount is required when pricing is not free.</td></tr>' )
 				.insertAfter( $amount.closest( 'tr' ) );

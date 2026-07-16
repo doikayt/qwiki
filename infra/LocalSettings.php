@@ -124,8 +124,9 @@ $wgRightsIcon = "$wgResourceBasePath/resources/assets/licenses/cc-by.png";
 # Path to the GNU diff3 utility. Used for conflict resolution.
 $wgDiff3 = "/usr/bin/diff3";
 
-# The following permissions were set based on your choice in the installer
-$wgGroupPermissions["*"]["edit"] = false;
+# Local dev instance: allow anonymous editing so wipe/fresh-install cycles
+# (which recreate the DB and Admin account each time) don't force a re-login.
+$wgGroupPermissions["*"]["edit"] = true;
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, e.g. 'vector' or 'monobook':

@@ -19,7 +19,12 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npx playwright install --with-deps chromium
       - run: npm run ci
+      - run: npm run test:pw
+        env:
+          WIKI_ADMIN_USER: Admin
+          WIKI_ADMIN_PASS: AdminPass123
       - name: Check Changesets (PR only)
         if: github.event_name == 'pull_request'
         run: npx changeset status

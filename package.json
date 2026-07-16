@@ -22,7 +22,9 @@
     "format": "prettier --write code/src",
     "test": "vitest run",
     "test:e2e": "tsx code/tests/e2e/e2e.ts",
-    "ci": "npm run check-markdown-docs && npm test && npm run test:e2e",
+    "test:pw": "node infra/scripts/ensure-wiki.js && node infra/scripts/check-reachability.js && playwright test",
+    "check-wiki": "node infra/scripts/check-reachability.js",
+    "ci": "npm run check-markdown-docs && npm test && npm run test:e2e && npm run test:pw",
     "update-all-format": "npm run format && npm run update-markdown-docs",
     "update-markdown-docs": "autogen-markdown-doc update README.md",
     "check-markdown-docs": "autogen-markdown-doc check README.md"
@@ -34,6 +36,7 @@
     "pandoc-wasm": "1.1.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "@changesets/cli": "^2.31.0",
     "@doikayt/autogen-markdown-doc": "^1.4.17",
     "@doikayt/typescript-build-config": "^0.1.9",

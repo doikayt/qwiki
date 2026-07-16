@@ -73,7 +73,12 @@ async function apiPost(
  * Upload a single file to the wiki via `action=upload` (multipart/form-data).
  * `ignorewarnings=1` suppresses duplicate/exists warnings so re-runs are idempotent.
  */
-async function uploadFile(wiki: string, jar: CookieJar, csrf: string, filePath: string): Promise<void> {
+async function uploadFile(
+    wiki: string,
+    jar: CookieJar,
+    csrf: string,
+    filePath: string
+): Promise<void> {
     const filename = basename(filePath);
     const form = new FormData();
     form.append("action", "upload");
@@ -102,7 +107,11 @@ async function uploadFile(wiki: string, jar: CookieJar, csrf: string, filePath: 
  * Sequence: fetch a login token, clientlogin, fetch a CSRF token, then one
  * edit POST per page (idempotent - re-running overwrites with current content).
  */
-export async function deploy(pages: Page[], opts: DeployOptions, files: string[] = []): Promise<void> {
+export async function deploy(
+    pages: Page[],
+    opts: DeployOptions,
+    files: string[] = []
+): Promise<void> {
     const { wiki, user, password } = opts;
     const jar = new CookieJar();
 

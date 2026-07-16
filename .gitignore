@@ -26,3 +26,6 @@ infra/images/
 
 # MediaWiki extensions — cloned at setup time by ensure-extensions.sh, not committed
 infra/extensions/
+
+# Playwright output (screenshots, traces, .last-run.json)
+test-results/
