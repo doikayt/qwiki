@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.6
+
+### Patch Changes
+
+-   - fix(wiki): improve form validation error visibility and fix amount/category rules
+
 ## 0.1.5
 
 ### Patch Changes
