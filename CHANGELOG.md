@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.10
+
+### Patch Changes
+
+-   - fix(infra): drain job queue after content import to fix stale CategoryTree counts
+
 ## 0.1.9
 
 ### Patch Changes
