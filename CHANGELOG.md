@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.11
+
+### Patch Changes
+
+-   - fix(infra): expand sidebar category tree 2 levels deep by default
+
 ## 0.1.10
 
 ### Patch Changes
