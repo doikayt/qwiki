@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.12
+
+### Patch Changes
+
+-   - feat(infra): lay groundwork for droplet deployment via reserved IP + deploy key
+
 ## 0.1.11
 
 ### Patch Changes
