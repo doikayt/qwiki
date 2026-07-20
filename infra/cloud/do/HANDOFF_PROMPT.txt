@@ -1,0 +1,44 @@
+I'm setting up a DigitalOcean droplet for self-hosting a MediaWiki wiki
+("Doikayt Digital Mobilization Labs") via Docker. I already have a working
+Terraform config that should provision the bare droplet — Docker, git, Node.js/npm,
+a 2GB swapfile, ufw firewall, and a non-root `dev` user — via cloud-init.
+
+That part is done but should be re-tested; I've attached the files (main.tf,
+cloud-init.yaml, terraform.tfvars.example, .gitignore, README.md).
+
+
+First thing i want to do is plan out how we will move wiki content from 
+this repo (using pandoc converter pipeline).  Do we:
+
+    - clone this repo on the droplet and just run our setup? 
+      that seems easiest. since it is working fine on laptop
+
+    - if that makes sense we need to plan out how we expose the wiki in docker 
+      to public internet.
+
+
+
+
+
+What I need next: a production-ready `docker-compose.yml` (MediaWiki +
+MariaDB) to deploy on top of this droplet, sized for a 2GB droplet
+specifically — per-service memory limits (mem_limit or deploy.resources.
+limits.memory) so no single container can trigger the OOM killer, and a
+tuned innodb_buffer_pool_size for MariaDB (default assumes far more RAM
+than 2GB has). Bind-mount volumes to host paths (not anonymous Docker
+volumes) so backups can run directly against the host filesystem with
+mariadb-dump + tar.
+
+Also want:
+- A Caddyfile for automatic Let's Encrypt TLS (simpler than nginx+certbot
+  for a single-site droplet)
+- A backup/restore script (mariadb-dump + tar of the images directory,
+  pushed to DigitalOcean Spaces or similar)
+- Once those are in place, the markdown-to-MediaWiki content pipeline:
+  pandoc-based conversion from markdown drafts to MediaWiki XML for
+  Special:Import, handling the gaps pandoc doesn't cover automatically
+  (categories, templates, internal wikilinks) via a lightweight
+  front-matter convention in the markdown
+
+Full files, no line numbers, ready to copy-paste. Ask before assuming
+anything about droplet IP/domain — I haven't run `terraform apply` yet.

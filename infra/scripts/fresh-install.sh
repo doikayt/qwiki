@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-INFRA_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-REPO_ROOT="$(dirname "$INFRA_DIR")"
-COMPOSE="docker compose -f $INFRA_DIR/docker-compose.yml"
+REPO_ROOT="$(git -C "$(dirname "$0")" rev-parse --show-toplevel)"
+INFRA_DIR="$REPO_ROOT/infra"
+COMPOSE="bash $INFRA_DIR/scripts/launch-docker.sh"
 
 ADMIN_PASS="${1:-AdminPass123}"
 

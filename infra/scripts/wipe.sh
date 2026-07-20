@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-INFRA_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-COMPOSE="docker compose -f $INFRA_DIR/docker-compose.yml"
+REPO_ROOT="$(git -C "$(dirname "$0")" rev-parse --show-toplevel)"
+INFRA_DIR="$REPO_ROOT/infra"
+COMPOSE="bash $INFRA_DIR/scripts/launch-docker.sh"
 
 # 1. Bring containers down
 $COMPOSE down

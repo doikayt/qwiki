@@ -1,0 +1,27 @@
+# Droplet-only override, applied on top of docker-compose.yml by
+# infra/scripts/launch-docker.sh. Adds Caddy for TLS termination and
+# reverse proxying to wiki.doikayt.org, and passes the public server URL
+# through to MediaWiki. Port 8080 stays published in the base file for
+# local debugging over SSH, but is not internet-reachable -- see the
+# firewall in DROPLET/main.tf (only 22/80/443 are open).
+services:
+  mediawiki:
+    environment:
+      - WIKI_SERVER_URL
+
+  caddy:
+    image: caddy:2
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - mediawiki
+
+volumes:
+  caddy-data:
+  caddy-config:

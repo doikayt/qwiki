@@ -31,6 +31,10 @@
   },
   "type": "module",
   "license": "MIT",
+  "allowScripts": {
+    "@doikayt/typescript-build-config": true,
+    "esbuild": true
+  },
   "dependencies": {
     "gray-matter": "4.0.3",
     "pandoc-wasm": "1.1.0"

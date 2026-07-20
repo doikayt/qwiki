@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Pull the latest qwiki content/code and redeploy to an already-running wiki.
+# Safe to re-run any time -- never touches the MediaWiki DB (unlike
+# launch-in-cloud.sh, which is for first-time bootstrap only).
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="$(git -C "$SCRIPT_DIR" rev-parse --show-toplevel)"
+
+WIKI_URL="http://localhost:8080"
+
+echo "==> Checking wiki is up..."
+if ! curl -sf --max-time 5 "$WIKI_URL" > /dev/null; then
+  echo "ERROR: Wiki not reachable at $WIKI_URL"
+  echo "       Start it with: bash infra/scripts/launch-docker.sh up -d"
+  exit 1
+fi
+echo "    OK"
+
+echo "==> Pulling latest qwiki..."
+git -C "$REPO_ROOT" pull
+
+echo "==> Installing npm dependencies..."
+(cd "$REPO_ROOT" && npm ci)
+
+echo "==> Redeploying content..."
+bash "$SCRIPT_DIR/import-content.sh"
+
+echo ""
+echo "Reload complete."

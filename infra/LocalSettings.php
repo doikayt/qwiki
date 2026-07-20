@@ -32,7 +32,7 @@ $wgMetaNamespace = "DoikaytFieldGuide";
 $wgScriptPath = "";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://localhost:8080";
+$wgServer = getenv('WIKI_SERVER_URL') ?: "http://localhost:8080";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;

@@ -1,0 +1,87 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+
+packages:
+  - ca-certificates
+  - curl
+  - gnupg
+  - ufw
+  - git
+
+write_files:
+  - path: /etc/systemd/system/swap.service
+    content: |
+      [Unit]
+      Description=Create swapfile
+      DefaultDependencies=no
+      Before=swap.target
+
+      [Service]
+      Type=oneshot
+      ExecStart=/bin/bash -c 'fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo "/swapfile none swap sw 0 0" >> /etc/fstab'
+      RemainAfterExit=true
+
+      [Install]
+      WantedBy=swap.target
+
+  - path: /root/.ssh/id_ed25519_qwiki
+    permissions: '0600'
+    content: |
+      ${indent(6, github_deploy_key)}
+
+  - path: /root/.ssh/config
+    permissions: '0600'
+    content: |
+      Host github.com
+        IdentityFile /root/.ssh/id_ed25519_qwiki
+        IdentitiesOnly yes
+        StrictHostKeyChecking accept-new
+
+runcmd:
+  # Swap
+  - systemctl enable --now swap.service
+
+  # UFW
+  - ufw allow OpenSSH
+  - ufw allow 80/tcp
+  - ufw allow 443/tcp
+  - ufw --force enable
+
+  # Docker (official repo, not Ubuntu-packaged docker.io)
+  - install -m 0755 -d /etc/apt/keyrings
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+  - chmod a+r /etc/apt/keyrings/docker.asc
+  - echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo $VERSION_CODENAME) stable" > /etc/apt/sources.list.d/docker.list
+  - apt-get update
+  - apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+  # Node.js LTS + npm (NodeSource repo - apt's bundled nodejs is stale)
+  - curl -fsSL https://deb.nodesource.com/setup_lts.x -o /tmp/nodesource_setup.sh
+  - bash /tmp/nodesource_setup.sh
+  - apt-get install -y nodejs
+
+  # Non-root user for day-to-day ops (SSH key inherited via droplet ssh_keys)
+  - useradd -m -s /bin/bash -G docker,sudo dev
+  - mkdir -p /home/dev/.ssh
+  - cp /root/.ssh/authorized_keys /home/dev/.ssh/authorized_keys
+  - chown -R dev:dev /home/dev/.ssh
+  - chmod 700 /home/dev/.ssh
+  - chmod 600 /home/dev/.ssh/authorized_keys
+  - echo "dev ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/90-dev-nopasswd
+  - chmod 440 /etc/sudoers.d/90-dev-nopasswd
+
+  # GitHub deploy key (read-only, doikayt/qwiki only) + repo checkout
+  - cp /root/.ssh/id_ed25519_qwiki /home/dev/.ssh/id_ed25519_qwiki
+  - cp /root/.ssh/config /home/dev/.ssh/config
+  - chown dev:dev /home/dev/.ssh/id_ed25519_qwiki /home/dev/.ssh/config
+  - chmod 600 /home/dev/.ssh/id_ed25519_qwiki /home/dev/.ssh/config
+  - sudo -u dev git clone git@github.com:doikayt/qwiki.git /home/dev/qwiki
+
+  # Convenience alias for redeploying content/code without touching the DB
+  - echo "alias reload='bash ~/qwiki/infra/scripts/reload.sh'" >> /home/dev/.bashrc
+
+  # First-time bootstrap: installs MediaWiki fresh and deploys content
+  - sudo -u dev -H bash -c "cd /home/dev/qwiki && WIKI_ADMIN_PASSWORD='${wiki_admin_password}' bash infra/scripts/launch-in-cloud.sh"
+
+final_message: "Droplet ready. Docker, git, and Node.js/npm installed. Swap configured, firewall enabled. Wiki bootstrapped via launch-in-cloud.sh."
