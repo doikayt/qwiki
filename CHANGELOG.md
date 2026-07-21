@@ -1,5 +1,12 @@
 # @datalackey/qwiki
 
+## 0.1.20
+
+### Patch Changes
+
+-   - fix(wiki,tests): keep logo link local in dev; adopt shared Playwright config
+    - fix(infra): build website during first-time bootstrap and full local reset
+
 ## 0.1.19
 
 ### Patch Changes
