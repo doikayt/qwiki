@@ -17,7 +17,7 @@ body {
   color: var(--ink);
   margin: 0;
   line-height: 1.6;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   display: grid;
   grid-template-columns: var(--sidebar) 1fr;
   min-height: 100vh;
@@ -39,12 +39,10 @@ body {
 
 .logo-wrap {
   display: block;
-  text-align: center;
 }
 
 .logo {
-  width: 100%;
-  max-width: 140px;
+  width: 120px;
   height: auto;
   border-radius: 50%;
 }
@@ -83,7 +81,7 @@ main {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.02em;

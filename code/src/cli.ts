@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 import { resolve } from "node:path";
+import { execSync } from "node:child_process";
 import { collectFiles, convertDir } from "./convert.js";
 import { deploy } from "./deploy.js";
+
+const GITHUB_REPO = "https://github.com/doikayt/qwiki";
 
 /** Print usage and exit non-zero. */
 function usage(): never {
@@ -43,6 +46,21 @@ async function main(): Promise<void> {
     const files = collectFiles(contentDir);
     console.log(`    ${pages.length} page(s) converted`);
     if (files.length > 0) console.log(`    ${files.length} file(s) to upload`);
+
+    let commit = "";
+    try {
+        commit = execSync("git rev-parse HEAD", { encoding: "utf8" }).trim();
+    } catch {
+        // not in a git repo or git unavailable — skip build-commit page
+    }
+    if (commit) {
+        pages.push({
+            title: "MediaWiki:Doikayt-build-commit",
+            body: commit,
+            model: "wikitext",
+            sourcePath: "git rev-parse HEAD",
+        });
+    }
 
     console.log(`==> Deploying to: ${wiki}`);
     await deploy(pages, { wiki, user, password }, files);

@@ -1,12 +1,19 @@
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync, readdirSync } from 'fs';
 import { resolve, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 import { parse } from 'marked';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = resolve(ROOT, 'website/src');
 const DIST = resolve(ROOT, 'website/dist');
-const template = readFileSync(resolve(ROOT, 'website/template.html'), 'utf8');
+
+const GITHUB_REPO = 'https://github.com/doikayt/qwiki';
+const commit = execSync('git rev-parse HEAD', { cwd: ROOT }).toString().trim();
+const commitLink = `<a href="${GITHUB_REPO}/commit/${commit}">${commit.slice(0, 7)}</a>`;
+
+const template = readFileSync(resolve(ROOT, 'website/template.html'), 'utf8')
+  .replace('{{BUILD_COMMIT_LINK}}', commitLink);
 
 mkdirSync(DIST, { recursive: true });
 

@@ -199,3 +199,34 @@ raw: true
 		}
 	} );
 }() );
+
+/* Inject a "built at <commit>" link into the wiki footer. The commit hash is
+   stored in MediaWiki:Doikayt-build-commit and written on every qwiki deploy. */
+( function () {
+	'use strict';
+
+	var GITHUB_REPO = 'https://github.com/doikayt/qwiki';
+
+	new mw.Api().get( {
+		action: 'query',
+		titles: 'MediaWiki:Doikayt-build-commit',
+		prop: 'revisions',
+		rvprop: 'content',
+		rvslots: 'main'
+	} ).then( function ( data ) {
+		var pages = data.query.pages;
+		var page  = pages[ Object.keys( pages )[ 0 ] ];
+		if ( !page.revisions ) { return; }
+		var commit = page.revisions[ 0 ].slots.main[ '*' ].trim();
+		if ( !commit ) { return; }
+		var short = commit.slice( 0, 7 );
+		var $link = $( '<a>' ).attr( {
+			href:   GITHUB_REPO + '/commit/' + commit,
+			target: '_blank',
+			rel:    'noopener'
+		} ).text( 'built at ' + short );
+		$( '#footer-info' ).append(
+			$( '<li>' ).attr( 'id', 'footer-info-buildcommit' ).append( $link )
+		);
+	} );
+}() );
