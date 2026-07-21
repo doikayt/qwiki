@@ -27,7 +27,7 @@ body {
 
 .sidebar {
   border-right: 1px solid var(--border);
-  padding: 1.25rem 1rem;
+  padding: 1.25rem 1rem 1.25rem 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -42,7 +42,7 @@ body {
 }
 
 .logo {
-  width: 120px;
+  width: 85%;
   height: auto;
   border-radius: 50%;
 }
@@ -58,8 +58,8 @@ nav ul {
 
 nav ul a {
   text-decoration: none;
-  color: var(--muted);
-  font-size: 0.875rem;
+  color: var(--ink);
+  font-size: 0.9375rem;
   display: block;
   padding: 0.25rem 0;
 }
