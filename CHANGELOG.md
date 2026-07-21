@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.15
+
+### Patch Changes
+
+-   - feat(deploy): record source .md path in MediaWiki edit summary
+
 ## 0.1.14
 
 ### Patch Changes
