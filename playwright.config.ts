@@ -1,4 +1,5 @@
-import { defineConfig, devices } from "@playwright/test";
+import { devices } from "@playwright/test";
+import { definePlaywrightConfig } from "@doikayt/typescript-build-config/playwright";
 import { readFileSync } from "fs";
 import { dirname, resolve } from "path";
 import { fileURLToPath } from "url";
@@ -14,16 +15,13 @@ function localBaseUrl(): string {
     }
 }
 
-export default defineConfig({
+export default definePlaywrightConfig({
     testDir: "code/tests/e2e",
     testMatch: "**/*.spec.ts",
     timeout: 20_000,
     use: {
         baseURL: localBaseUrl(),
         headless: true,
-        ...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH
-            ? { launchOptions: { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH } }
-            : {}),
     },
     projects: [
         { name: "chromium", use: { ...devices["Desktop Chrome"] } },

@@ -431,7 +431,7 @@ Destructive — wipes the local wiki DB volume. Requires docker.
 ### Playwright (browser) tests
 
 ```bash
-PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/path/to/chromium npm run test:pw
+npm run test:pw
 ```
 
 Browser-level tests that exercise JavaScript form validation in a real
@@ -458,20 +458,26 @@ npm run check-wiki             # Phase A only (works anywhere)
 npm run check-wiki -- --docker # Phases A + B (run from the host)
 ```
 
-**Chromium:** Playwright needs a Chromium binary. On NixOS the system binary
-works:
+**Chromium:** Playwright needs a Chromium binary. `playwright.config.ts` uses
+`definePlaywrightConfig` from `@doikayt/typescript-build-config/playwright`,
+which auto-discovers a system Chromium (checks
+`PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH`, then `which chromium`/`chromium-browser`,
+then a few common install paths) and falls back to Playwright's own bundled
+browser if none is found. No manual setup is needed on NixOS or most Linux
+systems.
 
-```bash
-PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/run/current-system/sw/bin/chromium npm run test:pw
-```
-
-On other systems, install Playwright's bundled browser once:
+On other systems with no system Chromium, install Playwright's bundled
+browser once:
 
 ```bash
 npx playwright install chromium
 ```
 
-Then run without the env var.
+To override auto-detection (e.g. a nonstandard install path):
+
+```bash
+PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/path/to/chromium npm run test:pw
+```
 
 **Base URL configuration:** The tests read `local.config.json` in the repo
 root to determine the wiki URL. The default (localhost:8080) is correct when

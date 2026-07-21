@@ -6,12 +6,17 @@ raw: true
 ---
 
 /* Point the site logo at the Doikayt Mobilization Labs homepage, opening
-   in a new tab so the wiki stays open in the background. */
+   in a new tab so the wiki stays open in the background. Locally, send it
+   to the website preview server (npx serve website/dist -p 3456) instead
+   of production, so clicking it doesn't navigate away from localhost. */
 ( function () {
 	'use strict';
 
+	var isLocal = /^(localhost|127\.0\.0\.1)$/.test( location.hostname );
+	var target  = isLocal ? 'http://localhost:3456' : 'https://www.doikayt.org';
+
 	$( '#p-logo a' ).attr( {
-		href: 'https://www.doikayt.org',
+		href: target,
 		target: '_blank',
 		rel: 'noopener'
 	} );
