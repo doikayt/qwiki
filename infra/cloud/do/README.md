@@ -89,11 +89,21 @@ reinstalls npm deps, and redeploys content. It never wipes anything.
 
 ## Network
 
-- **Firewall** (`main.tf`): only 22 (SSH), 80, and 443 are open to the
-  internet. MediaWiki's container still publishes host port 8080 (see
-  `infra/docker-compose.yml`), but that's for reaching it directly over
-  SSH/localhost during setup and debugging -- the firewall makes it
-  unreachable from the public internet regardless of what's published.
+- **Firewall** (`main.tf`): 80 and 443 are open to the internet; 22
+  (SSH) is restricted to the operator's own IP(s) -- not `0.0.0.0/0` --
+  to keep internet-wide SSH scanner background noise from eating into
+  `sshd`'s `MaxStartups` budget (observed live: enough concurrent
+  scanner connections can get real connection attempts randomly
+  dropped). IPv4 is auto-detected at apply time via
+  `data.http.my_public_ipv4`, so a full teardown/rebuild always picks
+  up whatever IP is current; IPv6 is a manually-set `/64` ISP prefix
+  (`ssh_allowed_source_ipv6_cidr`) rather than an exact address, since
+  privacy-extension addresses rotate the host portion periodically but
+  the ISP-assigned prefix stays stable. MediaWiki's container still
+  publishes host port 8080 (see `infra/docker-compose.yml`), but that's
+  for reaching it directly over SSH/localhost during setup and
+  debugging -- the firewall makes it unreachable from the public
+  internet regardless of what's published.
 - **Reserved IP**: a droplet's own public IP changes if it's ever
   destroyed and recreated (e.g. after a `user_data`/cloud-init change,
   which forces replacement). `digitalocean_reserved_ip.wiki` is a

@@ -3,11 +3,18 @@
 # reverse proxying to wiki.doikayt.org, and passes the public server URL
 # through to MediaWiki. Port 8080 stays published in the base file for
 # local debugging over SSH, but is not internet-reachable -- see the
-# firewall in DROPLET/main.tf (only 22/80/443 are open).
+# firewall in infra/cloud/do/main.tf (only 22/80/443 are open).
+#
+# WIKI_SERVER_URL is hardcoded (not passed through from the host shell)
+# -- this is the one, known, stable domain for this deployment, unlike
+# launch-in-cloud.sh's ephemeral-IP-derived value (which only matters
+# for the MediaWiki installer's own internal --server flag at install
+# time; LocalSettings.php's real $wgServer is what actually governs
+# every request, and that comes from here).
 services:
   mediawiki:
     environment:
-      - WIKI_SERVER_URL
+      - WIKI_SERVER_URL=https://wiki.doikayt.org
 
   caddy:
     image: caddy:2

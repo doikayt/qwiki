@@ -4,7 +4,20 @@ terraform {
       source  = "digitalocean/digitalocean"
       version = "~> 2.0"
     }
+    http = {
+      source  = "hashicorp/http"
+      version = "~> 3.0"
+    }
   }
+}
+
+# Fetches the operator's current public IPv4 at apply time, so a full
+# teardown/rebuild automatically picks up whatever IP is current then --
+# no need to hand-update ssh_allowed_source_ipv6_cidr's IPv4 counterpart.
+# icanhazip.com's ipv4-only subdomain forces IPv4 resolution even on a
+# dual-stack connection (matches `curl -4 ifconfig.me` behavior).
+data "http" "my_public_ipv4" {
+  url = "https://ipv4.icanhazip.com"
 }
 
 variable "do_token" {
@@ -29,6 +42,12 @@ variable "droplet_size" {
   description = "DigitalOcean droplet size slug"
   type        = string
   default     = "s-2vcpu-4gb"
+}
+
+variable "ssh_allowed_source_ipv6_cidr" {
+  description = "Your ISP-assigned IPv6 /64 prefix, allowed to reach port 22 alongside the auto-detected IPv4 (see data.http.my_public_ipv4). Not auto-detected -- update by hand if you change ISPs. Use a /64, not a /128: IPv6 privacy-extension addresses rotate the host portion periodically, but the ISP-assigned network prefix stays stable."
+  type        = string
+  default     = "2600:1700:3ecb:ae00::/64"
 }
 
 variable "github_read_token" {
@@ -82,9 +101,12 @@ resource "digitalocean_firewall" "mediawiki" {
   droplet_ids = [digitalocean_droplet.mediawiki.id]
 
   inbound_rule {
-    protocol         = "tcp"
-    port_range       = "22"
-    source_addresses = ["0.0.0.0/0", "::/0"]
+    protocol   = "tcp"
+    port_range = "22"
+    source_addresses = [
+      "${trimspace(data.http.my_public_ipv4.response_body)}/32",
+      var.ssh_allowed_source_ipv6_cidr,
+    ]
   }
 
   inbound_rule {
