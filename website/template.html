@@ -7,9 +7,11 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <header>
+  <aside class="sidebar">
+    <a href="/" class="logo-wrap">
+      <img src="/logo.png" alt="Doikayt" class="logo">
+    </a>
     <nav>
-      <a href="/" class="site-name">Doikayt</a>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/about.html">About</a></li>
@@ -17,12 +19,14 @@
         <li><a href="https://wiki.doikayt.org" target="_blank" rel="noopener">Wiki ↗</a></li>
       </ul>
     </nav>
-  </header>
-  <main>
-    {{BODY}}
-  </main>
-  <footer>
-    <p>Doikayt &middot; <a href="https://wiki.doikayt.org">wiki.doikayt.org</a></p>
-  </footer>
+  </aside>
+  <div class="page">
+    <main>
+      {{BODY}}
+    </main>
+    <footer>
+      <p>Doikayt &middot; <a href="https://wiki.doikayt.org">wiki.doikayt.org</a></p>
+    </footer>
+  </div>
 </body>
 </html>

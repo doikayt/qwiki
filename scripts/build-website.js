@@ -11,6 +11,7 @@ const template = readFileSync(resolve(ROOT, 'website/template.html'), 'utf8');
 mkdirSync(DIST, { recursive: true });
 
 copyFileSync(resolve(SRC, 'styles.css'), resolve(DIST, 'styles.css'));
+copyFileSync(resolve(ROOT, 'infra/images/logo.png'), resolve(DIST, 'logo.png'));
 
 const pages = readdirSync(SRC).filter(f => f.endsWith('.md'));
 for (const file of pages) {
