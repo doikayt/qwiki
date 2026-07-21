@@ -17,6 +17,8 @@
       - [Top-level (domain) category](#top-level-domain-category)
       - [Second-level (operational area) category](#second-level-operational-area-category)
     - [Links](#links)
+  - [Website content authoring](#website-content-authoring)
+    - [Link syntax](#link-syntax)
   - [Local Docker environment](#local-docker-environment)
     - [Configuration](#configuration)
   - [Development](#development)
@@ -309,6 +311,45 @@ passthrough:
 Do not use `/wiki/Page_Name` URL-style links for internal pages. That format
 depends on the wiki's article path configuration and will break on installs
 where the path differs.
+
+---
+
+## Website content authoring
+
+The `website/src/` directory holds the source Markdown files for `doikayt.org`.
+`npm run build:website` converts them to HTML in `website/dist/`, which Caddy
+serves. On the droplet, `reload.sh` runs this step automatically after `git pull`.
+
+### Link syntax
+
+**External links** — standard Markdown:
+
+```markdown
+[Link text](https://example.com)
+```
+
+**Links between pages on doikayt.org** — use the `.html` output path,
+root-relative (the build script outputs `.html` files; it does not rewrite
+`.md` extensions in link targets):
+
+```markdown
+[About us](/about.html)
+[Back to home](/)
+```
+
+**From the website to the wiki** — use the full `wiki.doikayt.org` URL:
+
+```markdown
+[Explore our toolkit](https://wiki.doikayt.org/wiki/Main_Page)
+```
+
+**From a wiki page to the main site** — wiki pages use MediaWiki wikitext,
+not Markdown:
+
+```wikitext
+[https://doikayt.org doikayt.org]
+[https://doikayt.org/about.html About Us]
+```
 
 ---
 

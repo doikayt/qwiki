@@ -17,7 +17,7 @@ agenda of Doikayt Mobilization Labs. [TBD: need link]
 ### Profile
 
 You are in the right place if you are a _technician_  working as 
-IT staff or as a  volunteer at such organizations, where you are tasked with:
+IT staff or as a  volunteer at a movement-aligned organizations, where you are tasked with:
 
 - identification,
 - evaluation,
