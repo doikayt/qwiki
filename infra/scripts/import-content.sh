@@ -20,7 +20,9 @@ export MW_PASSWORD="${MW_PASSWORD:-AdminPass123}"
 LOGO_SRC="$CONTENT_DIR/files/logo.png"
 if [ -f "$LOGO_SRC" ]; then
   echo "==> Copying logo.png into wiki container..."
-  bash "$SCRIPT_DIR/launch-docker.sh" cp "$LOGO_SRC" mediawiki:/var/www/html/images/logo.png
+  # -L: logo.png may be a symlink (e.g. into docs/assets/) -- dereference it
+  # so the container gets the actual file, not an unresolvable symlink.
+  bash "$SCRIPT_DIR/launch-docker.sh" cp -L "$LOGO_SRC" mediawiki:/var/www/html/images/logo.png
 fi
 
 echo "==> Deploying content..."
