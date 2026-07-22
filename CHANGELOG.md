@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.24
+
+### Patch Changes
+
+-   - feat(sidebar): strip taglines from nav tree; disallow hyphens in company names
+
 ## 0.1.23
 
 ### Patch Changes
