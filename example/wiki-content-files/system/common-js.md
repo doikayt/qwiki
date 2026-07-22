@@ -22,6 +22,20 @@ raw: true
 	} );
 }() );
 
+/* Same local/prod split for any content-authored link to doikayt.org (e.g. the
+   About page's links to the website) -- rewrite so they point at the local
+   preview server instead of jumping out to production. */
+( function () {
+	'use strict';
+
+	var isLocal = /^(localhost|127\.0\.0\.1)$/.test( location.hostname );
+	if ( !isLocal ) { return; }
+
+	$( '#content a[href^="https://www.doikayt.org/"]' ).each( function () {
+		this.href = this.href.replace( 'https://www.doikayt.org', 'http://localhost:3456' );
+	} );
+}() );
+
 /* Replace PageForms OOUI tooltip buttons with a plain <sup>?</sup> trigger
    that shows the help text in a lightweight floating div on click. */
 ( function () {

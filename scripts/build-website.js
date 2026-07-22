@@ -2,11 +2,31 @@ import { readFileSync, writeFileSync, mkdirSync, copyFileSync, readdirSync } fro
 import { resolve, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
-import { parse } from 'marked';
+import { marked, parse } from 'marked';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = resolve(ROOT, 'website/src');
 const DIST = resolve(ROOT, 'website/dist');
+
+// Give every heading an id so pages can be deep-linked (e.g. projects.html#qwiki).
+function slugify(text) {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+}
+
+marked.use({
+  renderer: {
+    heading(token) {
+      const html = this.parser.parseInline(token.tokens);
+      const id = slugify(token.text);
+      return `<h${token.depth} id="${id}">${html}</h${token.depth}>\n`;
+    }
+  }
+});
 
 const GITHUB_REPO = 'https://github.com/doikayt/qwiki';
 const commit = execSync('git rev-parse HEAD', { cwd: ROOT }).toString().trim();
@@ -25,7 +45,7 @@ const ABOUT_TABS = [
   { slug: 'about', label: 'Our Name' },
   { slug: 'about-mission', label: 'Mission' },
   { slug: 'about-company-structure', label: 'Company Structure' },
-  { slug: 'about-people', label: 'People' },
+  { slug: 'about-people', label: 'People & Culture' },
 ];
 
 function buildTabsHtml(slug) {
