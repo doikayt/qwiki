@@ -68,6 +68,11 @@ raw: true
   overflow-x: auto;
 }
 
+/* Hide "no subcategories" clutter in the sidebar tree only (category pages unaffected) */
+#mw-panel i.CategoryTreeNotice {
+  display: none;
+}
+
 /* ── Doikayt watermelon theme: white bg, black text, badge green + red ── */
 /* Colors sampled from the badge: green #37723a, red #c5171a.             */
 /* Green = navigation/actions; red = emphasis/alerts.                     */
