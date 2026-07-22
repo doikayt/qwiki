@@ -159,6 +159,14 @@ describe("convertDir", () => {
         expect(pages).toHaveLength(1);
     });
 
+    it("preserves QWIKI_COMMIT_LINK through pandoc — regression: __TEXT__ is bold syntax so placeholder must not use double underscores", async () => {
+        const dir = fixtureDir({
+            "page.md": '---\ntitle: "About"\n---\n\nDeployed from commit QWIKI_COMMIT_LINK.\n',
+        });
+        const pages = await convertDir(dir);
+        expect(byTitle(pages, "About").body).toContain("QWIKI_COMMIT_LINK");
+    });
+
     it("filters non-string entries out of categories", async () => {
         const dir = fixtureDir({
             "page.md": '---\ntitle: "Home"\ncategories:\n  - Docs\n  - 42\n---\nHello.\n',

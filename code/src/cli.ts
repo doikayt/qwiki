@@ -62,7 +62,7 @@ async function main(): Promise<void> {
         const commitUrl = `https://github.com/doikayt/qwiki/commit/${commit}`;
         const commitLink = `[${commitUrl} ${commit.slice(0, 7)}]`;
         for (const page of pages) {
-            page.body = page.body.replace(/__QWIKI_BUILD_COMMIT__/g, commitLink);
+            page.body = page.body.replace(/QWIKI_COMMIT_LINK/g, commitLink);
         }
     }
 
