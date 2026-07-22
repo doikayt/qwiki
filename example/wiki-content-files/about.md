@@ -28,5 +28,6 @@ For those interested, our [website](https://www.doikayt.org) goes into lots more
 ## The Software
 
 See [this repo](https://github.com/doikayt/qwiki) to view
-the code behind this wiki (in its current state, and as we pursue databas-ification and LLM integration.)
+the code behind this wiki (in its current state, and as we pursue
+databas-ification and LLM integration) — deployed from commit __QWIKI_BUILD_COMMIT__.
 

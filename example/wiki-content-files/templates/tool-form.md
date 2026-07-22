@@ -7,8 +7,10 @@ raw: true
 <noinclude>
 This is the "Tool" form for adding a recommended tool or service.
 </noinclude><includeonly>
+{{{info|page name=<Tool[company]> - <Tool[tagline]>}}}
 {{{for template|Tool|display=table}}}
 {{{field|company|label=Company}}}
+{{{field|tagline|label=Tagline|input type=regexp|regexp=/^\S+(\s+\S+){1,9}$/|message=Tagline must be 2–10 words.|tooltip=2–10 word phrase summarising what the tool does (becomes part of the page title).}}}
 {{{field|protocol|label=URL|input type=dropdown|values=https,http|default=https}}}
 {{{field|url|label=|placeholder=google.com|tooltip=Enter domain only, no protocol prefix (e.g. google.com).}}}
 {{{field|pricing|label=Pricing|input type=dropdown|values=free,recurring/mo,recurring/yr,one time,varies|default=free}}}

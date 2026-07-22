@@ -7,6 +7,7 @@ raw: true
 <noinclude>
 {{#cargo_declare:_table=tool
 |company=String
+|tagline=String
 |protocol=String
 |url=String
 |pricing=String
@@ -21,6 +22,7 @@ raw: true
 </noinclude>
 {{#cargo_store:_table=tool
 |company={{{company|}}}
+|tagline={{{tagline|}}}
 |protocol={{{protocol|}}}
 |url={{{url|}}}
 |pricing={{{pricing|}}}
@@ -32,6 +34,9 @@ raw: true
 |rejected_alternatives={{{rejected_alternatives|}}}
 |category={{{category|}}}
 }}
+{{DISPLAYTITLE:{{{company|}}}}}
+''{{{tagline|}}}''
+
 {| class="wikitable"
 ! colspan="2" | Overview
 |-

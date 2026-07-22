@@ -54,14 +54,28 @@ Verify there is no similar category before you add a new one.
 
 #### Task Level Category Rules
 
-Each _Task_ should be a short phrase indicating a concrete action undertaken by 
-technicians in service of either special projects, or ongoing operations. 
+Each _Task_ should be a short phrase indicating a concrete action undertaken by
+technicians in service of either special projects, or ongoing operations.
 
 Tasks can be associated with more than one recommended tool. On any tool page
-we might have optional discussion of why that tool was selected over rejected alternatives, together 
-with a discussion of those alternatives. But as soon as we start accumulating more than one 
-viable  candidate for a task, each one should not only get its own page.  But we should 
-create a page 'Rejected Alternatives' at the level of the immediate parent Task 
-of the page that is now joined by its new sibling pages. 
+we might have optional discussion of why that tool was selected over rejected alternatives, together
+with a discussion of those alternatives. But as soon as we start accumulating more than one
+viable candidate for a task, each one should not only get its own page. But we should
+create a page 'Rejected Alternatives' at the level of the immediate parent Task
+of the page that is now joined by its new sibling pages.
+
+#### Tool Page Naming Convention
+
+Tool page titles are composed of two parts:
+
+    {Company Name} - {Tagline}
+
+The **tagline** is a 2–10 word phrase describing what the tool does in the
+context of this wiki's operational area (validated by the New Submission form).
+Example: `Words of Justice - AI co-pilot for Palestine advocacy`.
+
+A redirect from the bare company name (e.g. `WordsOfJustice`) is created
+automatically so that short-form links and searches still resolve to the full
+page.
 
 
