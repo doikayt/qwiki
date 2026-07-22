@@ -1,5 +1,13 @@
 # @datalackey/qwiki
 
+## 0.1.27
+
+### Patch Changes
+
+-   - fix(website): tighten Company Structure and People & Culture wording
+    - fix(content): link Bundists to Wikipedia, drop unsupported Douglass emphasis
+    - feat(website): replace home page with "Hello, World" mission statement
+
 ## 0.1.26
 
 ### Patch Changes
