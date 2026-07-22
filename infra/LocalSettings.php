@@ -156,7 +156,7 @@ wfLoadExtension( 'TitleBlacklist' );
 
 wfLoadExtension( 'CategoryTree' );
 $wgCategoryTreeSidebarRoot = 'Domains'; # CHANGE: root category key for sidebar tree (must match your top-level Category:X)
-$wgCategoryTreeSidebarOptions = [ 'depth' => 5 ]; # show up to 5 levels expanded by default in the sidebar
+$wgCategoryTreeSidebarOptions = [ 'depth' => 5, 'mode' => 20 ]; # depth 5, mode 20 = ALL (categories + pages; can't use CT_MODE_ALL constant here, see T152294)
 $wgCategoryTreeMaxDepth = [ 10 => 5, 20 => 5, 0 => 5, 100 => 5 ]; # raise per-mode expansion cap to match (default caps categories mode at 2)
 
 wfLoadExtension( 'Cargo' );
