@@ -22,7 +22,7 @@ directly on what we hope to accomplish in building out this project (and
 numerous other in our pipeline.)  In the words of Fredrick Douglas:
 we will "unite with _anybody_ to do right and with nobody to do wrong”.
 
-For those interested, our [website](https://www.doikayt.org) goes into lots more detail.
+For those interested, our [website](https://www.doikayt.org/about.html) goes into lots more detail.
 
 
 ## The Software
