@@ -1,5 +1,17 @@
 # @datalackey/qwiki
 
+## 0.1.29
+
+### Patch Changes
+
+-   - perf(deploy): parallelize page edits with a concurrency cap
+    - feat(website): add rebuilding photo to Company Structure page
+    - feat(content): add Eventbrite for event promotion
+    - feat(content): add Donor & Volunteer CRM and Password Management categories
+    - fix(content): correct Akaunting's category mismatch, add regression test
+    - feat(content): flag Google Workspace and Slack as not recommended
+    - feat(content): add Akaunting and Nextcloud Calendar, filling two empty categories
+
 ## 0.1.28
 
 ### Patch Changes
