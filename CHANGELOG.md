@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.35
+
+### Patch Changes
+
+-   - fix(website): tighten Mission bullets and expand Careers intern duties
+
 ## 0.1.34
 
 ### Patch Changes
