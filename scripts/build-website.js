@@ -57,6 +57,7 @@ const ABOUT_TABS = [
   { slug: 'about-mission', label: 'Mission' },
   { slug: 'about-company-structure', label: 'Company Structure' },
   { slug: 'about-people', label: 'People & Culture' },
+  { slug: 'about-founders-statement', label: "Founder's Statement" },
 ];
 
 function buildTabsHtml(slug) {
