@@ -1,5 +1,13 @@
 # @datalackey/qwiki
 
+## 0.1.33
+
+### Patch Changes
+
+-   - feat(website): add Intern position to Careers page
+    - fix(website): trim Success Drivers to the strongest point
+    - feat(website): replace Mission tab with Technical/Community/Success Drivers
+
 ## 0.1.32
 
 ### Patch Changes
