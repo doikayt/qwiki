@@ -22,15 +22,6 @@ We're looking for a co-founder to help build and lead our company from the groun
   teach stack specifics to someone with the right foundation; we can't
   teach architectural instinct to someone without it
 
-**What we offer**
-
-Not Maserati money. And until we get funding: no money.
-[Eventually we plan to pay salaries at the low-to-mid end of the market][comp-philosophy],
-transparent and formula-based, plus meaningful equity in the for-profit
-subsidiary as it grows. In exchange: a mission worth building for, a
-culture that prioritizes craftsmanship over shipping slop fast, and the
-kind of technical ownership most engineers never get offered.
-
 #### Intern
 
 **Requirements**
@@ -48,6 +39,17 @@ kind of technical ownership most engineers never get offered.
 - Engage with campaigns and operations initiatives run by organizations we
   align with
 
-If this sounds like you, reach out at chris@buildlackey.com.
+
+
+#### What we offer
+
+Not Maserati money. And until we get funding: no money.
+[Eventually we plan to pay salaries at the low-to-mid end of the market][comp-philosophy],
+transparent and formula-based, plus meaningful equity in the for-profit
+subsidiary as it grows. In exchange: a mission worth building for, a
+culture that prioritizes craftsmanship over shipping slop fast, and the
+kind of technical ownership most engineers never get offered.
+
+
 
 [comp-philosophy]: /about-company-structure.html#compensation-philosophy
