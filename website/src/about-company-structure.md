@@ -1,5 +1,6 @@
 # About
 
+<img class="float-photo" src="/images/rebuilding.jpg" alt="A small wooden shelter freshly built amid the rubble of bombed-out concrete buildings.">
 
 ### Legal
 
