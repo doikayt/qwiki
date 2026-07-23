@@ -38,10 +38,11 @@ const template = readFileSync(resolve(ROOT, 'website/template.html'), 'utf8')
 mkdirSync(DIST, { recursive: true });
 
 copyFileSync(resolve(SRC, 'styles.css'), resolve(DIST, 'styles.css'));
-copyFileSync(resolve(ROOT, 'infra/images/logo.png'), resolve(DIST, 'logo.png'));
+copyFileSync(resolve(ROOT, 'docs/assets/doikayt-logo.png'), resolve(DIST, 'logo.png'));
 
 // Website-only content images (e.g. About/home page photos) -- distinct from
-// infra/images/, which holds the site logo shared with the wiki deploy.
+// docs/assets/, which holds the site logo, and infra/images/, which is
+// MediaWiki's own upload storage and gets wiped by factory-reset.sh.
 const IMAGES_SRC = resolve(SRC, 'images');
 if (existsSync(IMAGES_SRC)) {
   const IMAGES_DIST = resolve(DIST, 'images');
@@ -55,7 +56,7 @@ if (existsSync(IMAGES_SRC)) {
 const ABOUT_TABS = [
   { slug: 'about', label: 'Our Name' },
   { slug: 'about-mission', label: 'Mission' },
-  { slug: 'about-company-structure', label: 'Company Structure' },
+  { slug: 'about-company-structure', label: 'Structure' },
   { slug: 'about-people', label: 'People & Culture' },
   { slug: 'about-founders-statement', label: "Founder's Statement" },
 ];
