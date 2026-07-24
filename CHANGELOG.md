@@ -1,5 +1,12 @@
 # @datalackey/qwiki
 
+## 0.1.37
+
+### Patch Changes
+
+-   - feat(website): add data-center-cat image to Mission/Technical
+    - fix(website): rename closing heading to Un-Retirement
+
 ## 0.1.36
 
 ### Patch Changes
