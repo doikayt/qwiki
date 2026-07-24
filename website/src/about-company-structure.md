@@ -1,6 +1,6 @@
 # About
 
-<img class="float-photo" src="/images/rebuilding.jpg" alt="A small wooden shelter freshly built amid the rubble of bombed-out concrete buildings.">
+<img class="float-photo float-photo-heading-align" src="/images/cat-judge.webp" alt="A cat in judge's robes bangs a gavel at an ICC bench, weighing 'ben gvir' and 'smotrich' on a scale of justice.">
 
 ### Legal
 
@@ -26,6 +26,8 @@ workflows](https://medium.com/@clement_86740/the-code-factory-lights-out-coding-
   Google Apps Script (GAS) expertise. Specific revenue projections aren't
   published here, but are available on request for prospective funders.
 
+
+<img class="float-photo float-photo-left float-photo-heading-align" src="/images/money-cat.webp" alt="A cat reaches through a glass door for a dollar bill held out by a hand, with more bills scattered on the floor.">
 
 ### Compensation Philosophy
 

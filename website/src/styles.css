@@ -176,6 +176,16 @@ hr {
   margin: 23px 44px 36px 0;
 }
 
+.float-photo-heading-align {
+  width: 208px; /* 80% of the 260px default */
+  /* Nudges the float down so its top edge lines up with the top of the
+     following heading's text -- headings carry their own top margin
+     that floats don't participate in. Estimated for an h3 with the
+     browser default ~1em top margin; not verified against a live
+     render -- nudge further if it's still off. */
+  margin-top: 19px;
+}
+
 /* Drop below a float instead of wrapping it -- use where a heading or list
    should start at the full-width left margin rather than the ragged column
    next to a .float-photo. */
