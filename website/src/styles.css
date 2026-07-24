@@ -186,6 +186,14 @@ hr {
   margin-top: 19px;
 }
 
+/* Doubles the standard 208px small-photo width -- overrides .float-photo's
+   42% max-width cap too, since that cap was tuned for the 208/260px sizes
+   and would otherwise clip this one. */
+.float-photo-2x {
+  width: 416px;
+  max-width: 60%;
+}
+
 /* Drop below a float instead of wrapping it -- use where a heading or list
    should start at the full-width left margin rather than the ragged column
    next to a .float-photo. */

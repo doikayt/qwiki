@@ -2,6 +2,8 @@
 
 ## Mission
 
+<img class="float-photo float-photo-heading-align float-photo-2x" src="/images/data-center-cat.webp" alt="A cat in an 'Open Source' tactical vest, with Palestinian and American flag patches, wields a lightsaber against a skull-faced robot labeled 'NeuroTech AGI 300' in a server room, beside monitors reading 'Job Openings,' 'Data Center Breaches,' and a US map on fire.">
+
 ### Technical
 
 - Become the premier nonprofit provider of frameworks and user-facing
