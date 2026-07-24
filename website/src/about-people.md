@@ -11,7 +11,7 @@ stream-based data processing and personalization techniques for mobile devices.
 These days Chris relies on hordes of AI demons to carry out his mostly TypeScript
 based development work.
 
-<img class="float-photo float-photo-left float-photo-small" src="/images/tech-workshop.webp" alt="Women in hijabs collaborating at laptops during a UX/tech workshop.">
+<img class="float-photo float-photo-left float-photo-small" src="/images/cat-work.webp" alt="Four cats working at laptops around an office table, with Palestinian and Lebanese flag mugs, a 'No War on Iran!' sign, and a 'Medicare 4 All!' poster.">
 
 ## Doikayt Vibe
 
@@ -23,8 +23,8 @@ who want to build a high-performance engineering culture.
 - for transparency in our mission, financing, and
   [compensation policy](/about-company-structure.html#compensation-philosophy)
 - to turn out software that:
-    - **delights the customers who use it**
-    - **gives the engineers who build it** a real sense of pride in
+    - *delights the customers who use it*
+    - *gives the engineers who build it* a real sense of pride in
       craftsmanship, and an environment where they can learn from
       world-class peers
 
