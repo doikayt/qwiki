@@ -22,6 +22,8 @@ will address this.)
 
 ## Connecting Work With Commitment to Community
 
+<img class="float-photo float-photo-left" src="/images/rabbis.jpg" alt="Anti-Zionist Haredi Jews at a protest holding a sign reading 'Judaism Condemns the State of Israel and its Atrocities' alongside Palestinian flags.">
+
 Secondly, I realized how re-energized I felt doing this kind of work. For a software
 contractor who spent many years working on things like video game infrastructure --
 while caring absolutely zero about video games -- I started to feel real motivation. A
