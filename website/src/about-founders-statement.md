@@ -78,7 +78,7 @@ So: I found teachings in Judaism that align with my conception of morality,
 and also stuff that I want nothing to do with. 
 
 
-## Retirement: Not Done !
+## Un-Retirement: Not Done !
 
 Internalizing all that, and thinking about a way forward, I landed on the obvious
 answer for a developer: show product, don't argue. Continuing to code away, I decided to 
