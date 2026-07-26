@@ -26,6 +26,9 @@ echo "==> Installing npm dependencies..."
 echo "==> Building website..."
 (cd "$REPO_ROOT" && npm run build:website)
 
+echo "==> Restarting local website preview server..."
+source "$SCRIPT_DIR/restart-website-preview.sh"
+
 echo "==> Reloading Caddy config..."
 docker exec qwiki-caddy-1 caddy reload \
   --config /etc/caddy/Caddyfile --adapter caddyfile 2>/dev/null \

@@ -23,6 +23,9 @@ coverage/
 # MediaWiki images bind mount (created by docker at runtime)
 infra/images/
 
+# Local website preview server pidfile (infra/scripts/restart-website-preview.sh)
+.website-preview.pid
+
 # MediaWiki extensions — cloned at setup time by ensure-extensions.sh, not committed
 infra/extensions/
 

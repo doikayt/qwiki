@@ -19,6 +19,9 @@ sudo rm -rf "$INFRA_DIR/images"/*
 echo "==> Building website..."
 (cd "$REPO_ROOT" && npm run build:website)
 
+echo "==> Restarting local website preview server..."
+source "$SCRIPT_DIR/restart-website-preview.sh"
+
 bash "$SCRIPT_DIR/fresh-wiki-install.sh" "$ADMIN_PASS"
 
 if [ -n "$CONTENT_DIR" ]; then

@@ -306,8 +306,17 @@ where the path differs.
 
 The `website/src/` directory holds the source Markdown files for `doikayt.org`.
 `npm run build:website` converts them to HTML in `website/dist/`, which Caddy
-serves. On the droplet, `lightweight-reload.sh` runs this step automatically
-after `git pull`.
+serves on the droplet. On the droplet, `lightweight-reload.sh` runs this step
+automatically after `git pull`.
+
+Locally, nothing serves `website/dist/` by default. The wiki's sidebar logo
+(`MediaWiki:Common.js`, sourced from
+[`example/wiki-content-files/system/common-js.md`](example/wiki-content-files/system/common-js.md))
+points at `http://localhost:3456` when you're on `localhost`, so both
+`factory-reset.sh` and `lightweight-reload.sh` (re)start a preview server
+there via
+[`infra/scripts/restart-website-preview.sh`](infra/scripts/restart-website-preview.sh)
+(`npx serve website/dist -p 3456`, skipped on the droplet).
 
 ### Link syntax
 
@@ -353,6 +362,7 @@ provides a self-contained local wiki for content development and testing.
 | `infra/scripts/fresh-wiki-install.sh` | Tear down containers, wipe DB volume, reinstall (used by `factory-reset.sh`) |
 | `infra/scripts/lightweight-reload.sh` | Pull + rebuild + redeploy content to an already-running wiki -- never touches the DB |
 | `infra/scripts/import-wiki-content.sh` | Deploy `example/wiki-content-files/` to the running wiki |
+| `infra/scripts/restart-website-preview.sh` | (Re)start `npx serve website/dist -p 3456` locally; skipped on the droplet. Called by `factory-reset.sh` and `lightweight-reload.sh` |
 | `infra/scripts/bounce.sh` | Restart containers (flushes APCu/ResourceLoader cache) |
 
 ### Configuration
