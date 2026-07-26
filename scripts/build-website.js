@@ -87,33 +87,83 @@ for (const file of pages) {
   writeFileSync(resolve(DIST, `${slug}.html`), html);
 }
 
-// Blog: archived posts pulled from datalackey.com, plus a simple index.
-// Posts carry YAML frontmatter (title/date/source); index.md is a plain page.
+// Blog: new Doikayt posts (blog/posts/) and archived datalackey.com posts
+// (blog/legacy/) are kept in separate source folders but render to a flat
+// website/dist/blog/<slug>.html either way. index.md lists both groups via
+// {{NEW_POSTS}}/{{LEGACY_POSTS}} placeholders filled in from frontmatter, so
+// adding or removing a post file is enough -- no manual index editing.
 mkdirSync(BLOG_DIST, { recursive: true });
 
-const BLOG_IMAGES_SRC = resolve(BLOG_SRC, 'images');
-if (existsSync(BLOG_IMAGES_SRC)) {
-  const BLOG_IMAGES_DIST = resolve(BLOG_DIST, 'images');
+const BLOG_LEGACY_SRC = resolve(BLOG_SRC, 'legacy');
+const BLOG_POSTS_SRC = resolve(BLOG_SRC, 'posts');
+const BLOG_IMAGES_DIST = resolve(BLOG_DIST, 'images');
+
+function copyBlogImages(postsDir) {
+  const imagesDir = resolve(postsDir, 'images');
+  if (!existsSync(imagesDir)) return;
   mkdirSync(BLOG_IMAGES_DIST, { recursive: true });
-  for (const file of readdirSync(BLOG_IMAGES_SRC)) {
-    copyFileSync(resolve(BLOG_IMAGES_SRC, file), resolve(BLOG_IMAGES_DIST, file));
+  for (const file of readdirSync(imagesDir)) {
+    copyFileSync(resolve(imagesDir, file), resolve(BLOG_IMAGES_DIST, file));
   }
 }
+copyBlogImages(BLOG_LEGACY_SRC);
+copyBlogImages(BLOG_POSTS_SRC);
 
-const blogPages = readdirSync(BLOG_SRC).filter(f => f.endsWith('.md'));
-for (const file of blogPages) {
-  const slug = basename(file, '.md');
-  const raw = readFileSync(resolve(BLOG_SRC, file), 'utf8');
-  const { data, content } = matter(raw);
-  const titleMatch = content.match(/^#[ \t]+(.+)$/m);
-  const pageTitle = data.title || (titleMatch ? titleMatch[1] : slug);
-  const body = titleMatch ? content.replace(titleMatch[0], '') : content;
-  const html = template
-    .replaceAll('{{PAGE_TITLE}}', pageTitle)
-    .replace('{{TABS}}', '')
-    .replace('{{BODY}}', parse(body));
-  writeFileSync(resolve(BLOG_DIST, `${slug}.html`), html);
+function loadPosts(postsDir) {
+  if (!existsSync(postsDir)) return [];
+  return readdirSync(postsDir)
+    .filter(f => f.endsWith('.md'))
+    .map(file => {
+      const slug = basename(file, '.md');
+      const raw = readFileSync(resolve(postsDir, file), 'utf8');
+      const { data, content } = matter(raw);
+      const titleMatch = content.match(/^#[ \t]+(.+)$/m);
+      const title = data.title || (titleMatch ? titleMatch[1] : slug);
+      const body = titleMatch ? content.replace(titleMatch[0], '') : content;
+      return { slug, title, date: data.date, body };
+    })
+    .sort((a, b) => (b.date ?? 0) - (a.date ?? 0));
 }
 
+function renderPost(post) {
+  const html = template
+    .replaceAll('{{PAGE_TITLE}}', post.title)
+    .replace('{{TABS}}', '')
+    .replace('{{BODY}}', parse(post.body));
+  writeFileSync(resolve(BLOG_DIST, `${post.slug}.html`), html);
+}
+
+const legacyPosts = loadPosts(BLOG_LEGACY_SRC);
+const newPosts = loadPosts(BLOG_POSTS_SRC);
+[...legacyPosts, ...newPosts].forEach(renderPost);
+
+function formatDate(date) {
+  return date ? date.toISOString().slice(0, 10) : '';
+}
+
+function renderPostListMarkdown(posts, emptyMessage) {
+  if (posts.length === 0) return emptyMessage;
+  return posts.map(p => {
+    const dateStr = formatDate(p.date);
+    return `- ${dateStr ? dateStr + ' — ' : ''}[${p.title}](/blog/${p.slug}.html)`;
+  }).join('\n');
+}
+
+const indexRaw = readFileSync(resolve(BLOG_SRC, 'index.md'), 'utf8')
+  .replace('{{NEW_POSTS}}', renderPostListMarkdown(newPosts, 'No posts yet — check back soon.'))
+  .replace('{{LEGACY_POSTS}}', renderPostListMarkdown(legacyPosts, ''));
+const indexTitleMatch = indexRaw.match(/^#[ \t]+(.+)$/m);
+const indexTitle = indexTitleMatch ? indexTitleMatch[1] : 'Blog';
+const indexBody = indexTitleMatch ? indexRaw.replace(indexTitleMatch[0], '') : indexRaw;
+const indexHtml = template
+  .replaceAll('{{PAGE_TITLE}}', indexTitle)
+  .replace('{{TABS}}', '')
+  .replace('{{BODY}}', parse(indexBody));
+writeFileSync(resolve(BLOG_DIST, 'index.html'), indexHtml);
+
+const blogPageCount = legacyPosts.length + newPosts.length;
 console.log(`Built ${pages.length} pages → website/dist/`);
-console.log(`Built ${blogPages.length} blog pages → website/dist/blog/`);
+console.log(
+  `Built ${blogPageCount} blog pages (${newPosts.length} new, ${legacyPosts.length} legacy) ` +
+  `→ website/dist/blog/`
+);
