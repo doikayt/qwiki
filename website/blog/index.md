@@ -6,8 +6,8 @@
 
 ## DataLackey Labs Blog Archive
 
-We are keeping these around just to show our potential 
-consulting clients that we have done a thing or two with data pipelines.
+*Legacy posts -- to show potential consulting clients we've done a thing or two with data pipelines !*
+
 
 Archived posts from the old [datalackey.com](http://datalackey.com/) blog.
 
