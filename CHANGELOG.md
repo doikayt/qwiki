@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.40
+
+### Patch Changes
+
+-   - fix(website): add missing header image to Kafka/Spark testing post
+
 ## 0.1.39
 
 ### Patch Changes
