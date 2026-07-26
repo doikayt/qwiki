@@ -30,6 +30,7 @@ We're looking for a co-founder to help build and lead our company from the groun
   portfolio of equivalent experience
 - **Familiarity with agentic AI coding tools** (e.g., Cursor, Claude Code)
 - **TypeScript / web development experience**
+- Proven record of activisting or volunteer work for causes aligned with our mission
 
 **Duties**
 
