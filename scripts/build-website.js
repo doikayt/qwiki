@@ -3,10 +3,13 @@ import { resolve, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
 import { marked, parse } from 'marked';
+import matter from 'gray-matter';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = resolve(ROOT, 'website/src');
 const DIST = resolve(ROOT, 'website/dist');
+const BLOG_SRC = resolve(ROOT, 'website/blog');
+const BLOG_DIST = resolve(DIST, 'blog');
 
 // Give every heading an id so pages can be deep-linked (e.g. projects.html#qwiki).
 function slugify(text) {
@@ -84,4 +87,33 @@ for (const file of pages) {
   writeFileSync(resolve(DIST, `${slug}.html`), html);
 }
 
+// Blog: archived posts pulled from datalackey.com, plus a simple index.
+// Posts carry YAML frontmatter (title/date/source); index.md is a plain page.
+mkdirSync(BLOG_DIST, { recursive: true });
+
+const BLOG_IMAGES_SRC = resolve(BLOG_SRC, 'images');
+if (existsSync(BLOG_IMAGES_SRC)) {
+  const BLOG_IMAGES_DIST = resolve(BLOG_DIST, 'images');
+  mkdirSync(BLOG_IMAGES_DIST, { recursive: true });
+  for (const file of readdirSync(BLOG_IMAGES_SRC)) {
+    copyFileSync(resolve(BLOG_IMAGES_SRC, file), resolve(BLOG_IMAGES_DIST, file));
+  }
+}
+
+const blogPages = readdirSync(BLOG_SRC).filter(f => f.endsWith('.md'));
+for (const file of blogPages) {
+  const slug = basename(file, '.md');
+  const raw = readFileSync(resolve(BLOG_SRC, file), 'utf8');
+  const { data, content } = matter(raw);
+  const titleMatch = content.match(/^#[ \t]+(.+)$/m);
+  const pageTitle = data.title || (titleMatch ? titleMatch[1] : slug);
+  const body = titleMatch ? content.replace(titleMatch[0], '') : content;
+  const html = template
+    .replaceAll('{{PAGE_TITLE}}', pageTitle)
+    .replace('{{TABS}}', '')
+    .replace('{{BODY}}', parse(body));
+  writeFileSync(resolve(BLOG_DIST, `${slug}.html`), html);
+}
+
 console.log(`Built ${pages.length} pages → website/dist/`);
+console.log(`Built ${blogPages.length} blog pages → website/dist/blog/`);
