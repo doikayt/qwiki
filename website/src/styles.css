@@ -117,6 +117,23 @@ em { font-style: italic; }
 a { color: var(--accent); }
 a:hover { color: var(--accent2); text-decoration: none; }
 
+/* Technical-mission bullet links (about-mission.md): plain body-text color
+   with a small trailing arrow instead of the default green-underline
+   treatment, which reads as too heavy across three full-sentence links in a
+   row. */
+.link-arrow {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link-arrow:hover { color: var(--accent2); }
+
+.link-arrow::after {
+  content: " \2192";
+  font-size: 0.85em;
+  color: var(--accent);
+}
+
 hr {
   border: none;
   border-top: 1px solid var(--border);

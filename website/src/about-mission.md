@@ -6,12 +6,13 @@
 
 ### Technical
 
-- Become the premier nonprofit provider of frameworks and user-facing
-  applications that streamline the operations of movement-aligned
-  organizations whose charters dovetail with ours.
-- Gain recognition as thought leaders in AI-centric TypeScript-based
-  tooling and apps -- sharing best practices for building an engineering
-  organization around an AI-native, spec-to-code workflow model.
+- Become the premier nonprofit provider of frameworks and apps that
+  streamline operations for movement-aligned organizations.
+- Gain recognition as thought leaders in
+    - AI-centric TypeScript-based tooling and apps
+    - <a class="link-arrow" href="https://www.syncfusion.com/blogs/post/spec-driven-ai-development-with-markdown-prompts">Best practices for building an engineering organization around an AI-native, spec-to-code workflow model.</a>
+    - <a class="link-arrow" href="https://datasaur.ai/blog/open-weights-models-are-having-their-moment-a-field-report">Operationalizing Green AI through lightweight open-source models that maximize intelligence per watt.</a>
+    - <a class="link-arrow" href="https://www.datacenterfrontier.com/site-selection/article/55380207/innovations-in-offshore-data-centers-chinese-deployments-floating-platforms-and-future-prospects">Shifting token spend to operators that limit cooling costs by hosting data centers in the icy depths.</a>
 
 ### Community
 
