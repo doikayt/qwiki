@@ -1,5 +1,12 @@
 # @datalackey/qwiki
 
+## 0.1.39
+
+### Patch Changes
+
+-   - fix(infra): restart local website preview server on reload
+    - fix(website): remove password-protected duplicate blog stub
+
 ## 0.1.38
 
 ### Patch Changes
