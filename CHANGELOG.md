@@ -1,5 +1,12 @@
 # @datalackey/qwiki
 
+## 0.1.41
+
+### Patch Changes
+
+-   - fix(infra): wait for wiki HTTP readiness after fresh install
+    - feat(wiki): add Fund Raising category with 7 candidate platforms
+
 ## 0.1.40
 
 ### Patch Changes
