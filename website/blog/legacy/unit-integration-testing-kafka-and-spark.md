@@ -86,7 +86,7 @@ set-up).
 
 ## Testing Against Dockerized Kafka
 Before we get into the details of how our sample project runs tests
-against Dockerized Kafa broker instances, let's look at the advantages
+against Dockerized Kafka broker instances, let's look at the advantages
 of this approach over using in-memory (embedded) brokers.
 
 -   Post-test forensic analysis.
@@ -284,7 +284,7 @@ be made available to the runtime class path. Note that we specify both
 configuration we put under the former directory is also available to
 integration tests at runtime. This is useful for things like logger
 configuration, which is typically the same for both types of tests, and
-as a result is a good candiate for sharing.
+as a result is a good candidate for sharing.
 
 Line 12 defines the 'custom [dependency
 configuration](https://docs.gradle.org/current/userguide/declaring_dependencies.html)'
@@ -299,7 +299,7 @@ dependencies --- say on guava --- just for our integration tests, we
 could do so by adding lines like the ones below to the 'dependencies'
 configuration block:
 
-`dependencies {   integrationTestCompile group: 'com.google.guava', name: 'guava', version: '11.0.2'         …. // other dependenacies }`
+`dependencies {   integrationTestCompile group: 'com.google.guava', name: 'guava', version: '11.0.2'         …. // other dependencies }`
 
 Line 17 -- 20 define 'integrationTest' as an enhanced [custom
 task](https://docs.gradle.org/current/userguide/custom_tasks.html) of
@@ -533,7 +533,7 @@ artifact's dependency on Scala 2.11.
 
 Once I realized there was a Scala version conflict it was a pretty easy
 decision to hunt around for a version of spring-kafka-test that was
-compiled against a release of Kafa which was, in turn, compiled against
+compiled against a release of Kafka which was, in turn, compiled against
 Scala 2.12. I found that in version 2.4.4, whose abbreviated dependency
 report is shown below.
 

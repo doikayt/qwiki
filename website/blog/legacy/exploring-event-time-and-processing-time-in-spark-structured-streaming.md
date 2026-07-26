@@ -340,7 +340,7 @@ Batch: 4
 +------------------------------------------+------+------------+
 ```
 
-Note that certain time windows take a couple of batch cyles to settle
+Note that certain time windows take a couple of batch cycles to settle
 into correctness. An example is the total for *dog* given for window
 "2019-06-18 16:33:20 -- 2019-06-18 16:33:25" in Batch 1. The total
 should be 13, and in fact the final dog record seems to come in as of
@@ -362,7 +362,7 @@ window would become correct in that 10 to 15 second interval.
 The code for our simulated facial recognition component is shown below.
 It should work fine for you in a Mac or Linux environment (and maybe if
 you use Cygwin under Windows, but no guarantees.) The test script is
-bash based, but it actually automtically compiles and executes the Scala
+bash based, but it actually automatically compiles and executes the Scala
 code below the "!#", which I thought was kind of cool.
 
 ``` wp-block-code

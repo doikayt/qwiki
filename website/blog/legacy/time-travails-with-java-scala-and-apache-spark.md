@@ -83,9 +83,9 @@ libraries abstract away a lot of this complexity. Java represents time
 in a format called "[Unix
 time](https://en.wikipedia.org/wiki/Unix_time)" --- where 'time zero'
 (T-0) is defined as the instant in time at which the clock struck
-midnight in the city of Greenwhich England on January 1, 1970. Because
-of the Greenwhich point of reference the longitudinal zone that subsumes
-this city is referred to as "GMT" (Greenwhich Mean Time). Another
+midnight in the city of Greenwich England on January 1, 1970. Because
+of the Greenwich point of reference the longitudinal zone that subsumes
+this city is referred to as "GMT" (Greenwich Mean Time). Another
 synonym for this time zone is UTC (for Universal Coordinated Time). In
 Unix time, any instant on the time line before or after T-0 is
 represented as the number of seconds by which that instant preceded or
@@ -148,7 +148,7 @@ for date/time attributes to be written in ISO 8601 format.
 
 **CSV and JSON data formats**
 
-Spark has good ISO 8601 support when it comes to CSV and JSON formated
+Spark has good ISO 8601 support when it comes to CSV and JSON formatted
 data. These two data sources parse and write date/time attributes
 according to the string value of the *timestampFormat *option, which can
 be any one of the patterns supported by the Java

@@ -1063,7 +1063,7 @@ for those who aren't.
             *I,* this implies *endTime(w') = floor(p/w) + w* cannot be
             greater than *I*. Thus *w'* is a completely
             contained window. Further, *startTime(w') =
-            floor(p/w)* must be less than or equal to *p,* and sinc*e
+            floor(p/w)* must be less than or equal to *p,* and since *
             floor(p/w)* is the least integral multiple of *w* less than
             or equal to *p* we know *endTime(w') = floor(p/w) + w*
             cannot be less than or equal to *p*. Therefore,
@@ -1078,7 +1078,7 @@ for those who aren't.
             its *endTime is \< I.* Since *-s \< 0 \< s,* we have at
             least one overlapping window which potentially
             subsumes a point on *I'.*
-        -   Now we show that, given an aribitrary point *p,* if a
+        -   Now we show that, given an arbitrary point *p,* if a
             window, *w*', is neither overlapping nor
             completely contained, then *w'* cannot
             possibly subsume *p. I*f *w'* is not

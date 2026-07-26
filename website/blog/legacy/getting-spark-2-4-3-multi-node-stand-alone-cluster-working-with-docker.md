@@ -96,7 +96,7 @@ You should then see output that looks something like this:\
 
 ### No luck Submitting From My IDE.
 After importing the sample project into Intellij I thought there would
-be no problem running it via right click. But regretably, that was not
+be no problem running it via right click. But regrettably, that was not
 my fate. I am continuing to see the error below when I run locally,
 which is really irksome.
 
