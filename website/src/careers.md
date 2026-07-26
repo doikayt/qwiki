@@ -26,11 +26,11 @@ We're looking for a co-founder to help build and lead our company from the groun
 
 **Requirements**
 
-- **Degree in Computer Science or a STEM discipline** -- or a demonstrated
+- Proven record as an activist or volunteer for causes aligned with our mission
+- **Comp Sci, EE** B.S. or above, or  degree in other STEM discipline and a demonstrated
   portfolio of equivalent experience
-- **Familiarity with agentic AI coding tools** (e.g., Cursor, Claude Code)
-- **TypeScript / web development experience**
-- Proven record of activisting or volunteer work for causes aligned with our mission
+- Familiarity with **agentic AI** coding tools (e.g., Cursor, Claude Code)
+- TypeScript / node-JS / web development experience
 
 **Duties**
 
@@ -47,12 +47,9 @@ We're looking for a co-founder to help build and lead our company from the groun
 
 #### What we offer
 
-Not Maserati money. And until we get funding: no money.
-[Eventually we plan to pay salaries at the low-to-mid end of the market][comp-philosophy],
-transparent and formula-based, plus meaningful equity in the for-profit
-subsidiary as it grows. In exchange: a mission worth building for, a
-culture that prioritizes craftsmanship over shipping slop fast, and the
-kind of technical ownership most engineers never get offered.
+Until we get funding: no money.
+Eventually we plan to pay salaries at the low-to-mid end of the market -- per a [compensation policy][comp-philosophy]  that is transparent and formula-based.
+This plus meaningful equity in the for-profit subsidiary as it grows. 
 
 
 

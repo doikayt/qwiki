@@ -12,15 +12,13 @@ to serve as the go-to hub for collaborative curation of digital tools for
 technicians supporting organizations whose mission aligns with our charter.  
 
 We bootstrapped the Wiki with easy-to-edit, locally-based Markdown content, which our
-converter pipeline transforms into Wiki content directly via the MediaWiki API. Every
-entry follows a known structure (schema), enforced by our shared Tool template -- the
-same schema live contributors use when adding new tools through our New Submission
-form.
+converter pipeline transforms into MediaWiki format directly via their API. Every
+entry follows a known structure (schema), enforced by our shared Tool template. 
 
-That known schema has let us move fast on content: pointing Claude Code at a tool's
-website -- giving a quick prompt: "look up pricing, license, and hosting details for X" -- 
+That known schema helped us incorporate content rapidly: pointing Claude Code at a candidate tool's
+website -- then giving a quick prompt: "look up pricing, license, and hosting details for X" -- 
 and then having Claude draft the description. This is now a routine part of our
-new entry update workfflow.
+new entry update workflow.
 
 ### Future Enhancements
 

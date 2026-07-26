@@ -13,8 +13,7 @@ aligned with our values, which are:
 - anti-imperialist
 
 
-We are innovating in building out user facing Web frameworks, applications  and 
-build tooling for Typescript-based development using
-an AI-native, spec-to-code production pipeline.
+We build user-facing web frameworks, applications, and tooling for
+TypeScript development, powered by an AI-native, spec-to-code pipeline.
 
 
