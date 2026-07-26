@@ -56,6 +56,13 @@ $COMPOSE up -d
 echo "==> Running schema update for extensions (AbuseFilter etc.)..."
 $COMPOSE exec -T mediawiki php maintenance/run.php update --quick
 
+echo "==> Waiting for wiki to answer HTTP requests..."
+WIKI_URL="http://localhost:8080"
+until curl -sf --max-time 2 "$WIKI_URL" > /dev/null; do
+  echo "   ..."
+  sleep 2
+done
+
 echo ""
-echo "Fresh wiki ready at http://localhost:8080"
+echo "Fresh wiki ready at $WIKI_URL"
 echo "Log in as Admin / $ADMIN_PASS"
