@@ -1,5 +1,12 @@
 # @datalackey/qwiki
 
+## 0.1.38
+
+### Patch Changes
+
+-   - feat(website): split blog into legacy/new dirs, generate index on the fly
+    - feat(website): add Bloggery section archiving DataLackey Labs posts
+
 ## 0.1.37
 
 ### Patch Changes
