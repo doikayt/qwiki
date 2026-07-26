@@ -4,6 +4,8 @@ date: 2020-09-22
 source: http://datalackey.com/2020/09/22/unit-integration-testing-kafka-and-spark/
 ---
 
+![](/blog/images/2monkeys-1.jpeg)
+
 ## Overview
 Kafka is one of the most popular sources for ingesting continuously
 arriving data into Spark Structured Streaming apps. However, writing
