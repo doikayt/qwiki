@@ -6,33 +6,33 @@
 
 We're looking for a co-founder to help build and lead our company from the ground up.
 
-**What we're looking for**
+*What we're looking for*
 
-- **Tech Lead experience** -- has run engineering teams, a project, or a company
+- *Tech Lead experience* -- has run engineering teams, a project, or a company
   before, and is comfortable being the person decisions stop with
-- **Startup experience** -- has built something from an early or zero
+- *Startup experience* -- has built something from an early or zero
   stage, and understands the tradeoffs that come with limited resources
   and an evolving mission
-- **Deep architectural experience** -- this matters more than any
+- *Deep architectural experience* -- this matters more than any
   specific language or framework. We need someone who can design systems
   that hold up as scope and scale change, not just ship features
-- **AI-native development fluency** -- a Claude Architect Certification would be great!
-- **Some background in web development**, ideally TypeScript and/or
+- *AI-native development fluency* -- a Claude Architect Certification would be great!
+- *Some background in web development*, ideally TypeScript and/or
   Node.js -- useful, but secondary to architectural judgment. We can
   teach stack specifics to someone with the right foundation; we can't
   teach architectural instinct to someone without it
 
 #### Intern
 
-**Requirements**
+*Requirements*
 
 - Proven record as an activist or volunteer for causes aligned with our mission
-- **Comp Sci, EE** B.S. or above, or  degree in other STEM discipline and a demonstrated
+- *Comp Sci, EE* B.S. or above, or  degree in other STEM discipline and a demonstrated
   portfolio of equivalent experience
-- Familiarity with **agentic AI** coding tools (e.g., Cursor, Claude Code)
+- Familiarity with *agentic AI* coding tools (e.g., Cursor, Claude Code)
 - TypeScript / node-JS / web development experience
 
-**Duties**
+*Duties*
 
 - Handle light-to-medium difficulty enhancements to our existing platform and tools.
 - Write and publish articles explaining the novel principles behind the tech

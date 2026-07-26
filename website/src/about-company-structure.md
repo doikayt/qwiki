@@ -4,7 +4,7 @@
 
 ### Legal
 
-We're now seeking to organize as a 501(c)(3) nonprofit. As revenue-generating
+We're organizing as a 501(c)(3) nonprofit. As revenue-generating
 work matures, we plan to roll some operational activity into a wholly owned
 for-profit subsidiary -- keeping the nonprofit's mission and governance
 intact while giving the operational side room to grow sustainably.
