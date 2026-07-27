@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.42
+
+### Patch Changes
+
+-   - feat(website): add "practicing what we preach" content to About pages
+
 ## 0.1.41
 
 ### Patch Changes
