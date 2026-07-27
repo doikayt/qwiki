@@ -17,3 +17,9 @@ We build user-facing web frameworks, applications, and tooling for
 TypeScript development, powered by an AI-native, spec-to-code pipeline.
 
 
+
+
+
+<img class="centered-photo" src="/images/qrcode_www.doikayt.org.png" alt="QR code linking to www.doikayt.org">
+
+

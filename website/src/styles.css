@@ -283,6 +283,16 @@ footer {
   padding: 1.5rem 2rem;
   font-size: 0.8125rem;
   color: var(--muted);
+  max-width: 680px;
+}
+
+/* ── Centered (non-floated) photo ── */
+
+.centered-photo {
+  display: block;
+  margin: 1.5rem auto;
+  width: 200px;
+  height: auto;
 }
 
 footer a { color: var(--muted); }
