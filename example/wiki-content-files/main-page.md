@@ -16,7 +16,7 @@ agenda of [Doikayt Mobilization Labs](https://www.doikayt.org/).
 
 ### Profile
 
-You are in the right place if you are a _technician_  working as 
+You are in the right place if you are a _technologist_  working as 
 IT staff or as a  volunteer at a movement-aligned organizations, where you are tasked with:
 
 - identification,
@@ -38,7 +38,7 @@ You should be at least at 'power user' level, comfortable with:
 ### Unique Challenges
 
 You likely need to deal with constraints that 
-technicians in corporate, government and military settings don't worry much about:
+technologists in corporate, government and military settings don't worry much about:
 
 - shoe-string budgets,
 - deplatforming risks, and

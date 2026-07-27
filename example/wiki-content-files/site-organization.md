@@ -55,7 +55,7 @@ Verify there is no similar category before you add a new one.
 #### Task Level Category Rules
 
 Each _Task_ should be a short phrase indicating a concrete action undertaken by
-technicians in service of either special projects, or ongoing operations.
+technologists in service of either special projects, or ongoing operations.
 
 Tasks can be associated with more than one recommended tool. On any tool page
 we might have optional discussion of why that tool was selected over rejected alternatives, together

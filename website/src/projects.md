@@ -9,7 +9,7 @@ Here are the projects we have either in beta launch, or in development:
 Our [Wiki](https://wiki.doikayt.org/wiki/Main_Page)  is live -- and it is the first tool 
 built with our [qwiki](https://github.com/doikayt/qwiki) framework. Its goal is 
 to serve as the go-to hub for collaborative curation of digital tools for
-technicians supporting organizations whose mission aligns with our charter.  
+technologists supporting organizations whose mission aligns with our charter.  
 
 We bootstrapped the Wiki with easy-to-edit, locally-based Markdown content, which our
 converter pipeline transforms into MediaWiki format directly via their API. Every

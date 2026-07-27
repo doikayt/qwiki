@@ -6,7 +6,7 @@ redirect_from: []
 ---
 # Self Hosting
 
-For technicians who prefer to run infrastructure on their own servers or
+For technologists who prefer to run infrastructure on their own servers or
 cloud VPS rather than relying on third-party SaaS platforms. Self hosting
 offers full control over configuration and data, and eliminates deplatforming
 risk — but it comes with an ongoing maintenance burden (updates, backups,
