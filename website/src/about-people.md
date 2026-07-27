@@ -16,7 +16,11 @@ based development work.
 ## Doikayt Vibe
 
 We want to work with people who care about more than a paycheck -- people
-who want to build a high-performance engineering culture.
+who want to:
+
+- build tools that serve people, not extract from them
+- take the time to build software right, instead of building fast,
+  breaking things and shipping crap
 
 <p class="clear-left">We strive:</p>
 
