@@ -40,6 +40,7 @@ cloud-init (automatic, first boot only -- see below)
   |-- installs Docker, Node.js, ufw, swap
   |-- clones https://github.com/doikayt/qwiki.git as `dev`
   |-- adds a `reload` shell alias
+  |-- hooks direnv into dev's shell, trusts the repo's root .envrc
   |-- runs infra/scripts/launch-in-cloud.sh once
   v
 infra/ (provider-agnostic, same on laptop and droplet)
@@ -64,6 +65,16 @@ runs once, either by hand or via cloud-init on first boot.
 change, deploy it" path —
 it checks the wiki is actually up first and bails if not, then pulls,
 reinstalls npm deps, and redeploys content. It never wipes anything.
+
+`git clone` pulls the *whole* repo, not just the `infra/` half this droplet
+actually uses — so every laptop-only file lands there too, inert. The one
+worth knowing about: `infra/cloud/do/.envrc` (this directory's own file)
+ends up at `/home/dev/qwiki/infra/cloud/do/.envrc`. cloud-init only runs
+`direnv allow` against the repo *root* `.envrc`, so this one stays
+unallowed — and even if it were allowed, it shells out to the `bw` CLI to
+fetch Terraform secrets from Bitwarden, which isn't installed on the
+droplet and has nothing to do there anyway, since Terraform only ever runs
+from your own machine, never from the droplet itself.
 
 ### How each stage actually gets triggered
 

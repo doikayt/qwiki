@@ -8,6 +8,7 @@ packages:
   - gnupg
   - ufw
   - git
+  - direnv
 
 write_files:
   - path: /etc/systemd/system/swap.service
@@ -72,6 +73,15 @@ runcmd:
 
   # Convenience alias for redeploying content/code without touching the DB
   - echo "alias reload='bash ~/qwiki/infra/scripts/lightweight-reload.sh'" >> /home/dev/.bashrc
+
+  # direnv: hook it into dev's shell and trust the repo's root .envrc (the
+  # same repo cloud-init already runs code from unattended via
+  # launch-in-cloud.sh below, so auto-trusting its .envrc adds no new risk).
+  # infra/cloud/do/.envrc is deliberately left un-allowed -- it shells out to
+  # the `bw` CLI to fetch Terraform secrets from Bitwarden, and Terraform
+  # never runs on this droplet, so there's nothing here for it to do.
+  - echo 'eval "$(direnv hook bash)"' >> /home/dev/.bashrc
+  - sudo -u dev direnv allow /home/dev/qwiki
 
   # First-time bootstrap: installs MediaWiki fresh and deploys content
   - sudo -u dev -H bash -c "cd /home/dev/qwiki && WIKI_ADMIN_PASSWORD='${wiki_admin_password}' bash infra/scripts/launch-in-cloud.sh"
