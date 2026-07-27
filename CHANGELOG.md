@@ -1,5 +1,12 @@
 # @datalackey/qwiki
 
+## 0.1.43
+
+### Patch Changes
+
+-   - feat: yiddish text
+    - fix: about people
+
 ## 0.1.42
 
 ### Patch Changes
