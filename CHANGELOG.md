@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.45
+
+### Patch Changes
+
+-   - feat(website): add RSS feed and social preview metadata
+
 ## 0.1.44
 
 ### Patch Changes
