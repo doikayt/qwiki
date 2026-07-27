@@ -203,6 +203,20 @@ hr {
   margin-top: 19px;
 }
 
+.float-photo-70 {
+  width: 182px; /* 70% of the 260px default */
+}
+
+.float-photo-paragraph-align {
+  /* Nudges the float down so its top edge lines up with the top of the
+     following paragraph's text. The image sits in its own <p> (margin:
+     0 0 1rem), and floats don't collapse margins with the next block, so
+     without this it sits a touch high relative to the paragraph beside it.
+     Best-effort estimate, not verified against a live render -- nudge
+     further if it's still off. */
+  margin-top: 6px;
+}
+
 /* Doubles the standard 208px small-photo width -- overrides .float-photo's
    42% max-width cap too, since that cap was tuned for the 208/260px sizes
    and would otherwise clip this one. */

@@ -12,7 +12,19 @@ build justice and a good life wherever they live, in solidarity with
 other secular, multi-ethnic, working-class movements -- rather than
 deferring collective liberation to a national homeland elsewhere.
 
-The internationalist aspect of the Bundists message bears
-directly on what we hope to accomplish in building out the projects 
-in our pipeline.  In the words of [Frederick Douglass](https://en.wikipedia.org/wiki/Frederick_Douglass):
+
+<img class="float-photo float-photo-left float-photo-70 float-photo-paragraph-align" src="/images/we-are-flocked.png" alt="A Gadsden-flag parody on a yellow field: a coiled rattlesnake wraps around a surveillance camera on a tripod instead of striking, above the caption 'don't flock me,' a play on Flock Safety's surveillance cameras.">
+
+"Hereness" to us also means: think globally, but act locally. One of the things each of us can start on _today_ is to start ripping out
+big-tech's cables from our individual lives and
+organizational workflows. We have started this process with our
+own company, and we are actively working on sharing this knowledge
+with anyone else with objections to being constantly
+marketed to, suppressed and surveilled.
+
+
+Finally, the internationalist aspect of the Bundists' message bears
+directly on what we hope to accomplish in building out the projects
+in our pipeline. In the words of [Frederick Douglass](https://en.wikipedia
+.org/wiki/Frederick_Douglass):
 we will "unite with anybody to do right and with nobody to do wrong".

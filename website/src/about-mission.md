@@ -13,11 +13,15 @@
     - <a class="link-arrow" href="https://www.syncfusion.com/blogs/post/spec-driven-ai-development-with-markdown-prompts">Best practices for building an engineering organization around an AI-native, spec-to-code workflow model.</a>
     - <a class="link-arrow" href="https://datasaur.ai/blog/open-weights-models-are-having-their-moment-a-field-report">Operationalizing Green AI through lightweight open-source models that maximize intelligence per watt.</a>
     - <a class="link-arrow" href="https://www.datacenterfrontier.com/site-selection/article/55380207/innovations-in-offshore-data-centers-chinese-deployments-floating-platforms-and-future-prospects">Shifting token spend to operators that limit cooling costs by hosting data centers in the icy depths.</a>
+- Run our operations on open-source, surveillance-free platforms
 
 ### Community
 
-As a key partner to movement-aligned organizations that use our products and
-services, help those organizations achieve their goals -- win elections, build
-union strength -- by engaging directly with them to capture their
-requirements and build tools that meet those requirements.
+As a key partner of the movement-aligned organizations that use our products and
+services, we help those organizations:
+
+- achieve their goals -- winning elections, building mutual aid networks, growing
+  union strength -- by engaging directly with them to capture
+  requirements and build tools that meet those requirements
+- by sharing knowledge we have gained as we  work to de-Big-Tech-ify our own operations
 
