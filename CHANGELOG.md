@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.44
+
+### Patch Changes
+
+-   - feat(infra): wire direnv into droplet provisioning
+
 ## 0.1.43
 
 ### Patch Changes
