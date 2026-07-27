@@ -2,7 +2,7 @@
 
 <img class="float-photo float-photo-70" src="/images/bund.webp" alt="Cover of The Jewish Labor Bund Bulletin, March 1948, featuring a photo of Shloyme Mendelson and the headline quote about the bitter irony of fascist methods of terror triumphing in Jewish life after the destruction of the Jewish people by fascism.">
 
-**[Doikayt](https://en.wikipedia.org/wiki/Doikayt)** is Yiddish for
+**[Doikayt](https://en.wikipedia.org/wiki/Doikayt)** (דאָיִקייט) is Yiddish for
 "hereness." The term refers to the core concept of the
 [Bundists](https://en.wikipedia.org/wiki/General_Jewish_Labour_Bund),
 members of the General Jewish Labour Bund, a secular socialist
