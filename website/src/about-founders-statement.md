@@ -61,6 +61,7 @@ of many communities that reject that tenet
 outright -- as did [Maimonides](https://en.wikipedia.org/wiki/Maimonides), 
 the foundational Jewish philosopher who predated this supremacist strand entirely.
 
+<<< WORK IN PROGRESS - NEEDS REVIEW >>
 All this put me in a boat similar to the one my Muslim friends (many of them Shia) find
 themselves in. Just as they can point to teachings like [Shia Islam's liberation
 theology](https://www.decolonialtranslation.com/english/the-islamic-liberation-theology-of-ali-shariatiEng.html) ( لاهوت التحرير الإسلامي الشيعي )
