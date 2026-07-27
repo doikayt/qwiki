@@ -18,11 +18,11 @@ deferring collective liberation to a national homeland elsewhere.
 
 <img class="float-photo float-photo-left float-photo-53 float-photo-paragraph-align" src="/images/we-are-flocked.png" alt="A Gadsden-flag parody on a yellow field: a coiled rattlesnake wraps around a surveillance camera on a tripod instead of striking, above the caption 'don't flock me,' a play on Flock Safety's surveillance cameras.">
 
-"Hereness" to us also means: think globally, but act locally. One of the things each of us can do _today_ is rip out
+"Hereness" to us also means: think globally, but act locally. One of the things each of us can do _today_  -- where ever we happen to be -- is to start ripping out
 big-tech's cables from our individual lives and
-organizational workflows. We've done exactly that with our
-own company, and we are actively working on sharing that knowledge
-with anyone else who objects to being constantly
+organizational workflows. As we work toward that goal by 
+open source-ifying our own infrastructure, we will 
+actively share knowledge gained with anyone else who objects to being constantly
 marketed to, suppressed and surveilled.
 
 <div class="v-spacer v-spacer-less1"></div>
