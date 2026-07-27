@@ -43,14 +43,6 @@ mkdirSync(DIST, { recursive: true });
 copyFileSync(resolve(SRC, 'styles.css'), resolve(DIST, 'styles.css'));
 copyFileSync(resolve(ROOT, 'docs/assets/doikayt-logo.png'), resolve(DIST, 'logo.png'));
 
-// Sourced live from the installed package (not duplicated into website/src/images)
-// so it always tracks whatever QR code typescript-build-config currently ships.
-mkdirSync(resolve(DIST, 'images'), { recursive: true });
-copyFileSync(
-  resolve(ROOT, 'node_modules/@doikayt/typescript-build-config/assets/qrcode_www.doikayt.org.png'),
-  resolve(DIST, 'images/qrcode_www.doikayt.org.png')
-);
-
 // Website-only content images (e.g. About/home page photos) -- distinct from
 // docs/assets/, which holds the site logo, and infra/images/, which is
 // MediaWiki's own upload storage and gets wiped by factory-reset.sh.
