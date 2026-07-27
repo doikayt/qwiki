@@ -31,6 +31,47 @@ marked.use({
   }
 });
 
+const SITE_URL = 'https://www.doikayt.org';
+function escapeXml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// Auto-derived, zero-maintenance social preview metadata: first ~150 chars
+// of rendered prose for the description, first image in the body (falling
+// back to the site logo) for the preview image -- nothing to remember to
+// fill in per post.
+function extractDescription(html) {
+  const text = html
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (text.length <= 150) return text;
+  const truncated = text.slice(0, 150);
+  return truncated.slice(0, truncated.lastIndexOf(' ')) + '…';
+}
+
+function extractFirstImage(html) {
+  const match = html.match(/<img[^>]+src="([^"]+)"/);
+  if (!match) return `${SITE_URL}/logo.png`;
+  const src = match[1];
+  return src.startsWith('http') ? src : `${SITE_URL}${src}`;
+}
+
+function withOgTags(template, { title, description, image, url }) {
+  return template
+    .replaceAll('{{OG_TITLE}}', escapeXml(title))
+    .replaceAll('{{OG_DESCRIPTION}}', escapeXml(description))
+    .replaceAll('{{OG_IMAGE}}', escapeXml(image))
+    .replace('{{OG_URL}}', escapeXml(url));
+}
+
 const GITHUB_REPO = 'https://github.com/doikayt/qwiki';
 const commit = execSync('git rev-parse HEAD', { cwd: ROOT }).toString().trim();
 const commitLink = `<a href="${GITHUB_REPO}/commit/${commit}">${commit.slice(0, 7)}</a>`;
@@ -80,10 +121,19 @@ for (const file of pages) {
   const titleMatch = md.match(/^#[ \t]+(.+)$/m);
   const pageTitle = titleMatch ? titleMatch[1] : slug;
   const body = titleMatch ? md.replace(titleMatch[0], '') : md;
-  const html = template
-    .replaceAll('{{PAGE_TITLE}}', pageTitle)
-    .replace('{{TABS}}', buildTabsHtml(slug))
-    .replace('{{BODY}}', parse(body));
+  const bodyHtml = parse(body);
+  const html = withOgTags(
+    template
+      .replaceAll('{{PAGE_TITLE}}', pageTitle)
+      .replace('{{TABS}}', buildTabsHtml(slug))
+      .replace('{{BODY}}', bodyHtml),
+    {
+      title: pageTitle,
+      description: extractDescription(bodyHtml),
+      image: extractFirstImage(bodyHtml),
+      url: `${SITE_URL}/${slug}.html`,
+    }
+  );
   writeFileSync(resolve(DIST, `${slug}.html`), html);
 }
 
@@ -120,16 +170,26 @@ function loadPosts(postsDir) {
       const titleMatch = content.match(/^#[ \t]+(.+)$/m);
       const title = data.title || (titleMatch ? titleMatch[1] : slug);
       const body = titleMatch ? content.replace(titleMatch[0], '') : content;
-      return { slug, title, date: data.date, body };
+      const tags = Array.isArray(data.tags) ? data.tags : [];
+      return { slug, title, date: data.date, body, tags };
     })
     .sort((a, b) => (b.date ?? 0) - (a.date ?? 0));
 }
 
 function renderPost(post) {
-  const html = template
-    .replaceAll('{{PAGE_TITLE}}', post.title)
-    .replace('{{TABS}}', '')
-    .replace('{{BODY}}', parse(post.body));
+  const bodyHtml = parse(post.body);
+  const html = withOgTags(
+    template
+      .replaceAll('{{PAGE_TITLE}}', post.title)
+      .replace('{{TABS}}', '')
+      .replace('{{BODY}}', bodyHtml),
+    {
+      title: post.title,
+      description: extractDescription(bodyHtml),
+      image: extractFirstImage(bodyHtml),
+      url: `${SITE_URL}/blog/${post.slug}.html`,
+    }
+  );
   writeFileSync(resolve(BLOG_DIST, `${post.slug}.html`), html);
 }
 
@@ -155,11 +215,50 @@ const indexRaw = readFileSync(resolve(BLOG_SRC, 'index.md'), 'utf8')
 const indexTitleMatch = indexRaw.match(/^#[ \t]+(.+)$/m);
 const indexTitle = indexTitleMatch ? indexTitleMatch[1] : 'Blog';
 const indexBody = indexTitleMatch ? indexRaw.replace(indexTitleMatch[0], '') : indexRaw;
-const indexHtml = template
-  .replaceAll('{{PAGE_TITLE}}', indexTitle)
-  .replace('{{TABS}}', '')
-  .replace('{{BODY}}', parse(indexBody));
+const indexBodyHtml = parse(indexBody);
+const indexHtml = withOgTags(
+  template
+    .replaceAll('{{PAGE_TITLE}}', indexTitle)
+    .replace('{{TABS}}', '')
+    .replace('{{BODY}}', indexBodyHtml),
+  {
+    title: indexTitle,
+    description: extractDescription(indexBodyHtml),
+    image: extractFirstImage(indexBodyHtml),
+    url: `${SITE_URL}/blog/index.html`,
+  }
+);
 writeFileSync(resolve(BLOG_DIST, 'index.html'), indexHtml);
+
+// RSS feed: newest Doikayt posts only (blog/posts/) -- the legacy
+// datalackey.com archive is years old and would swamp "what's new" for
+// anyone subscribing to stay current.
+const feedItems = newPosts.slice(0, 20).map(post => {
+  const link = `${SITE_URL}/blog/${post.slug}.html`;
+  const pubDate = post.date ? new Date(post.date).toUTCString() : new Date().toUTCString();
+  const categories = post.tags.map(tag => `    <category>${escapeXml(tag)}</category>`).join('\n');
+  return `  <item>
+    <title>${escapeXml(post.title)}</title>
+    <link>${link}</link>
+    <guid isPermaLink="true">${link}</guid>
+    <pubDate>${pubDate}</pubDate>
+${categories ? categories + '\n' : ''}    <description><![CDATA[${parse(post.body)}]]></description>
+  </item>`;
+}).join('\n');
+
+const feedXml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Doikayt Tech Blog</title>
+  <link>${SITE_URL}/blog/index.html</link>
+  <description>New posts from Doikayt Mobilization Labs.</description>
+  <language>en-us</language>
+  <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+${feedItems}
+</channel>
+</rss>
+`;
+writeFileSync(resolve(BLOG_DIST, 'feed.xml'), feedXml);
 
 const blogPageCount = legacyPosts.length + newPosts.length;
 console.log(`Built ${pages.length} pages → website/dist/`);

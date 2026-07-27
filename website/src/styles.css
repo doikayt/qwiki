@@ -275,6 +275,14 @@ hr {
   clear: right;
 }
 
+/* ── RSS badge (blog index) ── */
+
+.rss-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
 /* ── Footer ── */
 
 footer {
