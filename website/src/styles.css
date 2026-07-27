@@ -207,6 +207,14 @@ hr {
   width: 182px; /* 70% of the 260px default */
 }
 
+.float-photo-53 {
+  width: 197px; /* up 15% from 171px per follow-up request (171 * 1.15 = 196.65) */
+}
+
+.float-photo-35 {
+  width: 61px; /* up 33% from 46px per follow-up request (46 * 1.33 = 61.2) */
+}
+
 .float-photo-paragraph-align {
   /* Nudges the float down so its top edge lines up with the top of the
      following paragraph's text. The image sits in its own <p> (margin:
@@ -215,6 +223,34 @@ hr {
      Best-effort estimate, not verified against a live render -- nudge
      further if it's still off. */
   margin-top: 6px;
+}
+
+/* Real (non-floated) block spacer for widening the gap between a paragraph
+   and the next block-level content. Floats don't push normal-flow content
+   down via their own margin, and markdown collapses any number of blank
+   lines in the source into a single gap -- so neither approach actually
+   moves the following paragraph's text; this element does, because it's a
+   genuine block in the flow. */
+.v-spacer {
+  height: 3rem;
+}
+
+/* Shaves one text line's height (13px * 1.6 line-height = 20.8px, rounded)
+   off .v-spacer, for the para2-to-para3 gap only. */
+.v-spacer-less1 {
+  height: calc(3rem - 21px);
+}
+
+/* Nudges fist-unplugged.png down and left of its default float position --
+   it read as orphaned/isolated from the surrounding paragraph text at the
+   default 6px top margin and 1.5rem left buffer. Must come after
+   .float-photo-paragraph-align (same specificity, source order wins) to
+   actually override its margin-top. Values tuned against live renders. */
+.fist-position {
+  margin-top: 68px; /* 20px + 48px (1/2in @ 96px/in) per follow-up request */
+  margin-left: 0; /* removes .float-photo's default 1.5rem left buffer so
+                      it tucks closer to the wrapped text instead of
+                      floating in open space */
 }
 
 /* Doubles the standard 208px small-photo width -- overrides .float-photo's
@@ -230,6 +266,13 @@ hr {
    next to a .float-photo. */
 .clear-left {
   clear: left;
+}
+
+/* Same, but for the right-hand float stack -- guarantees a right-floated
+   image starts below any earlier right float (e.g. bund.webp) instead of
+   risking a collision/overlap when the preceding paragraph is short. */
+.clear-right {
+  clear: right;
 }
 
 /* ── Footer ── */
