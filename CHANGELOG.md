@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.47
+
+### Patch Changes
+
+-   - fix(website): stop size-modified float-photo images ballooning on mobile
+
 ## 0.1.46
 
 ### Patch Changes
