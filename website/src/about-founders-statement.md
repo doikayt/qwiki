@@ -85,8 +85,7 @@ try to build something that puts my  principles into practice.
 
 Result: this idea of a software collective with a moral-activist core -- like-minded, kick-ass
 developers and product managers from different religious and cultural backgrounds,
-collaboratively building software for change and community. The case for
-cross-identity solidarity isn't argued here, it's demonstrated, one shipped feature at
-a time.
+collaboratively building software that helps shift political and economic power back
+to individuals and communities.
 
 [ritual-abuse-source]: https://www.timesofisrael.com/horrifying-testimonies-seek-to-lift-shroud-of-silence-around-ritual-sex-abuse-claims/
