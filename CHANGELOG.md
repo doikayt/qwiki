@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.46
+
+### Patch Changes
+
+-   - fix(website): resolve reviewer flag in Founder's Statement
+
 ## 0.1.45
 
 ### Patch Changes
