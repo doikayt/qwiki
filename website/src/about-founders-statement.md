@@ -61,14 +61,12 @@ of many communities that reject that tenet
 outright -- as did [Maimonides](https://en.wikipedia.org/wiki/Maimonides), 
 the foundational Jewish philosopher who predated this supremacist strand entirely.
 
-<<< WORK IN PROGRESS - NEEDS REVIEW >>
-All this put me in a boat similar to the one my Muslim friends (many of them Shia) find
+All this put me in a boat similar to the one my Muslim friends find
 themselves in. Just as they can point to teachings like [Shia Islam's liberation
 theology](https://www.decolonialtranslation.com/english/the-islamic-liberation-theology-of-ali-shariatiEng.html) ( لاهوت التحرير الإسلامي الشيعي )
 as something genuinely progressive and pro-human, they also need to spend a
-lot of time explaining that their belief system has nothing to do with
-[Wahhabi Islam](https://en.wikipedia.org/wiki/Wahhabism),
-a strain that trends toward rigid intolerance.
+lot of time explaining that their faith has nothing to do with the extremism
+that gets falsely projected onto Islam as a whole in Western discourse.
 
 Set against all the Amalek talk and special-soul theology, I was also learning about
 the pro-humanity side of my own tradition:
