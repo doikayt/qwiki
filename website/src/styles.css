@@ -326,8 +326,17 @@ footer a { color: var(--muted); }
   .float-photo,
   .float-photo-left {
     float: none;
-    width: 100%;
     max-width: 100%;
     margin: 0 0 1rem;
+  }
+
+  /* Only images with no size modifier go full-width on mobile; the
+     percentage/fixed-size variants keep their intended size instead of
+     blowing up to fill the screen (equal specificity to their modifier
+     classes, so without this exclusion they'd win by being declared
+     later in the file -- see the size-modifier classes above). */
+  .float-photo:not(.float-photo-35):not(.float-photo-53):not(.float-photo-70):not(.float-photo-small):not(.float-photo-2x),
+  .float-photo-left:not(.float-photo-35):not(.float-photo-53):not(.float-photo-70):not(.float-photo-small):not(.float-photo-2x) {
+    width: 100%;
   }
 }
