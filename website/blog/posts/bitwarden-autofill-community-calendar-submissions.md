@@ -4,30 +4,112 @@ date: 2026-07-27
 tags: [palestine, activism, privacy, android, foss]
 ---
 
-<!-- IMAGE: hero image goes here -->
+![A cat typing at a desk with three monitors, each showing a different login screen](/blog/images/hero-cat-many-logins.jpg)
 
-We build organizing tools for the activist community here at Doikayt --
-though honestly, anyone's welcome to borrow them, just use them for nice
-things, please. This particular one started with a friend of ours who
-organizes a weekly action. Same day, same time, every week -- which means
-every week, they're back on five or six different community calendars,
-re-submitting the same notification: the library's calendar, a mutual aid
-coalition's shared calendar, a tenant union's Mobilize page, an
-Indivisible chapter's Google Form. The event details are identical, down
-to the punctuation. The only thing that ever changes is the date. It's
-pure time sink, repeated on a schedule, usually from a phone, standing
-somewhere with five minutes before they need to be elsewhere.
+  Filling out the same web contact form for the nine millionth time has to rate as
+  one of the most annoying wastes of time known to humankind. Now
+  imagine you work for a shoe-string budget organization that hosts 
+  a recurring event, and you need to update various community calendars with 
+  the same event details (with -- say -- just the date changing each time.)  
+  That's exactly the kind of workflow inefficiency we at 
+  Doikayt Mobilization Labs recently helped our friends 
+  at VigilForGaza resolve.
 
-Turns out this isn't just an activist problem, either -- ask around and
-you'll find the "normies" dealing with their own version of it: job
-applicants retyping the same name, address, and work history into a dozen
-different applicant-tracking systems, apartment hunters filling out a
-near-identical rental application on every listing site, freelancers
-re-entering their business info into every new client's intake form,
-parents drowning in school and camp registration forms. Anyone who fills
-out a lot of forms online has this exact tedium. Our friend's weekly
-action is just the sharpest version of it -- constant, on a schedule, on a
-phone -- but the fix below is genuinely general-purpose.
+  This article walks you through how to configure the two tools 
+  we found most useful for this purpose:   Roboforms [link] and Bitwarden[link] 
+  for both desktop and mobile (Android) scenarios.  For the technically 
+  curious we cross reference info in our appendix (tech appendix)
+
+  Background on Roboforms [link] and Bitwarden[
+    - both have form fill tools and credentials mgt.(login) features
+    - ideally better  to just use one tool but
+            - discuss at high level the technical gap of BW (and provide a pointer to 
+              the tech appendix discussion of the details)
+
+  
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+had this exact problem, and we went through numerous 
+  rounds of research to find the best set of tools for this job. This article 
+  will 
+    present
+
+        not only step-by-step how to 
+also
+    a deep dive into the technical....
+
+
+
+
+
+Something that 
+  would work in Desktop 
+
+This post
+walks through setting up Bitwarden on Android for password management, and
+pairing it with RoboForm for the address and contact-info fields that show
+up in *any* form -- calendar submissions, donation pages, RSVP forms,
+volunteer sign-ups, permit and comment forms, vendor checkout, all of it.
+
+
+
+
+
+
+
+
+
+
+  where we're starting this series: an occasional set of HOW-TO and
+  tech-deep-dive posts on the tools and platforms we're building (and borrowing)
+  to help technologists support organizing work.
+
+
+  Turns out this isn't just an activist problem, either -- ask around and
+  you'll find the "normies" dealing with their own version of it...
+
+  ---
+  That replaces the current opening paragraph (lines 9-19 of the file) and keeps
+  everything from "Turns out this isn't just an activist problem" onward
+  unchanged. Want me to apply this edit to the file?
+
+
+
+
+
+
+
+
+
+ 
+
+
+At Doikayt Mobilization Labs we 
+
+
+
+
+ -- and that is the
+
+reason for the popularity of 
+
+
 
 None of that tedium is *necessary*. Most of it is credential and
 contact-info re-entry that the right pair of apps already knows how to do
@@ -65,20 +147,53 @@ individuals, which is often all a shoestring-budget org needs. Organizations
 that outgrow the free tier land at $4/user/month for the Teams plan, well
 below LastPass's $7/user/month.
 
+### Setting it up on Desktop
+
+Bitwarden's signup screens are honestly a little easier to get through on
+desktop -- a real keyboard, no autocorrect fighting you over a master
+password -- so if your org doesn't have a Bitwarden account yet, start
+here and just log in on the phone afterward.
+
+1. Go to [vault.bitwarden.com](https://vault.bitwarden.com) and create an
+   account with your org's email address and a master password.
+
+![Bitwarden desktop account-creation screen](/blog/images/desktop-bitwarden-signup-account-info.png)
+
+2. Once you're set up, logging back in walks through email and master
+   password separately.
+
+![Bitwarden desktop login: email entry](/blog/images/desktop-bitwarden-login-email.png)
+![Bitwarden desktop login: master password entry](/blog/images/desktop-bitwarden-login-master-password.png)
+
+3. Bitwarden will offer to install its browser extension so it can fill
+   logins on desktop too -- worth doing, but skippable for now if you're
+   only using Bitwarden for password storage today. It's available later
+   from Settings if you change your mind.
+
+![Bitwarden desktop browser-extension install prompt](/blog/images/desktop-bitwarden-extension-setup-prompt.png)
+
+4. You'll land on your vault home, empty and waiting for your team's
+   first shared items.
+
+![Bitwarden desktop vault home, empty](/blog/images/desktop-bitwarden-vault-home.png)
+
+The same account works everywhere -- once it exists, log into it on
+Android with the steps below.
+
 ### Setting it up on Android
 
-<!-- IMAGE: Play Store listing / install screen -->
+![Bitwarden listing in the Play Store, ready to install](/blog/images/android-playstore-bitwarden-listing.png)
 
 1. Install **Bitwarden Password Manager** from the Play Store.
-2. Log in (or create a free account at
-   [bitwarden.com](https://bitwarden.com) first, if you don't have one).
+2. Log in with the account from the desktop steps above (or create one
+   here directly, if you'd rather skip desktop entirely).
 3. Set up biometric unlock (fingerprint or face unlock) under
    **Settings → Security → Unlock with biometrics**, so you aren't typing
    your master password every time you need a credential on your phone.
 4. Turn on Bitwarden as your Android **autofill service**: **Settings →
    Autofill Service**, select Bitwarden, and confirm.
 
-<!-- IMAGE: Autofill service settings screen -->
+![Android's Autofill Service picker with Bitwarden selected](/blog/images/android-autofill-service-settings.jpg)
 
 That last step is the important one, and it's easy to skip past. Android's
 autofill framework isn't just for logins -- once Bitwarden is registered as
@@ -124,7 +239,7 @@ more fundamental reason than the Accessibility question above
 
 ### One-time setup: create a RoboForm Identity
 
-<!-- IMAGE: Adding a new Identity in RoboForm -->
+![Creating a new Identity in RoboForm, with name and email filled in](/blog/images/android-roboform-identity-new-person.jpg)
 
 1. Open the RoboForm app.
 2. Tap the **Identities** tab at the bottom.
@@ -141,7 +256,7 @@ source instead of five slightly different typed-out versions.
 
 ### Every time you need to fill a form: the Share method
 
-<!-- IMAGE: Chrome share sheet with RoboForm listed -->
+![Chrome's share menu, with RoboForm listed as a share target](/blog/images/android-chrome-share-sheet-roboform.jpg)
 
 1. Open Chrome and navigate to the form -- a calendar submission page, a
    checkout form, whatever needs your org's info.
@@ -199,7 +314,7 @@ Google Form, an Eventbrite listing, or a Mobilize event page -- are a good
 worked example because they're so consistent about *which* fields they
 want. That's precisely the shape of a RoboForm Identity.
 
-<!-- IMAGE: A calendar submission form mid-fill inside RoboForm's browser -->
+![A real volunteer sign-up form in RoboForm's browser, with fill icons showing next to the recognized Last Name and ZIP code fields](/blog/images/android-roboform-form-midfill.jpg)
 
 Open the submission form in Chrome, share it to RoboForm, fill from your
 saved Identity, and switch back -- the same eight-step loop from part 2,

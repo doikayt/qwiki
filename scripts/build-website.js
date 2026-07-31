@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, mkdirSync, copyFileSync, readdirSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, copyFileSync, readdirSync, existsSync, statSync } from 'fs';
 import { resolve, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
@@ -72,6 +72,25 @@ function withOgTags(template, { title, description, image, url }) {
     .replace('{{OG_URL}}', escapeXml(url));
 }
 
+// Both image dirs below (website-only content images and per-post blog
+// images) are expected to be flat -- no subdirectories. A stray directory
+// (e.g. a screenshot batch dropped in by mistake) would otherwise crash
+// copyFileSync with a bare EISDIR pointing at internal fs code, giving no
+// hint about which path caused it or why. Fail loudly here instead.
+function copyFlatImages(srcDir, distDir) {
+  for (const file of readdirSync(srcDir)) {
+    const srcPath = resolve(srcDir, file);
+    if (statSync(srcPath).isDirectory()) {
+      throw new Error(
+        `${srcPath} is a directory, but image dirs must contain flat files only ` +
+        `-- nested folders aren't copied to dist/ and break the build. Move its ` +
+        `contents up a level or remove it.`
+      );
+    }
+    copyFileSync(srcPath, resolve(distDir, file));
+  }
+}
+
 const GITHUB_REPO = 'https://github.com/doikayt/qwiki';
 const commit = execSync('git rev-parse HEAD', { cwd: ROOT }).toString().trim();
 const commitLink = `<a href="${GITHUB_REPO}/commit/${commit}">${commit.slice(0, 7)}</a>`;
@@ -91,9 +110,7 @@ const IMAGES_SRC = resolve(SRC, 'images');
 if (existsSync(IMAGES_SRC)) {
   const IMAGES_DIST = resolve(DIST, 'images');
   mkdirSync(IMAGES_DIST, { recursive: true });
-  for (const file of readdirSync(IMAGES_SRC)) {
-    copyFileSync(resolve(IMAGES_SRC, file), resolve(IMAGES_DIST, file));
-  }
+  copyFlatImages(IMAGES_SRC, IMAGES_DIST);
 }
 
 // Pages sharing a horizontal sub-nav; order here sets tab order.
@@ -152,9 +169,7 @@ function copyBlogImages(postsDir) {
   const imagesDir = resolve(postsDir, 'images');
   if (!existsSync(imagesDir)) return;
   mkdirSync(BLOG_IMAGES_DIST, { recursive: true });
-  for (const file of readdirSync(imagesDir)) {
-    copyFileSync(resolve(imagesDir, file), resolve(BLOG_IMAGES_DIST, file));
-  }
+  copyFlatImages(imagesDir, BLOG_IMAGES_DIST);
 }
 copyBlogImages(BLOG_LEGACY_SRC);
 copyBlogImages(BLOG_POSTS_SRC);

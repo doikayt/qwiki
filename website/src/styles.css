@@ -168,6 +168,23 @@ hr {
 
 /* ── Inline content images ── */
 
+/* Standalone content images (e.g. how-to screenshots) that aren't wrapped
+   in running text -- distinct from .float-photo below, which text-wraps
+   beside a photo. These are centered, capped to a size that reads as an
+   illustration rather than the dominant element on the page, and scale
+   within a bounding box (max-width x max-height) so both very wide
+   (desktop) and very tall (phone) screenshots land at a comparable size
+   instead of one ballooning past the other. */
+main img:not(.float-photo) {
+  display: block;
+  max-width: min(480px, 100%);
+  max-height: 640px;
+  width: auto;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+}
+
 .float-photo {
   float: right;
   width: 260px;
