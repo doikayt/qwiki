@@ -70,6 +70,8 @@ closed source ecosystem, we don't really deal with it.)
 
 1. In Chrome, click on the three dot menu on upper right, then select Extensions to open the Web Store and search for **RoboForm**.
 
+![Chrome's Extensions menu, with "Visit Chrome Web Store" highlighted](/blog/images/desktop-bitwarden-open-web-store.png)
+
 ![Searching the Chrome Web Store for RoboForm](/blog/images/desktop-roboform-search-extension.png)
 
 2. Open the **RoboForm Password Manager** listing and click **Add to
@@ -154,10 +156,12 @@ appendix [[2]](#2-security-track-record) for how their security track
 records actually compare. BW's free tier covers unlimited passwords
 synced across unlimited devices. LastPass's
 free tier, by contrast, locks you to *one* device type -- desktop or
-mobile, not both -- so syncing between your laptop and your phone (exactly
-the desktop-plus-Android setup this post walks through) requires
-upgrading to a paid plan. That's the version we're setting up
-below -- one account, your own vault. If your org later needs to share
+mobile, not both -- so syncing between your laptop and your mobile device 
+requires upgrading to a paid plan.  Multi-device scenario set-up steps are
+given below in [Setting it up on Android](#setting-it-up-on-android).) 
+
+In this section we provide steps for setting up an individual account, mapped to 
+one credentials valut.  If your org later needs to share
 logins across multiple people, Bitwarden scales up to team and even
 enterprise tiers; see the appendix
 [[3]](#3-shared-vaults-and-sso-for-teams) for what that looks like.
@@ -485,12 +489,8 @@ right.
 
 ### [2] Security Track Record
 
-Password managers are a single point of failure by design, so it's worth
-knowing what's actually happened to each of these three, rather than
-taking "trust us" at face value.
-
 The table below covers every publicly reported incident we found for the
-three tools. We're upfront fans of open source, so it's worth sitting
+three tools under evaluation. We're upfront fans of open source, so it's worth sitting
 with the fact that Bitwarden -- open source -- has an incident on this
 list, while RoboForm -- closed source -- doesn't. That's not actually a
 contradiction: supply-chain attacks target how software gets built and
@@ -506,17 +506,13 @@ check exactly what it did rather than take Bitwarden's word for it.
 | Bitwarden | 2026: a malicious version of Bitwarden's own CLI was briefly live on npm (~90 minutes) as part of a broader supply-chain attack. 2023: a disclosed flaw allowed iframes to access autofilled credentials, since fixed. | No end-user vault data reported accessed in either incident. |
 | RoboForm | None found. | N/A |
 
-None of this means "pick RoboForm and stop worrying" -- LastPass's breach
-is the most serious entry here by far, and Bitwarden isn't spotless
-either. Use a strong, unique master password and turn on two-factor
-authentication regardless of which tool you pick; that matters more than
-which vendor's name is on the app.
+Regardless of which tool you pick,
+make sure to use a strong, unique master password and turn on two-factor
+authentication. 
+
 
 ### [3] Shared Vaults and SSO for Teams
 
-<!-- SCREENSHOT GAP (low priority): this whole section has no screenshots
-     -- reasonable since it's framed as aspirational/explanatory rather
-     than a hands-on tutorial, but flagging in case that changes. -->
 
 Bitwarden can run as shared infrastructure for a whole team, not just a
 personal vault.
