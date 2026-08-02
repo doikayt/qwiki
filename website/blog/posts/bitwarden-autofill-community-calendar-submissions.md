@@ -1,141 +1,139 @@
 ---
-title: "Bitwarden, Autofill, and the Tedium of Submitting to Community Calendars (Work in Progress)"
+title: "Automating Repetitive Form Fills with Bitwarden, Lastpass and Roboform"
 date: 2026-07-27
 tags: [palestine, activism, privacy, android, foss]
 ---
 
 ![A cat typing at a desk with three monitors, each showing a different login screen](/blog/images/hero-cat-many-logins.jpg)
 
-  Filling out the same web contact form for the nine millionth time has to rate as
-  one of the most annoying wastes of time known to humankind. Now
-  imagine you work for a shoe-string budget organization that hosts 
-  a recurring event, and you need to update various community calendars with 
-  the same event details (with -- say -- just the date changing each time.)  
-  That's exactly the kind of workflow inefficiency we at 
-  Doikayt Mobilization Labs recently helped our friends 
-  at VigilForGaza resolve.
+Filling out the same web contact form for the nine millionth time has to rate as
+one of the most annoying wastes of time known to humankind. 
+Now imagine your time wastage if -- as a volunteer at some shoe-string
+budget organization -- you were responsible for submitting 
+_weekly_ recurring events to various community calendars. 
+Some calendars natively support submission of auto-recurring events, but in many cases you 
+will be stuck entering the same tedious set of field values every seven days. 
+That's exactly the kind of workflow inefficiency we recently helped our friends 
+at [VigilForGaza](https://www.instagram.com/vigil4gaza/?hl=en) resolve.
 
-  This article walks you through how to configure the two tools 
-  we found most useful for this purpose:   Roboforms [link] and Bitwarden[link] 
-  for both desktop and mobile (Android) scenarios.  For the technically 
-  curious we cross reference info in our appendix (tech appendix)
 
-  Background on Roboforms [link] and Bitwarden[
-    - both have form fill tools and credentials mgt.(login) features
-    - ideally better  to just use one tool but
-            - discuss at high level the technical gap of BW (and provide a pointer to 
-              the tech appendix discussion of the details)
+The full solution we propose leverages two tools:
+- [Bitwarden](https://bitwarden.com/) (BW) -- an open-source credentials
+  vault and bare-bones forms fill tool with a CLI
+- [RoboForm](https://www.roboform.com/) -- a CLI-less closed-source
+  password manager with rich forms fill capabilities
 
-  
-
+As we will explain below, **for the simplest, lowest requirement scenarios**
+it might make sense for you to skip the BW explanations 
+and how-to sections and **just focus on Roboform.**
 
 
 
-
-
-
-
-
-
+## Why Not Just One Tool ?
  
+  Prior to investigating how to automate recurring calendar-event
+  submissions, we had become major fans of BW: it's open source (much
+  preferred for any security tool, since that keeps it open to audit and
+  review), free -- even across multiple devices, and it's 
+  equipped with CLI access to their credentials vault.  We lean on that
+  CLI constantly for scripting machine and environment setup -- at which point one 
+  needs secure access to ssh keys, access tokens, and the like.
+
+  It would have been theoretically possible for us to get BW working as a
+  forms-fill tool too, but like the very first password manager we tried --
+  LastPass (_not_ free across multiple devices, and _not_ open source) -- both turned out to be
+  pretty rigid about which fields they can actually handle on a repetitive
+  submission. LastPass gives you no way to fix a field it doesn't
+  recognize -- you're stuck typing it by hand, every single time you
+  re-submit. Bitwarden is a bit better, but the fix involves tedious
+  hunting through a form's raw markup, and manual configuration. RoboForm
+  was the one tool that didn't share this limitation -- see the appendix
+  for why [[1]](#1-why-not-just-lastpass-or-bitwarden).
+
+Since your requirements might not include CLI capabilities and a bias toward open 
+source, we will begin our how-to sections with a focus 
+on Roboform set-up and usage on desktops using Chrome.  We then walk through BW set-up and usage on 
+deskop Chrome (other browsers will likely be quite similar.)  Finally, for 
+those who wish to both tools on mobile devices we walk through some of the gymnastics 
+one needs to do on Android (apologies to iPhone users -- since that is a completely
+closed source ecosystem, we don't really deal with it.)
 
 
 
 
+## HOW-TO #1: RoboForm desktop setup
 
 
+### Installing the extension
 
-had this exact problem, and we went through numerous 
-  rounds of research to find the best set of tools for this job. This article 
-  will 
-    present
+1. In Chrome, click on the three dot menu on upper right, then select Extensions to open the Web Store and search for **RoboForm**.
 
-        not only step-by-step how to 
-also
-    a deep dive into the technical....
+![Searching the Chrome Web Store for RoboForm](/blog/images/desktop-roboform-search-extension.png)
 
+2. Open the **RoboForm Password Manager** listing and click **Add to
+   Chrome**.
 
+![RoboForm Password Manager's Chrome Web Store listing](/blog/images/desktop-roboform-listing.png)
 
+3. Confirm on the permissions prompt by clicking **Add extension**.
 
+![Chrome's "Add extension?" confirmation dialog for RoboForm](/blog/images/desktop-roboform-add-extension-prompt.png)
 
-Something that 
-  would work in Desktop 
+### Creating an account
 
-This post
-walks through setting up Bitwarden on Android for password management, and
-pairing it with RoboForm for the address and contact-info fields that show
-up in *any* form -- calendar submissions, donation pages, RSVP forms,
-volunteer sign-ups, permit and comment forms, vendor checkout, all of it.
+4. On first launch, choose **Sign Up** and create an account with your
+   org's email and a master password.
 
+![RoboForm's welcome screen, choosing between Log In and Sign Up](/blog/images/desktop-roboform-welcome-login-signup.png)
 
+5. Verify the account with the **One-Time Code by email** option.
 
+![RoboForm's "Confirm it's you" verification step](/blog/images/desktop-roboform-confirm-email.png)
 
+6. RoboForm offers a short video tutorial on first login -- **Skip** is
+   fine, everything below covers what you actually need.
 
+![RoboForm's onboarding tutorial prompt, with Skip and Next](/blog/images/desktop-roboform-tutorial-skip.png)
 
+7. Click the puzzle-piece **Extensions** icon in Chrome's toolbar, find
+   RoboForm, and click the **pin** icon so it stays visible instead of
+   hiding behind the puzzle piece every time.
 
+![Pinning the RoboForm extension from Chrome's extensions menu](/blog/images/desktop-roboform-pin-extension.png)
+![RoboForm's icon now pinned in Chrome's toolbar](/blog/images/desktop-roboform-pinned-toolbar.png)
 
+### Saving a form once, recalling it forever
 
+This is the actual payoff. Fill a form out normally the first time, then
+teach RoboForm to remember it:
 
-  where we're starting this series: an occasional set of HOW-TO and
-  tech-deep-dive posts on the tools and platforms we're building (and borrowing)
-  to help technologists support organizing work.
+8. With the form filled in, right-click anywhere on the page, open
+   **RoboForm Password Manager**, and choose **Save Forms**.
 
+![Right-clicking a filled-out form to reach RoboForm's Save Forms option](/blog/images/desktop-roboform-save-form-menu.png)
 
-  Turns out this isn't just an activist problem, either -- ask around and
-  you'll find the "normies" dealing with their own version of it...
+   Whatever you typed into the form's fields at this point is what gets
+   remembered -- RoboForm snapshots the field values, not just the field
+   layout.
 
-  ---
-  That replaces the current opening paragraph (lines 9-19 of the file) and keeps
-  everything from "Turns out this isn't just an activist problem" onward
-  unchanged. Want me to apply this edit to the file?
+![The form's field values, annotated as what RoboForm will recall](/blog/images/desktop-roboform-save-annotated.png)
 
+9. RoboForm asks what to call this saved entry and whether it's a
+   **Login** or a **Bookmark** -- pick Login, give it a name you'll
+   recognize (the site or form's purpose works well), and click **Save**.
 
+![RoboForm's save dialog, naming the entry and choosing Login](/blog/images/desktop-roboform-save-dialog.png)
 
+10. Next time you're staring down a blank copy of that same form, click on the pinned RoboForm
+    icon to the right of the URL entry area. Then select the name of the form fill profile you chose in the previous step.
 
+![RoboForm's Fill Logins panel offering a saved match, ready to click and fill](/blog/images/desktop-roboform-click-to-fill.png)
 
+11. Every field RoboForm remembered snaps back into place 
+    (in this example the title of the dialog switches from 'Create..' to 'Edit...' -- nothing to do with form fill.)
 
+![The form's fields refilled automatically from the saved entry](/blog/images/desktop-roboform-fields-filled.png)
 
-
-
- 
-
-
-At Doikayt Mobilization Labs we 
-
-
-
-
- -- and that is the
-
-reason for the popularity of 
-
-
-
-None of that tedium is *necessary*. Most of it is credential and
-contact-info re-entry that the right pair of apps already knows how to do
-for you -- you just haven't pointed them at the problem yet. This post
-walks through setting up Bitwarden on Android for password management, and
-pairing it with RoboForm for the address and contact-info fields that show
-up in *any* form -- calendar submissions, donation pages, RSVP forms,
-volunteer sign-ups, permit and comment forms, vendor checkout, all of it.
-
-Why two apps instead of one? Android only lets a single app be the system's
-default autofill service at a time, and the obvious way to get a second app
-autofilling forms -- Accessibility permission -- hands that app system-wide
-screen-reading access. We wanted Bitwarden to keep owning passwords
-*without* handing a second app that level of access just to autofill an
-address field. The setup below is the workaround: RoboForm fills forms
-through its own in-app browser instead of through Accessibility, so it
-never needs to touch Bitwarden's turf or ask for anything invasive.
-
-## Who this is for
-
-You're a "power user" volunteer or staff technologist at a movement-aligned
-org -- comfortable installing an app and poking around in its settings, but
-not necessarily an Android developer. You (or your org) already juggle
-several logins and would rather not keep them in a notes app, a sticky
-note, or "the password everyone uses." And you or your teammates are the
-ones stuck submitting the same event to five calendars a week.
 
 ## Part 1: Bitwarden as your team's password manager
 
@@ -235,7 +233,8 @@ RoboForm wasn't the only candidate we looked at for this job -- LastPass
 has its own form-fill feature too, and a lot of orgs already have it
 sitting around from before switching to Bitwarden. We ruled it out for a
 more fundamental reason than the Accessibility question above
-[[1]](#1-why-not-lastpass) -- see the appendix at the end for the details.
+[[1]](#1-why-not-just-lastpass-or-bitwarden) -- see the appendix at the
+end for the details.
 
 ### One-time setup: create a RoboForm Identity
 
@@ -371,31 +370,57 @@ itself.
 
 ---
 
-## [1] Why not LastPass
+  ## [1] Why Not Just LastPass or Bitwarden
 
-LastPass's form-fill engine leans heavily on matching a form field's `id`
-attribute to guess what kind of data belongs there. That's the wrong
-attribute to key on. `id` exists for CSS and JavaScript to hook into a
-specific element -- nothing in the HTML spec requires it to describe what
-the field *is*, and in practice it often doesn't: modern component
-frameworks (React's `useId()`, Formik, plenty of others) routinely
-generate `id`s like `:r3:` or `field-14` that carry no semantic meaning at
-all.
+  LastPass, Bitwarden, and RoboForm all solve autofill the same basic way:
+  you save a structured profile -- BW calls it an Identity, LastPass calls
+  it an Address -- a dictionary of values for name, address, phone, email,
+  and so on, that gets matched against a form's inputs. The difference is
+  what happens when a field doesn't match anything in that dictionary.
 
-The `name` attribute is a much more reliable signal, because it's what
-actually gets sent to the server when the form submits -- a backend has to
-be able to make sense of that payload, so `name="email"` or
-`name="shipping_zip"` stays meaningful even on a form whose `id`s are pure
-framework noise. And the real spec-blessed answer, one level better than
-either: the `autocomplete` attribute -- `autocomplete="email"`,
-`autocomplete="postal-code"` -- which is what Android's own autofill
-framework prioritizes. `name`-pattern matching is the fallback for forms
-that skip `autocomplete` entirely; `id`-matching is a fallback below even
-that.
+  LastPass simply gives up: if it can't match a field, there's no
+  workaround -- you type it in by hand, every time, on every form. Its
+  matching also leans heavily on a form field's `id` attribute, the least
+  reliable signal to key on for forms submission.  Modern UI frameworks like React inject 
+  `id`s (like `:r3:`) whose naming has no relation to what 
+  gets sent to the server side when you click 'SUBMIT'.
+  Attributes such as `name` and, better still,
+  `autocomplete` are both signals LastPass under-uses in favor of `id`.
 
-The practical result: on a lot of the newer, component-framework-built
-forms you'll actually run into -- which is most of them at this point --
-LastPass's form-fill quietly whiffs on fields it should be able to
-recognize. That's not a permissions trade-off like the Accessibility
-question in Part 2; it's just a less reliable tool for the specific job of
-reading a form and knowing what goes where.
+  Bitwarden does better -- it prioritizes `autocomplete` and `name` over
+  `id` -- but its fallback for an unmatched field is still entirely
+  manual: you inspect the page's markup yourself, find the right
+  attribute, and hand-create a custom field to match it. A real fix, but a
+  tedious, one-field-at-a-time chore you repeat for every new form your
+  org submits to.
+
+  We evaluated Bitwarden, LastPass head-to-head on the
+  actual forms we needed to submit -- CalendarWiz and similar
+  WordPress/Drupal-styple calendar plugins. In doing so, we hit on something worse
+  than rigidity: on any form where a field's `id` and `name` attributes
+  differ (not a rare occurence on our  target calendar platforms) all three tools
+  autofilled either with the wrong field value or silently skipped it. No
+  error, no warning -- the form still submitted, just with corrupted
+  data. 
+
+  RoboForm sidesteps the whole problem. Instead of only guessing from
+  markup, it also lets you *teach* it: fill a form out once by hand, and
+  its AutoSave feature notices and remembers exactly what you typed into
+  each field, for that specific form, going forward. No markup-hunting, no
+  manual mapping -- just fill it once and it sticks.  However, when we
+  started our evaluation, we didn't know about Roboform.
+
+  So we built
+  [form-fill-bookmarklet](https://github.com/datalackey/fill-form-bookmarklet):
+  a zero-dependency browser bookmarklet that matches fields by `name` --
+  the attribute HTML forms actually submit under -- instead of `id`.
+  With this tool, you fill a form out once, click the bookmarklet to capture it as a small
+  JSON template, then you save the JSON.  On the next submission, 
+  you edit the JSON to update just the value that changes (usually the date). You copy the JSON
+  block to the clipboard, then invoke the bookmarklet to refill your form with all values 
+  including the saved one. Three days work. A cool tool ! (we thought) -- and
+  one we realized was completely superfluous once we evaluated Roboform.
+
+  We maintain the repo that contains this code for pedgogical purposes. 
+  You might want to study the code if you want some idea of how Roboform might work internally.  
+
