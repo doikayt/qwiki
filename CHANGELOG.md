@@ -1,5 +1,13 @@
 # @datalackey/qwiki
 
+## 0.1.48
+
+### Patch Changes
+
+-   - fix(website): number appendix sections and add matching footnote links
+    - fix(website): restructure appendix, correct LastPass/Bitwarden claims
+    - feat(website): rewrite Bitwarden how-to as extension-first, add security comparison
+
 ## 0.1.47
 
 ### Patch Changes
