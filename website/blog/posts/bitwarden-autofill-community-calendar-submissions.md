@@ -256,14 +256,14 @@ across apps and browser tabs, not just username/password pairs. But it's
 also the reason we don't just add a second autofill app on top: Android
 only allows one default autofill service. Whatever handles your address
 and contact-info fields has to work *around* that slot, not compete for it.
-That's what part 2 sets up.
+That's what HOW-TO #3 sets up.
 
 Everything above treats Bitwarden as a personal password manager -- your
 own vault, your own master password. It can also run as shared
 infrastructure for a whole team; see the appendix
 [[3]](#3-shared-vaults-and-sso-for-teams) if that's relevant to your org.
 
-## Part 2: RoboForm for addresses, without the Accessibility permission
+## HOW-TO #3: RoboForm for addresses, without the Accessibility permission
 
 RoboForm has its own concept of an **Identity** -- a saved profile of name,
 address, city/state/zip, phone, and email -- the same idea as a Bitwarden
@@ -341,7 +341,7 @@ used Accessibility in the first place, so turning it off changes nothing
 about how form-filling works, only what permission RoboForm is holding in
 the background.
 
-## Part 3: The general workflow -- autofill for any form
+## HOW-TO #4: The general workflow -- autofill for any form
 
 This is the actual payoff, and it's bigger than calendars. Once you've got
 a saved RoboForm Identity and the Share-method habit down, *any* form
@@ -368,7 +368,7 @@ want. That's precisely the shape of a RoboForm Identity.
 ![A real volunteer sign-up form in RoboForm's browser, with fill icons showing next to the recognized Last Name and ZIP code fields](/blog/images/android-roboform-form-midfill.jpg)
 
 Open the submission form in Chrome, share it to RoboForm, fill from your
-saved Identity, and switch back -- the same eight-step loop from part 2,
+saved Identity, and switch back -- the same eight-step loop from HOW-TO #3,
 just applied to whatever form is in front of you this time, instead of you
 thumb-typing "Doikayt Mobilization Labs, 123 Somewhere St..." for the fifth
 time that week.
@@ -426,60 +426,62 @@ itself.
 
 ### [1] Why Not Just LastPass or Bitwarden
 
-  LastPass, Bitwarden, and RoboForm all solve autofill the same basic way:
-  you save a structured profile (BW calls it an Identity, LastPass calls
-  it an Address) which is essentially a dictionary (map). It 
-  associates values for name, address, phone, email,
-  and so on, with labels, and those labels get 
-  matched against a form's inputs. The difference is
-  what happens when a field doesn't match anything in that dictionary.
+LastPass, Bitwarden, and RoboForm all solve autofill the same basic way
+under the hood: a structured profile maps form-field labels to values.
+The real difference comes down to two things:
 
-  Neither one just gives up on an unmatched field -- LastPass calls its
-  version a Form Field, Bitwarden calls it a custom field -- but "supports
-  custom fields" undersells how manual the mechanism actually is. To add
-  one you inspect the page's markup yourself, find the right attribute to
-  key on (`id`, `name`, `aria-label`, `placeholder` -- whichever the page
-  actually uses), then hand-enter a field name and value into an editor.
-  Bitwarden is at least transparent about it: right-click a field in the
-  extension and "Copy custom field name" grabs the exact attribute value
-  it'll match on. Do this for a five-field form and you've done five
-  rounds of devtools-inspecting and re-entering -- and you repeat the
-  whole thing for every new form your org submits to. (We don't have
-  solid public documentation on which attribute either tool's custom-field
-  matching actually prioritizes when several are present on a page --
-  modern UI frameworks like React generate `id`s, e.g. `:r3:`, disconnected
-  from anything meaningful, which makes that priority order matter more
-  than it should.)
+- **Static vs. dynamic mapping.** LastPass and Bitwarden reuse one
+  profile across every form. RoboForm effectively generates a fresh
+  mapping per form.
+- **What happens when a field doesn't match** anything already in the
+  profile.
 
-  We actually evaluated Bitwarden, LastPass head-to-head on the
-  actual forms we needed to submit -- CalendarWiz and similar
-  WordPress/Drupal-styple calendar plugins. In doing so, we hit on something worse
-  than rigidity: on any form where a field's `id` and `name` attributes
-  differ (not a rare occurence on our  target calendar platforms) all three tools
-  autofilled either with the wrong field value or silently skipped it. No
-  error, no warning -- the form still submitted, just with corrupted
-  data. 
+**LastPass and Bitwarden: one static profile, matched by guesswork.**
+You save a structured profile -- BW calls it an Identity, LastPass calls
+it an Address -- essentially a dictionary of name/address/phone/email
+keyed by label, matched against every form's inputs. Neither tool fully
+gives up on a field that doesn't match: LastPass calls its manual
+fallback a Form Field, Bitwarden calls it a custom field. But "fallback"
+undersells how manual it is -- you're the one figuring out which HTML
+attribute (`id`, `name`, `aria-label`, `placeholder`) the page actually
+keys on, one field at a time, for every new form your org submits to.
+Bitwarden's tooling makes that lookup a bit less painful than LastPass's,
+but the work is still yours to do.
 
-  RoboForm sidesteps the whole problem. Instead of only guessing from
-  markup, it also lets you *teach* it: fill a form out once by hand, and
-  its AutoSave feature notices and remembers exactly what you typed into
-  each field, for that specific form, going forward. No markup-hunting, no
-  manual mapping -- just fill it once and it sticks.  However, when we
-  started our evaluation, we didn't know about Roboform.
+**RoboForm: a mapping generated per form.** Instead of matching one
+static profile against markup and hoping, RoboForm also lets you
+*teach* it: fill a form out once by hand, and its AutoSave feature
+notices and remembers exactly what you typed into each field, for that
+specific form, going forward. No markup-hunting, no manual mapping --
+just fill it once and it sticks.
 
-  So we built
-  [form-fill-bookmarklet](https://github.com/datalackey/fill-form-bookmarklet):
-  a zero-dependency browser bookmarklet that matches fields by `name` --
-  the attribute HTML forms actually submit under -- instead of `id`.
-  With this tool, you fill a form out once, click the bookmarklet to capture it as a small
-  JSON template, then you save the JSON.  On the next submission, 
-  you edit the JSON to update just the value that changes (usually the date). You copy the JSON
-  block to the clipboard, then invoke the bookmarklet to refill your form with all values 
-  including the saved one. Three days work. A cool tool ! (we thought) -- and
-  one we realized was completely superfluous once we evaluated Roboform.
+We didn't know RoboForm existed when we started this evaluation, though.
+We tested Bitwarden and LastPass head-to-head on the actual forms we
+needed to submit -- CalendarWiz and similar WordPress/Drupal-style
+calendar plugins -- and hit something worse than rigidity: on any form
+where a field's `id` and `name` attributes differ -- not rare on modern
+component-framework-built forms, where tools like React generate `id`s
+such as `:r3:` that carry no relation to the field's actual `name` --
+both tools' autofill either filled the wrong field or silently skipped
+it. No error, no warning -- the form still submitted, just with
+corrupted data.
 
-  We maintain the repo that contains this code for pedgogical purposes. 
-  You might want to study the code if you want some idea of how Roboform might work internally.
+So we built
+[form-fill-bookmarklet](https://github.com/datalackey/fill-form-bookmarklet):
+a zero-dependency browser bookmarklet that matches fields by `name` --
+the attribute HTML forms actually submit under -- instead of `id`. Fill
+a form out once, click the bookmarklet to capture it as a small JSON
+template, save the JSON. On the next submission, edit just the value
+that changes (usually the date), copy the JSON to the clipboard, and
+invoke the bookmarklet again to refill the form with every value,
+including the one you just changed. Three days of work, and a cool tool
+-- right up until we evaluated RoboForm and realized it was completely
+superfluous.
+
+We still maintain the repo, for pedagogical purposes -- study the code
+if you want a sense of how RoboForm might work internally. RoboForm
+itself is closed source, so you'll never actually know if we guessed
+right.
 
 ### [2] Security Track Record
 
