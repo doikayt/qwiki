@@ -32,6 +32,23 @@ marked.use({
 });
 
 const SITE_URL = 'https://www.doikayt.org';
+
+// Wiki base URL for links inside blog posts: local.config.json's
+// wikiBaseUrl when present (same file infra/scripts/ensure-wiki.js and
+// playwright.config.ts read), falling back to the production wiki's real
+// domain otherwise. Lets a post write a link against {{WIKI_URL}} once
+// and have it resolve correctly in both local preview and the live site.
+const PROD_WIKI_URL = 'https://wiki.doikayt.org';
+function resolveWikiUrl() {
+  const configPath = resolve(ROOT, 'local.config.json');
+  if (!existsSync(configPath)) return PROD_WIKI_URL;
+  try {
+    return JSON.parse(readFileSync(configPath, 'utf8')).wikiBaseUrl ?? PROD_WIKI_URL;
+  } catch {
+    return PROD_WIKI_URL;
+  }
+}
+const WIKI_URL = resolveWikiUrl();
 function escapeXml(str) {
   return String(str)
     .replace(/&/g, '&amp;')
@@ -184,7 +201,8 @@ function loadPosts(postsDir) {
       const { data, content } = matter(raw);
       const titleMatch = content.match(/^#[ \t]+(.+)$/m);
       const title = data.title || (titleMatch ? titleMatch[1] : slug);
-      const body = titleMatch ? content.replace(titleMatch[0], '') : content;
+      const body = (titleMatch ? content.replace(titleMatch[0], '') : content)
+        .replaceAll('{{WIKI_URL}}', WIKI_URL);
       const tags = Array.isArray(data.tags) ? data.tags : [];
       return { slug, title, date: data.date, body, tags };
     })

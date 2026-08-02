@@ -58,8 +58,9 @@ those who wish to both tools on mobile devices we walk through some of the gymna
 one needs to do on Android (apologies to iPhone users -- since that is a completely
 closed source ecosystem, we don't really deal with it.)
 
-
-
+That LastPass breach mentioned above is one entry in a bigger picture --
+see the **Security Track Record** section at the end of this post for how
+all three tools' actual incident histories compare, table included.
 
 ## HOW-TO #1: RoboForm desktop setup
 
@@ -104,7 +105,7 @@ closed source ecosystem, we don't really deal with it.)
 
 ### Saving a form once, recalling it forever
 
-This is the actual payoff. Fill a form out normally the first time, then
+This is the actual payoff. Fill a form out field-by-field the first time, then
 teach RoboForm to remember it:
 
 8. With the form filled in, right-click anywhere on the page, open
@@ -135,45 +136,100 @@ teach RoboForm to remember it:
 ![The form's fields refilled automatically from the saved entry](/blog/images/desktop-roboform-fields-filled.png)
 
 
-## Part 1: Bitwarden as your team's password manager
 
-We've recommended Bitwarden on our field-guide wiki before as a strong,
+So that is all there is to it if you just want to automate form submissions. 
+
+However, if you prefer open source solutions, and if you 
+want scriptability, you will want to read on. We next cover installation
+of Bitwarden on the desktop, while the section after that will cover the not-so-intuitive steps 
+involved in getting BW and Roboform working together on an Android mobile device.
+
+
+## HOW-TO #2: Bitwarden as your password manager
+
+We've recommended Bitwarden on our [field-guide wiki]({{WIKI_URL}}/index.php/Main_Page) before as a strong,
 open-source alternative to LastPass -- especially given
-LastPass's 2022 breach, where encrypted customer vaults were stolen. The
-free tier covers unlimited passwords across unlimited devices for
-individuals, which is often all a shoestring-budget org needs. Organizations
-that outgrow the free tier land at $4/user/month for the Teams plan, well
-below LastPass's $7/user/month.
+LastPass's 2022 breach, where encrypted customer vaults were stolen --
+see the Security Track Record section at the end of this post for how
+these three tools actually compare on that front.
+BW's free tier covers unlimited passwords synced across unlimited devices, permanently. LastPass's
+free tier, by contrast, locks you to *one* device type -- desktop or
+mobile, not both -- so syncing between your laptop and your phone (exactly
+the desktop-plus-Android setup this post walks through) requires
+upgrading to a paid plan. That's the version we're setting up
+below -- one account, your own vault. If your org later needs to share
+logins across multiple people, Bitwarden scales up to team and even
+enterprise tiers; see the advanced section near the end of Part 1 for
+what that looks like.
 
 ### Setting it up on Desktop
 
-Bitwarden's signup screens are honestly a little easier to get through on
-desktop -- a real keyboard, no autocorrect fighting you over a master
-password -- so if your org doesn't have a Bitwarden account yet, start
-here and just log in on the phone afterward.
+Same order as RoboForm above: install the extension first, then create
+the account from inside it. Everything this post is actually about
+(filling forms, not just storing passwords) happens through the
+extension, not the web vault, so treat this as the essential step rather
+than an optional add-on.
 
-1. Go to [vault.bitwarden.com](https://vault.bitwarden.com) and create an
-   account with your org's email address and a master password.
+1. Open Chrome's three-dot **More** menu (top right) → **Extensions** →
+   **Visit Chrome Web Store**.
 
-![Bitwarden desktop account-creation screen](/blog/images/desktop-bitwarden-signup-account-info.png)
+![Chrome's Extensions menu, with "Visit Chrome Web Store" highlighted](/blog/images/desktop-bitwarden-open-web-store.png)
 
-2. Once you're set up, logging back in walks through email and master
-   password separately.
+2. Search for **Bitwarden**.
 
-![Bitwarden desktop login: email entry](/blog/images/desktop-bitwarden-login-email.png)
-![Bitwarden desktop login: master password entry](/blog/images/desktop-bitwarden-login-master-password.png)
+![Searching the Chrome Web Store for Bitwarden](/blog/images/desktop-bitwarden-search-extension.png)
 
-3. Bitwarden will offer to install its browser extension so it can fill
-   logins on desktop too -- worth doing, but skippable for now if you're
-   only using Bitwarden for password storage today. It's available later
-   from Settings if you change your mind.
+3. Open the **Bitwarden Password Manager** listing and click **Add to
+   Chrome**.
 
-![Bitwarden desktop browser-extension install prompt](/blog/images/desktop-bitwarden-extension-setup-prompt.png)
+![Bitwarden Password Manager's Chrome Web Store listing](/blog/images/desktop-bitwarden-listing.png)
 
-4. You'll land on your vault home, empty and waiting for your team's
-   first shared items.
+4. Confirm on the permissions prompt by clicking **Add extension**.
 
-![Bitwarden desktop vault home, empty](/blog/images/desktop-bitwarden-vault-home.png)
+<!-- SCREENSHOT NEEDED: Chrome's "Add extension?" confirmation dialog for
+     Bitwarden -- same as RoboForm's equivalent step -->
+
+5. Pin it to the toolbar now, before setting up the account -- puzzle-piece
+   icon → find Bitwarden → click the pin.
+
+![Pinning the Bitwarden extension from Chrome's extensions menu](/blog/images/desktop-bitwarden-pin-extension.png)
+
+6. Click the newly-pinned Bitwarden icon and choose **Create account**.
+
+![Bitwarden's extension popup, choosing Create account or Log in](/blog/images/desktop-bitwarden-extension-welcome.png)
+
+7. Enter your email address and continue -- Bitwarden emails you a link
+   to confirm it's really you before it lets you finish.
+
+![Bitwarden's "Check your email" confirmation step](/blog/images/desktop-bitwarden-check-email.png)
+
+8. Follow that link, then set your master password back in the
+   extension. Pick something strong and unique -- a password manager's
+   entire value proposition disappears if the one password protecting it
+   is weak or reused elsewhere.
+
+![Bitwarden's "Set a strong password" step (password fields redacted)](/blog/images/desktop-bitwarden-set-password.png)
+
+9. Turn off Chrome's own **Google Password Manager** before you start
+   relying on Bitwarden day to day -- otherwise the two sit side by side
+   offering to save and fill the same logins, which means two competing
+   "save this password?" popups every time you sign into something, and
+   Chrome occasionally filling a field with its own guess a half-second
+   before Bitwarden gets to it. Click Chrome's three-dot **More** menu (top
+   right) → **Passwords and autofill** → **Google Password Manager** →
+   **Settings**, then turn off **Offer to save passwords and passkeys**
+   and **Auto sign-in**. (Or skip the menu digging and go straight to
+   `chrome://settings/passwords`.) It's a one-time fix, and much less
+   annoying than dismissing Google's popups for the next month.
+
+<!-- SCREENSHOT NEEDED: Google Password Manager settings page showing the
+     "Offer to save passwords and passkeys" and "Auto sign-in" toggles -->
+
+10. You'll land on your vault home, empty and ready for your first saved
+    logins.
+
+<!-- SCREENSHOT NEEDED: empty vault home, reached via the extension-first
+     flow (the old website-flow screenshot no longer matches this path) -->
 
 The same account works everywhere -- once it exists, log into it on
 Android with the steps below.
@@ -188,6 +244,10 @@ Android with the steps below.
 3. Set up biometric unlock (fingerprint or face unlock) under
    **Settings → Security → Unlock with biometrics**, so you aren't typing
    your master password every time you need a credential on your phone.
+
+<!-- SCREENSHOT NEEDED: Android Bitwarden app, Settings -> Security ->
+     Unlock with biometrics toggle -->
+
 4. Turn on Bitwarden as your Android **autofill service**: **Settings →
    Autofill Service**, select Bitwarden, and confirm.
 
@@ -202,14 +262,39 @@ only allows one default autofill service. Whatever handles your address
 and contact-info fields has to work *around* that slot, not compete for it.
 That's what part 2 sets up.
 
-### Shared org vaults
+### Advanced: shared vaults and SSO for teams
 
-If more than one person on your team submits events, shares accounts, or
-needs the same set of logins, set up a Bitwarden **Organization** and put
-shared items in a collection rather than emailing passwords around or
-maintaining a shared spreadsheet. When someone leaves the team, you revoke
-their access to the organization instead of rotating every password by
-hand.
+<!-- SCREENSHOT GAP (low priority): this whole section has no screenshots
+     -- reasonable since it's framed as aspirational/explanatory rather
+     than a hands-on tutorial, but flagging in case that changes. -->
+
+Everything above treats Bitwarden as a personal password manager -- your
+own vault, your own master password. But Bitwarden can also run as shared
+infrastructure for a whole team, which is worth knowing about even if you
+don't need it on day one.
+
+**Shared org vaults.** If more than one person on your team submits
+events, shares accounts, or needs the same set of logins, set up a
+Bitwarden **Organization** ($4/user/month on the Teams plan) instead of
+emailing passwords around or maintaining a shared spreadsheet. An
+organization holds the same item types a personal vault does -- Logins,
+Secure Notes, Cards, Identities -- just organized into **Collections**
+that you can scope to specific members or groups. Put the calendar-
+submission login in a collection your events team can see, and keep a
+treasurer-only collection for anything payment-related. When someone
+leaves the team, you revoke their access to the collection or the whole
+organization instead of rotating every password by hand.
+
+**Single sign-on.** On the Enterprise tier, Bitwarden supports logging
+into the vault itself via your org's existing identity provider (Okta,
+Google Workspace, Azure AD/Entra ID, and others, over SAML or OIDC)
+instead of a separate Bitwarden master password. That's real
+infrastructure consolidation -- one login system to manage instead of
+two, and revoking someone's org account revokes their vault access in the
+same step. For most shoestring-budget orgs this is aspirational rather
+than immediately useful: it's an Enterprise-tier feature, and it assumes
+you already have an identity provider in place. Worth knowing it exists
+for the day your org outgrows a spreadsheet of names and passwords.
 
 ## Part 2: RoboForm for addresses, without the Accessibility permission
 
@@ -367,6 +452,25 @@ workflow, own your data, and spend the time you save on the organizing
 itself.
 
 <!-- IMAGE: closing image -->
+
+## Security Track Record
+
+Password managers are a single point of failure by design, so it's worth
+knowing what's actually happened to each of these three, rather than
+taking "trust us" at face value.
+
+| Tool | Reported incidents | Vault data exposed? |
+|---|---|---|
+| LastPass | 2022: attacker used data stolen from a compromised employee's home computer to access a cloud storage backup containing encrypted customer vaults, plus some source code. | Encrypted vaults were taken (not decrypted at the time), along with unencrypted metadata like URLs. |
+| Bitwarden | 2026: a malicious version of Bitwarden's own CLI was briefly live on npm (~90 minutes) as part of a broader supply-chain attack. 2023: a disclosed flaw allowed iframes to access autofilled credentials, since fixed. | No end-user vault data reported accessed in either incident. |
+| RoboForm | None found. | N/A |
+
+None of this means "pick RoboForm and stop worrying" -- LastPass's breach
+is the most serious entry here by far, but Bitwarden isn't spotless
+either, and a security researcher not having found something yet isn't
+the same as it not existing. Use a strong, unique master password and
+turn on two-factor authentication regardless of which tool you pick; that
+matters more than which vendor's name is on the app.
 
 ---
 

@@ -140,6 +140,35 @@ hr {
   margin: 1.5rem 0;
 }
 
+/* ── Tables ── */
+
+/* No table styling existed before this -- markdown tables rendered with
+   bare browser defaults (no borders/padding, and td's default
+   vertical-align: middle), which reads as broken once a cell holds
+   multi-line prose next to a short one-word cell in the same row. */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1.5rem;
+  font-size: 0.8125rem;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  font-weight: 600;
+  color: var(--ink);
+  border-bottom: 2px solid var(--border);
+}
+
+td:first-child, th:first-child { padding-left: 0; }
+td:last-child, th:last-child { padding-right: 0; }
+
 /* ── About page tabs ── */
 
 .about-tabs {
