@@ -8,7 +8,7 @@ tags: [palestine, activism, privacy, android, foss]
 
 Filling out the same web contact form for the nine millionth time has to rate as
 one of the most annoying wastes of time known to humankind. 
-Now imagine your time wastage if -- as a volunteer at some shoe-string
+Now imagine your time wastage if -- as a volunteer at some shoestring
 budget organization -- you were responsible for submitting 
 _weekly_ recurring events to various community calendars. 
 Some calendars natively support submission of auto-recurring events, but in many cases you 
@@ -32,9 +32,10 @@ and how-to sections and **just focus on Roboform.**
 ## Why Not Just One Tool ?
  
   Prior to investigating how to automate recurring calendar-event
-  submissions, we had become major fans of BW: it's open source (much
-  preferred for any security tool, since that keeps it open to audit and
-  review), free -- even across multiple devices, and it's 
+  submissions, we had become major fans of BW. Firstly, it's open source which 
+  is much preferred for any security tool, since that keeps it open to audit and
+  review (but do check the info in **Security Track Record** for more details.)
+  Second, it's free -- even across multiple devices, and it's 
   equipped with CLI access to their credentials vault.  We lean on that
   CLI constantly for scripting machine and environment setup -- at which point one 
   needs secure access to ssh keys, access tokens, and the like.
@@ -43,12 +44,15 @@ and how-to sections and **just focus on Roboform.**
   forms-fill tool too, but like the very first password manager we tried --
   LastPass (_not_ free across multiple devices, and _not_ open source) -- both turned out to be
   pretty rigid about which fields they can actually handle on a repetitive
-  submission. LastPass gives you no way to fix a field it doesn't
-  recognize -- you're stuck typing it by hand, every single time you
-  re-submit. Bitwarden is a bit better, but the fix involves tedious
-  hunting through a form's raw markup, and manual configuration. RoboForm
-  was the one tool that didn't share this limitation -- see the appendix
-  for why [[1]](#1-why-not-just-lastpass-or-bitwarden).
+  submission. Form fill for both products hinges on what is essentially a 
+  static mapping of field labels to field values. 
+  Both LastPass and Bitwarden let you add a custom field for anything they
+  don't recognize, but "let you" is doing a lot of work in that sentence:
+  it's a manual, one-field-at-a-time chore -- hunting through a form's raw
+  markup for the right attribute, then hand-entering it into a field
+  editor -- that you repeat for every new form. RoboForm doesn't share
+  that limitation -- see the appendix for why
+  [[1]](#1-why-not-just-lastpass-or-bitwarden).
 
 Since your requirements might not include CLI capabilities and a bias toward open 
 source, we will begin our how-to sections with a focus 
@@ -58,9 +62,6 @@ those who wish to both tools on mobile devices we walk through some of the gymna
 one needs to do on Android (apologies to iPhone users -- since that is a completely
 closed source ecosystem, we don't really deal with it.)
 
-That LastPass breach mentioned above is one entry in a bigger picture --
-see the **Security Track Record** section at the end of this post for how
-all three tools' actual incident histories compare, table included.
 
 ## HOW-TO #1: RoboForm desktop setup
 
@@ -149,9 +150,8 @@ involved in getting BW and Roboform working together on an Android mobile device
 
 We've recommended Bitwarden on our [field-guide wiki]({{WIKI_URL}}/index.php/Main_Page) before as a strong,
 open-source alternative to LastPass -- especially given
-LastPass's 2022 breach, where encrypted customer vaults were stolen --
-see the Security Track Record section at the end of this post for how
-these three tools actually compare on that front.
+LastPass's 2022 breach, where encrypted customer vaults were stolen 
+(more info on that in the Security Track Record section of the appendix.)
 BW's free tier covers unlimited passwords synced across unlimited devices, permanently. LastPass's
 free tier, by contrast, locks you to *one* device type -- desktop or
 mobile, not both -- so syncing between your laptop and your phone (exactly
@@ -159,16 +159,14 @@ the desktop-plus-Android setup this post walks through) requires
 upgrading to a paid plan. That's the version we're setting up
 below -- one account, your own vault. If your org later needs to share
 logins across multiple people, Bitwarden scales up to team and even
-enterprise tiers; see the advanced section near the end of Part 1 for
-what that looks like.
+enterprise tiers; see **Shared Vaults and SSO for Teams** in the Appendix
+for what that looks like.
 
 ### Setting it up on Desktop
 
-Same order as RoboForm above: install the extension first, then create
-the account from inside it. Everything this post is actually about
-(filling forms, not just storing passwords) happens through the
-extension, not the web vault, so treat this as the essential step rather
-than an optional add-on.
+Same order as RoboForm: extension first, account second. Form-filling
+happens through the extension, not the web vault -- so it's essential,
+not optional.
 
 1. Open Chrome's three-dot **More** menu (top right) → **Extensions** →
    **Visit Chrome Web Store**.
@@ -203,10 +201,9 @@ than an optional add-on.
 
 ![Bitwarden's "Check your email" confirmation step](/blog/images/desktop-bitwarden-check-email.png)
 
-8. Follow that link, then set your master password back in the
-   extension. Pick something strong and unique -- a password manager's
-   entire value proposition disappears if the one password protecting it
-   is weak or reused elsewhere.
+8. Follow that link, then set a strong, unique master password back in
+   the extension -- weak or reused here, and the whole point of a
+   password manager disappears.
 
 ![Bitwarden's "Set a strong password" step (password fields redacted)](/blog/images/desktop-bitwarden-set-password.png)
 
@@ -262,39 +259,10 @@ only allows one default autofill service. Whatever handles your address
 and contact-info fields has to work *around* that slot, not compete for it.
 That's what part 2 sets up.
 
-### Advanced: shared vaults and SSO for teams
-
-<!-- SCREENSHOT GAP (low priority): this whole section has no screenshots
-     -- reasonable since it's framed as aspirational/explanatory rather
-     than a hands-on tutorial, but flagging in case that changes. -->
-
 Everything above treats Bitwarden as a personal password manager -- your
-own vault, your own master password. But Bitwarden can also run as shared
-infrastructure for a whole team, which is worth knowing about even if you
-don't need it on day one.
-
-**Shared org vaults.** If more than one person on your team submits
-events, shares accounts, or needs the same set of logins, set up a
-Bitwarden **Organization** ($4/user/month on the Teams plan) instead of
-emailing passwords around or maintaining a shared spreadsheet. An
-organization holds the same item types a personal vault does -- Logins,
-Secure Notes, Cards, Identities -- just organized into **Collections**
-that you can scope to specific members or groups. Put the calendar-
-submission login in a collection your events team can see, and keep a
-treasurer-only collection for anything payment-related. When someone
-leaves the team, you revoke their access to the collection or the whole
-organization instead of rotating every password by hand.
-
-**Single sign-on.** On the Enterprise tier, Bitwarden supports logging
-into the vault itself via your org's existing identity provider (Okta,
-Google Workspace, Azure AD/Entra ID, and others, over SAML or OIDC)
-instead of a separate Bitwarden master password. That's real
-infrastructure consolidation -- one login system to manage instead of
-two, and revoking someone's org account revokes their vault access in the
-same step. For most shoestring-budget orgs this is aspirational rather
-than immediately useful: it's an Enterprise-tier feature, and it assumes
-you already have an identity provider in place. Worth knowing it exists
-for the day your org outgrows a spreadsheet of names and passwords.
+own vault, your own master password. It can also run as shared
+infrastructure for a whole team; see **Shared Vaults and SSO for Teams**
+in the Appendix if that's relevant to your org.
 
 ## Part 2: RoboForm for addresses, without the Accessibility permission
 
@@ -453,52 +421,36 @@ itself.
 
 <!-- IMAGE: closing image -->
 
-## Security Track Record
-
-Password managers are a single point of failure by design, so it's worth
-knowing what's actually happened to each of these three, rather than
-taking "trust us" at face value.
-
-| Tool | Reported incidents | Vault data exposed? |
-|---|---|---|
-| LastPass | 2022: attacker used data stolen from a compromised employee's home computer to access a cloud storage backup containing encrypted customer vaults, plus some source code. | Encrypted vaults were taken (not decrypted at the time), along with unencrypted metadata like URLs. |
-| Bitwarden | 2026: a malicious version of Bitwarden's own CLI was briefly live on npm (~90 minutes) as part of a broader supply-chain attack. 2023: a disclosed flaw allowed iframes to access autofilled credentials, since fixed. | No end-user vault data reported accessed in either incident. |
-| RoboForm | None found. | N/A |
-
-None of this means "pick RoboForm and stop worrying" -- LastPass's breach
-is the most serious entry here by far, but Bitwarden isn't spotless
-either, and a security researcher not having found something yet isn't
-the same as it not existing. Use a strong, unique master password and
-turn on two-factor authentication regardless of which tool you pick; that
-matters more than which vendor's name is on the app.
-
 ---
 
-  ## [1] Why Not Just LastPass or Bitwarden
+## Appendix
+
+### [1] Why Not Just LastPass or Bitwarden
 
   LastPass, Bitwarden, and RoboForm all solve autofill the same basic way:
   you save a structured profile -- BW calls it an Identity, LastPass calls
-  it an Address -- a dictionary of values for name, address, phone, email,
+  it an Address -- a dictionary (map) of values for name, address, phone, email,
   and so on, that gets matched against a form's inputs. The difference is
   what happens when a field doesn't match anything in that dictionary.
 
-  LastPass simply gives up: if it can't match a field, there's no
-  workaround -- you type it in by hand, every time, on every form. Its
-  matching also leans heavily on a form field's `id` attribute, the least
-  reliable signal to key on for forms submission.  Modern UI frameworks like React inject 
-  `id`s (like `:r3:`) whose naming has no relation to what 
-  gets sent to the server side when you click 'SUBMIT'.
-  Attributes such as `name` and, better still,
-  `autocomplete` are both signals LastPass under-uses in favor of `id`.
+  Neither one just gives up on an unmatched field -- LastPass calls its
+  version a Form Field, Bitwarden calls it a custom field -- but "supports
+  custom fields" undersells how manual the mechanism actually is. To add
+  one you inspect the page's markup yourself, find the right attribute to
+  key on (`id`, `name`, `aria-label`, `placeholder` -- whichever the page
+  actually uses), then hand-enter a field name and value into an editor.
+  Bitwarden is at least transparent about it: right-click a field in the
+  extension and "Copy custom field name" grabs the exact attribute value
+  it'll match on. Do this for a five-field form and you've done five
+  rounds of devtools-inspecting and re-entering -- and you repeat the
+  whole thing for every new form your org submits to. (We don't have
+  solid public documentation on which attribute either tool's custom-field
+  matching actually prioritizes when several are present on a page --
+  modern UI frameworks like React generate `id`s, e.g. `:r3:`, disconnected
+  from anything meaningful, which makes that priority order matter more
+  than it should.)
 
-  Bitwarden does better -- it prioritizes `autocomplete` and `name` over
-  `id` -- but its fallback for an unmatched field is still entirely
-  manual: you inspect the page's markup yourself, find the right
-  attribute, and hand-create a custom field to match it. A real fix, but a
-  tedious, one-field-at-a-time chore you repeat for every new form your
-  org submits to.
-
-  We evaluated Bitwarden, LastPass head-to-head on the
+  We actually evaluated Bitwarden, LastPass head-to-head on the
   actual forms we needed to submit -- CalendarWiz and similar
   WordPress/Drupal-styple calendar plugins. In doing so, we hit on something worse
   than rigidity: on any form where a field's `id` and `name` attributes
@@ -526,5 +478,56 @@ matters more than which vendor's name is on the app.
   one we realized was completely superfluous once we evaluated Roboform.
 
   We maintain the repo that contains this code for pedgogical purposes. 
-  You might want to study the code if you want some idea of how Roboform might work internally.  
+  You might want to study the code if you want some idea of how Roboform might work internally.
+
+### Security Track Record
+
+Password managers are a single point of failure by design, so it's worth
+knowing what's actually happened to each of these three, rather than
+taking "trust us" at face value.
+
+| Tool | Reported incidents | Vault data exposed? |
+|---|---|---|
+| LastPass | 2022: attacker used data stolen from a compromised employee's home computer to access a cloud storage backup containing encrypted customer vaults, plus some source code. | Encrypted vaults were taken (not decrypted at the time), along with unencrypted metadata like URLs. |
+| Bitwarden | 2026: a malicious version of Bitwarden's own CLI was briefly live on npm (~90 minutes) as part of a broader supply-chain attack. 2023: a disclosed flaw allowed iframes to access autofilled credentials, since fixed. | No end-user vault data reported accessed in either incident. |
+| RoboForm | None found. | N/A |
+
+None of this means "pick RoboForm and stop worrying" -- LastPass's breach
+is the most serious entry here by far, but Bitwarden isn't spotless
+either, and a security researcher not having found something yet isn't
+the same as it not existing. Use a strong, unique master password and
+turn on two-factor authentication regardless of which tool you pick; that
+matters more than which vendor's name is on the app.
+
+### Shared Vaults and SSO for Teams
+
+<!-- SCREENSHOT GAP (low priority): this whole section has no screenshots
+     -- reasonable since it's framed as aspirational/explanatory rather
+     than a hands-on tutorial, but flagging in case that changes. -->
+
+Bitwarden can run as shared infrastructure for a whole team, not just a
+personal vault.
+
+**Shared org vaults.** If more than one person on your team submits
+events, shares accounts, or needs the same set of logins, set up a
+Bitwarden **Organization** ($4/user/month on the Teams plan) instead of
+emailing passwords around or maintaining a shared spreadsheet. An
+organization holds the same item types a personal vault does -- Logins,
+Secure Notes, Cards, Identities -- just organized into **Collections**
+that you can scope to specific members or groups. Put the calendar-
+submission login in a collection your events team can see, and keep a
+treasurer-only collection for anything payment-related. When someone
+leaves the team, you revoke their access to the collection or the whole
+organization instead of rotating every password by hand.
+
+**Single sign-on.** On the Enterprise tier, Bitwarden supports logging
+into the vault itself via your org's existing identity provider (Okta,
+Google Workspace, Azure AD/Entra ID, and others, over SAML or OIDC)
+instead of a separate Bitwarden master password. That's real
+infrastructure consolidation -- one login system to manage instead of
+two, and revoking someone's org account revokes their vault access in the
+same step. For most shoestring-budget orgs this is aspirational rather
+than immediately useful: it's an Enterprise-tier feature, and it assumes
+you already have an identity provider in place. Worth knowing it exists
+for the day your org outgrows a spreadsheet of names and passwords.  
 
