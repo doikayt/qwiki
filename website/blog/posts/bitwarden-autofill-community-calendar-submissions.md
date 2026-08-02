@@ -34,7 +34,7 @@ and how-to sections and **just focus on Roboform.**
   Prior to investigating how to automate recurring calendar-event
   submissions, we had become major fans of BW. Firstly, it's open source which 
   is much preferred for any security tool, since that keeps it open to audit and
-  review (but do check the info in **Security Track Record** for more details.)
+  review (but do check the info in [[2]](#2-security-track-record) for more details.)
   Second, it's free -- even across multiple devices, and it's 
   equipped with CLI access to their credentials vault.  We lean on that
   CLI constantly for scripting machine and environment setup -- at which point one 
@@ -151,7 +151,7 @@ involved in getting BW and Roboform working together on an Android mobile device
 We've recommended Bitwarden on our [field-guide wiki]({{WIKI_URL}}/index.php/Main_Page) before as a strong,
 open-source alternative to LastPass -- especially given
 LastPass's 2022 breach, where encrypted customer vaults were stolen 
-(more info on that in the Security Track Record section of the appendix.)
+(more info on that in the appendix [[2]](#2-security-track-record).)
 BW's free tier covers unlimited passwords synced across unlimited devices, permanently. LastPass's
 free tier, by contrast, locks you to *one* device type -- desktop or
 mobile, not both -- so syncing between your laptop and your phone (exactly
@@ -159,8 +159,8 @@ the desktop-plus-Android setup this post walks through) requires
 upgrading to a paid plan. That's the version we're setting up
 below -- one account, your own vault. If your org later needs to share
 logins across multiple people, Bitwarden scales up to team and even
-enterprise tiers; see **Shared Vaults and SSO for Teams** in the Appendix
-for what that looks like.
+enterprise tiers; see the appendix
+[[3]](#3-shared-vaults-and-sso-for-teams) for what that looks like.
 
 ### Setting it up on Desktop
 
@@ -261,8 +261,8 @@ That's what part 2 sets up.
 
 Everything above treats Bitwarden as a personal password manager -- your
 own vault, your own master password. It can also run as shared
-infrastructure for a whole team; see **Shared Vaults and SSO for Teams**
-in the Appendix if that's relevant to your org.
+infrastructure for a whole team; see the appendix
+[[3]](#3-shared-vaults-and-sso-for-teams) if that's relevant to your org.
 
 ## Part 2: RoboForm for addresses, without the Accessibility permission
 
@@ -480,7 +480,7 @@ itself.
   We maintain the repo that contains this code for pedgogical purposes. 
   You might want to study the code if you want some idea of how Roboform might work internally.
 
-### Security Track Record
+### [2] Security Track Record
 
 Password managers are a single point of failure by design, so it's worth
 knowing what's actually happened to each of these three, rather than
@@ -499,7 +499,7 @@ the same as it not existing. Use a strong, unique master password and
 turn on two-factor authentication regardless of which tool you pick; that
 matters more than which vendor's name is on the app.
 
-### Shared Vaults and SSO for Teams
+### [3] Shared Vaults and SSO for Teams
 
 <!-- SCREENSHOT GAP (low priority): this whole section has no screenshots
      -- reasonable since it's framed as aspirational/explanatory rather
