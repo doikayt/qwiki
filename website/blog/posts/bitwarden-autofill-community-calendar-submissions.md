@@ -68,38 +68,41 @@ closed source ecosystem, we don't really deal with it.)
 
 ### Installing the extension
 
-1. In Chrome, click on the three dot menu on upper right, then select Extensions to open the Web Store and search for **RoboForm**.
+1. In Chrome, click the three-dot menu (upper right), select
+   **Extensions**, then **Visit Chrome Web Store**.
 
 ![Chrome's Extensions menu, with "Visit Chrome Web Store" highlighted](/blog/images/desktop-bitwarden-open-web-store.png)
 
+2. Search the Chrome Web Store for **RoboForm**.
+
 ![Searching the Chrome Web Store for RoboForm](/blog/images/desktop-roboform-search-extension.png)
 
-2. Open the **RoboForm Password Manager** listing and click **Add to
+3. Open the **RoboForm Password Manager** listing and click **Add to
    Chrome**.
 
 ![RoboForm Password Manager's Chrome Web Store listing](/blog/images/desktop-roboform-listing.png)
 
-3. Confirm on the permissions prompt by clicking **Add extension**.
+4. Confirm on the permissions prompt by clicking **Add extension**.
 
 ![Chrome's "Add extension?" confirmation dialog for RoboForm](/blog/images/desktop-roboform-add-extension-prompt.png)
 
 ### Creating an account
 
-4. On first launch, choose **Sign Up** and create an account with your
+5. On first launch, choose **Sign Up** and create an account with your
    org's email and a master password.
 
 ![RoboForm's welcome screen, choosing between Log In and Sign Up](/blog/images/desktop-roboform-welcome-login-signup.png)
 
-5. Verify the account with the **One-Time Code by email** option.
+6. Verify the account with the **One-Time Code by email** option.
 
 ![RoboForm's "Confirm it's you" verification step](/blog/images/desktop-roboform-confirm-email.png)
 
-6. RoboForm offers a short video tutorial on first login -- **Skip** is
+7. RoboForm offers a short video tutorial on first login -- **Skip** is
    fine, everything below covers what you actually need.
 
 ![RoboForm's onboarding tutorial prompt, with Skip and Next](/blog/images/desktop-roboform-tutorial-skip.png)
 
-7. Click the puzzle-piece **Extensions** icon in Chrome's toolbar, find
+8. Click the puzzle-piece **Extensions** icon in Chrome's toolbar, find
    RoboForm, and click the **pin** icon so it stays visible instead of
    hiding behind the puzzle piece every time.
 
@@ -111,7 +114,7 @@ closed source ecosystem, we don't really deal with it.)
 This is the actual payoff. Fill a form out field-by-field the first time, then
 teach RoboForm to remember it:
 
-8. With the form filled in, right-click anywhere on the page, open
+9. With the form filled in, right-click anywhere on the page, open
    **RoboForm Password Manager**, and choose **Save Forms**.
 
 ![Right-clicking a filled-out form to reach RoboForm's Save Forms option](/blog/images/desktop-roboform-save-form-menu.png)
@@ -122,18 +125,18 @@ teach RoboForm to remember it:
 
 ![The form's field values, annotated as what RoboForm will recall](/blog/images/desktop-roboform-save-annotated.png)
 
-9. RoboForm asks what to call this saved entry and whether it's a
-   **Login** or a **Bookmark** -- pick Login, give it a name you'll
-   recognize (the site or form's purpose works well), and click **Save**.
+10. RoboForm asks what to call this saved entry and whether it's a
+    **Login** or a **Bookmark** -- pick Login, give it a name you'll
+    recognize (the site or form's purpose works well), and click **Save**.
 
 ![RoboForm's save dialog, naming the entry and choosing Login](/blog/images/desktop-roboform-save-dialog.png)
 
-10. Next time you're staring down a blank copy of that same form, click on the pinned RoboForm
+11. Next time you're staring down a blank copy of that same form, click on the pinned RoboForm
     icon to the right of the URL entry area. Then select the name of the form fill profile you chose in the previous step.
 
 ![RoboForm's Fill Logins panel offering a saved match, ready to click and fill](/blog/images/desktop-roboform-click-to-fill.png)
 
-11. Every field RoboForm remembered snaps back into place 
+12. Every field RoboForm remembered snaps back into place 
     (in this example the title of the dialog switches from 'Create..' to 'Edit...' -- nothing to do with form fill.)
 
 ![The form's fields refilled automatically from the saved entry](/blog/images/desktop-roboform-fields-filled.png)
