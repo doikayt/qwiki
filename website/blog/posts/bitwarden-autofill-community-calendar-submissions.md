@@ -148,11 +148,11 @@ involved in getting BW and Roboform working together on an Android mobile device
 
 ## HOW-TO #2: Bitwarden as your password manager
 
-We've recommended Bitwarden on our [field-guide wiki]({{WIKI_URL}}/index.php/Main_Page) before as a strong,
-open-source alternative to LastPass -- especially given
-LastPass's 2022 breach, where encrypted customer vaults were stolen 
-(more info on that in the appendix [[2]](#2-security-track-record).)
-BW's free tier covers unlimited passwords synced across unlimited devices, permanently. LastPass's
+We've recommended Bitwarden on our [field-guide wiki]({{WIKI_URL}}/index.php/Main_Page)
+before as a strong, open-source alternative to LastPass -- see the
+appendix [[2]](#2-security-track-record) for how their security track
+records actually compare. BW's free tier covers unlimited passwords
+synced across unlimited devices. LastPass's
 free tier, by contrast, locks you to *one* device type -- desktop or
 mobile, not both -- so syncing between your laptop and your phone (exactly
 the desktop-plus-Android setup this post walks through) requires
@@ -165,8 +165,7 @@ enterprise tiers; see the appendix
 ### Setting it up on Desktop
 
 Same order as RoboForm: extension first, account second. Form-filling
-happens through the extension, not the web vault -- so it's essential,
-not optional.
+happens through the browser extension UI, not the web vault UI.
 
 1. Open Chrome's three-dot **More** menu (top right) → **Extensions** →
    **Visit Chrome Web Store**.
@@ -486,6 +485,17 @@ Password managers are a single point of failure by design, so it's worth
 knowing what's actually happened to each of these three, rather than
 taking "trust us" at face value.
 
+The table below covers every publicly reported incident we found for the
+three tools. We're upfront fans of open source, so it's worth sitting
+with the fact that Bitwarden -- open source -- has an incident on this
+list, while RoboForm -- closed source -- doesn't. That's not actually a
+contradiction: supply-chain attacks target how software gets built and
+published, not whether its source is public, and closed-source software
+isn't immune to them, it's just less likely to get caught. What open
+source bought here was a fast, independently verifiable response -- the
+compromised package was live for about 90 minutes, and anyone could
+check exactly what it did rather than take Bitwarden's word for it.
+
 | Tool | Reported incidents | Vault data exposed? |
 |---|---|---|
 | LastPass | 2022: attacker used data stolen from a compromised employee's home computer to access a cloud storage backup containing encrypted customer vaults, plus some source code. | Encrypted vaults were taken (not decrypted at the time), along with unencrypted metadata like URLs. |
@@ -493,11 +503,10 @@ taking "trust us" at face value.
 | RoboForm | None found. | N/A |
 
 None of this means "pick RoboForm and stop worrying" -- LastPass's breach
-is the most serious entry here by far, but Bitwarden isn't spotless
-either, and a security researcher not having found something yet isn't
-the same as it not existing. Use a strong, unique master password and
-turn on two-factor authentication regardless of which tool you pick; that
-matters more than which vendor's name is on the app.
+is the most serious entry here by far, and Bitwarden isn't spotless
+either. Use a strong, unique master password and turn on two-factor
+authentication regardless of which tool you pick; that matters more than
+which vendor's name is on the app.
 
 ### [3] Shared Vaults and SSO for Teams
 
