@@ -46,11 +46,11 @@ and how-to sections and **just focus on Roboform.**
   pretty rigid about which fields they can actually handle on a repetitive
   submission. Form fill for both products hinges on what is essentially a 
   static mapping of field labels to field values. 
-  Both LastPass and Bitwarden let you add a custom field for anything they
-  don't recognize, but "let you" is doing a lot of work in that sentence:
-  it's a manual, one-field-at-a-time chore -- hunting through a form's raw
-  markup for the right attribute, then hand-entering it into a field
-  editor -- that you repeat for every new form. RoboForm doesn't share
+  Both LastPass and Bitwarden provide a mechanism for adding custom fields. 
+  But when a form has a field not present in the map, adding such field 
+  requires -- in both products -- that you manually hunt through a form's raw
+  markup for the right attribute, then hand-enter it into a field
+  editor. And you need to repeat this for every new form. RoboForm doesn't share
   that limitation -- see the appendix for why
   [[1]](#1-why-not-just-lastpass-or-bitwarden).
 
@@ -427,9 +427,11 @@ itself.
 ### [1] Why Not Just LastPass or Bitwarden
 
   LastPass, Bitwarden, and RoboForm all solve autofill the same basic way:
-  you save a structured profile -- BW calls it an Identity, LastPass calls
-  it an Address -- a dictionary (map) of values for name, address, phone, email,
-  and so on, that gets matched against a form's inputs. The difference is
+  you save a structured profile (BW calls it an Identity, LastPass calls
+  it an Address) which is essentially a dictionary (map). It 
+  associates values for name, address, phone, email,
+  and so on, with labels, and those labels get 
+  matched against a form's inputs. The difference is
   what happens when a field doesn't match anything in that dictionary.
 
   Neither one just gives up on an unmatched field -- LastPass calls its
