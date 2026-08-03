@@ -231,14 +231,27 @@ Bitwarden -- as the extension "controlling" the save-passwords toggle,
 like in the screenshot above. Same toggle, same fix either way; Chrome
 just credits whichever extension claimed it first.)
 
-10. You'll land on your vault home, empty and ready for your first saved
-    logins.
+10. Now, whenever you create a new login on a new site, Bitwarden will
+    offer to save those credentials for you.
 
-<!-- SCREENSHOT NEEDED: empty vault home, reached via the extension-first
-     flow (the old website-flow screenshot no longer matches this path) -->
+11. Sign up for a new account like you normally would -- Bitwarden isn't
+    involved yet, you're just filling out the site's own signup form.
 
-The same account works everywhere -- once it exists, log into it on
-Android with the steps below.
+![Signing up for a new account on Giphy, with email, username, and a generated password entered](/blog/images/desktop-bitwarden-example-signup.png)
+
+12. The moment you submit, Bitwarden notices a new login was just used
+    and offers to save it -- click **Save**.
+
+![Bitwarden's "Save login" popup after submitting the signup form](/blog/images/desktop-bitwarden-save-login-popup.png)
+
+13. Next time you land on that site's login page, Bitwarden surfaces the
+    saved credential right in the username field -- click it, and both
+    username and password fill in.
+
+![Bitwarden offering a saved login as an autofill suggestion on the login page](/blog/images/desktop-bitwarden-autofill-suggestion.png)
+
+That's the entire day-to-day loop: save once when you sign up, click once
+every time after that.
 
 ### Setting it up on Android
 
