@@ -254,22 +254,54 @@ every time after that.
 
 ### Setting it up on Android
 
-![Bitwarden listing in the Play Store, ready to install](/blog/images/android-playstore-bitwarden-listing.png)
 
 1. Install **Bitwarden Password Manager** from the Play Store.
-2. Log in with the account from the desktop steps above (or create one
+
+![Bitwarden listing in the Play Store, ready to install](/blog/images/android-playstore-bitwarden-listing.png)
+
+2. After clicking **Open** once the install finishes, click through the
+   next two screens -- nothing to configure on either one.
+
+<img src="/blog/images/android-accessibility-disclosure.jpg" alt="Bitwarden's Accessibility Service Disclosure screen on first launch" style="max-width: 288px;">
+<img src="/blog/images/android-security-prioritized.jpg" alt="Bitwarden's &quot;Security, prioritized&quot; onboarding screen" style="max-width: 288px;">
+
+3. Log in with the account from the desktop steps above (or create one
    here directly, if you'd rather skip desktop entirely).
-3. Set up biometric unlock (fingerprint or face unlock) under
-   **Settings → Security → Unlock with biometrics**, so you aren't typing
-   your master password every time you need a credential on your phone.
 
-<!-- SCREENSHOT NEEDED: Android Bitwarden app, Settings -> Security ->
-     Unlock with biometrics toggle -->
+![Logging in with the master password on Android](/blog/images/android-login-master-password.jpg)
 
-4. Turn on Bitwarden as your Android **autofill service**: **Settings →
+4. Once logged in, you may hit a **Verify your identity** challenge --
+   Bitwarden emails a verification code to confirm it's really you.
+   Check your email to obtain the code, enter it and continue. After
+   that, your vault syncs immediately: anything saved on desktop, like
+   the GIPHY login from the walkthrough above, is already waiting for
+   you.
+
+![Bitwarden's Android vault, showing the giphy.com login synced from desktop](/blog/images/android-vault-synced-giphy.jpg)
+
+5. Set up biometric unlock (fingerprint or face unlock) under
+   **Settings → Account security → Unlock with Biometrics**, so you
+   aren't typing your master password every time you need a credential
+   on your phone.
+
+![Bitwarden's Settings menu on Android](/blog/images/android-settings-menu.jpg)
+![Account security screen, with Unlock with Biometrics enabled](/blog/images/android-unlock-with-biometrics.jpg)
+
+6. While you're in Settings, check **Autofill** and turn on **Use
+   Chrome autofill integration** -- it smooths out inline suggestions
+   specifically inside Chrome, on top of the system-wide autofill set
+   up next.
+
+![Bitwarden's in-app Autofill settings, with Chrome autofill integration enabled](/blog/images/android-autofill-chrome-integration.png)
+
+7. Turn on Bitwarden as your Android **autofill service**: **Settings →
    Autofill Service**, select Bitwarden, and confirm.
 
 ![Android's Autofill Service picker with Bitwarden selected](/blog/images/android-autofill-service-settings.jpg)
+
+<!-- SCREENSHOT NEEDED: Bitwarden actually autofilling a saved login
+     (e.g. giphy.com) on Android -- the payoff this section is building
+     to, parallel to the desktop save/autofill demo above -->
 
 That last step is the important one, and it's easy to skip past. Android's
 autofill framework isn't just for logins -- once Bitwarden is registered as
