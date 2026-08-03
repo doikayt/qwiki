@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.49
+
+### Patch Changes
+
+-   - fix(website): correct Chrome password settings URL, fix typo
+
 ## 0.1.48
 
 ### Patch Changes
