@@ -279,7 +279,8 @@ instead of a true screenshot.
    Check your email to obtain the code, enter it and continue. After
    that, your vault syncs immediately: anything saved on desktop, like
    the GIPHY login from the walkthrough above, is already waiting for
-   you.
+   you. Tap that entry and you're taken straight to the site's login
+   screen with your credentials already populated.
 
 ![Bitwarden's Android vault, showing the giphy.com login synced from desktop](/blog/images/android-vault-synced-giphy.jpg)
 
@@ -310,11 +311,7 @@ instead of a true screenshot.
 That last step is the important one, and it's easy to skip past. Android's
 autofill framework isn't just for logins -- once Bitwarden is registered as
 your system autofill provider, it can offer to fill *any* recognized field
-across apps and browser tabs, not just username/password pairs. Android
-only allows one default autofill service, so this is the one slot to get
-right. RoboForm doesn't need it, or any special permission, to handle
-addresses and contact info -- it does that entirely on its own, through
-its own app. More on that in HOW-TO #3.
+across apps and browser tabs, not just username/password pairs.
 
 Everything above treats Bitwarden as a personal password manager -- your
 own vault, your own master password. It can also run as shared
@@ -323,24 +320,15 @@ infrastructure for a whole team; see the appendix
 
 ## HOW-TO #3: RoboForm for addresses on Android
 
-RoboForm has its own concept of an **Identity** -- a saved profile of name,
-address, city/state/zip, phone, and email -- the same idea as a Bitwarden
-Identity item, just living in a separate app. Filling a form from it on
-Android is simpler than you'd expect: open the RoboForm app, browse to
-the form inside RoboForm's own built-in browser, and pick the saved
-Identity. That's it -- no Accessibility permission, no fighting over the
-autofill-service slot Bitwarden already holds, no floating button
-watching your screen.
-
-(RoboForm does offer an optional Accessibility-based autofill method
-during its own setup -- a floating "RF" button that hovers over other
-apps -- but you can decline it. This workflow never needs it.)
-
-RoboForm wasn't the only candidate we looked at for this job -- LastPass
-has its own form-fill feature too, and a lot of orgs already have it
-sitting around from before switching to Bitwarden. We ruled it out for a
-more fundamental reason [[1]](#1-why-not-just-lastpass-or-bitwarden) --
-see the appendix at the end for the details.
+RoboForm saves a filled-out form as a **Login** entry -- capturing the
+exact field values you typed, tied to that specific form's page --
+rather than a generic address-book-style profile. Filling a form from a
+saved Login on Android is simpler than you'd expect: open the RoboForm
+app, browse to the form inside RoboForm's own built-in browser, and pick
+the saved entry -- you're taken straight to the form, with every field
+from that saved profile pre-filled. No Accessibility permission, no
+fighting over the autofill-service slot Bitwarden already holds, no
+floating button watching your screen.
 
 ### Logging into RoboForm on Android
 
@@ -385,18 +373,17 @@ see the appendix at the end for the details.
 
 4. Review what filled in, then submit.
 
-That's the whole loop -- no Chrome, no share sheet, nothing to configure
-beyond logging in once. Bitwarden never enters the
-picture; the two apps simply never compete for the same job.
+That's the whole loop -- Bitwarden never enters the picture; the two apps
+simply never compete for the right to fill in any form.
 
-## HOW-TO #4: The general workflow -- autofill for any form
+## HOW-TO #4: The general workflow -- resubmitting any saved form
 
-This is the actual payoff, and it's bigger than calendars. Once you've got
-a saved RoboForm Identity, *any* form asking for a subset of name /
-organization / email / phone / address goes from a re-typing exercise to
-a couple of taps. Community calendar
-submissions are the example we keep coming back to because you hit them
-over and over, but the exact same workflow covers:
+This is the actual payoff, and it's bigger than calendars. Once a form is
+saved in RoboForm -- via Save Forms on desktop, the way HOW-TO #1 walks
+through -- resubmitting it on Android goes from a re-typing exercise to a
+couple of taps. Community calendar submissions are the example we keep
+coming back to because you hit them over and over, but the exact same
+trick covers any other form you submit repeatedly:
 
 - donation and fundraising platform checkout forms
 - event RSVP and volunteer sign-up forms
@@ -405,17 +392,17 @@ over and over, but the exact same workflow covers:
 - vendor and supply-order checkout on any e-commerce site
 - literally any "contact us" or intake form your org fills out repeatedly
 
-Read what follows as a template, not a one-off recipe: wherever a form asks
-for that same handful of fields, this is the move.
+Read what follows as a template, not a one-off recipe: wherever you find
+yourself resubmitting the same form over and over, this is the move.
 
-Community calendar forms -- whether it's a library's WordPress plugin, a
-Google Form, an Eventbrite listing, or a Mobilize event page -- are a good
-worked example because they're so consistent about *which* fields they
-want. That's precisely the shape of a RoboForm Identity.
+Each distinct form needs its own Save Forms capture the first time --
+RoboForm recalls a saved form by its exact page, not a general profile
+matched against new markup, so a library's WordPress plugin, a Google
+Form, and an Eventbrite listing each need to be saved separately. Once a
+given form's captured, though, resubmitting it stays a couple of taps,
+indefinitely.
 
-![A real volunteer sign-up form in RoboForm's browser, with fill icons showing next to the recognized Last Name and ZIP code fields](/blog/images/android-roboform-form-midfill.jpg)
-
-Open the RoboForm app, pick the saved profile for this form, and let it
+Open the RoboForm app, pick the saved entry for this form, and let it
 fill -- the same loop from HOW-TO #3, just applied to whatever form is in
 front of you this time, instead of you thumb-typing "Doikayt Mobilization
 Labs, 123 Somewhere St..." for the fifth time that week.
@@ -423,21 +410,16 @@ Labs, 123 Somewhere St..." for the fifth time that week.
 A few notes from actually doing this in the field:
 
 - **It's an app switch, not an inline suggestion.** RoboForm's own app is
-  where Identity-fill happens -- there's no floating button or inline
-  Chrome suggestion involved. For most people submitting a handful of
-  forms a week, that's a non-issue.
-- **Not every form recognizes every field.** Older or hand-rolled forms
-  sometimes only pick up part of the Identity inside RoboForm's browser --
-  you'll still save time on the fields that *do* match, and can fill the
-  rest by hand.
+  where the recall happens -- there's no floating button or inline Chrome
+  suggestion involved. For most people submitting a handful of forms a
+  week, that's a non-issue.
 - **Double-check what actually landed.** Autofill occasionally maps a field
   wrong (city into "organization," for instance) on a poorly-labeled form.
   Skim the form before submitting, the same way you'd proofread anything
   else going out under your org's name.
-- **Keep the Identity accurate.** If your org changes its contact email or
-  moves, update the one Identity -- everyone who fills from it gets the
-  correction automatically, instead of some submissions carrying a stale
-  address because a volunteer had an old one saved locally.
+- **Keep saved forms up to date.** If your org changes its contact email or
+  moves, re-save the affected forms with Save Forms -- otherwise they'll
+  keep recalling the stale info until you do.
 - **Bitwarden doesn't need to know about any of this.** It stays the
   default autofill service, quietly handling logins the whole time. The two
   apps never fight over the same job.
@@ -450,10 +432,10 @@ every recurring form, not just calendar submissions: less time spent
 hunched over a phone keyboard re-entering the same nine fields, fewer typos
 that get an event bounced or a donation misrouted, and one canonical
 source of truth for your org's public-facing info instead of it living in
-five different volunteers' muscle memory. Set up the Identity once, and
-every form afterward -- calendars, donation pages, permits, sign-up sheets,
-whatever your org fills out on repeat -- gets faster, at the cost of a
-five-tap app switch instead of one tap.
+five different volunteers' muscle memory. Save each form once, and every
+resubmission after that -- calendars, donation pages, permits, sign-up
+sheets, whatever your org fills out on repeat -- is a couple of taps
+inside RoboForm instead of a full re-type.
 
 That trade-off -- a few extra taps in exchange for not handing a second app
 system-wide screen access -- is the same instinct behind everything else in
