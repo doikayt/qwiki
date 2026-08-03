@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.52
+
+### Patch Changes
+
+-   - fix(website): fix corrupted Android section, add real setup screenshots
+
 ## 0.1.51
 
 ### Patch Changes
