@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.51
+
+### Patch Changes
+
+-   - feat(website): demonstrate save/autofill loop in Bitwarden desktop setup
+
 ## 0.1.50
 
 ### Patch Changes
