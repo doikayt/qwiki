@@ -164,7 +164,7 @@ requires upgrading to a paid plan.  Multi-device scenario set-up steps are
 given below in [Setting it up on Android](#setting-it-up-on-android).) 
 
 In this section we provide steps for setting up an individual account, mapped to 
-one credentials valut.  If your org later needs to share
+one credentials vault.  If your org later needs to share
 logins across multiple people, Bitwarden scales up to team and even
 enterprise tiers; see the appendix
 [[3]](#3-shared-vaults-and-sso-for-teams) for what that looks like.
@@ -207,9 +207,7 @@ happens through the browser extension UI, not the web vault UI.
 
 ![Bitwarden's "Check your email" confirmation step](/blog/images/desktop-bitwarden-check-email.png)
 
-8. Follow that link, then set a strong, unique master password back in
-   the extension -- weak or reused here, and the whole point of a
-   password manager disappears.
+8. Follow that link, then set a strong, unique master password back in the extension.
 
 ![Bitwarden's "Set a strong password" step (password fields redacted)](/blog/images/desktop-bitwarden-set-password.png)
 
@@ -222,7 +220,7 @@ happens through the browser extension UI, not the web vault UI.
    right) → **Passwords and autofill** → **Google Password Manager** →
    **Settings**, then turn off **Offer to save passwords and passkeys**
    and **Auto sign-in**. (Or skip the menu digging and go straight to
-   `chrome://settings/passwords`.) It's a one-time fix, and much less
+   `chrome://password-manager/settings`.) It's a one-time fix, and much less
    annoying than dismissing Google's popups for the next month.
 
 <!-- SCREENSHOT NEEDED: Google Password Manager settings page showing the
