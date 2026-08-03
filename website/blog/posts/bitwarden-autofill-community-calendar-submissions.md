@@ -254,6 +254,10 @@ every time after that.
 
 ### Setting it up on Android
 
+A note on image quality below: Bitwarden blocks screenshots on several of
+its own screens (a real security feature, not a bug) -- where that
+happens, what you're looking at is a phone-camera photo of the screen
+instead of a true screenshot.
 
 1. Install **Bitwarden Password Manager** from the Play Store.
 
