@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.50
+
+### Patch Changes
+
+-   - feat(website): add Google Password Manager screenshot, link CLI term
+
 ## 0.1.49
 
 ### Patch Changes
