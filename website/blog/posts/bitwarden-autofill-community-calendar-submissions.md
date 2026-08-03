@@ -59,9 +59,9 @@ Since your requirements might not include CLI capabilities and a bias toward ope
 source, we will begin our how-to sections with a focus 
 on Roboform set-up and usage on desktops using Chrome.  We then walk through BW set-up and usage on 
 deskop Chrome (other browsers will likely be quite similar.)  Finally, for 
-those who wish to both tools on mobile devices we walk through some of the gymnastics 
-one needs to do on Android (apologies to iPhone users -- since that is a completely
-closed source ecosystem, we don't really deal with it.)
+those who wish to run both tools on mobile devices we walk through what setting
+that up looks like on Android (apologies to iPhone users -- since that is a
+completely closed source ecosystem, we don't really deal with it.)
 
 
 ## HOW-TO #1: RoboForm desktop setup
@@ -310,101 +310,91 @@ instead of a true screenshot.
 That last step is the important one, and it's easy to skip past. Android's
 autofill framework isn't just for logins -- once Bitwarden is registered as
 your system autofill provider, it can offer to fill *any* recognized field
-across apps and browser tabs, not just username/password pairs. But it's
-also the reason we don't just add a second autofill app on top: Android
-only allows one default autofill service. Whatever handles your address
-and contact-info fields has to work *around* that slot, not compete for it.
-That's what HOW-TO #3 sets up.
+across apps and browser tabs, not just username/password pairs. Android
+only allows one default autofill service, so this is the one slot to get
+right. RoboForm doesn't need it, or any special permission, to handle
+addresses and contact info -- it does that entirely on its own, through
+its own app. More on that in HOW-TO #3.
 
 Everything above treats Bitwarden as a personal password manager -- your
 own vault, your own master password. It can also run as shared
 infrastructure for a whole team; see the appendix
 [[3]](#3-shared-vaults-and-sso-for-teams) if that's relevant to your org.
 
-## HOW-TO #3: RoboForm for addresses, without the Accessibility permission
+## HOW-TO #3: RoboForm for addresses on Android
 
 RoboForm has its own concept of an **Identity** -- a saved profile of name,
 address, city/state/zip, phone, and email -- the same idea as a Bitwarden
-Identity item, just living in a separate app. The classic way RoboForm
-offers to fill a form is a floating "RF" button that hovers over whatever
-app you're in, but that button only works if you grant RoboForm the
-**Accessibility** permission, and Accessibility is all-or-nothing: you
-can't scope it to "just Chrome" or "just form fields." It's the same class
-of system-wide access screen readers use, and it's a lot of trust to hand a
-second app when Bitwarden already covers your actual credentials. We
-decided against it.
+Identity item, just living in a separate app. Filling a form from it on
+Android is simpler than you'd expect: open the RoboForm app, browse to
+the form inside RoboForm's own built-in browser, and pick the saved
+Identity. That's it -- no Accessibility permission, no fighting over the
+autofill-service slot Bitwarden already holds, no floating button
+watching your screen.
 
-The fix RoboForm supports instead: don't let it hook into other apps at
-all. Send the page *to* RoboForm, fill it inside RoboForm's own built-in
-browser, then switch back. No Accessibility permission, no conflict with
-Bitwarden's autofill slot, no floating button watching your screen.
+(RoboForm does offer an optional Accessibility-based autofill method
+during its own setup -- a floating "RF" button that hovers over other
+apps -- but you can decline it. This workflow never needs it.)
 
 RoboForm wasn't the only candidate we looked at for this job -- LastPass
 has its own form-fill feature too, and a lot of orgs already have it
 sitting around from before switching to Bitwarden. We ruled it out for a
-more fundamental reason than the Accessibility question above
-[[1]](#1-why-not-just-lastpass-or-bitwarden) -- see the appendix at the
-end for the details.
+more fundamental reason [[1]](#1-why-not-just-lastpass-or-bitwarden) --
+see the appendix at the end for the details.
 
-### One-time setup: create a RoboForm Identity
+### Logging into RoboForm on Android
 
-![Creating a new Identity in RoboForm, with name and email filled in](/blog/images/android-roboform-identity-new-person.jpg)
+1. Install **RoboForm Password Manager** from the Play Store.
 
-1. Open the RoboForm app.
-2. Tap the **Identities** tab at the bottom.
-3. Tap the **+** (Add) button.
-4. Fill in your org's details: full name / org name, address, city, state,
-   ZIP, phone, and email.
-5. Save the profile -- name it something you'll recognize, like "Org" or
-   the group's name.
+![RoboForm Password Manager's Play Store listing](/blog/images/android-roboform-playstore-listing.jpg)
 
-If several people submit events on your org's behalf, treat this the same
-way you'd treat a shared Bitwarden item: settle on one canonical version of
-your org's address and contact info, so everyone is filling from the same
-source instead of five slightly different typed-out versions.
+2. Open the app and tap through the onboarding screens to **Log In**.
 
-### Every time you need to fill a form: the Share method
+![RoboForm's onboarding carousel on first launch](/blog/images/android-roboform-login-splash.jpeg)
 
-![Chrome's share menu, with RoboForm listed as a share target](/blog/images/android-chrome-share-sheet-roboform.jpg)
+3. Log in with the same account you used on desktop.
 
-1. Open Chrome and navigate to the form -- a calendar submission page, a
-   checkout form, whatever needs your org's info.
-2. Tap Chrome's **3-dot menu** (top right).
-3. Tap **Share**.
-4. From the share sheet, select **RoboForm**.
-5. The page opens inside RoboForm's own built-in browser.
-6. Tap RoboForm's fill icon and select your saved Identity.
-7. RoboForm fills the form -- name, address, ZIP, and whatever else the
-   page recognizes.
-8. Tap back (or use Recent Apps) to return to Chrome and submit.
+![Logging into RoboForm on Android with the desktop account's email and master password](/blog/images/android-roboform-login-credentials.jpeg)
 
-It's a few more taps than a one-tap autofill suggestion -- roughly five
-interactions (menu → share → select RoboForm → fill → return) versus the
-two a floating button would take. That gap is the actual price of not
-handing a second app screen-wide access, and for most people submitting a
-handful of forms a week, it's a trade worth making.
+4. Set a 6-digit PIN to unlock the app quickly, then set up biometric
+   unlock (fingerprint or face) when prompted -- both can be skipped and
+   configured later if you'd rather.
 
-### If you'd already turned Accessibility on for RoboForm
+![Setting a 6-digit PIN to unlock RoboForm](/blog/images/android-roboform-set-pin.jpeg)
+![Setting up biometric unlock for RoboForm](/blog/images/android-roboform-setup-biometrics.jpeg)
 
-If you tried the floating-button approach before landing on the Share
-method, turn Accessibility back off:
+5. Once logged in, check the **Logins** tab -- anything saved on desktop,
+   like a form captured with Save Forms, is already synced and waiting.
 
-- **In RoboForm:** Settings → Integration → toggle **Accessibility
-  Autofill** off, or
-- **In Android:** Settings → Accessibility → Installed apps → RoboForm →
-  toggle the main switch off.
+![RoboForm's Logins tab on Android, showing a login synced from desktop](/blog/images/android-roboform-logins-synced.jpeg)
 
-Either way, this doesn't touch the Share method above -- that path never
-used Accessibility in the first place, so turning it off changes nothing
-about how form-filling works, only what permission RoboForm is holding in
-the background.
+### Every time you need to fill a form
+
+1. Open the RoboForm app -- it's just another app in your app drawer,
+   same as any other.
+
+![Opening RoboForm from the Android app drawer](/blog/images/android-roboform-app-drawer.jpg)
+
+2. Inside RoboForm's own browser, navigate to the form you're
+   resubmitting, or find it already listed under **Logins**.
+3. Tap the saved entry for that form. RoboForm fills every field it
+   captured, straight from its own browser -- here it's the Doikayt
+   wiki's own "Add a Tool" form, recalled and filled automatically.
+
+![RoboForm recalling saved field values into the Doikayt wiki's "Add a Tool" form](/blog/images/android-roboform-recall-fields-wiki-form.jpeg)
+
+4. Review what filled in, then submit.
+
+That's the whole loop -- no Chrome, no share sheet, nothing to configure
+beyond logging in once. Bitwarden never enters the
+picture; the two apps simply never compete for the same job.
 
 ## HOW-TO #4: The general workflow -- autofill for any form
 
 This is the actual payoff, and it's bigger than calendars. Once you've got
-a saved RoboForm Identity and the Share-method habit down, *any* form
-asking for a subset of name / organization / email / phone / address goes
-from a re-typing exercise to five taps instead of forty. Community calendar
+a saved RoboForm Identity, *any* form asking for a subset of name /
+organization / email / phone / address goes from a re-typing exercise to
+a couple of taps. Community calendar
 submissions are the example we keep coming back to because you hit them
 over and over, but the exact same workflow covers:
 
@@ -425,19 +415,17 @@ want. That's precisely the shape of a RoboForm Identity.
 
 ![A real volunteer sign-up form in RoboForm's browser, with fill icons showing next to the recognized Last Name and ZIP code fields](/blog/images/android-roboform-form-midfill.jpg)
 
-Open the submission form in Chrome, share it to RoboForm, fill from your
-saved Identity, and switch back -- the same eight-step loop from HOW-TO #3,
-just applied to whatever form is in front of you this time, instead of you
-thumb-typing "Doikayt Mobilization Labs, 123 Somewhere St..." for the fifth
-time that week.
+Open the RoboForm app, pick the saved profile for this form, and let it
+fill -- the same loop from HOW-TO #3, just applied to whatever form is in
+front of you this time, instead of you thumb-typing "Doikayt Mobilization
+Labs, 123 Somewhere St..." for the fifth time that week.
 
 A few notes from actually doing this in the field:
 
-- **It's an app switch, not a one-tap suggestion.** The Share method costs
-  more taps than a floating autofill button would -- that's the deliberate
-  trade for keeping Accessibility off. If that gap starts to feel like real
-  friction on forms you fill constantly, that's a sign to weigh it
-  consciously rather than reach for Accessibility as a shortcut.
+- **It's an app switch, not an inline suggestion.** RoboForm's own app is
+  where Identity-fill happens -- there's no floating button or inline
+  Chrome suggestion involved. For most people submitting a handful of
+  forms a week, that's a non-issue.
 - **Not every form recognizes every field.** Older or hand-rolled forms
   sometimes only pick up part of the Identity inside RoboForm's browser --
   you'll still save time on the fields that *do* match, and can fill the
