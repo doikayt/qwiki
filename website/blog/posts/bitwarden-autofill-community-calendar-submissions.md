@@ -19,7 +19,8 @@ at [VigilForGaza](https://www.instagram.com/vigil4gaza/?hl=en) resolve.
 
 The full solution we propose leverages two tools:
 - [Bitwarden](https://bitwarden.com/) (BW) -- an open-source credentials
-  vault and bare-bones forms fill tool with a CLI
+  vault and bare-bones forms fill tool with a  [CLI](https://en.wikipedia.org/wiki/Command-line_interface)
+  (command line interface)
 - [RoboForm](https://www.roboform.com/) -- a CLI-less closed-source
   password manager with rich forms fill capabilities
 
@@ -219,12 +220,16 @@ happens through the browser extension UI, not the web vault UI.
    before Bitwarden gets to it. Click Chrome's three-dot **More** menu (top
    right) → **Passwords and autofill** → **Google Password Manager** →
    **Settings**, then turn off **Offer to save passwords and passkeys**
-   and **Auto sign-in**. (Or skip the menu digging and go straight to
+   and **Sign in automatically**. (Or skip the menu digging and go straight to
    `chrome://password-manager/settings`.) It's a one-time fix, and much less
    annoying than dismissing Google's popups for the next month.
 
-<!-- SCREENSHOT NEEDED: Google Password Manager settings page showing the
-     "Offer to save passwords and passkeys" and "Auto sign-in" toggles -->
+![Chrome's Google Password Manager settings, with "Offer to save passwords and passkeys" and "Sign in automatically" toggled off](/blog/images/desktop-bitwarden-disable-google-password-manager.png)
+
+(If you set up RoboForm before Bitwarden, Chrome may show it -- not
+Bitwarden -- as the extension "controlling" the save-passwords toggle,
+like in the screenshot above. Same toggle, same fix either way; Chrome
+just credits whichever extension claimed it first.)
 
 10. You'll land on your vault home, empty and ready for your first saved
     logins.
