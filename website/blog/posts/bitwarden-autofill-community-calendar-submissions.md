@@ -232,19 +232,18 @@ like in the screenshot above. Same toggle, same fix either way; Chrome
 just credits whichever extension claimed it first.)
 
 10. Now, whenever you create a new login on a new site, Bitwarden will
-    offer to save those credentials for you.
-
-11. Sign up for a new account like you normally would -- Bitwarden isn't
-    involved yet, you're just filling out the site's own signup form.
+    offer to save those credentials for you. Sign up for a new account
+    like you normally would -- Bitwarden isn't involved yet, you're just
+    filling out the site's own signup form.
 
 ![Signing up for a new account on Giphy, with email, username, and a generated password entered](/blog/images/desktop-bitwarden-example-signup.png)
 
-12. The moment you submit, Bitwarden notices a new login was just used
+11. The moment you submit, Bitwarden notices a new login was just used
     and offers to save it -- click **Save**.
 
 ![Bitwarden's "Save login" popup after submitting the signup form](/blog/images/desktop-bitwarden-save-login-popup.png)
 
-13. Next time you land on that site's login page, Bitwarden surfaces the
+12. Next time you land on that site's login page, Bitwarden surfaces the
     saved credential right in the username field -- click it, and both
     username and password fill in.
 
