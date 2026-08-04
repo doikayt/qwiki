@@ -326,9 +326,7 @@ rather than a generic address-book-style profile. Filling a form from a
 saved Login on Android is simpler than you'd expect: open the RoboForm
 app, browse to the form inside RoboForm's own built-in browser, and pick
 the saved entry -- you're taken straight to the form, with every field
-from that saved profile pre-filled. No Accessibility permission, no
-fighting over the autofill-service slot Bitwarden already holds, no
-floating button watching your screen.
+from that saved profile pre-filled.
 
 ### Logging into RoboForm on Android
 
