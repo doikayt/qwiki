@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.54
+
+### Patch Changes
+
+-   - fix: kill if stuck
+
 ## 0.1.53
 
 ### Patch Changes
