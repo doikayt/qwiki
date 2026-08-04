@@ -10,7 +10,9 @@ if curl -s --max-time 2 "$DO_METADATA_ID" >/dev/null 2>&1; then
   echo "    (droplet -- Caddy serves the site, skipping local preview)"
 else
   PIDFILE="$REPO_ROOT/.website-preview.pid"
-  [ -f "$PIDFILE" ] && kill "$(cat "$PIDFILE")" 2>/dev/null
+  if [ -f "$PIDFILE" ]; then
+    kill "$(cat "$PIDFILE")" 2>/dev/null || true
+  fi
   nohup npx serve "$REPO_ROOT/website/dist" -p 3456 \
     > /tmp/qwiki-website-preview.log 2>&1 &
   echo $! > "$PIDFILE"
