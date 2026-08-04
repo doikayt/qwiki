@@ -376,77 +376,20 @@ floating button watching your screen.
 That's the whole loop -- Bitwarden never enters the picture; the two apps
 simply never compete for the right to fill in any form.
 
-## HOW-TO #4: The general workflow -- resubmitting any saved form
 
-This is the actual payoff, and it's bigger than calendars. Once a form is
-saved in RoboForm -- via Save Forms on desktop, the way HOW-TO #1 walks
-through -- resubmitting it on Android goes from a re-typing exercise to a
-couple of taps. Community calendar submissions are the example we keep
-coming back to because you hit them over and over, but the exact same
-trick covers any other form you submit repeatedly:
+### What did we get for all this work?
 
-- donation and fundraising platform checkout forms
-- event RSVP and volunteer sign-up forms
-- permit applications and public-comment forms
-- petition sites
-- vendor and supply-order checkout on any e-commerce site
-- literally any "contact us" or intake form your org fills out repeatedly
 
-Read what follows as a template, not a one-off recipe: wherever you find
-yourself resubmitting the same form over and over, this is the move.
+The pay-off for getting through these two fairly involved app set-ups is you can now
+fire off regular repeated form submissions at your desktop or on the go. This will be
+useful not only to activists responsible for promoting regularly recurring events, but
+to a wide range of other domains: plumbers submitting vendor supply orders that vary
+in quantity each time, volunteers submitting venue booking requests for group
+meetings, staff filing weekly timesheets or expense reimbursements, 
+nurses filling out hospital daily bed census reports -- you name it.
+This set-up will have it submitted for you in no time.
 
-Each distinct form needs its own Save Forms capture the first time --
-RoboForm recalls a saved form by its exact page, not a general profile
-matched against new markup, so a library's WordPress plugin, a Google
-Form, and an Eventbrite listing each need to be saved separately. Once a
-given form's captured, though, resubmitting it stays a couple of taps,
-indefinitely.
 
-Open the RoboForm app, pick the saved entry for this form, and let it
-fill -- the same loop from HOW-TO #3, just applied to whatever form is in
-front of you this time, instead of you thumb-typing "Doikayt Mobilization
-Labs, 123 Somewhere St..." for the fifth time that week.
-
-A few notes from actually doing this in the field:
-
-- **It's an app switch, not an inline suggestion.** RoboForm's own app is
-  where the recall happens -- there's no floating button or inline Chrome
-  suggestion involved. For most people submitting a handful of forms a
-  week, that's a non-issue.
-- **Double-check what actually landed.** Autofill occasionally maps a field
-  wrong (city into "organization," for instance) on a poorly-labeled form.
-  Skim the form before submitting, the same way you'd proofread anything
-  else going out under your org's name.
-- **Keep saved forms up to date.** If your org changes its contact email or
-  moves, re-save the affected forms with Save Forms -- otherwise they'll
-  keep recalling the stale info until you do.
-- **Bitwarden doesn't need to know about any of this.** It stays the
-  default autofill service, quietly handling logins the whole time. The two
-  apps never fight over the same job.
-
-## Why this is worth the ten minutes of setup
-
-None of this is exotic -- it's the intended use of features most people
-never open, split across two apps on purpose. The payoff compounds with
-every recurring form, not just calendar submissions: less time spent
-hunched over a phone keyboard re-entering the same nine fields, fewer typos
-that get an event bounced or a donation misrouted, and one canonical
-source of truth for your org's public-facing info instead of it living in
-five different volunteers' muscle memory. Save each form once, and every
-resubmission after that -- calendars, donation pages, permits, sign-up
-sheets, whatever your org fills out on repeat -- is a couple of taps
-inside RoboForm instead of a full re-type.
-
-That trade-off -- a few extra taps in exchange for not handing a second app
-system-wide screen access -- is the same instinct behind everything else in
-this series: own your tools, understand what permission you're actually
-granting and why, and don't trade privacy for convenience by default just
-because the shortcut is sitting right there. It's a small piece of the
-same broader project we keep coming back to -- de-Big-Tech-ify the
-workflow, own your data, and spend the time you save on the organizing
-itself.
-
-<!-- IMAGE: closing image -->
 
 ---
 
