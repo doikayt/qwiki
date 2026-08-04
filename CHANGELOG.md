@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.55
+
+### Patch Changes
+
+-   - feat(wiki): add Video Conferencing category with Proton Meet and Jitsi Meet
+
 ## 0.1.54
 
 ### Patch Changes
