@@ -292,17 +292,20 @@ instead of a true screenshot.
 ![Bitwarden's Settings menu on Android](/blog/images/android-settings-menu.jpg)
 ![Account security screen, with Unlock with Biometrics enabled](/blog/images/android-unlock-with-biometrics.jpg)
 
-6. While you're in Settings, check **Autofill** and turn on **Use
-   Chrome autofill integration** -- it smooths out inline suggestions
-   specifically inside Chrome, on top of the system-wide autofill set
-   up next.
-
-![Bitwarden's in-app Autofill settings, with Chrome autofill integration enabled](/blog/images/android-autofill-chrome-integration.png)
-
-7. Turn on Bitwarden as your Android **autofill service**: **Settings →
-   Autofill Service**, select Bitwarden, and confirm.
+6. In Bitwarden, go to **Settings → Autofill Service** -- this opens the
+   Autofill screen (a view of which is shown in second screen shot, below.)
+   Slide **Autofill Services** on: that hands off to
+   Android's own system-wide autofill picker, where you select
+   **Bitwarden** as the provider and confirm.
 
 ![Android's Autofill Service picker with Bitwarden selected](/blog/images/android-autofill-service-settings.jpg)
+
+   Tap back to return to Bitwarden's Autofill screen, then turn on **Use
+   Chrome autofill integration** too -- it smooths out inline suggestions
+   specifically inside Chrome, on top of the system-wide autofill you just
+   enabled.
+
+![Bitwarden's in-app Autofill settings, with Chrome autofill integration enabled](/blog/images/android-autofill-chrome-integration.png)
 
 <!-- SCREENSHOT NEEDED: Bitwarden actually autofilling a saved login
      (e.g. giphy.com) on Android -- the payoff this section is building
