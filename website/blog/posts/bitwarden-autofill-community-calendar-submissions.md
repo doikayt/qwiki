@@ -403,13 +403,12 @@ under the hood: a structured profile maps form-field labels to values.
 The real difference comes down to two things:
 
 - **Static vs. dynamic mapping.** LastPass and Bitwarden reuse one
-  profile across every form. RoboForm effectively generates a fresh
-  mapping per form.
+profile across every form. RoboForm effectively generates a fresh
+mapping per form.
 - **What happens when a field doesn't match** anything already in the
-  profile.
+profile.
 
-**LastPass and Bitwarden: one static profile, matched by guesswork.**
-You save a structured profile -- BW calls it an Identity, LastPass calls
+**LastPass and Bitwarden: one static profile, matched by guesswork.** You save a structured profile -- BW calls it an Identity, LastPass calls
 it an Address -- essentially a dictionary of name/address/phone/email
 keyed by label, matched against every form's inputs. Neither tool fully
 gives up on a field that doesn't match: LastPass calls its manual
@@ -420,9 +419,20 @@ keys on, one field at a time, for every new form your org submits to.
 Bitwarden's tooling makes that lookup a bit less painful than LastPass's,
 but the work is still yours to do.
 
-**RoboForm: a mapping generated per form.** Instead of matching one
-static profile against markup and hoping, RoboForm also lets you
-*teach* it: fill a form out once by hand, and its AutoSave feature
+**The workaround: one manually tuned profile (mapping) per form.** Bitwarden doesn't limit you to
+a single Identity item -- you can create as many as you like. That means
+you *could* sidestep some of the matching-guesswork problem by
+maintaining a separate, hand-tuned Identity item for each recurring form
+you submit to, with its own custom fields mapped to that specific form's
+attributes. This isn't a free lunch, though: instead of one profile to
+maintain, you now have N -- one per form -- and any shared value (your
+name, your address) that changes has to be updated in every one of them
+separately. For an org submitting to a handful of calendar sites, that's
+a manageable amount of upkeep; for a dozen or more, Roboform starts to look
+really good.
+
+**RoboForm: one auto-generated mapping per form.** Instead of matching one
+static profile against markup and hoping, RoboForm also lets you *teach* it: fill a form out once by hand, and its AutoSave feature
 notices and remembers exactly what you typed into each field, for that
 specific form, going forward. No markup-hunting, no manual mapping --
 just fill it once and it sticks.
@@ -438,8 +448,7 @@ both tools' autofill either filled the wrong field or silently skipped
 it. No error, no warning -- the form still submitted, just with
 corrupted data.
 
-So we built
-[form-fill-bookmarklet](https://github.com/datalackey/fill-form-bookmarklet):
+So we built [form-fill-bookmarklet](https://github.com/datalackey/fill-form-bookmarklet):
 a zero-dependency browser bookmarklet that matches fields by `name` --
 the attribute HTML forms actually submit under -- instead of `id`. Fill
 a form out once, click the bookmarklet to capture it as a small JSON
