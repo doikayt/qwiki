@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.56
+
+### Patch Changes
+
+-   - feat: update bw profile section in appendix
+
 ## 0.1.55
 
 ### Patch Changes
