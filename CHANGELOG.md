@@ -1,5 +1,12 @@
 # @datalackey/qwiki
 
+## 0.1.58
+
+### Patch Changes
+
+-   - feat(wiki): add Secure Messaging category with Signal and Element
+    - fix(wiki): wrap long CategoryTree titles so they can't spill into content
+
 ## 0.1.57
 
 ### Patch Changes
