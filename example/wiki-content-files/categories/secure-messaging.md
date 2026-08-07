@@ -9,6 +9,10 @@ redirect_from: []
 End-to-end encrypted direct and small-group messaging for sensitive coordination --
 distinct from Slack-like team chat (see [[Category:Team Collaboration]]) and video calls.
 
+These tools keep message *content* private, which is a different job from hiding *where your
+traffic goes and who is sending it* -- for that (VPNs, Tor), see
+`[[:Category:Privacy & Anonymity]]`{=mediawiki}.
+
 **Order of preference** (same logic as the rest of the wiki):
 
 1. Self-hostable and federated (`[[Element]]`{=mediawiki} / Matrix), where you can run a
