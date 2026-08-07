@@ -65,7 +65,7 @@ See `[[Site Organization]]`{=mediawiki} for more details.
 
 ## How To Contribute
 
-- Request an account from chris@datalackey.com
+- Request an account from chris@doikayt.org
 - `[[Project:New Submission|Click here]]`{=mediawiki} to submit a new tool, or click 'New Submission' in the sidebar from anywhere on the site
 
 
