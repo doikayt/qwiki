@@ -38,7 +38,7 @@ holds only as far as you keep value in Bitcoin. (4) Donor familiarity: your supp
 be willing and able to pay in crypto, which narrows the audience versus card or bank debit.
 
 Best fit: a donor base already comfortable with Bitcoin, or as a censorship-resistant
-*secondary* channel alongside a conventional processor -- not usually a sole payment method.
+''secondary'' channel alongside a conventional processor -- not usually a sole payment method.
 |rejected_alternatives=Custodial crypto processors like Coinbase Commerce and BitPay: they
 take crypto but hold funds and impose KYC, reintroducing exactly the operator-freeze risk
 that self-custody removes. If the goal is deplatform resistance, a custodial crypto gateway

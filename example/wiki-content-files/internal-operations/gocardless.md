@@ -35,13 +35,13 @@ keeps a restricted-activities list (gocardless.com/legal/restrictions) and can u
 suspend an account -- a hold means you cannot receive payments, with email-only support and no
 phone escalation. So GoCardless can never clear our self-host bar; score it as
 lower-risk-than-card (bank rails sidestep card-network bans), not low-risk. The only payment
-tool here that actually clears the self-host bar is `[[BTCPay Server]]`{=mediawiki}, at the
+tool here that actually clears the self-host bar is [[BTCPay Server]], at the
 cost of crypto volatility and donor familiarity.
 
 Practical limits: online only (donors need a bank account that supports direct debit --
 no card fallback); US ACH capped at $5,000/transaction; some high-risk sectors excluded.
 Merchant KYC verification is required before your first collection.
-|rejected_alternatives=For deplatform resistance, see `[[BTCPay Server]]`{=mediawiki} (the
+|rejected_alternatives=For deplatform resistance, see [[BTCPay Server]] (the
 only self-hostable option). The broader case against card gateways is covered on the
 Finance&Accounting category page.
 |category=Finance&Accounting
