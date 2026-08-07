@@ -59,13 +59,16 @@ raw: true
   border-top: 1px solid #e8a0a0;
 }
 
-/* CategoryTree sidebar: match nav link size, prevent wrapping, allow h-scroll */
+/* CategoryTree sidebar: wrap long titles so they can never spill past the
+   column (was nowrap + h-scroll, which overflowed into content on stale cache). */
 .CategoryTreeItem bdi a {
   font-size: 12px !important;
-  white-space: nowrap !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
 }
 #mw-panel .portal .body {
-  overflow-x: auto;
+  overflow-x: hidden;
+  max-width: 16em;
 }
 
 /* Hide "no subcategories" clutter in the sidebar tree only (category pages unaffected) */
