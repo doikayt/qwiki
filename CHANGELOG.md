@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.57
+
+### Patch Changes
+
+-   - fix(wiki): correct markup so category and tool notes render
+
 ## 0.1.56
 
 ### Patch Changes
