@@ -65,8 +65,17 @@ See `[[Site Organization]]`{=mediawiki} for more details.
 
 ## How To Contribute
 
-- Request an account from chris@doikayt.org
+- Request an account from admin@doikayt.org
 - `[[Project:New Submission|Click here]]`{=mediawiki} to submit a new tool, or click 'New Submission' in the sidebar from anywhere on the site
+
+
+## The Software
+
+See [this repo](https://github.com/doikayt/qwiki) to view the code behind this
+Wiki, and [here](https://www.doikayt.org/projects.html#doikayt-wiki) for more information 
+about new features we plan to roll out soon.
+
+Deployed from commit QWIKI_COMMIT_LINK.
 
 
 [deplatform]: https://www.merriam-webster.com/dictionary/deplatform
