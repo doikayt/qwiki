@@ -1,12 +1,14 @@
 # Careers
 
-### Open Positions
 
-#### Co-Founder
+
+## Open Positions
+
+### Co-Founder
 
 We're looking for a co-founder to help build and lead our company from the ground up.
 
-*What we're looking for*
+*Ideal Profile*
 
 - *Tech Lead experience* -- has run engineering teams before, either as a managing architect
   or hands-on engineering manager. 
@@ -21,9 +23,9 @@ We're looking for a co-founder to help build and lead our company from the groun
   Node.js -- this is all useful, but secondary to architectural judgment. Someone with the right foundation can 
   pick up the tech stack fairly easily
 
-#### Intern
+### Intern
 
-*Requirements*
+*Ideal Profile*
 
 - Proven record as an activist or volunteer for causes aligned with our mission
 - *Comp Sci, EE* B.S. or above, or  degree in other STEM discipline and a demonstrated
@@ -52,14 +54,23 @@ We're looking for a co-founder to help build and lead our company from the groun
   - For grad students/senior undergrads: a KILLER thesis project that will have real world impact.
 
 
-#### Benefits/Compensation
+## Benefits/Compensation
 
 Until we get funding: no money.
 Eventually we plan to pay salaries at the low-to-mid end of the market -- per a [compensation policy][comp-philosophy]  
 that is transparent and formula-based.  This plus meaningful equity in the for-profit subsidiary as it grows. 
 
+## Location 
 
-#### Contact 
+Bay Area or Remote
+
+## Hours
+
+For both roles we are flexible in how we start working together, but prefer someone who is able to 
+commit at least 20 hours per week.
+
+
+## Contact 
 
 admin@doikayt.org
 
