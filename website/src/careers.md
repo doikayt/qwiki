@@ -59,4 +59,9 @@ Eventually we plan to pay salaries at the low-to-mid end of the market -- per a 
 that is transparent and formula-based.  This plus meaningful equity in the for-profit subsidiary as it grows. 
 
 
+#### Contact 
+
+admin@doikayt.org
+
+
 [comp-philosophy]: /about-company-structure.html#compensation-philosophy
