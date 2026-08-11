@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.59
+
+### Patch Changes
+
+-   - feat: update career section
+
 ## 0.1.58
 
 ### Patch Changes
