@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.61
+
+### Patch Changes
+
+-   - feat: rewrite pg 1
+
 ## 0.1.60
 
 ### Patch Changes
