@@ -2,16 +2,19 @@
 
 <img class="float-photo" src="/images/get-out.jpeg" alt="A Palestinian woman raises her hand while confronting an armed Israeli soldier in an alleyway marked with political graffiti.">
 
-We're an early-stage nonprofit software collective dedicated to providing
-digital products and services that support the operations of organizations
-aligned with our values, which are:
-
-- pro-working-class
+We're an early-stage software collective dedicated to providing 
+digital products and services in support of organizations aligned with our values:
+- anti-imperialist
 - pro-human rights
 - pro-tolerance
 - pro-free speech
-- anti-imperialist
+- pro-working-class
 
+Our ideal partners are:
+- grassroots community organizations
+- nonprofits
+- member-led, direct-action-oriented unions
+- candidates for public office committed to working-class interests
 
-We build user-facing web frameworks, applications, and tooling for
-TypeScript development, powered by an AI-native, spec-to-code pipeline.
+We build user-facing web frameworks, applications, and tooling for TypeScript development, 
+-- all extremely efficiently via AI-native, spec-to-code pipelines.
