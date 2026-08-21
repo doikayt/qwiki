@@ -275,3 +275,5 @@ Deletes the droplet and firewall. The reserved IP is protected by
 and you'll need to explicitly remove the `lifecycle` block (or the
 resource from state) if you really want to release it. Nothing inside
 DigitalOcean Spaces is touched if backups were pushed there separately.
+
+[![Free Palestine](https://badge.techforpalestine.org/ceasefire-now)](https://techforpalestine.org/learn-more)

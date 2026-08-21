@@ -106,3 +106,5 @@ under `example/wiki-content-files/`, not the wiki directly):
   comma-delimited string** (`category=A,B`), not repeated array-style query
   params (`category[]=A&category[]=B`). The latter produces a PHP array
   where a string is expected and the field silently ends up empty.
+
+[![No US Tax$ 4 Genocide!](https://badge.techforpalestine.org/ceasefire-now)](https://techforpalestine.org/learn-more)

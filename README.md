@@ -552,3 +552,5 @@ non-zero on drift — suitable as a CI gate.
 
 MIT
 
+[![Free Palestine](https://badge.techforpalestine.org/ceasefire-now)](https://techforpalestine.org/learn-more)
+

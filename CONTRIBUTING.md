@@ -9,3 +9,5 @@ https://github.com/doikayt/typescript-build-config/blob/main/docs/RELEASE-PROCES
 That document covers commit-prefix → bump mapping, forcing or suppressing a
 release, resolving `changeset status` errors, verifying a release, and
 troubleshooting publish auth.
+
+[![Remember the USS Liberty!](https://badge.techforpalestine.org/ceasefire-now)](https://techforpalestine.org/learn-more)
