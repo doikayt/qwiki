@@ -66,7 +66,7 @@ for merchants and investors who needed a legal vehicle for it, not from popular
 pressure. Governance structures tend to change when they stop working for
 whoever has enough power to rewrite them.
 
-This document treats those two fundamental questions as still open, and
+This document treats our two fundamental questions as still open, and
 attempts to answer them for a specific mode of production: collaboratively
 developed [open source software](https://en.wikipedia.org/wiki/Open-source_software)
 (OSS). It's the _open_ in OSS — open in who may profit from it, open in who
@@ -109,13 +109,13 @@ collaboratively-developed open source commons could sit at the center.
 
 ```mermaid
 flowchart TD
-    C[COMMONS<br/>shared OSS stack + engineering hub]
+    W[Workers] -->|code| C[COMMONS<br/>shared OSS stack + engineering hub]
     C -->|funding out| SA[Satellite A<br/>501c3]
     C -->|funding out| SB[Satellite B<br/>501c3]
     C -->|funding out| SC[Satellite C<br/>501c3]
-    SA -->|earned revenue in| C
-    SB -->|earned revenue in| C
-    SC -->|earned revenue in| C
+    SA -->|revenue share| C
+    SB -->|revenue share| C
+    SC -->|revenue share| C
     SA -.-> FA[for-profit subsidiary<br/>optional]
     SB -.-> FB[for-profit subsidiary<br/>optional]
     SC -.-> FC[for-profit subsidiary<br/>optional]
@@ -171,12 +171,17 @@ Commons↔Satellite piece:
 
 ```mermaid
 flowchart TD
-    D[Donors / grants] -->|funding| S[Satellite<br/>501c3]
+    D[Donors / grants] -->|donations & grants| S[Satellite<br/>501c3]
+    Cu[Customers] -->|earned revenue| F[For-profit subsidiary<br/>optional]
     C[Commons<br/>see §1] -->|funding out| S
-    S -->|revenue share in| C
-    S -->|capital down| F[For-profit subsidiary<br/>optional]
-    F -->|revenue up| S
+    S -->|revenue share| C
+    S -->|capital down| F
+    F -->|profit up| S
 ```
+
+"Earned revenue" here means subscription or consulting income — the subsidiary's
+operational work, as opposed to the donations and grants that fund the nonprofit
+directly.
 
 Multiple Satellites can exist around one Commons simultaneously — e.g., one Satellite
 oriented toward labor organizing tools, another toward tenant organizing, another
