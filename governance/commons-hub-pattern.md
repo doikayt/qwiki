@@ -107,23 +107,23 @@ Commons might be a shared application framework, a set of foundational
 libraries, or a full product stack — the pattern is meant to generalize: any
 collaboratively-developed open source commons could sit at the center.
 
-```mermaid
-flowchart TD
-    W[Workers] -->|code| C[COMMONS<br/>shared OSS stack + engineering hub]
-    C -->|funding out| SA[Satellite A<br/>501c3]
-    C -->|funding out| SB[Satellite B<br/>501c3]
-    C -->|funding out| SC[Satellite C<br/>501c3]
-    SA -->|revenue share| C
-    SB -->|revenue share| C
-    SC -->|revenue share| C
-    SA -.-> FA[for-profit subsidiary<br/>(optional)]
-    SB -.-> FB[for-profit subsidiary<br/>(optional)]
-    SC -.-> FC[for-profit subsidiary<br/>(optional)]
-```
+![Commons Layer diagram: Donors fund Satellites, Customers fund subsidiaries,
+Satellites and subsidiaries pay compensation expense into a Compensation
+Distribution DAO, Workers vote on allocation, the DAO issues an allocation
+instruction to the Board for review/override, the Board pays Workers, and
+Workers contribute code back to the Commons.](diagrams/commons-layer.png)
 
-(Dotted lines mark the subsidiary relationship as structural, not a fund
-flow — see the diagram in [§2](#2-the-satellite-layer) for that detail,
-including donor/grant inflow and the subsidiary's own capital/revenue flow.)
+*(Source file: [`diagrams/commons-layer.drawio`](diagrams/commons-layer.drawio)
+— open in [app.diagrams.net](https://app.diagrams.net) to edit.)*
+
+The Commons itself never holds or moves money — it has no legal existence and
+no treasury (see the "not itself a legal entity" note above). "Funding the
+Commons" cashes out as Satellites and subsidiaries directing already-secured
+funds toward Workers who improve the shared stack, through the same
+funded-program-allocation DAO mechanic detailed in
+[§3–4](#3-governance-layer--two-separate-mechanisms), with the Board
+retaining review/override authority over every payout — not an autonomous
+DAO disbursing on its own.
 
 This multi-Satellite shape is a resilience property, not just a scaling one — see
 Appendix A.6, ["Why dispersion, not just adequate but
