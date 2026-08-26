@@ -27,6 +27,27 @@ This is one of four companion documents split out of a single original draft (se
 
 ## Introduction
 
+This document presents a generalized, clonable organizational pattern for
+collaboratively developing and monetizing an open source commons. Before
+detailing the mechanics of the model — including how incoming funds from
+grants and earned revenue get distributed among contributors through a
+narrowly-scoped
+[DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization)
+(a Decentralized Autonomous Organization) — we look at why a new model is
+needed in the first place. We note how the standard corporate form emerged
+as a specific historical answer to the question of who governs production
+and who benefits from it. We then walk through neoclassical economists'
+own explanation for why hierarchy usually wins out — Coase's
+transaction-cost account, tested against a real historical case — and
+contrast it with a dialectical-materialist (Marxist) reading of the same
+shift, which asks a question transaction-cost economics doesn't: who holds
+the power to decide, and why. Finally, we look at what's different now:
+why AI specifically reopens a question that looked settled for over two
+centuries. The full grounding for all of this lives in Appendix A; what
+follows here is the short version.
+
+### Corporations as a governance technology, not a law of nature
+
 The corporation is not a naturally occurring phenomenon. It is one socially
 produced, historically specific answer to two fundamental questions: when people
 collaborate to produce something, who governs that production — and who
@@ -42,15 +63,15 @@ a broad public: the wave of English enclosure that began around the mid-1700s
 was driven by landowners who benefited from privatizing common land, not by
 commoners demanding it; joint-stock charters emerged to mobilize capital
 for merchants and investors who needed a legal vehicle for it, not from popular
-pressure. The pattern worth naming plainly: governance structures tend to
-change when they stop working for whoever already has enough power to rewrite
-them.
+pressure. Governance structures tend to change when they stop working for
+whoever has enough power to rewrite them.
 
 This document treats those two fundamental questions as still open, and
 attempts to answer them for a specific mode of production: collaboratively
-developed open source software (OSS). It's the _open_ in OSS — open in who may
-profit from it, open in who may contribute to it, open in who steers its
-direction — that makes it a round peg for corporate law's square hole: the
+developed [open source software](https://en.wikipedia.org/wiki/Open-source_software)
+(OSS). It's the _open_ in OSS — open in who may profit from it, open in who
+may contribute to it, open in who steers its direction — that makes it a
+round peg for corporate law's square hole: the
 corporate form defaults to a single, exclusive top-down structure built for
 concentrating both ownership and benefit, not the diffuse, non-exclusive shape
 open production actually takes.
@@ -76,7 +97,7 @@ practice. It functions as:
 
 - an **engineering hub** — where core contributors maintain shared infrastructure,
   standards, and foundational libraries
-- a **financial source and sync** — money flows *out* of the Commons (funding
+- a **financial source and sink** — money flows *out* of the Commons (funding
   development of the shared stack) and *into* the Commons (a negotiated revenue
   share — from subscription or consulting revenue, most commonly — or
   contribution-in-kind from satellites that build on it)
@@ -86,24 +107,23 @@ Commons might be a shared application framework, a set of foundational
 libraries, or a full product stack — the pattern is meant to generalize: any
 collaboratively-developed open source commons could sit at the center.
 
+```mermaid
+flowchart TD
+    C[COMMONS<br/>shared OSS stack + engineering hub]
+    C -->|funding out| SA[Satellite A<br/>501c3]
+    C -->|funding out| SB[Satellite B<br/>501c3]
+    C -->|funding out| SC[Satellite C<br/>501c3]
+    SA -->|earned revenue in| C
+    SB -->|earned revenue in| C
+    SC -->|earned revenue in| C
+    SA -.-> FA[for-profit subsidiary<br/>optional]
+    SB -.-> FB[for-profit subsidiary<br/>optional]
+    SC -.-> FC[for-profit subsidiary<br/>optional]
 ```
-                 ┌───────────────────────┐
-                 │        COMMONS         │
-                 │ (shared OSS stack +    │
-                 │  engineering hub)      │
-                 └───────────┬────────────┘
-              revenue in  ↑ │ ↓  funding out
-        ┌────────────────────┼────────────────────┐
-        │                    │                    │
- ┌──────▼──────┐      ┌──────▼──────┐      ┌──────▼──────┐
- │ Satellite A  │      │ Satellite B  │      │ Satellite C  │
- │  501(c)(3)   │      │  501(c)(3)   │      │  501(c)(3)   │
- │      │       │      │      │       │      │      │       │
- │  for-profit  │      │  for-profit  │      │  for-profit  │
- │  subsidiary  │      │  subsidiary  │      │  subsidiary  │
- │  (optional)  │      │  (optional)  │      │  (optional)  │
- └──────────────┘      └──────────────┘      └──────────────┘
-```
+
+(Dotted lines mark the subsidiary relationship as structural, not a fund
+flow — see the diagram in [§2](#2-the-satellite-layer) for that detail,
+including donor/grant inflow and the subsidiary's own capital/revenue flow.)
 
 This multi-Satellite shape is a resilience property, not just a scaling one — see
 Appendix A.7, ["Why dispersion, not just adequate but
