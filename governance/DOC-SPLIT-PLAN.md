@@ -1,8 +1,11 @@
-# Commons-Hub Doc Split — Plan (not yet executed)
+# Commons-Hub Doc Split — Plan
 
-**Status as of 2026-08-25:** `commons-hub-concept.md` (single 18-page doc, committed
-at `4e87f86`) is approved in principle for splitting into four audience-specific
-documents. Chris is reviewing the plan below; no drafting of the split has started.
+**Status as of 2026-08-26:** Plan confirmed (broad-to-narrow gradient across the four
+docs, each linking back to the specific upstream section it depends on rather than
+recapping everything above it — see discussion in session history).
+[`commons-hub-pattern.md`](commons-hub-pattern.md) (Doc 1 — reference architecture,
+including the new Appendix A historical/economic grounding with the Marx/Coase/
+general-intellect material) is drafted. Docs 2–4 not yet started.
 
 ## Agreed split
 

@@ -6,6 +6,11 @@ around nonprofit and for-profit satellites*
 **Status:** Early concept draft — not reviewed by counsel. Nothing in this document
 should be treated as a legal or tax conclusion.
 
+**Being split into four documents** — see [`DOC-SPLIT-PLAN.md`](DOC-SPLIT-PLAN.md).
+[`commons-hub-pattern.md`](commons-hub-pattern.md) (reference architecture) is
+drafted; the manifesto, contributor guide, and legal risk register are not yet
+split out. This file remains the source material for those three until they are.
+
 **Scope:** This document describes a generalized, clonable organizational pattern —
 it is written to apply to any group collaboratively developing and monetizing an
 open source commons, not to any single organization in particular.
