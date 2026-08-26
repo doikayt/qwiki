@@ -71,8 +71,8 @@ attempts to answer them for a specific mode of production: collaboratively
 developed [open source software](https://en.wikipedia.org/wiki/Open-source_software)
 (OSS). It's the _open_ in OSS — open in who may profit from it, open in who
 may contribute to it, open in who steers its direction — that makes it a
-round peg for corporate law's square hole: the
-corporate form defaults to a single, exclusive top-down structure built for
+round peg for corporate law's square hole: the corporate form defaults to
+a single, exclusive top-down structure built for
 concentrating both ownership and benefit, not the diffuse, non-exclusive shape
 open production actually takes.
 
@@ -116,9 +116,9 @@ flowchart TD
     SA -->|revenue share| C
     SB -->|revenue share| C
     SC -->|revenue share| C
-    SA -.-> FA[for-profit subsidiary<br/>optional]
-    SB -.-> FB[for-profit subsidiary<br/>optional]
-    SC -.-> FC[for-profit subsidiary<br/>optional]
+    SA -.-> FA[for-profit subsidiary<br/>(optional)]
+    SB -.-> FB[for-profit subsidiary<br/>(optional)]
+    SC -.-> FC[for-profit subsidiary<br/>(optional)]
 ```
 
 (Dotted lines mark the subsidiary relationship as structural, not a fund
@@ -126,8 +126,8 @@ flow — see the diagram in [§2](#2-the-satellite-layer) for that detail,
 including donor/grant inflow and the subsidiary's own capital/revenue flow.)
 
 This multi-Satellite shape is a resilience property, not just a scaling one — see
-Appendix A.7, ["Why dispersion, not just adequate but
-better"](#a7-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem),
+Appendix A.6, ["Why dispersion, not just adequate but
+better"](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem),
 for why dispersion is the better answer here, not merely an adequate one.
 
 ### Why this pattern has a cost advantage a for-profit competitor can't match
@@ -164,15 +164,22 @@ programs out into a **wholly-owned for-profit subsidiary**: the nonprofit retain
 mission/governance control, while the subsidiary carries the operational/
 revenue-generating work.
 
-The money flowing through a single Satellite comes from more than one source, and
-flows in more than one direction — worth showing explicitly rather than leaving
-implicit, since the diagram in [§1](#1-the-commons-layer) only covers the
-Commons↔Satellite piece:
+This is the same basic legal shape used by the
+[Mozilla Foundation](https://en.wikipedia.org/wiki/Mozilla_Foundation), whose
+wholly-owned for-profit subsidiary,
+[Mozilla Corporation](https://en.wikipedia.org/wiki/Mozilla_Corporation), has
+funded Firefox's development since 2005 — a two-decade precedent for exactly
+this structure. The Foundation also governs the source-code repository and
+controls commit access, the same role this pattern gives the Commons.
+
+Money flows through a single Satellite from more than one source, and in
+more than one direction — the diagram in [§1](#1-the-commons-layer) only
+covers the Commons↔Satellite piece:
 
 ```mermaid
 flowchart TD
     D[Donors / grants] -->|donations & grants| S[Satellite<br/>501c3]
-    Cu[Customers] -->|earned revenue| F[For-profit subsidiary<br/>optional]
+    Cu[Customers] -->|earned revenue| F[For-profit subsidiary<br/>(optional)]
     C[Commons<br/>see §1] -->|funding out| S
     S -->|revenue share| C
     S -->|capital down| F
@@ -187,13 +194,6 @@ Multiple Satellites can exist around one Commons simultaneously — e.g., one Sa
 oriented toward labor organizing tools, another toward tenant organizing, another
 toward a specific geography — all built on the same shared stack, all feeding
 improvements and (where applicable) a revenue share back to the Commons.
-
-**A real-world precedent for this shape.** OpenAI is the most visible existing
-example of a nonprofit controlling a for-profit subsidiary at meaningful scale —
-proof the basic legal shape can be built and funded, not merely theoretical. See
-[Appendix A.4](#a4-a-real-world-precedent-and-its-cautionary-lesson-openai) for
-what that precedent does, and doesn't, prove about whether the control actually
-holds in practice.
 
 ## 3. Governance Layer — Two Separate Mechanisms
 
@@ -506,56 +506,7 @@ tactical-governance tokens are actually for — they're the deliberate, continge
 political work standing in for the "inevitable" the dialectic doesn't actually
 guarantee. Nothing in this pattern wins by waiting.
 
-### A.4 A real-world precedent, and its cautionary lesson: OpenAI
-
-OpenAI is the clearest existing proof that a nonprofit controlling a for-profit
-subsidiary is a workable legal shape, not a hypothetical one — it has been built,
-funded, and now operates at a scale (a $500B+ valuation as of its October 2025
-restructuring) far beyond anything this document contemplates. Doikayt's
-Satellite/subsidiary structure ([§2](#2-the-satellite-layer)) follows the same
-basic shape: a mission-controlling nonprofit above a revenue-generating
-for-profit vehicle. That's worth stating plainly as encouragement — the pattern
-isn't exotic.
-
-It's also the clearest illustration of A.3's point that nothing about this
-structure holds automatically. OpenAI's nonprofit board asserted control once,
-concretely, in November 2023 — firing CEO Sam Altman over what it described as
-a breakdown of candor and trust.[^2] Within five days, pressure from its largest
-investor (Microsoft, which offered Altman and colleagues a new role) and an open
-letter signed by more than 700 of OpenAI's roughly 770 employees threatening to
-leave for Microsoft en masse forced the board to reverse itself, reinstate
-Altman, and reconstitute itself with new members.[^2] The formal governance
-mechanism — a nonprofit board with the legal authority to remove a CEO — worked
-exactly as designed, and was overturned anyway, by a coalition whose actual
-leverage was economic and organizational, not written into any governing
-document.
-
-The structure has also moved toward *less* nonprofit control since, not more.
-In 2019 OpenAI created a "capped-profit" for-profit subsidiary under the
-nonprofit; facing pressure to attract conventional investors and pursue an
-eventual IPO, it proposed in 2024–25 to convert that subsidiary into a public
-benefit corporation and reduce the nonprofit's role, drawing lawsuits (including
-from Elon Musk) and scrutiny from state attorneys general in California and
-Delaware.[^3] The version actually completed in October 2025 preserves nonprofit
-*control* on paper — the OpenAI Foundation controls OpenAI Group PBC — but
-removed the original profit caps and moved the for-profit entity from a form
-(LLC) with a direct fiduciary duty to the nonprofit's mission to one (a PBC)
-that, by design, also has to weigh shareholder interests; critics characterize
-the result as a weaker version of the control it replaced.[^3]
-
-**The lesson for this pattern, not just for OpenAI:** put the nonprofit-over-
-for-profit shape in place, but don't mistake the org chart for the thing that
-actually protects the mission. What held OpenAI's board accountable to
-investors and staff in 2023 was real leverage — capital, and the threat of a
-mass walkout — not the governance diagram. The equivalent leverage this pattern
-needs to build, deliberately, the way A.3 argues, is the trust layer and
-non-transferable tactical-governance tokens in the
-[Contributor Guide](contributor-guide.md): a base of contributors whose standing
-and voice can't simply be bought out or outvoted by whoever brings the most
-capital to the table. Follow OpenAI's proof that the structure is buildable;
-don't assume the structure alone does the protecting it's meant to do.
-
-### A.5 Commons-based peer production: Benkler's answer
+### A.4 Commons-based peer production: Benkler's answer
 
 There's a second, independent reason hierarchy isn't needed here, distinct
 from anything AI changes. Coase's hierarchy doesn't only solve "I can't see
@@ -579,7 +530,7 @@ than either price signals or managerial hierarchy. This isn't speculative —
 it's the mode that already produced Linux and most of the open source stack
 this pattern itself depends on.
 
-### A.6 Stigmergy: coordination without a center
+### A.5 Stigmergy: coordination without a center
 
 The coordination mechanism this points toward has a name too:
 **[stigmergy](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10956014/)** —
@@ -595,7 +546,7 @@ record and tactical voting weight described in the
 lets independent contributors coordinate toward a common goal without anyone
 directing traffic.
 
-### A.7 Why dispersion, not just adequate but better: the aircraft-carrier problem
+### A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem
 
 Which points to why dispersion is the better answer here, not merely an
 adequate one. Concentrating capability into one legal entity, one point of
@@ -609,7 +560,7 @@ is what the clonable, multi-Satellite shape in
 [§1](#1-the-commons-layer) is actually for: not just a way to scale, but a
 resilience strategy.
 
-### A.8 A return to the commons: enclosure and Ostrom
+### A.7 A return to the commons: enclosure and Ostrom
 
 Before the [enclosure movements](https://en.wikipedia.org/wiki/Enclosure)
 reshaped landholding in England, common land was governed collectively by the
@@ -645,7 +596,3 @@ within it, in Ostrom's sense of a community writing its own rules for how a
 shared resource's benefit gets distributed.
 
 [^1]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
-[^2]: [Removal of Sam Altman from OpenAI — Wikipedia](https://en.wikipedia.org/wiki/Removal_of_Sam_Altman_from_OpenAI)
-[^3]: [Evolving OpenAI's structure — OpenAI](https://openai.com/index/evolving-our-structure/);
-    [OpenAI completes its for-profit recapitalization — TechCrunch](https://techcrunch.com/2025/10/28/openai-completes-its-for-profit-recapitalization/);
-    [OpenAI says nonprofit will retain control of company, bowing to outside pressure — CNBC](https://www.cnbc.com/2025/05/05/openai-says-nonprofit-retain-control-of-company-bowing-to-pressure.html)
