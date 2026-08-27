@@ -27,23 +27,40 @@ This is one of four companion documents split out of a single original draft (se
 
 ## Introduction
 
-This document presents a generalized, clonable organizational pattern for
-collaboratively developing and monetizing an open source commons. Before
-detailing the mechanics of the model — including how incoming funds from
+This document presents a replicable organizational model for
+collaboratively developing and monetizing an
+[open source](https://en.wikipedia.org/wiki/Open-source_software) commons.
+Before detailing the mechanics of the model — including how incoming funds from
 grants and earned revenue get distributed among contributors through a
 narrowly-scoped
 [DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization)
-(a Decentralized Autonomous Organization) — we look at why a new model is
-needed in the first place. We note how the standard corporate form emerged
-as a specific historical answer to the question of who governs production
-and who benefits from it. We then walk through neoclassical economists'
-own explanation for why hierarchy usually wins out — Coase's
-transaction-cost account, tested against a real historical case — and
-contrast it with a dialectical-materialist (Marxist) reading of the same
-shift, which asks a question transaction-cost economics doesn't: who holds
-the power to decide, and why. Finally, we look at what's different now:
-why AI specifically reopens a question that looked settled for over two
-centuries. The full grounding for all of this lives in Appendix A; what
+(a Decentralized Autonomous Organization) — we look at some of the
+historical and economic factors which make the emergence of a new model inevitable.
+We note how the standard corporate form arose as a specific historical answer to
+the questions of (a) who governs production and (b) who benefits from it. We first
+analyze these questions through the lens of neoclassical economists — in particular
+how Coase proposes transaction costs as the reason hierarchical structures usually
+win out. Next up is a dialectical-materialist (Marxist) reading of the same shift,
+wherein we ask a question transaction-cost economics doesn't: who holds the
+_power_ to set the rules of governance and distribution.
+
+Finally, we examine how the increasing sophistication and reach of AI make any
+confident forecast of the next dominant mode of production impossible — to the point
+where we have to ask whether human beings even survive as a species to participate
+in whatever mode comes next. AI, paired with breakneck progress in robotics,
+automation, and the Web's role in democratizing knowledge, all point toward real
+material abundance. But AI also concentrates the means to capture that abundance in
+fewer hands. The resultant mass job loss, spiking concentration of wealth and
+political power, and constant surveillance and repression are not even the worst of
+it — at the far end sits the possibility of an existential threat to the species
+that built it.
+
+[Appendix A.8](#a8-ai-abundance-and-the-case-for-urgency) lays out both sides of
+that claim in full; the short version is that the size of the downside is exactly
+why finding alternatives to the traditional corporation and the capitalist mode of
+production it was built to serve is urgent now, not eventually.
+
+The full grounding for all of this lives in Appendix A; what
 follows here is the short version.
 
 ### Corporations as a governance technology, not a law of nature
@@ -92,15 +109,13 @@ concrete, and what AI changes about it — and what it doesn't.
 
 At the center of the pattern is a **Commons**: a body of collaboratively developed
 open source software (and the engineering practices, standards, and shared libraries
-around it). The Commons is not itself a legal entity — it's an artifact and a body of
-practice. It functions as:
-
-- an **engineering hub** — where core contributors maintain shared infrastructure,
-  standards, and foundational libraries
-- a **financial source and sink** — money flows *out* of the Commons (funding
-  development of the shared stack) and *into* the Commons (a negotiated revenue
-  share — from subscription or consulting revenue, most commonly — or
-  contribution-in-kind from satellites that build on it)
+around it). The Commons is not itself a legal entity — it's an artifact and a body
+of practice, functioning as an **engineering hub** where core contributors maintain
+shared infrastructure, standards, and foundational libraries. It has no bank
+account and moves no money itself: the Satellites and subsidiaries built around it
+are the actual financial entities, and compensating contributors for shared-stack
+work is something *they* do — via the DAO mechanic shown below — not something the
+Commons does on its own behalf.
 
 Any number of legal entities can be organized *around* a single Commons. A
 Commons might be a shared application framework, a set of foundational
@@ -596,3 +611,29 @@ within it, in Ostrom's sense of a community writing its own rules for how a
 shared resource's benefit gets distributed.
 
 [^1]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
+
+### A.8 AI, abundance, and the case for urgency
+
+AI's honest case for abundance rests on more than the technology itself. Paired with
+breakneck progress in robotics and automation, and the Web's role in democratizing
+knowledge — anyone now has 24/7 access to a tutor, and the pool of people who can pick
+up the skills to become a contributor to a project like this one is larger than it has
+ever been — it points toward a level of material abundance humanity has not seen
+before.
+
+The same technology concentrates the means to capture that abundance in fewer hands.
+Mass displacement of labor, wealth and power pooling further with whoever already
+owns the compute and the models, and surveillance capacity to match are not
+speculative — they are the direction current incentives already point. At the far end
+of that same curve sits a risk with no historical precedent to weigh it against: that
+sufficiently advanced AI, up to and including an AI singularity, poses an existential
+threat to the species that built it. *(Requires confirmation: this section should cite
+specific sources for the existential-risk claim rather than assert it — e.g. the CAIS
+statement on AI risk or Bostrom/Christiano — before this document is finalized.)*
+
+This document takes no position on which outcome is more likely — no one credible can,
+yet. What it argues is narrower, and harder to dispute: because the downside is this
+severe, it is more urgent now, not less, to have alternatives to the traditional
+corporation and the capitalist mode of production it was built to serve — built and
+tested before the outcome is decided, not improvised after. That is the stake this
+whole document is written against.
