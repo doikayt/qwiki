@@ -44,21 +44,19 @@ win out. Next up is a dialectical-materialist (Marxist) reading of the same shif
 wherein we ask a question transaction-cost economics doesn't: who holds the
 _power_ to set the rules of governance and distribution.
 
-Finally, we examine how the increasing sophistication and reach of AI make any
+Finally, [we examine](#a8-ai-abundance-and-the-case-for-urgency) how the
+increasing sophistication and reach of AI make any
 confident forecast of the next dominant mode of production impossible — to the point
 where we have to ask whether human beings even survive as a species to participate
 in whatever mode comes next. AI, paired with breakneck progress in robotics,
 automation, and the Web's role in democratizing knowledge, all point toward real
 material abundance. But AI also concentrates the means to capture that abundance in
-fewer hands. The resultant mass job loss, spiking concentration of wealth and
-political power, and constant surveillance and repression are not even the worst of
-it — at the far end sits the possibility of an existential threat to the species
-that built it.
-
-[Appendix A.8](#a8-ai-abundance-and-the-case-for-urgency) lays out both sides of
-that claim in full; the short version is that the size of the downside is exactly
-why finding alternatives to the traditional corporation and the capitalist mode of
-production it was built to serve is urgent now, not eventually.
+fewer hands. The inevitable mass job loss, social chaos,
+spiking concentration of wealth, and constant surveillance and
+repression are not even the worst of
+it. At the far end sits the possibility of an existential threat to the species
+that pushed technology to its current point. This makes building a worker- and
+human-friendly model of production all the more critical.
 
 The full grounding for all of this lives in Appendix A; what
 follows here is the short version.
