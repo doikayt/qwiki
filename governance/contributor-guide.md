@@ -4,7 +4,7 @@
 (once drafted) how standing and trust are earned and lost.*
 
 **Status:** Stub. Created by moving the Worked Example section out of
-[`commons-hub-pattern.md`](commons-hub-pattern.md#4-worked-example-funded-program-allocation-mechanic);
+[`commons-hub-pattern.md`](commons-hub-pattern.md#3-worked-example-funded-program-allocation-mechanic);
 the rest of this guide is not yet drafted. Not reviewed by counsel — nothing here
 should be treated as a legal or tax conclusion.
 
@@ -12,7 +12,7 @@ This is one of four companion documents split out of a single original draft (se
 [`DOC-SPLIT-PLAN.md`](DOC-SPLIT-PLAN.md) for the rationale). See
 [`commons-hub-pattern.md`](commons-hub-pattern.md) for the reference architecture this
 guide assumes throughout — particularly
-[§3, Governance Layer](commons-hub-pattern.md#3-governance-layer--two-separate-mechanisms),
+[§2, Governance Layer](commons-hub-pattern.md#2-governance-layer--two-separate-mechanisms),
 which draws the board-vs-DAO distinction the mechanic below implements.
 
 ## Not yet drafted

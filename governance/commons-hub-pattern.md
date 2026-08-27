@@ -27,39 +27,34 @@ This is one of four companion documents split out of a single original draft (se
 
 ## Introduction
 
-This document presents a replicable organizational model for
-collaboratively developing and monetizing an
-[open source](https://en.wikipedia.org/wiki/Open-source_software) commons.
-Before detailing the mechanics of the model — including how incoming funds from
-grants and earned revenue get distributed among contributors through a
-narrowly-scoped
-[DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization)
-(a Decentralized Autonomous Organization) — we look at some of the
-historical and economic factors which make the emergence of a new model inevitable.
-We note how the standard corporate form arose as a specific historical answer to
-the questions of (a) who governs production and (b) who benefits from it. We first
-analyze these questions through the lens of neoclassical economists — in particular
-how Coase proposes transaction costs as the reason hierarchical structures usually
-win out. Next up is a dialectical-materialist (Marxist) reading of the same shift,
-wherein we ask a question transaction-cost economics doesn't: who holds the
-_power_ to set the rules of governance and distribution.
+This document presents a replicable organizational model for collaboratively
+developing and monetizing an
+[open source](https://en.wikipedia.org/wiki/Open-source_software) commons. Before
+detailing the mechanics of the model — including how incoming funds from grants
+and earned revenue get distributed among contributors through a narrowly-scoped
+[DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization) (a
+Decentralized Autonomous Organization) — we look at some of the historical and
+economic factors which make the emergence of a new model inevitable. We note how
+the standard corporate form arose as a specific historical answer to the
+questions of (a) who governs production and (b) who benefits from it. We first
+analyze these questions through the lens of neoclassical economists — in
+particular how [Coase's 1937 transaction-cost
+account](https://en.wikipedia.org/wiki/The_Nature_of_the_Firm) explains why
+hierarchical structures usually win out. Next up is a dialectical-materialist (Marxist)
+reading of the same shift, wherein we ask a question transaction-cost economics
+doesn't: who holds the _power_ to set the rules of governance and distribution.
 
-Finally, [we examine](#a8-ai-abundance-and-the-case-for-urgency) how the
-increasing sophistication and reach of AI make any
-confident forecast of the next dominant mode of production impossible — to the point
-where we have to ask whether human beings even survive as a species to participate
-in whatever mode comes next. AI, paired with breakneck progress in robotics,
-automation, and the Web's role in democratizing knowledge, all point toward real
-material abundance. But AI also concentrates the means to capture that abundance in
-fewer hands. Mass job loss, deeper concentration of wealth and power, and constant
-surveillance are not even the worst of the possible consequences. 
-At the far end sits the possibility of an
-existential threat to the species that pushed AI technology to its current point.
-That's exactly why building a human worker-friendly model of production is
-urgent, not optional.
+We then examine how the increasing sophistication and reach of AI make any
+confident forecast of the next dominant mode of production impossible — to the
+point where we have to ask whether human beings can even survive as a species to
+participate in whatever mode comes next. Assuming we do, the next question is
+whether the average working person ends up better off or worse — and while
+today's power structures tilt the scales toward worse, we close on a hopeful
+note: the same forces driving that risk also open real room for a
+worker-friendly model of production to displace late-stage disaster capitalism,
+not just survive alongside it.
 
-
-### Corporations as a governance technology, not a law of nature
+## Corporations as a governance technology, not a law of nature
 
 The corporation is not a naturally occurring phenomenon. It is one socially
 produced, historically specific answer to two fundamental questions: when people
@@ -101,23 +96,17 @@ shifting.
 walks through the textile-industry case that makes the original argument
 concrete, and what AI changes about it — and what it doesn't.
 
-## 1. The Commons Layer
+## 1. The Commons Layer and Its Satellites
 
 At the center of our proposed pattern is a **Commons**: a body of 
 collaboratively developed
 open source software (and the engineering practices, standards, and shared libraries
-around it). The Commons is not itself a legal entity — it's an artifact and a body
-of practice, functioning as an **engineering hub** where core contributors maintain
-shared infrastructure, standards, and foundational libraries. It has no bank
-account and moves no money itself: the Satellites and subsidiaries built around it
-are the actual legal/financial entities. When money does need to move -- from 
+around it). A Commons might be a shared application framework, a set of 
+foundational libraries, or a full product stack. The Commons is not itself a 
+legal/financial entity; it is an **engineering hub**. It has no bank
+account and moves no money itself. When money does need to move -- from 
 donors or to contributors that enhance the commons --  we rely 
 on the DAO mechanic shown below.
-
-Any number of legal entities can be organized *around* a single Commons. A
-Commons might be a shared application framework, a set of foundational
-libraries, or a full product stack — the pattern is meant to generalize: any
-collaboratively-developed open source commons could sit at the center.
 
 ![Commons Layer diagram: Donors fund Satellites, Customers fund subsidiaries,
 Satellites and subsidiaries pay compensation expense into a Compensation
@@ -125,49 +114,6 @@ Distribution DAO, Workers vote on allocation, the DAO issues an allocation
 instruction to the Board for review/override, the Board pays Workers, and
 Workers contribute code back to the Commons.](diagrams/commons-layer.png)
 
-*(Source file: [`diagrams/commons-layer.drawio`](diagrams/commons-layer.drawio)
-— open in [app.diagrams.net](https://app.diagrams.net) to edit.)*
-
-The Commons itself never holds or moves money — it has no legal existence and
-no treasury (see the "not itself a legal entity" note above). "Funding the
-Commons" cashes out as Satellites and subsidiaries directing already-secured
-funds toward Workers who improve the shared stack, through the same
-funded-program-allocation DAO mechanic detailed in
-[§3–4](#3-governance-layer--two-separate-mechanisms), with the Board
-retaining review/override authority over every payout — not an autonomous
-DAO disbursing on its own.
-
-This multi-Satellite shape is a resilience property, not just a scaling one — see
-Appendix A.6, ["Why dispersion, not just adequate but
-better"](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem),
-for why dispersion is the better answer here, not merely an adequate one.
-
-### Why this pattern has a cost advantage a for-profit competitor can't match
-
-Nonprofit and grassroots organizations without much money are a real market with a
-real, recurring need — CRM/outreach tooling, in Doikayt's own case — that most
-for-profit software companies leave alone. Not because the need is illusory, but
-because these customers can't pay enough to justify ordinary customer-acquisition
-cost. That's usually treated as this pattern's central constraint. It's also,
-quietly, a structural advantage.
-
-What a for-profit startup normally has to spend real money to acquire — actual
-users, in volume, willing to run early builds, report what's broken, and ask for
-the next feature — this pattern gets for free, in abundance, as a side effect of
-serving a market a for-profit competitor is ignoring. And the problems don't stay
-confined to that market: once a Satellite has solved a given problem for a
-cash-poor organization, it's common to find that better-funded organizations have
-a structurally similar version of the same problem. Because the resulting software
-is free, open, and low-cost to adopt, a Satellite can move into that adjacent,
-better-funded market at a cost structure a for-profit incumbent can't match — it
-isn't competing on price with something built to extract margin from that market.
-
-Paired with the labor-market dynamic described in *"Why This, Why Now"* (once
-drafted) — a pool of skilled, mission-motivated contributors whose conventional
-career track has narrowed — this pattern has two complementary resources most
-startups have to pay real money for: engaged users and committed labor.
-
-## 2. The Satellite Layer
 
 Each **Satellite** is a [501(c)(3)](https://www.irs.gov/charities-non-profits/charitable-organizations/exemption-requirements-501c3-organizations)
 organized around some program of work that draws on
@@ -181,33 +127,9 @@ This is the same basic legal shape used by the
 wholly-owned for-profit subsidiary,
 [Mozilla Corporation](https://en.wikipedia.org/wiki/Mozilla_Corporation), has
 funded Firefox's development since 2005 — a two-decade precedent for exactly
-this structure. The Foundation also governs the source-code repository and
-controls commit access, the same role this pattern gives the Commons.
+this structure.
 
-Money flows through a single Satellite from more than one source, and in
-more than one direction — the diagram in [§1](#1-the-commons-layer) only
-covers the Commons↔Satellite piece:
-
-```mermaid
-flowchart TD
-    D[Donors / grants] -->|donations & grants| S[Satellite<br/>501c3]
-    Cu[Customers] -->|earned revenue| F["For-profit subsidiary<br/>(optional)"]
-    C[Commons<br/>see §1] -->|funding out| S
-    S -->|revenue share| C
-    S -->|capital down| F
-    F -->|profit up| S
-```
-
-"Earned revenue" here means subscription or consulting income — the subsidiary's
-operational work, as opposed to the donations and grants that fund the nonprofit
-directly.
-
-Multiple Satellites can exist around one Commons simultaneously — e.g., one Satellite
-oriented toward labor organizing tools, another toward tenant organizing, another
-toward a specific geography — all built on the same shared stack, all feeding
-improvements and (where applicable) a revenue share back to the Commons.
-
-## 3. Governance Layer — Two Separate Mechanisms
+## 2. Governance Layer — Two Separate Mechanisms
 
 It's important to keep these two things distinct; they are not the same mechanism and
 should not be conflated:
@@ -235,7 +157,7 @@ should not be conflated:
   determine what share of the disbursed funds each contributor or pod
   receives. 
 
-## 4. Worked Example: Funded Program Allocation Mechanic
+## 3. Worked Example: Funded Program Allocation Mechanic
 
 At a high level: once a Satellite's board secures a funded program — a grant, an
 earned-revenue-funded initiative, or a board-allocated budget — contributors who opt
@@ -253,7 +175,7 @@ mechanic (DAO scope vs. fiduciary duty, compensation-vs-profit-sharing
 characterization, intake-as-gate, crypto valuation and withholding) are tracked
 separately in the [Legal Risk Register](legal-risk-register.md).
 
-## 5. Economic Benefit — Sequencing Across Mechanisms
+## 4. Economic Benefit — Sequencing Across Mechanisms
 
 By this point there are three distinct mechanisms in play, and it's easy to
 conflate them since they all touch "who gets what." Worth seeing side by
@@ -261,7 +183,7 @@ side once, rather than only encountering each in its own document:
 
 | Mechanism | Scope | Duration | Economic value | Who's eligible |
 |---|---|---|---|---|
-| DAO (§3–4 above) | Per funded program | Episodic — ends when the program does | Cash, paid for services rendered | Self-selected opt-in contributors |
+| DAO (§2–3 above) | Per funded program | Episodic — ends when the program does | Cash, paid for services rendered | Self-selected opt-in contributors |
 | Tactical tokens (see the *Contributor Guide*) | Ongoing | Decays with inactivity | None — pure voice | Registered committers who've earned trust |
 | ESOP | Ongoing | Vests over years | Real equity | Legally must be broad-based — ~all full-time employees |
 
@@ -305,6 +227,70 @@ well before it's actually needed.
   time pressure later.
 
 ---
+
+## 5. The Stakes, and Why This Pattern Has an Edge
+
+AI, paired with breakneck progress in robotics, automation, and the Web's role in
+democratizing knowledge, points toward a level of material abundance humanity has
+not seen before. But the same technology concentrates the means to capture that
+abundance in fewer hands: mass job loss, deeper concentration of wealth and power,
+and constant surveillance are not even the worst of the possible consequences — at
+the far end sits the possibility of an existential threat to the species that
+pushed AI technology to its current point.
+[Appendix A.8](#a8-ai-abundance-and-the-case-for-urgency) lays out the full
+argument.
+
+Assume, for the sake of argument, that we clear that bar. The next question is
+whether the average working person ends up better off or worse under whatever
+comes next — and today's power structures, left to their own devices, tilt that
+outcome toward worse: the same concentration of compute, capital, and political
+leverage that creates the existential tail risk also determines who captures the
+day-to-day gains long before any of that plays out.
+
+None of that is inevitable, though — and this is where we close on a hopeful
+note. Two structural properties of this pattern work directly against that
+default trajectory.
+
+### Why this pattern has a cost advantage a for-profit competitor can't match
+
+Nonprofit and grassroots organizations without much money are a real market with a
+real, recurring need — CRM/outreach tooling, in Doikayt's own case — that most
+for-profit software companies leave alone. Not because the need is illusory, but
+because these customers can't pay enough to justify ordinary customer-acquisition
+cost. That's usually treated as this pattern's central constraint. It's also,
+quietly, a structural advantage.
+
+What a for-profit startup normally has to spend real money to acquire — actual
+users, in volume, willing to run early builds, report what's broken, and ask for
+the next feature — this pattern gets for free, in abundance, as a side effect of
+serving a market a for-profit competitor is ignoring. And the problems don't stay
+confined to that market: once a Satellite has solved a given problem for a
+cash-poor organization, it's common to find that better-funded organizations have
+a structurally similar version of the same problem. Because the resulting software
+is free, open, and low-cost to adopt, a Satellite can move into that adjacent,
+better-funded market at a cost structure a for-profit incumbent can't match — it
+isn't competing on price with something built to extract margin from that market.
+
+Paired with the labor-market dynamic described in *"Why This, Why Now"* (once
+drafted) — a pool of skilled, mission-motivated contributors whose conventional
+career track has narrowed — this pattern has two complementary resources most
+startups have to pay real money for: engaged users and committed labor.
+
+### Resilience: why dispersion is a strength, not just a scaling property
+
+This multi-Satellite shape is a resilience property, not just a scaling one.
+Concentrating value and capability into a single legal entity is exactly what
+makes it worth attacking — legally, politically, operationally. A dispersed,
+replicable structure has no equivalent point of failure: no single Satellite is
+load-bearing for the pattern as a whole. See Appendix A.6, ["Why dispersion, not
+just adequate but
+better"](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem),
+for the full argument.
+
+Cost structure and resilience aren't abstractions here — they're the concrete
+reasons a worker-friendly model of production doesn't have to stay a hopeful
+aspiration. This is exactly the model built to give a better answer to the
+question this document opened with.
 
 ## Appendix A: Historical and Economic Grounding
 
@@ -502,7 +488,7 @@ operationally (one point of funding or leadership failure). A dispersed,
 replicable structure doesn't have that failure mode — no single instance is
 load-bearing, and if one node goes down, the pattern survives elsewhere. That
 is what the clonable, multi-Satellite shape in
-[§1](#1-the-commons-layer) is actually for: not just a way to scale, but a
+[§1](#1-the-commons-layer-and-its-satellites) is actually for: not just a way to scale, but a
 resilience strategy.
 
 ### A.7 A return to the commons: enclosure and Ostrom
@@ -533,10 +519,10 @@ This initiative is, in effect, a proposal to apply Ostrom-style commons
 governance to a *digital* commons — open source software — rather than to land,
 water, or fisheries: a body of collectively produced software governed by the
 people who build it, with the Commons-Hub structure
-([§1](#1-the-commons-layer)) as the specific institutional design, and the
+([§1](#1-the-commons-layer-and-its-satellites)) as the specific institutional design, and the
 funded-program-allocation
 [DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization)
-([§3–4](#3-governance-layer--two-separate-mechanisms)) as one concrete rule
+([§2–3](#2-governance-layer--two-separate-mechanisms)) as one concrete rule
 within it, in Ostrom's sense of a community writing its own rules for how a
 shared resource's benefit gets distributed.
 
@@ -546,7 +532,8 @@ shared resource's benefit gets distributed.
 
 AI's honest case for abundance rests on more than the technology itself. Paired with
 breakneck progress in robotics and automation, and the Web's role in democratizing
-knowledge — anyone now has 24/7 access to a tutor, and the pool of people who can pick
+knowledge — anyone now has 24/7 access to an expert
+tutor, and the pool of people who can pick
 up the skills to become a contributor to a project like this one is larger than it has
 ever been — it points toward a level of material abundance humanity has not seen
 before.
