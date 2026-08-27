@@ -5,7 +5,11 @@ docs, each linking back to the specific upstream section it depends on rather th
 recapping everything above it — see discussion in session history).
 [`commons-hub-pattern.md`](commons-hub-pattern.md) (Doc 1 — reference architecture,
 including the new Appendix A historical/economic grounding with the Marx/Coase/
-general-intellect material) is drafted. Docs 2–4 not yet started.
+general-intellect material) is drafted. Docs 2 and 4 not yet started. Doc 3
+([`contributor-guide.md`](contributor-guide.md)) is a stub: Doc 1's full §4 Worked
+Example moved there in full (not just a simplified extraction, per the outline
+below) after Chris judged it too much operational detail for Doc 1's reference
+architecture — Doc 1 now keeps only a short summary and a pointer.
 
 ## Agreed split
 
@@ -14,7 +18,8 @@ Audience: Chris, future co-founders, counsel, serious adopters cloning the patte
 - Core Idea
 - The Satellite Layer
 - Governance Layer (board vs. funded-program-allocation DAO)
-- Worked Example: Funded Program Allocation Mechanic
+- Worked Example: Funded Program Allocation Mechanic — short summary + pointer only;
+  full mechanic lives in Doc 3
 - Economic Benefit Sequencing (ESOP maturity ladder)
 - **NEW (tweak from Chris):** a contained appendix holding the historical/economic
   grounding — Coase transaction-cost theory, the putting-out-system/textile
@@ -34,8 +39,8 @@ Audience: prospective contributors, funders, press.
 Audience: actual committers/contributors.
 - Community Trust and Contributor Standing (§6 content)
 - Tactical Governance — Committer Voting Weight (§7 content, contributor-facing)
-- How you get paid: funded-program mechanic from a contributor's POV (simplified
-  extraction of §4)
+- How you get paid: the full funded-program allocation mechanic, moved here in full
+  from Doc 1's §4 (not a simplified extraction)
 
 ### 4. "Legal Risk Register" — living tracker
 Audience: counsel, board.

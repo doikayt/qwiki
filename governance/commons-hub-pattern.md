@@ -51,15 +51,13 @@ where we have to ask whether human beings even survive as a species to participa
 in whatever mode comes next. AI, paired with breakneck progress in robotics,
 automation, and the Web's role in democratizing knowledge, all point toward real
 material abundance. But AI also concentrates the means to capture that abundance in
-fewer hands. The inevitable mass job loss, social chaos,
-spiking concentration of wealth, and constant surveillance and
-repression are not even the worst of
-it. At the far end sits the possibility of an existential threat to the species
-that pushed technology to its current point. This makes building a worker- and
-human-friendly model of production all the more critical.
+fewer hands. Mass job loss, deeper concentration of wealth and power, and constant
+surveillance are not even the worst of the possible consequences. 
+At the far end sits the possibility of an
+existential threat to the species that pushed AI technology to its current point.
+That's exactly why building a human worker-friendly model of production is
+urgent, not optional.
 
-The full grounding for all of this lives in Appendix A; what
-follows here is the short version.
 
 ### Corporations as a governance technology, not a law of nature
 
@@ -105,15 +103,16 @@ concrete, and what AI changes about it — and what it doesn't.
 
 ## 1. The Commons Layer
 
-At the center of the pattern is a **Commons**: a body of collaboratively developed
+At the center of our proposed pattern is a **Commons**: a body of 
+collaboratively developed
 open source software (and the engineering practices, standards, and shared libraries
 around it). The Commons is not itself a legal entity — it's an artifact and a body
 of practice, functioning as an **engineering hub** where core contributors maintain
 shared infrastructure, standards, and foundational libraries. It has no bank
 account and moves no money itself: the Satellites and subsidiaries built around it
-are the actual financial entities, and compensating contributors for shared-stack
-work is something *they* do — via the DAO mechanic shown below — not something the
-Commons does on its own behalf.
+are the actual legal/financial entities. When money does need to move -- from 
+donors or to contributors that enhance the commons --  we rely 
+on the DAO mechanic shown below.
 
 Any number of legal entities can be organized *around* a single Commons. A
 Commons might be a shared application framework, a set of foundational
@@ -240,86 +239,21 @@ should not be conflated:
 
 ## 4. Worked Example: Funded Program Allocation Mechanic
 
-This is the concrete mechanic the allocation DAO implements. Note that every step here
-happens *after* the board has already decided to pursue and has secured the funding —
-the DAO has no role in that decision.
+At a high level: once a Satellite's board secures a funded program — a grant, an
+earned-revenue-funded initiative, or a board-allocated budget — contributors who opt
+in to work on it vote, via Coordinape/Snapshot, on how the released funds are split
+among individuals and pods. That vote produces an allocation instruction, not a
+payment: the board reviews it, a tax-intake gate (W-9/W-8BEN) must be cleared before
+any recipient is paid, and payments are tracked and reported (1099-NEC) as
+compensation for services rendered on that specific program.
 
-**Part 1 — funding award through the vote:**
-
-```mermaid
-flowchart TD
-    G[Funding source<br/>grant / sales / budget] -->|funds program| B[Satellite Board 501c3]
-    B -->|deposits funds| T[(Treasury<br/>Safe multisig)]
-    T --> M{Milestone certified?}
-    M -->|yes, tranche released| V
-
-    subgraph Voting[Voting layer]
-        V[Coordinape round<br/>peer allocation]
-        S[Snapshot<br/>optional ship / no-ship vote]
-        V --- S
-    end
-
-    V --> A[Allocation instruction]
-    S -.-> A
-```
-
-**Part 2 — the vote's output through payment:**
-
-```mermaid
-flowchart TD
-    A[Allocation instruction] --> BR[Board review / override]
-    BR --> G2{Tax intake on file?<br/>W-9 / W-8BEN}
-    G2 -->|no| H[Held until intake complete]
-    G2 -->|yes| P[Request Finance / Rise<br/>executes payment<br/>from Treasury]
-
-    P --> D[Individual developer]
-    P --> Pod[Pod]
-    Pod -->|internal split, pod decides| D2[Pod members]
-    P -.year-end, threshold crossed.-> N[1099-NEC issued]
-```
-
-Coordinape and Snapshot touch this pipeline only at the voting layer, and
-only lightly — both use a connected crypto wallet as a *signature/identity*
-mechanism, not as an on-chain computation. Snapshot votes are signed
-messages tallied off-chain (gasless); Coordinape's peer-allocation round is
-an ordinary web app. The genuine on-chain activity in this diagram is the
-treasury and payment layer (Safe multisig → Request Finance/Rise → developer
-wallet) — that was always going to be blockchain-based once the org chose to
-pay contributors in crypto, independent of the voting-tool choice.
-
-1. A Satellite's board pursues and secures a funded program — e.g., a $100,000 grant,
-   an earned-revenue-funded initiative, or a board-allocated budget — on terms the
-   board negotiated and remains accountable for.
-2. Community members who want to contribute work toward the funded program **opt in**
-   as contributors (no fixed roster; participation is self-selected by interest).
-3. Each participating contributor completes standard tax intake (e.g., a
-   [W-9](https://www.irs.gov/forms-pubs/about-form-w-9) for US persons,
-   [W-8BEN](https://www.irs.gov/forms-pubs/about-form-w-8-ben) for foreign
-   contributors) and registers a wallet address for
-   receiving funds (chain TBD — Bitcoin or Ethereum are the current candidates).
-   Intake must be complete *before* a contributor is eligible to receive any
-   disbursement — this is a gate, not a follow-up step.
-4. As the program hits its funded milestones, **active contributors vote** on how the
-   released tranche is apportioned among those who did the work.
-5. Votes can allocate a tranche either to an **individual contributor** or to a
-   **pod** (a development sub-group working a piece of the program).
-6. If a tranche is voted to a pod, the pod's own members then decide internally how to
-   divide that chunk — the DAO-level vote only decides the pod's allocation, not the
-   individual split within it.
-7. The vote's output is an **allocation instruction**, not a payment. It feeds a
-   disbursement pipeline that: confirms tax intake is on file for every recipient,
-   executes payment only after that check passes, records each payment as compensation
-   for services rendered on the specific funded program (not as a profit share or gift), tracks
-   cumulative payments per contributor per calendar year, and issues
-   [1099-NEC](https://www.irs.gov/forms-pubs/about-form-1099-nec) (or the
-   applicable equivalent) at year end for contributors who cross reporting thresholds.
-   The DAO machinery is meant to be built integrated with this disbursement/tax
-   pipeline from the start, not layered on top of it later.
-
-Outstanding legal/tax questions about this mechanic (DAO scope vs. fiduciary duty,
-compensation-vs-profit-sharing characterization, intake-as-gate, crypto valuation
-and withholding) are tracked in the [Legal Risk Register](legal-risk-register.md),
-not duplicated here.
+The full step-by-step mechanic — both pipeline diagrams, the opt-in and tax-intake
+gating detail, and the individual-vs-pod allocation rules — has moved to the
+[Contributor Guide](contributor-guide.md), written for the audience that actually
+needs this level of operational detail. Outstanding legal/tax questions about the
+mechanic (DAO scope vs. fiduciary duty, compensation-vs-profit-sharing
+characterization, intake-as-gate, crypto valuation and withholding) are tracked
+separately in the [Legal Risk Register](legal-risk-register.md).
 
 ## 5. Economic Benefit — Sequencing Across Mechanisms
 
