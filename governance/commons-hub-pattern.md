@@ -191,7 +191,7 @@ covers the Commons↔Satellite piece:
 ```mermaid
 flowchart TD
     D[Donors / grants] -->|donations & grants| S[Satellite<br/>501c3]
-    Cu[Customers] -->|earned revenue| F[For-profit subsidiary<br/>(optional)]
+    Cu[Customers] -->|earned revenue| F["For-profit subsidiary<br/>(optional)"]
     C[Commons<br/>see §1] -->|funding out| S
     S -->|revenue share| C
     S -->|capital down| F
@@ -231,11 +231,9 @@ should not be conflated:
   and the mechanism doesn't care where the money came from. This DAO does
   not set policy, does not decide what to build, and does not govern the
   organization. Its entire remit is: given a funded program the board has
-  already secured, and a defined pool of contributors who worked on it,
+  identified, and a defined pool of contributors to that program,
   determine what share of the disbursed funds each contributor or pod
-  receives. Other narrowly-scoped DAO-like mechanisms may eventually exist
-  for other specific purposes (to be defined later) — but priority-setting
-  is never one of them.
+  receives. 
 
 ## 4. Worked Example: Funded Program Allocation Mechanic
 
