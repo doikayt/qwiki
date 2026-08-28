@@ -140,7 +140,7 @@ The DAO does not set policy, does not decide what to build, and does not govern 
 organization. Its entire remit is: given a funded program 
 and a defined pool of contributors to that program,
 determine -- by equally weighted voting -- what share of the 
-disbursed funds each contributor or pod receives. The board has the ultimated 
+disbursed funds each contributor or pod receives. The board has the ultimate
 authority to approve (the typical case) or reject that proposal.
 
 The vote itself runs on off-chain tooling
@@ -166,15 +166,17 @@ distribute the proceeds of an already-secured funded program.
 *Token-based delegated authority* is tactical in scope and carries
 no profit-participation rights. 
 
+The founding steward holds all authority initially and grants it to developers
+as they deliver results and build trust. Critically, those developers can then grant authority
+further themselves  — so authority can keep spreading to
+newly-trusted developers without funneling through one person indefinitely.
+That delegation is only valid to someone already recognized as a trusted
+committer — i.e., someone who's already earned ordinary committer standing in
+the project (commit/review rights), independent of this token system. Reusing
+that existing standing as the eligibility check means there's no separate
+identity-verification process to design for this mechanism.
 
-
-A founding steward starts by holding all of this authority and grants it to
-developers who earn that trust; those developers can in turn grant authority
-further to anyone already recognized as a trusted committer in the
-ecosystem. Reusing that existing standing as the eligibility gate — rather
-than standing up a separate verification system just for token holders — is
-what lets influence scale past one person instead of bottlenecking through
-the founding steward. In practice this authority is held as a
+In practice this authority is held as a
 [blockchain](https://en.wikipedia.org/wiki/Blockchain)-based token (or
 equivalent [smart
 contract](https://en.wikipedia.org/wiki/Smart_contract) access-control
@@ -329,6 +331,16 @@ load-bearing for the pattern as a whole. See Appendix A.6, ["Why dispersion, not
 just adequate but
 better"](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem),
 for the full argument.
+
+The same dispersion shows up one level down, inside each Satellite's own
+governance. [Token-based delegated authority](#3-token-based-delegated-authority)
+is built so trust cascades outward — a developer who earns authority can
+grant it further to other trusted committers — rather than funneling every
+new grant through the founding steward personally. It's a small-scale version
+of the same no-single-point-of-failure logic, and the same
+coordination-without-a-center pattern Appendix A.5 calls
+[stigmergy](#a5-stigmergy-coordination-without-a-center): no one is directing
+traffic, yet trust still propagates.
 
 Cost structure and resilience aren't abstractions here — they're the concrete
 reasons a worker-friendly model of production doesn't have to stay a hopeful
