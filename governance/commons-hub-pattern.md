@@ -145,16 +145,19 @@ authority to approve (the typical case) or reject that proposal.
 
 The vote itself runs on off-chain tooling (Coordinape/Snapshot); the
 genuinely blockchain-based leg is the treasury and payout — funds move from a
-multisig treasury to each contributor's crypto wallet on-chain (chain TBD).
-See the [Contributor Guide](contributor-guide.md) for the full pipeline.
+[multisig](https://en.wikipedia.org/wiki/Multisignature) treasury to each
+contributor's crypto wallet
+[on-chain](https://en.wikipedia.org/wiki/Blockchain) (chain TBD). See the
+[Contributor Guide](contributor-guide.md) for the full pipeline.
 
 ## 3. Tactical Governance: Token-Based Voting Weight
 
 Along with the Board and the DAO, a third mechanism governs day-to-day
-operational direction — roadmap, priorities, review authority — across the
-nonprofit and its for-profit subsidiary alike: **tactical voting weight**, in
-effect a share of decision-making authority that scales with how much a
-contributor is trusted. It is distinct from both the Board (mission,
+technical leadership — setting the roadmap, prioritizing what gets worked
+on, and deciding who leads that work — across the nonprofit and its
+for-profit subsidiary alike: **tactical voting weight**, in effect a share of
+decision-making authority that scales with how much a contributor is
+trusted. It is distinct from both the Board (mission,
 priorities, and policy) and the funded-program-allocation DAO (which splits
 the proceeds of an already-secured funded program), and it carries no
 profit-participation rights: weight here is pure voice, never equity or cash.
