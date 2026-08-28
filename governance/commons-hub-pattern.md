@@ -108,11 +108,14 @@ account and moves no money itself. When money does need to move -- from
 donors or to contributors that enhance the commons --  we rely 
 on the DAO mechanic shown below.
 
-![Commons Layer diagram: Donors fund Satellites, Customers fund subsidiaries,
-Satellites and subsidiaries pay compensation expense into a Compensation
-Distribution DAO, Workers vote on allocation, the DAO issues an allocation
-instruction to the Board for review/override, the Board pays Workers, and
-Workers contribute code back to the Commons.](diagrams/commons-layer.png)
+<figure>
+<img src="diagrams/commons-layer.png" alt="Commons Layer fund-flow diagram">
+<figcaption>Donors fund Satellites and customers fund subsidiaries; both pay
+compensation expense into a Compensation Distribution DAO. Workers vote on
+allocation, the DAO issues an allocation instruction to the Board for
+review/override, the Board pays Workers, and Workers contribute code back to
+the Commons.</figcaption>
+</figure>
 
 
 Each **Satellite** is a [501(c)(3)](https://www.irs.gov/charities-non-profits/charitable-organizations/exemption-requirements-501c3-organizations)
@@ -155,29 +158,40 @@ See the [Contributor Guide](contributor-guide.md) for the full pipeline.
 
 ## 3. Tactical Governance: Token-Based Voting Weight
 
-A third mechanism, distinct from both the Board (mission, priorities, and policy)
-and the funded-program-allocation DAO (which splits the proceeds of an
-already-secured funded program), governs day-to-day technical direction —
-roadmap, priorities, review authority — across the nonprofit and its for-profit
-subsidiary alike. It carries no profit-participation rights: weight here is pure
-voice, never equity or cash.
+Along with the Board and the DAO, a third mechanism governs day-to-day
+operational direction — roadmap, priorities, review authority — across the
+nonprofit and its for-profit subsidiary alike: **tactical voting weight**, in
+effect a share of decision-making authority that scales with how much a
+contributor is trusted. It is distinct from both the Board (mission,
+priorities, and policy) and the funded-program-allocation DAO (which splits
+the proceeds of an already-secured funded program), and it carries no
+profit-participation rights: weight here is pure voice, never equity or cash.
+
+
 
 A founding steward starts by holding all tactical voting weight and grants it to
 developers who earn that trust; those developers can in turn grant weight further
-to any registered committer in the ecosystem, so influence scales past one person
-without requiring a separate identity system. In practice this weight is a
-blockchain-based token (or equivalent smart-contract access-control
+to anyone already recognized as a trusted committer in the ecosystem. Reusing
+that existing standing as the eligibility gate — rather than standing up a
+separate verification system just for token holders — is what lets influence
+scale past one person instead of bottlenecking through the founding steward.
+In practice this weight is a
+blockchain-based token (or equivalent [smart
+contract](https://en.wikipedia.org/wiki/Smart_contract) access-control
 mechanism) rather than a database record, so eligibility and
 non-transferability can be checked programmatically. Weight cannot be bought
 or sold — it is granted on trust, never transferable for payment — which is
-also the central reason this mechanism doesn't read as a security. Two constraints keep it
-from calcifying into permanent control: an individual's weight vests over time
-rather than landing as a lump sum, and it decays on inactivity rather than
-accumulating indefinitely.
+also the central reason this mechanism doesn't read as a security under the
+[Howey test](https://en.wikipedia.org/wiki/SEC_v._W._J._Howey_Co.): nothing
+is purchased, and there are no profit-participation or resale rights. Two
+constraints keep it from calcifying into permanent control: an individual's
+weight vests over time rather than landing as a lump sum, and it decays on
+inactivity rather than accumulating indefinitely.
 
 The full mechanic — committer eligibility, vesting and decay parameters,
-concentration caps, and the legal analysis — is being written up in the
-[Contributor Guide](contributor-guide.md).
+concentration caps, and the full securities-law analysis — is being written
+up in the [Contributor Guide](contributor-guide.md) and [Legal Risk
+Register](legal-risk-register.md), respectively.
 
 *(Proceeds distribution via the funded-program-allocation DAO — the mechanic
 formerly summarized in this section — will get its own detailed treatment in a
@@ -248,10 +262,10 @@ pushed AI technology to its current point.
 [Appendix A.8](#a8-ai-abundance-and-the-case-for-urgency) lays out the full
 argument.
 
-Assume, for the sake of argument, that we clear that bar. The next question is
+Assumeing that we clear that bar, the next question is
 whether the average working person ends up better off or worse under whatever
-comes next — and today's power structures, left to their own devices, tilt that
-outcome toward worse: the same concentration of compute, capital, and political
+comes next. Today's power structures, left to their own devices, tilt that
+outcome toward _way_ worse: the same concentration of compute, capital, and political
 leverage that creates the existential tail risk also determines who captures the
 day-to-day gains long before any of that plays out.
 
@@ -323,10 +337,6 @@ question this document opened with.
 
 ## Appendix A: Historical and Economic Grounding
 
-*This appendix is contained here deliberately, per the doc-split plan: it holds
-the historical/economic argument for why this pattern exists and why now, in one
-place, so "Why This, Why Now" and the other companion documents can link back to
-it rather than repeating it inline.*
 
 ### A.1 Why firms exist: Coase, the putting-out system, and what's changing now
 
@@ -357,7 +367,7 @@ Wikipedia</figcaption>
 
 Today's technologies — AI foremost among them, but also mature open source
 tooling, rentable cloud infrastructure, and ubiquitous internet-based
-coordination — don't erode all three of the 1769 reasons equally, and the
+coordination — don't erode all three of those 1769-era reasons equally, and the
 honest version of this argument has to say so line by line rather than just
 asserting "modern technology makes things cheap":
 
