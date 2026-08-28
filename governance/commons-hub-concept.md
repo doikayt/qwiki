@@ -204,29 +204,11 @@ system — see [§6](#6-community-trust-and-contributor-standing).
 
 ### The present moment: elite overproduction and AI-driven displacement
 
-<figure class="float">
-<img src="images/turchin.webp" alt="Peter Turchin">
-<figcaption>Peter Turchin, 2020. Photo: Peter Turchin, CC BY 4.0, via
-Wikimedia Commons.</figcaption>
-</figure>
-
-Peter Turchin's [structural-demographic
-theory](https://en.wikipedia.org/wiki/Structural-demographic_theory)
-identifies "elite overproduction" as a recurring precondition for social
-instability: when a society trains and credentials more aspirants for
-elite-track positions than it has positions to absorb them into, intra-elite
-competition intensifies, average outcomes for elite aspirants decline, and —
-critically — some fraction of those aspirants become "counter-elites,"
-turning their training and ambition toward organizing opposition to the
-existing order rather than joining it.[^2]
-
-The current U.S. software labor market is a live instance of this pattern: an
-education system that has spent two decades producing an increasing supply of
-highly credentialed software engineers, now colliding with AI-driven
-contraction of entry- and mid-level engineering hiring. A growing population of
-capable, credentialed, increasingly frustrated engineers — including recent
-graduates with advanced degrees — is finding the traditional elite-track path
-(a well-paid job at a major tech employer) narrowing or closing.
+The full argument — Peter Turchin's structural-demographic theory, "elite
+overproduction," and the current U.S. software labor market as a live instance
+of it — now lives in [Doc 1's
+§5](commons-hub-pattern.md#5-the-stakes-and-why-this-pattern-has-an-edge). This
+document picks up from there with the recruitment pitch below.
 
 ### The opportunity
 
@@ -245,8 +227,6 @@ replicable recruitment narrative for any future Satellite or Commons built on
 this pattern.
 
 [^1]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
-[^2]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
-    [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
 
 ---
 

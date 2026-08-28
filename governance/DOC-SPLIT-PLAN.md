@@ -26,12 +26,17 @@ Audience: Chris, future co-founders, counsel, serious adopters cloning the patte
   example, Benkler/commons-based peer production, stigmergy, the aircraft-carrier
   resilience argument. This appendix lives here, in Doc 1, not in Doc 2. Doc 2 and
   other docs reference it rather than repeating it inline.
+- **UPDATED (tweak from Chris):** the full elite-overproduction/Turchin argument
+  (structural-demographic theory plus the software-labor-market instance) now
+  lives in §5 itself, not in Doc 2 — abstract/academic grounding stays in Doc 1.
+  Doc 2 references it rather than repeating it inline.
 
 ### 2. "Why This, Why Now" — the argument / manifesto
 Audience: prospective contributors, funders, press.
 - Corporations as a governance technology, not a law of nature (short version;
   full economic grounding now lives in Doc 1's appendix, linked from here)
-- The present moment: elite overproduction and AI-driven displacement (Turchin)
+- The present moment: elite overproduction and AI-driven displacement (Turchin) —
+  full argument now lives in Doc 1's §5, linked from here
 - The opportunity (recruitment pitch)
 - Closing: pointer to the aircraft-carrier resilience argument in Doc 1's appendix
 

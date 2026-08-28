@@ -129,19 +129,22 @@ wholly-owned for-profit subsidiary,
 funded Firefox's development since 2005 — a two-decade precedent for exactly
 this structure.
 
+
+The 501(c)(3)'s **Board** of directors set the mission, priorities,  and policy 
+for each Satellite through ordinary nonprofit governance. 
+There is no [DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization)
+involved in setting priorities or policy. The board decides what to build,
+which funded programs to pursue (grants, earned-revenue-funded initiatives,
+or internally allocated budget), and what the organization's direction is,
+exactly as any nonprofit board would.
+
+
+
+
 ## 2. Governance Layer — Two Separate Mechanisms
 
 It's important to keep these two things distinct; they are not the same mechanism and
 should not be conflated:
-
-- **Organizational governance — the Board.** Mission, priorities, protocols, and
-  policy for each Satellite are set through ordinary nonprofit governance: the
-  501(c)(3)'s board of directors. **There is no
-  [DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization)
-  involved in setting priorities or policy.** The board decides what to build,
-  which funded programs to pursue (grants, earned-revenue-funded initiatives,
-  or internally allocated budget), and what the organization's direction is,
-  exactly as any nonprofit board would.
 
 - **Funded-program-allocation DAO — scoped narrowly, one mechanism among
   possibly several.** A separate, purpose-built DAO mechanism governs exactly
@@ -271,9 +274,30 @@ is free, open, and low-cost to adopt, a Satellite can move into that adjacent,
 better-funded market at a cost structure a for-profit incumbent can't match — it
 isn't competing on price with something built to extract margin from that market.
 
-Paired with the labor-market dynamic described in *"Why This, Why Now"* (once
-drafted) — a pool of skilled, mission-motivated contributors whose conventional
-career track has narrowed — this pattern has two complementary resources most
+### The labor-market half of the advantage: elite overproduction and AI-driven
+displacement
+
+Peter Turchin's [structural-demographic
+theory](https://en.wikipedia.org/wiki/Structural-demographic_theory)
+identifies "elite overproduction" as a recurring precondition for social
+instability: when a society trains and credentials more aspirants for
+elite-track positions than it has positions to absorb them into, intra-elite
+competition intensifies, average outcomes for elite aspirants decline, and —
+critically — some fraction of those aspirants become "counter-elites,"
+turning their training and ambition toward organizing opposition to the
+existing order rather than joining it.[^2]
+
+The current U.S. software labor market is a live instance of this pattern: an
+education system that has spent two decades producing an increasing supply of
+highly credentialed software engineers, now colliding with AI-driven
+contraction of entry- and mid-level engineering hiring. A growing population of
+capable, credentialed, increasingly frustrated engineers — including recent
+graduates with advanced degrees — is finding the traditional elite-track path
+(a well-paid job at a major tech employer) narrowing or closing.
+
+That population is not just a labor pool to hire from — it is a mobilizable
+base for a movement, in Turchin's counter-elite sense. Paired with the
+cost-advantage dynamic above, this pattern has two complementary resources most
 startups have to pay real money for: engaged users and committed labor.
 
 ### Resilience: why dispersion is a strength, not just a scaling property
@@ -527,6 +551,8 @@ within it, in Ostrom's sense of a community writing its own rules for how a
 shared resource's benefit gets distributed.
 
 [^1]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
+[^2]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
+    [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
 
 ### A.8 AI, abundance, and the case for urgency
 
