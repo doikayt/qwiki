@@ -62,7 +62,8 @@ flowchart TD
     P -.year-end, threshold crossed.-> N[1099-NEC issued]
 ```
 
-Coordinape and Snapshot touch this pipeline only at the voting layer, and
+[Coordinape](https://coordinape.com) and [Snapshot](https://snapshot.org)
+touch this pipeline only at the voting layer, and
 only lightly — both use a connected crypto wallet as a *signature/identity*
 mechanism, not as an on-chain computation. Snapshot votes are signed
 messages tallied off-chain (gasless); Coordinape's peer-allocation round is

@@ -143,44 +143,49 @@ determine -- by equally weighted voting -- what share of the
 disbursed funds each contributor or pod receives. The board has the ultimated 
 authority to approve (the typical case) or reject that proposal.
 
-The vote itself runs on off-chain tooling (Coordinape/Snapshot); the
-genuinely blockchain-based leg is the treasury and payout — funds move from a
+The vote itself runs on off-chain tooling
+([Coordinape](https://coordinape.com)/[Snapshot](https://snapshot.org)); the
+genuinely [blockchain](https://en.wikipedia.org/wiki/Blockchain)-based leg is
+the treasury and payout — funds move from a
 [multisig](https://en.wikipedia.org/wiki/Multisignature) treasury to each
 contributor's crypto wallet
 [on-chain](https://en.wikipedia.org/wiki/Blockchain) (chain TBD). See the
 [Contributor Guide](contributor-guide.md) for the full pipeline.
 
-## 3. Tactical Governance: Token-Based Voting Weight
+## 3. Token-Based Delegated Authority
 
-Along with the Board and the DAO, a third mechanism governs day-to-day
-technical leadership — setting the roadmap, prioritizing what gets worked
-on, and deciding who leads that work — across the nonprofit and its
-for-profit subsidiary alike: **tactical voting weight**, in effect a share of
-decision-making authority that scales with how much a contributor is
-trusted. It is distinct from both the Board (mission,
-priorities, and policy) and the funded-program-allocation DAO (which splits
-the proceeds of an already-secured funded program), and it carries no
-profit-participation rights: weight here is pure voice, never equity or cash.
+Along with the Board and the DAO, a third mechanism governs _day-to-day_
+operations — product roadmap construction, build-vs.-buy decisions, staffing
+assignments, and similar matters: **token-based delegated authority**.
+
+This authority applies across the nonprofit and its for-profit subsidiary
+alike. It is, in effect, a share of decision-making authority that scales
+with how much a contributor is trusted, and it is distinct from both  the Board and the 
+DAO. The former governs mission, long term priorities, and policy. The latter exists to 
+distribute the proceeds of an already-secured funded program. 
+*Token-based delegated authority* is tactical in scope and carries
+no profit-participation rights. 
 
 
 
-A founding steward starts by holding all tactical voting weight and grants it to
-developers who earn that trust; those developers can in turn grant weight further
-to anyone already recognized as a trusted committer in the ecosystem. Reusing
-that existing standing as the eligibility gate — rather than standing up a
-separate verification system just for token holders — is what lets influence
-scale past one person instead of bottlenecking through the founding steward.
-In practice this weight is a
-blockchain-based token (or equivalent [smart
+A founding steward starts by holding all of this authority and grants it to
+developers who earn that trust; those developers can in turn grant authority
+further to anyone already recognized as a trusted committer in the
+ecosystem. Reusing that existing standing as the eligibility gate — rather
+than standing up a separate verification system just for token holders — is
+what lets influence scale past one person instead of bottlenecking through
+the founding steward. In practice this authority is held as a
+[blockchain](https://en.wikipedia.org/wiki/Blockchain)-based token (or
+equivalent [smart
 contract](https://en.wikipedia.org/wiki/Smart_contract) access-control
 mechanism) rather than a database record, so eligibility and
-non-transferability can be checked programmatically. Weight cannot be bought
-or sold — it is granted on trust, never transferable for payment — which is
+non-transferability can be checked programmatically. It cannot be bought or
+sold — it is granted on trust, never transferable for payment — which is
 also the central reason this mechanism doesn't read as a security under the
 [Howey test](https://en.wikipedia.org/wiki/SEC_v._W._J._Howey_Co.): nothing
 is purchased, and there are no profit-participation or resale rights. Two
 constraints keep it from calcifying into permanent control: an individual's
-weight vests over time rather than landing as a lump sum, and it decays on
+share vests over time rather than landing as a lump sum, and it decays on
 inactivity rather than accumulating indefinitely.
 
 The full mechanic — committer eligibility, vesting and decay parameters,
@@ -201,12 +206,12 @@ side once, rather than only encountering each in its own document:
 | Mechanism | Scope | Duration | Economic value | Who's eligible |
 |---|---|---|---|---|
 | DAO (§2 above) | Per funded program | Episodic — ends when the program does | Cash, paid for services rendered | Self-selected opt-in contributors |
-| Tactical tokens (see the *Contributor Guide*) | Ongoing | Decays with inactivity | None — pure voice | Registered committers who've earned trust |
+| Token-based delegated authority (see the *Contributor Guide*) | Ongoing | Decays with inactivity | None — pure voice | Registered committers who've earned trust |
 | ESOP | Ongoing | Vests over years | Real equity | Legally must be broad-based — ~all full-time employees |
 
-A fourth candidate — an ESOP for the for-profit subsidiary — belongs on
-this table conceptually but not yet operationally. It only becomes worth
-evaluating once two things are both true, not on a calendar date:
+The ESOP row above is conceptual for now, not yet operational: it only
+becomes worth evaluating once two things are both true, not on a calendar
+date:
 
 1. **There's real enterprise value to distribute.** An ESOP requires an
    independent appraisal (no public market for the stock); with negligible
@@ -230,14 +235,14 @@ well before it's actually needed.
 
 **The resulting ladder:**
 
-- **Now:** DAO for project-based cash payouts, tactical tokens for
-  day-to-day voice. No ESOP — no enterprise value or stable cash flow yet
-  to justify one, and no broad-based W-2 team to make "broad-based" mean
-  anything.
+- **Now:** DAO for project-based cash payouts, token-based delegated
+  authority for day-to-day voice. No ESOP — no enterprise value or stable
+  cash flow yet to justify one, and no broad-based W-2 team to make
+  "broad-based" mean anything.
 - **Once the subsidiary has sustained commercial revenue and real
   employees** (not just grant-funded opt-in contributors): ESOP feasibility
-  becomes worth a real evaluation, running alongside — not replacing —
-  the DAO and tactical tokens, each still doing its own job.
+  becomes worth a real evaluation, running alongside — not replacing — the
+  DAO and token-based delegated authority, each still doing its own job.
 - **If a founder-exit rollover is ever a goal:** C-corp status needs to
   already be in place before that transaction, which means the entity-type
   decision should account for this option early, not be revisited under
@@ -514,7 +519,7 @@ reinforces or ignores it, and the colony converges on good paths without any
 ant ever computing one. It's a live concept in swarm robotics and multi-agent
 AI system design today, not just biology — and this pattern already specifies
 the pheromone trail: the shared Commons itself, and the committer-standing
-record and tactical voting weight described in the
+record and token-based delegated authority described in the
 [Contributor Guide](contributor-guide.md), are the shared environment that
 lets independent contributors coordinate toward a common goal without anyone
 directing traffic.
