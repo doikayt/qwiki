@@ -1,6 +1,6 @@
 # The Commons-Hub Pattern
 
-*A reference architecture for a replicable model for organizing collaboratively-developed
+*A replicable model for organizing collaboratively-developed
 open source software around nonprofit and for-profit satellites*
 
 **Status:** Early concept draft — not reviewed by counsel. 
