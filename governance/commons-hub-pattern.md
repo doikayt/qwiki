@@ -67,7 +67,7 @@ the industrial corporation, the modern platform company. Each is a governance
 structure for collective production and economic benefit, adopted — and later
 challenged — because the previous answer stopped sufficiently serving whoever
 held the power to change it. That has usually meant the elites of the era, not
-a broad public: the wave of English enclosure that began around the mid-1700s
+a broad public. The wave of English enclosure that began around the mid-1700s
 was driven by landowners who benefited from privatizing common land, not by
 commoners demanding it; joint-stock charters emerged to mobilize capital
 for merchants and investors who needed a legal vehicle for it, not from popular
@@ -79,9 +79,10 @@ attempts to answer them for a specific mode of production: collaboratively
 developed [open source software](https://en.wikipedia.org/wiki/Open-source_software)
 (OSS). It's the _open_ in OSS — open in who may profit from it, open in who
 may contribute to it, open in who steers its direction — that makes it a
-round peg for corporate law's square hole: the corporate form defaults to
+round peg for corporate law's square hole. The corporate form defaults to
 a single, exclusive top-down structure built for
-concentrating both ownership and benefit, not the diffuse, non-exclusive shape
+concentrating both decision-making authority and economic benefit, 
+not the diffuse, non-exclusive shape
 open production actually takes.
 
 These questions of who governs production and who benefits from it aren't just
@@ -90,11 +91,10 @@ won out over more distributed alternatives. [Ronald Coase's 1937
 answer](https://en.wikipedia.org/wiki/The_Nature_of_the_Firm), which won him
 the 1991 Nobel in Economics, was transaction costs: for most of industrial
 history, hierarchical management was cheaper than coordinating _distributed_
-production through the market. That cost calculus is exactly what AI is now
-shifting.
-[Appendix A.1](#a1-why-firms-exist-coase-the-putting-out-system-and-what-ai-changes)
-walks through the textile-industry case that makes the original argument
-concrete, and what AI changes about it — and what it doesn't.
+production through the market. That cost calculus is exactly what technologies
+such as AI are shifting. [Appendix
+A.1](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now)
+walks through the textile-industry case.
 
 ## 1. The Commons Layer and Its Satellites
 
@@ -116,12 +116,11 @@ Workers contribute code back to the Commons.](diagrams/commons-layer.png)
 
 
 Each **Satellite** is a [501(c)(3)](https://www.irs.gov/charities-non-profits/charitable-organizations/exemption-requirements-501c3-organizations)
-organized around some program of work that draws on
+organized around some program of work that extends or improves 
 the Commons. A Satellite may, as its revenue-generating programs mature, spin those
 programs out into a **wholly-owned for-profit subsidiary**: the nonprofit retains
 mission/governance control, while the subsidiary carries the operational/
 revenue-generating work.
-
 This is the same basic legal shape used by the
 [Mozilla Foundation](https://en.wikipedia.org/wiki/Mozilla_Foundation), whose
 wholly-owned for-profit subsidiary,
@@ -134,49 +133,55 @@ The 501(c)(3)'s **Board** of directors set the mission, priorities,  and policy
 for each Satellite through ordinary nonprofit governance. 
 There is no [DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization)
 involved in setting priorities or policy. The board decides what to build,
-which funded programs to pursue (grants, earned-revenue-funded initiatives,
-or internally allocated budget), and what the organization's direction is,
+how to fund those  programs, and what the organization's direction is -- 
 exactly as any nonprofit board would.
 
+The **DAO** mechanism governs exactly
+one thing: how the proceeds of a funded program — a
+grant, a commercial-revenue-funded initiative, or a board-allocated
+budget — are split among the individual developers (and pods) who
+contribute to the realization of that program. 
+The DAO does not set policy, does not decide what to build, and does not govern the
+organization. Its entire remit is: given a funded program 
+and a defined pool of contributors to that program,
+determine -- by equally weighted voting -- what share of the 
+disbursed funds each contributor or pod receives. The board has the ultimated 
+authority to approve (the typical case) or reject that proposal.
 
+The vote itself runs on off-chain tooling (Coordinape/Snapshot); the
+genuinely blockchain-based leg is the treasury and payout — funds move from a
+multisig treasury to each contributor's crypto wallet on-chain (chain TBD).
+See the [Contributor Guide](contributor-guide.md) for the full pipeline.
 
+## 3. Tactical Governance: Token-Based Voting Weight
 
-## 2. Governance Layer — Two Separate Mechanisms
+A third mechanism, distinct from both the Board (mission, priorities, and policy)
+and the funded-program-allocation DAO (which splits the proceeds of an
+already-secured funded program), governs day-to-day technical direction —
+roadmap, priorities, review authority — across the nonprofit and its for-profit
+subsidiary alike. It carries no profit-participation rights: weight here is pure
+voice, never equity or cash.
 
-It's important to keep these two things distinct; they are not the same mechanism and
-should not be conflated:
+A founding steward starts by holding all tactical voting weight and grants it to
+developers who earn that trust; those developers can in turn grant weight further
+to any registered committer in the ecosystem, so influence scales past one person
+without requiring a separate identity system. In practice this weight is a
+blockchain-based token (or equivalent smart-contract access-control
+mechanism) rather than a database record, so eligibility and
+non-transferability can be checked programmatically. Weight cannot be bought
+or sold — it is granted on trust, never transferable for payment — which is
+also the central reason this mechanism doesn't read as a security. Two constraints keep it
+from calcifying into permanent control: an individual's weight vests over time
+rather than landing as a lump sum, and it decays on inactivity rather than
+accumulating indefinitely.
 
-- **Funded-program-allocation DAO — scoped narrowly, one mechanism among
-  possibly several.** A separate, purpose-built DAO mechanism governs exactly
-  one thing: how the proceeds of an *already-secured* funded program — a
-  grant, a commercial-revenue-funded initiative, or a board-allocated
-  budget — are split among the individual developers (and pods) who
-  contributed to earning it. Deliberately not scoped to grants alone: this
-  organization does not intend to depend solely on grant funding long-term,
-  and the mechanism doesn't care where the money came from. This DAO does
-  not set policy, does not decide what to build, and does not govern the
-  organization. Its entire remit is: given a funded program the board has
-  identified, and a defined pool of contributors to that program,
-  determine what share of the disbursed funds each contributor or pod
-  receives. 
+The full mechanic — committer eligibility, vesting and decay parameters,
+concentration caps, and the legal analysis — is being written up in the
+[Contributor Guide](contributor-guide.md).
 
-## 3. Worked Example: Funded Program Allocation Mechanic
-
-At a high level: once a Satellite's board secures a funded program — a grant, an
-earned-revenue-funded initiative, or a board-allocated budget — contributors who opt
-in to work on it vote, via Coordinape/Snapshot, on how the released funds are split
-among individuals and pods. That vote produces an allocation instruction, not a
-payment: the board reviews it, a tax-intake gate (W-9/W-8BEN) must be cleared before
-any recipient is paid, and payments are tracked and reported (1099-NEC) as
-compensation for services rendered on that specific program.
-
-The full step-by-step mechanic — both pipeline diagrams, the opt-in and tax-intake
-gating detail, and the individual-vs-pod allocation rules — has moved to the
-[Contributor Guide](contributor-guide.md), written for the audience that actually
-needs this level of operational detail. Outstanding legal/tax questions about the
-mechanic (DAO scope vs. fiduciary duty, compensation-vs-profit-sharing
-characterization, intake-as-gate, crypto valuation and withholding) are tracked
-separately in the [Legal Risk Register](legal-risk-register.md).
+*(Proceeds distribution via the funded-program-allocation DAO — the mechanic
+formerly summarized in this section — will get its own detailed treatment in a
+later document; a pointer back to it belongs here once that's written.)*
 
 ## 4. Economic Benefit — Sequencing Across Mechanisms
 
@@ -186,7 +191,7 @@ side once, rather than only encountering each in its own document:
 
 | Mechanism | Scope | Duration | Economic value | Who's eligible |
 |---|---|---|---|---|
-| DAO (§2–3 above) | Per funded program | Episodic — ends when the program does | Cash, paid for services rendered | Self-selected opt-in contributors |
+| DAO (§2 above) | Per funded program | Episodic — ends when the program does | Cash, paid for services rendered | Self-selected opt-in contributors |
 | Tactical tokens (see the *Contributor Guide*) | Ongoing | Decays with inactivity | None — pure voice | Registered committers who've earned trust |
 | ESOP | Ongoing | Vests over years | Real equity | Legally must be broad-based — ~all full-time employees |
 
@@ -323,7 +328,7 @@ the historical/economic argument for why this pattern exists and why now, in one
 place, so "Why This, Why Now" and the other companion documents can link back to
 it rather than repeating it inline.*
 
-### A.1 Why firms exist: Coase, the putting-out system, and what AI changes
+### A.1 Why firms exist: Coase, the putting-out system, and what's changing now
 
 Building on the Introduction's transaction-cost account: the clearest
 illustration is textile production just before the modern
@@ -343,17 +348,18 @@ the only way to use the new capital equipment at all.
 <figure class="float">
 <img src="images/wheel-water.jpeg" width="220"
      alt="Spinning wheel alongside Arkwright's water frame">
-<figcaption>A hand spinning wheel (left) beside Arkwright's water frame (right) —
-the putting-out system's tool next to the machine that replaced it. Source:
-Wikipedia — exact page and license requires confirmation before publication.</figcaption>
+<figcaption>Spinning wheel alongside Arkwright's water frame / Source:
+Wikipedia</figcaption>
 </figure>
 
 > The corporate form didn't cause the factory system — the machinery did, and
 > the corporation is the ownership structure that machinery required.
 
-AI doesn't erode all three of the 1769 reasons equally, and the honest version
-of this argument has to say so line by line rather than just asserting "AI
-makes things cheap":
+Today's technologies — AI foremost among them, but also mature open source
+tooling, rentable cloud infrastructure, and ubiquitous internet-based
+coordination — don't erode all three of the 1769 reasons equally, and the
+honest version of this argument has to say so line by line rather than just
+asserting "modern technology makes things cheap":
 
 - **Observability** — the strongest point of the parallel. AI-assisted code
   review, automated testing, and the trust/vetting mechanisms described in the
@@ -362,10 +368,10 @@ makes things cheap":
   under one roof.
 - **Capital-centralization — this one inverts, rather than just weakening.**
   In 1769 the machinery forced centralization; a spinner could never own a
-  water wheel. Today the equivalent capital — compute, AI models — is rentable
-  by the hour through cloud APIs. A dispersed contributor can access
-  industrial-grade tooling *without* being inside a hierarchical firm that
-  owns the capital equipment.
+  water wheel. Today the equivalent capital — compute, AI models, and the
+  cloud infrastructure underneath them — is rentable by the hour. A dispersed
+  contributor can access industrial-grade tooling *without* being inside a
+  hierarchical firm that owns the capital equipment.
 - **Scheduling/coordination** — largely already solved by tooling that
   predates this document (version control, CI/CD, issue trackers), with AI
   plausibly reducing the remaining friction further.
@@ -376,16 +382,16 @@ makes things cheap":
   problem, it grows it — this is the
   [XZ Utils backdoor](https://www.akamai.com/blog/security-research/critical-linux-backdoor-xz-utils-discovered-what-to-know)
   risk, restated as economic history rather than a security anecdote.
-  **AI-driven abundance of code doesn't reduce the need for the trust layer
-  described in the Contributor Guide — it increases it.**
+  **Technology-driven abundance of code doesn't reduce the need for the trust
+  layer described in the Contributor Guide — it increases it.**
 
 One more honest qualifier, worth stating plainly rather than leaving implicit:
 "cheap" here means cheap in dollars and labor-hours, not cheap in resource
-terms. AI compute carries real energy, water, and embodied-carbon costs. An
-organization whose values already lean toward social and economic justice
-shouldn't present AI-driven abundance as costless — that would sit
-inconsistently with the rest of this document's posture, which flags rather
-than asserts wherever a claim is uncertain.
+terms. AI compute in particular carries real energy, water, and
+embodied-carbon costs. An organization whose values already lean toward
+social and economic justice shouldn't present this abundance as costless —
+that would sit inconsistently with the rest of this document's posture, which
+flags rather than asserts wherever a claim is uncertain.
 
 ### A.2 What Coase's account leaves out: power, and Marx's answer to it
 

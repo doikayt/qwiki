@@ -4,9 +4,11 @@
 (once drafted) how standing and trust are earned and lost.*
 
 **Status:** Stub. Created by moving the Worked Example section out of
-[`commons-hub-pattern.md`](commons-hub-pattern.md#3-worked-example-funded-program-allocation-mechanic);
-the rest of this guide is not yet drafted. Not reviewed by counsel — nothing here
-should be treated as a legal or tax conclusion.
+[`commons-hub-pattern.md`](commons-hub-pattern.md); that section has since been
+dropped from Doc 1 pending a dedicated later document on proceeds distribution via
+the DAO, which this guide's mechanic below will eventually link back to. The rest
+of this guide is not yet drafted. Not reviewed by counsel — nothing here should be
+treated as a legal or tax conclusion.
 
 This is one of four companion documents split out of a single original draft (see
 [`DOC-SPLIT-PLAN.md`](DOC-SPLIT-PLAN.md) for the rationale). See

@@ -18,8 +18,14 @@ Audience: Chris, future co-founders, counsel, serious adopters cloning the patte
 - Core Idea
 - The Satellite Layer
 - Governance Layer (board vs. funded-program-allocation DAO)
-- Worked Example: Funded Program Allocation Mechanic — short summary + pointer only;
-  full mechanic lives in Doc 3
+- **UPDATED (tweak from Chris):** the Worked Example / Funded Program Allocation
+  Mechanic section (proceeds distribution via the DAO) is dropped from Doc 1 for
+  now — no summary, no pointer. It gets its own detailed treatment in a later
+  document; Doc 1 comes back and adds the pointer once that document exists.
+- **UPDATED (tweak from Chris):** in that section's place, Doc 1 now carries a
+  high-level, non-technical description of the token-based tactical-governance
+  model (§7 content in the original monolith) — what it is and why it's shaped
+  the way it is, not the full mechanic. The full mechanic stays in Doc 3.
 - Economic Benefit Sequencing (ESOP maturity ladder)
 - **NEW (tweak from Chris):** a contained appendix holding the historical/economic
   grounding — Coase transaction-cost theory, the putting-out-system/textile
