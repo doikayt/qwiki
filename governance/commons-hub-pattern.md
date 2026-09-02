@@ -103,8 +103,6 @@ wrong here, the deeper question isn't just what's efficient — it's who
 holds the power to set the rules in the first place. That's the question a
 dialectical-materialist (Marxist) reading of the same shift asks next.
 
-
-
 ### What Forces Favor Eventual Dissolution of Corporate Model -- Marxist View
 
 Coase's framework answers "why hierarchy, given the technology and the cost of
@@ -358,7 +356,7 @@ None of that is inevitable, though — and this is where we close on a hopeful
 note. Two structural properties of this pattern work directly against that
 default trajectory.
 
-### Why this pattern has a cost advantage a for-profit competitor can't match
+### Why this pattern has a cost advantage that a for-profit competitor can't match
 
 Nonprofit and grassroots organizations without much money are a real market with a
 real, recurring need — CRM/outreach tooling, in Doikayt's own case — that most
@@ -378,8 +376,7 @@ is free, open, and low-cost to adopt, a Satellite can move into that adjacent,
 better-funded market at a cost structure a for-profit incumbent can't match — it
 isn't competing on price with something built to extract margin from that market.
 
-### The labor-market half of the advantage: elite overproduction and AI-driven
-displacement
+### The labor-market half of the advantage: elite overproduction and AI-driven displacement
 
 Peter Turchin's [structural-demographic
 theory](https://en.wikipedia.org/wiki/Structural-demographic_theory)
