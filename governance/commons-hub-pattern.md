@@ -68,8 +68,11 @@ concentrating both decision-making authority and economic benefit,
 not the diffuse, non-exclusive shape
 open production actually takes.
 
-Neoclassical economics gives us an important — but incomplete — answer to only
-the first of those two questions. In his 1937 paper [*The Nature of the
+Neoclassical economics gives a clean answer to the first of those two
+questions — governance — and simply assumes an answer to the second rather
+than deriving one: profit flows to the residual claimant, the capital
+owner, as a background feature of the property-rights structure already in
+place. In his 1937 paper [*The Nature of the
 Firm*](https://en.wikipedia.org/wiki/The_Nature_of_the_Firm), Ronald Coase —
 who later won the 1991 Nobel in Economics substantially on its strength —
 asked why production gets organized inside firms at all, rather than
@@ -82,12 +85,14 @@ A.1](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now)
 walks through the textile-industry case where it first played out, and what's
 changing about it today.
 
-What Coase's account doesn't do is answer our *second* question: who governs
-production once it's inside the firm, who benefits from the resulting
-surplus, and why those particular people hold that power. Those are
-questions about power and class relations that transaction-cost economics
-takes as a given backdrop rather than something to explain — we pick them up
-directly in the Marxist reading in [Appendix
+What Coase's account — and neoclassical economics more generally — doesn't
+ask is why that property-rights structure holds in the first place: why
+capital, rather than labor, sits in the residual-claimant seat, and why
+those particular people hold the power to set the rules of governance and
+distribution at all. That's a question about power and class relations
+that transaction-cost economics takes as a given backdrop rather than
+something to explain — we pick it up directly in the Marxist reading in
+[Appendix
 A.2](#a2-what-coases-account-leaves-out-power-and-marxs-answer-to-it).
 
 ## 1. The Commons Layer and Its Satellites
