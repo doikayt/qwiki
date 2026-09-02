@@ -29,12 +29,14 @@ doesn't: who holds the _power_ to set the rules of governance and distribution.
 We then examine how the increasing sophistication and reach of AI make any
 confident forecast of the next dominant mode of production impossible — to the
 point where we have to ask whether human beings can even survive as a species to
-participate in whatever mode comes next. Assuming we do, the next question is
+participate in whatever model comes next. Assuming we do, the next question is
 whether the average working person ends up better off or worse — and while
 today's power structures tilt the scales toward worse, we close on a hopeful
-note: the same forces driving that risk also open real room for a
-worker-friendly model of production to displace late-stage disaster capitalism,
-not just survive alongside it.
+note: the same forces driving that outcome also open opportunities for 
+alternative worker-friendly legal/financial/ownership structures to displace
+the top-down corporate form that underpins late-stage disaster capitalism.
+ <<note: one force we should definitely mention is the Peter Turchin elites idea>>
+
 
 ## Corporations as a governance technology, not a law of nature
 
@@ -264,11 +266,11 @@ pushed AI technology to its current point.
 [Appendix A.8](#a8-ai-abundance-and-the-case-for-urgency) lays out the full
 argument.
 
-Assumeing that we clear that bar, the next question is
+Assuming that we clear that bar, the next question is
 whether the average working person ends up better off or worse under whatever
 comes next. Today's power structures, left to their own devices, tilt that
 outcome toward _way_ worse: the same concentration of compute, capital, and political
-leverage that creates the existential tail risk also determines who captures the
+leverage that creates that threat also determines who captures the
 day-to-day gains long before any of that plays out.
 
 None of that is inevitable, though — and this is where we close on a hopeful
