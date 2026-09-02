@@ -68,6 +68,9 @@ concentrating both decision-making authority and economic benefit,
 not the diffuse, non-exclusive shape
 open production actually takes.
 
+
+### What Factors Drove Emergence of Corporate Model -- Neoclassical View
+
 Neoclassical economics gives a clean answer to the first of those two
 questions — governance — and simply assumes an answer to the second rather
 than deriving one: profit flows to the residual claimant, the capital
@@ -85,15 +88,77 @@ A.1](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now)
 walks through the textile-industry case where it first played out, and what's
 changing about it today.
 
-What Coase's account — and neoclassical economics more generally — doesn't
-ask is why that property-rights structure holds in the first place: why
-capital, rather than labor, sits in the residual-claimant seat, and why
-those particular people hold the power to set the rules of governance and
-distribution at all. That's a question about power and class relations
-that transaction-cost economics takes as a given backdrop rather than
-something to explain — we pick it up directly in the Marxist reading in
-[Appendix
-A.2](#a2-what-coases-account-leaves-out-power-and-marxs-answer-to-it).
+Garrett Hardin's later ["tragedy of the
+commons"](https://en.wikipedia.org/wiki/Tragedy_of_the_commons) argument
+treated unowned shared resources as inherently doomed to overexploitation —
+but Elinor Ostrom's empirical research (which won her the [2009 Nobel
+Memorial Prize in Economic
+Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Sciences))
+overturned that claim, documenting hundreds of real cases where communities
+successfully self-governed shared resources through their own institutional
+rules, without requiring either privatization or centralized state control.[^1]
+
+If neoclassical-style reasoning gets even its own efficiency predictions
+wrong here, the deeper question isn't just what's efficient — it's who
+holds the power to set the rules in the first place. That's the question a
+dialectical-materialist (Marxist) reading of the same shift asks next.
+
+
+
+### What Forces Favor Eventual Dissolution of Corporate Model -- Marxist View
+
+Coase's framework answers "why hierarchy, given the technology and the cost of
+coordination" — but it treats who already owns and controls the
+infrastructure of production — the water wheel, the factory floor, today's
+compute — as a fixed backdrop, not something itself worth explaining. It
+doesn't ask who got to own the water wheel, who got to write the terms
+spinners worked under once centralized, or why "efficiency" so often turns
+out to have been decided in advance by whoever already held the leverage to
+decide it. The issue
+of who holds power in a relationship, and how they choose to exercise it, is
+not a footnote to human production relationships — it is close to the most
+fundamental fact about them. An explanation of why firms exist that doesn't
+ask that question has a real blind spot, not just an incomplete one.
+
+This document already makes a version of that argument once, without naming it
+as such: the Introduction's account of enclosure is exactly this critique in
+miniature. The shift from common land to private landholding wasn't a response
+to commoners demanding more efficient land use — it was landowners with the
+power to rewrite the rules doing so, in their own interest, and calling the
+result an improvement. Coase's transaction-cost story and the "efficiency"
+framing around it can be true as far as it goes and still be the story told
+afterward by whoever won.
+
+Marx's own answer to the same question isn't merely "the powerful decide" as a
+general cynicism — he has a specific mechanism, and it's a genuinely useful lens
+for the current moment, not just a historical curiosity. His "Fragment on
+Machines," in the [*Grundrisse*](https://www.marxists.org/archive/marx/works/1857/grundrisse/ch13.htm)
+notebooks (1857–58), predicted a point at which automated, machine-embodied
+social knowledge — what he called the **general intellect** — becomes the
+primary productive force directly, at which point value grounded in direct,
+individually-measured labor time starts to break down as the actual basis of
+production. Software built substantially by AI, trained on the accumulated,
+freely-given knowledge-work of millions of people, and then made freely
+reproducible at near-zero marginal cost, is about as literal an instance of
+"general intellect becoming a direct productive force" as has existed since
+Marx wrote the phrase. This is also the passage the later Italian *operaisti* —
+[Antonio Negri](https://en.wikipedia.org/wiki/Antonio_Negri),
+[Carlo Vercellone](https://en.wikipedia.org/wiki/Carlo_Vercellone), and
+[Maurizio Lazzarato](https://en.wikipedia.org/wiki/Maurizio_Lazzarato) — built
+[cognitive capitalism](https://en.wikipedia.org/wiki/Cognitive_capitalism) and
+[immaterial labor](https://en.wikipedia.org/wiki/Immaterial_labour) theory on:
+once value comes from socially-distributed, networked cognitive labor rather
+than labor time inside one factory under one owner's direct supervision,
+private appropriation of that value becomes increasingly awkward to justify, or
+even to mechanically sustain.
+
+Read this way, Coase and Marx aren't answering different questions so much as
+describing the same mechanism from two different standpoints: Coase describes
+it from inside the system, as a transaction-cost optimization; Marx describes
+it from the standpoint of the system's eventual supersession, as a contradiction
+between how value is actually produced (socially, collaboratively) and how it's
+still legally appropriated (privately, by an owner). Both are looking at the
+same shift in where productive capability actually lives.
 
 ## 1. The Commons Layer and Its Satellites
 
@@ -158,6 +223,17 @@ the treasury and payout — funds move from a
 contributor's crypto wallet
 [on-chain](https://en.wikipedia.org/wiki/Blockchain) (chain TBD). See the
 [Contributor Guide](contributor-guide.md) for the full pipeline.
+
+This initiative is, in effect, a proposal to apply Ostrom-style commons
+governance to a *digital* commons — open source software — rather than to land,
+water, or fisheries: a body of collectively produced software governed by the
+people who build it, with the Commons-Hub structure
+([§1](#1-the-commons-layer-and-its-satellites)) as the specific institutional design, and the
+funded-program-allocation
+[DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization)
+([§2–3](#2-governance-layer--two-separate-mechanisms)) as one concrete rule
+within it, in Ostrom's sense of a community writing its own rules for how a
+shared resource's benefit gets distributed.
 
 ## 3. Token-Based Delegated Authority
 
@@ -427,60 +503,9 @@ things cheap":
 
 ------   Need lots of edits on the remaining content.. pls skip if you are reviewing ---
 
-### A.2 What Coase's account leaves out: power, and Marx's answer to it
-
-Coase's framework answers "why hierarchy, given the technology and the cost of
-coordination" — but it treats who already owns and controls the
-infrastructure of production — the water wheel, the factory floor, today's
-compute — as a fixed backdrop, not something itself worth explaining. It
-doesn't ask who got to own the water wheel, who got to write the terms
-spinners worked under once centralized, or why "efficiency" so often turns
-out to have been decided in advance by whoever already held the leverage to
-decide it. The issue
-of who holds power in a relationship, and how they choose to exercise it, is
-not a footnote to human production relationships — it is close to the most
-fundamental fact about them. An explanation of why firms exist that doesn't
-ask that question has a real blind spot, not just an incomplete one.
-
-This document already makes a version of that argument once, without naming it
-as such: the Introduction's account of enclosure is exactly this critique in
-miniature. The shift from common land to private landholding wasn't a response
-to commoners demanding more efficient land use — it was landowners with the
-power to rewrite the rules doing so, in their own interest, and calling the
-result an improvement. Coase's transaction-cost story and the "efficiency"
-framing around it can be true as far as it goes and still be the story told
-afterward by whoever won.
-
-Marx's own answer to the same question isn't merely "the powerful decide" as a
-general cynicism — he has a specific mechanism, and it's a genuinely useful lens
-for the current moment, not just a historical curiosity. His "Fragment on
-Machines," in the [*Grundrisse*](https://www.marxists.org/archive/marx/works/1857/grundrisse/ch13.htm)
-notebooks (1857–58), predicted a point at which automated, machine-embodied
-social knowledge — what he called the **general intellect** — becomes the
-primary productive force directly, at which point value grounded in direct,
-individually-measured labor time starts to break down as the actual basis of
-production. Software built substantially by AI, trained on the accumulated,
-freely-given knowledge-work of millions of people, and then made freely
-reproducible at near-zero marginal cost, is about as literal an instance of
-"general intellect becoming a direct productive force" as has existed since
-Marx wrote the phrase. This is also the passage the later Italian *operaisti* —
-[Antonio Negri](https://en.wikipedia.org/wiki/Antonio_Negri),
-[Carlo Vercellone](https://en.wikipedia.org/wiki/Carlo_Vercellone), and
-[Maurizio Lazzarato](https://en.wikipedia.org/wiki/Maurizio_Lazzarato) — built
-[cognitive capitalism](https://en.wikipedia.org/wiki/Cognitive_capitalism) and
-[immaterial labor](https://en.wikipedia.org/wiki/Immaterial_labour) theory on:
-once value comes from socially-distributed, networked cognitive labor rather
-than labor time inside one factory under one owner's direct supervision,
-private appropriation of that value becomes increasingly awkward to justify, or
-even to mechanically sustain.
-
-Read this way, Coase and Marx aren't answering different questions so much as
-describing the same mechanism from two different standpoints: Coase describes
-it from inside the system, as a transaction-cost optimization; Marx describes
-it from the standpoint of the system's eventual supersession, as a contradiction
-between how value is actually produced (socially, collaboratively) and how it's
-still legally appropriated (privately, by an owner). Both are looking at the
-same shift in where productive capability actually lives.
+*(A.2 formerly here — "What Coase's account leaves out: power, and Marx's
+answer to it" — has moved into the main body; see [§Marxist
+View](#what-forces-favor-eventual-dissolution-of-corporate-model----marxist-view).)*
 
 ### A.3 Determinism vs. contingency: what this document is and isn't claiming
 
@@ -557,7 +582,7 @@ is what the clonable, multi-Satellite shape in
 [§1](#1-the-commons-layer-and-its-satellites) is actually for: not just a way to scale, but a
 resilience strategy.
 
-### A.7 A return to the commons: enclosure and Ostrom
+### A.7 A return to the commons: enclosure
 
 Before the [enclosure movements](https://en.wikipedia.org/wiki/Enclosure)
 reshaped landholding in England, common land was governed collectively by the
@@ -571,26 +596,11 @@ of centuries of collective stewardship into far fewer hands.
 Public domain, via Wikimedia Commons.</figcaption>
 </figure>
 
-Garrett Hardin's later ["tragedy of the
-commons"](https://en.wikipedia.org/wiki/Tragedy_of_the_commons) argument
-treated unowned shared resources as inherently doomed to overexploitation —
-but Elinor Ostrom's empirical research (which won her the [2009 Nobel
-Memorial Prize in Economic
-Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Sciences))
-overturned that claim, documenting hundreds of real cases where communities
-successfully self-governed shared resources through their own institutional
-rules, without requiring either privatization or centralized state control.[^1]
-
-This initiative is, in effect, a proposal to apply Ostrom-style commons
-governance to a *digital* commons — open source software — rather than to land,
-water, or fisheries: a body of collectively produced software governed by the
-people who build it, with the Commons-Hub structure
-([§1](#1-the-commons-layer-and-its-satellites)) as the specific institutional design, and the
-funded-program-allocation
-[DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization)
-([§2–3](#2-governance-layer--two-separate-mechanisms)) as one concrete rule
-within it, in Ostrom's sense of a community writing its own rules for how a
-shared resource's benefit gets distributed.
+*(The Hardin/Ostrom discussion formerly here has moved to [the Neoclassical
+View
+section](#what-factors-drove-emergence-of-corporate-model----neoclassical-view);
+the Ostrom-to-Commons-Hub tie-in has moved to the end of
+[§1](#1-the-commons-layer-and-its-satellites).)*
 
 [^1]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
 [^2]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
