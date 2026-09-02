@@ -46,10 +46,9 @@ that vests with earned trust and decays on inactivity (rather than
 accumulating into permanent control.)   
 
 - Who benefits, and by what means: the people who did the work on a given funded
-program, by their own equally-weighted vote through a
-[DAO](#2-governance-layer--two-separate-mechanisms). 
+program, by their own [equally-weighted vote through a
+DAO](#2-governance-layer--two-separate-mechanisms). 
 
-The sections that follow work out the mechanics of both.
 
 
 ## Corporations as a governance technology, not a law of nature
@@ -92,8 +91,8 @@ asked why production gets organized inside firms at all, rather than
 coordinated entirely through market transactions between independent
 parties. His answer was transaction costs: for most of industrial history,
 hierarchical management was cheaper than coordinating distributed production
-through the market. That cost calculus is exactly what technologies such as
-AI are now shifting — [Appendix
+through the market. That cost calculus is exactly what AI and other rapidly evolving digital 
+technologies  are now shifting — [Appendix
 A.1](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now)
 walks through the textile-industry case where it first played out, and what's
 changing about it today.
@@ -194,6 +193,55 @@ wholly-owned for-profit subsidiary,
 funded Firefox's development since 2005 — a two-decade precedent for exactly
 this structure.
 
+
+### From the perspective of contemporary neoclassical economics
+
+There is an active movement today to re-enclose the digital commons — and
+the reasoning behind it harks directly back to Garrett Hardin's 1968 essay,
+["The Tragedy of the
+Commons"](https://en.wikipedia.org/wiki/Tragedy_of_the_commons), which argued
+that unowned shared resources are inherently doomed to overexploitation and
+mismanagement. MongoDB (2018), Elastic (2021), HashiCorp (2023), and Redis
+(2024) all relicensed away from open source after cloud providers resold
+their software without contributing back — HashiCorp's leadership described
+it in almost exactly Hardin's terms: "there's a tragedy of the commons
+here."[^3]
+
+The framework didn't stay academic on the policy side either. The World
+Bank's own 1975 Land Reform Policy Paper recommended abandoning communal
+land tenure in favor of private title, and a 1989 World Bank Discussion
+Paper later described tragedy-of-the-commons reasoning as having been "the
+dominant paradigm" for the institution's natural-resource policy for
+roughly forty years — before the Bank itself began walking that position
+back.[^4]
+
+But Elinor Ostrom's empirical research (which won her the [2009 Nobel
+Memorial Prize in Economic
+Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Sciences))
+overturned Hardin's claim, documenting hundreds of real cases where
+communities successfully self-governed shared resources through their own
+institutional rules, without requiring either privatization or centralized
+state control.[^1]
+
+This initiative is, in effect, a proposal to apply Ostrom-style commons
+governance to a *digital* commons — open source software — rather than to
+land, water, or fisheries.
+
+Notice the asymmetry with the tech-industry pattern already described.
+MongoDB, Elastic, HashiCorp, and Redis are for-profit companies answerable
+to shareholders — once keeping the code open stopped maximizing shareholder
+return, enclosure won, every time. This pattern is built not to face that
+same pressure: the Commons sits under a 501(c)(3) Satellite, not a
+for-profit parent, so mission/governance control
+([§1](#1-the-commons-layer-and-its-satellites)) stays legally locked to the
+public benefit the Satellite was chartered for, never to shareholder
+return. That's the actual precondition for this whole proposal: an
+organization motivated by profit first and mission second has no
+structural reason not to enclose the same way HashiCorp did. This pattern
+works because mission sits ahead of profit at the ownership layer — not
+despite it.
+
+
 ## 2. Governance Layer — Two Separate Mechanisms
 
 The 501(c)(3)'s **Board** of directors set the mission, priorities,  and policy 
@@ -224,26 +272,6 @@ contributor's crypto wallet
 [on-chain](https://en.wikipedia.org/wiki/Blockchain) (chain TBD). See the
 [Contributor Guide](contributor-guide.md) for the full pipeline.
 
-# Viewing through the lens of contemporary neoclassist economics
-
-Although officially out of favor with modern economists views, influential
-capitalist institutions such as the World Bank and IMF (International Monetary Fund)
-continue to make policy decisions through 
-
-
-Neoclassical economist Garrett Hardin's later ["tragedy of the
-commons"](https://en.wikipedia.org/wiki/Tragedy_of_the_commons) argument
-treated unowned shared resources as inherently doomed to overexploitation —
-but Elinor Ostrom's empirical research (which won her the [2009 Nobel
-Memorial Prize in Economic
-Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Sciences))
-overturned that claim, documenting hundreds of real cases where communities
-successfully self-governed shared resources through their own institutional
-rules, without requiring either privatization or centralized state control.[^1]
-
-This initiative is, in effect, a proposal to apply Ostrom-style commons
-governance to a *digital* commons — open source software — rather than to land,
-water, or fisheries.
 
 
 ## 3. Token-Based Delegated Authority
@@ -616,6 +644,15 @@ the Ostrom-to-Commons-Hub tie-in has moved to the end of
 [^1]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
 [^2]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
     [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
+[^3]: [As HashiCorp adopts the BSL, an era of open-source software might be
+    ending](https://www.runtime.news/as-hashicorp-adopts-the-bsl-an-era-of-open-source-software-might-be-ending/);
+    [Moving Away From Open Source: Trends in Source-Available Licensing —
+    Goodwin](https://www.goodwinlaw.com/en/insights/publications/2024/09/insights-practices-moving-away-from-open-source-trends-in-licensing).
+[^4]: [World Bank Land Reform Sector Policy Paper
+    (1975)](https://documents1.worldbank.org/curated/en/911161468153545471/pdf/PUB4400PUB0Lan00Box365739B00PUBLIC0.pdf);
+    Bromley & Cernea, "The Management of Common Property Natural Resources,"
+    [World Bank Discussion Paper
+    57 (1989)](https://documents1.worldbank.org/curated/en/548811468740174575/pdf/multi-page.pdf).
 
 ### A.8 AI, abundance, and the case for urgency
 
