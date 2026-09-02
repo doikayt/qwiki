@@ -197,35 +197,20 @@ this structure.
 ### From the perspective of contemporary neoclassical economics
 
 There is an active movement today to re-enclose the digital commons — and
-the reasoning behind it harks directly back to Garrett Hardin's 1968 essay,
+the reasoning behind it hearkens back to Garrett Hardin's 1968 essay,
 ["The Tragedy of the
 Commons"](https://en.wikipedia.org/wiki/Tragedy_of_the_commons), which argued
 that unowned shared resources are inherently doomed to overexploitation and
-mismanagement. MongoDB (2018), Elastic (2021), HashiCorp (2023), and Redis
-(2024) all relicensed away from open source after cloud providers resold
+mismanagement. Simple in its appeal, this idea has become a go-to justification
+for private ownership of public goods. In the tech world a number 
+of market leading software vendors (MongoDB, Elastic, HashiCorp et.al.) have all recently 
+decide to relicense away from open source after cloud providers resold
 their software without contributing back — HashiCorp's leadership described
 it in almost exactly Hardin's terms: "there's a tragedy of the commons
 here."[^3]
 
-The framework didn't stay academic on the policy side either. The World
-Bank's own 1975 Land Reform Policy Paper recommended abandoning communal
-land tenure in favor of private title, and a 1989 World Bank Discussion
-Paper later described tragedy-of-the-commons reasoning as having been "the
-dominant paradigm" for the institution's natural-resource policy for
-roughly forty years — before the Bank itself began walking that position
-back.[^4]
-
-But Elinor Ostrom's empirical research (which won her the [2009 Nobel
-Memorial Prize in Economic
-Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Sciences))
-overturned Hardin's claim, documenting hundreds of real cases where
-communities successfully self-governed shared resources through their own
-institutional rules, without requiring either privatization or centralized
-state control.[^1]
-
-This initiative is, in effect, a proposal to apply Ostrom-style commons
-governance to a *digital* commons — open source software — rather than to
-land, water, or fisheries.
+So of what value could our model be, if successful established software firms are moving 
+in the exact opposite direction?
 
 Notice the asymmetry with the tech-industry pattern already described.
 MongoDB, Elastic, HashiCorp, and Redis are for-profit companies answerable
@@ -240,6 +225,21 @@ organization motivated by profit first and mission second has no
 structural reason not to enclose the same way HashiCorp did. This pattern
 works because mission sits ahead of profit at the ownership layer — not
 despite it.
+
+
+
+But Elinor Ostrom's empirical research (which won her the [2009 Nobel
+Memorial Prize in Economic
+Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Sciences))
+overturned Hardin's claim, documenting hundreds of real cases where
+communities successfully self-governed shared resources through their own
+institutional rules, without requiring either privatization or centralized
+state control.[^1]
+
+This initiative is, in effect, a proposal to apply Ostrom-style commons
+governance to a *digital* commons — open source software — rather than to
+land, water, or fisheries.
+
 
 
 ## 2. Governance Layer — Two Separate Mechanisms
@@ -648,11 +648,6 @@ the Ostrom-to-Commons-Hub tie-in has moved to the end of
     ending](https://www.runtime.news/as-hashicorp-adopts-the-bsl-an-era-of-open-source-software-might-be-ending/);
     [Moving Away From Open Source: Trends in Source-Available Licensing —
     Goodwin](https://www.goodwinlaw.com/en/insights/publications/2024/09/insights-practices-moving-away-from-open-source-trends-in-licensing).
-[^4]: [World Bank Land Reform Sector Policy Paper
-    (1975)](https://documents1.worldbank.org/curated/en/911161468153545471/pdf/PUB4400PUB0Lan00Box365739B00PUBLIC0.pdf);
-    Bromley & Cernea, "The Management of Common Property Natural Resources,"
-    [World Bank Discussion Paper
-    57 (1989)](https://documents1.worldbank.org/curated/en/548811468740174575/pdf/multi-page.pdf).
 
 ### A.8 AI, abundance, and the case for urgency
 
