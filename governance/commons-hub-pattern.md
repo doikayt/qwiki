@@ -7,7 +7,7 @@ open source software around nonprofit and for-profit satellites*
 
 ---
 
-## Introduction
+## Overview
 
 This document presents a replicable organizational model for collaboratively
 developing and monetizing an
@@ -18,7 +18,9 @@ and earned revenue get distributed among contributors through a narrowly-scoped
 Decentralized Autonomous Organization) — we look at some of the historical and
 economic factors which make the emergence of a new model inevitable. We note how
 the standard corporate form arose as a specific historical answer to the
-questions of (a) who governs production and (b) who benefits from it. We first
+questions of 
+(a) who governs production (and by what means)?   and 
+(b) who benefits from that production (and by what means)?. We first
 analyze these questions through the lens of neoclassical economists — in
 particular how [Coase's 1937 transaction-cost
 account](https://en.wikipedia.org/wiki/The_Nature_of_the_Firm) explains why
@@ -26,24 +28,36 @@ hierarchical structures usually win out. Next up is a dialectical-materialist (M
 reading of the same shift, wherein we ask a question transaction-cost economics
 doesn't: who holds the _power_ to set the rules of governance and distribution.
 
-We then examine how the increasing sophistication and reach of AI make any
+We later examine how the increasing sophistication and reach of AI make any
 confident forecast of the next dominant mode of production impossible — to the
 point where we have to ask whether human beings can even survive as a species to
 participate in whatever model comes next. Assuming we do, the next question is
 whether the average working person ends up better off or worse — and while
-today's power structures tilt the scales toward worse, we close on a hopeful
-note: the same forces driving that outcome also open opportunities for 
+today's power structures tilt the scales toward worse, we argue 
+that the same forces driving that outcome also open opportunities for 
 alternative worker-friendly legal/financial/ownership structures to displace
 the top-down corporate form that underpins late-stage disaster capitalism.
- <<note: one force we should definitely mention is the Peter Turchin elites idea>>
+
+In terms of our two opening questions our model's answers are:
+
+- Who governs: the contributors to the commons themselves -- through
+[token-based delegated authority](#3-token-based-delegated-authority)
+that vests with earned trust and decays on inactivity (rather than
+accumulating into permanent control.)   
+
+- Who benefits, and by what means: the people who did the work on a given funded
+program, by their own equally-weighted vote through a
+[DAO](#2-governance-layer--two-separate-mechanisms). 
+
+The sections that follow work out the mechanics of both.
 
 
 ## Corporations as a governance technology, not a law of nature
 
 The corporation is not a naturally occurring phenomenon. It is a socially
 produced, historically specific answer to **two fundamental questions**: when people
-collaborate to produce something, who governs that production — and who
-benefits economically? Different historical eras have answered both
+collaborate to produce something, who governs that production (and by what means) — and who
+benefits economically (and by what means)? Different historical eras have answered both
 questions differently: [guilds](https://en.wikipedia.org/wiki/Guild),
 [common land](https://en.wikipedia.org/wiki/Common_land),
 [joint-stock charters](https://en.wikipedia.org/wiki/Joint-stock_company),
@@ -69,13 +83,9 @@ not the diffuse, non-exclusive shape
 open production actually takes.
 
 
-### What Factors Drove Emergence of Corporate Model -- Neoclassical View
+### Factors favoring the emergence of the corporate model -- neoclassical View
 
-Neoclassical economics gives a clean answer to the first of those two
-questions — governance — and simply assumes an answer to the second rather
-than deriving one: profit flows to the residual claimant, the capital
-owner, as a background feature of the property-rights structure already in
-place. In his 1937 paper [*The Nature of the
+In his 1937 paper [*The Nature of the
 Firm*](https://en.wikipedia.org/wiki/The_Nature_of_the_Firm), Ronald Coase —
 who later won the 1991 Nobel in Economics substantially on its strength —
 asked why production gets organized inside firms at all, rather than
@@ -88,22 +98,13 @@ A.1](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now)
 walks through the textile-industry case where it first played out, and what's
 changing about it today.
 
-Garrett Hardin's later ["tragedy of the
-commons"](https://en.wikipedia.org/wiki/Tragedy_of_the_commons) argument
-treated unowned shared resources as inherently doomed to overexploitation —
-but Elinor Ostrom's empirical research (which won her the [2009 Nobel
-Memorial Prize in Economic
-Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Sciences))
-overturned that claim, documenting hundreds of real cases where communities
-successfully self-governed shared resources through their own institutional
-rules, without requiring either privatization or centralized state control.[^1]
 
-If neoclassical-style reasoning gets even its own efficiency predictions
-wrong here, the deeper question isn't just what's efficient — it's who
-holds the power to set the rules in the first place. That's the question a
-dialectical-materialist (Marxist) reading of the same shift asks next.
+That still leaves the deeper question unanswered: not just what's
+efficient, but who holds the power to set the rules in the first place.
+That's the question a dialectical-materialist (Marxist) reading of the
+same shift asks next.
 
-### What Forces Favor Eventual Dissolution of Corporate Model -- Marxist View
+### Drivers of the dissolution of the corporate model -- Marxist view
 
 Coase's framework answers "why hierarchy, given the technology and the cost of
 coordination" — but it treats who already owns and controls the
@@ -193,6 +194,7 @@ wholly-owned for-profit subsidiary,
 funded Firefox's development since 2005 — a two-decade precedent for exactly
 this structure.
 
+## 2. Governance Layer — Two Separate Mechanisms
 
 The 501(c)(3)'s **Board** of directors set the mission, priorities,  and policy 
 for each Satellite through ordinary nonprofit governance. 
@@ -222,16 +224,27 @@ contributor's crypto wallet
 [on-chain](https://en.wikipedia.org/wiki/Blockchain) (chain TBD). See the
 [Contributor Guide](contributor-guide.md) for the full pipeline.
 
+# Viewing through the lens of contemporary neoclassist economics
+
+Although officially out of favor with modern economists views, influential
+capitalist institutions such as the World Bank and IMF (International Monetary Fund)
+continue to make policy decisions through 
+
+
+Neoclassical economist Garrett Hardin's later ["tragedy of the
+commons"](https://en.wikipedia.org/wiki/Tragedy_of_the_commons) argument
+treated unowned shared resources as inherently doomed to overexploitation —
+but Elinor Ostrom's empirical research (which won her the [2009 Nobel
+Memorial Prize in Economic
+Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Sciences))
+overturned that claim, documenting hundreds of real cases where communities
+successfully self-governed shared resources through their own institutional
+rules, without requiring either privatization or centralized state control.[^1]
+
 This initiative is, in effect, a proposal to apply Ostrom-style commons
 governance to a *digital* commons — open source software — rather than to land,
-water, or fisheries: a body of collectively produced software governed by the
-people who build it, with the Commons-Hub structure
-([§1](#1-the-commons-layer-and-its-satellites)) as the specific institutional design, and the
-funded-program-allocation
-[DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization)
-([§2–3](#2-governance-layer--two-separate-mechanisms)) as one concrete rule
-within it, in Ostrom's sense of a community writing its own rules for how a
-shared resource's benefit gets distributed.
+water, or fisheries.
+
 
 ## 3. Token-Based Delegated Authority
 
@@ -499,6 +512,7 @@ things cheap":
 
 
 ------   Need lots of edits on the remaining content.. pls skip if you are reviewing ---
+<<note: one force we should definitely mention is the Peter Turchin elites idea>>
 
 *(A.2 formerly here — "What Coase's account leaves out: power, and Marx's
 answer to it" — has moved into the main body; see [§Marxist
