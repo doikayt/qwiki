@@ -204,7 +204,7 @@ for private ownership of public goods. Market leading software vendors
 decide to relicense away from open source after cloud providers resold
 their software without contributing back — HashiCorp's leadership described
 it in almost exactly Hardin's terms: "there's a tragedy of the commons
-here."[^3] 
+here."[^1] 
 
 So of what value could our model be, if successful established 
 software firms are moving 
@@ -222,7 +222,7 @@ return. That's the actual precondition for this whole proposal: an
 organization motivated by profit first and mission second has no
 structural reason not to enclose the same way HashiCorp did. This pattern
 works because mission sits ahead of profit at the ownership layer — not
-despite it.[^4]
+despite it.[^2]
 
 
 We also note that  Elinor Ostrom's empirical research 
@@ -232,7 +232,7 @@ Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Science
 overturned Hardin's claim, documenting hundreds of real cases where
 communities successfully self-governed shared resources through their own
 institutional rules, without requiring either privatization or centralized
-state control.[^1]
+state control.[^3]
 
 This initiative is, in effect, a proposal to apply Ostrom-style commons
 governance to a *digital* commons — open source software — rather than to
@@ -425,7 +425,7 @@ elite-track positions than it has positions to absorb them into, intra-elite
 competition intensifies, average outcomes for elite aspirants decline, and —
 critically — some fraction of those aspirants become "counter-elites,"
 turning their training and ambition toward organizing opposition to the
-existing order rather than joining it.[^2]
+existing order rather than joining it.[^4]
 
 The current U.S. software labor market is a live instance of this pattern: an
 education system that has spent two decades producing an increasing supply of
@@ -639,14 +639,14 @@ section](#what-factors-drove-emergence-of-corporate-model----neoclassical-view);
 the Ostrom-to-Commons-Hub tie-in has moved to the end of
 [§1](#1-the-commons-layer-and-its-satellites).)*
 
-[^1]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
-[^2]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
+[^3]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
+[^4]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
     [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
-[^3]: [As HashiCorp adopts the BSL, an era of open-source software might be
+[^1]: [As HashiCorp adopts the BSL, an era of open-source software might be
     ending](https://www.runtime.news/as-hashicorp-adopts-the-bsl-an-era-of-open-source-software-might-be-ending/);
     [Moving Away From Open Source: Trends in Source-Available Licensing —
     Goodwin](https://www.goodwinlaw.com/en/insights/publications/2024/09/insights-practices-moving-away-from-open-source-trends-in-licensing).
-[^4]: The "nuclear option" against enclosure is a strong copyleft license
+[^2]: The "nuclear option" against enclosure is a strong copyleft license
     such as the [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License),
     which requires anyone who distributes a modified version to release
     their changes under the same terms. Note this only locks out
