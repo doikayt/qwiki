@@ -225,7 +225,9 @@ works because mission sits ahead of profit at the ownership layer — not
 despite it.[^2]
 
 
-We also note that  Elinor Ostrom's empirical research 
+### Tragedy of the commons actually proven wrong!
+
+We should also note that  Elinor Ostrom's empirical research 
 (which won her the [2009 Nobel
 Memorial Prize in Economic
 Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Sciences))
@@ -234,9 +236,6 @@ communities successfully self-governed shared resources through their own
 institutional rules, without requiring either privatization or centralized
 state control.[^3]
 
-This initiative is, in effect, a proposal to apply Ostrom-style commons
-governance to a *digital* commons — open source software — rather than to
-land, water, or fisheries.
 
 
 
@@ -375,45 +374,47 @@ well before it's actually needed.
 ## 5. The Stakes, and Why This Pattern Has an Edge
 
 AI, paired with breakneck progress in robotics, automation, and the Web's role in
-democratizing knowledge, points toward a level of material abundance humanity has
-not seen before. But the same technology concentrates the means to capture that
-abundance in fewer hands: mass job loss, deeper concentration of wealth and power,
+democratizing knowledge, promise a never-before-seen level of material abundance.
+But those technologies can also be deployed to direct that abundance 
+exclusively to those whose hands hold the controls. Mass job loss, heightened inequality, 
 and constant surveillance are not even the worst of the possible consequences — at
 the far end sits the possibility of an existential threat to the species that
 pushed AI technology to its current point.
 [Appendix A.8](#a8-ai-abundance-and-the-case-for-urgency) lays out the full
 argument.
 
-Assuming that we clear that bar, the next question is
+Assuming we clear the extinction bar, the next question is
 whether the average working person ends up better off or worse under whatever
 comes next. Today's power structures, left to their own devices, tilt that
 outcome toward _way_ worse: the same concentration of compute, capital, and political
-leverage that creates that threat also determines who captures the
-day-to-day gains long before any of that plays out.
+enables AI research to proceed unregulated also determines who captures the
+day-to-day gains from that same technology.
 
-None of that is inevitable, though — and this is where we close on a hopeful
-note. Two structural properties of this pattern work directly against that
-default trajectory.
+None of that is inevitable though — and this is where we close on a hopeful
+note. Two structural properties of the pattern we are proposing 
+work directly against the default trajectory.
 
-### Why this pattern has a cost advantage that a for-profit competitor can't match
+### Cost advantages that a for-profit competitor can't match
 
-Nonprofit and grassroots organizations without much money are a real market with a
-real, recurring need — CRM/outreach tooling, in Doikayt's own case — that most
-for-profit software companies leave alone. Not because the need is illusory, but
-because these customers can't pay enough to justify ordinary customer-acquisition
-cost. That's usually treated as this pattern's central constraint. It's also,
-quietly, a structural advantage.
+Identifying the unmet needs of customers with money, and acquiring those customers
+(just getting them to _sign up_ and try) is a key challenge for-profits face. 
+Nonprofit and shoestring-budget grassroots organizations pose a different problem 
+entirely: their needs are real, often recurring,
+and easy to identify — but most for-profit software companies 
+leave them alone since they can't pay enough to justify the ordinary 
+customer-acquisition cost. This works to our advantage.
 
-What a for-profit startup normally has to spend real money to acquire — actual
-users, in volume, willing to run early builds, report what's broken, and ask for
-the next feature — this pattern gets for free, in abundance, as a side effect of
-serving a market a for-profit competitor is ignoring. And the problems don't stay
-confined to that market: once a Satellite has solved a given problem for a
-cash-poor organization, it's common to find that better-funded organizations have
-a structurally similar version of the same problem. Because the resulting software
-is free, open, and low-cost to adopt, a Satellite can move into that adjacent,
+While for-profit start-ups normally have to devote significant sales and
+marketing budget to acquire their users, a collective that 
+adopts our model has a much easier job, precisely because their
+targeted user base will be underserved.   Once a given problem 
+been solved for the initial cash-poor and underserved market, 
+it's common to find that better-funded organizations that 
+have structurally similar versions of the same problem. Because the software that solves 
+those problems is now proven, free and open, a collective can move into that adjacent,
 better-funded market at a cost structure a for-profit incumbent can't match — it
-isn't competing on price with something built to extract margin from that market.
+isn't competing on price with something built to extract margin from that particular 
+market.
 
 ### The labor-market half of the advantage: elite overproduction and AI-driven displacement
 
