@@ -234,12 +234,9 @@ Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Science
 overturned Hardin's claim, documenting hundreds of real cases where
 communities successfully self-governed shared resources through their own
 institutional rules, without requiring either privatization or centralized
-state control.[^3]
-
-This initiative is, in effect, a proposal to apply Ostrom-style commons
-governance to a *digital* commons — open source software — rather than to
-land, water, or fisheries.
-
+state control.[^3]    Our proposal can be viewed as applying
+Ostrom-style commons governance to a *digital* commons — open source software — 
+rather than to land, water, or fisheries.
 
 
 
