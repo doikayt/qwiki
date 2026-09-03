@@ -51,6 +51,7 @@ DAO](#2-governance-layer--two-separate-mechanisms).
 
 
 
+
 ## Corporations as a governance technology, not a law of nature
 
 The corporation is not a naturally occurring phenomenon. It is a socially
@@ -94,14 +95,9 @@ hierarchical management was cheaper than coordinating distributed production
 through the market. That cost calculus is exactly what AI and other rapidly evolving digital 
 technologies  are now shifting — [Appendix
 A.1](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now)
-walks through the textile-industry case where it first played out, and what's
-changing about it today.
+walks through the textile-industry case where it first played out.
 
 
-That still leaves the deeper question unanswered: not just what's
-efficient, but who holds the power to set the rules in the first place.
-That's the question a dialectical-materialist (Marxist) reading of the
-same shift asks next.
 
 ### Drivers of the dissolution of the corporate model -- Marxist view
 
@@ -130,7 +126,7 @@ afterward by whoever won.
 Marx's own answer to the same question isn't merely "the powerful decide" as a
 general cynicism — he has a specific mechanism, and it's a genuinely useful lens
 for the current moment, not just a historical curiosity. His "Fragment on
-Machines," in the [*Grundrisse*](https://www.marxists.org/archive/marx/works/1857/grundrisse/ch13.htm)
+Machines," in the [*Grundrisse*](https://www.marxists.org/archive/marx/works/1857/grundrisse/ch14.htm)
 notebooks (1857–58), predicted a point at which automated, machine-embodied
 social knowledge — what he called the **general intellect** — becomes the
 primary productive force directly, at which point value grounded in direct,
@@ -194,29 +190,31 @@ funded Firefox's development since 2005 — a two-decade precedent for exactly
 this structure.
 
 
-### From the perspective of contemporary neoclassical economics
+### Bulwarks against enclosure of our digital commons
 
-There is an active movement today to re-enclose the digital commons — and
-the reasoning behind it hearkens back to Garrett Hardin's 1968 essay,
-["The Tragedy of the
+There is an active movement today to re-enclose the digital commons — 
+the central component of our model. Companies 
+seeking this privatization often justify its merits by pointing to
+Garrett Hardin's 1968 essay, ["The Tragedy of the
 Commons"](https://en.wikipedia.org/wiki/Tragedy_of_the_commons), which argued
 that unowned shared resources are inherently doomed to overexploitation and
-mismanagement. Simple in its appeal, this idea has become a go-to justification
-for private ownership of public goods. In the tech world a number 
-of market leading software vendors (MongoDB, Elastic, HashiCorp et.al.) have all recently 
+mismanagement. Simple in its appeal, this idea has become a go-to rationalization
+for private ownership of public goods. Market leading software vendors 
+(MongoDB, Elastic, HashiCorp et.al.) have all recently 
 decide to relicense away from open source after cloud providers resold
 their software without contributing back — HashiCorp's leadership described
 it in almost exactly Hardin's terms: "there's a tragedy of the commons
-here."[^3]
+here."[^3] 
 
-So of what value could our model be, if successful established software firms are moving 
+So of what value could our model be, if successful established 
+software firms are moving 
 in the exact opposite direction?
 
 Notice the asymmetry with the tech-industry pattern already described.
 MongoDB, Elastic, HashiCorp, and Redis are for-profit companies answerable
 to shareholders — once keeping the code open stopped maximizing shareholder
-return, enclosure won, every time. This pattern is built not to face that
-same pressure: the Commons sits under a 501(c)(3) Satellite, not a
+return, enclosure won, every time. Our model is engineered to withstand 
+that pressure: the Commons sits under a 501(c)(3) Satellite, not a
 for-profit parent, so mission/governance control
 ([§1](#1-the-commons-layer-and-its-satellites)) stays legally locked to the
 public benefit the Satellite was chartered for, never to shareholder
@@ -224,11 +222,11 @@ return. That's the actual precondition for this whole proposal: an
 organization motivated by profit first and mission second has no
 structural reason not to enclose the same way HashiCorp did. This pattern
 works because mission sits ahead of profit at the ownership layer — not
-despite it.
+despite it.[^4]
 
 
-
-But Elinor Ostrom's empirical research (which won her the [2009 Nobel
+We also note that  Elinor Ostrom's empirical research 
+(which won her the [2009 Nobel
 Memorial Prize in Economic
 Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Sciences))
 overturned Hardin's claim, documenting hundreds of real cases where
@@ -648,6 +646,25 @@ the Ostrom-to-Commons-Hub tie-in has moved to the end of
     ending](https://www.runtime.news/as-hashicorp-adopts-the-bsl-an-era-of-open-source-software-might-be-ending/);
     [Moving Away From Open Source: Trends in Source-Available Licensing —
     Goodwin](https://www.goodwinlaw.com/en/insights/publications/2024/09/insights-practices-moving-away-from-open-source-trends-in-licensing).
+[^4]: The "nuclear option" against enclosure is a strong copyleft license
+    such as the [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License),
+    which requires anyone who distributes a modified version to release
+    their changes under the same terms. Note this only locks out
+    *third-party* enclosure by default — it doesn't stop the original
+    rightsholder from relicensing later, which is exactly how MongoDB
+    relicensed away from AGPL: a Contributor License Agreement let them
+    do it unilaterally. A GPL project with no CLA and copyright dispersed
+    across many independent contributors (the Linux kernel is the
+    standard example) is the closest thing to a permanent lock, but it
+    would also block a Satellite's own for-profit subsidiary from adding
+    proprietary features on top of the Commons. The more workable choice
+    for this pattern is a permissive license such as
+    [MIT](https://en.wikipedia.org/wiki/MIT_License) or
+    [BSD](https://en.wikipedia.org/wiki/BSD_licenses): it lets a
+    subsidiary build a thin proprietary layer — hosting, integrations,
+    support, a polished commercial product — on top of the shared,
+    freely-forkable core. That's the light barrier to entry a subsidiary
+    needs to fund itself, without ever restricting the Commons itself.
 
 ### A.8 AI, abundance, and the case for urgency
 
