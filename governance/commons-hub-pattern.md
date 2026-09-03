@@ -225,7 +225,7 @@ works because mission sits ahead of profit at the ownership layer — not
 despite it.[^2]
 
 
-### Tragedy of the commons actually proven wrong!
+### The Tragedy of the Commons, Proven Wrong
 
 We should also note that  Elinor Ostrom's empirical research 
 (which won her the [2009 Nobel
@@ -235,6 +235,10 @@ overturned Hardin's claim, documenting hundreds of real cases where
 communities successfully self-governed shared resources through their own
 institutional rules, without requiring either privatization or centralized
 state control.[^3]
+
+This initiative is, in effect, a proposal to apply Ostrom-style commons
+governance to a *digital* commons — open source software — rather than to
+land, water, or fisheries.
 
 
 
@@ -407,9 +411,9 @@ customer-acquisition cost. This works to our advantage.
 While for-profit start-ups normally have to devote significant sales and
 marketing budget to acquire their users, a collective that 
 adopts our model has a much easier job, precisely because their
-targeted user base will be underserved.   Once a given problem 
+targeted user base will be underserved. Once a given problem has
 been solved for the initial cash-poor and underserved market, 
-it's common to find that better-funded organizations that 
+it's common to find that better-funded organizations
 have structurally similar versions of the same problem. Because the software that solves 
 those problems is now proven, free and open, a collective can move into that adjacent,
 better-funded market at a cost structure a for-profit incumbent can't match — it
