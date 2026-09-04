@@ -208,14 +208,12 @@ here."[^1]
 
 So of what value could our model be, if successful established 
 software firms are moving 
-in the exact opposite direction?
-
-Notice the asymmetry with the tech-industry pattern already described.
-MongoDB, Elastic, HashiCorp, and Redis are for-profit companies answerable
-to shareholders — once keeping the code open stopped maximizing shareholder
-return, enclosure won, every time. Our model is engineered to withstand 
-that pressure: the Commons sits under a 501(c)(3) Satellite, not a
-for-profit parent, so mission/governance control
+in the exact opposite direction?  Note that MongoDB, Elastic, HashiCorp, and Redis 
+are for-profit companies answerable
+to shareholders — once maintaining their code as open source stopped maximizing shareholder
+return, enclosure won out. Our model is engineered to withstand 
+that pressure: governance of the Commons is the remit of a 501(c)(3) Satellite, not a
+for-profit company, so mission/governance control
 ([§1](#1-the-commons-layer-and-its-satellites)) stays legally locked to the
 public benefit the Satellite was chartered for, never to shareholder
 return. That's the actual precondition for this whole proposal: an
@@ -263,7 +261,7 @@ authority to approve (the typical case) or reject that proposal.
 
 The vote itself runs on off-chain tooling
 ([Coordinape](https://coordinape.com)/[Snapshot](https://snapshot.org)); the
-genuinely [blockchain](https://en.wikipedia.org/wiki/Blockchain)-based leg is
+[blockchain](https://en.wikipedia.org/wiki/Blockchain)-based leg is
 the treasury and payout — funds move from a
 [multisig](https://en.wikipedia.org/wiki/Multisignature) treasury to each
 contributor's crypto wallet
@@ -286,10 +284,12 @@ distribute the proceeds of an already-secured funded program.
 *Token-based delegated authority* is tactical in scope and carries
 no profit-participation rights. 
 
+
+
+
 The founding steward holds all authority initially and grants it to developers
-as they deliver results and build trust. Critically, those developers can then grant authority
-further themselves  — so authority can keep spreading to
-newly-trusted developers without funneling through one person indefinitely.
+as they deliver results and build trust. Those developers can, in turn, 
+delegate that authority to others _they_ trust. 
 That delegation is only valid to someone already recognized as a trusted
 committer — i.e., someone who's already earned ordinary committer standing in
 the project (commit/review rights), independent of this token system. Reusing
@@ -343,7 +343,7 @@ date:
    vested share must eventually be bought back in cash when a participant
    leaves. A program-to-program or grant-to-grant cash position can't
    safely carry that liability; it takes predictable operating cash
-   flow — in practice, real commercial revenue, not just grants.
+   flow as opposed to sporadically obtained grants.
 
 Industry feasibility guidance (NCEO and others) puts typical setup costs at
 **$100k–$250k+**, with most transactions wanting **~$1M+ in annual EBITDA
@@ -362,7 +362,7 @@ well before it's actually needed.
   cash flow yet to justify one, and no broad-based W-2 team to make
   "broad-based" mean anything.
 - **Once the subsidiary has sustained commercial revenue and real
-  employees** (not just grant-funded opt-in contributors): ESOP feasibility
+  employees** : ESOP feasibility
   becomes worth a real evaluation, running alongside — not replacing — the
   DAO and token-based delegated authority, each still doing its own job.
 - **If a founder-exit rollover is ever a goal:** C-corp status needs to
@@ -372,33 +372,67 @@ well before it's actually needed.
 
 ---
 
-## 5. The Stakes, and Why This Pattern Has an Edge
+## 5. The Stakes, and why our model has an edge
 
-AI, paired with breakneck progress in robotics, automation, and the Web's role in
-democratizing knowledge, promise a never-before-seen level of material abundance.
-But those technologies can also be deployed to direct that abundance 
-exclusively to those whose hands hold the controls. Mass job loss, heightened inequality, 
-and constant surveillance are not even the worst of the possible consequences — at
-the far end sits the possibility of an existential threat to the species that
-pushed AI technology to its current point.
-[Appendix A.8](#a8-ai-abundance-and-the-case-for-urgency) lays out the full
-argument.
+The past year (2026, as of this writing) has seen rapid, measurable progress
+toward AI writing the software that builds AI itself.[^5]   This
+mirrors recent progress with toward 
+["lights-out manufacturing"](https://en.wikipedia.org/wiki/Lights_out_(manufacturing)) 
+-- robots building new robots with minimal human involvment -- in the 
+physical world. While these  technological trends promise a never-before-seen level of material
+abundance, they can also be deployed to direct that
+abundance exclusively to those whose hands hold the controls. Mass job loss,
+heightened inequality, and constant surveillance are not even the worst of the
+possible consequences — at the far end sits the possibility of an existential
+threat to the species that pushed AI technology to its current point. 
+[Appendix A.8](#a8-ai-abundance-and-the-case-for-urgency) provides more detail.
+
 
 Assuming we clear the extinction bar, the next question is
 whether the average working person ends up better off or worse under whatever
 comes next. Today's power structures, left to their own devices, tilt that
-outcome toward _way_ worse: the same concentration of compute, capital, and political
-enables AI research to proceed unregulated also determines who captures the
+outcome toward _way_ worse. The same concentration of capital, 
+computational resources,  and political influence that enables 
+AI research to proceed unregulated also determines who captures the 
 day-to-day gains from that same technology.
 
 None of that is inevitable though — and this is where we close on a hopeful
-note. Two structural properties of the pattern we are proposing 
-work directly against the default trajectory.
+note. First we look at two structural properties of our model 
+that provide operational business advantages. Then finally, we address the 
+likely consequence of any specific legal 501c3 realizing a mission 
+that is overly threatening to entrenched captial:  targeting and surpression.
+And we examine the resliance properties of our model that guard against this.
+
+
+### The labor-market half of the advantage: elite overproduction and AI-driven displacement
+
+Peter Turchin's [structural-demographic
+theory](https://en.wikipedia.org/wiki/Structural-demographic_theory)
+identifies "elite overproduction" as a recurring precondition for social
+instability: when a society trains and credentials more aspirants for
+elite-track positions than it has positions to absorb them into, intra-elite
+competition intensifies and average outcomes for elite aspirants decline.
+Some fraction of those aspirants then tend to become "counter-elites,"
+turning their training and ambition toward organizing opposition to the
+existing order rather than joining it.[^4]
+
+This is playing out in the current U.S. software labor market: an
+education system that has spent two decades producing an increasing supply of
+highly credentialed software engineers is now colliding with the AI-driven
+contraction of entry- and mid-level engineering hiring. A growing population of
+capable, credentialed, and increasingly frustrated engineers 
+is finding the traditional elite-track path
+(a well-paid job at a major tech employer) narrowing or closing.
+This population of potential colleagues constitutes 
+a committed mobilizable base, naturally aligned with the mission of any non-profit 
+that challenges the system that is leaving them behind.
+
+
 
 ### Cost advantages that a for-profit competitor can't match
 
 Identifying the unmet needs of customers with money, and acquiring those customers
-(just getting them to _sign up_ and try) is a key challenge for-profits face. 
+(just _getting_ them to sign up and try) is a key challenge for-profits face. 
 Nonprofit and shoestring-budget grassroots organizations pose a different problem 
 entirely: their needs are real, often recurring,
 and easy to identify — but most for-profit software companies 
@@ -409,38 +443,19 @@ While for-profit start-ups normally have to devote significant sales and
 marketing budget to acquire their users, a collective that 
 adopts our model has a much easier job, precisely because their
 targeted user base will be underserved. Once a given problem has
-been solved for the initial cash-poor and underserved market, 
+been solved for an initial cash-poor and underserved market, 
 it's common to find that better-funded organizations
 have structurally similar versions of the same problem. Because the software that solves 
 those problems is now proven, free and open, a collective can move into that adjacent,
-better-funded market at a cost structure a for-profit incumbent can't match — it
-isn't competing on price with something built to extract margin from that particular 
-market.
+better-funded market at a cost structure a for-profit incumbent can't match.
 
-### The labor-market half of the advantage: elite overproduction and AI-driven displacement
+In summary, the operational advantages that accrue from these two structural properaties are:
+  - lower cost of customer acquisition 
+  - lower product marketing spend to figure out what to build
+  - lower cost of recruiting and easier staff retention due to alignment around principles
 
-Peter Turchin's [structural-demographic
-theory](https://en.wikipedia.org/wiki/Structural-demographic_theory)
-identifies "elite overproduction" as a recurring precondition for social
-instability: when a society trains and credentials more aspirants for
-elite-track positions than it has positions to absorb them into, intra-elite
-competition intensifies, average outcomes for elite aspirants decline, and —
-critically — some fraction of those aspirants become "counter-elites,"
-turning their training and ambition toward organizing opposition to the
-existing order rather than joining it.[^4]
 
-The current U.S. software labor market is a live instance of this pattern: an
-education system that has spent two decades producing an increasing supply of
-highly credentialed software engineers, now colliding with AI-driven
-contraction of entry- and mid-level engineering hiring. A growing population of
-capable, credentialed, increasingly frustrated engineers — including recent
-graduates with advanced degrees — is finding the traditional elite-track path
-(a well-paid job at a major tech employer) narrowing or closing.
 
-That population is not just a labor pool to hire from — it is a mobilizable
-base for a movement, in Turchin's counter-elite sense. Paired with the
-cost-advantage dynamic above, this pattern has two complementary resources most
-startups have to pay real money for: engaged users and committed labor.
 
 ### Resilience: why dispersion is a strength, not just a scaling property
 
