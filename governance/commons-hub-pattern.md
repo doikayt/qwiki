@@ -285,18 +285,16 @@ distribute the proceeds of an already-secured funded program.
 no profit-participation rights. 
 
 
-
-
-The founding steward holds all authority initially and grants it to developers
+The founding steward holds all authority initially and grants 'slices' of it to developers
 as they deliver results and build trust. Those developers can, in turn, 
 delegate that authority to others _they_ trust. 
 That delegation is only valid to someone already recognized as a trusted
-committer — i.e., someone who's already earned ordinary committer standing in
-the project (commit/review rights), independent of this token system. Reusing
+committer — i.e., someone who's already earned commit rights in
+the project, independent of this token system. Reusing
 that existing standing as the eligibility check means there's no separate
 identity-verification process to design for this mechanism. (See the
 [Contributor Guide](contributor-guide.md) for the on-boarding mechanic —
-wallet registration and tax intake.)
+wallet registration and tax documents intake.)
 
 In practice this authority is held as a
 [blockchain](https://en.wikipedia.org/wiki/Blockchain)-based token (or
@@ -459,16 +457,32 @@ In summary, the operational advantages that accrue from these two structural pro
 
 
 
-### Resilience through dispersion 
+### Resilience through dispersion
 
-This multi-Satellite shape is a resilience property, not just a scaling one.
-Concentrating value and capability into a single legal entity is exactly what
-makes it worth attacking — legally, politically, operationally. A dispersed,
-replicable structure has no equivalent point of failure: no single Satellite is
-load-bearing for the pattern as a whole. See Appendix A.6, ["Why dispersion, not
-just adequate but
-better"](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem),
-for the full argument.
+Engineers building cloud infrastructure learned this lesson long ago: you don't put a service in one data center, because
+one region's outage takes the whole thing down — you replicate across independent regions and providers so no single
+failure is fatal. The same logic applies to organizations, and it's the same reason a single aircraft carrier, however
+powerful, is one well-placed strike away from losing everything it carries: concentrating value and capability into one
+legal entity is exactly what makes it worth attacking — legally, politically, operationally. A dispersed, replicable
+structure has no equivalent point of failure: if a lawsuit, a funding collapse, or a government action takes out one
+Satellite, the shared Commons and every other Satellite running it keep operating. See Appendix A.6, "Why dispersion, not
+just adequate but better", for the full argument.
+
+This isn't hypothetical. In August 2026, the US government designated the Italian hosting collective Autistici/Inventati
+a "Specially Designated Global Terrorist" entity over how its infrastructure was allegedly used by others — and within
+days its primary domain and mail server, both concentrated in one operator, went dark for its entire user base. Its
+underlying software was already open source; what wasn't dispersed was the service itself. A multi-Satellite structure
+running the same shared code across independently governed, independently banked entities means one Satellite's takedown
+doesn't take the whole network's users down with it.
+
+But dispersion of legal entities alone isn't sufficient. If every Satellite banks with the same institutions or registers
+domains through the same registry, a single coordinated action, or a wave of banks and hosts preemptively cutting ties
+to limit their own exposure, can still hit several at once — real resilience means deliberately varying banks,
+registrars, and jurisdictions across Satellites, not just incorporating separately. The DAO's multisig crypto-treasury
+leg (§2) offers a partial hedge against that specific bank-level risk — it can't be frozen the way an account can — but
+none of this protects whichever Satellite is actually targeted from the consequences of that; dispersion preserves the
+pattern and its other Satellites, not any single one of them.
+
 
 
 ## Appendix A: Historical and Economic Grounding
