@@ -294,7 +294,9 @@ That delegation is only valid to someone already recognized as a trusted
 committer — i.e., someone who's already earned ordinary committer standing in
 the project (commit/review rights), independent of this token system. Reusing
 that existing standing as the eligibility check means there's no separate
-identity-verification process to design for this mechanism.
+identity-verification process to design for this mechanism. (See the
+[Contributor Guide](contributor-guide.md) for the on-boarding mechanic —
+wallet registration and tax intake.)
 
 In practice this authority is held as a
 [blockchain](https://en.wikipedia.org/wiki/Blockchain)-based token (or
@@ -375,11 +377,11 @@ well before it's actually needed.
 ## 5. The Stakes, and why our model has an edge
 
 The past year (2026, as of this writing) has seen rapid, measurable progress
-toward AI writing the software that builds AI itself.[^5]   This
-mirrors recent progress with toward 
+toward AI writing the software that builds AI itself.[^4]   This
+mirrors recent progress toward 
 ["lights-out manufacturing"](https://en.wikipedia.org/wiki/Lights_out_(manufacturing)) 
 -- robots building new robots with minimal human involvment -- in the 
-physical world. While these  technological trends promise a never-before-seen level of material
+physical world. While these  technologies promise never-before-seen levels of material
 abundance, they can also be deployed to direct that
 abundance exclusively to those whose hands hold the controls. Mass job loss,
 heightened inequality, and constant surveillance are not even the worst of the
@@ -399,9 +401,9 @@ day-to-day gains from that same technology.
 None of that is inevitable though — and this is where we close on a hopeful
 note. First we look at two structural properties of our model 
 that provide operational business advantages. Then finally, we address the 
-likely consequence of any specific legal 501c3 realizing a mission 
-that is overly threatening to entrenched captial:  targeting and surpression.
-And we examine the resliance properties of our model that guard against this.
+likely consequence of any specific 501c3 realizing a mission 
+that is overly threatening to entrenched captial:  targeting and surpression --
+and we examine the resliance properties of our model that guard against this.
 
 
 ### The labor-market half of the advantage: elite overproduction and AI-driven displacement
@@ -414,7 +416,7 @@ elite-track positions than it has positions to absorb them into, intra-elite
 competition intensifies and average outcomes for elite aspirants decline.
 Some fraction of those aspirants then tend to become "counter-elites,"
 turning their training and ambition toward organizing opposition to the
-existing order rather than joining it.[^4]
+existing order rather than joining it.[^5]
 
 This is playing out in the current U.S. software labor market: an
 education system that has spent two decades producing an increasing supply of
@@ -432,8 +434,8 @@ that challenges the system that is leaving them behind.
 ### Cost advantages that a for-profit competitor can't match
 
 Identifying the unmet needs of customers with money, and acquiring those customers
-(just _getting_ them to sign up and try) is a key challenge for-profits face. 
-Nonprofit and shoestring-budget grassroots organizations pose a different problem 
+(just getting them to _sign up and try_) is a key challenge for-profits face. 
+Small nonprofits and shoestring-budget grassroots organizations pose a different problem 
 entirely: their needs are real, often recurring,
 and easy to identify — but most for-profit software companies 
 leave them alone since they can't pay enough to justify the ordinary 
@@ -457,7 +459,7 @@ In summary, the operational advantages that accrue from these two structural pro
 
 
 
-### Resilience: why dispersion is a strength, not just a scaling property
+### Resilience through dispersion 
 
 This multi-Satellite shape is a resilience property, not just a scaling one.
 Concentrating value and capability into a single legal entity is exactly what
@@ -468,20 +470,6 @@ just adequate but
 better"](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem),
 for the full argument.
 
-The same dispersion shows up one level down, inside each Satellite's own
-governance. [Token-based delegated authority](#3-token-based-delegated-authority)
-is built so trust cascades outward — a developer who earns authority can
-grant it further to other trusted committers — rather than funneling every
-new grant through the founding steward personally. It's a small-scale version
-of the same no-single-point-of-failure logic, and the same
-coordination-without-a-center pattern Appendix A.5 calls
-[stigmergy](#a5-stigmergy-coordination-without-a-center): no one is directing
-traffic, yet trust still propagates.
-
-Cost structure and resilience aren't abstractions here — they're the concrete
-reasons a worker-friendly model of production doesn't have to stay a hopeful
-aspiration. This is exactly the model built to give a better answer to the
-question this document opened with.
 
 ## Appendix A: Historical and Economic Grounding
 
@@ -656,9 +644,6 @@ section](#what-factors-drove-emergence-of-corporate-model----neoclassical-view);
 the Ostrom-to-Commons-Hub tie-in has moved to the end of
 [§1](#1-the-commons-layer-and-its-satellites).)*
 
-[^3]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
-[^4]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
-    [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
 [^1]: [As HashiCorp adopts the BSL, an era of open-source software might be
     ending](https://www.runtime.news/as-hashicorp-adopts-the-bsl-an-era-of-open-source-software-might-be-ending/);
     [Moving Away From Open Source: Trends in Source-Available Licensing —
@@ -682,6 +667,10 @@ the Ostrom-to-Commons-Hub tie-in has moved to the end of
     support, a polished commercial product — on top of the shared,
     freely-forkable core. That's the light barrier to entry a subsidiary
     needs to fund itself, without ever restricting the Commons itself.
+[^3]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
+[^4]: [arxiv.org/abs/2607.07663](https://arxiv.org/abs/2607.07663)
+[^5]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
+    [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
 
 ### A.8 AI, abundance, and the case for urgency
 

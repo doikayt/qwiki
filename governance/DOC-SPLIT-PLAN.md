@@ -5,7 +5,10 @@ docs, each linking back to the specific upstream section it depends on rather th
 recapping everything above it — see discussion in session history).
 [`commons-hub-pattern.md`](commons-hub-pattern.md) (Doc 1 — reference architecture,
 including the new Appendix A historical/economic grounding with the Marx/Coase/
-general-intellect material) is drafted. Docs 2 and 4 not yet started. Doc 3
+general-intellect material) is drafted. Doc 2 not yet started. Doc 4
+([`legal-risk-register.md`](legal-risk-register.md)) is a stub: only the sub-$600
+tax-intake-gate item is populated; the full risk list from the original §5 has not
+yet been migrated over. Doc 3
 ([`contributor-guide.md`](contributor-guide.md)) is a stub: Doc 1's full §4 Worked
 Example moved there in full (not just a simplified extraction, per the outline
 below) after Chris judged it too much operational detail for Doc 1's reference

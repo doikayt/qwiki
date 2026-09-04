@@ -52,9 +52,11 @@ flowchart TD
 ```mermaid
 flowchart TD
     A[Allocation instruction] --> BR[Board review / override]
-    BR --> G2{Tax intake on file?<br/>W-9 / W-8BEN}
+    BR --> C{Payout would cross<br/>$600 cumulative<br/>this calendar year?}
+    C -->|no| P[Request Finance / Rise<br/>executes payment<br/>from Treasury]
+    C -->|yes| G2{Tax intake on file?<br/>W-9 / W-8BEN}
     G2 -->|no| H[Held until intake complete]
-    G2 -->|yes| P[Request Finance / Rise<br/>executes payment<br/>from Treasury]
+    G2 -->|yes| P
 
     P --> D[Individual developer]
     P --> Pod[Pod]
@@ -77,13 +79,22 @@ pay contributors in crypto, independent of the voting-tool choice.
    board negotiated and remains accountable for.
 2. Community members who want to contribute work toward the funded program **opt in**
    as contributors (no fixed roster; participation is self-selected by interest).
-3. Each participating contributor completes standard tax intake (e.g., a
-   [W-9](https://www.irs.gov/forms-pubs/about-form-w-9) for US persons,
-   [W-8BEN](https://www.irs.gov/forms-pubs/about-form-w-8-ben) for foreign
-   contributors) and registers a wallet address for
-   receiving funds (chain TBD — Bitcoin or Ethereum are the current candidates).
-   Intake must be complete *before* a contributor is eligible to receive any
-   disbursement — this is a gate, not a follow-up step.
+3. Each participating contributor registers a wallet address for receiving funds
+   (chain TBD — Bitcoin or Ethereum are the current candidates); contributors
+   supply their own address rather than have one generated for them. Supplying
+   an address is optional at sign-up and only becomes necessary once a payout is
+   due — no wallet, no payout, but a contributor can opt in and do funded work
+   before one is on file.
+   Tax intake (e.g., a [W-9](https://www.irs.gov/forms-pubs/about-form-w-9) for
+   US persons — non-US contributor treatment via
+   [W-8BEN](https://www.irs.gov/forms-pubs/about-form-w-8-ben) is not yet
+   addressed) is a *delayed* gate, not an up-front one: a contributor can be paid
+   directly, with a wallet address on file and no W-9, as long as their
+   cumulative payouts for the calendar year stay under $600. Once a payout
+   would cross that threshold, intake becomes a hard gate — it must be complete
+   *before* the crossing payment is released. See the [Legal Risk
+   Register](legal-risk-register.md) for open questions on how the $600 test is
+   applied.
 4. As the program hits its funded milestones, **active contributors vote** on how the
    released tranche is apportioned among those who did the work.
 5. Votes can allocate a tranche either to an **individual contributor** or to a
@@ -92,8 +103,10 @@ pay contributors in crypto, independent of the voting-tool choice.
    divide that chunk — the DAO-level vote only decides the pod's allocation, not the
    individual split within it.
 7. The vote's output is an **allocation instruction**, not a payment. It feeds a
-   disbursement pipeline that: confirms tax intake is on file for every recipient,
-   executes payment only after that check passes, records each payment as compensation
+   disbursement pipeline that: confirms a wallet address is on file for every recipient,
+   confirms tax intake is on file for any recipient whose cumulative payout for the
+   calendar year would cross $600, executes payment only after those checks pass,
+   records each payment as compensation
    for services rendered on the specific funded program (not as a profit share or gift), tracks
    cumulative payments per contributor per calendar year, and issues
    [1099-NEC](https://www.irs.gov/forms-pubs/about-form-1099-nec) (or the
