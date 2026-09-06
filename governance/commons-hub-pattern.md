@@ -99,31 +99,18 @@ walks through the textile-industry case where it first played out.
 
 ### Drivers of the dissolution of the corporate model -- Marxist view
 
-Coase's framework answers "why hierarchy, given the technology and the cost of
-coordination" — but it treats who already owns and controls the
-infrastructure of production — the water wheel, the factory floor, today's
-compute — as a fixed backdrop, not something itself worth explaining. It
-doesn't ask who got to own the water wheel, who got to write the terms
-spinners worked under once centralized, or why "efficiency" so often turns
-out to have been decided in advance by whoever already held the leverage to
-decide it. The issue
-of who holds power in a relationship, and how they choose to exercise it, is
-not a footnote to human production relationships — it is close to the most
-fundamental fact about them. An explanation of why firms exist that doesn't
-ask that question has a real blind spot, not just an incomplete one.
+Coase's analysis makes the advantages of centralization clear, but begs the
+question of _who_ got to own the means of production around which the
+corporate firm is centralized — and _how_ they got to own it in the first
+place.[^2] That question is exactly what [Marxist economic
+theory](#a2-marxism-101)
+takes up, centering it on **class struggle**: a structural conflict
+between whoever owns the means of production and whoever supplies the
+labor that operates them. This plays out in terms of control of the process and the
+division of the value it generates.
 
-This document already makes a version of that argument once, without naming it
-as such: the Introduction's account of enclosure is exactly this critique in
-miniature. The shift from common land to private landholding wasn't a response
-to commoners demanding more efficient land use — it was landowners with the
-power to rewrite the rules doing so, in their own interest, and calling the
-result an improvement. Coase's transaction-cost story and the "efficiency"
-framing around it can be true as far as it goes and still be the story told
-afterward by whoever won.
 
-Marx's own answer to the same question isn't merely "the powerful decide" as a
-general cynicism — he has a specific mechanism, and it's a genuinely useful lens
-for the current moment, not just a historical curiosity. His "Fragment on
+Marx's "Fragment on
 Machines," in the [*Grundrisse*](https://www.marxists.org/archive/marx/works/1857/grundrisse/ch14.htm)
 notebooks (1857–58), predicted a point at which automated, machine-embodied
 social knowledge — what he called the **general intellect** — becomes the
@@ -133,24 +120,30 @@ production. Software built substantially by AI, trained on the accumulated,
 freely-given knowledge-work of millions of people, and then made freely
 reproducible at near-zero marginal cost, is about as literal an instance of
 "general intellect becoming a direct productive force" as has existed since
-Marx wrote the phrase. This is also the passage the later Italian *operaisti* —
-[Antonio Negri](https://en.wikipedia.org/wiki/Antonio_Negri),
-[Carlo Vercellone](https://en.wikipedia.org/wiki/Carlo_Vercellone), and
-[Maurizio Lazzarato](https://en.wikipedia.org/wiki/Maurizio_Lazzarato) — built
-[cognitive capitalism](https://en.wikipedia.org/wiki/Cognitive_capitalism) and
-[immaterial labor](https://en.wikipedia.org/wiki/Immaterial_labour) theory on:
-once value comes from socially-distributed, networked cognitive labor rather
-than labor time inside one factory under one owner's direct supervision,
-private appropriation of that value becomes increasingly awkward to justify, or
-even to mechanically sustain.
+Marx wrote the phrase.
 
-Read this way, Coase and Marx aren't answering different questions so much as
-describing the same mechanism from two different standpoints: Coase describes
-it from inside the system, as a transaction-cost optimization; Marx describes
-it from the standpoint of the system's eventual supersession, as a contradiction
-between how value is actually produced (socially, collaboratively) and how it's
-still legally appropriated (privately, by an owner). Both are looking at the
-same shift in where productive capability actually lives.
+What happens once that labor-time basis actually breaks down is exactly
+what Marx would call a contradiction sharpening — a structural tension
+intrinsic to capitalism between how production actually works and how its
+proceeds get distributed, building until something has to give. As AI
+replaces labor, it produces exactly the kind of widening, credentialed,
+increasingly jobless and discontented population
+[§5](#the-labor-market-half-of-the-advantage-elite-overproduction-and-ai-driven-displacement)
+discusses under Peter Turchin's elite-overproduction framework. At the
+same time, it becomes increasingly hard for the capitalist class to
+justify its expropriation of surplus value once it's plain that their
+ability to extract it is merely the exclusive result of owning the means
+of production — the data centers, the "frontier models" — not any
+distinctive contribution they make themselves.
+
+The likely reaction to that combination isn't quiet acceptance:
+discontented, marginalized, now-jobless workers wake up and challenge the
+system that produced their condition — and that challenge is met, by
+default, with increasing repression rather than redistribution. None of
+this is determined to happen — see [Appendix
+A.3](#a3-determinism-vs-contingency-what-this-document-is-and-isnt-claiming)
+on why this document doesn't treat any of it as inevitable — but it is
+exactly the trajectory this pattern exists to interrupt.
 
 ## 1. The Commons Layer and Its Satellites
 
@@ -202,7 +195,7 @@ for private ownership of public goods. Market leading software vendors
 decide to relicense away from open source after cloud providers resold
 their software without contributing back — HashiCorp's leadership rationalized this move
 in almost exactly Hardin's terms: "there's a tragedy of the commons
-here."[^2] 
+here."[^3] 
 
 So of what value could our model be, if successful established 
 software firms are moving 
@@ -216,7 +209,7 @@ for-profit company, so mission/governance control
 public benefit the Satellite was chartered for, never to shareholder
 return. That's the actual precondition for this whole proposal: an
 organization motivated by mission as opposed to profit has no
-motivation or justification to enclose in the same way HashiCorp did. [^3]
+motivation or justification to enclose in the same way HashiCorp did. [^4]
 
 
 ### The Tragedy of the Commons, Proven Wrong
@@ -228,7 +221,7 @@ Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Science
 overturned Hardin's claim, documenting hundreds of real cases where
 communities successfully self-governed shared resources through their own
 institutional rules, without requiring either privatization or centralized
-state control.[^4]    Our proposal can be viewed as applying
+state control.[^5]    Our proposal can be viewed as applying
 Ostrom-style commons governance to a *digital* commons — open source software — 
 rather than to land, water, or fisheries.
 
@@ -371,7 +364,7 @@ well before it's actually needed.
 ## 5. The Stakes, and why our model has an edge
 
 The past year (2026, as of this writing) has seen rapid, measurable progress
-toward AI writing the software that builds AI itself.[^5]   This
+toward AI writing the software that builds AI itself.[^6]   This
 mirrors recent progress toward 
 ["lights-out manufacturing"](https://en.wikipedia.org/wiki/Lights_out_(manufacturing)) 
 -- robots building new robots with minimal human involvment -- in the 
@@ -410,7 +403,7 @@ elite-track positions than it has positions to absorb them into, intra-elite
 competition intensifies and average outcomes for elite aspirants decline.
 Some fraction of those aspirants then tend to become "counter-elites,"
 turning their training and ambition toward organizing opposition to the
-existing order rather than joining it.[^6]
+existing order rather than joining it.[^7]
 
 This is playing out in the current U.S. software labor market: an
 education system that has spent two decades producing an increasing supply of
@@ -555,9 +548,60 @@ things cheap":
 ------   Need lots of edits on the remaining content.. pls skip if you are reviewing ---
 <<note: one force we should definitely mention is the Peter Turchin elites idea>>
 
-*(A.2 formerly here — "What Coase's account leaves out: power, and Marx's
-answer to it" — has moved into the main body; see [§Marxist
-View](#what-forces-favor-eventual-dissolution-of-corporate-model----marxist-view).)*
+### A.2 Marxism 101
+
+This document draws on a narrow, specific slice of Marx's economic theory —
+not a survey of Marxism as a political movement. A few concepts do
+essentially all of the work:
+
+**Value and socially necessary labor time.** Marx's labor theory of value
+holds that a commodity's value is set by the labor time *society, on
+average, needs* to produce it under prevailing conditions and technology —
+not by how long any particular producer actually takes. A slower worker
+doesn't create more value by working longer; a faster one (say, using
+better machinery) captures the gap between their own time and the social
+average as profit, until competitors catch up and the average itself
+falls. This is the mechanism behind the competitive drive to mechanize
+discussed in [Appendix
+A.1](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now).
+
+**Surplus value.** A worker is paid a wage that covers roughly what it
+costs to reproduce their labor day-to-day — Marx calls the portion of the
+working day that earns back that wage *necessary labor time*. Whatever
+labor happens beyond that — *surplus labor time* — still produces value,
+but that value isn't paid for; the employer keeps it as *surplus value*,
+the source of profit.
+
+**Class struggle.** Not a slogan — a structural claim: because capital (the
+owner of the means of production) and labor (the people who operate it)
+have opposed interests in how the resulting surplus gets divided, and
+because that division is set by whoever holds the power to write the rules
+of production and distribution, the conflict is a permanent, structural
+feature of the relationship — not an occasional dispute good-faith
+negotiation eventually resolves for good.
+
+**Contradictions.** In Marx's usage, a contradiction isn't a logical
+inconsistency in an argument — it's a real, structural tension between two
+parts of an economic system that pull against each other and sharpen over
+time until something has to give. The clearest example for this document:
+production keeps becoming more social — the combined, accumulated work of
+many people, coordinated at scale — while the resulting surplus stays
+privately claimed by whoever owns the means of production, as though it
+were the product of their investment alone. The more social production
+becomes, the harder that private claim gets to defend on its own terms.
+
+**Dialectical materialism.** Marx's method for explaining historical
+change: rather than treating ideas or values as history's engine, it looks
+at contradictions *within* a society's actual material and economic
+conditions — between how production is organized and how its output gets
+owned and distributed, for instance — as what eventually forces a shift to
+a new arrangement.
+
+One more term, **general intellect**, does real work later in this
+document — it's introduced in context where it's used (the "Drivers of the
+dissolution..." section above), rather than here, since it belongs to
+Marx's later writing on automation rather than his foundational value
+theory.
 
 ### A.3 Determinism vs. contingency: what this document is and isn't claiming
 
@@ -659,11 +703,16 @@ the Ostrom-to-Commons-Hub tie-in has moved to the end of
     half of all land in England was already enclosed, with roughly 5,200
     enclosure Acts passed between 1604 and 1914, covering about a fifth of
     England's total land area (~6.8 million acres).
-[^2]: [As HashiCorp adopts the BSL, an era of open-source software might be
+[^2]: [Public Goods — YouTube](https://www.youtube.com/watch?v=F4SmgrAmdUQ&t=296s).
+    Uses Banksy's graffiti as an example of enclosure — a public good turned
+    into a private commodity — and covers Elinor Ostrom's research
+    overturning Garrett Hardin's "tragedy of the commons," which this
+    document covers directly in [§1](#the-tragedy-of-the-commons-proven-wrong).
+[^3]: [As HashiCorp adopts the BSL, an era of open-source software might be
     ending](https://www.runtime.news/as-hashicorp-adopts-the-bsl-an-era-of-open-source-software-might-be-ending/);
     [Moving Away From Open Source: Trends in Source-Available Licensing —
     Goodwin](https://www.goodwinlaw.com/en/insights/publications/2024/09/insights-practices-moving-away-from-open-source-trends-in-licensing).
-[^3]: The "nuclear option" against enclosure is a strong copyleft license
+[^4]: The "nuclear option" against enclosure is a strong copyleft license
     such as the [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License),
     which requires anyone who distributes a modified version to release
     their changes under the same terms. Note this only locks out
@@ -682,9 +731,9 @@ the Ostrom-to-Commons-Hub tie-in has moved to the end of
     support, a polished commercial product — on top of the shared,
     freely-forkable core. That's the light barrier to entry a subsidiary
     needs to fund itself, without ever restricting the Commons itself.
-[^4]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
-[^5]: [arxiv.org/abs/2607.07663](https://arxiv.org/abs/2607.07663)
-[^6]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
+[^5]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
+[^6]: [arxiv.org/abs/2607.07663](https://arxiv.org/abs/2607.07663)
+[^7]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
     [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
 
 ### A.8 AI, abundance, and the case for urgency
