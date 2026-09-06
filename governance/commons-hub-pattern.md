@@ -18,9 +18,7 @@ and earned revenue get distributed among contributors through a narrowly-scoped
 Decentralized Autonomous Organization) — we look at some of the historical and
 economic factors which make the emergence of a new model inevitable. We note how
 the standard corporate form arose as a specific historical answer to the
-questions of 
-(a) who governs production (and by what means)?   and 
-(b) who benefits from that production (and by what means)?. We first
+questions of (a) who governs production?   and (b) who benefits from that production? We first
 analyze these questions through the lens of neoclassical economists — in
 particular how [Coase's 1937 transaction-cost
 account](https://en.wikipedia.org/wiki/The_Nature_of_the_Firm) explains why
@@ -64,7 +62,7 @@ questions differently: [guilds](https://en.wikipedia.org/wiki/Guild),
 the industrial corporation, the modern platform company. Each is a governance
 structure for collective production and economic benefit, adopted — and later
 challenged — because the previous model no longer served elites
-with the power to change it. The wave of English enclosure that began around the mid-1700s
+with the power to change it. The wave of English enclosure that began around the mid-1700s[^1]
 was driven by landowners who benefited from privatizing common land, not by
 commoners demanding it; joint-stock charters emerged to mobilize capital
 for merchants and investors who needed a legal vehicle for it, not from popular
@@ -194,7 +192,7 @@ this structure.
 
 There is an active movement today to re-enclose the digital commons — 
 the central component of our model. Companies 
-seeking this privatization often justify its merits by pointing to
+seeking such privatization often justify its merits by pointing to
 Garrett Hardin's 1968 essay, ["The Tragedy of the
 Commons"](https://en.wikipedia.org/wiki/Tragedy_of_the_commons), which argued
 that unowned shared resources are inherently doomed to overexploitation and
@@ -202,9 +200,9 @@ mismanagement. Simple in its appeal, this idea has become a go-to rationalizatio
 for private ownership of public goods. Market leading software vendors 
 (MongoDB, Elastic, HashiCorp et.al.) have all recently 
 decide to relicense away from open source after cloud providers resold
-their software without contributing back — HashiCorp's leadership described
-it in almost exactly Hardin's terms: "there's a tragedy of the commons
-here."[^1] 
+their software without contributing back — HashiCorp's leadership rationalized this move
+in almost exactly Hardin's terms: "there's a tragedy of the commons
+here."[^2] 
 
 So of what value could our model be, if successful established 
 software firms are moving 
@@ -217,10 +215,8 @@ for-profit company, so mission/governance control
 ([§1](#1-the-commons-layer-and-its-satellites)) stays legally locked to the
 public benefit the Satellite was chartered for, never to shareholder
 return. That's the actual precondition for this whole proposal: an
-organization motivated by profit first and mission second has no
-structural reason not to enclose the same way HashiCorp did. This pattern
-works because mission sits ahead of profit at the ownership layer — not
-despite it.[^2]
+organization motivated by mission as opposed to profit has no
+motivation or justification to enclose in the same way HashiCorp did. [^3]
 
 
 ### The Tragedy of the Commons, Proven Wrong
@@ -232,7 +228,7 @@ Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Science
 overturned Hardin's claim, documenting hundreds of real cases where
 communities successfully self-governed shared resources through their own
 institutional rules, without requiring either privatization or centralized
-state control.[^3]    Our proposal can be viewed as applying
+state control.[^4]    Our proposal can be viewed as applying
 Ostrom-style commons governance to a *digital* commons — open source software — 
 rather than to land, water, or fisheries.
 
@@ -280,7 +276,7 @@ This authority applies across the nonprofit and its for-profit subsidiary
 alike. It is, in effect, a share of decision-making authority that scales
 with how much a contributor is trusted, and it is distinct from both  the Board and the 
 DAO. The former governs mission, long term priorities, and policy. The latter exists to 
-distribute the proceeds of an already-secured funded program. 
+distribute the proceeds of a funded program. 
 *Token-based delegated authority* is tactical in scope and carries
 no profit-participation rights. 
 
@@ -375,7 +371,7 @@ well before it's actually needed.
 ## 5. The Stakes, and why our model has an edge
 
 The past year (2026, as of this writing) has seen rapid, measurable progress
-toward AI writing the software that builds AI itself.[^4]   This
+toward AI writing the software that builds AI itself.[^5]   This
 mirrors recent progress toward 
 ["lights-out manufacturing"](https://en.wikipedia.org/wiki/Lights_out_(manufacturing)) 
 -- robots building new robots with minimal human involvment -- in the 
@@ -414,7 +410,7 @@ elite-track positions than it has positions to absorb them into, intra-elite
 competition intensifies and average outcomes for elite aspirants decline.
 Some fraction of those aspirants then tend to become "counter-elites,"
 turning their training and ambition toward organizing opposition to the
-existing order rather than joining it.[^5]
+existing order rather than joining it.[^6]
 
 This is playing out in the current U.S. software labor market: an
 education system that has spent two decades producing an increasing supply of
@@ -658,11 +654,16 @@ section](#what-factors-drove-emergence-of-corporate-model----neoclassical-view);
 the Ostrom-to-Commons-Hub tie-in has moved to the end of
 [§1](#1-the-commons-layer-and-its-satellites).)*
 
-[^1]: [As HashiCorp adopts the BSL, an era of open-source software might be
+[^1]: [Inclosure Acts — Wikipedia](https://en.wikipedia.org/wiki/Inclosure_Acts).
+    Parliamentary enclosure became the norm from the 1750s on; by 1750, nearly
+    half of all land in England was already enclosed, with roughly 5,200
+    enclosure Acts passed between 1604 and 1914, covering about a fifth of
+    England's total land area (~6.8 million acres).
+[^2]: [As HashiCorp adopts the BSL, an era of open-source software might be
     ending](https://www.runtime.news/as-hashicorp-adopts-the-bsl-an-era-of-open-source-software-might-be-ending/);
     [Moving Away From Open Source: Trends in Source-Available Licensing —
     Goodwin](https://www.goodwinlaw.com/en/insights/publications/2024/09/insights-practices-moving-away-from-open-source-trends-in-licensing).
-[^2]: The "nuclear option" against enclosure is a strong copyleft license
+[^3]: The "nuclear option" against enclosure is a strong copyleft license
     such as the [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License),
     which requires anyone who distributes a modified version to release
     their changes under the same terms. Note this only locks out
@@ -681,9 +682,9 @@ the Ostrom-to-Commons-Hub tie-in has moved to the end of
     support, a polished commercial product — on top of the shared,
     freely-forkable core. That's the light barrier to entry a subsidiary
     needs to fund itself, without ever restricting the Commons itself.
-[^3]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
-[^4]: [arxiv.org/abs/2607.07663](https://arxiv.org/abs/2607.07663)
-[^5]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
+[^4]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
+[^5]: [arxiv.org/abs/2607.07663](https://arxiv.org/abs/2607.07663)
+[^6]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
     [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
 
 ### A.8 AI, abundance, and the case for urgency
