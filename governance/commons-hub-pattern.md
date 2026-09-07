@@ -558,8 +558,8 @@ the hunter could already see, before ever knapping the stone.
 This intrinsic utility of a thing is what Marx calls *use-value*,
 and it is inherent in any 'useful thing' independent of anyone exchanging it.
 
-What Marx termed **value** only enters once two hypothteical hunter-gatherer 
-bands meet. Let's say one has access to a
+What Marx termed **value** only enters into the picture 
+once two hypothteical hunter-gatherer bands meet. Let's say one has access to a
 riverbed full of fint, but is short on meat, while the other has
 half a mastadon, but is short on tools.
 They  start trading: flint tools for meat.
