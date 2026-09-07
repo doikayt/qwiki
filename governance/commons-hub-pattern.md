@@ -105,49 +105,38 @@ corporate firm is centralized — and _how_ they got to own it in the first
 place.[^2] That question is exactly what [Marxist economic
 theory](#a2-marxism-101)
 takes up, centering it on **class struggle**: a structural conflict
-between whoever owns the means of production and whoever supplies the
-labor that operates them. This plays out in terms of control of the process and the
-division of the value it generates.
+between whoever owns "the factory," and those who labor inside of it.
+This manifests in terms of conflict over 
+how the production process is organized (think wildcat strikes over shop floor conditions), and the
+division of the value that process generates.
 
 
-Marx's "Fragment on
-Machines," in the [*Grundrisse*](https://www.marxists.org/archive/marx/works/1857/grundrisse/ch14.htm)
-notebooks (1857–58), predicted a point at which automated, machine-embodied
-social knowledge — what he called the **general intellect** — becomes the
-primary productive force directly, at which point value grounded in direct,
-individually-measured labor time starts to break down as the actual basis of
-production. Software built substantially by AI, trained on the accumulated,
-freely-given knowledge-work of millions of people, and then made freely
-reproducible at near-zero marginal cost, is about as literal an instance of
-"general intellect becoming a direct productive force" as has existed since
-Marx wrote the phrase.
+Capitalist modes of production, according to Marx, play out in a system whose internal
+_contradictions_ lead to the inexorable collapse of capitalism itself.  Among
+these contradictions: quarterly focus on profits' demand for infinite growth
+versus the fundamental resource limits of the planet,
+the fact that continually _squeezing_ working people's wages leaves them with increasingly _shrinking_
+disposable income to purchase the goods a capitalist economy produces. But the internal
+contradiction most relevant to this section is the process by which the surplus value
+extracted from workers is invested into ever more sophisticated machines which
+perform work with ever-increasing efficiency, and ever-diminishing requirements for human labor.
 
-What happens once that labor-time basis actually breaks down is exactly
-what Marx would call a contradiction sharpening — a structural tension
-intrinsic to capitalism between how production actually works and how its
-proceeds get distributed, building until something has to give. As AI
-replaces labor, it produces exactly the kind of widening, credentialed,
-increasingly jobless and discontented population
-[§5](#the-labor-market-half-of-the-advantage-elite-overproduction-and-ai-driven-displacement)
-discusses under Peter Turchin's elite-overproduction framework. At the
-same time, it becomes increasingly hard for the capitalist class to
-justify its expropriation of surplus value once it's plain that their
-ability to extract it is merely the exclusive result of owning the means
-of production — the data centers, the "frontier models" — not any
-distinctive contribution they make themselves.
+Marx's "Fragment on Machines," in the Grundrisse notebooks (1857–58),[^3] anticipated exactly this: a point at
+which automated, machine-embodied social knowledge,  "the general intellect" (in his terms), 
+becomes the primary productive force directly, breaking down labor-time as the basis of value.
+Once that labor-time basis breaks down, working people notice — both that they no longer
+have work, and that the resulting abundance is being captured by a class that visibly
+isn't the one still producing it. How a society -- especially one as heavily armed and 
+socially fragmented as what we have now in the US --  handles that disillusionment 
+depends to a large degree on whether alternative, fairer models of production can be 
+established.
 
-The likely reaction to that combination isn't quiet acceptance:
-discontented, marginalized, now-jobless workers wake up and challenge the
-system that produced their condition — and that challenge is met, by
-default, with increasing repression rather than redistribution. None of
-this is determined to happen — see [Appendix
-A.3](#a3-determinism-vs-contingency-what-this-document-is-and-isnt-claiming)
-on why this document doesn't treat any of it as inevitable — but it is
-exactly the trajectory this pattern exists to interrupt.
+
+
 
 ## 1. The Commons Layer and Its Satellites
 
-At the center of our proposed pattern is a **Commons**: a body of 
+At the center of our proposed model is a **Commons**: a body of 
 collaboratively developed
 open source software (and the engineering practices, standards, and shared libraries
 around it). A Commons might be a shared application framework, a set of 
@@ -195,7 +184,7 @@ for private ownership of public goods. Market leading software vendors
 decide to relicense away from open source after cloud providers resold
 their software without contributing back — HashiCorp's leadership rationalized this move
 in almost exactly Hardin's terms: "there's a tragedy of the commons
-here."[^3] 
+here."[^4] 
 
 So of what value could our model be, if successful established 
 software firms are moving 
@@ -209,7 +198,7 @@ for-profit company, so mission/governance control
 public benefit the Satellite was chartered for, never to shareholder
 return. That's the actual precondition for this whole proposal: an
 organization motivated by mission as opposed to profit has no
-motivation or justification to enclose in the same way HashiCorp did. [^4]
+motivation or justification to enclose in the same way HashiCorp did. [^5]
 
 
 ### The Tragedy of the Commons, Proven Wrong
@@ -221,7 +210,7 @@ Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Science
 overturned Hardin's claim, documenting hundreds of real cases where
 communities successfully self-governed shared resources through their own
 institutional rules, without requiring either privatization or centralized
-state control.[^5]    Our proposal can be viewed as applying
+state control.[^6]    Our proposal can be viewed as applying
 Ostrom-style commons governance to a *digital* commons — open source software — 
 rather than to land, water, or fisheries.
 
@@ -364,7 +353,7 @@ well before it's actually needed.
 ## 5. The Stakes, and why our model has an edge
 
 The past year (2026, as of this writing) has seen rapid, measurable progress
-toward AI writing the software that builds AI itself.[^6]   This
+toward AI writing the software that builds AI itself.[^7]   This
 mirrors recent progress toward 
 ["lights-out manufacturing"](https://en.wikipedia.org/wiki/Lights_out_(manufacturing)) 
 -- robots building new robots with minimal human involvment -- in the 
@@ -403,7 +392,7 @@ elite-track positions than it has positions to absorb them into, intra-elite
 competition intensifies and average outcomes for elite aspirants decline.
 Some fraction of those aspirants then tend to become "counter-elites,"
 turning their training and ambition toward organizing opposition to the
-existing order rather than joining it.[^7]
+existing order rather than joining it.[^8]
 
 This is playing out in the current U.S. software labor market: an
 education system that has spent two decades producing an increasing supply of
@@ -603,26 +592,6 @@ dissolution..." section above), rather than here, since it belongs to
 Marx's later writing on automation rather than his foundational value
 theory.
 
-### A.3 Determinism vs. contingency: what this document is and isn't claiming
-
-It would be convenient — and dishonest — to claim that any of this makes the
-outcome determined. A strict materialist reading would want to say this is a
-determined transition: the contradiction sharpens, the old relations become an
-unsustainable fetter, transformation follows more or less on schedule. The
-actual historical record doesn't support that confidence: capitalism has
-repeatedly absorbed exactly this kind of threat rather than being superseded by
-it — open protocols get captured into platforms, networked production gets
-re-enclosed via IP law and API paywalls, and there's nothing automatic about
-commons-based production winning this round either.
-
-The honest version isn't "history is doing this for us." It's: the technical
-conditions are more favorable to this kind of project than they've been before,
-and someone still has to build the institutions that actually hold the line, on
-purpose, against re-enclosure. Which, not coincidentally, is what the
-[Contributor Guide](contributor-guide.md)'s trust layer and non-transferable
-tactical-governance tokens are actually for — they're the deliberate, contingent
-political work standing in for the "inevitable" the dialectic doesn't actually
-guarantee. Nothing in this pattern wins by waiting.
 
 ### A.4 Commons-based peer production: Benkler's answer
 
@@ -648,21 +617,6 @@ than either price signals or managerial hierarchy. This isn't speculative —
 it's the mode that already produced Linux and most of the open source stack
 this pattern itself depends on.
 
-### A.5 Stigmergy: coordination without a center
-
-The coordination mechanism this points toward has a name too:
-**[stigmergy](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10956014/)** —
-agents coordinating indirectly through shared traces left in a common
-environment, rather than through direct communication or central command. An
-ant doesn't get orders; it reads a pheromone trail another ant left and
-reinforces or ignores it, and the colony converges on good paths without any
-ant ever computing one. It's a live concept in swarm robotics and multi-agent
-AI system design today, not just biology — and this pattern already specifies
-the pheromone trail: the shared Commons itself, and the committer-standing
-record and token-based delegated authority described in the
-[Contributor Guide](contributor-guide.md), are the shared environment that
-lets independent contributors coordinate toward a common goal without anyone
-directing traffic.
 
 ### A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem
 
@@ -708,11 +662,15 @@ the Ostrom-to-Commons-Hub tie-in has moved to the end of
     into a private commodity — and covers Elinor Ostrom's research
     overturning Garrett Hardin's "tragedy of the commons," which this
     document covers directly in [§1](#the-tragedy-of-the-commons-proven-wrong).
-[^3]: [As HashiCorp adopts the BSL, an era of open-source software might be
+[^3]: Karl Marx, "Fragment on Machines," in the [*Grundrisse*
+    notebooks](https://www.marxists.org/archive/marx/works/1857/grundrisse/ch14.htm)
+    (1857–58) — the notebook section containing the **general intellect**
+    passage this document draws on.
+[^4]: [As HashiCorp adopts the BSL, an era of open-source software might be
     ending](https://www.runtime.news/as-hashicorp-adopts-the-bsl-an-era-of-open-source-software-might-be-ending/);
     [Moving Away From Open Source: Trends in Source-Available Licensing —
     Goodwin](https://www.goodwinlaw.com/en/insights/publications/2024/09/insights-practices-moving-away-from-open-source-trends-in-licensing).
-[^4]: The "nuclear option" against enclosure is a strong copyleft license
+[^5]: The "nuclear option" against enclosure is a strong copyleft license
     such as the [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License),
     which requires anyone who distributes a modified version to release
     their changes under the same terms. Note this only locks out
@@ -731,9 +689,9 @@ the Ostrom-to-Commons-Hub tie-in has moved to the end of
     support, a polished commercial product — on top of the shared,
     freely-forkable core. That's the light barrier to entry a subsidiary
     needs to fund itself, without ever restricting the Commons itself.
-[^5]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
-[^6]: [arxiv.org/abs/2607.07663](https://arxiv.org/abs/2607.07663)
-[^7]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
+[^6]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
+[^7]: [arxiv.org/abs/2607.07663](https://arxiv.org/abs/2607.07663)
+[^8]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
     [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
 
 ### A.8 AI, abundance, and the case for urgency
