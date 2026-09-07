@@ -103,7 +103,7 @@ Coase's analysis makes the advantages of centralization clear, but begs the
 question of _who_ got to own the means of production around which the
 corporate firm is centralized — and _how_ they got to own it in the first
 place.[^2] That question is exactly what [Marxist economic
-theory](#a2-marxism-101)
+theory](#a2-marxist-economics-101)
 takes up, centering it on **class struggle**: a structural conflict
 between whoever owns "the factory," and those who labor inside of it.
 This manifests in terms of conflict over 
@@ -538,60 +538,105 @@ things cheap":
 ------   Need lots of edits on the remaining content.. pls skip if you are reviewing ---
 <<note: one force we should definitely mention is the Peter Turchin elites idea>>
 
-### A.2 Marxism 101
+### A.2 Marxist Economics 101
 
-This document draws on a narrow, specific slice of Marx's economic theory —
-not a survey of Marxism as a political movement. A few concepts do
-essentially all of the work:
+This narrowly focused primer on Marx's economic theory is targeted to
+readers who are 'Marx-curious' but have never studied his work  -- in particular 
+his concept of  the **labor theory of value**. The sketch below will, hopefully,
+provide sufficient background for readers to understand his "Fragment on Machines" notes.
 
-**Value and socially necessary labor time.** Marx's labor theory of value
-holds that a commodity's value is set by the labor time *society, on
-average, needs* to produce it under prevailing conditions and technology —
-not by how long any particular producer actually takes. A slower worker
-doesn't create more value by working longer; a faster one (say, using
-better machinery) captures the gap between their own time and the social
-average as profit, until competitors catch up and the average itself
-falls. This is the mechanism behind the competitive drive to mechanize
-discussed in [Appendix
+All human beings -- from stone age hunter gathers to present day 
+warehouse workers -- have an intrinsic understanding of what is useful and what isn't. 
+To the former, meat and berries had immediate utility — eat them, and nothing else was required. 
+On the other hand, something like a raw chunk
+of flint, picked up out of a streambed, had a different, lesser
+use-value than it would have once it was worked: as raw material, it was
+useful only in the sense that it was *good for becoming* something
+else — it couldn't yet cut or hunt with anything, the way a knapped
+blade could. That gap between raw material and finished tool was what
+the forager could already see, before ever knapping the stone.
+
+This intrinsic utility of a thing is what Marx calls *use-value* and it is inherint in a 'useful thing' 
+independent of anyone owning or exchanging it.
+
+
+Arable land, a shoe factory, an idle data center all have real use-value
+on their own, worked or not, in exactly the flint's sense — a field
+can grow crops, a factory could turn out shoes, a data center could run
+workloads, once someone works them.
+
+Value only enters once two different bands meet — say, one near a
+flint source but short on meat, one with the opposite problem — and
+start trading: flint for meat. That's a negotiation no other animal
+is known to carry out. To settle it, both sides need something
+comparable that isn't "how nourishing is meat" versus "how sharp is
+flint" — those aren't on the same scale at all. What both sides do
+have some rough sense of is how much effort each good took to get: days
+spent traveling to the source and knapping blades, against days spent
+tracking and butchering game. That comparison — effort against effort,
+not usefulness against usefulness — is the seed of what Marx calls
+*value*: labor applied to produce something specifically to trade away,
+measured against what it typically takes other producers to make the
+same thing. Put the two side by side and the distinction is: use-value
+is intrinsic — does this thing meet a need, exchange or no exchange —
+while value doesn't exist without a whole system of exchange behind it,
+since its size is set by a social average, not by what any one trade
+settles on. Arable land, a shoe factory, a data center all lack value
+the same way an unknapped stone does, until human effort is applied to
+produce something with it for the market. That effort includes the
+entrepreneur's — inventing a new machine, or simply seeing that existing
+machinery could make a new product for a new market, much like a
+forager recognizing a streambed stone's potential as a blade before
+ever picking it up. And value, once it exists, is what settles
+*exchange-value* — how much of one commodity trades for another — with
+its size set by the labor time society, on average, needs to produce a
+given output under prevailing technology, not by how long any one
+producer actually takes. A slower worker doesn't create more value by
+working longer; a faster one — say, using better machinery — captures the
+gap between their own time and the social average as profit, until
+competitors catch up and the average itself falls. This is the mechanism
+behind the competitive drive to mechanize discussed in [Appendix
 A.1](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now).
 
-**Surplus value.** A worker is paid a wage that covers roughly what it
-costs to reproduce their labor day-to-day — Marx calls the portion of the
-working day that earns back that wage *necessary labor time*. Whatever
-labor happens beyond that — *surplus labor time* — still produces value,
-but that value isn't paid for; the employer keeps it as *surplus value*,
-the source of profit.
+That same gap shows up again, from the employer's side, as the source of
+profit itself. A worker is paid a wage that covers roughly what it costs
+to maintain their lifestyle from one day to the next --everything from 
+food to rent, to entertainment, to whatever portion of that day's 
+pay that put away for a rainy day. Marx calls the
+portion of the working day that earns back that wage *necessary labor
+time*. 
 
-**Class struggle.** Not a slogan — a structural claim: because capital (the
-owner of the means of production) and labor (the people who operate it)
-have opposed interests in how the resulting surplus gets divided, and
-because that division is set by whoever holds the power to write the rules
-of production and distribution, the conflict is a permanent, structural
-feature of the relationship — not an occasional dispute good-faith
-negotiation eventually resolves for good.
+Whatever labor happens beyond it — *surplus labor time* — still
+produces value, but that value isn't paid for; the employer keeps it as
+*surplus value*, the source of profit.
 
-**Contradictions.** In Marx's usage, a contradiction isn't a logical
-inconsistency in an argument — it's a real, structural tension between two
-parts of an economic system that pull against each other and sharpen over
-time until something has to give. The clearest example for this document:
-production keeps becoming more social — the combined, accumulated work of
-many people, coordinated at scale — while the resulting surplus stays
-privately claimed by whoever owns the means of production, as though it
-were the product of their investment alone. The more social production
-becomes, the harder that private claim gets to defend on its own terms.
+Whoever owns the machinery that surplus gets invested in also holds most
+of the power to decide how the production process is organized and how
+its output gets divided — and whoever operates that machinery has an
+obvious stake in both questions too. That opposition of interest is
+structural, not incidental: it isn't something one good-faith negotiation
+resolves for good, because the underlying division of power producing it
+doesn't go away. Marx calls this **class struggle**, and it's one instance
+of a broader pattern he calls *contradictions* — real, structural tensions
+between two parts of an economic system that pull against each other and
+sharpen over time until something gives. The one that matters most here:
+production keeps becoming more social — the combined, coordinated work of
+many people at increasing scale — while the surplus it generates keeps
+being claimed privately, by whoever owns the means of production, as
+though it were the product of their investment alone. The harder that
+private claim gets to defend, the more it looks like what Marx's
+method — *dialectical materialism* — treats as history's actual engine:
+not shifts in ideas or values, but tensions like this one, inside a
+society's actual material and economic conditions, forcing a shift to a
+new arrangement.
 
-**Dialectical materialism.** Marx's method for explaining historical
-change: rather than treating ideas or values as history's engine, it looks
-at contradictions *within* a society's actual material and economic
-conditions — between how production is organized and how its output gets
-owned and distributed, for instance — as what eventually forces a shift to
-a new arrangement.
-
-One more term, **general intellect**, does real work later in this
-document — it's introduced in context where it's used (the "Drivers of the
-dissolution..." section above), rather than here, since it belongs to
-Marx's later writing on automation rather than his foundational value
-theory.
+One specific version of that contradiction — surplus value plowed into
+machines that need less and less human labor to run — is what the
+"Drivers" argument above turns on next. There, automated, machine-embodied
+knowledge — what Marx calls **general intellect** — is introduced in
+context, where the document actually uses it, rather than here, since it
+belongs to his later writing on automation rather than his foundational
+value theory.
 
 
 ### A.4 Commons-based peer production: Benkler's answer
