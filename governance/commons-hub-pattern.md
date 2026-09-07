@@ -112,7 +112,7 @@ division of the value that process generates.
 
 
 Capitalist modes of production, according to Marx, play out in a system whose internal
-_contradictions_ lead to the inexorable collapse of capitalism itself.  Among
+_contradictions_ lead to the inexorable collapse of capitalism itself --   among
 these contradictions: quarterly focus on profits' demand for infinite growth
 versus the fundamental resource limits of the planet,
 the fact that continually _squeezing_ working people's wages leaves them with increasingly _shrinking_
@@ -122,7 +122,8 @@ extracted from workers is invested into ever more sophisticated machines which
 perform work with ever-increasing efficiency, and ever-diminishing requirements for human labor.
 
 Marx's "Fragment on Machines," in the Grundrisse notebooks (1857–58),[^3] anticipated exactly this: a point at
-which automated, machine-embodied social knowledge,  "the general intellect" (in his terms), 
+which automated, machine-embodied social knowledge, "the general intellect" (Marx's term — but
+with a striking resonance to today's [AGI](https://en.wikipedia.org/wiki/Artificial_general_intelligence)),
 becomes the primary productive force directly, breaking down labor-time as the basis of value.
 Once that labor-time basis breaks down, working people notice — both that they no longer
 have work, and that the resulting abundance is being captured by a class that visibly
