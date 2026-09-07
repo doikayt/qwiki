@@ -545,43 +545,42 @@ readers who are 'Marx-curious' but have never studied his work  -- in particular
 his concept of  the **labor theory of value**. The sketch below will, hopefully,
 provide sufficient background for readers to understand his "Fragment on Machines" notes.
 
-All human beings -- from stone age hunter gathers to present day 
+All human beings -- from stone age hunter-gatherers to present day 
 warehouse workers -- have an intrinsic understanding of what is useful and what isn't. 
 To the former, meat and berries had immediate utility — eat them, and nothing else was required. 
 On the other hand, something like a raw chunk
-of flint, picked up out of a streambed, had a different, lesser
+of flint, collected from a streambed, had a different, lesser
 use-value than it would have once it was worked: as raw material, it was
 useful only in the sense that it was *good for becoming* something
-else — it couldn't yet cut or hunt with anything, the way a knapped
+else — it couldn't yet cut anything the way a knapped
 blade could. That gap between raw material and finished tool was what
-the forager could already see, before ever knapping the stone.
+the hunter could already see, before ever knapping the stone.
+This intrinsic utility of a thing is what Marx calls *use-value*,
+and it is inherent in any 'useful thing' independent of anyone exchanging it.
 
-This intrinsic utility of a thing is what Marx calls *use-value* and it is inherint in a 'useful thing' 
-independent of anyone owning or exchanging it.
+What Marx termed **value** only enters once two hypothteical hunter-gatherer 
+bands meet. Let's say one has access to a
+riverbed full of fint, but is short on meat, while the other has
+half a mastadon, but is short on tools.
+They  start trading: flint tools for meat.
+To settle a transaction, both sides need to take into account factors other than
+"how nourishing is this meat" versus "how sharp is
+this tool" — those aren't on the same scale at all. What both sides do
+have some rough sense of is how much effort each good took to 
+obtain in its finished form: days spent traveling to the 
+riverbed, then collecting  and knapping blades, versus 
+days spent tracking and butchering game.
 
-
-Arable land, a shoe factory, an idle data center all have real use-value
-on their own, worked or not, in exactly the flint's sense — a field
-can grow crops, a factory could turn out shoes, a data center could run
-workloads, once someone works them.
-
-Value only enters once two different bands meet — say, one near a
-flint source but short on meat, one with the opposite problem — and
-start trading: flint for meat. That's a negotiation no other animal
-is known to carry out. To settle it, both sides need something
-comparable that isn't "how nourishing is meat" versus "how sharp is
-flint" — those aren't on the same scale at all. What both sides do
-have some rough sense of is how much effort each good took to get: days
-spent traveling to the source and knapping blades, against days spent
-tracking and butchering game. That comparison — effort against effort,
-not usefulness against usefulness — is the seed of what Marx calls
+That comparison — effort against effort,
+not intrinsic usefulness against usefulness — is the seed of what Marx calls
 *value*: labor applied to produce something specifically to trade away,
 measured against what it typically takes other producers to make the
-same thing. Put the two side by side and the distinction is: use-value
-is intrinsic — does this thing meet a need, exchange or no exchange —
-while value doesn't exist without a whole system of exchange behind it,
-since its size is set by a social average, not by what any one trade
-settles on. Arable land, a shoe factory, a data center all lack value
+same thing.
+
+Put the two side by side and the distinction is simple: use-value is
+intrinsic — does this thing meet a need, exchange or no exchange — while
+value doesn't exist at all without that whole system of exchange behind
+it. Arable land, a shoe factory, a data center all lack value
 the same way an unknapped stone does, until human effort is applied to
 produce something with it for the market. That effort includes the
 entrepreneur's — inventing a new machine, or simply seeing that existing
@@ -597,6 +596,7 @@ gap between their own time and the social average as profit, until
 competitors catch up and the average itself falls. This is the mechanism
 behind the competitive drive to mechanize discussed in [Appendix
 A.1](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now).
+
 
 That same gap shows up again, from the employer's side, as the source of
 profit itself. A worker is paid a wage that covers roughly what it costs
