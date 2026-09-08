@@ -596,14 +596,19 @@ intrinsic — does this thing meet a need, exchange or no exchange? —
 while value doesn't exist at all without a whole system of exchange
 behind it. Land, a factory, a data center all lack value the same way
 an unknapped stone did, until human effort is applied to produce
-something with it for the market. That effort includes the
-entrepreneur's — inventing a new machine, or simply seeing that
-existing machinery could make a new product for a new market, much like
-a forager recognizing a streambed stone's potential as a blade before
-ever picking it up. Either kind of insight usually rests on years of
-training and study, too, which counts as labor here as well — the hours
-spent becoming capable of that insight are just as real as the hours
-spent acting on it. And value, once it exists, is what settles
+something with it for the market. That effort also includes the
+entrepreneur's — the hours spent inventing a new machine, or
+ruminating over spreadsheet scenarios that prove out that existing
+machinery could make a new product for a new market, much like a
+forager recognizing a streambed stone's potential as a blade before
+ever picking it up, then trying several different angles of striking
+it before finding the blow that actually knaps one. Either kind of
+insight also usually rests on time already invested in training or
+study — and that counts as labor here too. The hours spent becoming
+capable of an insight are just as real as the hours spent acting on it.
+
+
+And value, once it exists, is what settles
 *exchange-value* — how much of one commodity trades for another, set
 by that same socially necessary standard. A faster worker — say, one
 using better machinery — captures the gap between their own time and
