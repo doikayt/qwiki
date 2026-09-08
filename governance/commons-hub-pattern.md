@@ -157,7 +157,7 @@ perform work with ever-increasing efficiency, and ever-diminishing requirements 
 
 Marx's "Fragment on Machines," in the Grundrisse notebooks (1857–58),[^3] anticipated exactly this: a point at
 which automated, machine-embodied social knowledge, "the general intellect" (Marx's term — but
-with a striking resonance to today's [AGI](https://en.wikipedia.org/wiki/Artificial_general_intelligence)),
+with a striking resonance with today's concept of [AGI](https://en.wikipedia.org/wiki/Artificial_general_intelligence)),
 becomes the primary productive force directly, breaking down labor-time as the basis of value.
 Once that labor-time basis breaks down, working people notice — both that they no longer
 have work, and that the resulting abundance is being captured by a class that visibly
