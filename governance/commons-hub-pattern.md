@@ -798,8 +798,8 @@ xychart-beta
     line "s' = 1" [1, 0.5, 0.33, 0.25, 0.2, 0.17, 0.14, 0.13, 0.11, 0.1, 0.09, 0.08, 0.08]
 ```
 
-No matter which curve you're on — how hard labor is being squeezed,
-how high $s'$ climbs — mechanization drags every one of them down
+No matter which curve you're on — how hard labor is being squeezed
+(that is: how high $s'$ climbs)  — mechanization drags every one of them down
 toward the same floor. As $q \to \infty$, $p' \to 0$. Machinery
 transfers *value*; it doesn't create it — only $v$, *living labor*, does.
 So the more of production that shifts from $v$ to $c$, the more the
@@ -817,12 +817,18 @@ compatible, just not inevitable. That's because two different things
 are being tracked. $p'$ is a *ratio*, profit against total capital
 invested, and a falling ratio is fully compatible with a growing
 absolute *mass* of profit, if the capital base underneath it (the
-denominator) grows even faster. Separately, abundance is a *use-value*
-question — how much society can actually produce — and automation
-genuinely increases that, whatever is happening to any value-based
-ratio. What doesn't follow automatically is who captures that
-abundance: that's a question of who owns the machines, not a
-mathematical one.
+denominator) grows even faster. And that capital base isn't neutral,
+ownerless math — it's owned, overwhelmingly, by the same capitalist
+class collecting the profit. So a falling rate can still mean the
+owners come out ahead twice over: more profit *and* a bigger pile of
+capital sitting on their own books.
+
+Separately, abundance is a *use-value* question — how much society can
+actually produce — and automation genuinely increases that, whatever
+is happening to any value-based ratio. What doesn't follow
+automatically is who captures either kind of gain — the growing profit
+or the growing capital base itself: that's a question of who owns the
+machines, not a mathematical one.
 
 He treated it as a tendency, not an iron law, and named several
 countervailing forces (cheapening the elements of *constant capital*,
