@@ -687,7 +687,7 @@ competitors captures the gap between their own (now lower) production
 time and the social average as extra profit — until competitors adopt
 similar machinery and the social average itself falls (the same
 mechanization race that drives up the *organic composition of
-capital*: [`q`](#the-tendency-of-the-rate-of-profit-to-fall).
+capital*: [`q`](#the-tendency-of-the-rate-of-profit-to-fall)).
 
 #### Surplus value
 
