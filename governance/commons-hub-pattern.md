@@ -24,12 +24,14 @@ particular how [Coase's 1937 transaction-cost
 account](https://en.wikipedia.org/wiki/The_Nature_of_the_Firm) explains why
 hierarchical structures usually win out. Next up is a dialectical-materialist (Marxist)
 reading of the same shift, wherein we ask a question transaction-cost economics
-doesn't: who holds the _power_ to set the rules of governance and distribution.
+doesn't: who holds the _power_ to organize production and claim its
+surplus — and what happens to that arrangement once automation makes
+human labor itself increasingly unnecessary.
 
 We later examine how the increasing sophistication and reach of AI make any
 confident forecast of the next dominant mode of production impossible — to the
-point where we have to ask whether human beings can even survive as a species to
-participate in whatever model comes next. Assuming we do, the next question is
+point where we have to ask whether human beings can even survive as a species under
+whatever model comes next. Assuming we do, the next question is
 whether the average working person ends up better off or worse — and while
 today's power structures tilt the scales toward worse, we argue 
 that the same forces driving that outcome also open opportunities for 
@@ -128,7 +130,7 @@ becomes the primary productive force directly, breaking down labor-time as the b
 Once that labor-time basis breaks down, working people notice — both that they no longer
 have work, and that the resulting abundance is being captured by a class that visibly
 isn't the one still producing it. How a society -- especially one as heavily armed and 
-socially fragmented as what we have now in the US --  handles that disillusionment 
+socially fragmented as what we have now in the US --  handles the inevitable disillusionment 
 depends to a large degree on whether alternative, fairer models of production can be 
 established.
 
@@ -208,7 +210,7 @@ We should also note that  Elinor Ostrom's empirical research
 (which won her the [2009 Nobel
 Memorial Prize in Economic
 Sciences](https://en.wikipedia.org/wiki/Nobel_Memorial_Prize_in_Economic_Sciences))
-overturned Hardin's claim, documenting hundreds of real cases where
+definitively overturned Hardin's claim. She documented hundreds of real cases where
 communities successfully self-governed shared resources through their own
 institutional rules, without requiring either privatization or centralized
 state control.[^6]    Our proposal can be viewed as applying
@@ -364,8 +366,6 @@ abundance exclusively to those whose hands hold the controls. Mass job loss,
 heightened inequality, and constant surveillance are not even the worst of the
 possible consequences — at the far end sits the possibility of an existential
 threat to the species that pushed AI technology to its current point. 
-[Appendix A.8](#a8-ai-abundance-and-the-case-for-urgency) provides more detail.
-
 
 Assuming we clear the extinction bar, the next question is
 whether the average working person ends up better off or worse under whatever
@@ -379,8 +379,8 @@ None of that is inevitable though — and this is where we close on a hopeful
 note. First we look at two structural properties of our model 
 that provide operational business advantages. Then finally, we address the 
 likely consequence of any specific 501c3 realizing a mission 
-that is overly threatening to entrenched captial:  targeting and surpression --
-and we examine the resliance properties of our model that guard against this.
+that is overly threatening to entrenched captial:  targeting and surpression.
+We discuss the resliance properties of our model that guard against this.
 
 
 ### The labor-market half of the advantage: elite overproduction and AI-driven displacement
@@ -396,8 +396,8 @@ turning their training and ambition toward organizing opposition to the
 existing order rather than joining it.[^8]
 
 This is playing out in the current U.S. software labor market: an
-education system that has spent two decades producing an increasing supply of
-highly credentialed software engineers is now colliding with the AI-driven
+education system that has spent two decades producing what is now an over-supply of
+highly credentialed software engineers (Learn to code!) is now colliding with the AI-driven
 contraction of entry- and mid-level engineering hiring. A growing population of
 capable, credentialed, and increasingly frustrated engineers 
 is finding the traditional elite-track path
@@ -545,6 +545,8 @@ readers who are 'Marx-curious' but have never studied his work  -- in particular
 his concept of  the *labor theory of* **value**. The sketch below will, hopefully,
 provide sufficient background for readers to understand his "Fragment on Machines" notes.
 
+#### Use-value
+
 All human beings -- from stone age hunter-gatherers to present day 
 warehouse workers -- have an intrinsic understanding of what is useful and what isn't. 
 To the former, meat and berries had immediate utility — eat them, and nothing else was required. 
@@ -553,110 +555,138 @@ of flint, collected from a streambed, had a different, lesser
 utility than it would have once it was worked: as raw material, it was
 useful only in the sense that it was *good for becoming* something
 else — it couldn't yet cut anything the way a knapped
-blade could. That gap between raw material and finished tool was what
+blade could. That gap between raw material and finished tool was something
 the hunter could already see, before ever knapping the stone.
-This intrinsic utility of a thing is what Marx calls *use-value*,
-and it is inherent in any 'useful thing' independent of anyone exchanging it.
+This intrinsic utility of a thing -- a ready to eat berry, or a workable piece of rock -- 
+is what Marx calls *use-value*,
+and it is inherent in any 'useful thing' -- 
+independent of anyone exchanging that thing for some other thing.
+
+#### Value and socially necessary labor time
 
 What Marx termed **value** only enters into the picture 
-once two hypothteical hunter-gatherer bands meet. Let's say one has access to a
+once two hypothteical hunter-gatherer bands meet and barter. Let's say one has access to a
 riverbed full of fint, but is short on meat, while the other has
 half a mastadon, but is short on tools.
 They  start trading: flint tools for meat.
 To settle a transaction, both sides need to take into account factors other than
-"how nourishing is this meat" versus "how sharp is
-this tool" — those aren't on the same scale at all. What both sides do
-have some rough sense of is how much effort each good took to 
+"how maggot-free is this meat" versus "how sharp is
+this tool" — these two things are not at all directly comparable. What both sides do
+have some rough sense of is how much  time and effort each good took to 
 obtain in its finished form: days spent traveling to the 
 riverbed, then collecting  and knapping blades, versus 
 days spent tracking and butchering game.
 
 That comparison — effort against effort, not usefulness against
-usefulness — is the essence of the notion of *value* in Marx's labor theory. Value is
+usefulness — is the essence of the notion of **value** in Marx's labor theory. Value is
 best measured as the *socially necessary labor time* a thing takes to
 produce for trade — not any one producer's own time, but roughly what
 it typically takes producers in general to make the same thing.
 To make this concrete: if a slow or unskilled knapper takes all day to
 turn out one blade, while a knapper of average skill and
 industriousness manages the same blade in an hour, the slow knapper's
-blade isn't worth more for the extra hours spent — value tracks the
-*average* time,across the whole clan — that it takes to produce
-something, not whatever time any individual actually puts in. The extra
-hours are simply wasted, not extra value created.
+blade isn't worth more for the extra hours spent. Value inheres in the
+*average* time  -- across the whole clan — that it takes to produce
+something, not whatever time any individual happens to put in. Any extra
+hours are simply wasted and no extra value created.
 
-Fast-forward to the present, and the same use-value logic applies to
+#### From flint tools to factories
+
+Fast-forward to the present, and the same *use-value logic* applies to
 modern production inputs. Arable land, a shoe factory, an idle data
-center all have real use-value on their own, worked or not — a field
-can grow crops, a factory could turn out shoes, a data center could
+center all have real *use-value* on their own, worked or not — a field
+_could_ grow crops, a factory _could_ produce shoes, a data center _could_
 process information — but only once someone puts in the labor to make
-that happen.
+that happen. None of that is **value** yet, though, in Marx's technical sense — that
+takes labor aimed specifically at producing something for exchange, not
+just any labor put in for any purpose. A farmer growing food only for
+their own family, say, puts in plenty of real labor — but none of it
+counts as value in Marx's sense, because none of it is aimed at a
+market. 
 
-None of that is *value*, though, in Marx's technical sense. Use-value is
-intrinsic — does this thing meet a need, exchange or no exchange? —
-while value doesn't exist at all without a whole system of exchange
-behind it. Land, a factory, a data center all lack value the same way
-an unknapped stone did, until human effort is applied to produce
-something with it for the market. That effort also includes the
-entrepreneur's — the hours spent inventing a new machine, or
-ruminating over spreadsheet scenarios that prove out that existing
-machinery could make a new product for a new market, much like a
-forager recognizing a streambed stone's potential as a blade before
-ever picking it up, then trying several different angles of striking
-it before finding the blow that actually knaps one. Either kind of
-insight also usually rests on time already invested in training or
-study — and that counts as labor here too. The hours spent becoming
-capable of an insight are just as real as the hours spent acting on it.
+Note that the labor input that creates value need not be manual. Think of the
+modern engineer who spends months designing a superior tractor
+blade: they never personally forge a single one, but the design effort
+still counts, amortized across every blade later made from it — the
+same way a machine's own value gets transferred into its output bit by
+bit as it's used. It's the same kind of insight as a forager
+recognizing a streambed stone's potential as a tool before ever
+picking it up, then spending hours or days trying 
+different strike angles before perfecting the technique that results in 
+a sharp edge instead of two broken pieces of rock. Either kind 
+of insight usually rests on time already
+invested in training, practice  or study — and that counts as labor here too. The
+hours spent becoming capable of an insight count as much as inputs 
+to value creation as the hours spent acting on that insight.
 
+#### Exchange-value and mechanization
 
-And value, once it exists, is what settles
-*exchange-value* — how much of one commodity trades for another, set
-by that same socially necessary standard. A faster worker — say, one
-using better machinery — captures the gap between their own time and
-the social average as profit, until competitors catch up and the
-average itself falls. This is the mechanism
-behind the competitive drive to mechanize discussed in [Appendix
-A.1](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now).
+Once that effort actually produces something for the market, value
+exists — and it's what settles *exchange-value*: how much of one
+commodity trades for another, in ratios (roughly) determined by ratios of socially necessary 
+labor. A capitalist who introduces a new machine ahead of
+competitors captures the gap between their own, now-lower production
+time and the social average as extra profit — until competitors adopt
+similar machinery and the social average itself falls. 
 
+#### Surplus value
 
-That same gap shows up again, from the employer's side, as the source of
-profit itself. A worker is paid a wage that covers roughly what it costs
+There's a more basic source of profit, too — one that doesn't depend on
+any competitive edge at all. A worker is paid a wage that covers roughly what it costs
 to maintain their lifestyle from one day to the next --everything from 
 food to rent, to entertainment, to whatever portion of that day's 
-pay that put away for a rainy day. Marx calls the
+pay they put away for a rainy day. Marx calls the
 portion of the working day that earns back that wage *necessary labor
-time*. 
-
-Whatever labor happens beyond it — *surplus labor time* — still
+time*. Whatever labor is input beyond that point — the *surplus labor time* — still
 produces value, but that value isn't paid for; the employer keeps it as
-*surplus value*, the source of profit.
+*surplus value*, the source of profit. Much of that profit doesn't just
+sit still, either — competitive pressure pushes employers to reinvest
+that surplus into better machinery, chasing exactly the kind of edge described
+above.
 
-Whoever owns the machinery that surplus gets invested in also holds most
+#### Class struggle and contradictions
+
+Whoever owns the machinery that surplus value gets invested in also holds most
 of the power to decide how the production process is organized and how
 its output gets divided — and whoever operates that machinery has an
 obvious stake in both questions too. That opposition of interest is
-structural, not incidental: it isn't something one good-faith negotiation
-resolves for good, because the underlying division of power producing it
-doesn't go away. Marx calls this **class struggle**, and it's one instance
+structural and not something that one good-faith negotiation
+resolves for good. This is because the underlying division of power and divergence of 
+interests that produce this conflict lingers.
+
+Marx calls this **class struggle**, and it's one instance
 of a broader pattern he calls *contradictions* — real, structural tensions
 between two parts of an economic system that pull against each other and
 sharpen over time until something gives. The one that matters most here:
-production keeps becoming more social — the combined, coordinated work of
-many people at increasing scale — while the surplus it generates keeps
-being claimed privately, by whoever owns the means of production, as
-though it were the product of their investment alone. The harder that
-private claim gets to defend, the more it looks like what Marx's
-method — *dialectical materialism* — treats as history's actual engine:
-not shifts in ideas or values, but tensions like this one, inside a
-society's actual material and economic conditions, forcing a shift to a
-new arrangement.
+production keeps getting broken down into narrower, more specialized
+steps, and the skill and judgment once needed to perform each step
+keeps getting captured and re-embodied in the machinery itself, rather
+than staying in the worker's hands. The more of that accumulated
+knowledge ends up objectified in machines rather than workers, the
+harder it is to say the resulting output is solely the product of
+whoever owns the machine — and it's tensions like this one, inside a
+society's actual material conditions rather than shifts in ideas or
+values, that Marx's method — *dialectical materialism*, his
+materialist inversion of [Hegel's](https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel)
+idealist dialectic — treats as
+history's actual engine of change.
 
-One specific version of that contradiction — surplus value plowed into
-machines that need less and less human labor to run — is what the
-"Drivers" argument above turns on next. There, automated, machine-embodied
-knowledge — what Marx calls **general intellect** — is introduced in
-context, where the document actually uses it, rather than here, since it
-belongs to his later writing on automation rather than his foundational
-value theory.
+This isn't only a nineteenth-century abstraction. In the 2023
+SAG-AFTRA strike, studios proposed scanning background performers for
+a single day's pay, then owning and reusing that digital likeness
+indefinitely, with no further compensation owed — union president Fran
+Drescher called it "an existential threat to creative professions."[^9]
+It's a present-day instance of the same pattern: a worker's skill and
+likeness captured once, re-embodied in a reusable technical asset, and
+then split off from any further claim on the value it goes on to
+produce.
+
+That same absorption of skill into machinery is where Marx's later
+writing on automation picks up — once automated, machine-embodied
+knowledge (what he calls **general intellect**) becomes advanced
+enough, it starts to displace labor-time itself as the basis of value.
+That idea is distinct from the foundational value theory covered
+above, which is why it isn't developed further here.
 
 
 ### A.4 Commons-based peer production: Benkler's answer
@@ -759,30 +789,8 @@ the Ostrom-to-Commons-Hub tie-in has moved to the end of
 [^7]: [arxiv.org/abs/2607.07663](https://arxiv.org/abs/2607.07663)
 [^8]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
     [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
+[^9]: [Actors vs. AI: Strike brings focus to emerging use of advanced
+    tech — NBC
+    News](https://www.nbcnews.com/tech/tech-news/hollywood-actor-sag-aftra-ai-artificial-intelligence-strike-rcna94191)
+    (2023).
 
-### A.8 AI, abundance, and the case for urgency
-
-AI's honest case for abundance rests on more than the technology itself. Paired with
-breakneck progress in robotics and automation, and the Web's role in democratizing
-knowledge — anyone now has 24/7 access to an expert
-tutor, and the pool of people who can pick
-up the skills to become a contributor to a project like this one is larger than it has
-ever been — it points toward a level of material abundance humanity has not seen
-before.
-
-The same technology concentrates the means to capture that abundance in fewer hands.
-Mass displacement of labor, wealth and power pooling further with whoever already
-owns the compute and the models, and surveillance capacity to match are not
-speculative — they are the direction current incentives already point. At the far end
-of that same curve sits a risk with no historical precedent to weigh it against: that
-sufficiently advanced AI, up to and including an AI singularity, poses an existential
-threat to the species that built it. *(Requires confirmation: this section should cite
-specific sources for the existential-risk claim rather than assert it — e.g. the CAIS
-statement on AI risk or Bostrom/Christiano — before this document is finalized.)*
-
-This document takes no position on which outcome is more likely — no one credible can,
-yet. What it argues is narrower, and harder to dispute: because the downside is this
-severe, it is more urgent now, not less, to have alternatives to the traditional
-corporation and the capitalist mode of production it was built to serve — built and
-tested before the outcome is decided, not improvised after. That is the stake this
-whole document is written against.
