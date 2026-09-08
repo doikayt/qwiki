@@ -664,29 +664,90 @@ keeps getting captured and re-embodied in the machinery itself, rather
 than staying in the worker's hands. The more of that accumulated
 knowledge ends up objectified in machines rather than workers, the
 harder it is to say the resulting output is solely the product of
-whoever owns the machine — and it's tensions like this one, inside a
-society's actual material conditions rather than shifts in ideas or
-values, that Marx's method — *dialectical materialism*, his
-materialist inversion of [Hegel's](https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel)
-idealist dialectic — treats as
-history's actual engine of change.
+whoever owns the machine. It's tensions like this one — playing out
+inside a society's actual material conditions, rather than as shifts
+in ideas or values — that Marx's method, *dialectical materialism*
+(his materialist inversion of
+[Hegel's](https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel)
+idealist dialectic), treats as history's actual engine of change.
 
-This isn't only a nineteenth-century abstraction. In the 2023
-SAG-AFTRA strike, studios proposed scanning background performers for
-a single day's pay, then owning and reusing that digital likeness
-indefinitely, with no further compensation owed — union president Fran
-Drescher called it "an existential threat to creative professions."[^9]
-It's a present-day instance of the same pattern: a worker's skill and
+This isn't only a nineteenth-century abstraction. In the [2023
+SAG-AFTRA
+strike](https://www.nbcnews.com/tech/tech-news/hollywood-actor-sag-aftra-ai-artificial-intelligence-strike-rcna94191),
+studios proposed scanning background performers for a single day's
+pay, then owning and reusing that digital likeness indefinitely, with
+no further compensation owed — union president Fran Drescher called it
+"an existential threat to creative professions." It's a present-day
+instance of the same pattern: a worker's skill and
 likeness captured once, re-embodied in a reusable technical asset, and
 then split off from any further claim on the value it goes on to
 produce.
 
-That same absorption of skill into machinery is where Marx's later
-writing on automation picks up — once automated, machine-embodied
-knowledge (what he calls **general intellect**) becomes advanced
-enough, it starts to displace labor-time itself as the basis of value.
-That idea is distinct from the foundational value theory covered
-above, which is why it isn't developed further here.
+#### The tendency of the rate of profit to fall
+
+Marx's own notation makes the mechanization dynamic precise. Split the
+capital a firm lays out into two pieces: *constant capital* ($c$) —
+machinery, materials, everything that transfers its existing value
+into output without adding to it — and *variable capital* ($v$) —
+wages, the only capital that creates value beyond its own cost, since
+a worker paid $v$ produces more than $v$ over the working day. Total
+capital advanced is $C = c + v$.
+
+Two ratios follow from that split. The *rate of exploitation*,
+$s' = s/v$, measures surplus value against wages: how much unpaid
+labor relative to paid. The *organic composition of capital*,
+$q = c/v$, measures machinery against wages: how automated a given
+operation is. Every time a capitalist introduces a new machine ahead
+of competitors, as described above, they raise their own $q$; once
+rivals follow suit to keep up, $q$ rises for the whole industry.
+
+Capitalists don't compete on $s'$, though — they compete on *rate of
+profit*, surplus value measured against the entire capital outlay:
+
+$$p' = \frac{s}{c+v}$$
+
+Divide through by $v$:
+
+$$p' = \frac{s/v}{c/v + 1} = \frac{s'}{q+1}$$
+
+That's the asymptote: as mechanization pushes $q \to \infty$,
+$p' \to 0$, no matter how high $s'$ climbs. Machinery transfers value;
+it doesn't create it — only $v$, living labor, does. So the more of
+production that shifts from $v$ to $c$, the more the denominator
+outruns anything the numerator can do about it. Push automation far
+enough and profit trends toward zero even as exploitation intensifies
+— Marx's own name for this is the *tendency of the rate of profit to
+fall*.
+
+He treated it as a tendency, not an iron law, and named several
+countervailing forces (cheapening the elements of constant capital,
+foreign trade, a rising $s'$ that offsets $q$ for a while) that can
+slow or reverse it in practice. It's also one of the more contested
+pieces of his system: Okishio's theorem, a well-known 1961 rebuttal,
+argues a rational, cost-minimizing capitalist would never adopt a
+technique that lowers their own rate of profit in the first place —
+which, if right, undercuts the mechanism pushing $q$ upward at all.
+Whether Okishio's assumptions hold is still argued over today.
+
+That asymptote is exactly where Marx's later writing on automation
+picks up: at the limit where $q \to \infty$, living labor ($v$)
+becomes vanishingly small relative to capital, and automated,
+machine-embodied knowledge — what Marx calls **general intellect** —
+becomes the primary productive force directly. At that point
+labor-time doesn't just make profit trend toward zero; it stops being
+the basis of value at all, since value in this whole framework has
+depended on $v$ from the start.
+
+None of this reaches a worker as a number, though. What actually lands
+on them is Marx's own countervailing forces working in reverse:
+tighter quotas and heavier monitoring as employers push $s'$ up to
+offset a rising $q$; stagnant or falling wages as employers cut $v$
+directly; specific jobs disappearing as machinery takes over the work
+that used to require them; and, periodically, a recession or a round
+of layoffs once capital can't find anywhere left to profitably go. It
+never reads as "the rate of profit is falling" — it reads as output
+climbing while a worker's own claim on it shrinks, which is exactly
+the disillusionment the "Drivers" argument above describes.
 
 
 ### A.4 Commons-based peer production: Benkler's answer
