@@ -642,19 +642,19 @@ market.
 Note that the labor input that creates *value* need not be manual.
 Think of the modern engineer who spends months designing a superior
 tractor blade: they never personally forge a single one, but their
-effort still creates *value* — and that effort starts well before the
-drafting table, with the initial insight that a better blade was even
-possible. Both halves count: the time spent arriving at the insight
-and the time spent turning it into a finished design, amortized thin
-across every blade later made from it. It's the same kind of insight
-as a forager
-recognizing a streambed stone's potential as a tool before ever
-picking it up, then spending hours or days trying 
-different strike angles before perfecting the technique that results in 
-a sharp edge instead of two broken pieces of rock. Either kind 
-of insight usually rests on time already
-invested in training, practice  or study — and that counts as labor here too. The
-hours spent becoming capable of an insight count as much as inputs 
+effort still creates *value*. And the work behind that value starts
+well before the first session at the drafting table: there has to be
+an initial insight that a better blade was even possible in the first
+place — and without years of prior training, practice, or study, that
+insight would never have occurred to them at all. Both halves count:
+the time spent arriving at the insight and the time spent turning it
+into a finished design, amortized thin across every blade later made
+from it. It's the same kind of insight as a forager recognizing a
+streambed stone's potential as a tool before ever picking it up, then
+spending hours or days trying different strike angles before
+perfecting the technique that results in a sharp edge instead of two
+broken pieces of rock. The hours spent becoming capable of an insight
+count as much as inputs 
 to value creation as the hours spent acting on that insight.
 
 That's different, though, from what happens inside the machine itself
@@ -663,8 +663,7 @@ into manufacturing it — but the machine doesn't create new *value* as it opera
 it only transfers *the value* it already has into whatever
 it helps produce, a little at a time, as it wears out — precisely
 what accountants now call **depreciation**. This is what Marx calls
-**constant capital** (formally `c`, [defined
-below](#the-tendency-of-the-rate-of-profit-to-fall)) — *value* passed
+**constant capital**, [`c`](#the-tendency-of-the-rate-of-profit-to-fall)) — *value* passed
 along, not *value* created, unlike the engineer's or the forager's
 living labor, which actually adds something new.
 
@@ -692,7 +691,7 @@ competitors captures the gap between their own (now lower) production
 time and the social average as extra profit — until competitors adopt
 similar machinery and the social average itself falls (the same
 mechanization race that drives up the *organic composition of
-capital*, [`q`](#the-tendency-of-the-rate-of-profit-to-fall)).
+capital*: [`q`](#the-tendency-of-the-rate-of-profit-to-fall).
 
 #### Surplus value
 
