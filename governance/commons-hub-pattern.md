@@ -639,23 +639,17 @@ only for their own family, say, puts in plenty of real labor — but
 none of it counts as *value*, because none of it is aimed at a
 market. 
 
-Note that the labor input that creates *value* need not be manual.
-Think of the modern engineer who spends months designing a superior
-tractor blade: they never personally forge a single one, but their
-effort still creates *value*. And the work behind that value starts
-well before the first session at the drafting table: there has to be
-an initial insight that a better blade was even possible in the first
-place — and without years of prior training, practice, or study, that
-insight would never have occurred to them at all. Both halves count:
-the time spent arriving at the insight and the time spent turning it
-into a finished design, amortized thin across every blade later made
-from it. It's the same kind of insight as a forager recognizing a
-streambed stone's potential as a tool before ever picking it up, then
-spending hours or days trying different strike angles before
-perfecting the technique that results in a sharp edge instead of two
-broken pieces of rock. The hours spent becoming capable of an insight
-count as much as inputs 
-to value creation as the hours spent acting on that insight.
+Note that this labor need not be manual. Think of the modern engineer
+who spends months designing a superior tractor blade: they never
+personally forge a single one, but their effort still creates *value*
+— and that effort starts before the drafting table, with the initial
+insight that a better blade might even be possible. Without years of
+prior training, practice, or study, that insight would never have
+occurred to them at all. Both halves count: the time spent arriving at
+the insight and the time spent turning it into a finished design,
+amortized thin across every blade later made from it. The hours spent
+becoming capable of an insight count as much toward value creation as
+the hours spent acting on it.
 
 That's different, though, from what happens inside the machine itself
 once it's built. A machine has *value* too — the labor that went
@@ -663,17 +657,17 @@ into manufacturing it — but the machine doesn't create new *value* as it opera
 it only transfers *the value* it already has into whatever
 it helps produce, a little at a time, as it wears out — precisely
 what accountants now call **depreciation**. This is what Marx calls
-**constant capital**, [`c`](#the-tendency-of-the-rate-of-profit-to-fall)) — *value* passed
-along, not *value* created, unlike the engineer's or the forager's
-living labor, which actually adds something new.
+**constant capital** ([`c`](#the-tendency-of-the-rate-of-profit-to-fall)) — *value* passed
+along, not *value* created, unlike the engineer's living labor, which
+actually adds something new.
 
 That machine's own value has the same layered history: it was itself
 built using other machines and tools, whose value depreciated into it
 the same way it now depreciates into what it produces. Marx has a name
 for this — **dead labor**, congealed from earlier rounds of
-production, as opposed to **living labor** — the engineer's, the
-forager's — actually being performed right now. Trace that back far
-enough and it looks like a dependency graph fanning out at every step:
+production, as opposed to **living labor** — the engineer's, actually
+being performed right now. Trace that back far enough and it looks
+like a dependency graph fanning out at every step:
 this machine's value depends on the machines that built it, which
 depend on the machines that built *them*, recursively, until you
 finally bottom out at nothing but raw materials and someone's bare
