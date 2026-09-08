@@ -817,7 +817,7 @@ a falling rate reads as bad news for them. It isn't necessarily — a
 falling rate and a thriving, richer capitalist class are fully
 compatible, just not inevitable. That's because two different things
 are being tracked. $p'$ is a *ratio*, profit against total capital
-invested, and a falling ratio is fully compatible with a growing
+invested, and a falling ratio can easily coexist with a growing
 *mass* of profit — just $s$ itself, the absolute dollar amount
 ([operating profit in GAAP terms](#in-accounting-terms)), not divided
 by anything — if the capital base underneath it (the denominator)
@@ -834,10 +834,12 @@ automatically is who captures either kind of gain — the growing profit
 or the growing capital base itself: that's a question of who owns the
 machines, not a mathematical one.
 
-He treated it as a tendency, not an iron law, and named several
-countervailing forces (cheapening the elements of *constant capital*,
-foreign trade, a rising $s'$ that offsets $q$ for a while) that can
-slow or reverse it in practice. It's also one of the more contested
+Marx himself treated the *tendency of the rate of profit to fall* as
+just that — a tendency, not an iron law — and named several
+countervailing forces — pressures pushing the other way — such as
+cheapening the elements of *constant capital*, foreign trade, and a
+rising $s'$ that offsets $q$ for a while, any of which can slow or
+reverse it in practice. It's also one of the more contested
 pieces of his system: Okishio's theorem, a well-known 1961 rebuttal,
 argues a rational, cost-minimizing capitalist would never adopt a
 technique that lowers their own *rate of profit* in the first place —
@@ -862,14 +864,14 @@ others:
 
 `p'` and ROIC are the tightest match — both ask the same question,
 profit per dollar of *total* capital committed, rather than margin on
-revenue alone. `q` and capital intensity are close too; it's a real
+revenue alone.[^10] `q` and capital intensity are close too; it's a real
 ratio tracked in corporate finance, just not always called that. `s'`
 has no standard named counterpart — the nearest real-world equivalent
 is informal, something like a labor-cost markup.
 
-That's not just a matter of vocabulary, either — the tendency itself
-has a rough echo in modern investing: heavily capital-intensive
-industries — lots of fixed assets on the books per
+The tendency itself shows up in modern investing too, not just its
+vocabulary: heavily capital-intensive industries — lots of fixed
+assets on the books per
 dollar of revenue — are well known to post structurally lower ROIC
 than asset-light businesses, part of why investors like Warren Buffett
 have long preferred the latter. That's not identical to Marx's claim
@@ -887,8 +889,8 @@ labor-time doesn't just make profit trend toward zero; it stops being
 the basis of *value* at all, since *value* in this whole framework has
 depended on $v$ from the start.
 
-None of this reaches a worker as a number, though. What actually lands
-on them is Marx's own countervailing forces working in reverse:
+None of the above reaches workers as a number, though. What actually lands
+on them is the effect of Marx's own countervailing forces working in reverse:
 tighter quotas and heavier monitoring as employers push $s'$ up to
 offset a rising $q$; stagnant or falling wages as employers cut $v$
 directly; specific jobs disappearing as machinery takes over the work
@@ -1009,4 +1011,15 @@ the Ostrom-to-Commons-Hub tie-in has moved to the end of
     (August 26, 2026); [Autistici/Inventati press release — infrastructure
     impact timeline](https://www.inventati.org/campaign/press) (domain
     unreachable August 28, 2026).
+[^10]: Real companies tie executive compensation directly to
+    ROIC/ROCE performance targets, per their own SEC filings — e.g.
+    [Phillips 66's 2021 proxy
+    statement](https://www.sec.gov/Archives/edgar/data/1534701/000114036121010999/nc10021503x3_def14a.htm)
+    (50% of performance-share payout tied to after-tax ROCE) and
+    [Schlumberger/SLB's 2025 proxy
+    statement](https://www.sec.gov/Archives/edgar/data/87347/000130817925000029/slb_courtesy-pdf.pdf)
+    (three-year average ROCE benchmarked against competitors). On the
+    analyst side, comparing ROIC against WACC (cost of capital) is a
+    standard valuation framework taught in the [CFA
+    curriculum](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/equity-valuation-applications-and-processes).
 
