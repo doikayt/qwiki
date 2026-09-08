@@ -487,7 +487,7 @@ just adequate but better", for the full argument.
 
 This isn't hypothetical. In August 2026, the US government designated the Italian hosting collective Autistici/Inventati
 a "Specially Designated Global Terrorist" entity over how its infrastructure was allegedly used by others — and within
-days its primary domain and mail server, both concentrated in one operator, went dark for its entire user base. Its
+days its primary domain and mail server, both concentrated in one operator, went dark for its entire user base.[^9] Its
 underlying software was already open source; what wasn't dispersed was the service itself. A multi-Satellite structure
 running the same shared code across independently governed, independently banked entities means one Satellite's takedown
 doesn't take the whole network's users down with it.
@@ -572,9 +572,6 @@ things cheap":
   Contributor Guide, it increases it.**
 
 
-
-------   Need lots of edits on the remaining content.. pls skip if you are reviewing ---
-<<note: one force we should definitely mention is the Peter Turchin elites idea>>
 
 ### A.2 Marxist Economics 101
 
@@ -749,10 +746,24 @@ Divide through by $v$:
 
 $$p' = \frac{s/v}{c/v + 1} = \frac{s'}{q+1}$$
 
-That's the asymptote: as mechanization pushes $q \to \infty$,
-$p' \to 0$, no matter how high $s'$ climbs. Machinery transfers value;
-it doesn't create it — only $v$, living labor, does. So the more of
-production that shifts from $v$ to $c$, the more the denominator
+Picture $p'$ plotted against $q$, and this is the asymptote you get:
+
+```mermaid
+xychart-beta
+    title "Rate of profit (p') vs. organic composition of capital (q)"
+    x-axis "q — organic composition of capital" [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    y-axis "p' — rate of profit" 0 --> 4
+    line "s' = 4" [4, 2, 1.33, 1, 0.8, 0.67, 0.57, 0.5, 0.44, 0.4, 0.36, 0.33, 0.31]
+    line "s' = 2" [2, 1, 0.67, 0.5, 0.4, 0.33, 0.29, 0.25, 0.22, 0.2, 0.18, 0.17, 0.15]
+    line "s' = 1" [1, 0.5, 0.33, 0.25, 0.2, 0.17, 0.14, 0.13, 0.11, 0.1, 0.09, 0.08, 0.08]
+```
+
+No matter which curve you're on — how hard labor is being squeezed,
+how high $s'$ climbs — mechanization drags every one of them down
+toward the same floor. As $q \to \infty$, $p' \to 0$. Machinery
+transfers value; it doesn't create it — only $v$, living labor, does.
+So the more of production that shifts from $v$ to $c$, the more the
+denominator
 outruns anything the numerator can do about it. Push automation far
 enough and profit trends toward zero even as exploitation intensifies
 — Marx's own name for this is the *tendency of the rate of profit to
@@ -889,8 +900,10 @@ the Ostrom-to-Commons-Hub tie-in has moved to the end of
 [^7]: [arxiv.org/abs/2607.07663](https://arxiv.org/abs/2607.07663)
 [^8]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
     [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
-[^9]: [Actors vs. AI: Strike brings focus to emerging use of advanced
-    tech — NBC
-    News](https://www.nbcnews.com/tech/tech-news/hollywood-actor-sag-aftra-ai-artificial-intelligence-strike-rcna94191)
-    (2023).
+[^9]: [Designation of Autistici/Inventati as a Specially Designated
+    Global Terrorist — U.S. Department of
+    State](https://www.state.gov/releases/office-of-the-spokesperson/2026/08/designation-of-autistici-inventati-as-a-specially-designated-global-terrorist)
+    (August 26, 2026); [Autistici/Inventati press release — infrastructure
+    impact timeline](https://www.inventati.org/campaign/press) (domain
+    unreachable August 28, 2026).
 
