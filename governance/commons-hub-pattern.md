@@ -754,16 +754,19 @@ We split the capital a firm lays out into two categories:
   than $v$ over the working day.
 
 Total capital advanced is $C = c + v$. The extra output that variable
-capital produces — *surplus value*, already named above — is $s$:
-the source of profit.
+capital produces — *surplus value*, [already named
+above](#surplus-value) — is $s$: the source of profit.
 
-Two ratios follow from that split. The **rate of exploitation**,
-$s' = s/v$, measures *surplus value* against wages: how much unpaid
-labor relative to paid. The **organic composition of capital**,
-$q = c/v$, measures machinery against wages: how automated a given
-operation is. Every time a capitalist introduces a new machine ahead
-of competitors, as described above, they raise their own $q$; once
-rivals follow suit to keep up, $q$ rises for the whole industry.
+Two ratios follow from that split:
+
+- The **rate of exploitation**, $s' = s/v$, measures *surplus value*
+  against wages: how much unpaid labor relative to paid.
+- The **organic composition of capital**, $q = c/v$, measures
+  machinery against wages: how automated a given operation is.
+
+Every time a capitalist introduces a new machine ahead of competitors,
+as described above, they raise their own $q$; once rivals follow suit
+to keep up, $q$ rises for the whole industry.
 
 Capitalists don't compete on $s'$, though — they compete on **rate of
 profit**, *surplus value* measured against the entire capital outlay:
