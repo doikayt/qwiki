@@ -713,12 +713,13 @@ This isn't only a nineteenth-century abstraction. In the [2023
 SAG-AFTRA
 strike](https://www.nbcnews.com/tech/tech-news/hollywood-actor-sag-aftra-ai-artificial-intelligence-strike-rcna94191),
 studios proposed scanning background performers for a single day's
-pay, then owning and reusing that digital likeness indefinitely, with
-no further compensation owed — union president Fran Drescher called it
-"an existential threat to creative professions." It's a present-day
-instance of the same pattern: a worker's skill and
-likeness captured once, re-embodied in a reusable technical asset, and
-then split off from any further claim on the value it goes on to
+pay, then using generative AI to synthesize new performances from that
+scan indefinitely, with no further compensation owed — union
+president Fran Drescher called it "an existential threat to creative
+professions." It's a present-day instance of the same pattern: a
+worker's skill and likeness captured once, re-embodied in a reusable
+AI-driven asset, and then split off from any further claim on the
+value it goes on to
 produce.
 
 #### The tendency of the rate of profit to fall
