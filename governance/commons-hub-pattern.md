@@ -693,8 +693,7 @@ capital*, [`q`](#the-tendency-of-the-rate-of-profit-to-fall)).
 
 There's a more basic source of profit, too — one that doesn't depend on
 any competitive edge at all. A worker is paid a wage — this is *variable
-capital*, [formally called `v`
-below](#the-tendency-of-the-rate-of-profit-to-fall) — that covers
+capital*, [`v`](#the-tendency-of-the-rate-of-profit-to-fall) — that covers
 roughly what it costs to maintain their lifestyle from one day to
 the next — everything from food to rent, to entertainment, to
 whatever portion of that day's 
@@ -762,8 +761,7 @@ We split the capital a firm lays out into two categories:
   than $v$ over the working day.
 
 Total capital advanced is $C = c + v$. The extra output that variable
-capital produces — *surplus value*, [already named
-above](#surplus-value) — is $s$: the source of profit.
+capital produces — [*surplus value*](#surplus-value)  — is $s$: the source of profit.
 
 Two ratios follow from that split:
 
