@@ -646,11 +646,10 @@ personally forge a single one, but their effort still creates *value*
 — and that effort starts before the drafting table, with the initial
 insight that a better blade might even be possible. Without years of
 prior training, practice, or study, that insight would never have
-occurred to them at all. Both halves count: the time spent arriving at
-the insight and the time spent turning it into a finished design,
-amortized thin across every blade later made from it. The hours spent
-becoming capable of an insight count as much toward value creation as
-the hours spent acting on it.
+occurred to them at all. Both halves count toward *value* creation —
+the hours spent arriving at the insight are just as real as the hours
+spent turning it into a finished design, thinly amortized across every
+blade later made from it.
 
 That's different, though, from what happens inside the machine itself
 once it's built. A machine has *value* too — the labor that went
@@ -664,7 +663,7 @@ now call **depreciation**. Marx calls it
 along, not *value* created, unlike the engineer's living labor, which
 actually adds something new.
 
-That machine's own value has the same layered history: it was itself
+That machine's own value has a layered history too: it was itself
 built using other machines and tools, whose value depreciated into it
 the same way it now depreciates into what it produces. Marx has a name
 for this — **dead labor**, congealed from earlier rounds of
@@ -719,7 +718,7 @@ structural and not something that one good-faith negotiation
 resolves for good. This is because the underlying division of power and divergence of 
 interests that produce this conflict lingers.
 
-Marx calls this **class struggle**, and it's one instance
+Marx term for this conflict  is **class struggle**, and it's one instance
 of a broader pattern he calls *contradictions* — real, structural tensions
 between two parts of an economic system that pull against each other and
 sharpen over time until something gives. The one that matters most here:
@@ -752,8 +751,9 @@ produce.
 #### The tendency of the rate of profit to fall
 
 Marx's own mathematical notation shows exactly why the mechanization
-race described above doesn't just squeeze workers harder — it can
-push the capitalist's own *rate of profit* toward zero. 
+race we discussed [above](#exchange-value-and-mechanization) doesn't
+just squeeze workers harder — it can push the capitalist's own
+*rate of profit* toward zero. 
 
 We split the capital a firm lays out into two categories:
 
@@ -800,9 +800,10 @@ xychart-beta
 ```
 
 No matter which curve you're on — how hard labor is being squeezed
-(that is: how high $s'$ climbs)  — mechanization drags every one of them down
-toward the same floor. As $q \to \infty$, $p' \to 0$. Machinery
-transfers *value*; it doesn't create it — only $v$, *living labor*, does.
+(that is: how high $s'$ climbs) — mechanization still drags its
+*rate of profit* down toward the same floor. As $q \to \infty$,
+$p' \to 0$. Machinery transfers *value*; it doesn't create it — only
+$v$, *living labor*, does.
 So the more of production that shifts from $v$ to $c$, the more the
 denominator
 outruns anything the numerator can do about it. Push automation far
