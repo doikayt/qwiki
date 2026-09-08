@@ -802,6 +802,21 @@ enough and profit trends toward zero even as exploitation intensifies
 — Marx's own name for this is the *tendency of the rate of profit to
 fall*.
 
+The terminology itself is what trips people up here: "rate of profit"
+sounds like it should track how well capitalists are doing overall, so
+a falling rate reads as bad news for them. It isn't necessarily — a
+falling rate and a thriving, richer capitalist class are fully
+compatible, just not inevitable. That's because two different things
+are being tracked. $p'$ is a *ratio*, profit against total capital
+invested, and a falling ratio is fully compatible with a growing
+absolute *mass* of profit, if the capital base underneath it (the
+denominator) grows even faster. Separately, abundance is a use-value
+question — how much society can actually produce — and automation
+genuinely increases that, whatever is happening to any value-based
+ratio. What doesn't follow automatically is who captures that
+abundance: that's a question of who owns the machines, not a
+mathematical one.
+
 He treated it as a tendency, not an iron law, and named several
 countervailing forces (cheapening the elements of *constant capital*,
 foreign trade, a rising $s'$ that offsets $q$ for a while) that can
