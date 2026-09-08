@@ -542,7 +542,7 @@ things cheap":
 
 This narrowly focused primer on Marx's economic theory is targeted to
 readers who are 'Marx-curious' but have never studied his work  -- in particular 
-his concept of  the **labor theory of value**. The sketch below will, hopefully,
+his concept of  the *labor theory of* **value**. The sketch below will, hopefully,
 provide sufficient background for readers to understand his "Fragment on Machines" notes.
 
 All human beings -- from stone age hunter-gatherers to present day 
@@ -550,7 +550,7 @@ warehouse workers -- have an intrinsic understanding of what is useful and what 
 To the former, meat and berries had immediate utility — eat them, and nothing else was required. 
 On the other hand, something like a raw chunk
 of flint, collected from a streambed, had a different, lesser
-use-value than it would have once it was worked: as raw material, it was
+utility than it would have once it was worked: as raw material, it was
 useful only in the sense that it was *good for becoming* something
 else — it couldn't yet cut anything the way a knapped
 blade could. That gap between raw material and finished tool was what
@@ -571,29 +571,44 @@ obtain in its finished form: days spent traveling to the
 riverbed, then collecting  and knapping blades, versus 
 days spent tracking and butchering game.
 
-That comparison — effort against effort,
-not intrinsic usefulness against usefulness — is the seed of what Marx calls
-*value*: labor applied to produce something specifically to trade away,
-measured against what it typically takes other producers to make the
-same thing.
+That comparison — effort against effort, not usefulness against
+usefulness — is the essence of the notion of *value* in Marx's labor theory. Value is
+best measured as the *socially necessary labor time* a thing takes to
+produce for trade — not any one producer's own time, but roughly what
+it typically takes producers in general to make the same thing.
+To make this concrete: if a slow or unskilled knapper takes all day to
+turn out one blade, while a knapper of average skill and
+industriousness manages the same blade in an hour, the slow knapper's
+blade isn't worth more for the extra hours spent — value tracks the
+*average* time,across the whole clan — that it takes to produce
+something, not whatever time any individual actually puts in. The extra
+hours are simply wasted, not extra value created.
 
-Put the two side by side and the distinction is simple: use-value is
-intrinsic — does this thing meet a need, exchange or no exchange — while
-value doesn't exist at all without that whole system of exchange behind
-it. Arable land, a shoe factory, a data center all lack value
-the same way an unknapped stone does, until human effort is applied to
-produce something with it for the market. That effort includes the
-entrepreneur's — inventing a new machine, or simply seeing that existing
-machinery could make a new product for a new market, much like a
-forager recognizing a streambed stone's potential as a blade before
-ever picking it up. And value, once it exists, is what settles
-*exchange-value* — how much of one commodity trades for another — with
-its size set by the labor time society, on average, needs to produce a
-given output under prevailing technology, not by how long any one
-producer actually takes. A slower worker doesn't create more value by
-working longer; a faster one — say, using better machinery — captures the
-gap between their own time and the social average as profit, until
-competitors catch up and the average itself falls. This is the mechanism
+Fast-forward to the present, and the same use-value logic applies to
+modern production inputs. Arable land, a shoe factory, an idle data
+center all have real use-value on their own, worked or not — a field
+can grow crops, a factory could turn out shoes, a data center could
+process information — but only once someone puts in the labor to make
+that happen.
+
+None of that is *value*, though, in Marx's technical sense. Use-value is
+intrinsic — does this thing meet a need, exchange or no exchange? —
+while value doesn't exist at all without a whole system of exchange
+behind it. Land, a factory, a data center all lack value the same way
+an unknapped stone did, until human effort is applied to produce
+something with it for the market. That effort includes the
+entrepreneur's — inventing a new machine, or simply seeing that
+existing machinery could make a new product for a new market, much like
+a forager recognizing a streambed stone's potential as a blade before
+ever picking it up. Either kind of insight usually rests on years of
+training and study, too, which counts as labor here as well — the hours
+spent becoming capable of that insight are just as real as the hours
+spent acting on it. And value, once it exists, is what settles
+*exchange-value* — how much of one commodity trades for another, set
+by that same socially necessary standard. A faster worker — say, one
+using better machinery — captures the gap between their own time and
+the social average as profit, until competitors catch up and the
+average itself falls. This is the mechanism
 behind the competitive drive to mechanize discussed in [Appendix
 A.1](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now).
 
