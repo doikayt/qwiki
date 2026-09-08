@@ -577,7 +577,7 @@ things cheap":
 
 This narrowly focused primer on Marx's economic theory is targeted to
 readers who are 'Marx-curious' but have never studied his work  -- in particular 
-his concept of  the *labor theory of* **value**. The sketch below will, hopefully,
+his concept of  the **labor theory of value**. The sketch below will, hopefully,
 provide sufficient background for readers to understand his "Fragment on Machines" notes.
 
 #### Use-value
@@ -588,12 +588,12 @@ To the former, meat and berries had immediate utility — eat them, and nothing 
 On the other hand, something like a raw chunk
 of flint, collected from a streambed, had a different, lesser
 utility than it would have once it was worked: as raw material, it was
-useful only in the sense that it was *good for becoming* something
-else — it couldn't yet cut anything the way a knapped
+useful only in the sense that it was good for *becoming something
+else* — it couldn't yet cut anything the way a knapped
 blade could. That gap between raw material and finished tool was something
 the hunter could already see, before ever knapping the stone.
 This intrinsic utility of a thing -- a ready to eat berry, or a workable piece of rock -- 
-is what Marx calls *use-value*,
+is what Marx calls **use-value**,
 and it is inherent in any 'useful thing' -- 
 independent of anyone exchanging that thing for some other thing.
 
@@ -613,8 +613,8 @@ riverbed, then collecting  and knapping blades, versus
 days spent tracking and butchering game.
 
 That comparison — effort against effort, not usefulness against
-usefulness — is the essence of the notion of **value** in Marx's labor theory. Value is
-best measured as the *socially necessary labor time* a thing takes to
+usefulness — is the essence of the notion of **value** in Marx's labor theory. *Value* is
+best measured as the **socially necessary labor time** a thing takes to
 produce for trade — not any one producer's own time, but roughly what
 it typically takes producers in general to make the same thing.
 To make this concrete: if a slow or unskilled knapper takes all day to
@@ -639,11 +639,11 @@ their own family, say, puts in plenty of real labor — but none of it
 counts as value in Marx's sense, because none of it is aimed at a
 market. 
 
-Note that the labor input that creates value need not be manual. Think of the
+Note that the labor input that creates *value* need not be manual. Think of the
 modern engineer who spends months designing a superior tractor
 blade: they never personally forge a single one, but the design effort
 still counts, amortized across every blade later made from it — the
-same way a machine's own value gets transferred into its output bit by
+same way a machine's own *value* gets transferred into its output bit by
 bit as it's used. It's the same kind of insight as a forager
 recognizing a streambed stone's potential as a tool before ever
 picking it up, then spending hours or days trying 
@@ -656,25 +656,32 @@ to value creation as the hours spent acting on that insight.
 
 #### Exchange-value and mechanization
 
-Once that effort actually produces something for the market, value
-exists — and it's what settles *exchange-value*: how much of one
-commodity trades for another, in ratios (roughly) determined by ratios of socially necessary 
-labor. A capitalist who introduces a new machine ahead of
-competitors captures the gap between their own, now-lower production
+Only after that effort actually produces something for the market can
+we interpret **value** quantitatively — as **exchange-value**, Marx's
+term for how much of one commodity trades for another.  *Exchange-value* is set 
+(roughly) by the ratio of socially necessary labor necessary to produce each item to be exchanged.
+A capitalist who introduces a new machine ahead of
+competitors captures the gap between their own (now lower) production
 time and the social average as extra profit — until competitors adopt
-similar machinery and the social average itself falls. 
+similar machinery and the social average itself falls (the same
+mechanization race that drives up the organic composition of capital,
+`q`, in [the formal treatment
+below](#the-tendency-of-the-rate-of-profit-to-fall)).
 
 #### Surplus value
 
 There's a more basic source of profit, too — one that doesn't depend on
-any competitive edge at all. A worker is paid a wage that covers roughly what it costs
-to maintain their lifestyle from one day to the next --everything from 
-food to rent, to entertainment, to whatever portion of that day's 
+any competitive edge at all. A worker is paid a wage — this is the
+capital [formally called `v`
+below](#the-tendency-of-the-rate-of-profit-to-fall) — that covers
+roughly what it costs to maintain their lifestyle from one day to
+the next — everything from food to rent, to entertainment, to
+whatever portion of that day's 
 pay they put away for a rainy day. Marx calls the
-portion of the working day that earns back that wage *necessary labor
-time*. Whatever labor is input beyond that point — the *surplus labor time* — still
+portion of the working day that earns back that wage **necessary labor
+time**. Whatever labor is input beyond that point — the **surplus labor time** — still
 produces value, but that value isn't paid for; the employer keeps it as
-*surplus value*, the source of profit. Much of that profit doesn't just
+**surplus value**, the source of profit. Much of that profit doesn't just
 sit still, either — competitive pressure pushes employers to reinvest
 that surplus into better machinery, chasing exactly the kind of edge described
 above.
