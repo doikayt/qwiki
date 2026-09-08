@@ -871,7 +871,7 @@ time, not a snapshot comparison between industries today), but it's
 the same underlying arithmetic: more capital in the denominator, profit
 in the numerator not keeping pace, lower return.
 
-That asymptote is exactly where Marx's later writing on automation
+The asymptote in the above graph is exactly where Marx's later writing on automation
 picks up: at the limit where $q \to \infty$, *living labor* ($v$)
 becomes vanishingly small relative to capital, and automated,
 machine-embodied knowledge — what Marx calls **general intellect** —
@@ -889,7 +889,11 @@ that used to require them; and, periodically, a recession or a round
 of layoffs once capital can't find anywhere left to profitably go. It
 never reads as "the rate of profit is falling" — it reads as output
 climbing while a worker's own claim on it shrinks, which is exactly
-the disillusionment the "Drivers" argument above describes.
+the disillusionment the ["Drivers" argument
+above](#drivers-of-the-dissolution-of-the-corporate-model----marxist-view)
+describes: working people noticing both that they no longer have
+work, and that the resulting abundance is being captured by a class
+that visibly isn't the one still producing it.
 
 
 ### A.4 Commons-based peer production: Benkler's answer
