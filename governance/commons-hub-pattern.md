@@ -788,6 +788,7 @@ $$p' = \frac{s/v}{c/v + 1} = \frac{s'}{q+1}$$
 Picture $p'$ plotted against $q$, and this is the asymptote you get:
 
 ```mermaid
+%%{init: {"themeVariables": {"xyChart": {"plotColorPalette": "#d62728, #1f77b4, #2ca02c"}}}}%%
 xychart-beta
     title "Rate of profit (p') vs. organic composition of capital (q)"
     x-axis "q — organic composition of capital" [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
