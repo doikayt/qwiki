@@ -653,10 +653,12 @@ the hours spent acting on it.
 
 That's different, though, from what happens inside the machine itself
 once it's built. A machine has *value* too — the labor that went
-into manufacturing it — but the machine doesn't create new *value* as it operates; 
-it only transfers *the value* it already has into whatever
-it helps produce, a little at a time, as it wears out — precisely
-what accountants now call **depreciation**. This is what Marx calls
+into manufacturing it — but the machine doesn't create new *value*
+just by operating; that only happens through the labor of whoever's
+running it. What the machine itself does is simpler: it transfers the
+*value* it already has into whatever it helps produce, a little at a
+time, as it gradually wears out. This is precisely what accountants
+now call **depreciation**. Marx calls it
 **constant capital** ([`c`](#the-tendency-of-the-rate-of-profit-to-fall)) — *value* passed
 along, not *value* created, unlike the engineer's living labor, which
 actually adds something new.
