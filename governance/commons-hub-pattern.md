@@ -620,7 +620,7 @@ it typically takes producers in general to make the same thing.
 To make this concrete: if a slow or unskilled knapper takes all day to
 turn out one blade, while a knapper of average skill and
 industriousness manages the same blade in an hour, the slow knapper's
-blade isn't worth more for the extra hours spent. Value inheres in the
+blade isn't worth more for the extra hours spent. *Value* inheres in the
 *average* time  -- across the whole clan — that it takes to produce
 something, not whatever time any individual happens to put in. Any extra
 hours are simply wasted and no extra *value* created.
@@ -632,11 +632,11 @@ modern production inputs. Arable land, a shoe factory, an idle data
 center all have real *use-value* on their own, worked or not — a field
 _could_ grow crops, a factory _could_ produce shoes, a data center _could_
 process information — but only once someone puts in the labor to make
-that happen. None of that is **value** yet, though, in Marx's technical sense — that
-takes labor aimed specifically at producing something for exchange, not
-just any labor put in for any purpose. A farmer growing food only for
-their own family, say, puts in plenty of real labor — but none of it
-counts as *value* in Marx's sense, because none of it is aimed at a
+that happen. None of that is *value* yet, though, in Marx's technical
+sense — that takes labor aimed specifically at producing something for
+exchange, not just any labor for any purpose. A farmer growing food
+only for their own family, say, puts in plenty of real labor — but
+none of it counts as *value*, because none of it is aimed at a
 market. 
 
 Note that the labor input that creates *value* need not be manual.
@@ -658,15 +658,22 @@ hours spent becoming capable of an insight count as much as inputs
 to value creation as the hours spent acting on that insight.
 
 That's different, though, from what happens inside the machine itself
-once it's built. A machine has **value** too — the labor that went
+once it's built. A machine has *value* too — the labor that went
 into manufacturing it — but the machine doesn't create new *value* as it operates; 
-it only transfers **the value** it already has into whatever
+it only transfers *the value* it already has into whatever
 it helps produce, a little at a time, as it wears out — precisely
-what accountants now call *depreciation*. This is what Marx calls
+what accountants now call **depreciation**. This is what Marx calls
 **constant capital** (formally `c`, [defined
-below](#the-tendency-of-the-rate-of-profit-to-fall)) — **value** passed
+below](#the-tendency-of-the-rate-of-profit-to-fall)) — *value* passed
 along, not *value* created, unlike the engineer's or the forager's
 living labor, which actually adds something new.
+
+That machine's own value has the same layered history: it was itself
+built using other machines and tools, whose value depreciated into it
+the same way it now depreciates into what it produces. Marx has a name
+for this — **dead labor**, congealed from earlier rounds of
+production, as opposed to **living labor** — the engineer's, the
+forager's — actually being performed right now.
 
 #### Exchange-value and mechanization
 
@@ -679,8 +686,8 @@ A capitalist who introduces a new machine ahead of
 competitors captures the gap between their own (now lower) production
 time and the social average as extra profit — until competitors adopt
 similar machinery and the social average itself falls (the same
-mechanization race that drives up the organic composition of capital,
-`q`, in [the formal treatment
+mechanization race that drives up the *organic composition of
+capital*, `q`, in [the formal treatment
 below](#the-tendency-of-the-rate-of-profit-to-fall)).
 
 #### Surplus value
@@ -745,14 +752,14 @@ produce.
 
 Marx's own mathematical notation shows exactly why the mechanization
 race described above doesn't just squeeze workers harder — it can
-push the capitalist's own rate of profit toward zero. 
+push the capitalist's own *rate of profit* toward zero. 
 
 We split the capital a firm lays out into two categories:
 
 - **Constant capital** ($c$) — machinery, materials, everything that
-  transfers its existing value into output without adding to it.
+  transfers its existing *value* into output without adding to it.
 - **Variable capital** ($v$) — wages, the only capital that creates
-  value beyond its own cost, since a worker paid $v$ produces more
+  *value* beyond its own cost, since a worker paid $v$ produces more
   than $v$ over the working day.
 
 Total capital advanced is $C = c + v$. The extra output that variable
@@ -794,13 +801,13 @@ xychart-beta
 No matter which curve you're on — how hard labor is being squeezed,
 how high $s'$ climbs — mechanization drags every one of them down
 toward the same floor. As $q \to \infty$, $p' \to 0$. Machinery
-transfers *value*; it doesn't create it — only $v$, living labor, does.
+transfers *value*; it doesn't create it — only $v$, *living labor*, does.
 So the more of production that shifts from $v$ to $c$, the more the
 denominator
 outruns anything the numerator can do about it. Push automation far
 enough and profit trends toward zero even as exploitation intensifies
-— Marx's own name for this is the *tendency of the rate of profit to
-fall*.
+— Marx's own name for this is the **tendency of the rate of profit to
+fall**.
 
 The terminology itself is what trips people up here: "rate of profit"
 sounds like it should track how well capitalists are doing overall, so
@@ -810,7 +817,7 @@ compatible, just not inevitable. That's because two different things
 are being tracked. $p'$ is a *ratio*, profit against total capital
 invested, and a falling ratio is fully compatible with a growing
 absolute *mass* of profit, if the capital base underneath it (the
-denominator) grows even faster. Separately, abundance is a use-value
+denominator) grows even faster. Separately, abundance is a *use-value*
 question — how much society can actually produce — and automation
 genuinely increases that, whatever is happening to any value-based
 ratio. What doesn't follow automatically is who captures that
@@ -828,7 +835,7 @@ which, if right, undercuts the mechanism pushing $q$ upward at all.
 Whether Okishio's assumptions hold is still argued over today.
 
 That asymptote is exactly where Marx's later writing on automation
-picks up: at the limit where $q \to \infty$, living labor ($v$)
+picks up: at the limit where $q \to \infty$, *living labor* ($v$)
 becomes vanishingly small relative to capital, and automated,
 machine-embodied knowledge — what Marx calls **general intellect** —
 becomes the primary productive force directly. At that point
