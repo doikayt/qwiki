@@ -7,6 +7,38 @@ open source software around nonprofit and for-profit satellites*
 
 ---
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Corporations as a governance technology, not a law of nature](#corporations-as-a-governance-technology-not-a-law-of-nature)
+  - [Factors favoring the emergence of the corporate model -- neoclassical View](#factors-favoring-the-emergence-of-the-corporate-model----neoclassical-view)
+  - [Drivers of the dissolution of the corporate model -- Marxist view](#drivers-of-the-dissolution-of-the-corporate-model----marxist-view)
+- [1. The Commons Layer and Its Satellites](#1-the-commons-layer-and-its-satellites)
+  - [Bulwarks against enclosure of our digital commons](#bulwarks-against-enclosure-of-our-digital-commons)
+  - [The Tragedy of the Commons, Proven Wrong](#the-tragedy-of-the-commons-proven-wrong)
+- [2. Governance Layer — Two Separate Mechanisms](#2-governance-layer--two-separate-mechanisms)
+- [3. Token-Based Delegated Authority](#3-token-based-delegated-authority)
+- [4. Economic Benefit — Sequencing Across Mechanisms](#4-economic-benefit--sequencing-across-mechanisms)
+- [5. The Stakes, and why our model has an edge](#5-the-stakes-and-why-our-model-has-an-edge)
+  - [The labor-market half of the advantage: elite overproduction and AI-driven displacement](#the-labor-market-half-of-the-advantage-elite-overproduction-and-ai-driven-displacement)
+  - [Cost advantages that a for-profit competitor can't match](#cost-advantages-that-a-for-profit-competitor-cant-match)
+  - [Resilience through dispersion](#resilience-through-dispersion)
+- [Appendix A: Historical and Economic Grounding](#appendix-a-historical-and-economic-grounding)
+  - [A.1 Why firms exist: Coase, the putting-out system, and what's changing now](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now)
+  - [A.2 Marxist Economics 101](#a2-marxist-economics-101)
+    - [Use-value](#use-value)
+    - [Value and socially necessary labor time](#value-and-socially-necessary-labor-time)
+    - [From flint tools to factories](#from-flint-tools-to-factories)
+    - [Exchange-value and mechanization](#exchange-value-and-mechanization)
+    - [Surplus value](#surplus-value)
+    - [Class struggle and contradictions](#class-struggle-and-contradictions)
+    - [The tendency of the rate of profit to fall](#the-tendency-of-the-rate-of-profit-to-fall)
+  - [A.4 Commons-based peer production: Benkler's answer](#a4-commons-based-peer-production-benklers-answer)
+  - [A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem)
+  - [A.7 A return to the commons: enclosure](#a7-a-return-to-the-commons-enclosure)
+
+---
+
 ## Overview
 
 This document presents a replicable organizational model for collaboratively
