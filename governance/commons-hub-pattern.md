@@ -16,10 +16,12 @@ open source software around nonprofit and for-profit satellites*
 - [1. The Commons Layer and Its Satellites](#1-the-commons-layer-and-its-satellites)
   - [Bulwarks against enclosure of our digital commons](#bulwarks-against-enclosure-of-our-digital-commons)
   - [The Tragedy of the Commons, Proven Wrong](#the-tragedy-of-the-commons-proven-wrong)
-- [2. Governance Layer — Two Separate Mechanisms](#2-governance-layer--two-separate-mechanisms)
-- [3. Token-Based Delegated Authority](#3-token-based-delegated-authority)
-- [4. Economic Benefit — Sequencing Across Mechanisms](#4-economic-benefit--sequencing-across-mechanisms)
-- [5. The Stakes, and why our model has an edge](#5-the-stakes-and-why-our-model-has-an-edge)
+- [2. Governance Layer — Three Mechanisms](#2-governance-layer--three-mechanisms)
+  - [Board](#board)
+  - [DAO](#dao)
+  - [Token-Based Delegated Authority](#token-based-delegated-authority)
+- [3. Economic Benefit — Sequencing Across Mechanisms](#3-economic-benefit--sequencing-across-mechanisms)
+- [4. The Stakes, and why our model has an edge](#4-the-stakes-and-why-our-model-has-an-edge)
   - [The labor-market half of the advantage: elite overproduction and AI-driven displacement](#the-labor-market-half-of-the-advantage-elite-overproduction-and-ai-driven-displacement)
   - [Cost advantages that a for-profit competitor can't match](#cost-advantages-that-a-for-profit-competitor-cant-match)
   - [Resilience through dispersion](#resilience-through-dispersion)
@@ -73,13 +75,13 @@ the top-down corporate form that underpins late-stage disaster capitalism.
 In terms of our two opening questions our model's answers are:
 
 - Who governs: the contributors to the commons themselves -- through
-[token-based delegated authority](#3-token-based-delegated-authority)
+[token-based delegated authority](#token-based-delegated-authority)
 that vests with earned trust and decays on inactivity (rather than
 accumulating into permanent control.)   
 
 - Who benefits, and by what means: the people who did the work on a given funded
 program, by their own [equally-weighted vote through a
-DAO](#2-governance-layer--two-separate-mechanisms). 
+DAO](#dao). 
 
 
 
@@ -251,7 +253,9 @@ rather than to land, water, or fisheries.
 
 
 
-## 2. Governance Layer — Two Separate Mechanisms
+## 2. Governance Layer — Three Mechanisms
+
+### Board
 
 The 501(c)(3)'s **Board** of directors set the mission, priorities,  and policy 
 for each Satellite through ordinary nonprofit governance. 
@@ -259,6 +263,8 @@ There is no [DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organiz
 involved in setting priorities or policy. The board decides what to build,
 how to fund those  programs, and what the organization's direction is -- 
 exactly as any nonprofit board would.
+
+### DAO
 
 The **DAO** mechanism governs exactly
 one thing: how the proceeds of a funded program — a
@@ -283,7 +289,7 @@ contributor's crypto wallet
 
 
 
-## 3. Token-Based Delegated Authority
+### Token-Based Delegated Authority
 
 Along with the Board and the DAO, a third mechanism governs _day-to-day_
 operations — product roadmap construction, build-vs.-buy decisions, staffing
@@ -332,7 +338,7 @@ Register](legal-risk-register.md), respectively.
 formerly summarized in this section — will get its own detailed treatment in a
 later document; a pointer back to it belongs here once that's written.)*
 
-## 4. Economic Benefit — Sequencing Across Mechanisms
+## 3. Economic Benefit — Sequencing Across Mechanisms
 
 By this point there are three distinct mechanisms in play, and it's easy to
 conflate them since they all touch "who gets what." Worth seeing side by
@@ -385,7 +391,7 @@ well before it's actually needed.
 
 ---
 
-## 5. The Stakes, and why our model has an edge
+## 4. The Stakes, and why our model has an edge
 
 The past year (2026, as of this writing) has seen rapid, measurable progress
 toward AI writing the software that builds AI itself.[^7]   This
