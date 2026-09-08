@@ -833,6 +833,37 @@ technique that lowers their own *rate of profit* in the first place —
 which, if right, undercuts the mechanism pushing $q$ upward at all.
 Whether Okishio's assumptions hold is still argued over today.
 
+If you think in balance-sheet terms, here's how these map onto modern
+accounting and finance vocabulary — exact for some terms, looser for
+others:
+
+| Marx's term | Symbol | Closest modern analog |
+|---|---|---|
+| Constant capital | `c` | Fixed assets (PP&E) + materials/inventory |
+| Variable capital | `v` | Direct labor cost / payroll |
+| Surplus value | `s` | Operating profit |
+| Total capital advanced | `C = c+v` | Invested capital / capital employed |
+| Rate of exploitation | `s' = s/v` | No standard name — closest to a labor-cost markup |
+| Organic composition of capital | `q = c/v` | Capital intensity ratio |
+| Rate of profit | `p' = s/(c+v)` | ROIC / ROCE (return on invested/employed capital) |
+
+`p'` and ROIC are the tightest match — both ask the same question,
+profit per dollar of *total* capital committed, rather than margin on
+revenue alone. `q` and capital intensity are close too; it's a real
+ratio tracked in corporate finance, just not always called that. `s'`
+has no standard named counterpart — the nearest real-world equivalent
+is informal, something like a labor-cost markup.
+
+The tendency itself has a rough echo in modern investing: heavily
+capital-intensive industries — lots of fixed assets on the books per
+dollar of revenue — are well known to post structurally lower ROIC
+than asset-light businesses, part of why investors like Warren Buffett
+have long preferred the latter. That's not identical to Marx's claim
+(his is a secular trend as capital intensity rises economy-wide over
+time, not a snapshot comparison between industries today), but it's
+the same underlying arithmetic: more capital in the denominator, profit
+in the numerator not keeping pace, lower return.
+
 That asymptote is exactly where Marx's later writing on automation
 picks up: at the limit where $q \to \infty$, *living labor* ($v$)
 becomes vanishingly small relative to capital, and automated,
