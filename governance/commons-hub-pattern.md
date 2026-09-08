@@ -661,9 +661,9 @@ into manufacturing it — but the machine doesn't create new *value* by
 running; it only transfers **the value** it already has into whatever
 it helps produce, a little at a time, as it wears out. This is what
 Marx calls **constant capital** (formally `c`, [defined
-below](#the-tendency-of-the-rate-of-profit-to-fall)) — **value**
-passed along, not *value* created, unlike the engineer's or the
-forager's living labor, which actually adds something new.
+below](#the-tendency-of-the-rate-of-profit-to-fall)) — value passed
+along, not value created, unlike the engineer's or the forager's
+living labor, which actually adds something new.
 
 #### Exchange-value and mechanization
 
@@ -739,14 +739,19 @@ produce.
 
 #### The tendency of the rate of profit to fall
 
-Marx's own notation makes the mechanization dynamic precise. Split the
-capital a firm lays out into two pieces: *constant capital* ($c$) —
-machinery, materials, everything that transfers its existing value
-into output without adding to it — and *variable capital* ($v$) —
-wages, the only capital that creates value beyond its own cost, since
-a worker paid $v$ produces more than $v$ over the working day. That
-extra output — *surplus value*, already named above — is $s$: the
-source of profit. Total capital advanced is $C = c + v$.
+The mathematical notation in Marx's writings makes the mechanization dynamic precise. 
+
+We split the capital a firm lays out into two categories:
+
+- **Constant capital** ($c$) — machinery, materials, everything that
+  transfers its existing value into output without adding to it.
+- **Variable capital** ($v$) — wages, the only capital that creates
+  value beyond its own cost, since a worker paid $v$ produces more
+  than $v$ over the working day.
+
+Total capital advanced is $C = c + v$. The extra output that variable
+capital produces — *surplus value*, already named above — is $s$:
+the source of profit.
 
 Two ratios follow from that split. The *rate of exploitation*,
 $s' = s/v$, measures surplus value against wages: how much unpaid
