@@ -743,7 +743,9 @@ produce.
 
 #### The tendency of the rate of profit to fall
 
-The mathematical notation in Marx's writings makes the mechanization dynamic precise. 
+Marx's own mathematical notation shows exactly why the mechanization
+race described above doesn't just squeeze workers harder — it can
+push the capitalist's own rate of profit toward zero. 
 
 We split the capital a firm lays out into two categories:
 
