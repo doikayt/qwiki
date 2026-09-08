@@ -623,7 +623,7 @@ industriousness manages the same blade in an hour, the slow knapper's
 blade isn't worth more for the extra hours spent. Value inheres in the
 *average* time  -- across the whole clan — that it takes to produce
 something, not whatever time any individual happens to put in. Any extra
-hours are simply wasted and no extra value created.
+hours are simply wasted and no extra *value* created.
 
 #### From flint tools to factories
 
@@ -636,16 +636,18 @@ that happen. None of that is **value** yet, though, in Marx's technical sense �
 takes labor aimed specifically at producing something for exchange, not
 just any labor put in for any purpose. A farmer growing food only for
 their own family, say, puts in plenty of real labor — but none of it
-counts as value in Marx's sense, because none of it is aimed at a
+counts as *value* in Marx's sense, because none of it is aimed at a
 market. 
 
-Note that the labor input that creates *value* need not be manual. Think of the
-modern engineer who spends months designing a superior tractor blade:
-they never personally forge a single one, but the design effort still
-creates *value*, amortized thin across every blade later made from the
-design.
-
-It's the same kind of insight as a forager
+Note that the labor input that creates *value* need not be manual.
+Think of the modern engineer who spends months designing a superior
+tractor blade: they never personally forge a single one, but their
+effort still creates *value* — and that effort starts well before the
+drafting table, with the initial insight that a better blade was even
+possible. Both halves count: the time spent arriving at the insight
+and the time spent turning it into a finished design, amortized thin
+across every blade later made from it. It's the same kind of insight
+as a forager
 recognizing a streambed stone's potential as a tool before ever
 picking it up, then spending hours or days trying 
 different strike angles before perfecting the technique that results in 
@@ -657,20 +659,22 @@ to value creation as the hours spent acting on that insight.
 
 That's different, though, from what happens inside the machine itself
 once it's built. A machine has **value** too — the labor that went
-into manufacturing it — but the machine doesn't create new *value* by
-running; it only transfers **the value** it already has into whatever
-it helps produce, a little at a time, as it wears out. This is what
-Marx calls **constant capital** (formally `c`, [defined
-below](#the-tendency-of-the-rate-of-profit-to-fall)) — value passed
-along, not value created, unlike the engineer's or the forager's
+into manufacturing it — but the machine doesn't create new *value* as it operates; 
+it only transfers **the value** it already has into whatever
+it helps produce, a little at a time, as it wears out — precisely
+what accountants now call *depreciation*. This is what Marx calls
+**constant capital** (formally `c`, [defined
+below](#the-tendency-of-the-rate-of-profit-to-fall)) — **value** passed
+along, not *value* created, unlike the engineer's or the forager's
 living labor, which actually adds something new.
 
 #### Exchange-value and mechanization
 
 Only after that effort actually produces something for the market can
 we interpret **value** quantitatively — as **exchange-value**, Marx's
-term for how much of one commodity trades for another.  *Exchange-value* is set 
-(roughly) by the ratio of socially necessary labor necessary to produce each item to be exchanged.
+term for how much of one commodity trades for another. *Exchange-value*
+is set (roughly) by the ratio of *socially necessary labor* necessary
+to produce each item to be exchanged.
 A capitalist who introduces a new machine ahead of
 competitors captures the gap between their own (now lower) production
 time and the social average as extra profit — until competitors adopt
@@ -691,7 +695,7 @@ whatever portion of that day's
 pay they put away for a rainy day. Marx calls the
 portion of the working day that earns back that wage **necessary labor
 time**. Whatever labor is input beyond that point — the **surplus labor time** — still
-produces value, but that value isn't paid for; the employer keeps it as
+produces *value*, but that *value* isn't paid for; the employer keeps it as
 **surplus value**, the source of profit. Much of that profit doesn't just
 sit still, either — competitive pressure pushes employers to reinvest
 that surplus into better machinery, chasing exactly the kind of edge described
@@ -699,7 +703,7 @@ above.
 
 #### Class struggle and contradictions
 
-Whoever owns the machinery that surplus value gets invested in also holds most
+Whoever owns the machinery that *surplus value* gets invested in also holds most
 of the power to decide how the production process is organized and how
 its output gets divided — and whoever operates that machinery has an
 obvious stake in both questions too. That opposition of interest is
@@ -753,16 +757,16 @@ Total capital advanced is $C = c + v$. The extra output that variable
 capital produces — *surplus value*, already named above — is $s$:
 the source of profit.
 
-Two ratios follow from that split. The *rate of exploitation*,
-$s' = s/v$, measures surplus value against wages: how much unpaid
-labor relative to paid. The *organic composition of capital*,
+Two ratios follow from that split. The **rate of exploitation**,
+$s' = s/v$, measures *surplus value* against wages: how much unpaid
+labor relative to paid. The **organic composition of capital**,
 $q = c/v$, measures machinery against wages: how automated a given
 operation is. Every time a capitalist introduces a new machine ahead
 of competitors, as described above, they raise their own $q$; once
 rivals follow suit to keep up, $q$ rises for the whole industry.
 
-Capitalists don't compete on $s'$, though — they compete on *rate of
-profit*, surplus value measured against the entire capital outlay:
+Capitalists don't compete on $s'$, though — they compete on **rate of
+profit**, *surplus value* measured against the entire capital outlay:
 
 $$p' = \frac{s}{c+v}$$
 
@@ -785,7 +789,7 @@ xychart-beta
 No matter which curve you're on — how hard labor is being squeezed,
 how high $s'$ climbs — mechanization drags every one of them down
 toward the same floor. As $q \to \infty$, $p' \to 0$. Machinery
-transfers value; it doesn't create it — only $v$, living labor, does.
+transfers *value*; it doesn't create it — only $v$, living labor, does.
 So the more of production that shifts from $v$ to $c$, the more the
 denominator
 outruns anything the numerator can do about it. Push automation far
@@ -794,12 +798,12 @@ enough and profit trends toward zero even as exploitation intensifies
 fall*.
 
 He treated it as a tendency, not an iron law, and named several
-countervailing forces (cheapening the elements of constant capital,
+countervailing forces (cheapening the elements of *constant capital*,
 foreign trade, a rising $s'$ that offsets $q$ for a while) that can
 slow or reverse it in practice. It's also one of the more contested
 pieces of his system: Okishio's theorem, a well-known 1961 rebuttal,
 argues a rational, cost-minimizing capitalist would never adopt a
-technique that lowers their own rate of profit in the first place —
+technique that lowers their own *rate of profit* in the first place —
 which, if right, undercuts the mechanism pushing $q$ upward at all.
 Whether Okishio's assumptions hold is still argued over today.
 
@@ -809,7 +813,7 @@ becomes vanishingly small relative to capital, and automated,
 machine-embodied knowledge — what Marx calls **general intellect** —
 becomes the primary productive force directly. At that point
 labor-time doesn't just make profit trend toward zero; it stops being
-the basis of value at all, since value in this whole framework has
+the basis of *value* at all, since *value* in this whole framework has
 depended on $v$ from the start.
 
 None of this reaches a worker as a number, though. What actually lands
