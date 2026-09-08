@@ -693,8 +693,8 @@ below](#the-tendency-of-the-rate-of-profit-to-fall)).
 #### Surplus value
 
 There's a more basic source of profit, too — one that doesn't depend on
-any competitive edge at all. A worker is paid a wage — this is the
-capital [formally called `v`
+any competitive edge at all. A worker is paid a wage — this is *variable
+capital*, [formally called `v`
 below](#the-tendency-of-the-rate-of-profit-to-fall) — that covers
 roughly what it costs to maintain their lifestyle from one day to
 the next — everything from food to rent, to entertainment, to
