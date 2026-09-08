@@ -861,8 +861,9 @@ ratio tracked in corporate finance, just not always called that. `s'`
 has no standard named counterpart — the nearest real-world equivalent
 is informal, something like a labor-cost markup.
 
-The tendency itself has a rough echo in modern investing: heavily
-capital-intensive industries — lots of fixed assets on the books per
+That's not just a matter of vocabulary, either — the tendency itself
+has a rough echo in modern investing: heavily capital-intensive
+industries — lots of fixed assets on the books per
 dollar of revenue — are well known to post structurally lower ROIC
 than asset-light businesses, part of why investors like Warren Buffett
 have long preferred the latter. That's not identical to Marx's claim
