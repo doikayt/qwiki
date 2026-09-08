@@ -683,9 +683,8 @@ hands.
 #### Exchange-value and mechanization
 
 Only after that living labor actually produces something for the
-market can we interpret **value** quantitatively — as
-**exchange-value**, Marx's
-term for how much of one commodity trades for another. *Exchange-value*
+market can we interpret **value** quantitatively, as **exchange-value**. This 
+is Marx's term for how much of one commodity trades for another. *Exchange-value*
 is set (roughly) by the ratio of *socially necessary labor* necessary
 to produce each item to be exchanged.
 A capitalist who introduces a new machine ahead of
@@ -709,8 +708,9 @@ time**. Whatever labor is input beyond that point — the **surplus labor time**
 produces *value*, but that *value* isn't paid for; the employer keeps it as
 **surplus value**, the source of profit. Much of that profit doesn't just
 sit still, either — competitive pressure pushes employers to reinvest
-that surplus into better machinery, chasing exactly the kind of edge described
-above.
+that surplus into better machinery, chasing exactly the kind of edge
+described in [Exchange-value and
+mechanization](#exchange-value-and-mechanization) above.
 
 #### Class struggle and contradictions
 
