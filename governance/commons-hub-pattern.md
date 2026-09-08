@@ -35,6 +35,7 @@ open source software around nonprofit and for-profit satellites*
     - [Surplus value](#surplus-value)
     - [Class struggle and contradictions](#class-struggle-and-contradictions)
     - [The tendency of the rate of profit to fall](#the-tendency-of-the-rate-of-profit-to-fall)
+      - [In accounting terms](#in-accounting-terms)
   - [A.4 Commons-based peer production: Benkler's answer](#a4-commons-based-peer-production-benklers-answer)
   - [A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem)
   - [A.7 A return to the commons: enclosure](#a7-a-return-to-the-commons-enclosure)
@@ -816,12 +817,14 @@ falling rate and a thriving, richer capitalist class are fully
 compatible, just not inevitable. That's because two different things
 are being tracked. $p'$ is a *ratio*, profit against total capital
 invested, and a falling ratio is fully compatible with a growing
-absolute *mass* of profit, if the capital base underneath it (the
-denominator) grows even faster. And that capital base isn't neutral,
-ownerless math — it's owned, overwhelmingly, by the same capitalist
-class collecting the profit. So a falling rate can still mean the
-owners come out ahead twice over: more profit *and* a bigger pile of
-capital sitting on their own books.
+*mass* of profit — just $s$ itself, the absolute dollar amount
+([operating profit in GAAP terms](#in-accounting-terms)), not divided
+by anything — if the capital base underneath it (the denominator)
+grows even faster. And that capital base isn't some neutral
+abstraction — it's owned, overwhelmingly, by the same
+capitalist class collecting the profit. So a falling rate can still
+mean the owners come out ahead twice over: a growing *mass* of profit
+*and* a bigger pile of capital sitting on their own books.
 
 Separately, abundance is a *use-value* question — how much society can
 actually produce — and automation genuinely increases that, whatever
@@ -839,6 +842,8 @@ argues a rational, cost-minimizing capitalist would never adopt a
 technique that lowers their own *rate of profit* in the first place —
 which, if right, undercuts the mechanism pushing $q$ upward at all.
 Whether Okishio's assumptions hold is still argued over today.
+
+##### In accounting terms
 
 If you think in balance-sheet terms, here's how these map onto modern
 accounting and finance vocabulary — exact for some terms, looser for
