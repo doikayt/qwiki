@@ -640,11 +640,12 @@ counts as value in Marx's sense, because none of it is aimed at a
 market. 
 
 Note that the labor input that creates *value* need not be manual. Think of the
-modern engineer who spends months designing a superior tractor
-blade: they never personally forge a single one, but the design effort
-still counts, amortized across every blade later made from it — the
-same way a machine's own *value* gets transferred into its output bit by
-bit as it's used. It's the same kind of insight as a forager
+modern engineer who spends months designing a superior tractor blade:
+they never personally forge a single one, but the design effort still
+creates *value*, amortized thin across every blade later made from the
+design.
+
+It's the same kind of insight as a forager
 recognizing a streambed stone's potential as a tool before ever
 picking it up, then spending hours or days trying 
 different strike angles before perfecting the technique that results in 
@@ -653,6 +654,16 @@ of insight usually rests on time already
 invested in training, practice  or study — and that counts as labor here too. The
 hours spent becoming capable of an insight count as much as inputs 
 to value creation as the hours spent acting on that insight.
+
+That's different, though, from what happens inside the machine itself
+once it's built. A machine has **value** too — the labor that went
+into manufacturing it — but the machine doesn't create new *value* by
+running; it only transfers **the value** it already has into whatever
+it helps produce, a little at a time, as it wears out. This is what
+Marx calls **constant capital** (formally `c`, [defined
+below](#the-tendency-of-the-rate-of-profit-to-fall)) — **value**
+passed along, not *value* created, unlike the engineer's or the
+forager's living labor, which actually adds something new.
 
 #### Exchange-value and mechanization
 
