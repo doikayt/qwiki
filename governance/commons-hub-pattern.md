@@ -726,8 +726,9 @@ capital a firm lays out into two pieces: *constant capital* ($c$) —
 machinery, materials, everything that transfers its existing value
 into output without adding to it — and *variable capital* ($v$) —
 wages, the only capital that creates value beyond its own cost, since
-a worker paid $v$ produces more than $v$ over the working day. Total
-capital advanced is $C = c + v$.
+a worker paid $v$ produces more than $v$ over the working day. That
+extra output — *surplus value*, already named above — is $s$: the
+source of profit. Total capital advanced is $C = c + v$.
 
 Two ratios follow from that split. The *rate of exploitation*,
 $s' = s/v$, measures surplus value against wages: how much unpaid
