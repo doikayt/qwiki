@@ -673,12 +673,18 @@ built using other machines and tools, whose value depreciated into it
 the same way it now depreciates into what it produces. Marx has a name
 for this — **dead labor**, congealed from earlier rounds of
 production, as opposed to **living labor** — the engineer's, the
-forager's — actually being performed right now.
+forager's — actually being performed right now. Trace that back far
+enough and it looks like a dependency graph fanning out at every step:
+this machine's value depends on the machines that built it, which
+depend on the machines that built *them*, recursively, until you
+finally bottom out at nothing but raw materials and someone's bare
+hands.
 
 #### Exchange-value and mechanization
 
-Only after that effort actually produces something for the market can
-we interpret **value** quantitatively — as **exchange-value**, Marx's
+Only after that living labor actually produces something for the
+market can we interpret **value** quantitatively — as
+**exchange-value**, Marx's
 term for how much of one commodity trades for another. *Exchange-value*
 is set (roughly) by the ratio of *socially necessary labor* necessary
 to produce each item to be exchanged.
