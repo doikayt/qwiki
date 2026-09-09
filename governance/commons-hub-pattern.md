@@ -866,16 +866,11 @@ ratio tracked in corporate finance, just not always called that. `s'`
 has no standard named counterpart — the nearest real-world equivalent
 is informal, something like a labor-cost markup.
 
-The tendency itself shows up in modern investing too, not just its
-vocabulary: heavily capital-intensive industries — lots of fixed
-assets on the books per
+The tendency itself shows up in modern investing too: heavily capital-intensive 
+industries — those with lots of fixed assets on the books per
 dollar of revenue — are well known to post structurally lower ROIC
 than asset-light businesses, part of why investors like Warren Buffett
-have long preferred the latter. That's not identical to Marx's claim
-(his is a secular trend as capital intensity rises economy-wide over
-time, not a snapshot comparison between industries today), but it's
-the same underlying arithmetic: more capital in the denominator, profit
-in the numerator not keeping pace, lower return.
+have long preferred the latter. 
 
 ##### Disillusionment, not abstraction
 
