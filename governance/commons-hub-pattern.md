@@ -36,7 +36,7 @@ open source software around nonprofit and for-profit satellites*
     - [Class struggle and contradictions](#class-struggle-and-contradictions)
     - [The tendency of the rate of profit to fall](#the-tendency-of-the-rate-of-profit-to-fall)
       - [In accounting terms](#in-accounting-terms)
-      - [Disillusionment, not abstraction](#disillusionment-not-abstraction)
+      - [Quantifying the dissolution driver](#quantifying-the-dissolution-driver)
   - [A.4 Commons-based peer production: Benkler's answer](#a4-commons-based-peer-production-benklers-answer)
   - [A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem)
   - [A.7 A return to the commons: enclosure](#a7-a-return-to-the-commons-enclosure)
@@ -872,9 +872,10 @@ dollar of revenue — are well known to post structurally lower ROIC
 than asset-light businesses, part of why investors like Warren Buffett
 have long preferred the latter. 
 
-##### Disillusionment, not abstraction
+##### Quantifying the dissolution driver
 
-The asymptote in the above graph is exactly where Marx's later writing on automation
+Getting back to our graph in the subsection above, note that its asymptote 
+is exactly where Marx's later writing on automation
 picks up: at the limit where $q \to \infty$, *living labor* ($v$)
 becomes vanishingly small relative to capital, and automated,
 machine-embodied knowledge — what Marx calls **general intellect** —
