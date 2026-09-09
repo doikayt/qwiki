@@ -711,8 +711,7 @@ produces *value*, but that *value* isn't paid for; the employer keeps it as
 **surplus value**, the source of profit. Much of that profit doesn't just
 sit still, either — competitive pressure pushes employers to reinvest
 that surplus into better machinery, chasing exactly the kind of edge
-described in [Exchange-value and
-mechanization](#exchange-value-and-mechanization) above.
+described in the previous  [section](#exchange-value-and-mechanization).
 
 #### Class struggle and contradictions
 
