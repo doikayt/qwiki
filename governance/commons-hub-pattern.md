@@ -101,7 +101,11 @@ the industrial corporation, the modern [platform
 company](https://en.wikipedia.org/wiki/Platform_economy). Each is a governance
 structure for collective production and economic benefit, adopted — and later
 challenged — because the previous model no longer served elites
-with the power to change it. The wave of English enclosure that began around the mid-1700s[^1]
+with the power to change it. 
+<img src="images/enclosure.jpg" alt="1793 Enclosure Act for Shifnal" align="right" width="150">
+
+<sub>Enclosure Act for Shifnal, 1793 (Shropshire Archives 539/1/5/3). Public domain, via Wikimedia Commons.</sub>
+The wave of English enclosure that began around the mid-1700s[^1]
 was driven by landowners who benefited from privatizing common land, not by
 commoners demanding it; joint-stock charters emerged to mobilize capital
 for merchants and investors who needed a legal vehicle for it, not from popular
@@ -307,7 +311,7 @@ distribute the proceeds of a funded program.
 no profit-participation rights. 
 
 
-The founding steward holds all authority initially and grants 'slices' of it to developers
+The _founding steward_ holds all authority initially and grants 'slices' of it to developers
 as they deliver results and build trust. Those developers can, in turn, 
 delegate that authority to others _they_ trust. 
 That delegation is only valid to someone already recognized as a trusted
@@ -343,19 +347,27 @@ later document; a pointer back to it belongs here once that's written.)*
 
 ## 3. Economic Benefit — Sequencing Across Mechanisms
 
-By this point there are three distinct mechanisms in play, and it's easy to
-conflate them since they all touch "who gets what." Worth seeing side by
-side once, rather than only encountering each in its own document:
+In an ideal world, founding stewards would adopt this model on
+commitment to the mission alone. But self-interest and the  desire for
+material comfort shapes nearly every decision people make.
+The U.S. tax code actually already provides a ready-made mechanism
+for leveraging that self-interest: an  [Employee Stock
+Ownership Plan](https://en.wikipedia.org/wiki/Employee_stock_ownership_plan).An ESOP is 
+a trust that holds company stock on employees' behalf and vests it to
+them over years of service. Congress built it as a tax-favored path to
+convert employees into genuine owners rather than just wage earners —
+which is exactly the second thing we want here: it lets a founder take
+a real, liquid exit, converting the enterprise value they built into
+cash, while routing all *future* appreciation to the employees who
+keep building it, rather than to whoever inherits or buys the
+founder's stake. Self-interest fuels the founding; broad-based
+ownership captures everything built afterward. (For the fuller argument — including where
+our view of founder labor diverges from Marx, and the Schumpeter
+framing behind it — see [Appendix
+A.3](#a3-founder-labor-and-the-entrepreneurial-reward).)
 
-| Mechanism | Scope | Duration | Economic value | Who's eligible |
-|---|---|---|---|---|
-| DAO (§2 above) | Per funded program | Episodic — ends when the program does | Cash, paid for services rendered | Self-selected opt-in contributors |
-| Token-based delegated authority (see the *Contributor Guide*) | Ongoing | Decays with inactivity | None — pure voice | Registered committers who've earned trust |
-| ESOP | Ongoing | Vests over years | Real equity | Legally must be broad-based — ~all full-time employees |
-
-The ESOP row above is conceptual for now, not yet operational: it only
-becomes worth evaluating once two things are both true, not on a calendar
-date:
+ESOP feasibility isn't automatic — it only becomes worth evaluating once
+two things are both true, not on a calendar date:
 
 1. **There's real enterprise value to distribute.** An ESOP requires an
    independent appraisal (no public market for the stock); with negligible
@@ -376,6 +388,16 @@ note for later, not now: if a founder-exit tax deferral under
 is ever on the table, the subsidiary needs to already be a C-corp before
 that transaction — an entity-type decision worth making with this in mind
 well before it's actually needed.
+
+By this point there are three distinct mechanisms in play, and it's easy to
+conflate them since they all touch "who gets what." Worth seeing side by
+side once, rather than only encountering each in its own document:
+
+| Mechanism | Scope | Duration | Economic value | Who's eligible |
+|---|---|---|---|---|
+| DAO (§2 above) | Per funded program | Episodic — ends when the program does | Cash, paid for services rendered | Self-selected opt-in contributors |
+| Token-based delegated authority (see the *Contributor Guide*) | Ongoing | Decays with inactivity | None — pure voice | Registered committers who've earned trust |
+| ESOP | Ongoing | Vests over years | Real equity | Legally must be broad-based — ~all full-time employees |
 
 **The resulting ladder:**
 
@@ -910,30 +932,6 @@ work, and that the resulting abundance is being captured by a class
 that visibly isn't the one still producing it.
 
 
-### A.4 Commons-based peer production: Benkler's answer
-
-There's a second, independent reason hierarchy isn't needed here, distinct
-from anything AI changes. Coase's hierarchy doesn't only solve "I can't see
-what you're doing" — it solves "you don't actually want to do what I need,"
-the **misalignment** between what a wage-earner wants (the largest wage for
-the least effort) and what a firm wants (the largest output for the wage),
-which is precisely what supervision hierarchies exist to manage. Self-selected,
-mission-driven contributors who opted in because they believe in the goal
-mostly don't have that gap to begin with — this isn't a cheaper way to
-supervise labor, it's a context where the thing supervision exists to fix is
-largely absent. This already has a name and a rigorous treatment, and it's a
-tighter fit here than Coase alone:
-[Yochai Benkler, "Coase's Penguin, or, Linux and The Nature of the
-Firm"](https://cyber.harvard.edu/is03/Readings/Benkler_Excerpt.pdf) (Yale Law
-Journal, 2002) — the title is a direct response to Coase, using Linux as the
-empirical counter-case, and it argues for a third mode of production alongside
-markets and firms: **commons-based peer production**, where complex goods get
-built by self-organizing contributors motivated by non-monetary reasons
-(mission, reputation, craft), coordinated through shared infrastructure rather
-than either price signals or managerial hierarchy. This isn't speculative —
-it's the mode that already produced Linux and most of the open source stack
-this pattern itself depends on.
-
 
 ### A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem
 
@@ -957,11 +955,6 @@ communities that worked it — not owned by any single lord, not managed by the
 state. Enclosure privatized that land, and with it, concentrated the benefit
 of centuries of collective stewardship into far fewer hands.
 
-<figure class="float">
-<img src="images/enclosure.jpg" alt="1793 Enclosure Act for Shifnal">
-<figcaption>Enclosure Act for Shifnal, 1793 (Shropshire Archives 539/1/5/3).
-Public domain, via Wikimedia Commons.</figcaption>
-</figure>
 
 *(The Hardin/Ostrom discussion formerly here has moved to [the Neoclassical
 View
@@ -1027,4 +1020,8 @@ the Ostrom-to-Commons-Hub tie-in has moved to the end of
     analyst side, comparing ROIC against WACC (cost of capital) is a
     standard valuation framework taught in the [CFA
     curriculum](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/equity-valuation-applications-and-processes).
+[^11]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
+    trans. 1934), on entrepreneurial profit vs. interest on capital; and
+    *Capitalism, Socialism and Democracy* (1942) on "creative
+    destruction."
 
