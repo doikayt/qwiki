@@ -581,7 +581,7 @@ things cheap":
 This narrowly focused primer on Marx's economic theory is targeted to
 readers who are 'Marx-curious' but have never studied his work  -- in particular 
 his concept of  the **labor theory of value**. The sketch below will, hopefully,
-provide sufficient background for readers to understand his "Fragment on Machines" notes.
+provide sufficient background for readers to understand his "Fragment on Machines" notes.[^3]
 
 #### Use-value
 
@@ -654,8 +654,8 @@ Both types of effort count toward *value* creation —
 the hours spent studying to be at  the level where insight is possible 
 are just as relevant as the hours spent at the drafting table working toward 
 the finished design. The total effort hours across both categories are 
-thinly amortized across every blade produced as a result of that
-effort.
+thinly amortized across every blade produced as a result of those
+efforts.
 
 This is different, though, from what happens inside the machine itself
 once it's built. A machine has *value* too — the labor that went
@@ -690,7 +690,7 @@ is set (roughly) by the ratio of *socially necessary labor* necessary
 to produce each item to be exchanged.
 A capitalist who introduces a newer, more efficient machine ahead of competitors
 captures the gap between the reduced labor time now embodied in each unit
-they produce and the social average as extra profit. This continues until
+they produce and the social average -- as extra profit. This continues until
 competitors adopt similar machinery and the social average itself
 falls (the same
 mechanization race that drives up the *organic composition of
@@ -816,9 +816,10 @@ enough and the rate of profit trends toward zero even as exploitation intensifie
 — Marx's own name for this is the **tendency of the rate of profit to
 fall**.
 
-The terminology itself is what trips people up here: "rate of profit"
+This terminology can trip people up: "rate of profit"
 sounds like it should track how well capitalists are doing overall, so
-a falling rate reads as bad news for them. It isn't necessarily — a
+one might easily make the mistake that a falling rate means bad 
+news for them. It isn't necessarily — a
 falling rate and a thriving capitalist class are fully
 compatible, just not inevitable. That's because two different things
 are being tracked. $p'$ is a *ratio*, profit against total capital
@@ -832,20 +833,24 @@ capitalist class collecting the profit. So a falling rate can still
 mean the owners come out ahead twice over: capturing both a growing *mass* of profit
 *and* ending up with an even  bigger pile of capital (assets) on their own books.
 
-Separately, abundance is a *use-value* question — how much society can
-actually produce — and automation genuinely increases that, whatever
-is happening to any value-based ratio. What doesn't follow
-automatically is who captures any of these gains — the growing
+Separately, abundance is a *use-value* related concept. It tracks with 
+how much society can actually produce — and automation genuinely 
+increases that quantity, whatever is happening to any value-based ratio. What doesn't follow
+automatically is _who_ captures these gains: the growing
 profit, the growing capital base, or the growing material abundance
-itself: that's a question of who owns the machines, not a
-mathematical one.
+itself: that's a question of _who owns_ the machines, not a mathematical one.
 
 Note that Marx treated the *tendency of the rate of profit to fall* as
 just that — a _tendency_, not an iron law — and named several
-countervailing forces — pressures pushing the other way — such as
-cheapening the elements of *constant capital*, foreign trade, and a
-rising $s'$ that offsets $q$ for a while, any of which can slow or
-reverse it in practice.
+countervailing forces — pressures pushing the other way. Chief among
+them: cheapening the elements of *constant capital* itself. As the
+industries that produce machinery and raw materials grow more
+productive, each unit of `c` embodies less value than before — the
+physical mass of machinery increases, but its price doesn't rise in
+lockstep, so `q = c/v` climbs more slowly than automation alone would
+predict. Add to that foreign trade (cheaper imported inputs, or
+higher-margin export markets) and a rising $s'$ that offsets $q$ for a
+while, and any of these can slow or reverse the fall in practice.
 
 ##### In accounting terms
 
