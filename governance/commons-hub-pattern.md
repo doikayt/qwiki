@@ -872,7 +872,7 @@ dollar of revenue — are well known to post structurally lower ROIC
 than asset-light businesses, part of why investors like Warren Buffett
 have long preferred the latter. 
 
-##### Quantifying the dissolution driver
+##### Quantifying the dissolutionment driver
 
 Getting back to our graph in the subsection above, note that its asymptote 
 is exactly where Marx's later writing on automation
