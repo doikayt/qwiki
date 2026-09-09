@@ -800,30 +800,30 @@ xychart-beta
     line "s' = 1" [1, 0.5, 0.33, 0.25, 0.2, 0.17, 0.14, 0.13, 0.11, 0.1, 0.09, 0.08, 0.08]
 ```
 
-No matter which curve you're on — how hard labor is being squeezed
-(that is: how high $s'$ climbs) — mechanization still drags its
+Each curve in the above graph is a reflection of  how hard labor is being squeezed
+(that is: how high $s'$ climbs.) But regardless of which curve we analyze, 
+we see that mechanization still drags the
 *rate of profit* down toward the same floor. As $q \to \infty$,
 $p' \to 0$. Machinery transfers *value*; it doesn't create it — only
 $v$, *living labor*, does.
 So the more of production that shifts from $v$ to $c$, the more the
 denominator
 outruns anything the numerator can do about it. Push automation far
-enough and profit trends toward zero even as exploitation intensifies
+enough and the rate of profit trends toward zero even as exploitation intensifies
 — Marx's own name for this is the **tendency of the rate of profit to
 fall**.
 
 The terminology itself is what trips people up here: "rate of profit"
 sounds like it should track how well capitalists are doing overall, so
 a falling rate reads as bad news for them. It isn't necessarily — a
-falling rate and a thriving, richer capitalist class are fully
+falling rate and a thriving capitalist class are fully
 compatible, just not inevitable. That's because two different things
 are being tracked. $p'$ is a *ratio*, profit against total capital
 invested, and a falling ratio can easily coexist with a growing
-*mass* of profit — just $s$ itself, the absolute dollar amount
+*mass* of profit. That mass is just $s$ itself, the absolute dollar amount
 ([operating profit in GAAP terms](#in-accounting-terms)), not divided
 by anything — if the capital base underneath it (the denominator)
-grows even faster. And that capital base isn't some neutral
-abstraction — it's owned, overwhelmingly, by the same
+grows even faster. That capital base is owned, overwhelmingly, by the same
 capitalist class collecting the profit. So a falling rate can still
 mean the owners come out ahead twice over: a growing *mass* of profit
 *and* a bigger pile of capital sitting on their own books.
@@ -836,18 +836,12 @@ profit, the growing capital base, or the growing material abundance
 itself: that's a question of who owns the machines, not a
 mathematical one.
 
-Marx himself treated the *tendency of the rate of profit to fall* as
-just that — a tendency, not an iron law — and named several
+Note that Marx treated the *tendency of the rate of profit to fall* as
+just that — a _tendency_, not an iron law — and named several
 countervailing forces — pressures pushing the other way — such as
 cheapening the elements of *constant capital*, foreign trade, and a
 rising $s'$ that offsets $q$ for a while, any of which can slow or
-reverse it in practice. It's also one of the more contested
-pieces of his system: [Okishio's
-theorem](https://en.wikipedia.org/wiki/Okishio%27s_theorem), a well-known
-1961 rebuttal, argues a rational, cost-minimizing capitalist would never adopt a
-technique that lowers their own *rate of profit* in the first place —
-which, if right, undercuts the mechanism pushing $q$ upward at all.
-Whether Okishio's assumptions hold is still argued over today.
+reverse it in practice.
 
 ##### In accounting terms
 
