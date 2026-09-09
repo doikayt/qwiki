@@ -829,8 +829,8 @@ just $s$ itself, the absolute dollar amount
 ([operating profit in GAAP terms](#in-accounting-terms)), not divided
 by anything. That capital base is owned, overwhelmingly, by the same
 capitalist class collecting the profit. So a falling rate can still
-mean the owners come out ahead twice over: a growing *mass* of profit
-*and* a bigger pile of capital sitting on their own books.
+mean the owners come out ahead twice over: capturing both a growing *mass* of profit
+*and* ending up with an even  bigger pile of capital (assets) on their own books.
 
 Separately, abundance is a *use-value* question — how much society can
 actually produce — and automation genuinely increases that, whatever
@@ -884,7 +884,8 @@ picks up: at the limit where $q \to \infty$, *living labor* ($v$)
 becomes vanishingly small relative to capital, and automated,
 machine-embodied knowledge — what Marx calls **general intellect** —
 becomes the primary productive force directly. At that point
-labor-time doesn't just make profit trend toward zero; it stops being
+diminishing socially necessary labor-time doesn't just make the rate of 
+profit trend toward zero; it stops being
 the basis of *value* at all, since *value* in this whole framework has
 depended on $v$ from the start.
 
