@@ -831,9 +831,10 @@ mean the owners come out ahead twice over: a growing *mass* of profit
 Separately, abundance is a *use-value* question — how much society can
 actually produce — and automation genuinely increases that, whatever
 is happening to any value-based ratio. What doesn't follow
-automatically is who captures either kind of gain — the growing profit
-or the growing capital base itself: that's a question of who owns the
-machines, not a mathematical one.
+automatically is who captures any of these gains — the growing
+profit, the growing capital base, or the growing material abundance
+itself: that's a question of who owns the machines, not a
+mathematical one.
 
 Marx himself treated the *tendency of the rate of profit to fall* as
 just that — a tendency, not an iron law — and named several
