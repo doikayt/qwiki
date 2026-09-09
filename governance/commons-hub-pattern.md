@@ -97,7 +97,8 @@ benefits economically (and by what means)? Different historical eras have answer
 questions differently: [guilds](https://en.wikipedia.org/wiki/Guild),
 [common land](https://en.wikipedia.org/wiki/Common_land),
 [joint-stock charters](https://en.wikipedia.org/wiki/Joint-stock_company),
-the industrial corporation, the modern platform company. Each is a governance
+the industrial corporation, the modern [platform
+company](https://en.wikipedia.org/wiki/Platform_economy). Each is a governance
 structure for collective production and economic benefit, adopted — and later
 challenged — because the previous model no longer served elites
 with the power to change it. The wave of English enclosure that began around the mid-1700s[^1]
