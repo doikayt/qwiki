@@ -36,6 +36,7 @@ open source software around nonprofit and for-profit satellites*
     - [Class struggle and contradictions](#class-struggle-and-contradictions)
     - [The tendency of the rate of profit to fall](#the-tendency-of-the-rate-of-profit-to-fall)
       - [In accounting terms](#in-accounting-terms)
+      - [Disillusionment, not abstraction](#disillusionment-not-abstraction)
   - [A.4 Commons-based peer production: Benkler's answer](#a4-commons-based-peer-production-benklers-answer)
   - [A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem)
   - [A.7 A return to the commons: enclosure](#a7-a-return-to-the-commons-enclosure)
@@ -840,8 +841,9 @@ countervailing forces — pressures pushing the other way — such as
 cheapening the elements of *constant capital*, foreign trade, and a
 rising $s'$ that offsets $q$ for a while, any of which can slow or
 reverse it in practice. It's also one of the more contested
-pieces of his system: Okishio's theorem, a well-known 1961 rebuttal,
-argues a rational, cost-minimizing capitalist would never adopt a
+pieces of his system: [Okishio's
+theorem](https://en.wikipedia.org/wiki/Okishio%27s_theorem), a well-known
+1961 rebuttal, argues a rational, cost-minimizing capitalist would never adopt a
 technique that lowers their own *rate of profit* in the first place —
 which, if right, undercuts the mechanism pushing $q$ upward at all.
 Whether Okishio's assumptions hold is still argued over today.
@@ -879,6 +881,8 @@ have long preferred the latter. That's not identical to Marx's claim
 time, not a snapshot comparison between industries today), but it's
 the same underlying arithmetic: more capital in the denominator, profit
 in the numerator not keeping pace, lower return.
+
+##### Disillusionment, not abstraction
 
 The asymptote in the above graph is exactly where Marx's later writing on automation
 picks up: at the limit where $q \to \infty$, *living labor* ($v$)
