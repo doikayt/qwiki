@@ -748,10 +748,9 @@ pay, then using generative AI to synthesize new performances from that
 scan indefinitely, with no further compensation owed — union
 president Fran Drescher called it "an existential threat to creative
 professions." It's a present-day instance of the same pattern: a
-worker's skill and likeness captured once, re-embodied in a reusable
-AI-driven asset, and then split off from any further claim on the
-value it goes on to
-produce.
+worker's skill and likeness is captured once, re-embodied in a reusable
+AI-driven asset, and then split off from any future ability of the worker 
+to claim any portion of the value that asset goes on to produce.
 
 #### The tendency of the rate of profit to fall
 
