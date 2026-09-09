@@ -804,7 +804,7 @@ Each curve in the above graph is a reflection of  how hard labor is being squeez
 (that is: how high $s'$ climbs.) But regardless of which curve we analyze, 
 we see that mechanization still drags the
 *rate of profit* down toward the same floor. As $q \to \infty$,
-$p' \to 0$. Machinery transfers *value*; it doesn't create it — only
+$p' \to 0$, machinery transfers *value*; it doesn't create it — only
 $v$, *living labor*, does.
 So the more of production that shifts from $v$ to $c$, the more the
 denominator
@@ -866,7 +866,7 @@ ratio tracked in corporate finance, just not always called that. `s'`
 has no standard named counterpart — the nearest real-world equivalent
 is informal, something like a labor-cost markup.
 
-The tendency itself shows up in modern investing too: heavily capital-intensive 
+The tendency of the rate of profit to fall shows up in modern investing too: heavily capital-intensive 
 industries — those with lots of fixed assets on the books per
 dollar of revenue — are well known to post structurally lower ROIC
 than asset-light businesses, part of why investors like Warren Buffett
