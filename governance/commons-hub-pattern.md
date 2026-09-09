@@ -750,7 +750,7 @@ president Fran Drescher called it "an existential threat to creative
 professions." It's a present-day instance of the same pattern: a
 worker's skill and likeness is captured once, re-embodied in a reusable
 AI-driven asset, and then split off from any future ability of the worker 
-to claim any portion of the value that asset goes on to produce.
+to claim any portion of the *value* that asset goes on to produce.
 
 #### The tendency of the rate of profit to fall
 
@@ -823,10 +823,11 @@ falling rate and a thriving capitalist class are fully
 compatible, just not inevitable. That's because two different things
 are being tracked. $p'$ is a *ratio*, profit against total capital
 invested, and a falling ratio can easily coexist with a growing
-*mass* of profit. That mass is just $s$ itself, the absolute dollar amount
+*mass* of profit — if the capital base underneath it (the
+denominator) grows even faster than the profit itself. That mass is
+just $s$ itself, the absolute dollar amount
 ([operating profit in GAAP terms](#in-accounting-terms)), not divided
-by anything — if the capital base underneath it (the denominator)
-grows even faster. That capital base is owned, overwhelmingly, by the same
+by anything. That capital base is owned, overwhelmingly, by the same
 capitalist class collecting the profit. So a falling rate can still
 mean the owners come out ahead twice over: a growing *mass* of profit
 *and* a bigger pile of capital sitting on their own books.
