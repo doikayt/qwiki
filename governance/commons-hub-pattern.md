@@ -645,15 +645,19 @@ market.
 Note that this labor need not be manual. Think of the modern engineer
 who spends months designing a superior tractor blade: they never
 personally forge a single one, but their effort still creates *value*
-— and that effort starts before the drafting table, with the initial
+— and that effort starts even before they begin working on the design. 
+It starts even before the spark of initial
 insight that a better blade might even be possible. Without years of
-prior training, practice, or study, that insight would never have
-occurred to them at all. Both halves count toward *value* creation —
-the hours spent arriving at the insight are just as real as the hours
-spent turning it into a finished design, thinly amortized across every
-blade later made from it.
+prior training, practice, and study, the engineer would never have 
+the mental tools that allow that insight to take shape.
+Both types of effort count toward *value* creation —
+the hours spent studying to be at  the level where insight is possible 
+are just as relevant as the hours spent at the drafting table working toward 
+the finished design. The total effort hours across both categories are 
+thinly amortized across every blade produced as a result of that
+effort.
 
-That's different, though, from what happens inside the machine itself
+This is different, though, from what happens inside the machine itself
 once it's built. A machine has *value* too — the labor that went
 into manufacturing it — but the machine doesn't create new *value*
 just by operating; that only happens through the labor of whoever's
