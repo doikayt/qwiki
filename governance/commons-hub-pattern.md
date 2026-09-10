@@ -397,9 +397,10 @@ founder labor on exit is more aligned with Schumpeter as discussed
 in [Appendix A.3](#a3-founder-labor-and-fair-reward).)
 
 The buyout, the ongoing vesting cycle, and an employee's eventual exit
-are three separate flows of cash and shares — here's how they connect:
+are three separate flows of cash and shares. Here's how they connect:
 
 ```mermaid
+%%{init: {"themeVariables": {"fontSize": "12px"}}}%%
 flowchart TD
     Founder([Founder])
     Lender([Bank / seller financing])
