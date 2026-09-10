@@ -786,8 +786,8 @@ described in the previous  [section](#exchange-value-and-mechanization).
 
 <table align="right" width="200">
 <tr><td><img src="images/scot-tissue-bolsheviks.jpg" alt="1930s Scot Tissue Towels advertisement reading 'Is your washroom breeding Bolsheviks?'" width="200"></td></tr>
-<tr><td><sub>Scot Tissue Towels advertisement, "Is your washroom breeding
-Bolsheviks?" (1930s). Public domain.</sub></td></tr>
+<tr><td><sub>Scot Tissue Towels advertisement,<br>"Is your washroom breeding
+Bolsheviks?"<br>(1930s). Public domain.</sub></td></tr>
 </table>
 
 Whoever owns the machinery that *surplus value* gets invested in also holds most
