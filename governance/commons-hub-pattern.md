@@ -370,8 +370,9 @@ than just wage earners. That serves two things we want here: first, it
 lets a founder take a real, liquid exit, converting the enterprise
 value they built into cash; second, it routes all *future* appreciation
 to the employees who keep building the company, rather than to
-whoever inherits or buys the founder's stake. Self-interest (coupled with mission committment) 
-fuels an organization's founding; broad-based ownership captures everything built afterward. (For the fuller argument — including where
+whoever inherits or buys the founder's stake. Self-interest (coupled
+with mission commitment) claims the founder's share; broad-based
+ownership captures everything built afterward. (For the fuller argument — including where
 our view of founder labor diverges from Marx, and the Schumpeter
 framing behind it — see [Appendix
 A.3](#a3-founder-labor-and-the-entrepreneurial-reward).)
