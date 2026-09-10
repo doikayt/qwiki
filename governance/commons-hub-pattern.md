@@ -1,7 +1,7 @@
 # The Commons-Hub Pattern
 
 *A replicable model for organizing collaboratively-developed
-open source software around nonprofit and for-profit satellites*
+open source software (OSS) around nonprofit and for-profit satellites*
 
 **Status:** Early concept draft.
 
@@ -10,7 +10,7 @@ open source software around nonprofit and for-profit satellites*
   on anything discussed here.
 - Not written by a trained economist — this is a summary of the
   author's own research and reflection on equitable approaches to
-  structuring, operating, and profiting from an enterprise.
+  structuring, operating, and profiting from an OSS-focused enterprise.
 
 ---
 
