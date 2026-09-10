@@ -3,7 +3,9 @@
 *A replicable model for organizing collaboratively-developed
 open source software around nonprofit and for-profit satellites*
 
-**Status:** Early concept draft — not reviewed by counsel. 
+**Status:** Early concept draft — not reviewed by counsel. Nothing in
+this document is legal, tax, or financial advice; consult qualified
+counsel and a CPA before acting on anything discussed here.
 
 ---
 
@@ -375,7 +377,7 @@ employees, vesting it to them over years of service. Congress built it
 as a tax-favored path to convert employees into genuine owners rather
 than just wage earners. How broadly that ownership has to be shared
 isn't left to a founder's discretion, though — federal law specifies 
-the rules.[^14] Concretely, the trust itself is the stock purchaser: it
+the rules.[^16] Concretely, the trust itself is the stock purchaser: it
 buys back the founder's shares directly — typically financed by a loan
 that the company then repays over time via tax-deductible
 contributions to the trust. This provides founders a liquid exit path that
@@ -447,22 +449,19 @@ details:
     insider concentration.[^15]
   - Doesn't get §1042: that deferral is C-corp only.
 
-The two aren't just different flavors of the same thing — they're
-mutually exclusive elections that reward different goals (a founder's
-exit versus the ongoing company's retained earnings), and which one
-fits depends on facts specific to the [cap
-table](https://en.wikipedia.org/wiki/Capitalization_table) (the
+The S-corp/C-corp election is mutually exclusive, and the two reward
+different goals (a founder's exit versus the ongoing company's
+retained earnings) — which one fits depends on facts specific to the
+[cap table](https://en.wikipedia.org/wiki/Capitalization_table) (the
 ledger of who owns what share of the company), timeline, and founders'
-own tax situation involved. If a §1042 rollover is ever a
+own tax situation. If a §1042 rollover is ever a
 goal, the entity needs to already be a C-corp *before* that
-transaction — worth deciding early, with this in mind, rather than
-under time pressure later. **This is a decision for counsel and a CPA
-familiar with ESOP transactions, not something this document
-resolves**.
+transaction. **This specific choice needs counsel and a CPA familiar
+with ESOP transactions, not this document.**
 
 By this point there are three distinct mechanisms in play, and it's easy to
-conflate them since they all touch "who gets what." Worth seeing side by
-side once, rather than only encountering each in its own document:
+conflate them since they all touch "who gets what" (economic benefit or decision-making authority.)
+To clarify:
 
 | Mechanism | Scope | Duration | Economic value | Who's eligible |
 |---|---|---|---|---|
@@ -1252,12 +1251,11 @@ resilience strategy.
     the chapter distinguishing the technical function of directing
     combined labor (the orchestra-conductor analogy) from the despotic
     function of capitalist supervision.
-[^14]: ERISA requires broad-based coverage — generally, every employee
-    meeting minimal age and service thresholds must be eligible — and
-    nondiscriminatory allocation formulas that can't disproportionately
-    favor highly compensated employees over everyone else. The law is
-    built to prevent an ESOP in name only, with a small circle of
-    insiders collecting most of its actual value.
+[^14]: [NCEO, "ESOPs in S
+    Corporations"](https://www.nceo.org/what-is-employee-ownership/esops/esops-s-corporations) —
+    on the federal tax exemption for S-corp income attributable to ESOP
+    ownership, and the ~4,000-plus 100%-ESOP-owned S-corps counted in a
+    2022 survey.
 [^15]: Without a safeguard, a founder could structure an S-corp ESOP
     so the company pays no tax while the shares' actual value stays
     concentrated among a small circle of insiders rather than reaching
@@ -1271,4 +1269,10 @@ resilience strategy.
     equity. Violations carry a 50% excise tax, deemed taxable
     distributions to participants, loss of the ESOP's tax-qualified
     status, and termination of the company's S-corp election.
+[^16]: ERISA requires broad-based coverage — generally, every employee
+    meeting minimal age and service thresholds must be eligible — and
+    nondiscriminatory allocation formulas that can't disproportionately
+    favor highly compensated employees over everyone else. The law is
+    built to prevent an ESOP in name only, with a small circle of
+    insiders collecting most of its actual value.
 
