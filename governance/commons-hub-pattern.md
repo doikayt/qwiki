@@ -21,6 +21,7 @@ open source software around nonprofit and for-profit satellites*
   - [DAO](#dao)
   - [Token-Based Delegated Authority](#token-based-delegated-authority)
 - [3. Economic Benefit — Sequencing Across Mechanisms](#3-economic-benefit--sequencing-across-mechanisms)
+  - [C-corp or S-corp?](#c-corp-or-s-corp)
 - [4. The Stakes, and why our model has an edge](#4-the-stakes-and-why-our-model-has-an-edge)
   - [The labor-market half of the advantage: elite overproduction and AI-driven displacement](#the-labor-market-half-of-the-advantage-elite-overproduction-and-ai-driven-displacement)
   - [Cost advantages that a for-profit competitor can't match](#cost-advantages-that-a-for-profit-competitor-cant-match)
@@ -37,6 +38,7 @@ open source software around nonprofit and for-profit satellites*
     - [The tendency of the rate of profit to fall](#the-tendency-of-the-rate-of-profit-to-fall)
       - [In accounting terms](#in-accounting-terms)
       - [Quantifying the dissolution driver](#quantifying-the-dissolution-driver)
+  - [A.3 Founder labor and the entrepreneurial reward](#a3-founder-labor-and-the-entrepreneurial-reward)
   - [A.4 Commons-based peer production: Benkler's answer](#a4-commons-based-peer-production-benklers-answer)
   - [A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem)
   - [A.7 A return to the commons: enclosure](#a7-a-return-to-the-commons-enclosure)
@@ -163,6 +165,11 @@ disposable income to purchase the goods a capitalist economy produces. But the i
 contradiction most relevant to this section is the process by which the surplus value
 extracted from workers is invested into ever more sophisticated machines which
 perform work with ever-increasing efficiency, and ever-diminishing requirements for human labor.
+
+<img src="images/capitalism-labor-cartoon.jpg" alt="Cartoon: an arm labeled CAPITALISM feeds coal shoveled by a figure labeled LABOR into a furnace" align="right" width="200">
+
+<sub>You load sixteen tons, what do you get? Another day older and deeper in
+debt. Public domain.</sub>
 
 Marx's "Fragment on Machines," in the Grundrisse notebooks (1857–58),[^3] anticipated exactly this: a point at
 which automated, machine-embodied social knowledge, "the general intellect" (Marx's term — but
@@ -347,21 +354,22 @@ later document; a pointer back to it belongs here once that's written.)*
 
 ## 3. Economic Benefit — Sequencing Across Mechanisms
 
-In an ideal world, founding stewards would adopt this model on
-commitment to the mission alone. But self-interest and the  desire for
+In an ideal world, commitment to mission would be sufficient motivation for a 
+founding steward to adopt our  proposed model. But self-interest and the  desire for
 material comfort shapes nearly every decision people make.
 The U.S. tax code actually already provides a ready-made mechanism
 for leveraging that self-interest: an  [Employee Stock
-Ownership Plan](https://en.wikipedia.org/wiki/Employee_stock_ownership_plan).An ESOP is 
-a trust that holds company stock on employees' behalf and vests it to
-them over years of service. Congress built it as a tax-favored path to
-convert employees into genuine owners rather than just wage earners —
-which is exactly the second thing we want here: it lets a founder take
-a real, liquid exit, converting the enterprise value they built into
-cash, while routing all *future* appreciation to the employees who
-keep building it, rather than to whoever inherits or buys the
-founder's stake. Self-interest fuels the founding; broad-based
-ownership captures everything built afterward. (For the fuller argument — including where
+Ownership Plan](https://en.wikipedia.org/wiki/Employee_stock_ownership_plan) (ESOP.) 
+
+An ESOP is a trust that holds company stock on behalf of a firm's
+employees, vesting it to them over years of service. Congress built it
+as a tax-favored path to convert employees into genuine owners rather
+than just wage earners. That serves two things we want here: first, it
+lets a founder take a real, liquid exit, converting the enterprise
+value they built into cash; second, it routes all *future* appreciation
+to the employees who keep building the company, rather than to
+whoever inherits or buys the founder's stake. Self-interest (coupled with mission committment) 
+fuels an organization's founding; broad-based ownership captures everything built afterward. (For the fuller argument — including where
 our view of founder labor diverges from Marx, and the Schumpeter
 framing behind it — see [Appendix
 A.3](#a3-founder-labor-and-the-entrepreneurial-reward).)
@@ -388,6 +396,39 @@ note for later, not now: if a founder-exit tax deferral under
 is ever on the table, the subsidiary needs to already be a C-corp before
 that transaction — an entity-type decision worth making with this in mind
 well before it's actually needed.
+
+#### C-corp or S-corp?
+
+The two elections differ in exactly the way that matters for retained
+earnings, and downstream, for ESOP tax treatment:
+
+- **C-corp:** the corporation itself pays tax on its income (a flat
+  21% federal rate, as of this wrting). Retained earnings — profit kept in the company
+  rather than distributed — have been taxed once; if ever paid out as
+  a dividend, shareholders pay tax on it again. The relevant ESOP
+  benefit here is narrower but real: a founder selling stock to the
+  ESOP can defer capital-gains tax under
+  [IRC §1042](https://www.financialplanningassociation.org/learning/publications/journal/AUG24-using-irc-section-1042-retirement-and-exit-planning-business-owners-guide-financial-OPEN)
+  by rolling the proceeds into other US securities — but only if the
+  company is a C-corp at the moment of sale.
+- **S-corp:** a pass-through entity — no federal tax at the entity
+  level. All income is taxed to shareholders in the year it's earned,
+  whether distributed or not, so retained earnings here are money
+  that's already been fully taxed once and won't be taxed again on
+  distribution. Because an ESOP trust is itself tax-exempt, whatever
+  share of the company an ESOP owns generates income that currently
+  isn't taxed to anyone — a 100%-ESOP-owned S-corp can end up owing no
+  federal income tax at all. It just doesn't get §1042: that deferral
+  is C-corp only.
+
+The two aren't just different flavors of the same thing — they're
+mutually exclusive elections that reward different goals (a founder's
+exit versus the ongoing company's retained earnings), and which one
+fits depends on facts specific to this organization's cap table,
+timeline, and the founders' own tax situation. **This is a decision
+for counsel and a CPA familiar with ESOP transactions, not something
+this document resolves** — the discussion above is background for that
+conversation, not a substitute for it.
 
 By this point there are three distinct mechanisms in play, and it's easy to
 conflate them since they all touch "who gets what." Worth seeing side by
@@ -933,6 +974,46 @@ that visibly isn't the one still producing it.
 
 
 
+### A.3 Founder labor and the entrepreneurial reward
+
+We lean on Marxist economics throughout this document as an analytical
+lens, because it's genuinely useful for describing who captures value
+and why. But we part ways with Marx on one point that matters here: the
+value of the labor performed by what we'll call the *visionary
+capitalist* — the founder doing the unglamorous work of capital
+allocation: tweaking spreadsheets, team building, running meetings,
+doing research, and carrying the downside risk that comes with signing
+on the dotted line. Marx doesn't deny this is labor — in *Capital*
+Vol. 3 he separates the "wages of superintendence" (pay for the *work*
+of coordinating production, which a hired manager could earn too) from
+"profit of enterprise" (the *owner's* claim on the residual surplus,
+which he treats as unearned). It's that second piece — reward flowing
+from ownership rather than from the work of founding — that we think
+deserves a more generous accounting than Marx gives it, at least in the
+specific case of someone actually doing the work of building something
+new.
+
+Joseph Schumpeter offers a cleaner theoretical home for this. He drew
+his own line between the entrepreneur's profit — a temporary reward for
+introducing a genuine innovation, a "new combination" — and the
+rentier's return on capital merely owned; the entrepreneurial reward,
+in his account, gets competed away once the innovation is copied.[^11]
+That's closer to what we mean: the reward attaches to the act of
+founding, not to a permanent ownership stake insulated from it.
+
+Where we land: if founder self-interest results in dynastic wealth and
+the kind of calcified structural inequality that outlives whatever
+labor was performed to earn it, we're against that. But if the same
+self-interest is what gets someone to do the actual work of founding —
+and the value it creates eventually flows to broad public benefit — we
+have no objection to self-interest being part of a founder's
+motivation. That's not a contradiction of the mission; it's the
+mechanism that gets the mission built in the first place. [Section
+3](#3-economic-benefit--sequencing-across-mechanisms) covers the
+mechanism — an ESOP — through which we act on that.
+
+
+
 ### A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem
 
 Which points to why dispersion is the better answer here, not merely an
@@ -947,20 +1028,6 @@ is what the clonable, multi-Satellite shape in
 [§1](#1-the-commons-layer-and-its-satellites) is actually for: not just a way to scale, but a
 resilience strategy.
 
-### A.7 A return to the commons: enclosure
-
-Before the [enclosure movements](https://en.wikipedia.org/wiki/Enclosure)
-reshaped landholding in England, common land was governed collectively by the
-communities that worked it — not owned by any single lord, not managed by the
-state. Enclosure privatized that land, and with it, concentrated the benefit
-of centuries of collective stewardship into far fewer hands.
-
-
-*(The Hardin/Ostrom discussion formerly here has moved to [the Neoclassical
-View
-section](#what-factors-drove-emergence-of-corporate-model----neoclassical-view);
-the Ostrom-to-Commons-Hub tie-in has moved to the end of
-[§1](#1-the-commons-layer-and-its-satellites).)*
 
 [^1]: [Inclosure Acts — Wikipedia](https://en.wikipedia.org/wiki/Inclosure_Acts).
     Parliamentary enclosure became the norm from the 1750s on; by 1750, nearly
