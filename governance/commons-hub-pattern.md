@@ -596,6 +596,69 @@ leg (§2) offers a partial hedge against that specific bank-level risk — it ca
 none of this protects whichever Satellite is actually targeted from the consequences of that; dispersion preserves the
 pattern and its other Satellites, not any single one of them.
 
+The chain of events is worth walking through, because it shows exactly which chokepoints did the damage. The
+State Department designation landed August 26, 2026. PayPal cut off A/I's account within days.[^17] Then, 48 hours
+after the designation, the Public Interest Registry — the nonprofit that operates the entire `.org` namespace —
+disabled `autistici.org`.[^17] A/I's mail servers themselves, sitting in Europe, were never touched; nothing about
+the underlying software broke. As one account of the shutdown put it, "the failure happened at the domain registry
+and the payment rails" — layers no mail provider, and no amount of server dispersion, actually controls.[^19]
+Users could still read mail already sitting in their inboxes, but nothing new could be sent or received once the
+domain stopped resolving.[^18] The same day, A/I's NoBlogs platform was separately compromised by an attacker
+exploiting a software vulnerability — a couple of hours of unauthorized access, a defaced homepage, the service
+dropped into read-only mode while they investigated.[^17] Whether or not it was opportunistic, being visibly down
+invited more trouble, not less. On September 1, Banca Etica — an Italian bank, outside direct U.S. jurisdiction —
+suspended A/I's account too, after consulting Italy's Ministry of Economy and Finance, because an Italian bank
+still clears dollars through U.S. correspondent banks and wasn't willing to risk that access over one customer.[^17]
+On September 6, roughly sixteen thousand mailboxes, ten thousand blogs, and fifty-five hundred mailing lists later,
+A/I shut down for good. Their own statement said it plainly: "the possibility that our work may cause legal and
+financial consequences to those who are close to us... leaves us no choice."[^17] Notably, A/I itself said it
+couldn't establish whether the registry had acted on an explicit OFAC instruction or simply preferred not to find
+out[^18] — which is itself part of the mechanism: no one downstream needs a direct order, only enough exposure
+that they'd rather not risk it.
+
+None of that was a technical hack. It was a sanctions designation working exactly as designed — making it too
+risky for third parties (a registry, a bank, a payment processor) to keep serving the target, and letting them do
+the actual shutting-down. The mitigations split along a line worth naming explicitly: some of them just need
+*dispersed people* — a trusted individual in another jurisdiction, no incorporation required — while one of them
+needs *dispersed legal entities*, because the risk it's covering is a different kind of risk.
+
+- **DNS/registry — individual-level.** The failure mode wasn't the registrar, it was the registry — `.org` itself
+  is operated by a U.S. nonprofit, so no registrar choice would have saved `autistici.org`. A trusted individual
+  in a jurisdiction outside U.S.-aligned reach can hold a working mirror domain on a different ccTLD, with that
+  fallback address pre-published somewhere that doesn't depend on the primary domain resolving (a pinned
+  Fediverse post, a Matrix room, an onion service) — so users know where to look *before* the outage, not during
+  it. No entity needed, just someone who isn't organizationally entangled with whatever triggered the takedown.
+
+- **Mail — individual-level.** SMTP is already federated; the concentration here was organizational, not
+  protocol-level. A trusted individual running (or paying for) a backup MX in a different jurisdiction, registered
+  through a different registry, means one domain's failure doesn't stop the other from accepting mail. Again, no
+  incorporation required — just a second person with a server.
+
+- **Crypto keys — individual-level.** Multisig signers should be individuals resident in different jurisdictions,
+  holding their own cold, self-custodied keys — not a shared wallet at a custodial exchange, which is a company
+  and will freeze or block any address later added to an SDN list, for the same reason PayPal did. This is the
+  same "trusted person, not trusted org" pattern as the DNS and mail mitigations.
+
+- **Crypto pay rails — mostly individual-level.** Multisig protects the treasury from being frozen like a bank
+  account, but not the off-ramp: the moment a Satellite's wallet address is added to the SDN list, any
+  U.S.-regulated exchange will refuse to cash it out — the same mechanism as the registry and the bank, one layer
+  down. A segregated wallet controlled by a trusted individual (or the multisig itself) does the practical job of
+  containing that blast radius. Full legal separation between entities only starts to matter if the question ever
+  becomes a legal one — whether Satellite A's designation can, as a matter of law, reach Satellite B's assets —
+  which is a courtroom argument, not a mechanical one.
+
+- **Banking — entity-level.** This is the one place a Satellite's legal-entity status actually earns its keep.
+  A trusted individual holding organizational funds personally creates a different category of problem than a
+  domain sitting under someone's name: their personal assets and the org's funds commingle, they're personally
+  liable, there's no continuity if they die, disappear, get sued, or divorce, and the whole arrangement rests on
+  one person's trustworthiness rather than a governed structure. Banca Etica's decision also shows that legal
+  dispersion alone isn't enough if every Satellite's bank clears dollars through the same correspondent network —
+  which, practically, is nearly all of them. There's no clean fix for that short of holding real reserves the
+  DAO's crypto-treasury leg (§2) can reach without a bank in the loop at all.
+
+None of this would have stopped the designation itself. It would have kept the Commons and its other Satellites
+running while the targeted one dealt with the consequences — which is the whole point of dispersion.
+
 
 
 ## Appendix A: Historical and Economic Grounding
@@ -1282,4 +1345,20 @@ resilience strategy.
     favor highly compensated employees over everyone else. The law is
     built to prevent an ESOP in name only, with a small circle of
     insiders collecting most of its actual value.
+[^17]: Timeline of the August 2026 SDGT designation and aftermath: [Autistici/Inventati —
+    Wikipedia](https://en.wikipedia.org/wiki/Autistici/Inventati) (PayPal loss "within days";
+    Public Interest Registry disabled autistici.org August 28, 2026, 48 hours after the
+    designation; NoBlogs compromised the same day via a software vulnerability, ~2 hours of
+    unauthorized access, homepage defaced, service put in read-only mode; Banca Etica suspended
+    A/I's account September 1, 2026 citing risk of U.S. secondary sanctions, after consulting
+    Italy's Ministry of Economy and Finance; A/I announced shutdown September 6, 2026).
+[^18]: [Italian Email Service Faces Disruption After U.S. Sanctions —
+    emailexpert](https://emailexpert.com/italian-email-service-faces-disruption-after-u-s-sanctions/)
+    — users could read existing mail but not send or receive new mail once the domain stopped
+    resolving; A/I itself said it had not established whether Public Interest Registry acted on
+    an explicit OFAC instruction or preemptively.
+[^19]: [US Terror Listing Kills 16,000 Activist Email Accounts —
+    gblock.app](https://www.gblock.app/articles/autistici-inventati-shutdown-16000-activist-emails-2026)
+    — scale (16,000 email accounts, 5,500 mailing lists, ~10,000 blogs, 1,500 websites); A/I's
+    mail servers themselves, hosted in Europe, were never touched.
 
