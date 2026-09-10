@@ -784,7 +784,7 @@ described in the previous  [section](#exchange-value-and-mechanization).
 
 #### Class struggle and contradictions
 
-<img src="images/scot-tissue-bolsheviks.jpg" alt="1930s Scot Tissue Towels advertisement reading 'Is your washroom breeding Bolsheviks?'" align="left" width="200">
+<img src="images/scot-tissue-bolsheviks.jpg" alt="1930s Scot Tissue Towels advertisement reading 'Is your washroom breeding Bolsheviks?'" align="right" width="200">
 
 <sub>Scot Tissue Towels advertisement, "Is your washroom breeding
 Bolsheviks?" (1930s). Public domain.</sub>
