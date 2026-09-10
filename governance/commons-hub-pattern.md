@@ -443,8 +443,10 @@ details:
 The two aren't just different flavors of the same thing — they're
 mutually exclusive elections that reward different goals (a founder's
 exit versus the ongoing company's retained earnings), and which one
-fits depends on facts specific to the cap table, timeline, and
-founders' own tax situation involved. If a §1042 rollover is ever a
+fits depends on facts specific to the [cap
+table](https://en.wikipedia.org/wiki/Capitalization_table) (the
+ledger of who owns what share of the company), timeline, and founders'
+own tax situation involved. If a §1042 rollover is ever a
 goal, the entity needs to already be a C-corp *before* that
 transaction — worth deciding early, with this in mind, rather than
 under time pressure later. **This is a decision for counsel and a CPA
