@@ -104,9 +104,10 @@ company](https://en.wikipedia.org/wiki/Platform_economy). Each is a governance
 structure for collective production and economic benefit, adopted — and later
 challenged — because the previous model no longer served elites
 with the power to change it. 
-<img src="images/enclosure.jpg" alt="1793 Enclosure Act for Shifnal" align="right" width="150">
-
-<sub>Enclosure Act for Shifnal, 1793 (Shropshire Archives 539/1/5/3). Public domain, via Wikimedia Commons.</sub>
+<table align="right" width="150">
+<tr><td><img src="images/enclosure.jpg" alt="1793 Enclosure Act for Shifnal" width="150"></td></tr>
+<tr><td><sub>Enclosure Act for Shifnal, 1793<br>(Shropshire Archives 539/1/5/3).<br>Public domain, via Wikimedia Commons.</sub></td></tr>
+</table>
 The wave of English enclosure that began around the mid-1700s[^1]
 was driven by landowners who benefited from privatizing common land, not by
 commoners demanding it; joint-stock charters emerged to mobilize capital
@@ -166,10 +167,11 @@ contradiction most relevant to this section is the process by which the surplus 
 extracted from workers is invested into ever more sophisticated machines which
 perform work with ever-increasing efficiency, and ever-diminishing requirements for human labor.
 
-<img src="images/capitalism-labor-cartoon.jpg" alt="Cartoon: an arm labeled CAPITALISM feeds coal shoveled by a figure labeled LABOR into a furnace" align="right" width="200">
-
-<sub>You load sixteen tons, what do you get? Another day older and deeper in
-debt. Public domain.</sub>
+<table align="right" width="200">
+<tr><td><img src="images/capitalism-labor-cartoon.jpg" alt="Cartoon: an arm labeled CAPITALISM feeds coal shoveled by a figure labeled LABOR into a furnace" width="200"></td></tr>
+<tr><td><sub>You load sixteen tons, what do you get?<br>Another day older and deeper in
+debt.<br>Public domain.</sub></td></tr>
+</table>
 
 Marx's "Fragment on Machines," in the Grundrisse notebooks (1857–58),[^3] anticipated exactly this: a point at
 which automated, machine-embodied social knowledge, "the general intellect" (Marx's term — but
@@ -666,10 +668,11 @@ independent of anyone exchanging that thing for some other thing.
 
 #### Value and socially necessary labor time
 
-<img src="images/mammoth-hunt.jpg" alt="19th-century engraving of prehistoric hunters attacking a mastodon with spears and bows" align="right" width="280">
-
-<sub>"A Pre-Historic Mammoth Hunt" (1876). Public domain, via Wikimedia
-Commons.</sub>
+<table align="right" width="280">
+<tr><td><img src="images/mammoth-hunt.jpg" alt="19th-century engraving of prehistoric hunters attacking a mastodon with spears and bows" width="280"></td></tr>
+<tr><td><sub>"A Pre-Historic Mammoth Hunt" (1876).<br>Public domain, via Wikimedia
+Commons.</sub></td></tr>
+</table>
 
 What Marx termed **value** only enters into the picture 
 once two hypothteical hunter-gatherer bands meet and barter. Let's say one has access to a
