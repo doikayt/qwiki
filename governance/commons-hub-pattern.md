@@ -43,10 +43,8 @@ counsel and a CPA before acting on anything discussed here.
       - [In accounting terms](#in-accounting-terms)
       - [Quantifying the drivers of dissolutionment and dissolution](#quantifying-the-drivers-of-dissolutionment-and-dissolution)
   - [A.3 Founder labor and fair reward](#a3-founder-labor-and-fair-reward)
-  - [A.4 Commons-based peer production: Benkler's answer](#a4-commons-based-peer-production-benklers-answer)
   - [A.5 Income vs. retained earnings: a quick refresher](#a5-income-vs-retained-earnings-a-quick-refresher)
   - [A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem)
-  - [A.7 A return to the commons: enclosure](#a7-a-return-to-the-commons-enclosure)
 
 ---
 
