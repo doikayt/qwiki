@@ -787,11 +787,11 @@ described in the previous  [section](#exchange-value-and-mechanization).
 
 #### Class struggle and contradictions
 
-<div align="right">
-<img src="images/scot-tissue-bolsheviks.jpg" alt="1930s Scot Tissue Towels advertisement reading 'Is your washroom breeding Bolsheviks?'" width="200"><br>
-<sub>Scot Tissue Towels advertisement,<br>"Is your washroom breeding
-Bolsheviks?"<br>(1930s). Public domain.</sub>
-</div>
+<table align="right" width="200">
+<tr><td><img src="images/scot-tissue-bolsheviks.jpg" alt="1930s Scot Tissue Towels advertisement reading 'Is your washroom breeding Bolsheviks?'" width="200"></td></tr>
+<tr><td><sub>Scot Tissue Towels advertisement,<br>"Is your washroom breeding
+Bolsheviks?"<br>(1930s). Public domain.</sub></td></tr>
+</table>
 
 Whoever owns the machinery that *surplus value* gets invested in also holds most
 of the power to decide how the production process is organized and how
