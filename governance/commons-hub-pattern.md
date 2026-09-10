@@ -3,9 +3,14 @@
 *A replicable model for organizing collaboratively-developed
 open source software around nonprofit and for-profit satellites*
 
-**Status:** Early concept draft — not reviewed by counsel. Nothing in
-this document is legal, tax, or financial advice; consult qualified
-counsel and a CPA before acting on anything discussed here.
+**Status:** Early concept draft.
+
+- Not reviewed by counsel — nothing in this document is legal, tax, or
+  financial advice; consult qualified counsel and a CPA before acting
+  on anything discussed here.
+- Not written by a trained economist — this is a summary of the
+  author's own research and reflection on equitable approaches to 
+  structuring, operating, and profiting from an enterprise.
 
 ---
 
