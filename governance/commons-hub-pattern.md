@@ -9,7 +9,7 @@ open source software around nonprofit and for-profit satellites*
   financial advice; consult qualified counsel and a CPA before acting
   on anything discussed here.
 - Not written by a trained economist — this is a summary of the
-  author's own research and reflection on equitable approaches to 
+  author's own research and reflection on equitable approaches to
   structuring, operating, and profiting from an enterprise.
 
 ---
@@ -55,8 +55,8 @@ open source software around nonprofit and for-profit satellites*
 
 ## Overview
 
-This document presents a replicable organizational model for collaboratively
-developing and monetizing an
+This document presents a replicable organizational model for equitable,
+collaborative development and monetization of an
 [open source](https://en.wikipedia.org/wiki/Open-source_software) commons. Before
 detailing the mechanics of the model — including how incoming funds from grants
 and earned revenue get distributed among contributors through a narrowly-scoped
