@@ -10,25 +10,25 @@ open source software around nonprofit and for-profit satellites*
 ## Table of Contents
 
 - [Overview](#overview)
-- [Corporations as a governance technology, not a law of nature](#corporations-as-a-governance-technology-not-a-law-of-nature)
-  - [Factors favoring the emergence of the corporate model -- neoclassical View](#factors-favoring-the-emergence-of-the-corporate-model----neoclassical-view)
+- [Corporations as a Governance Technology, Not a Law of Nature](#corporations-as-a-governance-technology-not-a-law-of-nature)
+  - [Factors favoring the emergence of the corporate model -- neoclassical view](#factors-favoring-the-emergence-of-the-corporate-model----neoclassical-view)
   - [Drivers of the dissolution of the corporate model -- Marxist view](#drivers-of-the-dissolution-of-the-corporate-model----marxist-view)
 - [1. The Commons Layer and Its Satellites](#1-the-commons-layer-and-its-satellites)
   - [Bulwarks against enclosure of our digital commons](#bulwarks-against-enclosure-of-our-digital-commons)
-  - [The Tragedy of the Commons, Proven Wrong](#the-tragedy-of-the-commons-proven-wrong)
+  - [The Tragedy of the Commons, proven wrong](#the-tragedy-of-the-commons-proven-wrong)
 - [2. Governance Layer — Three Mechanisms](#2-governance-layer--three-mechanisms)
   - [Board](#board)
   - [DAO](#dao)
-  - [Token-Based Delegated Authority](#token-based-delegated-authority)
-- [3. Economic Benefit — Sequencing Across Mechanisms](#3-economic-benefit--sequencing-across-mechanisms)
+  - [Token-based delegated authority](#token-based-delegated-authority)
+- [3. Distribution of Economic Benefits — From Founder Incentives to Broad-Based Ownership](#3-distribution-of-economic-benefits--from-founder-incentives-to-broad-based-ownership)
   - [C-corp or S-corp?](#c-corp-or-s-corp)
-- [4. The Stakes, and why our model has an edge](#4-the-stakes-and-why-our-model-has-an-edge)
+- [4. The Stakes, and Why Our Model Has an Edge](#4-the-stakes-and-why-our-model-has-an-edge)
   - [The labor-market half of the advantage: elite overproduction and AI-driven displacement](#the-labor-market-half-of-the-advantage-elite-overproduction-and-ai-driven-displacement)
   - [Cost advantages that a for-profit competitor can't match](#cost-advantages-that-a-for-profit-competitor-cant-match)
   - [Resilience through dispersion](#resilience-through-dispersion)
 - [Appendix A: Historical and Economic Grounding](#appendix-a-historical-and-economic-grounding)
   - [A.1 Why firms exist: Coase, the putting-out system, and what's changing now](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now)
-  - [A.2 Marxist Economics 101](#a2-marxist-economics-101)
+  - [A.2 Marxist economics 101](#a2-marxist-economics-101)
     - [Use-value](#use-value)
     - [Value and socially necessary labor time](#value-and-socially-necessary-labor-time)
     - [From flint tools to factories](#from-flint-tools-to-factories)
@@ -90,7 +90,7 @@ DAO](#dao).
 
 
 
-## Corporations as a governance technology, not a law of nature
+## Corporations as a Governance Technology, Not a Law of Nature
 
 The corporation is not a naturally occurring phenomenon. It is a socially
 produced, historically specific answer to **two fundamental questions**: when people
@@ -127,7 +127,7 @@ not the diffuse, non-exclusive shape
 open production actually takes.
 
 
-### Factors favoring the emergence of the corporate model -- neoclassical View
+### Factors favoring the emergence of the corporate model -- neoclassical view
 
 In his 1937 paper [*The Nature of the
 Firm*](https://en.wikipedia.org/wiki/The_Nature_of_the_Firm), Ronald Coase —
@@ -254,7 +254,7 @@ organization motivated by mission as opposed to profit has no
 motivation or justification to enclose in the same way HashiCorp did. [^5]
 
 
-### The Tragedy of the Commons, Proven Wrong
+### The Tragedy of the Commons, proven wrong
 
 We should also note that  Elinor Ostrom's empirical research 
 (which won her the [2009 Nobel
@@ -305,7 +305,7 @@ contributor's crypto wallet
 
 
 
-### Token-Based Delegated Authority
+### Token-based delegated authority
 
 Along with the Board and the DAO, a third mechanism governs _day-to-day_
 operations — product roadmap construction, build-vs.-buy decisions, staffing
@@ -354,7 +354,7 @@ Register](legal-risk-register.md), respectively.
 formerly summarized in this section — will get its own detailed treatment in a
 later document; a pointer back to it belongs here once that's written.)*
 
-## 3. Economic Benefit — Sequencing Across Mechanisms
+## 3. Distribution of Economic Benefits — From Founder Incentives to Broad-Based Ownership
 
 In an ideal world, commitment to mission would be sufficient motivation for a 
 founding steward to adopt our  proposed model. But self-interest and the  desire for
@@ -366,18 +366,19 @@ Ownership Plan](https://en.wikipedia.org/wiki/Employee_stock_ownership_plan) (ES
 An ESOP is a trust that holds company stock on behalf of a firm's
 employees, vesting it to them over years of service. Congress built it
 as a tax-favored path to convert employees into genuine owners rather
-than just wage earners. That serves two things we want here: first, it
-lets a founder take a real, liquid exit, converting the enterprise
-value they built into cash; second, it routes all *future* appreciation
-to the employees who keep building the company, rather than to
-whoever inherits or buys the founder's stake. Self-interest (coupled
-with mission commitment) claims the founder's share; broad-based
-ownership captures everything built afterward. (For the fuller argument — including where
-our view of founder labor diverges from Marx, and the Schumpeter
-framing behind it — see [Appendix
-A.3](#a3-founder-labor-and-the-entrepreneurial-reward).)
+than just wage earners. This structure gives founders a liquid exit
+path, converting the enterprise value they built into cash. For
+employees, it doubles as motivation and retention: all *future*
+appreciation accrues to those who stay on to keep building the
+company -- rather than to whoever inherits or buys the founder's
+stake. (Note: our perspective on what constitutes justly rewarded 
+founder labor diverges from Marx, and is more aligned with Schumpeter as discussed
+in [Appendix A.3](#a3-founder-labor-and-the-entrepreneurial-reward).)
 
-ESOP feasibility isn't automatic — it only becomes worth evaluating once
+
+#### When ESOPs make sense
+
+Setting up ESOP feasibility isn't automatic — it only becomes worth evaluating once
 two things are both true, not on a calendar date:
 
 1. **There's real enterprise value to distribute.** An ESOP requires an
@@ -390,15 +391,15 @@ two things are both true, not on a calendar date:
    safely carry that liability; it takes predictable operating cash
    flow as opposed to sporadically obtained grants.
 
-Industry feasibility guidance (NCEO and others) puts typical setup costs at
-**$100k–$250k+**, with most transactions wanting **~$1M+ in annual EBITDA
-and ~20+ employees** to justify that overhead — smaller ESOPs do exist, but
-this organization is well below even that floor today. One more sequencing
-note for later, not now: if a founder-exit tax deferral under
-[IRC §1042](https://www.financialplanningassociation.org/learning/publications/journal/AUG24-using-irc-section-1042-retirement-and-exit-planning-business-owners-guide-financial-OPEN)
-is ever on the table, the subsidiary needs to already be a C-corp before
-that transaction — an entity-type decision worth making with this in mind
-well before it's actually needed.
+[NCEO's](https://www.nceo.org/) (the National Center for Employee
+Ownership) [own
+guidance](https://www.nceo.org/employee-ownership-faq/how-much-does-setting-up-an-esop-cost)
+puts typical setup costs at **$200k–$500k** for most deals, with a [rule
+of thumb](https://www.nceo.org/resource-toolkits/esop-pre-feasibility-toolkit)
+of at least **15–20 employees** and enough profit to cover both the
+deal costs and ongoing operations — smaller ESOPs do exist, but that's
+a real floor to clear before this becomes anything more than a future
+consideration.
 
 #### C-corp or S-corp?
 
@@ -427,11 +428,14 @@ earnings, and downstream, for ESOP tax treatment:
 The two aren't just different flavors of the same thing — they're
 mutually exclusive elections that reward different goals (a founder's
 exit versus the ongoing company's retained earnings), and which one
-fits depends on facts specific to this organization's cap table,
-timeline, and the founders' own tax situation. **This is a decision
-for counsel and a CPA familiar with ESOP transactions, not something
-this document resolves** — the discussion above is background for that
-conversation, not a substitute for it.
+fits depends on facts specific to the cap table, timeline, and
+founders' own tax situation involved. If a §1042 rollover is ever a
+goal, the entity needs to already be a C-corp *before* that
+transaction — worth deciding early, with this in mind, rather than
+under time pressure later. **This is a decision for counsel and a CPA
+familiar with ESOP transactions, not something this document
+resolves** — the discussion above is background for that conversation,
+not a substitute for it.
 
 By this point there are three distinct mechanisms in play, and it's easy to
 conflate them since they all touch "who gets what." Worth seeing side by
@@ -460,7 +464,7 @@ side once, rather than only encountering each in its own document:
 
 ---
 
-## 4. The Stakes, and why our model has an edge
+## 4. The Stakes, and Why Our Model Has an Edge
 
 The past year (2026, as of this writing) has seen rapid, measurable progress
 toward AI writing the software that builds AI itself.[^7]   This
@@ -643,7 +647,7 @@ things cheap":
 
 
 
-### A.2 Marxist Economics 101
+### A.2 Marxist economics 101
 
 This narrowly focused primer on Marx's economic theory is targeted to
 readers who are 'Marx-curious' but have never studied his work  -- in particular 
@@ -992,34 +996,55 @@ that visibly isn't the one still producing it.
 
 ### A.3 Founder labor and the entrepreneurial reward
 
-We lean on Marxist economics throughout this document as an analytical
-tool, since it is genuinely useful for describing who captures value
-and why. But we part ways with Marx on one point that matters here: the
-value of the labor performed by what we'll call the *visionary
-capitalist* — the founder doing the unglamorous work of capital
-allocation: tweaking spreadsheets, team building, running to meetings, etc.
+This section asks a question any serious account of "management" has
+to answer: which parts of it are genuine, value-adding labor — and
+which are just rent, or oppressive oversight, dressed up as work?
+Marx's own framework turns out to be a useful place to start answering
+it.
 
-Marx doesn't deny this is labor — in *Capital*
-Vol. 3 he separates the "wages of superintendence" (pay for the *work*
-of coordinating production, which a hired manager could earn too) from
-"profit of enterprise" (the *owner's* claim on the residual surplus,
-which he treats as unearned). It's that second piece — reward flowing
-from ownership rather than from the work of founding — that we think
-deserves a more generous accounting than Marx gives it, at least in the
-specific case of someone actually doing the work of building something
-new.
+In *Capital* Vol. 3[^12], Marx splits what looks like "management" into
+two categories. The first is **wages of superintendence** — the actual
+work of coordinating and supervising production, which he treats as
+legitimate, compensable labor; a hired manager could earn this wage
+same as anyone else. The second is **profit of enterprise** — the
+owner's residual claim on whatever's left over, which he treats as
+unearned: a return on mere ownership, not on any labor performed. Call
+this the rent problem.
 
-Joseph Schumpeter offers a cleaner theoretical home for this. He drew
-his own line between the entrepreneur's profit — a temporary reward for
-introducing a genuine innovation, a "new combination" — and the
-rentier's return on capital merely owned; the entrepreneurial reward,
-in his account, gets competed away once the innovation is copied.[^11]
-That's closer to what we mean: the reward attaches to the act of
-founding, not to a permanent ownership stake insulated from it.
+We land in two different places on these two categories. On profit of
+enterprise, we agree with Marx completely: rent deserves no reward,
+full stop — regardless of who's collecting it. On wages of
+superintendence, we go further than he did: we don't think ongoing
+supervision of other people's labor is real value-adding work either.
+It's closer in kind to rent than to labor — a cost imposed by
+low-trust, hierarchical structures, not something intrinsically
+necessary to production. Broad-based ownership and token-based
+delegated authority exist specifically to make that kind of oversight
+unnecessary, as contributors motivated by their own stake coordinate
+and manage work amongst themselves rather than needing someone to
+crack the whip.
 
-Where we land: if founder self-interest results in dynastic wealth and
-the kind of calcified structural inequality that outlives whatever
-labor was performed to earn it, we're against that. But if the same
+But Marx's two categories leave a gap: neither one has room for the
+unglamorous, one-time work of actually getting an enterprise off the
+ground — not just conceiving the idea, but the *team-building* work of
+getting people organized around it, and the judgment involved in
+capital allocation. Call the person doing this the *visionary
+capitalist*. That labor is neither ongoing supervision nor passive
+ownership, and we think it deserves fair compensation.
+
+Joseph Schumpeter offers a cleaner theoretical home for this gap than
+Marx does. He drew his own line between the entrepreneur's profit — a
+temporary reward for introducing a genuine innovation, a "new
+combination" — and the rentier's return on capital merely owned; the
+entrepreneurial reward, in his account, gets competed away once the
+innovation is copied.[^11] That's closer to what we mean: the reward
+attaches to the act of founding, not to a permanent ownership stake
+insulated from it.
+
+Fair compensation for that founding labor is one thing; what isn't
+fair is if it's allowed to compound into dynastic wealth and the kind
+of calcified structural inequality that outlives whatever labor was
+performed to earn it. We're against that. But if the same
 self-interest is what gets someone to do the actual work of founding —
 and the value it creates eventually flows to broad public benefit — we
 have no objection to self-interest being part of a founder's
@@ -1107,4 +1132,9 @@ resilience strategy.
     trans. 1934), on entrepreneurial profit vs. interest on capital; and
     *Capitalism, Socialism and Democracy* (1942) on "creative
     destruction."
+[^12]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
+    and Profit of
+    Enterprise"](https://www.marxists.org/archive/marx/works/1894-c3/ch23.htm) —
+    the chapter distinguishing "wages of superintendence" from "profit
+    of enterprise."
 
