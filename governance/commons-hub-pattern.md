@@ -466,7 +466,7 @@ side once, rather than only encountering each in its own document:
 
 **The resulting ladder:**
 
-- **Now:** DAO for project-based cash payouts, token-based delegated
+- **Pre-ESOP:** DAO for project-based cash payouts, token-based delegated
   authority for day-to-day voice. No ESOP — no enterprise value or stable
   cash flow yet to justify one, and no broad-based W-2 team to make
   "broad-based" mean anything.
