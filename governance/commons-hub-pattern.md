@@ -360,8 +360,10 @@ In an ideal world, commitment to mission would be sufficient motivation for a
 founding steward to adopt our  proposed model. But self-interest and the  desire for
 material comfort shapes nearly every decision people make.
 The U.S. tax code actually already provides a ready-made mechanism
-for leveraging that self-interest: an  [Employee Stock
-Ownership Plan](https://en.wikipedia.org/wiki/Employee_stock_ownership_plan) (ESOP.) 
+for leveraging that self-interest: an [Employee Stock
+Ownership Plan](https://en.wikipedia.org/wiki/Employee_stock_ownership_plan)
+(ESOP) — available to the for-profit subsidiary specifically; the
+501(c)(3) parent itself can't sponsor one.
 
 An ESOP is a trust that holds company stock on behalf of a firm's
 employees, vesting it to them over years of service. Congress built it
@@ -370,16 +372,15 @@ than just wage earners. This structure gives founders a liquid exit
 path, converting the enterprise value they built into cash. For
 employees, it doubles as motivation and retention: all *future*
 appreciation accrues to those who stay on to keep building the
-company -- rather than to whoever inherits or buys the founder's
-stake. (Note: our perspective on what constitutes justly rewarded 
+company -- rather than to an uninvolved third party who inherits or
+buys the founder's stake. (Note: our perspective on what constitutes justly rewarded 
 founder labor diverges from Marx, and is more aligned with Schumpeter as discussed
 in [Appendix A.3](#a3-founder-labor-and-the-entrepreneurial-reward).)
 
 
 #### When ESOPs make sense
 
-Setting up ESOP feasibility isn't automatic — it only becomes worth evaluating once
-two things are both true, not on a calendar date:
+Setting up an ESOP only makes sense if: 
 
 1. **There's real enterprise value to distribute.** An ESOP requires an
    independent appraisal (no public market for the stock); with negligible
@@ -397,33 +398,36 @@ guidance](https://www.nceo.org/employee-ownership-faq/how-much-does-setting-up-a
 puts typical setup costs at **$200k–$500k** for most deals, with a [rule
 of thumb](https://www.nceo.org/resource-toolkits/esop-pre-feasibility-toolkit)
 of at least **15–20 employees** and enough profit to cover both the
-deal costs and ongoing operations — smaller ESOPs do exist, but that's
-a real floor to clear before this becomes anything more than a future
-consideration.
+deal costs and ongoing operations.
 
 #### C-corp or S-corp?
 
-The two elections differ in exactly the way that matters for retained
-earnings, and downstream, for ESOP tax treatment:
+Two corporate forms are available for that subsidiary: a C-corp or an
+S-corp. Both can sponsor an ESOP, but
+they diverge sharply in how retained earnings — and, downstream, ESOP
+tax treatment — actually work. The details:
 
-- **C-corp:** the corporation itself pays tax on its income (a flat
-  21% federal rate, as of this wrting). Retained earnings — profit kept in the company
-  rather than distributed — have been taxed once; if ever paid out as
-  a dividend, shareholders pay tax on it again. The relevant ESOP
-  benefit here is narrower but real: a founder selling stock to the
-  ESOP can defer capital-gains tax under
-  [IRC §1042](https://www.financialplanningassociation.org/learning/publications/journal/AUG24-using-irc-section-1042-retirement-and-exit-planning-business-owners-guide-financial-OPEN)
-  by rolling the proceeds into other US securities — but only if the
-  company is a C-corp at the moment of sale.
-- **S-corp:** a pass-through entity — no federal tax at the entity
-  level. All income is taxed to shareholders in the year it's earned,
-  whether distributed or not, so retained earnings here are money
-  that's already been fully taxed once and won't be taxed again on
-  distribution. Because an ESOP trust is itself tax-exempt, whatever
-  share of the company an ESOP owns generates income that currently
-  isn't taxed to anyone — a 100%-ESOP-owned S-corp can end up owing no
-  federal income tax at all. It just doesn't get §1042: that deferral
-  is C-corp only.
+- **C-corp:**
+  - Entity-level tax: a flat 21% federal rate on the corporation's own
+    income, as of this writing.
+  - Retained earnings are taxed once; if ever paid out as a dividend,
+    shareholders pay tax on it again.
+  - The relevant ESOP benefit: a founder selling stock to the ESOP can
+    defer capital-gains tax via the
+    [IRC §1042](https://www.financialplanningassociation.org/learning/publications/journal/AUG24-using-irc-section-1042-retirement-and-exit-planning-business-owners-guide-financial-OPEN)
+    rollover — reinvesting the proceeds into other US securities — but
+    only if the company is a C-corp at the moment of sale.
+- **S-corp:**
+  - Pass-through: no federal tax at the entity level. All income is
+    taxed to shareholders in the year it's earned, whether distributed
+    or not.
+  - Retained earnings here are money that's already been fully taxed
+    once and won't be taxed again on distribution.
+  - Because an ESOP trust is itself tax-exempt, whatever share of the
+    company an ESOP owns generates income that currently isn't taxed
+    to anyone — a 100%-ESOP-owned S-corp can end up owing no federal
+    income tax at all.
+  - Doesn't get §1042: that deferral is C-corp only.
 
 The two aren't just different flavors of the same thing — they're
 mutually exclusive elections that reward different goals (a founder's
