@@ -456,8 +456,7 @@ retained earnings) — which one fits depends on facts specific to the
 ledger of who owns what share of the company), timeline, and founders'
 own tax situation. If a §1042 rollover is ever a
 goal, the entity needs to already be a C-corp *before* that
-transaction. **This specific choice needs counsel and a CPA familiar
-with ESOP transactions, not this document.**
+transaction. 
 
 By this point there are three distinct mechanisms in play, and it's easy to
 conflate them since they all touch "who gets what" (economic benefit or decision-making authority.)
