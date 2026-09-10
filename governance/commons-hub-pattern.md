@@ -665,6 +665,11 @@ independent of anyone exchanging that thing for some other thing.
 
 #### Value and socially necessary labor time
 
+<img src="images/mammoth-hunt.jpg" alt="19th-century engraving of prehistoric hunters attacking a mastodon with spears and bows" align="right" width="280">
+
+<sub>"A Pre-Historic Mammoth Hunt" (1876). Public domain, via Wikimedia
+Commons.</sub>
+
 What Marx termed **value** only enters into the picture 
 once two hypothteical hunter-gatherer bands meet and barter. Let's say one has access to a
 riverbed full of fint, but is short on meat, while the other has
@@ -977,13 +982,13 @@ that visibly isn't the one still producing it.
 ### A.3 Founder labor and the entrepreneurial reward
 
 We lean on Marxist economics throughout this document as an analytical
-lens, because it's genuinely useful for describing who captures value
+tool, since it is genuinely useful for describing who captures value
 and why. But we part ways with Marx on one point that matters here: the
 value of the labor performed by what we'll call the *visionary
 capitalist* — the founder doing the unglamorous work of capital
-allocation: tweaking spreadsheets, team building, running meetings,
-doing research, and carrying the downside risk that comes with signing
-on the dotted line. Marx doesn't deny this is labor — in *Capital*
+allocation: tweaking spreadsheets, team building, running to meetings, etc.
+
+Marx doesn't deny this is labor — in *Capital*
 Vol. 3 he separates the "wages of superintendence" (pay for the *work*
 of coordinating production, which a hired manager could earn too) from
 "profit of enterprise" (the *owner's* claim on the residual surplus,
