@@ -40,6 +40,7 @@ open source software around nonprofit and for-profit satellites*
       - [Quantifying the dissolution driver](#quantifying-the-dissolution-driver)
   - [A.3 Founder labor and the entrepreneurial reward](#a3-founder-labor-and-the-entrepreneurial-reward)
   - [A.4 Commons-based peer production: Benkler's answer](#a4-commons-based-peer-production-benklers-answer)
+  - [A.5 Income vs. retained earnings: a quick refresher](#a5-income-vs-retained-earnings-a-quick-refresher)
   - [A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem)
   - [A.7 A return to the commons: enclosure](#a7-a-return-to-the-commons-enclosure)
 
@@ -362,14 +363,16 @@ material comfort shapes nearly every decision people make.
 The U.S. tax code actually already provides a ready-made mechanism
 for leveraging that self-interest: an [Employee Stock
 Ownership Plan](https://en.wikipedia.org/wiki/Employee_stock_ownership_plan)
-(ESOP) — available to the for-profit subsidiary specifically; the
-501(c)(3) parent itself can't sponsor one.
+(ESOP) — available to the for-profit subsidiary specifically (501(c)(3)'s can't sponsor one.)
 
 An ESOP is a trust that holds company stock on behalf of a firm's
 employees, vesting it to them over years of service. Congress built it
 as a tax-favored path to convert employees into genuine owners rather
-than just wage earners. This structure gives founders a liquid exit
-path, converting the enterprise value they built into cash. For
+than just wage earners. Concretely, the trust itself is stock purchaser: it
+buys back the founder's shares directly — typically financed by a loan
+that the company then repays over time via tax-deductible
+contributions to the trust — giving founders a liquid exit path that
+converts the enterprise value they built into cash. For
 employees, it doubles as motivation and retention: all *future*
 appreciation accrues to those who stay on to keep building the
 company -- rather than to an uninvolved third party who inherits or
@@ -393,8 +396,7 @@ Setting up an ESOP only makes sense if:
    flow as opposed to sporadically obtained grants.
 
 [NCEO's](https://www.nceo.org/) (the National Center for Employee
-Ownership) [own
-guidance](https://www.nceo.org/employee-ownership-faq/how-much-does-setting-up-an-esop-cost)
+Ownership) [guidance](https://www.nceo.org/employee-ownership-faq/how-much-does-setting-up-an-esop-cost)
 puts typical setup costs at **$200k–$500k** for most deals, with a [rule
 of thumb](https://www.nceo.org/resource-toolkits/esop-pre-feasibility-toolkit)
 of at least **15–20 employees** and enough profit to cover both the
@@ -402,10 +404,13 @@ deal costs and ongoing operations.
 
 #### C-corp or S-corp?
 
-Two corporate forms are available for that subsidiary: a C-corp or an
-S-corp. Both can sponsor an ESOP, but
-they diverge sharply in how retained earnings — and, downstream, ESOP
-tax treatment — actually work. The details:
+Two corporate forms are available for the for-profit subsidiary: C-corp or S-corp.
+Both can sponsor an ESOP, but the two elections diverge on two separate
+questions: how the company's own retained earnings (see [Appendix
+A.5](#a5-income-vs-retained-earnings-a-quick-refresher) for a refresher
+on that term) get taxed year to year, and — specifically at the moment
+a founder sells stock to the ESOP trust — whether that capital gain
+can be deferred. The details:
 
 - **C-corp:**
   - Entity-level tax: a flat 21% federal rate on the corporation's own
@@ -1000,11 +1005,12 @@ that visibly isn't the one still producing it.
 
 ### A.3 Founder labor and the entrepreneurial reward
 
-This section asks a question any serious account of "management" has
-to answer: which parts of it are genuine, value-adding labor — and
-which are just rent, or oppressive oversight, dressed up as work?
-Marx's own framework turns out to be a useful place to start answering
-it.
+Founding stewards drawn to this model are presumably already
+mission-motivated, and presumably already believe labor deserves fair
+reward — that's likely part of why a broad-based-ownership structure
+appeals to them in the first place. But "labor deserves fair reward"
+just pushes the real question back one step: which labor? Marx's own
+framework turns out to be a useful place to start answering it.
 
 In *Capital* Vol. 3[^12], Marx splits what looks like "management" into
 two categories. The first is **wages of superintendence** — the actual
@@ -1058,6 +1064,33 @@ mechanism that gets the mission built in the first place. [Section
 mechanism — an ESOP — through which we act on that.
 
 
+
+### A.5 Income vs. retained earnings: a quick refresher
+
+The [C-corp or S-corp?](#c-corp-or-s-corp) discussion in Section 3
+leans on a distinction worth making explicit: **income** is a *flow*,
+measured over a period — a quarter, a year — as revenue minus all
+expenses (COGS, operating costs, interest, taxes) for that period. It
+resets each period; last year's income doesn't carry forward as this
+year's.
+
+**Retained earnings** is a *stock* — a running cumulative balance-sheet
+total, built up over the company's entire life:
+
+$$RE_{\text{end}} = RE_{\text{beginning}} + \text{Net Income}_{\text{period}} - \text{Dividends}_{\text{period}}$$
+
+Each period, that period's net income either gets paid out as
+dividends or gets added to the accumulated retained-earnings pool. So
+income is the flow feeding the pool; retained earnings is the pool
+itself.
+
+This is why C-corp vs. S-corp status matters for *when* tax hits that
+pool. A C-corp's income is taxed once as it's earned — flowing into
+the pool — and taxed again if it's ever paid out later as a dividend:
+two tax events on the same dollar, at different times. An S-corp's
+income is taxed to shareholders once, the moment it's earned, whether
+or not it's actually distributed — so nothing further happens tax-wise
+when it later leaves the retained-earnings pool as a distribution.
 
 ### A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem
 
