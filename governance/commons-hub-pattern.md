@@ -406,7 +406,7 @@ deal costs and ongoing operations.
 
 Two corporate forms are available for the for-profit subsidiary: C-corp or S-corp.
 Both can sponsor an ESOP, and both tax income annually as it's
-earned — that part doesn't diverge. What actually diverges is two
+earned — that part doesn't diverge. The real divergence is on two
 separate questions: whether retained earnings (see [Appendix
 A.5](#a5-income-vs-retained-earnings-a-quick-refresher) for a refresher
 on that term) face a *second* tax when eventually distributed as a
@@ -435,7 +435,9 @@ details:
   - Because an ESOP trust is itself tax-exempt, whatever share of the
     company an ESOP owns generates income that currently isn't taxed
     to anyone — a 100%-ESOP-owned S-corp can end up owing no federal
-    income tax at all.
+    income tax at all. This isn't a theoretical edge case: a 2022
+    survey counted over 4,000 such fully tax-exempt, 100%-ESOP-owned
+    S-corps operating in the US.[^14]
   - Doesn't get §1042: that deferral is C-corp only.
 
 The two aren't just different flavors of the same thing — they're
@@ -1242,4 +1244,9 @@ resilience strategy.
     the chapter distinguishing the technical function of directing
     combined labor (the orchestra-conductor analogy) from the despotic
     function of capitalist supervision.
+[^14]: [NCEO, "ESOPs in S
+    Corporations"](https://www.nceo.org/what-is-employee-ownership/esops/esops-s-corporations) —
+    on the federal tax exemption for S-corp income attributable to ESOP
+    ownership, and the ~4,000-plus 100%-ESOP-owned S-corps counted in a
+    2022 survey.
 
