@@ -91,7 +91,7 @@ In terms of our two opening questions our model's answers are:
 that vests with earned trust and decays on inactivity (rather than
 accumulating into permanent control.)   
 
-- Who benefits, and by what means: the people who did the work on a given funded
+- Who benefits: the people who did the work on a given funded
 program, by their own [equally-weighted vote through a
 DAO](#dao). 
 
@@ -391,8 +391,9 @@ converts the enterprise value they built into cash. For
 employees, it doubles as motivation and retention: all *future*
 appreciation accrues to those who stay on to keep building the
 company -- rather than to an uninvolved third party who inherits or
-buys the founder's stake. (Note: our perspective on what constitutes _justly rewarded_
-founder labor on exit diverges from Marx, and is more aligned with Schumpeter as discussed
+buys the founder's stake. (Note: although this document often 
+leans on Marxist economic analysis our perspective on what constitutes _justly rewarded_
+founder labor on exit is more aligned with Schumpeter as discussed
 in [Appendix A.3](#a3-founder-labor-and-fair-reward).)
 
 
@@ -575,6 +576,9 @@ In summary, the operational advantages that accrue from these two structural pro
 
 
 ### Resilience through dispersion
+
+[ WARNING: AI slop ahead - this section is mostly a dump of research, and needs major editing to not 
+induce reader headache]
 
 Engineers building cloud infrastructure learned this lesson long ago: you don't put a service in one data center, because
 one region's outage takes the whole thing down — you replicate across independent regions and providers so no single
@@ -1116,20 +1120,20 @@ Row-by-row, here's where each one comes from, quoted directly:
   his profit of enterprise is *"itself rather a wage ... of
   superintendence of labour."*
 
-Rows 1/coordination and 2/surveillance are one passage doing double
-duty: Marx splits what looks like a single "management" function into
-two, and the two quotes above are that split. The first is a technical
-function, necessary in any social system, not just capitalism; Marx's
-own analogy is an orchestra needing a conductor. The second is
-despotic, specific to capitalism: control that has nothing to do with
-coordinating work and everything to do with extracting effort from
-workers who have no stake in the outcome. By Marx's own account, row
-1/coordination is clearly fair and row 2/surveillance is clearly not;
-we're not disagreeing with him on either.
+Coordination (#1) and surveillance (#2) both come from one
+passage doing double duty: Marx splits what looks like a single
+"management" function into two, and the two quotes above reflect that
+split. The first is a technical function, necessary in any social
+system, not just capitalism; Marx's own analogy is an orchestra needing
+a conductor. The second is despotic and specific to capitalism: control
+that has nothing to do with coordinating work and everything to do
+with extracting effort from workers who have no stake in the outcome.
+Marx's viewpoint (with which we concur) argues that coordination
+(#1) is clearly fair and surveillance (#2) is clearly not.
 
-The row 4/rent quote is Marx describing how capitalist owners justify
-their residual profit claim by presenting it as just a bigger version
-of row 1/coordination. His point is that the claim doesn't hold up:
+The rent (#4) quote is Marx describing how capitalist owners
+justify their residual profit claim by presenting it as just a bigger
+version of coordination (#1). His point is that the claim doesn't hold up:
 subtract what a hired, non-owner manager would actually earn doing the
 identical coordinating
 work, and what's left over isn't explained by labor at all — it's a
@@ -1144,24 +1148,21 @@ capital in the first place.
 On three of these four rows, then, there's no real daylight between us
 and Marx. Broad-based ownership and [token-based delegated
 authority](#token-based-delegated-authority) don't exist to argue
-against row 1/coordination or eliminate legitimate coordination work;
-they exist to dissolve the antagonism that makes row 2/surveillance
+against coordination (#1) or eliminate legitimate coordination work;
+they exist to dissolve the antagonism that makes surveillance (#2)
 seem necessary in the first place, as contributors motivated by their
 own stake coordinate and manage work amongst themselves rather than
 needing someone to crack a whip.
 
-Row 3/founding labor is where we actually part ways with Marx — the
-only place we do. Neither of his categories has room for the one-time
-work of actually getting an enterprise off the ground: not just
-conceiving the idea, but the *team-building* work of getting people
+Founding labor (#3) is the only instance  where we actually part ways with Marx.
+Neither of his categories has room for the one-time
+work of actually getting an enterprise off the ground: 
+the *team-building* work of getting people
 organized around it, analyzing competition and regulatory factors, and
-the judgment involved in capital allocation. Call the person doing this
-the *visionary entrepreneur*. That labor is distinct from ongoing
-coordination (row 1), distinct from despotic control (row 2), and
-distinct from mere ownership (row 4/rent) — and we think it deserves
-fair compensation. This is the entire substance of our disagreement with
-Marx: not rent, not supervision in either of its forms, but crediting
-the act of founding itself.
+the judgment involved in capital allocation. 
+This is the  labor of the *visionary entrepreneur*, and we see it as 
+distinct from ongoing coordination (#1), despotic control (#2), and
+mere ownership (#4) We think it deserves fair compensation. 
 
 Joseph Schumpeter offers a cleaner theoretical home for that one gap
 than Marx does. He drew his own line between the entrepreneur's
@@ -1175,11 +1176,11 @@ stake insulated from it.
 None of this is as clean in practice as the table makes it look. A
 founder's actual payout — the ESOP exit, cashing out "the enterprise
 value they built" — arrives as one blended number, not four separately
-labeled deposits, and rent (row 4) can ride along in it two different
+labeled deposits, and rent (#4) can ride along in it two different
 ways. The obvious one: if any of the capital that seeded the company
 carried rent on it — capital of questionable origin, riding along
 rather than being contributed as labor — that rent cashes out
-indistinguishable from the founding-labor reward (row 3). The less
+indistinguishable from the founding-labor reward (#3). The less
 obvious one requires no capital contribution at all: a founder who put in nothing but founding
 labor still holds equity that keeps appreciating on *other people's*
 ongoing work, for as long as they hold it — value generated by
@@ -1187,7 +1188,7 @@ employees' later labor, collected purely because the founder still
 owns the shares. The longer that holding period, the more a payout
 shifts from reward for the one-time act of founding toward reward for
 having owned stock while others built. Nothing in the ESOP mechanism
-itself sorts any of this from the founding-labor reward (row 3).
+itself sorts any of this from the founding-labor reward (#3).
 
 Since the mechanism can't enforce that line, holding it falls to the
 founder. That's not a new obligation invented here — it's the same
@@ -1238,20 +1239,6 @@ two tax events on the same dollar, at different times. An S-corp's
 income is taxed to shareholders once, the moment it's earned, whether
 or not it's actually distributed — so nothing further happens tax-wise
 when it later leaves the retained-earnings pool as a distribution.
-
-### A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem
-
-Which points to why dispersion is the better answer here, not merely an
-adequate one. Concentrating capability into one legal entity, one point of
-control, one target, is exactly the aircraft-carrier problem: enormous value
-in a single place is precisely what makes it worth attacking — legally (one
-entity to sue or deplatform), politically (one target to pressure),
-operationally (one point of funding or leadership failure). A dispersed,
-replicable structure doesn't have that failure mode — no single instance is
-load-bearing, and if one node goes down, the pattern survives elsewhere. That
-is what the clonable, multi-Satellite shape in
-[§1](#1-the-commons-layer-and-its-satellites) is actually for: not just a way to scale, but a
-resilience strategy.
 
 
 [^1]: [Inclosure Acts — Wikipedia](https://en.wikipedia.org/wiki/Inclosure_Acts).
