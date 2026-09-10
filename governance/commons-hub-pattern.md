@@ -1019,43 +1019,51 @@ that visibly isn't the one still producing it.
 ### A.3 Founder labor and fair reward
 
 Founding stewards drawn to our proposed model are presumably already
-'mission-motivated', and presumably already believe labor deserves a fair
-reward — that's likely part of why a broad-based-ownership structure
-appeals to them in the first place. But "fair reward"
-just pushes the real question back one step. At least four distinct
-things can end up bundled into what looks like one reward for "running
-the company," and they don't all deserve the same answer — nor are
-they all even labor to begin with:
+'mission-motivated', and aligned with our belief that labor deserves a fair
+reward -- and that more generally, economic benefits accruing from any shared effort
+should be distributed equitably. The table below reflects our position on what's 
+fair, but each founder should think through how what they take 
+away on exit aligns with their own stated principles.
 
-| # | Reward source                                                                            | Fair? |
-|---|------------------------------------------------------------------------------------------|---|
-| 1 | Coordination — project management, hiring, external stakeholder communications | Yes |
-| 2 | Despotic surveillance — monitoring or disciplining workers out of distrust               | No |
-| 3 | Return on mere capital ownership (rent) — regardless of the capital's origin             | No |
-| 4 | One-time founding labor — vision, team-building, capital-allocation judgment             | Yes |
+| # | Reward source                                                                            | Labor? | Fair? |
+|---|------------------------------------------------------------------------------------------|---|---|
+| 1 | Coordination — project management, hiring, external stakeholder communications | Yes | Yes |
+| 2 | Despotic surveillance — monitoring or disciplining workers out of distrust               | Yes | No |
+| 3 | One-time founding labor — vision, team-building, capital-allocation judgment             | Yes | Yes |
+| 4 | Return on mere capital ownership (rent) — regardless of the capital's origin             | No | No |
 
-Rows 1 and 2 come from Marx himself, and from a different place than
-rows 3 and 4. In *Capital* Vol. 1, Ch. 13, "Co-operation"[^13], Marx
-splits what looks like "management" into two functions that get
-bundled together but shouldn't be. The first is a technical function:
-"all combined labour on a large scale requires, more or less, a
-directing authority, in order to secure the harmonious working of the
-individual activities". This is necessary in any social system, not just
-capitalism; Marx's own analogy is an orchestra needing a conductor. The
-second is a despotic function, specific to capitalism: supervision
-that exists "by reason of ... the unavoidable antagonism between the
-exploiter and the living and labouring raw material he exploits" —
-control that has nothing to do with coordinating work and everything
-to do with extracting effort from workers who have no stake in the
-outcome. By Marx's own account, row 1 is clearly fair and row 2 is
-clearly not; we're not disagreeing with him on either.
+Row-by-row, here's where each one comes from, quoted directly:
 
-Row 3 comes from a different chapter. In *Capital* Vol. 3, Ch.
-23[^12], Marx describes how capitalist owners justify their residual
-profit claim by calling it "itself rather a wage ... of superintendence
-of labour" — presenting it as just a bigger version of row 1. Marx's
-point is that the claim doesn't hold up: subtract what a hired,
-non-owner manager would actually earn doing the identical coordinating
+- **Row 1 (coordination)** — Marx, *Capital* Vol. 1, Ch. 13,
+  "Co-operation"[^13]: *"all combined labour on a large scale requires,
+  more or less, a directing authority, in order to secure the
+  harmonious working of the individual activities."*
+- **Row 2 (despotic surveillance)** — same chapter[^13]: *"by reason of
+  ... the unavoidable antagonism between the exploiter and the living
+  and labouring raw material he exploits."*
+- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^11]
+  instead.
+- **Row 4 (rent)** — Marx, *Capital* Vol. 3, Ch. 23, "Interest and
+  Profit of Enterprise"[^12], quoting the capitalist's own rationale:
+  his profit of enterprise is *"itself rather a wage ... of
+  superintendence of labour."*
+
+Rows 1/coordination and 2/surveillance are one passage doing double
+duty: Marx splits what looks like a single "management" function into
+two, and the two quotes above are that split. The first is a technical
+function, necessary in any social system, not just capitalism; Marx's
+own analogy is an orchestra needing a conductor. The second is
+despotic, specific to capitalism: control that has nothing to do with
+coordinating work and everything to do with extracting effort from
+workers who have no stake in the outcome. By Marx's own account, row
+1/coordination is clearly fair and row 2/surveillance is clearly not;
+we're not disagreeing with him on either.
+
+The row 4/rent quote is Marx describing how capitalist owners justify
+their residual profit claim by presenting it as just a bigger version
+of row 1/coordination. His point is that the claim doesn't hold up:
+subtract what a hired, non-owner manager would actually earn doing the
+identical coordinating
 work, and what's left over isn't explained by labor at all — it's a
 return on mere ownership, dressed up rhetorically as a labor reward. He
 even has empirical proof: in co-operative factories, where management
@@ -1065,26 +1073,25 @@ agree with Marx completely here too: rent deserves no reward, full
 stop, regardless of who's collecting it or how they came to own the
 capital in the first place.
 
-So on three of these four rows, there's no real daylight between us
-and Marx — genuine coordination is fair, despotic surveillance isn't,
-rent isn't. Broad-based ownership and [token-based delegated
+On three of these four rows, then, there's no real daylight between us
+and Marx. Broad-based ownership and [token-based delegated
 authority](#token-based-delegated-authority) don't exist to argue
-against row 1 or eliminate legitimate coordination work; they exist to
-dissolve the antagonism that makes row 2 seem necessary in the first
-place, as contributors motivated by their own stake coordinate and
-manage work amongst themselves rather than needing someone to crack a
-whip.
+against row 1/coordination or eliminate legitimate coordination work;
+they exist to dissolve the antagonism that makes row 2/surveillance
+seem necessary in the first place, as contributors motivated by their
+own stake coordinate and manage work amongst themselves rather than
+needing someone to crack a whip.
 
-Row 4 is where we actually part ways with Marx — the only place we
-do. Neither of his categories has room for the one-time work of
-actually getting an enterprise off the ground: not just conceiving the
-idea, but the *team-building* work of getting people organized around
-it, analyzing competition and regulatory factors, and the judgment
-involved in capital allocation. Call the person doing this the
-*visionary entrepreneur*. That labor is distinct from ongoing
+Row 3/founding labor is where we actually part ways with Marx — the
+only place we do. Neither of his categories has room for the one-time
+work of actually getting an enterprise off the ground: not just
+conceiving the idea, but the *team-building* work of getting people
+organized around it, analyzing competition and regulatory factors, and
+the judgment involved in capital allocation. Call the person doing this
+the *visionary entrepreneur*. That labor is distinct from ongoing
 coordination (row 1), distinct from despotic control (row 2), and
-distinct from mere ownership (row 3) — and we think it deserves fair
-compensation. This is the entire substance of our disagreement with
+distinct from mere ownership (row 4/rent) — and we think it deserves
+fair compensation. This is the entire substance of our disagreement with
 Marx: not rent, not supervision in either of its forms, but crediting
 the act of founding itself.
 
@@ -1100,19 +1107,19 @@ stake insulated from it.
 None of this is as clean in practice as the table makes it look. A
 founder's actual payout — the ESOP exit, cashing out "the enterprise
 value they built" — arrives as one blended number, not four separately
-labeled deposits, and row-3 rent can ride along in it two different
+labeled deposits, and rent (row 4) can ride along in it two different
 ways. The obvious one: if any of the capital that seeded the company
 carried rent on it — capital of questionable origin, riding along
 rather than being contributed as labor — that rent cashes out
-indistinguishable from row-4 reward. The less obvious one requires no
-capital contribution at all: a founder who put in nothing but founding
+indistinguishable from the founding-labor reward (row 3). The less
+obvious one requires no capital contribution at all: a founder who put in nothing but founding
 labor still holds equity that keeps appreciating on *other people's*
 ongoing work, for as long as they hold it — value generated by
 employees' later labor, collected purely because the founder still
 owns the shares. The longer that holding period, the more a payout
 shifts from reward for the one-time act of founding toward reward for
 having owned stock while others built. Nothing in the ESOP mechanism
-itself sorts any of this from row-4 reward.
+itself sorts any of this from the founding-labor reward (row 3).
 
 Since the mechanism can't enforce that line, holding it falls to the
 founder. That's not a new obligation invented here — it's the same
