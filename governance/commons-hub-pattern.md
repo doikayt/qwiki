@@ -396,6 +396,28 @@ leans on Marxist economic analysis our perspective on what constitutes _justly r
 founder labor on exit is more aligned with Schumpeter as discussed
 in [Appendix A.3](#a3-founder-labor-and-fair-reward).)
 
+The buyout, the ongoing vesting cycle, and an employee's eventual exit
+are three separate flows of cash and shares — here's how they connect:
+
+```mermaid
+flowchart LR
+    Founder([Founder])
+    Lender([Bank / seller financing])
+    Trust[ESOP Trust]
+    Company[[Company]]
+    Employees{{Employee accounts}}
+    Departing([Departing employee])
+
+    Founder -- "1 sells shares" --> Trust
+    Lender -- "1 loan proceeds" --> Trust
+    Trust -- "1 purchase price" --> Founder
+    Company -- "2 tax-deductible contributions, annually" --> Trust
+    Trust -- "2 loan repayment" --> Lender
+    Trust -- "2 shares vest as loan is repaid" --> Employees
+    Employees -- "3 leaves / retires" --> Departing
+    Departing -- "3 vested shares" --> Company
+    Company -- "3 cash at fair market value" --> Departing
+```
 
 #### When ESOPs make sense
 
@@ -1157,7 +1179,7 @@ needing someone to crack a whip.
 Founding labor (#3) is the only instance  where we actually part ways with Marx.
 Neither of his categories has room for the one-time
 work of actually getting an enterprise off the ground: 
-the *team-building* work of getting people
+the team-building work of getting people
 organized around it, analyzing competition and regulatory factors, and
 the judgment involved in capital allocation. 
 This is the  labor of the *visionary entrepreneur*, and we see it as 
