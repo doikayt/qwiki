@@ -400,7 +400,7 @@ The buyout, the ongoing vesting cycle, and an employee's eventual exit
 are three separate flows of cash and shares — here's how they connect:
 
 ```mermaid
-flowchart LR
+flowchart TD
     Founder([Founder])
     Lender([Bank / seller financing])
     Trust[ESOP Trust]
@@ -1116,8 +1116,8 @@ Founding stewards drawn to our proposed model are presumably already
 'mission-motivated', and aligned with our belief that labor deserves a fair
 reward -- and that more generally, economic benefits accruing from any shared effort
 should be distributed equitably. The table below reflects our position on what's 
-fair, but each founder should think through how what they take 
-away on exit aligns with their own stated principles.
+fair, but each founder should think through how their reward
+on exit aligns with their own stated principles.
 
 | # | Reward source                                                                            | Labor? | Fair? |
 |---|------------------------------------------------------------------------------------------|---|---|
@@ -1193,7 +1193,7 @@ profit — a temporary reward for introducing a genuine innovation, a
 the entrepreneurial reward, in his account, gets competed away once
 the innovation is copied.[^11] That's closer to what we mean: the
 reward attaches to the act of founding, not to a permanent ownership
-stake insulated from it.
+stake that outlives it.
 
 None of this is as clean in practice as the table makes it look. A
 founder's actual payout — the ESOP exit, cashing out "the enterprise
