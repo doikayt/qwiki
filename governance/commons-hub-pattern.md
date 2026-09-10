@@ -1009,17 +1009,27 @@ Founding stewards drawn to our proposed model are presumably already
 'mission-motivated', and presumably already believe labor deserves a fair
 reward — that's likely part of why a broad-based-ownership structure
 appeals to them in the first place. But "labor deserves fair reward"
-just pushes the real question back one step: which labor? Marx's own
-framework turns out to be a useful place to start answering it.
+just pushes the real question back one step: which labor? Three
+distinct things can end up bundled into what looks like one reward for
+"running the company," and they don't all deserve the same answer:
 
-In *Capital* Vol. 3[^12], Marx splits what looks like rewards accruing
-to management into two very different things. The first, **wages of superintendence**, is
-genuine labor — the actual work of coordinating and supervising
-production, which he treats as legitimate and compensable; a hired
-manager could earn this wage same as anyone else. The second, **profit
-of enterprise**, isn't labor at all — it's the owner's residual claim
-on whatever's left over, a return on mere ownership that he treats as
-unearned. Call this the rent problem.
+| # | Reward source | Merited? |
+|---|---|---|
+| 1 | Ongoing supervisory/coordinating labor | No |
+| 2 | One-time founding labor — vision, team-building, capital-allocation judgment | Yes |
+| 3 | Return on mere capital ownership (rent) — regardless of the capital's origin | No |
+
+Marx's own framework in *Capital* Vol. 3[^12] draws a version of rows
+1 and 3 above — though not row 2. He splits what looks like rewards
+accruing to
+management into two very different things. The first, **wages of
+superintendence** (row 1), is genuine labor — the actual work of
+coordinating and supervising production, which he treats as legitimate
+and compensable; a hired manager could earn this wage same as anyone
+else. The second, **profit of enterprise** (row 3), isn't labor at
+all — it's the owner's residual claim on whatever's left over, a
+return on mere ownership that he treats as unearned. Call this the
+rent problem.
 
 We land in two different places on these two categories. On profit of
 enterprise, we agree with Marx completely: rent deserves no reward,
@@ -1034,8 +1044,8 @@ unnecessary, as contributors motivated by their own stake coordinate
 and manage work amongst themselves rather than needing someone to
 crack a whip.
 
-But Marx's two categories leave a gap: neither one has room for the
-one-time work of actually getting an enterprise off the
+But Marx's two categories leave a gap: neither one has room for row
+2 — the one-time work of actually getting an enterprise off the
 ground — not just conceiving the idea, but the *team-building* work of
 getting people organized around it, and the judgment involved in
 capital allocation. Call the person doing this the *visionary
@@ -1053,24 +1063,42 @@ innovation is copied.[^11] That's closer to what we mean: the reward
 attaches to the act of founding, not to a permanent ownership stake
 insulated from it.
 
+None of this is as clean in practice as the table makes it look. A
+founder's actual payout — the ESOP exit, cashing out "the enterprise
+value they built" — arrives as one blended number, not three
+separately labeled deposits. If any of the capital that seeded the
+company carried row-3 rent on it — capital of questionable origin,
+riding along rather than being contributed as labor — that rent cashes
+out indistinguishable from row-2 reward. Nothing in the ESOP mechanism
+itself sorts one from the other.
+
+Since the mechanism can't enforce that line, holding it falls to the
+founder. That's not a new obligation invented here — it's the same
+mission motivation this section opened by assuming of them, applied to
+their own exit: making sure what they walk away with tracks the
+founding labor described above, not whatever rent happened to be
+riding along with it.
+
 Fair compensation for that founding labor is one thing; what isn't
 fair is if it's allowed to compound into dynastic wealth and the kind
 of calcified structural inequality that outlives whatever labor was
-performed to earn it. We're against that. But if the same
-self-interest is what gets someone to do the actual work of founding —
-and the value it creates eventually flows to broad public benefit — we
-have no objection to self-interest being part of a founder's
-motivation. That's not a contradiction of the mission; it's the
-mechanism that gets the mission built in the first place. [Section
-3](#3-economic-benefit--sequencing-across-mechanisms) covers the
-mechanism — an ESOP — through which we act on that.
+performed to earn it. We're against that — and holding that line is
+the founder's own responsibility to honor, not a guarantee the ESOP
+structure provides on its own. But if the same self-interest is what
+gets someone to do the actual work of founding — and the value it
+creates eventually flows to broad public benefit — we have no
+objection to self-interest being part of a founder's motivation.
+That's not a contradiction of the mission; it's the mechanism that
+gets the mission built in the first place. [Section
+3](#3-distribution-of-economic-benefits--from-founder-incentives-to-broad-based-ownership)
+covers the mechanism — an ESOP — through which we act on that.
 
 
 
 ### A.5 Income vs. retained earnings: a quick refresher
 
 The [C-corp or S-corp?](#c-corp-or-s-corp) discussion in Section 3
-leans on a distinction worth making explicit: **income** is a *flow*,
+turns on a distinction worth making explicit: **income** is a *flow*,
 measured over a period — a quarter, a year — as revenue minus all
 expenses (COGS, operating costs, interest, taxes) for that period. It
 resets each period; last year's income doesn't carry forward as this
