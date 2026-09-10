@@ -368,16 +368,16 @@ Ownership Plan](https://en.wikipedia.org/wiki/Employee_stock_ownership_plan)
 An ESOP is a trust that holds company stock on behalf of a firm's
 employees, vesting it to them over years of service. Congress built it
 as a tax-favored path to convert employees into genuine owners rather
-than just wage earners. Concretely, the trust itself is stock purchaser: it
+than just wage earners. Concretely, the trust itself is the stock purchaser: it
 buys back the founder's shares directly — typically financed by a loan
 that the company then repays over time via tax-deductible
-contributions to the trust — giving founders a liquid exit path that
+contributions to the trust. This provides founders a liquid exit path that
 converts the enterprise value they built into cash. For
 employees, it doubles as motivation and retention: all *future*
 appreciation accrues to those who stay on to keep building the
 company -- rather than to an uninvolved third party who inherits or
-buys the founder's stake. (Note: our perspective on what constitutes justly rewarded 
-founder labor diverges from Marx, and is more aligned with Schumpeter as discussed
+buys the founder's stake. (Note: our perspective on what constitutes _justly rewarded_
+founder labor on exit diverges from Marx, and is more aligned with Schumpeter as discussed
 in [Appendix A.3](#a3-founder-labor-and-fair-reward).)
 
 
@@ -405,18 +405,22 @@ deal costs and ongoing operations.
 #### C-corp or S-corp?
 
 Two corporate forms are available for the for-profit subsidiary: C-corp or S-corp.
-Both can sponsor an ESOP, but the two elections diverge on two separate
-questions: how the company's own retained earnings (see [Appendix
+Both can sponsor an ESOP, and both tax income annually as it's
+earned — that part doesn't diverge. What actually diverges is two
+separate questions: whether retained earnings (see [Appendix
 A.5](#a5-income-vs-retained-earnings-a-quick-refresher) for a refresher
-on that term) get taxed year to year, and — specifically at the moment
-a founder sells stock to the ESOP trust — whether that capital gain
-can be deferred. The details:
+on that term) face a *second* tax when eventually distributed as a
+dividend, and — specifically at the moment a founder sells stock to
+the ESOP trust — whether that capital gain can be deferred. The
+details:
 
 - **C-corp:**
   - Entity-level tax: a flat 21% federal rate on the corporation's own
     income, as of this writing.
-  - Retained earnings are taxed once; if ever paid out as a dividend,
-    shareholders pay tax on it again.
+  - Retained earnings are taxed once at the corporate level as they're
+    earned; if that same money is ever paid out later as a dividend,
+    shareholders pay tax on it a second time — the classic "double
+    taxation" of a C-corp.
   - The relevant ESOP benefit: a founder selling stock to the ESOP can
     defer capital-gains tax via the
     [IRC §1042](https://www.financialplanningassociation.org/learning/publications/journal/AUG24-using-irc-section-1042-retirement-and-exit-planning-business-owners-guide-financial-OPEN)
@@ -1008,71 +1012,90 @@ that visibly isn't the one still producing it.
 Founding stewards drawn to our proposed model are presumably already
 'mission-motivated', and presumably already believe labor deserves a fair
 reward — that's likely part of why a broad-based-ownership structure
-appeals to them in the first place. But "labor deserves fair reward"
-just pushes the real question back one step: fair reward for what,
-exactly? Three distinct things can end up bundled into what looks like
-one reward for "running the company," and they don't all deserve the
-same answer — and not all of them are even labor to begin with:
+appeals to them in the first place. But "fair reward"
+just pushes the real question back one step. At least four distinct
+things can end up bundled into what looks like one reward for "running
+the company," and they don't all deserve the same answer — nor are
+they all even labor to begin with:
 
-| # | Reward source | Fair? |
-|---|---|---|
-| 1 | Ongoing supervisory/coordinating labor | No |
-| 2 | One-time founding labor — vision, team-building, capital-allocation judgment | Yes |
-| 3 | Return on mere capital ownership (rent) — regardless of the capital's origin | No |
+| # | Reward source                                                                            | Fair? |
+|---|------------------------------------------------------------------------------------------|---|
+| 1 | Coordination — project management, hiring, external stakeholder communications | Yes |
+| 2 | Despotic surveillance — monitoring or disciplining workers out of distrust               | No |
+| 3 | Return on mere capital ownership (rent) — regardless of the capital's origin             | No |
+| 4 | One-time founding labor — vision, team-building, capital-allocation judgment             | Yes |
 
-Marx's own framework in *Capital* Vol. 3[^12] draws a version of rows
-1 and 3 above — though not row 2. He splits what looks like rewards
-accruing to
-management into two very different things. The first, **wages of
-superintendence** (row 1), is genuine labor — the actual work of
-coordinating and supervising production, which he treats as legitimate
-and compensable; a hired manager could earn this wage same as anyone
-else. The second, **profit of enterprise** (row 3), isn't labor at
-all — it's the owner's residual claim on whatever's left over, a
-return on mere ownership that he treats as unearned. Call this thepplie
-rent problem.
+Rows 1 and 2 come from Marx himself, and from a different place than
+rows 3 and 4. In *Capital* Vol. 1, Ch. 13, "Co-operation"[^13], Marx
+splits what looks like "management" into two functions that get
+bundled together but shouldn't be. The first is a technical function:
+"all combined labour on a large scale requires, more or less, a
+directing authority, in order to secure the harmonious working of the
+individual activities". This is necessary in any social system, not just
+capitalism; Marx's own analogy is an orchestra needing a conductor. The
+second is a despotic function, specific to capitalism: supervision
+that exists "by reason of ... the unavoidable antagonism between the
+exploiter and the living and labouring raw material he exploits" —
+control that has nothing to do with coordinating work and everything
+to do with extracting effort from workers who have no stake in the
+outcome. By Marx's own account, row 1 is clearly fair and row 2 is
+clearly not; we're not disagreeing with him on either.
 
-We land in two different places on these two categories. On profit of
-enterprise, we agree with Marx completely: rent deserves no reward,
-full stop — regardless of who's collecting it. On wages of
-superintendence, we go further than he did: we don't think ongoing
-supervision of other people's labor is real value-adding work either.
-It's closer in kind to rent than to labor — a cost imposed by
-low-trust, hierarchical structures, not something intrinsically
-necessary to production. Broad-based ownership and [token-based
-delegated authority](#token-based-delegated-authority) exist
-specifically to make that kind of oversight
-unnecessary, as contributors motivated by their own stake coordinate
-and manage work amongst themselves rather than needing someone to
-crack a whip.
+Row 3 comes from a different chapter. In *Capital* Vol. 3, Ch.
+23[^12], Marx describes how capitalist owners justify their residual
+profit claim by calling it "itself rather a wage ... of superintendence
+of labour" — presenting it as just a bigger version of row 1. Marx's
+point is that the claim doesn't hold up: subtract what a hired,
+non-owner manager would actually earn doing the identical coordinating
+work, and what's left over isn't explained by labor at all — it's a
+return on mere ownership, dressed up rhetorically as a labor reward. He
+even has empirical proof: in co-operative factories, where management
+is genuinely divorced from ownership, the manager's wage is paid
+separately and explicitly, and the mystified category disappears. We
+agree with Marx completely here too: rent deserves no reward, full
+stop, regardless of who's collecting it or how they came to own the
+capital in the first place.
 
-But Marx's two categories leave a gap: neither one has room for row
-2 — the one-time work of actually getting an enterprise off the
-ground — not just conceiving the idea, but the *team-building* work of
-getting people organized around it, and the judgment involved in
-capital allocation. Call the person doing this the *visionary
-entrepreneur*. That labor is a third category — distinct from the
-ongoing supervision we just rejected, and distinct from mere
-ownership, which still earns nothing on its own — and we think it
-deserves fair compensation.
+So on three of these four rows, there's no real daylight between us
+and Marx — genuine coordination is fair, despotic surveillance isn't,
+rent isn't. Broad-based ownership and [token-based delegated
+authority](#token-based-delegated-authority) don't exist to argue
+against row 1 or eliminate legitimate coordination work; they exist to
+dissolve the antagonism that makes row 2 seem necessary in the first
+place, as contributors motivated by their own stake coordinate and
+manage work amongst themselves rather than needing someone to crack a
+whip.
 
-Joseph Schumpeter offers a cleaner theoretical home for this gap than
-Marx does. He drew his own line between the entrepreneur's profit — a
-temporary reward for introducing a genuine innovation, a "new
-combination" — and the rentier's return on capital merely owned; the
-entrepreneurial reward, in his account, gets competed away once the
-innovation is copied.[^11] That's closer to what we mean: the reward
-attaches to the act of founding, not to a permanent ownership stake
-insulated from it.
+Row 4 is where we actually part ways with Marx — the only place we
+do. Neither of his categories has room for the one-time work of
+actually getting an enterprise off the ground: not just conceiving the
+idea, but the *team-building* work of getting people organized around
+it, analyzing competition and regulatory factors, and the judgment
+involved in capital allocation. Call the person doing this the
+*visionary entrepreneur*. That labor is distinct from ongoing
+coordination (row 1), distinct from despotic control (row 2), and
+distinct from mere ownership (row 3) — and we think it deserves fair
+compensation. This is the entire substance of our disagreement with
+Marx: not rent, not supervision in either of its forms, but crediting
+the act of founding itself.
+
+Joseph Schumpeter offers a cleaner theoretical home for that one gap
+than Marx does. He drew his own line between the entrepreneur's
+profit — a temporary reward for introducing a genuine innovation, a
+"new combination" — and the rentier's return on capital merely owned;
+the entrepreneurial reward, in his account, gets competed away once
+the innovation is copied.[^11] That's closer to what we mean: the
+reward attaches to the act of founding, not to a permanent ownership
+stake insulated from it.
 
 None of this is as clean in practice as the table makes it look. A
 founder's actual payout — the ESOP exit, cashing out "the enterprise
-value they built" — arrives as one blended number, not three
-separately labeled deposits, and row-3 rent can ride along in it two
-different ways. The obvious one: if any of the capital that seeded the
-company carried rent on it — capital of questionable origin, riding
-along rather than being contributed as labor — that rent cashes out
-indistinguishable from row-2 reward. The less obvious one requires no
+value they built" — arrives as one blended number, not four separately
+labeled deposits, and row-3 rent can ride along in it two different
+ways. The obvious one: if any of the capital that seeded the company
+carried rent on it — capital of questionable origin, riding along
+rather than being contributed as labor — that rent cashes out
+indistinguishable from row-4 reward. The less obvious one requires no
 capital contribution at all: a founder who put in nothing but founding
 labor still holds equity that keeps appreciating on *other people's*
 ongoing work, for as long as they hold it — value generated by
@@ -1080,7 +1103,7 @@ employees' later labor, collected purely because the founder still
 owns the shares. The longer that holding period, the more a payout
 shifts from reward for the one-time act of founding toward reward for
 having owned stock while others built. Nothing in the ESOP mechanism
-itself sorts any of this from row-2 reward.
+itself sorts any of this from row-4 reward.
 
 Since the mechanism can't enforce that line, holding it falls to the
 founder. That's not a new obligation invented here — it's the same
@@ -1110,11 +1133,11 @@ covers the mechanism — an ESOP — through which we act on that.
 The [C-corp or S-corp?](#c-corp-or-s-corp) discussion in Section 3
 turns on a distinction worth making explicit: **income** is a *flow*,
 measured over a period — a quarter, a year — as revenue minus all
-expenses (COGS, operating costs, interest, taxes) for that period. It
+expenses ([COGS](https://en.wikipedia.org/wiki/Cost_of_goods_sold), operating costs, interest, taxes) for that period. It
 resets each period; last year's income doesn't carry forward as this
 year's.
 
-**Retained earnings** is a *stock* — a running cumulative balance-sheet
+**Retained earnings** is a *pool* — a running cumulative balance-sheet
 total, built up over the company's entire life:
 
 $$RE_{\text{end}} = RE_{\text{beginning}} + \text{Net Income}_{\text{period}} - \text{Dividends}_{\text{period}}$$
@@ -1214,4 +1237,9 @@ resilience strategy.
     Enterprise"](https://www.marxists.org/archive/marx/works/1894-c3/ch23.htm) —
     the chapter distinguishing "wages of superintendence" from "profit
     of enterprise."
+[^13]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
+    "Co-operation"](https://www.marxists.org/archive/marx/works/1867-c1/ch13.htm) —
+    the chapter distinguishing the technical function of directing
+    combined labor (the orchestra-conductor analogy) from the despotic
+    function of capitalist supervision.
 
