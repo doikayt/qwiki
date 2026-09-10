@@ -552,7 +552,8 @@ Satellite, the shared Commons and every other Satellite running it keep operatin
 just adequate but better", for the full argument.
 
 This isn't hypothetical. In August 2026, the US government designated the Italian hosting collective Autistici/Inventati
-a "Specially Designated Global Terrorist" entity over how its infrastructure was allegedly used by others — and within
+a ["Specially Designated Global Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/)
+entity over how its infrastructure was allegedly used by others — and within
 days its primary domain and mail server, both concentrated in one operator, went dark for its entire user base.[^9] Its
 underlying software was already open source; what wasn't dispersed was the service itself. A multi-Satellite structure
 running the same shared code across independently governed, independently banked entities means one Satellite's takedown
@@ -782,6 +783,11 @@ that surplus into better machinery, chasing exactly the kind of edge
 described in the previous  [section](#exchange-value-and-mechanization).
 
 #### Class struggle and contradictions
+
+<img src="images/scot-tissue-bolsheviks.jpg" alt="1930s Scot Tissue Towels advertisement reading 'Is your washroom breeding Bolsheviks?'" align="left" width="200">
+
+<sub>Scot Tissue Towels advertisement, "Is your washroom breeding
+Bolsheviks?" (1930s). Public domain.</sub>
 
 Whoever owns the machinery that *surplus value* gets invested in also holds most
 of the power to decide how the production process is organized and how
