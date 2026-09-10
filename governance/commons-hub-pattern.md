@@ -38,7 +38,7 @@ open source software around nonprofit and for-profit satellites*
     - [The tendency of the rate of profit to fall](#the-tendency-of-the-rate-of-profit-to-fall)
       - [In accounting terms](#in-accounting-terms)
       - [Quantifying the dissolution driver](#quantifying-the-dissolution-driver)
-  - [A.3 Founder labor and the entrepreneurial reward](#a3-founder-labor-and-the-entrepreneurial-reward)
+  - [A.3 Founder labor and fair reward](#a3-founder-labor-and-fair-reward)
   - [A.4 Commons-based peer production: Benkler's answer](#a4-commons-based-peer-production-benklers-answer)
   - [A.5 Income vs. retained earnings: a quick refresher](#a5-income-vs-retained-earnings-a-quick-refresher)
   - [A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem)
@@ -378,7 +378,7 @@ appreciation accrues to those who stay on to keep building the
 company -- rather than to an uninvolved third party who inherits or
 buys the founder's stake. (Note: our perspective on what constitutes justly rewarded 
 founder labor diverges from Marx, and is more aligned with Schumpeter as discussed
-in [Appendix A.3](#a3-founder-labor-and-the-entrepreneurial-reward).)
+in [Appendix A.3](#a3-founder-labor-and-fair-reward).)
 
 
 #### When ESOPs make sense
@@ -1003,23 +1003,23 @@ that visibly isn't the one still producing it.
 
 
 
-### A.3 Founder labor and the entrepreneurial reward
+### A.3 Founder labor and fair reward
 
-Founding stewards drawn to this model are presumably already
-mission-motivated, and presumably already believe labor deserves fair
+Founding stewards drawn to our proposed model are presumably already
+'mission-motivated', and presumably already believe labor deserves a fair
 reward — that's likely part of why a broad-based-ownership structure
 appeals to them in the first place. But "labor deserves fair reward"
 just pushes the real question back one step: which labor? Marx's own
 framework turns out to be a useful place to start answering it.
 
-In *Capital* Vol. 3[^12], Marx splits what looks like "management" into
-two categories. The first is **wages of superintendence** — the actual
-work of coordinating and supervising production, which he treats as
-legitimate, compensable labor; a hired manager could earn this wage
-same as anyone else. The second is **profit of enterprise** — the
-owner's residual claim on whatever's left over, which he treats as
-unearned: a return on mere ownership, not on any labor performed. Call
-this the rent problem.
+In *Capital* Vol. 3[^12], Marx splits what looks like rewards accruing
+to management into two very different things. The first, **wages of superintendence**, is
+genuine labor — the actual work of coordinating and supervising
+production, which he treats as legitimate and compensable; a hired
+manager could earn this wage same as anyone else. The second, **profit
+of enterprise**, isn't labor at all — it's the owner's residual claim
+on whatever's left over, a return on mere ownership that he treats as
+unearned. Call this the rent problem.
 
 We land in two different places on these two categories. On profit of
 enterprise, we agree with Marx completely: rent deserves no reward,
@@ -1032,15 +1032,17 @@ necessary to production. Broad-based ownership and token-based
 delegated authority exist specifically to make that kind of oversight
 unnecessary, as contributors motivated by their own stake coordinate
 and manage work amongst themselves rather than needing someone to
-crack the whip.
+crack a whip.
 
 But Marx's two categories leave a gap: neither one has room for the
-unglamorous, one-time work of actually getting an enterprise off the
+one-time work of actually getting an enterprise off the
 ground — not just conceiving the idea, but the *team-building* work of
 getting people organized around it, and the judgment involved in
 capital allocation. Call the person doing this the *visionary
-capitalist*. That labor is neither ongoing supervision nor passive
-ownership, and we think it deserves fair compensation.
+entrepreneur*. That labor is a third category — distinct from the
+ongoing supervision we just rejected, and distinct from mere
+ownership, which still earns nothing on its own — and we think it
+deserves fair compensation.
 
 Joseph Schumpeter offers a cleaner theoretical home for this gap than
 Marx does. He drew his own line between the entrepreneur's profit — a
