@@ -111,6 +111,7 @@ with the power to change it.
 <tr><td><img src="images/enclosure.jpg" alt="1793 Enclosure Act for Shifnal" width="150"></td></tr>
 <tr><td><sub>Enclosure Act for Shifnal, 1793<br>(Shropshire Archives 539/1/5/3).<br>Public domain, via Wikimedia Commons.</sub></td></tr>
 </table>
+
 The wave of English enclosure that began around the mid-1700s[^1]
 was driven by landowners who benefited from privatizing common land, not by
 commoners demanding it; joint-stock charters emerged to mobilize capital
@@ -459,8 +460,8 @@ goal, the entity needs to already be a C-corp *before* that
 transaction. 
 
 By this point there are three distinct mechanisms in play, and it's easy to
-conflate them since they all touch "who gets what" (economic benefit or decision-making authority.)
-To clarify:
+conflate them since they all touch "who gets what" — cash, voice in
+decision making, or equity. To clarify:
 
 | Mechanism | Scope | Duration | Economic value | Who's eligible |
 |---|---|---|---|---|
