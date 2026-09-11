@@ -1199,13 +1199,11 @@ temporary payout for introducing what he called a "new combination"[^11] —
 and the rentier's return on capital merely owned. That entrepreneurial
 reward, in his account, gets competed away once the innovation is copied.
 This aligns with our belief that the exit reward should recognize the labor
-of founding (differing from Marx), and should not be a function of a
-long-lived ownership stake, ongoing capital input, or the risk of coming
-in early — Schumpeter draws that same line himself, assigning risk-bearing
-to whoever supplies the capital and reserving the entrepreneurial reward
-strictly for the innovative labor; Marx would agree from the opposite
-direction, since mere risk exposure is still just capital exposure, and
-deserves no reward either way.
+of founding (differing from Marx), including fair pay for any salary
+foregone along the way — but should not be a function of a long-lived
+ownership stake, ongoing capital input, or a risk premium for having
+come in early.
+
 
 
 None of this is as clean in practice as the table makes it look. A
