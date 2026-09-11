@@ -1149,13 +1149,14 @@ Row-by-row, here's where each one comes from:
   his profit of enterprise is *"itself rather a wage ... of
   superintendence of labor."*
 
-Coordination (#1) and surveillance (#2) split one passage: Marx pulls
-two functions out of what looks like a single "management" role, and
-the quotes above reflect that split. The first is a technical function,
-necessary in any social system, not just capitalism; Marx's own analogy
-is an orchestra needing a conductor. The second, despotic control specific to capitalism,
-has nothing to do with coordinating work and everything to do
-with extracting effort from workers who have no stake in the outcome.
+Coordination (#1) and surveillance (#2) come from one passage doing
+double duty: Marx splits what looks like a single "management" function
+into two, and the quotes above reflect that split. The first is a
+technical function, necessary in any social system, not just
+capitalism; Marx's own analogy is an orchestra needing a conductor.
+The second, despotic control specific to capitalism, has nothing to
+do with coordinating work and everything to do with extracting effort
+from workers who have no stake in the outcome.
 Marx's viewpoint (with which we concur) argues that coordination
 (#1) is clearly fair and surveillance (#2) is clearly not.
 
@@ -1166,7 +1167,7 @@ subtract what a hired, non-owner manager would actually earn doing the
 identical coordinating
 work, and what's left over isn't explained by labor at all — it's a
 return on mere ownership, dressed up rhetorically as a labor reward. He
-even has empirical proof: in co-operative factories, where management
+even had empirical proof: in co-operative factories, where management
 is genuinely divorced from ownership, the manager's wage is paid
 separately and explicitly, and the mystified category disappears. We
 agree with Marx completely here too: rent deserves no reward, full
@@ -1194,10 +1195,10 @@ mere ownership (#4) We think it deserves fair compensation.
 
 Joseph Schumpeter offers a cleaner theoretical home for that one gap
 than Marx does. He drew his own line between the entrepreneur's
-profit — a temporary reward for introducing a genuine innovation, a
-"new combination" — and the rentier's return on capital merely owned;
-the entrepreneurial reward, in his account, gets competed away once
-the innovation is copied.[^11] That's closer to what we mean: the
+reward — a temporary payout for introducing what he called a "new
+combination"[^11] — and the rentier's return on capital merely owned;
+that entrepreneurial reward, in his account, gets competed away once
+the innovation is copied. That's closer to what we mean: the
 reward attaches to the act of founding, not to a permanent ownership
 stake that outlives it.
 
