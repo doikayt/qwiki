@@ -46,7 +46,7 @@ open source software (OSS) around nonprofit and for-profit satellites*
     - [Class struggle and contradictions](#class-struggle-and-contradictions)
     - [The tendency of the rate of profit to fall](#the-tendency-of-the-rate-of-profit-to-fall)
       - [In accounting terms](#in-accounting-terms)
-      - [Quantifying the drivers of dissolutionment and dissolution](#quantifying-the-drivers-of-dissolutionment-and-dissolution)
+      - [Quantifying the drivers of disillusionment and dissolution](#quantifying-the-drivers-of-disillusionment-and-dissolution)
   - [A.3 Founder labor and fair reward](#a3-founder-labor-and-fair-reward)
   - [A.5 Income vs. retained earnings: a quick refresher](#a5-income-vs-retained-earnings-a-quick-refresher)
   - [A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem)
@@ -397,7 +397,9 @@ founder labor on exit is more aligned with Schumpeter as discussed
 in [Appendix A.3](#a3-founder-labor-and-fair-reward).)
 
 The buyout, the ongoing vesting cycle, and an employee's eventual exit
-are three separate flows of cash and shares. Here's how they connect:
+are three separate flows of cash and shares — the last of these is what
+creates the [repurchase obligation](#when-esops-make-sense) discussed
+below. Here's how they connect:
 
 ```mermaid
 %%{init: {"themeVariables": {"fontSize": "10px"}}}%%
@@ -417,7 +419,7 @@ flowchart TD
     Trust -- "2 shares vest as loan is repaid" --> Employees
     Employees -- "3 leaves / retires" --> Departing
     Departing -- "3 vested shares" --> Company
-    Company -- "3 cash at fair market value" --> Departing
+    Company -- "3 repurchase obligation: cash at FMV" --> Departing
 ```
 
 #### When ESOPs make sense
@@ -1082,7 +1084,7 @@ dollar of revenue — are well known to post structurally lower ROIC
 than asset-light businesses, part of why investors like Warren Buffett
 have long preferred the latter. 
 
-##### Quantifying the drivers of dissolutionment and dissolution
+##### Quantifying the drivers of disillusionment and dissolution
 
 Getting back to our graph in the subsection above, note that its asymptote 
 is exactly where Marx's later writing on automation
