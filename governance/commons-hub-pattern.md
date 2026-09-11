@@ -417,7 +417,7 @@ flowchart TD
     Trust -- "2 loan repayment" --> Lender
     Trust -- "2 shares allocated as loan is repaid" --> Employees
     Employees -- "2 vests over time" --> Employees
-    Employees -- "3 leaves / retires" --> Departing
+    Employees -- "3 exits" --> Departing
     Departing -- "3 vested shares (sellback)" --> Company
     Company -- "3 repurchase obligation: cash at FMV" --> Departing
     linkStyle 0,1,2 stroke:#d62728,color:#d62728
@@ -436,7 +436,7 @@ Setting up an ESOP only makes sense if:
    independent appraisal (no public market for the stock); with negligible
    or negative enterprise value, there's nothing meaningful to allocate —
    just administrative cost for its own sake.
-2. **<a id="repurchase-obligation"></a>There's stable cash flow to fund the repurchase obligation.** Every
+2. **<a id="repurchase-obligation"></a>There's stable cash flow to fund the <u>repurchase obligation</u>.** Every
    vested share must eventually be bought back in cash when a participant
    leaves. A program-to-program or grant-to-grant cash position can't
    safely carry that liability; it takes predictable operating cash
@@ -468,8 +468,8 @@ details:
     earned; if that same money is ever paid out later as a dividend,
     shareholders pay tax on it a second time — the classic "double
     taxation" of a C-corp.
-  - The relevant ESOP benefit: a founder selling stock to the ESOP can
-    defer capital-gains tax via the
+  - **The relevant advantage — tax deferral at a founder's exit:** a
+    founder selling stock to the ESOP can defer capital-gains tax via the
     [IRC §1042](https://www.financialplanningassociation.org/learning/publications/journal/AUG24-using-irc-section-1042-retirement-and-exit-planning-business-owners-guide-financial-OPEN)
     rollover — reinvesting the proceeds into other US securities — but
     only if the company is a C-corp at the moment of sale.
@@ -477,8 +477,11 @@ details:
   - Pass-through: no federal tax at the entity level. All income is
     taxed to shareholders in the year it's earned, whether distributed
     or not.
-  - Retained earnings here are money that's already been fully taxed
-    once and won't be taxed again on distribution.
+  - **The relevant advantage — tax-favorable retained earnings:** once
+    income is taxed to shareholders as it's earned, it's already been
+    fully taxed — nothing further happens when it's later distributed
+    from the retained-earnings pool, unlike a C-corp's second tax on
+    dividends.
   - Because an ESOP trust is itself tax-exempt, whatever share of the
     company an ESOP owns generates income tax-free at the corporate
     level — a 100%-ESOP-owned S-corp can end up owing no federal
@@ -487,7 +490,7 @@ details:
     insider concentration.[^15]
   - Doesn't get §1042: that deferral is C-corp only.
 
-The S-corp/C-corp election is mutually exclusive, and the two reward
+The C-corp/S-corp election is mutually exclusive, and the two reward
 different goals (a founder's exit versus the ongoing company's
 retained earnings) — which one fits depends on facts specific to the
 [cap table](https://en.wikipedia.org/wiki/Capitalization_table) (the
@@ -506,7 +509,7 @@ decision making, or equity. To clarify:
 | [Token-based delegated authority](#token-based-delegated-authority) (see the *Contributor Guide*) | Ongoing | Decays with inactivity | None — pure voice | Registered committers who've earned trust |
 | ESOP | Ongoing | Vests over years | Real equity | Legally must be broad-based — ~all full-time employees |
 
-**The resulting ladder:**
+**The rollout sequence:**
 
 - **Pre-ESOP:** DAO for project-based cash payouts, token-based delegated
   authority for day-to-day voice. No ESOP — no enterprise value or stable
@@ -1070,12 +1073,12 @@ others:
 | Marx's term | Symbol | Closest modern analog |
 |---|---|---|
 | Constant capital | `c` | Fixed assets (PP&E) + materials/inventory |
-| Variable capital | `v` | Direct labor cost / payroll |
+| Variable capital | `v` | Direct labor cost, or payroll |
 | Surplus value | `s` | Operating profit |
 | Total capital advanced | `C = c+v` | Invested capital / capital employed |
 | Rate of exploitation | `s' = s/v` | No standard name — closest to a labor-cost markup |
 | Organic composition of capital | `q = c/v` | Capital intensity ratio |
-| Rate of profit | `p' = s/(c+v)` | ROIC / ROCE (return on invested/employed capital) |
+| Rate of profit | `p' = s/(c+v)` | ROIC or ROCE (return on invested or employed capital) |
 
 `p'` and ROIC are the tightest match — both ask the same question,
 profit per dollar of *total* capital committed, rather than margin on
@@ -1103,8 +1106,10 @@ profit trend toward zero; it stops being
 the basis of *value* at all, since *value* in this whole framework has
 depended on $v$ from the start.
 
-None of the above reaches workers as a number, though. What actually lands
-on them is the effect of Marx's own countervailing forces working in reverse:
+None of the above reaches workers as a number, though. What they
+experience is the flip side of Marx's own countervailing forces — the
+same pressures, seen from the worker's side of the ledger instead of
+the firm's:
 tighter quotas and heavier monitoring as employers push $s'$ up to
 offset a rising $q$; stagnant or falling wages as employers cut $v$
 directly; specific jobs disappearing as machinery takes over the work
