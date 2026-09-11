@@ -416,11 +416,14 @@ flowchart TD
     Trust -- "1 purchase price" --> Founder
     Company -- "2 tax-deductible contributions, annually" --> Trust
     Trust -- "2 loan repayment" --> Lender
-    Trust -- "2 shares vest as loan is repaid" --> Employees
+    Trust -- "2 shares allocated as loan is repaid" --> Employees
     Employees -- "3 leaves / retires" --> Departing
     Departing -- "3 vested shares" --> Company
     Company -- "3 repurchase obligation: cash at FMV" --> Departing
 ```
+
+Allocation tracks loan repayment; whether an employee can keep those
+allocated shares if they leave follows a separate vesting schedule.[^20]
 
 #### When ESOPs make sense
 
@@ -1378,4 +1381,11 @@ when it later leaves the retained-earnings pool as a distribution.
     gblock.app](https://www.gblock.app/articles/autistici-inventati-shutdown-16000-activist-emails-2026)
     — scale (16,000 email accounts, 5,500 mailing lists, ~10,000 blogs, 1,500 websites); A/I's
     mail servers themselves, hosted in Europe, were never touched.
+
+[^20]: Allocation and vesting are different clocks. Shares move out of the loan's
+    collateral (suspense) account into an employee's individual account as the acquisition
+    debt gets repaid — that's allocation, and it's mechanically tied to the loan. Whether the
+    employee has a non-forfeitable right to *keep* shares already allocated to them is governed
+    separately, by a service-based vesting schedule (e.g., graded vesting over several years);
+    an employee can hold allocated shares that would still be forfeited if they left early.
 
