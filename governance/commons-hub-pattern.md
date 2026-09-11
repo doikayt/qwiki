@@ -416,7 +416,7 @@ flowchart TD
     Company -- "2 tax-deductible contributions, annually" --> Trust
     Trust -- "2 loan repayment" --> Lender
     Trust -- "2 shares allocated as loan is repaid" --> Employees
-    Employees -- "2 vests over years of service" --> Employees
+    Employees -- "2 vests over time" --> Employees
     Employees -- "3 leaves / retires" --> Departing
     Departing -- "3 vested shares (sellback)" --> Company
     Company -- "3 repurchase obligation: cash at FMV" --> Departing
