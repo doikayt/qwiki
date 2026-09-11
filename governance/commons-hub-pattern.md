@@ -501,7 +501,7 @@ transaction.
 
 By this point there are three distinct mechanisms in play, and it's easy to
 conflate them since they all touch "who gets what" — cash, voice in
-decision making, or equity. To clarify:
+decision-making, or equity. To clarify:
 
 | Mechanism | Scope | Duration | Economic value | Who's eligible |
 |---|---|---|---|---|
@@ -509,7 +509,7 @@ decision making, or equity. To clarify:
 | [Token-based delegated authority](#token-based-delegated-authority) (see the *Contributor Guide*) | Ongoing | Decays with inactivity | None — pure voice | Registered committers who've earned trust |
 | ESOP | Ongoing | Vests over years | Real equity | Legally must be broad-based — ~all full-time employees |
 
-**The rollout sequence:**
+**Rollout sequence:**
 
 - **Pre-ESOP:** DAO for project-based cash payouts, token-based delegated
   authority for day-to-day voice. No ESOP — no enterprise value or stable
@@ -590,13 +590,15 @@ Small nonprofits and shoestring-budget grassroots organizations pose a different
 entirely: their needs are real, often recurring,
 and easy to identify — but most for-profit software companies 
 leave them alone since they can't pay enough to justify the ordinary 
-customer-acquisition cost. This works to our advantage.
-
+customer-acquisition cost. This works to our advantage. 
 While for-profit start-ups normally have to devote significant sales and
 marketing budget to acquire their users, a collective that 
 adopts our model has a much easier job, precisely because their
-targeted user base will be underserved. Once a given problem has
-been solved for an initial cash-poor and underserved market, 
+targeted user base will be underserved. An underserved market with no real
+alternative to doing things by hand is also one whose attention is easier to
+capture.
+
+Once a given problem has been solved for an initial cash-poor and underserved market, 
 it's common to find that better-funded organizations
 have structurally similar versions of the same problem. Because the software that solves 
 those problems is now proven, free and open, a collective can move into that adjacent,
@@ -725,6 +727,11 @@ relationship at all. It lost to the factory for three specific reasons:
   often around farm work.
 - **The new machinery physically required centralization.** A water wheel
   could power a mill, not a cottage.
+
+
+[ WARNING: AI slop ahead - remainder of 
+this section is mostly a dump of research, and needs major editing to not
+induce reader headache]
 
 Direct supervision solved the first two problems outright; centralization was
 the only way to use the new capital equipment at all.
