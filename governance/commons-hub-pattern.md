@@ -1193,14 +1193,20 @@ This is the  labor of the *visionary entrepreneur*, and we see it as
 distinct from ongoing coordination (#1), despotic control (#2), and
 mere ownership (#4) We think it deserves fair compensation. 
 
-Joseph Schumpeter offers a cleaner theoretical home for that one gap
-than Marx does. He drew his own line between the entrepreneur's
-reward — a temporary payout for introducing what he called a "new
-combination"[^11] — and the rentier's return on capital merely owned;
-that entrepreneurial reward, in his account, gets competed away once
-the innovation is copied. That's closer to what we mean: the
-reward attaches to the act of founding, not to a permanent ownership
-stake that outlives it.
+Joseph Schumpeter offers a cleaner theoretical home for that one gap than
+Marx does. He drew his own line between the entrepreneur's reward — a
+temporary payout for introducing what he called a "new combination"[^11] —
+and the rentier's return on capital merely owned. That entrepreneurial
+reward, in his account, gets competed away once the innovation is copied.
+This aligns with our belief that the exit reward should recognize the labor
+of founding (differing from Marx), and should not be a function of a
+long-lived ownership stake, ongoing capital input, or the risk of coming
+in early — Schumpeter draws that same line himself, assigning risk-bearing
+to whoever supplies the capital and reserving the entrepreneurial reward
+strictly for the innovative labor; Marx would agree from the opposite
+direction, since mere risk exposure is still just capital exposure, and
+deserves no reward either way.
+
 
 None of this is as clean in practice as the table makes it look. A
 founder's actual payout — the ESOP exit, cashing out "the enterprise
