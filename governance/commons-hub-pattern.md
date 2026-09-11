@@ -64,7 +64,7 @@ and earned revenue get distributed among contributors through a narrowly-scoped
 Decentralized Autonomous Organization) — we look at some of the historical and
 economic factors which make the emergence of a new model inevitable. We note how
 the standard corporate form arose as a specific historical answer to the
-questions of (a) who governs production?   and (b) who benefits from that production? We first
+questions of (a) who governs production, and (b) who benefits from that production? We first
 analyze these questions through the lens of neoclassical economists — in
 particular how [Coase's 1937 transaction-cost
 account](https://en.wikipedia.org/wiki/The_Nature_of_the_Firm) explains why
@@ -89,7 +89,7 @@ In terms of our two opening questions our model's answers are:
 - Who governs: the contributors to the commons themselves -- through
 [token-based delegated authority](#token-based-delegated-authority)
 that vests with earned trust and decays on inactivity (rather than
-accumulating into permanent control.)   
+accumulating into permanent control).
 
 - Who benefits: the people who did the work on a given funded
 program, by their own [equally-weighted vote through a
@@ -242,13 +242,13 @@ Commons"](https://en.wikipedia.org/wiki/Tragedy_of_the_commons), which argued
 that unowned shared resources are inherently doomed to overexploitation and
 mismanagement. Simple in its appeal, this idea has become a go-to rationalization
 for private ownership of public goods. Market leading software vendors 
-(MongoDB, Elastic, HashiCorp et.al.) have all recently 
-decide to relicense away from open source after cloud providers resold
+(MongoDB, Elastic, HashiCorp et al.) have all recently 
+decided to relicense away from open source after cloud providers resold
 their software without contributing back — HashiCorp's leadership rationalized this move
 in almost exactly Hardin's terms: "there's a tragedy of the commons
 here."[^4] 
 
-So of what value could our model be, if successful established 
+So of what value could our model be, if successful, established 
 software firms are moving 
 in the exact opposite direction?  Note that MongoDB, Elastic, HashiCorp, and Redis 
 are for-profit companies answerable
@@ -282,7 +282,7 @@ rather than to land, water, or fisheries.
 
 ### Board
 
-The 501(c)(3)'s **Board** of directors set the mission, priorities,  and policy 
+The 501(c)(3)'s **Board** of directors sets the mission, priorities, and policy 
 for each Satellite through ordinary nonprofit governance. 
 There is no [DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization)
 involved in setting priorities or policy. The board decides what to build,
@@ -392,13 +392,13 @@ employees, it doubles as motivation and retention: all *future*
 appreciation accrues to those who stay on to keep building the
 company -- rather than to an uninvolved third party who inherits or
 buys the founder's stake. (Note: although this document often 
-leans on Marxist economic analysis our perspective on what constitutes _justly rewarded_
+leans on Marxist economic analysis, our perspective on what constitutes _justly rewarded_
 founder labor on exit is more aligned with Schumpeter as discussed
 in [Appendix A.3](#a3-founder-labor-and-fair-reward).)
 
 The buyout, the ongoing vesting cycle, and an employee's eventual exit
 are three separate flows of cash and shares — the last of these is what
-creates the [repurchase obligation](#when-esops-make-sense) discussed
+creates the [repurchase obligation](#repurchase-obligation) discussed
 below. Here's how they connect:
 
 ```mermaid
@@ -433,7 +433,7 @@ Setting up an ESOP only makes sense if:
    independent appraisal (no public market for the stock); with negligible
    or negative enterprise value, there's nothing meaningful to allocate —
    just administrative cost for its own sake.
-2. **There's stable cash flow to fund the repurchase obligation.** Every
+2. **<a id="repurchase-obligation"></a>There's stable cash flow to fund the repurchase obligation.** Every
    vested share must eventually be bought back in cash when a participant
    leaves. A program-to-program or grant-to-grant cash position can't
    safely carry that liability; it takes predictable operating cash
@@ -510,7 +510,7 @@ decision making, or equity. To clarify:
   cash flow yet to justify one, and no broad-based W-2 team to make
   "broad-based" mean anything.
 - **Once the subsidiary has sustained commercial revenue and real
-  employees** : ESOP feasibility
+  employees**: ESOP feasibility
   becomes worth a real evaluation, running alongside — not replacing — the
   DAO and token-based delegated authority, each still doing its own job.
 - **If a founder-exit rollover is ever a goal:** C-corp status needs to
@@ -570,7 +570,7 @@ capable, credentialed, and increasingly frustrated engineers
 is finding the traditional elite-track path
 (a well-paid job at a major tech employer) narrowing or closing.
 This population of potential colleagues constitutes 
-a committed mobilizable base, naturally aligned with the mission of any non-profit 
+a committed mobilizable base, naturally aligned with the mission of any nonprofit 
 that challenges the system that is leaving them behind.
 
 
@@ -595,7 +595,7 @@ have structurally similar versions of the same problem. Because the software tha
 those problems is now proven, free and open, a collective can move into that adjacent,
 better-funded market at a cost structure a for-profit incumbent can't match.
 
-In summary, the operational advantages that accrue from these two structural properaties are:
+In summary, the operational advantages that accrue from these two structural properties are:
   - lower cost of customer acquisition 
   - lower product marketing spend to figure out what to build
   - lower cost of recruiting and easier staff retention due to alignment around principles
@@ -778,7 +778,7 @@ provide sufficient background for readers to understand his "Fragment on Machine
 
 #### Use-value
 
-All human beings -- from stone age hunter-gatherers to present day 
+All human beings -- from Stone Age hunter-gatherers to present-day 
 warehouse workers -- have an intrinsic understanding of what is useful and what isn't. 
 To the former, meat and berries had immediate utility — eat them, and nothing else was required. 
 On the other hand, something like a raw chunk
@@ -788,7 +788,7 @@ useful only in the sense that it was good for *becoming something
 else* — it couldn't yet cut anything the way a knapped
 blade could. That gap between raw material and finished tool was something
 the hunter could already see, before ever knapping the stone.
-This intrinsic utility of a thing -- a ready to eat berry, or a workable piece of rock -- 
+This intrinsic utility of a thing -- a ready-to-eat berry, or a workable piece of rock -- 
 is what Marx calls **use-value**,
 and it is inherent in any 'useful thing' -- 
 independent of anyone exchanging that thing for some other thing.
@@ -899,8 +899,8 @@ capital*: [`q`](#the-tendency-of-the-rate-of-profit-to-fall)).
 #### Surplus value
 
 There's a more basic source of profit, too — one that doesn't depend on
-any competitive edge at all. A worker is paid a wage — this is *variable
-capital*, [`v`](#the-tendency-of-the-rate-of-profit-to-fall) — that covers
+any competitive edge at all. A worker is paid a wage — this is **variable
+capital**, [`v`](#the-tendency-of-the-rate-of-profit-to-fall) — that covers
 roughly what it costs to maintain their lifestyle from one day to
 the next — everything from food to rent, to entertainment, to
 whatever portion of that day's 
@@ -929,13 +929,13 @@ structural and not something that one good-faith negotiation
 resolves for good. This is because the underlying division of power and divergence of 
 interests that produce this conflict lingers.
 
-Marx term for this conflict  is **class struggle**, and it's one instance
+Marx's term for this conflict is **class struggle**, and it's one instance
 of a broader pattern he calls *contradictions* — real, structural tensions
 between two parts of an economic system that pull against each other and
 sharpen over time until something gives. The one that matters most here:
 production keeps getting broken down into narrower, more specialized
 steps, and the skill and judgment once needed to perform each step
-keeps getting captured and re-embodied in the machinery itself, rather
+keep getting captured and re-embodied in the machinery itself, rather
 than staying in the worker's hands. The more of that accumulated
 knowledge ends up objectified in machines rather than workers, the
 harder it is to say the resulting output is solely the product of
@@ -954,7 +954,7 @@ pay, then using generative AI to synthesize new performances from that
 scan indefinitely, with no further compensation owed — union
 president Fran Drescher called it "an existential threat to creative
 professions." It's a present-day instance of the same pattern: a
-worker's skill and likeness is captured once, re-embodied in a reusable
+worker's skill and likeness are captured once, re-embodied in a reusable
 AI-driven asset, and then split off from any future ability of the worker 
 to claim any portion of the *value* that asset goes on to produce.
 
