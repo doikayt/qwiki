@@ -417,7 +417,7 @@ flowchart TD
     Trust -- "2 loan repayment" --> Lender
     Trust -- "2 shares allocated as loan is repaid" --> Employees
     Employees -- "2 vests over time" --> Employees
-    Employees -- "3 exits" --> Departing
+    Employees -- "3 shares" --> Departing
     Departing -- "3 vested shares (sellback)" --> Company
     Company -- "3 repurchase obligation: cash at FMV" --> Departing
     linkStyle 0,1,2 stroke:#d62728,color:#d62728
