@@ -714,7 +714,14 @@ running while the targeted one dealt with the consequences — which is the whol
 
 Building on the Introduction's transaction-cost account: the clearest
 illustration is textile production just before the modern
-corporation took shape. Before Richard Arkwright's water frame (1769), English
+corporation took shape. 
+
+<table align="right" width="220">
+<tr><td><img src="images/wheel-water.jpeg" width="220" alt="Spinning wheel alongside Arkwright's water frame"></td></tr>
+<tr><td><sub>Spinning wheel alongside Arkwright's water frame / Source: Wikipedia</sub></td></tr>
+</table>
+
+Before Richard Arkwright's water frame (1769), English
 cloth was made under the *putting-out system* — pure market coordination: a
 merchant distributed raw wool or cotton to independent spinners and weavers
 working in their own homes, paid piece-rate for finished cloth, with no employment
@@ -736,12 +743,6 @@ induce reader headache]
 Direct supervision solved the first two problems outright; centralization was
 the only way to use the new capital equipment at all.
 
-<figure class="float">
-<img src="images/wheel-water.jpeg" width="220"
-     alt="Spinning wheel alongside Arkwright's water frame">
-<figcaption>Spinning wheel alongside Arkwright's water frame / Source:
-Wikipedia</figcaption>
-</figure>
 
 Today, AI and the broader digital-infrastructure stack subvert several of
 these same advantages at once — and the honest version of this argument has
