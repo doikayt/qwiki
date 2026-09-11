@@ -716,11 +716,12 @@ Building on the Introduction's transaction-cost account: the clearest
 illustration is textile production just before the modern
 corporation took shape. 
 
-<table align="right" width="220">
-<tr><td><img src="images/wheel-water.jpeg" width="220" alt="Spinning wheel alongside Arkwright's water frame"></td></tr>
-<tr><td><sub>Spinning wheel alongside Arkwright's water frame / Source: Wikipedia</sub></td></tr>
-</table>
-
+<figure class="float">
+<img src="images/wheel-water.jpeg" width="220"
+     alt="Spinning wheel alongside Arkwright's water frame">
+<figcaption>Spinning wheel alongside Arkwright's water frame / Source:
+Wikipedia</figcaption>
+</figure>
 Before Richard Arkwright's water frame (1769), English
 cloth was made under the *putting-out system* — pure market coordination: a
 merchant distributed raw wool or cotton to independent spinners and weavers
@@ -745,9 +746,7 @@ the only way to use the new capital equipment at all.
 
 
 Today, AI and the broader digital-infrastructure stack subvert several of
-these same advantages at once — and the honest version of this argument has
-to show the mapping directly rather than just assert "technology makes
-things cheap":
+these same advantages at once:
 
 - **Observability and scheduling — the direct flip of the first two 1769
   reasons.** AI-assisted code review, automated testing, and the
