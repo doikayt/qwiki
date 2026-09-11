@@ -1216,16 +1216,15 @@ own stake coordinate and manage work amongst themselves rather than
 needing someone to crack a whip.
 
 Founding labor (#3) is the only instance  where we actually part ways with Marx.
-Neither of his categories has room for the one-time
-work of actually getting an enterprise off the ground: 
-the team-building work of getting people
-organized around it, analyzing competition and regulatory factors, and
-the judgment involved in capital allocation. 
+Neither of his categories allows reward for the initial one-time
+effort involved in actually getting an enterprise off the ground: 
+team-building, analyzing competition and regulatory factors, 
+analysis of  capital allocation alternatives, etc. 
 This is the  labor of the *visionary entrepreneur*, and we see it as 
 distinct from ongoing coordination (#1), despotic control (#2), and
 mere ownership (#4) We think it deserves fair compensation. 
 
-Joseph Schumpeter offers a cleaner theoretical home for that one gap than
+Joseph Schumpeter offers a cleaner theoretical home for this one gap than
 Marx does. He drew his own line between the entrepreneur's reward — a
 temporary payout for introducing what he called a "new combination"[^11] —
 and the rentier's return on capital merely owned. That entrepreneurial
@@ -1239,7 +1238,7 @@ come in early.
 None of this is as clean in practice as the table makes it look. A
 founder's actual payout arrives as one blended number, not four
 separately labeled deposits, and rent (#4) can ride along in it two
-ways: seed capital of questionable origin cashing out indistinguishable
+ways: return on seed capital of questionable origin cashing out indistinguishably
 from the founding-labor reward (#3), or — even with zero capital
 contributed — equity that keeps appreciating on *other people's* later
 work for as long as the founder holds it. The longer that holding
