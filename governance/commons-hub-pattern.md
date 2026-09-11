@@ -716,12 +716,11 @@ Building on the Introduction's transaction-cost account: the clearest
 illustration is textile production just before the modern
 corporation took shape. 
 
-<figure class="float">
-<img src="images/wheel-water.jpeg" width="220"
-     alt="Spinning wheel alongside Arkwright's water frame">
-<figcaption>Spinning wheel alongside Arkwright's water frame / Source:
-Wikipedia</figcaption>
-</figure>
+<table align="right" width="220">
+<tr><td><img src="images/wheel-water.jpeg" width="220" alt="Spinning wheel alongside Arkwright's water frame"></td></tr>
+<tr><td><sub>Spinning wheel alongside Arkwright's water frame / Source: Wikipedia</sub></td></tr>
+</table>
+
 Before Richard Arkwright's water frame (1769), English
 cloth was made under the *putting-out system* — pure market coordination: a
 merchant distributed raw wool or cotton to independent spinners and weavers
