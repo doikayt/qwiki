@@ -725,7 +725,9 @@ Before Richard Arkwright's water frame (1769), English
 cloth was made under the *putting-out system* — pure market coordination: a
 merchant distributed raw wool or cotton to independent spinners and weavers
 working in their own homes, paid piece-rate for finished cloth, with no employment
-relationship at all. It lost to the factory for three specific reasons:
+relationship at all. It lost to the factory for three specific reasons —
+the first two mitigated outright by direct supervision, the third only by
+centralizing the machinery itself:
 
 - **Production was unobservable.** A merchant only saw finished cloth, never
   the process, which produced chronic embezzlement of material and
@@ -736,49 +738,64 @@ relationship at all. It lost to the factory for three specific reasons:
   could power a mill, not a cottage.
 
 
-[ WARNING: AI slop ahead - remainder of 
-this section is mostly a dump of research, and needs major editing to not
-induce reader headache]
+Two successive waves of software-engineering advances have rendered
+each of those constraints less binding: tooling that predates any of
+the recent LLM/AI advancements, and — layered on top of that — AI
+specifically. The tooling did most of the work; AI layers a bit more
+on top.
 
-Direct supervision solved the first two problems outright; centralization was
-the only way to use the new capital equipment at all.
+#### The tooling wave
 
+- **Production is now observable.** Version control and CI/CD make the
+  process itself visible, not just the finished output; quality
+  instrumentation — [code
+  coverage](https://en.wikipedia.org/wiki/Code_coverage) and
+  [object-oriented
+  metrics](https://www.geeksforgeeks.org/software-engineering/object-oriented-metrices-in-software-engineering/)
+  like coupling and [cyclomatic
+  complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) —
+  measures its *quality*, not just its existence.
+- **Scheduling is now enforceable.** CI pipelines, issue trackers, and
+  automated status checks impose real deadlines and coordination on
+  remote contributors without a shared roof or a fixed clock-in time.
+- **Capital no longer requires centralization.** Cloud infrastructure,
+  rentable by the hour since well before AI made it fashionable, lets a
+  remote contributor reach for the same equipment a centralized firm
+  would otherwise have to own outright.
 
-Today, AI and the broader digital-infrastructure stack subvert several of
-these same advantages at once:
+#### The AI wave
 
-- **Observability and scheduling — the direct flip of the first two 1769
-  reasons.** AI-assisted code review, automated testing, and the
-  trust/vetting mechanisms described in the [Contributor
-  Guide](contributor-guide.md), paired with tooling that predates this
-  document (version control, CI/CD, issue trackers), reduce the cost of
-  decomposing work, assigning it, monitoring it, integrating outputs, and
-  resolving exceptions — a real version of what a factory foreman and a
-  fixed schedule did, without requiring everyone under one roof.
-- **Capital requirements — the direct flip of the third 1769 reason.** In
-  1769 the machinery forced centralization; a spinner could never own a
-  water wheel. Today the equivalent capital — compute, AI models, and the
-  cloud infrastructure underneath them — is rentable by the hour. A
-  dispersed contributor can access industrial-grade tooling *without* being
-  inside a hierarchical firm that owns the equipment.
-- **Knowledge and information concentration — a fourth advantage the 1769
-  case didn't need to name, because it barely existed yet.** Corporations
-  have historically concentrated expertise, institutional knowledge, and
-  decision-making. AI increasingly makes that expertise portable and
-  accessible to distributed producers, eroding an advantage the
-  textile-era analysis never had to account for.
-- **Trust, quality control, and reputation — the major countervailing
-  force, and where the parallel breaks down.** The 1770 embezzlement
-  problem was about *material*; the equivalent risk now is trust in
-  *contribution provenance* — can this code, and whoever submitted it, be
-  trusted. Cheap AI-generated contribution volume doesn't shrink that
-  problem, it grows it — this is the [XZ Utils
-  backdoor](https://www.akamai.com/blog/security-research/critical-linux-backdoor-xz-utils-discovered-what-to-know)
-  risk, restated as economic history rather than a security anecdote.
-  Distributed production doesn't eliminate the need for organization; it
-  changes what organization has to do — and **technology-driven abundance
-  of code doesn't reduce the need for the trust layer described in the
-  Contributor Guide, it increases it.**
+AI layers on top of two of those three gains. AI-assisted code review
+catches what a human reviewer or a static linter would miss, pushing
+observability past what version control and quality instrumentation
+manage alone. And AI models are themselves a new form of rentable
+capital — rentable by the hour just like the cloud infrastructure
+underneath them — so a remote contributor can reach for genuinely
+industrial-grade AI tooling without being inside a hierarchical firm
+that owns the equipment. Scheduling is the one place AI's effect isn't
+just an incremental improvement on the tooling wave: as more of the
+actual coding work shifts from remote human contributors to autonomous
+AI agents, the need to enforce a human schedule at all starts to
+shrink. The endpoint is something like a lights-out software factory —
+coordinating machine agents the way [lights-out
+manufacturing](https://en.wikipedia.org/wiki/Lights_out_(manufacturing))
+coordinates robots, with no human clock-in schedule left to enforce.
+
+One more factor matters here, though it doesn't map onto any of the
+three constraints above — the textile-era case never had to contend
+with it.
+
+**Knowledge and information concentration.** Corporations have
+historically concentrated expertise, institutional knowledge, and
+decision-making. AI increasingly makes that expertise portable to
+distributed producers: [retrieval-augmented
+generation](https://en.wikipedia.org/wiki/Retrieval-augmented_generation)
+lets a model ground its answers in an organization's own
+documentation and history rather than whatever it memorized during
+training, and the same models can read, summarize, and explain an
+unfamiliar codebase well enough that a remote contributor no longer
+needs a tenured engineer sitting beside them to get oriented — an
+advantage the textile-era analysis never had to account for.
 
 
 
