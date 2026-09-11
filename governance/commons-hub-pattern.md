@@ -548,12 +548,13 @@ computational resources,  and political influence that enables
 AI research to proceed unregulated also determines who captures the 
 day-to-day gains from that same technology.
 
-None of that is inevitable though — and this is where we close on a hopeful
-note. First we look at two structural properties of our model 
-that provide operational business advantages. Then finally, we address the 
-likely consequence of any specific 501c3 realizing a mission 
-that is overly threatening to entrenched captial:  targeting and surpression.
-We discuss the resliance properties of our model that guard against this.
+None of that is inevitable, though, and this final section strikes a hopeful
+note. We start with two structural properties of our model that translate
+into real operational advantages. Then we look at the flip side: any
+501(c)(3) pursuing a mission genuinely threatening to entrenched capital, or
+to a repressive state actor, should expect to be targeted for suppression —
+so we walk through the resilience properties built into our model to
+withstand exactly that.
 
 
 ### The labor-market half of the advantage: elite overproduction and AI-driven displacement
