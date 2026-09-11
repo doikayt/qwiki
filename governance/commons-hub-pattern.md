@@ -400,7 +400,7 @@ The buyout, the ongoing vesting cycle, and an employee's eventual exit
 are three separate flows of cash and shares. Here's how they connect:
 
 ```mermaid
-%%{init: {"themeVariables": {"fontSize": "12px"}}}%%
+%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
 flowchart TD
     Founder([Founder])
     Lender([Bank / seller financing])
