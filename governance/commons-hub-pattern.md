@@ -797,9 +797,9 @@ Commons.</sub></td></tr>
 </table>
 
 What Marx termed **value** only enters into the picture 
-once two hypothteical hunter-gatherer bands meet and barter. Let's say one has access to a
-riverbed full of fint, but is short on meat, while the other has
-half a mastadon, but is short on tools.
+once two hypothetical hunter-gatherer bands meet and barter. Let's say one has access to a
+riverbed full of flint, but is short on meat, while the other has
+half a mastodon, but is short on tools.
 They  start trading: flint tools for meat.
 To settle a transaction, both sides need to take into account factors other than
 "how maggot-free is this meat" versus "how sharp is
@@ -820,7 +820,8 @@ industriousness manages the same blade in an hour, the slow knapper's
 blade isn't worth more for the extra hours spent. *Value* inheres in the
 *average* time  -- across the whole clan — that it takes to produce
 something, not whatever time any individual happens to put in. Any extra
-hours are simply wasted and no extra *value* created.
+hours are simply wasted and no extra *value* created. 
+
 
 #### From flint tools to factories
 
@@ -868,7 +869,7 @@ built using other machines and tools, whose value depreciated into it
 the same way it now depreciates into what it produces. Marx has a name
 for this — **dead labor**, congealed from earlier rounds of
 production, as opposed to **living labor** — the engineer's, actually
-being performed right now. Trace that back far enough and it looks
+being performed right now. Trace that back far enough, and it looks
 like a dependency graph fanning out at every step:
 this machine's value depends on the machines that built it, which
 depend on the machines that built *them*, recursively, until you
@@ -1127,7 +1128,7 @@ on exit aligns with their own stated principles.
 | 3 | One-time founding labor — vision, team-building, capital-allocation judgment             | Yes | Yes |
 | 4 | Return on mere capital ownership (rent) — regardless of the capital's origin             | No | No |
 
-Row-by-row, here's where each one comes from, quoted directly:
+Row-by-row, here's where each one comes from:
 
 - **Row 1 (coordination)** — Marx, *Capital* Vol. 1, Ch. 13,
   "Co-operation"[^13]: *"all combined labour on a large scale requires,
@@ -1141,20 +1142,19 @@ Row-by-row, here's where each one comes from, quoted directly:
 - **Row 4 (rent)** — Marx, *Capital* Vol. 3, Ch. 23, "Interest and
   Profit of Enterprise"[^12], quoting the capitalist's own rationale:
   his profit of enterprise is *"itself rather a wage ... of
-  superintendence of labour."*
+  superintendence of labor."*
 
-Coordination (#1) and surveillance (#2) both come from one
-passage doing double duty: Marx splits what looks like a single
-"management" function into two, and the two quotes above reflect that
-split. The first is a technical function, necessary in any social
-system, not just capitalism; Marx's own analogy is an orchestra needing
-a conductor. The second is despotic and specific to capitalism: control
-that has nothing to do with coordinating work and everything to do
+Coordination (#1) and surveillance (#2) split one passage: Marx pulls
+two functions out of what looks like a single "management" role, and
+the quotes above reflect that split. The first is a technical function,
+necessary in any social system, not just capitalism; Marx's own analogy
+is an orchestra needing a conductor. The second, despotic control specific to capitalism,
+has nothing to do with coordinating work and everything to do
 with extracting effort from workers who have no stake in the outcome.
 Marx's viewpoint (with which we concur) argues that coordination
 (#1) is clearly fair and surveillance (#2) is clearly not.
 
-The rent (#4) quote is Marx describing how capitalist owners
+Rent (#4) references Marx's description of how capitalist owners
 justify their residual profit claim by presenting it as just a bigger
 version of coordination (#1). His point is that the claim doesn't hold up:
 subtract what a hired, non-owner manager would actually earn doing the
