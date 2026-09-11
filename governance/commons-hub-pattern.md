@@ -712,52 +712,54 @@ running while the targeted one dealt with the consequences — which is the whol
 
 ### A.1 Why firms exist: Coase, the putting-out system, and what's changing now
 
-Building on the Introduction's transaction-cost account: the clearest
-illustration is textile production just before the modern
-corporation took shape. 
-
 <table align="right" width="220">
 <tr><td><img src="images/wheel-water.jpeg" width="220" alt="Spinning wheel alongside Arkwright's water frame"></td></tr>
 <tr><td><sub>Spinning wheel alongside Arkwright's water frame / Source: Wikipedia</sub></td></tr>
 </table>
 
-Before Richard Arkwright's water frame (1769), English
-cloth was made under the *putting-out system* — pure market coordination: a
-merchant distributed raw wool or cotton to independent spinners and weavers
-working in their own homes, paid piece-rate for finished cloth, with no employment
-relationship at all. It lost to the factory for three specific reasons —
-the first two mitigated outright by direct supervision, the third only by
+Building on [Coase's transaction-cost
+account](#factors-favoring-the-emergence-of-the-corporate-model----neoclassical-view)
+above: the clearest illustration is textile production just before the
+modern corporation took shape. Before Richard Arkwright's water frame (1769), English
+cloth was made under the *putting-out system*, which was characterized by
+decentralized market coordination, and required that
+a separate bargain be struck between contracting merchants and each individual worker.
+The merchant distributed raw wool or cotton to independent spinners and weavers
+working in their own homes and paid piece-rate for finished cloth, with no employment
+relationship at all. This system lost out to the factory model for three
+specific reasons —
+the first two mitigated outright by direct supervision, and the third only by
 centralizing the machinery itself:
 
 - **Production was unobservable.** A merchant only saw finished cloth, never
   the process, which produced chronic embezzlement of material and
   inconsistent quality.
 - **Scheduling was unenforceable.** Dispersed workers set their own pace,
-  often around farm work.
+  often around farm work, and contracting merchants had little visibility into progress.
 - **The new machinery physically required centralization.** A water wheel
   could power a mill, not a cottage.
 
 
 Two successive waves of software-engineering advances have rendered
-each of those constraints less binding: tooling that predates any of
-the recent LLM/AI advancements, and — layered on top of that — AI
-specifically. The tooling did most of the work; AI layers a bit more
-on top.
+each of those constraints less binding: tooling advances achieved in the last two
+decades, and the more recent innovations in AI, especially LLM-based technologies.
 
 #### The tooling wave
 
 - **Production is now observable.** Version control and CI/CD make the
-  process itself visible, not just the finished output; quality
-  instrumentation — [code
+  process itself visible, not just the finished output. Automated test
+  suites and the reporting built on top of them go straight at the old
+  *inconsistent quality* problem, and further instrumentation — [code
   coverage](https://en.wikipedia.org/wiki/Code_coverage) and
   [object-oriented
   metrics](https://www.geeksforgeeks.org/software-engineering/object-oriented-metrices-in-software-engineering/)
   like coupling and [cyclomatic
   complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) —
-  measures its *quality*, not just its existence.
+  measures that quality rather than just the process's existence.
 - **Scheduling is now enforceable.** CI pipelines, issue trackers, and
   automated status checks impose real deadlines and coordination on
-  remote contributors without a shared roof or a fixed clock-in time.
+  remote contributors without the need to punch a clock and show up
+  in a centralized office.
 - **Capital no longer requires centralization.** Cloud infrastructure,
   rentable by the hour since well before AI made it fashionable, lets a
   remote contributor reach for the same equipment a centralized firm
@@ -781,11 +783,9 @@ coordinating machine agents the way [lights-out
 manufacturing](https://en.wikipedia.org/wiki/Lights_out_(manufacturing))
 coordinates robots, with no human clock-in schedule left to enforce.
 
-One more factor matters here, though it doesn't map onto any of the
-three constraints above — the textile-era case never had to contend
-with it.
-
-**Knowledge and information concentration.** Corporations have
+**Knowledge and information concentration** is worth naming too, even
+though it doesn't map onto any of the three 1769 constraints above —
+the textile-era case never had to contend with it. Corporations have
 historically concentrated expertise, institutional knowledge, and
 decision-making. AI increasingly makes that expertise portable to
 distributed producers: [retrieval-augmented
