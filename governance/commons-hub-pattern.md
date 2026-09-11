@@ -49,7 +49,6 @@ open source software (OSS) around nonprofit and for-profit satellites*
       - [Quantifying the drivers of disillusionment and dissolution](#quantifying-the-drivers-of-disillusionment-and-dissolution)
   - [A.3 Founder labor and fair reward](#a3-founder-labor-and-fair-reward)
   - [A.5 Income vs. retained earnings: a quick refresher](#a5-income-vs-retained-earnings-a-quick-refresher)
-  - [A.6 Why dispersion, not just adequate but better: the aircraft-carrier problem](#a6-why-dispersion-not-just-adequate-but-better-the-aircraft-carrier-problem)
 
 ---
 
@@ -420,10 +419,9 @@ flowchart TD
     Employees -- "3 leaves / retires" --> Departing
     Departing -- "3 vested shares" --> Company
     Company -- "3 repurchase obligation: cash at FMV" --> Departing
-
-    linkStyle 0,1,2 stroke:#d62728,color:#d62728;
-    linkStyle 3,4,5 stroke:#1f77b4,color:#1f77b4;
-    linkStyle 6,7,8 stroke:#2ca02c,color:#2ca02c;
+    linkStyle 0,1,2 stroke:#d62728,color:#d62728
+    linkStyle 3,4,5 stroke:#1f77b4,color:#1f77b4
+    linkStyle 6,7,8 stroke:#2ca02c,color:#2ca02c
 ```
 
 Allocation tracks loan repayment; whether an employee can keep those
