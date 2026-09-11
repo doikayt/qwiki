@@ -717,9 +717,9 @@ running while the targeted one dealt with the consequences — which is the whol
 <tr><td><sub>Spinning wheel alongside Arkwright's water frame / Source: Wikipedia</sub></td></tr>
 </table>
 
-Building on [Coase's transaction-cost
-account](#factors-favoring-the-emergence-of-the-corporate-model----neoclassical-view)
-above: the clearest illustration is textile production just before the
+Building onCoase's transaction-cost,
+account [above](#factors-favoring-the-emergence-of-the-corporate-model----neoclassical-view): 
+the clearest illustration is textile production just before the
 modern corporation took shape. Before Richard Arkwright's water frame (1769), English
 cloth was made under the *putting-out system*, which was characterized by
 decentralized market coordination, and required that
