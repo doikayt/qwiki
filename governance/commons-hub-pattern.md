@@ -727,28 +727,29 @@ a separate bargain be struck between contracting merchants and each individual w
 The merchant distributed raw wool or cotton to independent spinners and weavers
 working in their own homes and paid piece-rate for finished cloth, with no employment
 relationship at all. This system lost out to the factory model for three
-specific reasons —
-the first two mitigated outright by direct supervision, and the third only by
-centralizing the machinery itself:
+specific reasons: two of them — production and scheduling — were
+problems of oversight, solved outright by direct supervision; the
+third, capital, could only be solved by centralizing the machinery
+itself:
 
 - **Production was unobservable.** A merchant only saw finished cloth, never
   the process, which produced chronic embezzlement of material and
   inconsistent quality.
-- **Scheduling was unenforceable.** Dispersed workers set their own pace,
-  often around farm work, and contracting merchants had little visibility into progress.
 - **The new machinery physically required centralization.** A water wheel
   could power a mill, not a cottage.
+- **Scheduling was unenforceable.** Dispersed workers set their own pace,
+  often around farm work, and contracting merchants had little visibility into progress.
 
 
 Two successive waves of software-engineering advances have rendered
 each of those constraints less binding: tooling advances achieved in the last two
-decades, and the more recent innovations in AI, especially LLM-based technologies.
+decades, and  a wave of more recent innovations in AI, especially LLM-based technologies.
 
 #### The tooling wave
 
-- **Production is now observable — past, present, and future.**
+- **Production**: is now much more observable — past, present, and future.
   [Version control](https://en.wikipedia.org/wiki/Version_control)
-  provides a machine-searchable record of what code was written, and
+  provides a machine searchable record of  what code was written, and 
   by whom, in the *past*. CI/CD pipelines, automated test suites, [code
   coverage](https://en.wikipedia.org/wiki/Code_coverage), and
   [object-oriented
@@ -758,36 +759,35 @@ decades, and the more recent innovations in AI, especially LLM-based technologie
   estimation — [story
   points](https://en.wikipedia.org/wiki/Planning_poker),
   [sprints](https://en.wikipedia.org/wiki/Sprint_%28software_development%29),
-  [burndown](https://en.wikipedia.org/wiki/Burndown_chart) — are not
-  crystal balls, but they do significantly streamline the work of
-  estimation, sequence planning, and distribution of *future* work.
-- **Scheduling is now enforceable.** Issue trackers, automated status
-  checks, and chat-integrated status bots — nudging a channel the
-  moment a deadline slips or a review sits unanswered[^22] — impose
-  real deadlines and coordination on remote contributors without the
+  [burndown](https://en.wikipedia.org/wiki/Burndown_chart) — are not crystal balls,
+  but they do significantly streamline the work of estimation, sequence planing
+  and distribution of   _future_ work.
+- **Capital**: is now decentralized. Cloud infrastructure is
+  rentable by the hour -- which enables individual remote developers (and 
+  even one person software shops) to leverage the same equipment as larger companies.
+- **Scheduling**: is now enforceable via [issue
+  trackers](https://en.wikipedia.org/wiki/Issue_tracking_system),
+  automated status checks, and rule-based status bots[^24], which nudge communication 
+  channels on a fixed schedule when a deadline slips. These tools keep
+  remote contributors coordinated against real deadlines without the
   need to clock in at some centralized office.
-- **Capital no longer requires centralization.** Cloud infrastructure,
-  rentable by the hour since well before AI made it fashionable, lets a
-  remote contributor reach for the same equipment a centralized firm
-  would otherwise have to own outright.
 
 #### The AI wave
 
-AI layers on top of two of those three gains. AI-assisted code review
-catches what a human reviewer or a static linter[^23] would miss, pushing
-observability past what version control and quality instrumentation
-manage alone. And AI models are themselves a new form of rentable
-capital — rentable by the hour just like the cloud infrastructure
-underneath them — so a remote contributor can reach for genuinely
-industrial-grade AI tooling without being inside a hierarchical firm
-that owns the equipment. Scheduling is the one place AI's effect isn't
-just an incremental improvement on the tooling wave: as more of the
-actual coding work shifts from remote human contributors to autonomous
-AI agents, the need to enforce a human schedule at all starts to
-shrink. The endpoint is something like a lights-out software factory —
-coordinating machine agents the way [lights-out
+AI has unbound the first two constraints to a degree. For example,
+production failures can be headed off before inferior code is even
+integrated into the main line via AI-assisted code reviews -- which
+efficiently catch what a human reviewer or a static linter[^23] would
+miss. AI models are themselves a new form of decentralized
+infrastructure that opens industrial-grade tooling to smaller teams.
+However, the real advance is in the third: scheduling. As more coding
+effort shifts from remote human contributors to
+autonomous AI agents, the need to enforce a human schedule at all
+starts to shrink. The endpoint is something like a lights-out software
+factory — coordinating machine agents the way [lights-out
 manufacturing](https://en.wikipedia.org/wiki/Lights_out_(manufacturing))
 coordinates robots, with no human clock-in schedule left to enforce.
+
 
 #### Possibilities for a future equalizing wave
 
@@ -843,6 +843,10 @@ from it. For most of this document's history, those questions were
 only worth asking on behalf of people who already had the capital to
 build competing infrastructure. Cheap, abundant software production is
 what makes them worth asking on behalf of everyone else.
+
+
+
+
 
 ### A.2 Marxist economics 101
 
@@ -1455,3 +1459,6 @@ when it later leaves the retained-earnings pool as a distribution.
     [Lint (software) —
     Wikipedia](https://en.wikipedia.org/wiki/Lint_(software)).
 
+[^24]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
+    bot that runs asynchronous standups and posts status updates
+    directly to a channel, without a meeting.
