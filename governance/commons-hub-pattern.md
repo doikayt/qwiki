@@ -780,11 +780,14 @@ infrastructure available to smaller teams.
 However, the real advance is in the third: _scheduling_. As more coding
 effort shifts from remote human contributors to
 autonomous [AI agents](https://en.wikipedia.org/wiki/AI_agent), the need for any human involvement in scheduling at all 
-starts to shrink -- thereby bringing us that much closer to a [lights-out](https://en.wikipedia.org/wiki/Lights_out_(manufacturing)) software
-factory-style model.
+starts to shrink -- thereby bringing us that much closer to a
+[lights-out](https://en.wikipedia.org/wiki/Lights_out_(manufacturing))
+software factory-style model — the same image
+[§4](#4-the-stakes-and-why-our-model-has-an-edge) uses for AI writing
+the software that builds AI.
 
 
-#### Possibilities for a future equalizing wave
+#### Possibilities for future *equalizing* waves
 
 Once software production approaches the point of being completely 
 'lights out', the cost of production
@@ -802,6 +805,17 @@ other side. Large industries have leaned on that infrastructure
 monopoly for a long time in the West precisely because building a
 competing version was expensive enough that only well-capitalized
 incumbents could do it.
+
+The same dynamic plays out between nation-states, not just software
+vendors: Western sanctions regimes lean on control of
+[SWIFT](https://en.wikipedia.org/wiki/Society_for_Worldwide_Interbank_Financial_Telecommunication)
+to cut sanctioned countries out of the financial system — leverage
+that depends on SWIFT staying the only game in town. A
+distributed-ledger alternative, [Project
+mBridge](https://www.bis.org/project/mbridge), already undermines
+that: cross-border payments settled directly between central banks, no
+SWIFT required.[^25] Building competing coordination infrastructure,
+it turns out, is not just a software-industry strategy.
 
 That's the constraint this next wave removes. If a small collective
 can build production-grade software at a cost a two-person team can
@@ -1457,3 +1471,15 @@ when it later leaves the retained-earnings pool as a distribution.
 [^24]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
     bot that runs asynchronous standups and posts status updates
     directly to a channel, without a meeting.
+
+[^25]: Project mBridge is a cross-border settlement platform built by
+    the central banks of China, Hong Kong, Thailand, the UAE, and
+    Saudi Arabia. Firms in Xinjiang have reportedly used it to route
+    around US sanctions, and the BIS handed the project fully over to
+    its member central banks in 2024 under pressure from Washington
+    over that risk — though BIS maintains the platform isn't intended
+    to enable sanctions evasion. [BIS Debates Ending Project Eyed by
+    Putin to Undermine
+    Dollar](https://www.bloomberg.com/news/articles/2024-10-28/bis-debates-ending-project-eyed-by-putin-to-undermine-dollar),
+    Bloomberg (2024); Xinjiang use reported by *The Economist*
+    (September 2025).
