@@ -727,23 +727,21 @@ a separate bargain be struck between contracting merchants and each individual w
 The merchant distributed raw wool or cotton to independent spinners and weavers
 working in their own homes and paid piece-rate for finished cloth, with no employment
 relationship at all. This system lost out to the factory model for three
-specific reasons: two of them — production and scheduling — were
-problems of oversight, solved outright by direct supervision; the
-third, capital, could only be solved by centralizing the machinery
-itself:
+specific reasons: 
 
 - **Production was unobservable.** A merchant only saw finished cloth, never
   the process, which produced chronic embezzlement of material and
   inconsistent quality.
-- **The new machinery physically required centralization.** A water wheel
-  could power a mill, not a cottage.
+- **Centralization of capital assets was essential.** The new machinery physically
+  demanded it — a water wheel could power a mill, not a cottage.
 - **Scheduling was unenforceable.** Dispersed workers set their own pace,
   often around farm work, and contracting merchants had little visibility into progress.
 
 
 Two successive waves of software-engineering advances have rendered
 each of those constraints less binding: tooling advances achieved in the last two
-decades, and  a wave of more recent innovations in AI, especially LLM-based technologies.
+decades, and a wave of more recent innovations in AI, especially
+[LLM](https://en.wikipedia.org/wiki/Large_language_model)-based technologies.
 
 #### The tooling wave
 
@@ -762,7 +760,7 @@ decades, and  a wave of more recent innovations in AI, especially LLM-based tech
   [burndown](https://en.wikipedia.org/wiki/Burndown_chart) — are not crystal balls,
   but they do significantly streamline the work of estimation, sequence planing
   and distribution of   _future_ work.
-- **Capital**: is now decentralized. Cloud infrastructure is
+- **Centralization**: is no longer required. Cloud infrastructure is
   rentable by the hour -- which enables individual remote developers (and 
   even one person software shops) to leverage the same equipment as larger companies.
 - **Scheduling**: is now enforceable via [issue
@@ -775,18 +773,15 @@ decades, and  a wave of more recent innovations in AI, especially LLM-based tech
 #### The AI wave
 
 AI has unbound the first two constraints to a degree. For example,
-production failures can be headed off before inferior code is even
-integrated into the main line via AI-assisted code reviews -- which
-efficiently catch what a human reviewer or a static linter[^23] would
-miss. AI models are themselves a new form of decentralized
-infrastructure that opens industrial-grade tooling to smaller teams.
-However, the real advance is in the third: scheduling. As more coding
+AI-assisted reviews help head off _production_ problems by monitoring 
+(and preventing the integration of) poor quality candidate updates to the code base.
+AI models are themselves a new form of _decentralized_
+infrastructure available to smaller teams.
+However, the real advance is in the third: _scheduling_. As more coding
 effort shifts from remote human contributors to
-autonomous AI agents, the need to enforce a human schedule at all
-starts to shrink. The endpoint is something like a lights-out software
-factory — coordinating machine agents the way [lights-out
-manufacturing](https://en.wikipedia.org/wiki/Lights_out_(manufacturing))
-coordinates robots, with no human clock-in schedule left to enforce.
+autonomous [AI agents](https://en.wikipedia.org/wiki/AI_agent), the need for any human involvement in scheduling at all 
+starts to shrink -- thereby bringing us that much closer to a [lights-out](https://en.wikipedia.org/wiki/Lights_out_(manufacturing)) software
+factory-style model.
 
 
 #### Possibilities for a future equalizing wave
