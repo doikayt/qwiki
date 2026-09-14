@@ -779,51 +779,52 @@ AI models are themselves a new form of _decentralized_
 infrastructure available to smaller teams.
 However, the real advance is in the third: _scheduling_. As more coding
 effort shifts from remote human contributors to
-autonomous [AI agents](https://en.wikipedia.org/wiki/AI_agent), the need for any human involvement in scheduling at all 
-starts to shrink -- thereby bringing us that much closer to a
+autonomous [AI agents](https://en.wikipedia.org/wiki/AI_agent), the need 
+for any human involvement in scheduling starts to 
+shrink -- thereby bringing us that much closer to the
 [lights-out](https://en.wikipedia.org/wiki/Lights_out_(manufacturing))
-software factory-style model — the same image
-[§4](#4-the-stakes-and-why-our-model-has-an-edge) uses for AI writing
-the software that builds AI.
+software factory-style model that we first mention in 
+[§4](#4-the-stakes-and-why-our-model-has-an-edge).
 
 
 #### Possibilities for future *equalizing* waves
 
-Once software production approaches the point of being completely 
-'lights out', the cost of production
-simply becomes a direct function of depreciation on 
-the machines doing the work, plus the energy to run them.
-(As we discuss further in [A.2](#a2-marxist-economics-101).)
+[[ This section needs rework - still AI slop heavy ]]
 
-Abundant, cheap software production is a direct threat to a
-particular kind of power: the power that comes from owning the
-technological infrastructure that coordinates information flow
-between parties — the same enclosure dynamic that MongoDB, Elastic,
-and HashiCorp were defending in
-[§1](#1-the-commons-layer-and-its-satellites), just viewed from the
-other side. Large industries have leaned on that infrastructure
-monopoly for a long time in the West precisely because building a
-competing version was expensive enough that only well-capitalized
-incumbents could do it.
+As 'lights out' software development becomes increasingly feasible, the 
+cost of production devolves to a direct function of depreciation on
+the machines doing the work, plus the energy required to run them
+(as discussed in [A.2](#a2-marxist-economics-101).)
 
-The same dynamic plays out between nation-states, not just software
-vendors: Western sanctions regimes lean on control of
+This in turn, makes it much more cost-effective and feasible to 
+undertake software projects that challenge existing power relations.
+At the state actor level, the United States uses its 
+dominant position within the global financial 
+system to cut off adversaries from 
+the 
 [SWIFT](https://en.wikipedia.org/wiki/Society_for_Worldwide_Interbank_Financial_Telecommunication)
-to cut sanctioned countries out of the financial system — leverage
-that depends on SWIFT staying the only game in town. A
-distributed-ledger alternative, [Project
-mBridge](https://www.bis.org/project/mbridge), already undermines
-that: cross-border payments settled directly between central banks, no
-SWIFT required.[^25] Building competing coordination infrastructure,
-it turns out, is not just a software-industry strategy.
+settlement system, effectively weaponizing the network to cripple foreign 
+economies and force diplomatic compliance.
+
+Project [mBridge](https://www.bis.org/project/mbridge) poses exactly
+that kind of structural threat to U.S. dollar-based sanctions
+enforcement. Built on modern blockchain technology by the central
+banks of China, Hong Kong, Thailand, the UAE, and Saudi Arabia, it
+settles cross-border payments directly between central banks in
+seconds instead of the days correspondent banking normally
+requires — bypassing the Western correspondent banking system, and
+SWIFT along with it.[^25] Building competing coordination
+infrastructure, it turns out, is not just a software-industry
+strategy.
 
 That's the constraint this next wave removes. If a small collective
 can build production-grade software at a cost a two-person team can
 absorb, it can build parallel versions of infrastructure that used to
 require an incumbent's balance sheet: community insurance pools,
 software commons behind public banks, worker-owned alternatives to
-gig-economy dispatch platforms, a credit union's shared core-banking
-stack. None of those needed a technical breakthrough to become
+gig-economy dispatch platforms,  
+a core-banking stack that can be shared amongst non-profit credit unions.
+None of those needed a technical breakthrough to become
 possible — they needed the cost of the software itself to stop being
 the bottleneck.
 
@@ -853,7 +854,7 @@ only worth asking on behalf of people who already had the capital to
 build competing infrastructure. Cheap, abundant software production is
 what makes them worth asking on behalf of everyone else.
 
-
+[[ END: Slop to clean up ]]
 
 
 
@@ -1482,4 +1483,9 @@ when it later leaves the retained-earnings pool as a distribution.
     Putin to Undermine
     Dollar](https://www.bloomberg.com/news/articles/2024-10-28/bis-debates-ending-project-eyed-by-putin-to-undermine-dollar),
     Bloomberg (2024); Xinjiang use reported by *The Economist*
-    (September 2025).
+    (September 2025). BIS's own pilot report found mBridge completed
+    international transfers and FX operations in seconds rather than
+    the several days correspondent banking normally requires, at up to
+    half the cost. [Inthanon-LionRock to
+    mBridge](https://www.bis.org/publ/othp40.htm), BIS Innovation Hub
+    (2023).
