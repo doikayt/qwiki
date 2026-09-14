@@ -746,20 +746,26 @@ decades, and the more recent innovations in AI, especially LLM-based technologie
 
 #### The tooling wave
 
-- **Production is now observable.** Version control and CI/CD make the
-  process itself visible, not just the finished output. Automated test
-  suites and the reporting built on top of them go straight at the old
-  *inconsistent quality* problem, and further instrumentation — [code
-  coverage](https://en.wikipedia.org/wiki/Code_coverage) and
+- **Production is now observable — past, present, and future.**
+  [Version control](https://en.wikipedia.org/wiki/Version_control)
+  provides a machine-searchable record of what code was written, and
+  by whom, in the *past*. CI/CD pipelines, automated test suites, [code
+  coverage](https://en.wikipedia.org/wiki/Code_coverage), and
   [object-oriented
   metrics](https://www.geeksforgeeks.org/software-engineering/object-oriented-metrices-in-software-engineering/)
-  like coupling and [cyclomatic
-  complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) —
-  measures that quality rather than just the process's existence.
-- **Scheduling is now enforceable.** CI pipelines, issue trackers, and
-  automated status checks impose real deadlines and coordination on
-  remote contributors without the need to punch a clock and show up
-  in a centralized office.
+  surface failures the moment they happen in the *present*.[^21]
+  [Agile boards](https://en.wikipedia.org/wiki/Kanban_board) and
+  estimation — [story
+  points](https://en.wikipedia.org/wiki/Planning_poker),
+  [sprints](https://en.wikipedia.org/wiki/Sprint_%28software_development%29),
+  [burndown](https://en.wikipedia.org/wiki/Burndown_chart) — are not
+  crystal balls, but they do significantly streamline the work of
+  estimation, sequence planning, and distribution of *future* work.
+- **Scheduling is now enforceable.** Issue trackers, automated status
+  checks, and chat-integrated status bots — nudging a channel the
+  moment a deadline slips or a review sits unanswered[^22] — impose
+  real deadlines and coordination on remote contributors without the
+  need to clock in at some centralized office.
 - **Capital no longer requires centralization.** Cloud infrastructure,
   rentable by the hour since well before AI made it fashionable, lets a
   remote contributor reach for the same equipment a centralized firm
@@ -768,7 +774,7 @@ decades, and the more recent innovations in AI, especially LLM-based technologie
 #### The AI wave
 
 AI layers on top of two of those three gains. AI-assisted code review
-catches what a human reviewer or a static linter would miss, pushing
+catches what a human reviewer or a static linter[^23] would miss, pushing
 observability past what version control and quality instrumentation
 manage alone. And AI models are themselves a new form of rentable
 capital — rentable by the hour just like the cloud infrastructure
@@ -783,21 +789,60 @@ coordinating machine agents the way [lights-out
 manufacturing](https://en.wikipedia.org/wiki/Lights_out_(manufacturing))
 coordinates robots, with no human clock-in schedule left to enforce.
 
-**Knowledge and information concentration** is worth naming too, even
-though it doesn't map onto any of the three 1769 constraints above —
-the textile-era case never had to contend with it. Corporations have
-historically concentrated expertise, institutional knowledge, and
-decision-making. AI increasingly makes that expertise portable to
-distributed producers: [retrieval-augmented
-generation](https://en.wikipedia.org/wiki/Retrieval-augmented_generation)
-lets a model ground its answers in an organization's own
-documentation and history rather than whatever it memorized during
-training, and the same models can read, summarize, and explain an
-unfamiliar codebase well enough that a remote contributor no longer
-needs a tenured engineer sitting beside them to get oriented — an
-advantage the textile-era analysis never had to account for.
+#### Possibilities for a future equalizing wave
 
+Once software production approaches the point of being completely 
+'lights out', the cost of production
+simply becomes a direct function of depreciation on 
+the machines doing the work, plus the energy to run them.
+(As we discuss further in [A.2](#a2-marxist-economics-101).)
 
+Abundant, cheap software production is a direct threat to a
+particular kind of power: the power that comes from owning the
+technological infrastructure that coordinates information flow
+between parties — the same enclosure dynamic that MongoDB, Elastic,
+and HashiCorp were defending in
+[§1](#1-the-commons-layer-and-its-satellites), just viewed from the
+other side. Large industries have leaned on that infrastructure
+monopoly for a long time in the West precisely because building a
+competing version was expensive enough that only well-capitalized
+incumbents could do it.
+
+That's the constraint this next wave removes. If a small collective
+can build production-grade software at a cost a two-person team can
+absorb, it can build parallel versions of infrastructure that used to
+require an incumbent's balance sheet: community insurance pools,
+software commons behind public banks, worker-owned alternatives to
+gig-economy dispatch platforms, a credit union's shared core-banking
+stack. None of those needed a technical breakthrough to become
+possible — they needed the cost of the software itself to stop being
+the bottleneck.
+
+And that cost keeps falling, not just once but continuously — the
+same trajectory that makes a lights-out software factory plausible
+for a large employer also compounds in the collective's favor every
+year: the gap between what a two-person team can build and what used
+to require a funded startup widens, not narrows. It's the same
+dynamic [§4](#4-the-stakes-and-why-our-model-has-an-edge) treats as a
+labor-market threat — job displacement, elite overproduction — just
+viewed from the other side of the same telescope. Whether this next
+wave reads as a threat or an opportunity depends entirely on where
+you're standing when it arrives, which is exactly why the two aren't
+in tension: they're the same event.
+
+There's a version of this that rhymes with a much older kind of
+power, too — the one a single aircraft carrier represents, [described
+earlier](#resilience-through-dispersion) as formidable right up until
+a cheaper, more numerous, more dispersed threat finds it.
+Concentrated, expensive infrastructure loses that bet more often as
+the cost of building distributed alternatives keeps falling — in
+software as much as at sea.
+
+The Overview opened by asking who governs production and who benefits
+from it. For most of this document's history, those questions were
+only worth asking on behalf of people who already had the capital to
+build competing infrastructure. Cheap, abundant software production is
+what makes them worth asking on behalf of everyone else.
 
 ### A.2 Marxist economics 101
 
@@ -1393,4 +1438,20 @@ when it later leaves the retained-earnings pool as a distribution.
     employee has a non-forfeitable right to *keep* shares already allocated to them is governed
     separately, by a service-based vesting schedule (e.g., graded vesting over several years);
     an employee can hold allocated shares that would still be forfeited if they left early.
+
+[^21]: Down to a literal red light on someone's desk when a build
+    breaks — see [this example of building a failure
+    light](https://99x.io/Insights/blog/building-a-jenkins-failure-light-using-particle-photon)
+    for a CI pipeline, wiring a Particle Photon board to a Jenkins job.
+
+[^22]: Microsoft Research's "Nudge" system, tested in a randomized
+    trial across 147 repositories, cut overdue pull-request resolution
+    time by 60%. [Nudge: Accelerating Overdue Pull Requests toward
+    Completion](https://arxiv.org/pdf/2011.12468), *ACM Transactions on
+    Software Engineering and Methodology* (2022).
+
+[^23]: A static linter analyzes source code without running it,
+    flagging style violations, suspicious patterns, and likely bugs.
+    [Lint (software) —
+    Wikipedia](https://en.wikipedia.org/wiki/Lint_(software)).
 
