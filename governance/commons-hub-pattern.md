@@ -614,112 +614,135 @@ In summary, the operational advantages that accrue from these two structural pro
 
 ### Resilience through dispersion
 
-[ WARNING: AI slop ahead - this section is mostly a dump of research, and needs major editing to not 
-induce reader headache]
+Concentrating capability in one place is inherently risky,
+whereas dispersed placement of resources increases resilience in the face of attack.
+Recent experience on multiple battlefields around the world have driven this 
+home to the US military establishment, whose leadership now states 
+plainly that "forces that are 
+concentrated and static are easy for enemy forces to detect and destroy."[^13] 
+Cloud infrastructure engineers learned long ago the downsides of concentrating 
+services in a single data center: one outage can take out _everything_.  Replication 
+across independent regions and providers is a much better strategy,
+as no one failure is fatal.
 
-Engineers building cloud infrastructure learned this lesson long ago:
-you don't put a service in one data center, because one region's
-outage takes down everything. Instead, you replicate across
-independent regions and providers so no single failure is fatal. We
-propose applying that same logic to software collectives, which face
-increasing repression from both state actors and deplatforming from
-large corporations unwilling to host their speech.[^13] It's the same
-reason a single aircraft carrier, however powerful, is one
-well-placed strike away from losing everything it carries:
-concentrating value and capability into one legal entity is exactly
-what makes it worth attacking — legally, politically, operationally.
-A dispersed, replicable structure has no equivalent point of failure:
-if a lawsuit, a funding collapse, or a government action takes out
-one Satellite, the shared Commons and every other Satellite running
-it keep operating.
+We propose applying this same logic to software collectives, which face
+increasing repression from both state actors and deplatforming[^14]
+from large corporations unwilling to tolerate wrongthink.[^15] 
+In light of such threats the distributed structure proposed in
+[§1](#1-the-commons-layer-and-its-satellites) can be seen
+as a preemptive counter-measure against these types of threats.
+Note that the referenced diagram posited the satellites
+surrounding a digital commons as 501(c)(3)'s. Here we add a slight twist -- 
+in that some satellites might be trusted individual rather than a corporation.
 
-This grounds the distributed structure proposed in
-[§1](#1-the-commons-layer-and-its-satellites) in a concrete threat
-model — and introduces one variation the diagram there doesn't show.
-That figure depicts dispersion at the Satellite (501(c)(3)) level
-only; several of the mitigations below add a second layer beneath
-that, relying on trusted individuals rather than legal entities.
+August 2026 supplied a real test case. The US government designated the
+Italian hosting collective Autistici/Inventati a ["Specially Designated
+Global Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/)
+entity over how its infrastructure was allegedly used by others — and
+within days its primary domain (website) and mail server, both
+concentrated in one operator, went dark for its entire user base.[^16]
+Its underlying software was already open source; what wasn't dispersed
+was the service itself. A multi-Satellite structure running the same
+shared code across independently governed, independently banked
+entities means one Satellite's takedown doesn't take the whole
+network's users down with it.
 
-This isn't hypothetical. In August 2026, the US government designated the Italian hosting collective Autistici/Inventati
-a ["Specially Designated Global Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/)
-entity over how its infrastructure was allegedly used by others — and within
-days its primary domain (website) and mail server, both concentrated in one operator, went dark for its entire user base.[^14] Its
-underlying software was already open source; what wasn't dispersed was the service itself. A multi-Satellite structure
-running the same shared code across independently governed, independently banked entities means one Satellite's takedown
-doesn't take the whole network's users down with it.
-
-But dispersion of legal entities alone isn't sufficient. If every Satellite banks with the same institutions or registers
-domains through the same registry, a single coordinated action, or a wave of banks and hosting services preemptively
-cutting ties to limit their own exposure to government pressure, can still hit several at once — real resilience means deliberately varying banks,
-registrars, and jurisdictions across Satellites, not just incorporating separately. The DAO's multisig crypto-treasury
-leg (§2) offers a partial hedge against that specific bank-level risk — it can't be frozen the way an account can — but
-none of this protects whichever Satellite is actually targeted from the consequences of that; dispersion preserves the
-pattern and its other Satellites, not any single one of them.
-
-The chain of events is worth walking through, because it shows exactly which chokepoints did the damage. The
-State Department designation landed August 26, 2026. PayPal cut off A/I's account within days.[^15] Then, 48 hours
-after the designation, the Public Interest Registry — the nonprofit that operates the entire `.org` namespace —
-disabled `autistici.org`.[^15] A/I's mail servers themselves, sitting in Europe, were never touched; nothing about
-the underlying software broke. As one account of the shutdown put it, "the failure happened at the domain registry
-and the payment rails" — layers no mail provider, and no amount of server dispersion, actually controls.[^16]
-Users could still read mail already sitting in their inboxes, but nothing new could be sent or received once the
-domain stopped resolving.[^17] The same day, A/I's NoBlogs platform was separately compromised by an attacker
-exploiting a software vulnerability — a couple of hours of unauthorized access, a defaced homepage, the service
-dropped into read-only mode while they investigated.[^15] Whether or not it was opportunistic, being visibly down
-invited more trouble, not less. On September 1, Banca Etica — an Italian bank, outside direct U.S. jurisdiction —
-suspended A/I's account too, after consulting Italy's Ministry of Economy and Finance, because an Italian bank
-still clears dollars through U.S. correspondent banks and wasn't willing to risk that access over one customer.[^15]
-On September 6, roughly sixteen thousand mailboxes, ten thousand blogs, and fifty-five hundred mailing lists later,
-A/I shut down for good. Their own statement said it plainly: "the possibility that our work may cause legal and
-financial consequences to those who are close to us... leaves us no choice."[^15] Notably, A/I itself said it
-couldn't establish whether the registry had acted on an explicit OFAC instruction or simply preferred not to find
-out[^17] — which is itself part of the mechanism: no one downstream needs a direct order, only enough exposure
-that they'd rather not risk it.
-
-None of that was a technical hack. It was a sanctions designation working exactly as designed — making it too
-risky for third parties (a registry, a bank, a payment processor) to keep serving the target, and letting them do
-the actual shutting-down. The mitigations split along a line worth naming explicitly: some of them just need
-*dispersed people* — a trusted individual in another jurisdiction, no incorporation required — while one of them
-needs *dispersed legal entities*, because the risk it's covering is a different kind of risk.
-
-- **DNS/registry — individual-level.** The failure mode wasn't the registrar, it was the registry — `.org` itself
-  is operated by a U.S. nonprofit, so no registrar choice would have saved `autistici.org`. A trusted individual
-  in a jurisdiction outside U.S.-aligned reach can hold a working mirror domain on a different ccTLD, with that
-  fallback address pre-published somewhere that doesn't depend on the primary domain resolving (a pinned
-  Fediverse post, a Matrix room, an onion service) — so users know where to look *before* the outage, not during
-  it. No entity needed, just someone who isn't organizationally entangled with whatever triggered the takedown.
-
-- **Mail — individual-level.** SMTP is already federated; the concentration here was organizational, not
-  protocol-level. A trusted individual running (or paying for) a backup MX in a different jurisdiction, registered
-  through a different registry, means one domain's failure doesn't stop the other from accepting mail. Again, no
-  incorporation required — just a second person with a server.
-
-- **Crypto keys — individual-level.** Multisig signers should be individuals resident in different jurisdictions,
-  holding their own cold, self-custodied keys — not a shared wallet at a custodial exchange, which is a company
-  and will freeze or block any address later added to an SDN list, for the same reason PayPal did. This is the
-  same "trusted person, not trusted org" pattern as the DNS and mail mitigations.
-
-- **Crypto pay rails — mostly individual-level.** Multisig protects the treasury from being frozen like a bank
-  account, but not the off-ramp: the moment a Satellite's wallet address is added to the SDN list, any
-  U.S.-regulated exchange will refuse to cash it out — the same mechanism as the registry and the bank, one layer
-  down. A segregated wallet controlled by a trusted individual (or the multisig itself) does the practical job of
-  containing that blast radius. Full legal separation between entities only starts to matter if the question ever
-  becomes a legal one — whether Satellite A's designation can, as a matter of law, reach Satellite B's assets —
-  which is a courtroom argument, not a mechanical one.
-
-- **Banking — entity-level.** This is the one place a Satellite's legal-entity status actually earns its keep.
-  A trusted individual holding organizational funds personally creates a different category of problem than a
-  domain sitting under someone's name: their personal assets and the org's funds commingle, they're personally
-  liable, there's no continuity if they die, disappear, get sued, or divorce, and the whole arrangement rests on
-  one person's trustworthiness rather than a governed structure. Banca Etica's decision also shows that legal
-  dispersion alone isn't enough if every Satellite's bank clears dollars through the same correspondent network —
-  which, practically, is nearly all of them. There's no clean fix for that short of holding real reserves the
-  DAO's crypto-treasury leg (§2) can reach without a bank in the loop at all.
-
-None of this would have stopped the designation itself. It would have kept the Commons and its other Satellites
-running while the targeted one dealt with the consequences — which is the whole point of dispersion.
+=== AI slop after this.. needs cleanup  
 
 
+But dispersing legal entities alone isn't enough. If every Satellite
+banks with the same institutions or registers domains through the same
+registry, one coordinated action — or a wave of banks and hosts
+preemptively cutting ties to limit their own exposure — can still hit
+several at once. Real resilience means deliberately varying banks,
+registrars, and jurisdictions, not just incorporating separately. The
+DAO's multisig crypto-treasury (§2) offers a partial hedge against the
+bank-level risk specifically — it can't be frozen the way an account
+can — but nothing protects the targeted Satellite itself; dispersion
+preserves the pattern and the other Satellites, not any single one of
+them.
+
+The chokepoints are worth naming, because they show exactly where the
+damage happened. The State Department designation landed August 26;
+PayPal cut A/I off within days.[^17] Forty-eight hours later, the
+Public Interest Registry — the nonprofit running the entire `.org`
+namespace — disabled `autistici.org`.[^17] A/I's mail servers, sitting
+in Europe, were never touched; nothing about the software broke. "The
+failure happened at the domain registry and the payment rails" —
+layers no mail provider, and no amount of server dispersion,
+controls.[^18] Mail already delivered stayed readable; nothing new
+could arrive once the domain stopped resolving.[^19] The same day, an
+unrelated vulnerability let an attacker deface A/I's NoBlogs platform,
+dropping it into read-only mode for a couple of hours.[^17] Being
+visibly down invited more trouble, not less: on September 1, Banca
+Etica — an Italian bank outside direct U.S. jurisdiction — suspended
+A/I's account too, unwilling to risk its own U.S. correspondent-banking
+access over one customer.[^17] On September 6, A/I shut down for good —
+sixteen thousand mailboxes, ten thousand blogs, fifty-five hundred
+mailing lists gone. Their statement was blunt: "the possibility that
+our work may cause legal and financial consequences to those who are
+close to us... leaves us no choice."[^17] A/I itself couldn't say
+whether the registry acted on an explicit order or just preferred not
+to find out[^19] — which is the mechanism working as designed: no one
+downstream needs a direct order, only enough exposure to make
+compliance the safer bet.
+
+None of it was a technical hack. It was a sanctions designation working
+exactly as intended — making it too risky for third parties (a
+registry, a bank, a payment processor) to keep serving the target, and
+letting them do the actual shutting-down. The mitigations split along
+one line: some need only *dispersed people* — a trusted individual in
+another jurisdiction, no incorporation required — others need
+*dispersed legal entities*, because the risk they cover is a different
+kind of risk.
+
+- **DNS/registry — individual-level.** `.org` is run by a single U.S.
+  nonprofit, so no registrar choice would have saved `autistici.org` —
+  the registry itself was the failure point. A trusted individual
+  outside U.S.-aligned reach can hold a mirror domain on a different
+  ccTLD, its fallback address pre-published somewhere that doesn't
+  depend on the primary domain resolving (a pinned Fediverse post, a
+  Matrix room, an onion service) — so users know where to look before
+  an outage, not during one. No entity needed, just someone not
+  organizationally entangled with whatever triggered the takedown.
+
+- **Mail — individual-level.** SMTP is already federated; the
+  concentration here was organizational, not protocol-level. A trusted
+  individual running a backup MX in a different jurisdiction, through a
+  different registry, means one domain's failure doesn't stop the other
+  from accepting mail — just a second person with a server.
+
+- **Crypto keys — individual-level.** Multisig signers should be
+  individuals in different jurisdictions, holding their own cold,
+  self-custodied keys — not a shared wallet at a custodial exchange,
+  which will freeze any SDN-listed address the same way PayPal did.
+  Same "trusted person, not trusted org" pattern.
+
+- **Crypto pay rails — mostly individual-level.** Multisig protects the
+  treasury from being frozen like a bank account, but not the off-ramp:
+  once a Satellite's wallet lands on the SDN list, any U.S.-regulated
+  exchange refuses to cash it out — the same mechanism, one layer down.
+  A segregated wallet under a trusted individual contains that blast
+  radius. Full legal separation between entities only matters if it
+  becomes a courtroom question — whether Satellite A's designation can
+  legally reach Satellite B's assets.
+
+- **Banking — entity-level.** Here a Satellite's legal status actually
+  earns its keep. A trusted individual holding organizational funds
+  personally creates a different problem than a domain under someone's
+  name: commingled assets, personal liability, no continuity if they
+  die, disappear, or get sued — the whole arrangement resting on one
+  person's trustworthiness instead of a governed structure. Banca Etica
+  shows legal dispersion alone isn't enough if every Satellite's bank
+  clears dollars through the same correspondent network — which,
+  practically, is nearly all of them. No clean fix short of holding
+  reserves the DAO's crypto-treasury (§2) can reach without a bank in
+  the loop at all.
+
+None of this would have stopped the designation itself. It would have
+kept the Commons and every other Satellite running while the targeted
+one dealt with the consequences — which is the whole point of
+dispersion.
 
 ## Appendix A: Historical and Economic Grounding
 
@@ -767,7 +790,7 @@ decades, and a wave of more recent innovations in AI, especially
   coverage](https://en.wikipedia.org/wiki/Code_coverage), and
   [object-oriented
   metrics](https://www.geeksforgeeks.org/software-engineering/object-oriented-metrices-in-software-engineering/)
-  surface failures the moment they happen in the *present*.[^18]
+  surface failures the moment they happen in the *present*.[^20]
   [Agile boards](https://en.wikipedia.org/wiki/Kanban_board) and
   estimation — [story
   points](https://en.wikipedia.org/wiki/Planning_poker),
@@ -780,7 +803,7 @@ decades, and a wave of more recent innovations in AI, especially
   even one person software shops) to leverage the same compute capacity as larger companies.
 - **Scheduling**: is now enforceable via [issue
   trackers](https://en.wikipedia.org/wiki/Issue_tracking_system),
-  automated status checks, and rule-based status bots[^19], which nudge communication 
+  automated status checks, and rule-based status bots[^21], which nudge communication 
   channels on a fixed schedule when a deadline slips. These tools keep
   remote contributors coordinated against real deadlines without the
   need to clock in at some centralized office.
@@ -1109,7 +1132,7 @@ others:
 
 `p'` and ROIC are the tightest match — both ask the same question,
 profit per dollar of *total* capital committed, rather than margin on
-revenue alone.[^20] `q` and capital intensity are close too; it's a real
+revenue alone.[^22] `q` and capital intensity are close too; it's a real
 ratio tracked in corporate finance, just not always called that. `s'`
 has no standard named counterpart — the nearest real-world equivalent
 is informal, something like a labor-cost markup.
@@ -1171,16 +1194,16 @@ on exit aligns with their own stated principles.
 Row-by-row, here's where each one comes from:
 
 - **Row 1 (coordination)** — Marx, *Capital* Vol. 1, Ch. 13,
-  "Co-operation"[^21]: *"all combined labour on a large scale requires,
+  "Co-operation"[^23]: *"all combined labour on a large scale requires,
   more or less, a directing authority, in order to secure the
   harmonious working of the individual activities."*
-- **Row 2 (despotic surveillance)** — same chapter[^21]: *"by reason of
+- **Row 2 (despotic surveillance)** — same chapter[^23]: *"by reason of
   ... the unavoidable antagonism between the exploiter and the living
   and labouring raw material he exploits."*
-- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^22]
+- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^24]
   instead.
 - **Row 4 (rent)** — Marx, *Capital* Vol. 3, Ch. 23, "Interest and
-  Profit of Enterprise"[^23], quoting the capitalist's own rationale:
+  Profit of Enterprise"[^25], quoting the capitalist's own rationale:
   his profit of enterprise is *"itself rather a wage ... of
   superintendence of labor."*
 
@@ -1229,7 +1252,7 @@ mere ownership (#4) We think it deserves fair compensation.
 
 Joseph Schumpeter offers a cleaner theoretical home for this one gap than
 Marx does. He drew his own line between the entrepreneur's reward — a
-temporary payout for introducing what he called a "new combination"[^22] —
+temporary payout for introducing what he called a "new combination"[^24] —
 and the rentier's return on capital merely owned. That entrepreneurial
 reward, in his account, gets competed away once the innovation is copied.
 This aligns with our belief that the exit reward should recognize the labor
@@ -1362,7 +1385,17 @@ when it later leaves the retained-earnings pool as a distribution.
 [^12]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
     [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
 
-[^13]: Rainey Reitman (former EFF Activism Director), *Transaction
+[^13]: US Army Field Manual FM 3-0, quoted in [Army 2030: Disperse Or
+    Die — Network And
+    Live](https://breakingdefense.com/2022/10/army-2030-disperse-or-die-network-and-live/),
+    Breaking Defense (2022). The stakes are visible in Ukraine: drone
+    units make up only about 20% of Ukrainian combat personnel but
+    account for over 80% of Russian casualties. [The New Revolution in
+    Military
+    Affairs](https://carnegieendowment.org/research/2026/04/ukraine-russia-war-changing-warfare-practice-military-strategy),
+    Carnegie Endowment for International Peace (April 2026).
+
+[^14]: Rainey Reitman (former EFF Activism Director), *Transaction
     Denied*, documents cases of financial institutions and payment
     processors freezing accounts or blocking transactions over
     speech-related concerns — including teachers, journalists, and
@@ -1371,14 +1404,16 @@ when it later leaves the retained-earnings pool as a distribution.
     Denied](https://www.eff.org/deeplinks/2026/04/former-eff-activism-directors-new-book-transaction-denied-explores-what-happens)
     (April 2026).
 
-[^14]: [Designation of Autistici/Inventati as a Specially Designated
+[^15]: [wrongthink — Wiktionary](https://en.wiktionary.org/wiki/wrongthink).
+
+[^16]: [Designation of Autistici/Inventati as a Specially Designated
     Global Terrorist — U.S. Department of
     State](https://www.state.gov/releases/office-of-the-spokesperson/2026/08/designation-of-autistici-inventati-as-a-specially-designated-global-terrorist)
     (August 26, 2026); [Autistici/Inventati press release — infrastructure
     impact timeline](https://www.inventati.org/campaign/press) (domain
     unreachable August 28, 2026).
 
-[^15]: Timeline of the August 2026 SDGT designation and aftermath: [Autistici/Inventati —
+[^17]: Timeline of the August 2026 SDGT designation and aftermath: [Autistici/Inventati —
     Wikipedia](https://en.wikipedia.org/wiki/Autistici/Inventati) (PayPal loss "within days";
     Public Interest Registry disabled autistici.org August 28, 2026, 48 hours after the
     designation; NoBlogs compromised the same day via a software vulnerability, ~2 hours of
@@ -1386,27 +1421,27 @@ when it later leaves the retained-earnings pool as a distribution.
     A/I's account September 1, 2026 citing risk of U.S. secondary sanctions, after consulting
     Italy's Ministry of Economy and Finance; A/I announced shutdown September 6, 2026).
 
-[^16]: [US Terror Listing Kills 16,000 Activist Email Accounts —
+[^18]: [US Terror Listing Kills 16,000 Activist Email Accounts —
     gblock.app](https://www.gblock.app/articles/autistici-inventati-shutdown-16000-activist-emails-2026)
     — scale (16,000 email accounts, 5,500 mailing lists, ~10,000 blogs, 1,500 websites); A/I's
     mail servers themselves, hosted in Europe, were never touched.
 
-[^17]: [Italian Email Service Faces Disruption After U.S. Sanctions —
+[^19]: [Italian Email Service Faces Disruption After U.S. Sanctions —
     emailexpert](https://emailexpert.com/italian-email-service-faces-disruption-after-u-s-sanctions/)
     — users could read existing mail but not send or receive new mail once the domain stopped
     resolving; A/I itself said it had not established whether Public Interest Registry acted on
     an explicit OFAC instruction or preemptively.
 
-[^18]: Down to a literal red light on someone's desk when a build
+[^20]: Down to a literal red light on someone's desk when a build
     breaks — see [this example of building a failure
     light](https://99x.io/Insights/blog/building-a-jenkins-failure-light-using-particle-photon)
     for a CI pipeline, wiring a Particle Photon board to a Jenkins job.
 
-[^19]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
+[^21]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
     bot that runs asynchronous standups and posts status updates
     directly to a channel, without a meeting.
 
-[^20]: Real companies tie executive compensation directly to
+[^22]: Real companies tie executive compensation directly to
     ROIC/ROCE performance targets, per their own SEC filings — e.g.
     [Phillips 66's 2021 proxy
     statement](https://www.sec.gov/Archives/edgar/data/1534701/000114036121010999/nc10021503x3_def14a.htm)
@@ -1418,18 +1453,18 @@ when it later leaves the retained-earnings pool as a distribution.
     standard valuation framework taught in the [CFA
     curriculum](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/equity-valuation-applications-and-processes).
 
-[^21]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
+[^23]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
     "Co-operation"](https://www.marxists.org/archive/marx/works/1867-c1/ch13.htm) —
     the chapter distinguishing the technical function of directing
     combined labor (the orchestra-conductor analogy) from the despotic
     function of capitalist supervision.
 
-[^22]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
+[^24]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
     trans. 1934), on entrepreneurial profit vs. interest on capital; and
     *Capitalism, Socialism and Democracy* (1942) on "creative
     destruction."
 
-[^23]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
+[^25]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
     and Profit of
     Enterprise"](https://www.marxists.org/archive/marx/works/1894-c3/ch23.htm) —
     the chapter distinguishing "wages of superintendence" from "profit
