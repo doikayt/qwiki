@@ -63,7 +63,7 @@ and earned revenue get distributed among contributors through a narrowly-scoped
 Decentralized Autonomous Organization) — we look at some of the historical and
 economic factors which make the emergence of a new model inevitable. We note how
 the standard corporate form arose as a specific historical answer to the
-questions of (a) who governs production, and (b) who benefits from that production? We first
+economic questions of (a) who governs production, and (b) who benefits from that production? We first
 analyze these questions through the lens of neoclassical economists — in
 particular how [Coase's 1937 transaction-cost
 account](https://en.wikipedia.org/wiki/The_Nature_of_the_Firm) explains why
@@ -382,7 +382,7 @@ employees, vesting it to them over years of service. Congress built it
 as a tax-favored path to convert employees into genuine owners rather
 than just wage earners. How broadly that ownership has to be shared
 isn't left to a founder's discretion, though — federal law specifies 
-the rules.[^16] Concretely, the trust itself is the stock purchaser: it
+the rules.[^7] Concretely, the trust itself is the stock purchaser: it
 buys back the founder's shares directly — typically financed by a loan
 that the company then repays over time via tax-deductible
 contributions to the trust. This provides founders a liquid exit path that
@@ -426,7 +426,7 @@ flowchart TD
 ```
 
 Allocation tracks loan repayment; whether an employee can keep those
-allocated shares if they leave follows a separate vesting schedule.[^20]
+allocated shares if they leave follows a separate vesting schedule.[^8]
 
 #### When ESOPs make sense
 
@@ -485,9 +485,9 @@ details:
   - Because an ESOP trust is itself tax-exempt, whatever share of the
     company an ESOP owns generates income tax-free at the corporate
     level — a 100%-ESOP-owned S-corp can end up owing no federal
-    income tax at all.
+    income tax at all.[^9]
   - That tax exemption comes with its own extra safeguard against
-    insider concentration.[^15]
+    insider concentration.[^10]
   - Doesn't get §1042: that deferral is C-corp only.
 
 The C-corp/S-corp election is mutually exclusive, and the two reward
@@ -529,7 +529,7 @@ decision-making, or equity. To clarify:
 ## 4. The Stakes, and Why Our Model Has an Edge
 
 The past year (2026, as of this writing) has seen rapid, measurable progress
-toward AI writing the software that builds AI itself.[^7]   This
+toward AI writing the software that builds AI itself.[^11]   This
 mirrors recent progress toward 
 ["lights-out manufacturing"](https://en.wikipedia.org/wiki/Lights_out_(manufacturing)) 
 -- robots building new robots with minimal human involvment -- in the 
@@ -567,7 +567,7 @@ elite-track positions than it has positions to absorb them into, intra-elite
 competition intensifies and average outcomes for elite aspirants decline.
 Some fraction of those aspirants then tend to become "counter-elites,"
 turning their training and ambition toward organizing opposition to the
-existing order rather than joining it.[^8]
+existing order rather than joining it.[^12]
 
 This is playing out in the current U.S. software labor market: an
 education system that has spent two decades producing what is now an over-supply of
@@ -617,49 +617,63 @@ In summary, the operational advantages that accrue from these two structural pro
 [ WARNING: AI slop ahead - this section is mostly a dump of research, and needs major editing to not 
 induce reader headache]
 
-Engineers building cloud infrastructure learned this lesson long ago: you don't put a service in one data center, because
-one region's outage takes the whole thing down — you replicate across independent regions and providers so no single
-failure is fatal. The same logic applies to organizations, and it's the same reason a single aircraft carrier, however
-powerful, is one well-placed strike away from losing everything it carries: concentrating value and capability into one
-legal entity is exactly what makes it worth attacking — legally, politically, operationally. A dispersed, replicable
-structure has no equivalent point of failure: if a lawsuit, a funding collapse, or a government action takes out one
-Satellite, the shared Commons and every other Satellite running it keep operating. See Appendix A.6, "Why dispersion, not
-just adequate but better", for the full argument.
+Engineers building cloud infrastructure learned this lesson long ago:
+you don't put a service in one data center, because one region's
+outage takes down everything. Instead, you replicate across
+independent regions and providers so no single failure is fatal. We
+propose applying that same logic to software collectives, which face
+increasing repression from both state actors and deplatforming from
+large corporations unwilling to host their speech.[^13] It's the same
+reason a single aircraft carrier, however powerful, is one
+well-placed strike away from losing everything it carries:
+concentrating value and capability into one legal entity is exactly
+what makes it worth attacking — legally, politically, operationally.
+A dispersed, replicable structure has no equivalent point of failure:
+if a lawsuit, a funding collapse, or a government action takes out
+one Satellite, the shared Commons and every other Satellite running
+it keep operating.
+
+This grounds the distributed structure proposed in
+[§1](#1-the-commons-layer-and-its-satellites) in a concrete threat
+model — and introduces one variation the diagram there doesn't show.
+That figure depicts dispersion at the Satellite (501(c)(3)) level
+only; several of the mitigations below add a second layer beneath
+that, relying on trusted individuals rather than legal entities.
 
 This isn't hypothetical. In August 2026, the US government designated the Italian hosting collective Autistici/Inventati
 a ["Specially Designated Global Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/)
 entity over how its infrastructure was allegedly used by others — and within
-days its primary domain and mail server, both concentrated in one operator, went dark for its entire user base.[^9] Its
+days its primary domain (website) and mail server, both concentrated in one operator, went dark for its entire user base.[^14] Its
 underlying software was already open source; what wasn't dispersed was the service itself. A multi-Satellite structure
 running the same shared code across independently governed, independently banked entities means one Satellite's takedown
 doesn't take the whole network's users down with it.
 
 But dispersion of legal entities alone isn't sufficient. If every Satellite banks with the same institutions or registers
-domains through the same registry, a single coordinated action, or a wave of banks and hosts preemptively cutting ties
-to limit their own exposure, can still hit several at once — real resilience means deliberately varying banks,
+domains through the same registry, a single coordinated action, or a wave of banks and hosting services preemptively
+cutting ties to limit their own exposure to government pressure, can still hit several at once — real resilience means deliberately varying banks,
 registrars, and jurisdictions across Satellites, not just incorporating separately. The DAO's multisig crypto-treasury
 leg (§2) offers a partial hedge against that specific bank-level risk — it can't be frozen the way an account can — but
 none of this protects whichever Satellite is actually targeted from the consequences of that; dispersion preserves the
 pattern and its other Satellites, not any single one of them.
 
 The chain of events is worth walking through, because it shows exactly which chokepoints did the damage. The
-State Department designation landed August 26, 2026. PayPal cut off A/I's account within days.[^17] Then, 48 hours
+State Department designation landed August 26, 2026. PayPal cut off A/I's account within days.[^15] Then, 48 hours
 after the designation, the Public Interest Registry — the nonprofit that operates the entire `.org` namespace —
-disabled `autistici.org`.[^17] A/I's mail servers themselves, sitting in Europe, were never touched; nothing about
+disabled `autistici.org`.[^15] A/I's mail servers themselves, sitting in Europe, were never touched; nothing about
 the underlying software broke. As one account of the shutdown put it, "the failure happened at the domain registry
-and the payment rails" — layers no mail provider, and no amount of server dispersion, actually controls.[^19]
+and the payment rails" — layers no mail provider, and no amount of server dispersion, actually controls.[^16]
 Users could still read mail already sitting in their inboxes, but nothing new could be sent or received once the
-domain stopped resolving.[^18] The same day, A/I's NoBlogs platform was separately compromised by an attacker
+domain stopped resolving.[^17] The same day, A/I's NoBlogs platform was separately compromised by an attacker
 exploiting a software vulnerability — a couple of hours of unauthorized access, a defaced homepage, the service
-dropped into read-only mode while they investigated.[^17] Whether or not it was opportunistic, being visibly down
+dropped into read-only mode while they investigated.[^15] Whether or not it was opportunistic, being visibly down
 invited more trouble, not less. On September 1, Banca Etica — an Italian bank, outside direct U.S. jurisdiction —
 suspended A/I's account too, after consulting Italy's Ministry of Economy and Finance, because an Italian bank
-still clears dollars through U.S. correspondent banks and wasn't willing to risk that access over one customer.[^17]
+still clears dollars through U.S. correspondent banks and wasn't willing to risk that access over one customer.[^15]
 On September 6, roughly sixteen thousand mailboxes, ten thousand blogs, and fifty-five hundred mailing lists later,
 A/I shut down for good. Their own statement said it plainly: "the possibility that our work may cause legal and
-financial consequences to those who are close to us... leaves us no choice."[^17] Notably, A/I itself said it
+financial consequences to those who are close to us... leaves us no choice."[^15] Notably, A/I itself said it
 couldn't establish whether the registry had acted on an explicit OFAC instruction or simply preferred not to find
-out[^18] — which is itself part of the mechanism: no one downstream needs a direct order, only enough exposure
+out[^17] — which is itself part of the mechanism: no one downstream needs a direct order, only enough exposure
 that they'd rather not risk it.
 
 None of that was a technical hack. It was a sanctions designation working exactly as designed — making it too
@@ -724,7 +738,7 @@ modern corporation took shape. Before Richard Arkwright's water frame (1769), En
 cloth was made under the *putting-out system*, which was characterized by
 decentralized market coordination, and required that
 a separate bargain be struck between contracting merchants and each individual worker.
-The merchant distributed raw wool or cotton to independent spinners and weavers
+Merchants distributed raw wool or cotton to independent spinners and weavers
 working in their own homes and paid piece-rate for finished cloth, with no employment
 relationship at all. This system lost out to the factory model for three
 specific reasons: 
@@ -748,11 +762,12 @@ decades, and a wave of more recent innovations in AI, especially
 - **Production**: is now much more observable — past, present, and future.
   [Version control](https://en.wikipedia.org/wiki/Version_control)
   provides a machine searchable record of  what code was written, and 
-  by whom, in the *past*. CI/CD pipelines, automated test suites, [code
+  by whom, in the *past*. [CI/CD](https://en.wikipedia.org/wiki/CI/CD)
+  pipelines, automated test suites, [code
   coverage](https://en.wikipedia.org/wiki/Code_coverage), and
   [object-oriented
   metrics](https://www.geeksforgeeks.org/software-engineering/object-oriented-metrices-in-software-engineering/)
-  surface failures the moment they happen in the *present*.[^21]
+  surface failures the moment they happen in the *present*.[^18]
   [Agile boards](https://en.wikipedia.org/wiki/Kanban_board) and
   estimation — [story
   points](https://en.wikipedia.org/wiki/Planning_poker),
@@ -762,10 +777,10 @@ decades, and a wave of more recent innovations in AI, especially
   and distribution of   _future_ work.
 - **Centralization**: is no longer required. Cloud infrastructure is
   rentable by the hour -- which enables individual remote developers (and 
-  even one person software shops) to leverage the same equipment as larger companies.
+  even one person software shops) to leverage the same compute capacity as larger companies.
 - **Scheduling**: is now enforceable via [issue
   trackers](https://en.wikipedia.org/wiki/Issue_tracking_system),
-  automated status checks, and rule-based status bots[^24], which nudge communication 
+  automated status checks, and rule-based status bots[^19], which nudge communication 
   channels on a fixed schedule when a deadline slips. These tools keep
   remote contributors coordinated against real deadlines without the
   need to clock in at some centralized office.
@@ -775,7 +790,7 @@ decades, and a wave of more recent innovations in AI, especially
 AI has unbound the first two constraints to a degree. For example,
 AI-assisted reviews help head off _production_ problems by monitoring 
 (and preventing the integration of) poor quality candidate updates to the code base.
-AI models are themselves a new form of _decentralized_
+Hosted AI models are themselves a new form of _decentralized_
 infrastructure available to smaller teams.
 However, the real advance is in the third: _scheduling_. As more coding
 effort shifts from remote human contributors to
@@ -843,7 +858,7 @@ industriousness manages the same blade in an hour, the slow knapper's
 blade isn't worth more for the extra hours spent. *Value* inheres in the
 *average* time  -- across the whole clan — that it takes to produce
 something, not whatever time any individual happens to put in. Any extra
-hours are simply wasted and no extra *value* created. 
+hours are simply wasted and no extra *value* is created. 
 
 
 #### From flint tools to factories
@@ -870,8 +885,8 @@ prior training, practice, and study, the engineer would never have
 the mental tools that allow that insight to take shape.
 Both types of effort count toward *value* creation —
 the hours spent studying to be at  the level where insight is possible 
-are just as relevant as the hours spent at the drafting table working toward 
-the finished design. The total effort hours across both categories are 
+are just as relevant as the hours spent at the drafting table refining the idea.
+The total effort hours across both categories are 
 thinly amortized across every blade produced as a result of those
 efforts.
 
@@ -941,7 +956,7 @@ Bolsheviks?"<br>(1930s). Public domain.</sub></td></tr>
 
 Whoever owns the machinery that *surplus value* gets invested in also holds most
 of the power to decide how the production process is organized and how
-its output gets divided — and whoever operates that machinery has an
+its output gets divided. Whoever operates that machinery has an
 obvious stake in both questions too. That opposition of interest is
 structural and not something that one good-faith negotiation
 resolves for good. This is because the underlying division of power and divergence of 
@@ -1094,7 +1109,7 @@ others:
 
 `p'` and ROIC are the tightest match — both ask the same question,
 profit per dollar of *total* capital committed, rather than margin on
-revenue alone.[^10] `q` and capital intensity are close too; it's a real
+revenue alone.[^20] `q` and capital intensity are close too; it's a real
 ratio tracked in corporate finance, just not always called that. `s'`
 has no standard named counterpart — the nearest real-world equivalent
 is informal, something like a labor-cost markup.
@@ -1156,16 +1171,16 @@ on exit aligns with their own stated principles.
 Row-by-row, here's where each one comes from:
 
 - **Row 1 (coordination)** — Marx, *Capital* Vol. 1, Ch. 13,
-  "Co-operation"[^13]: *"all combined labour on a large scale requires,
+  "Co-operation"[^21]: *"all combined labour on a large scale requires,
   more or less, a directing authority, in order to secure the
   harmonious working of the individual activities."*
-- **Row 2 (despotic surveillance)** — same chapter[^13]: *"by reason of
+- **Row 2 (despotic surveillance)** — same chapter[^21]: *"by reason of
   ... the unavoidable antagonism between the exploiter and the living
   and labouring raw material he exploits."*
-- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^11]
+- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^22]
   instead.
 - **Row 4 (rent)** — Marx, *Capital* Vol. 3, Ch. 23, "Interest and
-  Profit of Enterprise"[^12], quoting the capitalist's own rationale:
+  Profit of Enterprise"[^23], quoting the capitalist's own rationale:
   his profit of enterprise is *"itself rather a wage ... of
   superintendence of labor."*
 
@@ -1214,7 +1229,7 @@ mere ownership (#4) We think it deserves fair compensation.
 
 Joseph Schumpeter offers a cleaner theoretical home for this one gap than
 Marx does. He drew his own line between the entrepreneur's reward — a
-temporary payout for introducing what he called a "new combination"[^11] —
+temporary payout for introducing what he called a "new combination"[^22] —
 and the rentier's return on capital merely owned. That entrepreneurial
 reward, in his account, gets competed away once the innovation is copied.
 This aligns with our belief that the exit reward should recognize the labor
@@ -1262,24 +1277,30 @@ or not it's actually distributed — so nothing further happens tax-wise
 when it later leaves the retained-earnings pool as a distribution.
 
 
+## Footnotes
+
 [^1]: [Inclosure Acts — Wikipedia](https://en.wikipedia.org/wiki/Inclosure_Acts).
     Parliamentary enclosure became the norm from the 1750s on; by 1750, nearly
     half of all land in England was already enclosed, with roughly 5,200
     enclosure Acts passed between 1604 and 1914, covering about a fifth of
     England's total land area (~6.8 million acres).
+
 [^2]: [Public Goods — YouTube](https://www.youtube.com/watch?v=F4SmgrAmdUQ&t=296s).
     Uses Banksy's graffiti as an example of enclosure — a public good turned
     into a private commodity — and covers Elinor Ostrom's research
     overturning Garrett Hardin's "tragedy of the commons," which this
     document covers directly in [§1](#the-tragedy-of-the-commons-proven-wrong).
+
 [^3]: Karl Marx, "Fragment on Machines," in the [*Grundrisse*
     notebooks](https://www.marxists.org/archive/marx/works/1857/grundrisse/ch14.htm)
     (1857–58) — the notebook section containing the **general intellect**
     passage this document draws on.
+
 [^4]: [As HashiCorp adopts the BSL, an era of open-source software might be
     ending](https://www.runtime.news/as-hashicorp-adopts-the-bsl-an-era-of-open-source-software-might-be-ending/);
     [Moving Away From Open Source: Trends in Source-Available Licensing —
     Goodwin](https://www.goodwinlaw.com/en/insights/publications/2024/09/insights-practices-moving-away-from-open-source-trends-in-licensing).
+
 [^5]: The "nuclear option" against enclosure is a strong copyleft license
     such as the [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License),
     which requires anyone who distributes a modified version to release
@@ -1299,47 +1320,30 @@ when it later leaves the retained-earnings pool as a distribution.
     support, a polished commercial product — on top of the shared,
     freely-forkable core. That's the light barrier to entry a subsidiary
     needs to fund itself, without ever restricting the Commons itself.
+
 [^6]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
-[^7]: [arxiv.org/abs/2607.07663](https://arxiv.org/abs/2607.07663)
-[^8]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
-    [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
-[^9]: [Designation of Autistici/Inventati as a Specially Designated
-    Global Terrorist — U.S. Department of
-    State](https://www.state.gov/releases/office-of-the-spokesperson/2026/08/designation-of-autistici-inventati-as-a-specially-designated-global-terrorist)
-    (August 26, 2026); [Autistici/Inventati press release — infrastructure
-    impact timeline](https://www.inventati.org/campaign/press) (domain
-    unreachable August 28, 2026).
-[^10]: Real companies tie executive compensation directly to
-    ROIC/ROCE performance targets, per their own SEC filings — e.g.
-    [Phillips 66's 2021 proxy
-    statement](https://www.sec.gov/Archives/edgar/data/1534701/000114036121010999/nc10021503x3_def14a.htm)
-    (50% of performance-share payout tied to after-tax ROCE) and
-    [Schlumberger/SLB's 2025 proxy
-    statement](https://www.sec.gov/Archives/edgar/data/87347/000130817925000029/slb_courtesy-pdf.pdf)
-    (three-year average ROCE benchmarked against competitors). On the
-    analyst side, comparing ROIC against WACC (cost of capital) is a
-    standard valuation framework taught in the [CFA
-    curriculum](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/equity-valuation-applications-and-processes).
-[^11]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
-    trans. 1934), on entrepreneurial profit vs. interest on capital; and
-    *Capitalism, Socialism and Democracy* (1942) on "creative
-    destruction."
-[^12]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
-    and Profit of
-    Enterprise"](https://www.marxists.org/archive/marx/works/1894-c3/ch23.htm) —
-    the chapter distinguishing "wages of superintendence" from "profit
-    of enterprise."
-[^13]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
-    "Co-operation"](https://www.marxists.org/archive/marx/works/1867-c1/ch13.htm) —
-    the chapter distinguishing the technical function of directing
-    combined labor (the orchestra-conductor analogy) from the despotic
-    function of capitalist supervision.
-[^14]: [NCEO, "ESOPs in S
+
+[^7]: ERISA requires broad-based coverage — generally, every employee
+    meeting minimal age and service thresholds must be eligible — and
+    nondiscriminatory allocation formulas that can't disproportionately
+    favor highly compensated employees over everyone else. The law is
+    built to prevent an ESOP in name only, with a small circle of
+    insiders collecting most of its actual value.
+
+[^8]: Allocation and vesting are different clocks. Shares move out of the loan's
+    collateral (suspense) account into an employee's individual account as the acquisition
+    debt gets repaid — that's allocation, and it's mechanically tied to the loan. Whether the
+    employee has a non-forfeitable right to *keep* shares already allocated to them is governed
+    separately, by a service-based vesting schedule (e.g., graded vesting over several years);
+    an employee can hold allocated shares that would still be forfeited if they left early.
+
+[^9]: [NCEO, "ESOPs in S
     Corporations"](https://www.nceo.org/what-is-employee-ownership/esops/esops-s-corporations) —
     on the federal tax exemption for S-corp income attributable to ESOP
     ownership, and the ~4,000-plus 100%-ESOP-owned S-corps counted in a
     2022 survey.
-[^15]: Without a safeguard, a founder could structure an S-corp ESOP
+
+[^10]: Without a safeguard, a founder could structure an S-corp ESOP
     so the company pays no tax while the shares' actual value stays
     concentrated among a small circle of insiders rather than reaching
     rank-and-file employees. [IRC §409(p) — IRS, "Preventing the
@@ -1352,69 +1356,81 @@ when it later leaves the retained-earnings pool as a distribution.
     equity. Violations carry a 50% excise tax, deemed taxable
     distributions to participants, loss of the ESOP's tax-qualified
     status, and termination of the company's S-corp election.
-[^16]: ERISA requires broad-based coverage — generally, every employee
-    meeting minimal age and service thresholds must be eligible — and
-    nondiscriminatory allocation formulas that can't disproportionately
-    favor highly compensated employees over everyone else. The law is
-    built to prevent an ESOP in name only, with a small circle of
-    insiders collecting most of its actual value.
-[^17]: Timeline of the August 2026 SDGT designation and aftermath: [Autistici/Inventati —
+
+[^11]: [arxiv.org/abs/2607.07663](https://arxiv.org/abs/2607.07663)
+
+[^12]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
+    [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
+
+[^13]: Rainey Reitman (former EFF Activism Director), *Transaction
+    Denied*, documents cases of financial institutions and payment
+    processors freezing accounts or blocking transactions over
+    speech-related concerns — including teachers, journalists, and
+    politicians cut off with little explanation or recourse. [EFF:
+    Transaction
+    Denied](https://www.eff.org/deeplinks/2026/04/former-eff-activism-directors-new-book-transaction-denied-explores-what-happens)
+    (April 2026).
+
+[^14]: [Designation of Autistici/Inventati as a Specially Designated
+    Global Terrorist — U.S. Department of
+    State](https://www.state.gov/releases/office-of-the-spokesperson/2026/08/designation-of-autistici-inventati-as-a-specially-designated-global-terrorist)
+    (August 26, 2026); [Autistici/Inventati press release — infrastructure
+    impact timeline](https://www.inventati.org/campaign/press) (domain
+    unreachable August 28, 2026).
+
+[^15]: Timeline of the August 2026 SDGT designation and aftermath: [Autistici/Inventati —
     Wikipedia](https://en.wikipedia.org/wiki/Autistici/Inventati) (PayPal loss "within days";
     Public Interest Registry disabled autistici.org August 28, 2026, 48 hours after the
     designation; NoBlogs compromised the same day via a software vulnerability, ~2 hours of
     unauthorized access, homepage defaced, service put in read-only mode; Banca Etica suspended
     A/I's account September 1, 2026 citing risk of U.S. secondary sanctions, after consulting
     Italy's Ministry of Economy and Finance; A/I announced shutdown September 6, 2026).
-[^18]: [Italian Email Service Faces Disruption After U.S. Sanctions —
-    emailexpert](https://emailexpert.com/italian-email-service-faces-disruption-after-u-s-sanctions/)
-    — users could read existing mail but not send or receive new mail once the domain stopped
-    resolving; A/I itself said it had not established whether Public Interest Registry acted on
-    an explicit OFAC instruction or preemptively.
-[^19]: [US Terror Listing Kills 16,000 Activist Email Accounts —
+
+[^16]: [US Terror Listing Kills 16,000 Activist Email Accounts —
     gblock.app](https://www.gblock.app/articles/autistici-inventati-shutdown-16000-activist-emails-2026)
     — scale (16,000 email accounts, 5,500 mailing lists, ~10,000 blogs, 1,500 websites); A/I's
     mail servers themselves, hosted in Europe, were never touched.
 
-[^20]: Allocation and vesting are different clocks. Shares move out of the loan's
-    collateral (suspense) account into an employee's individual account as the acquisition
-    debt gets repaid — that's allocation, and it's mechanically tied to the loan. Whether the
-    employee has a non-forfeitable right to *keep* shares already allocated to them is governed
-    separately, by a service-based vesting schedule (e.g., graded vesting over several years);
-    an employee can hold allocated shares that would still be forfeited if they left early.
+[^17]: [Italian Email Service Faces Disruption After U.S. Sanctions —
+    emailexpert](https://emailexpert.com/italian-email-service-faces-disruption-after-u-s-sanctions/)
+    — users could read existing mail but not send or receive new mail once the domain stopped
+    resolving; A/I itself said it had not established whether Public Interest Registry acted on
+    an explicit OFAC instruction or preemptively.
 
-[^21]: Down to a literal red light on someone's desk when a build
+[^18]: Down to a literal red light on someone's desk when a build
     breaks — see [this example of building a failure
     light](https://99x.io/Insights/blog/building-a-jenkins-failure-light-using-particle-photon)
     for a CI pipeline, wiring a Particle Photon board to a Jenkins job.
 
-[^22]: Microsoft Research's "Nudge" system, tested in a randomized
-    trial across 147 repositories, cut overdue pull-request resolution
-    time by 60%. [Nudge: Accelerating Overdue Pull Requests toward
-    Completion](https://arxiv.org/pdf/2011.12468), *ACM Transactions on
-    Software Engineering and Methodology* (2022).
-
-[^23]: A static linter analyzes source code without running it,
-    flagging style violations, suspicious patterns, and likely bugs.
-    [Lint (software) —
-    Wikipedia](https://en.wikipedia.org/wiki/Lint_(software)).
-
-[^24]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
+[^19]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
     bot that runs asynchronous standups and posts status updates
     directly to a channel, without a meeting.
 
-[^25]: Project mBridge is a cross-border settlement platform built by
-    the central banks of China, Hong Kong, Thailand, the UAE, and
-    Saudi Arabia. Firms in Xinjiang have reportedly used it to route
-    around US sanctions, and the BIS handed the project fully over to
-    its member central banks in 2024 under pressure from Washington
-    over that risk — though BIS maintains the platform isn't intended
-    to enable sanctions evasion. [BIS Debates Ending Project Eyed by
-    Putin to Undermine
-    Dollar](https://www.bloomberg.com/news/articles/2024-10-28/bis-debates-ending-project-eyed-by-putin-to-undermine-dollar),
-    Bloomberg (2024); Xinjiang use reported by *The Economist*
-    (September 2025). BIS's own pilot report found mBridge completed
-    international transfers and FX operations in seconds rather than
-    the several days correspondent banking normally requires, at up to
-    half the cost. [Inthanon-LionRock to
-    mBridge](https://www.bis.org/publ/othp40.htm), BIS Innovation Hub
-    (2023).
+[^20]: Real companies tie executive compensation directly to
+    ROIC/ROCE performance targets, per their own SEC filings — e.g.
+    [Phillips 66's 2021 proxy
+    statement](https://www.sec.gov/Archives/edgar/data/1534701/000114036121010999/nc10021503x3_def14a.htm)
+    (50% of performance-share payout tied to after-tax ROCE) and
+    [Schlumberger/SLB's 2025 proxy
+    statement](https://www.sec.gov/Archives/edgar/data/87347/000130817925000029/slb_courtesy-pdf.pdf)
+    (three-year average ROCE benchmarked against competitors). On the
+    analyst side, comparing ROIC against WACC (cost of capital) is a
+    standard valuation framework taught in the [CFA
+    curriculum](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/equity-valuation-applications-and-processes).
+
+[^21]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
+    "Co-operation"](https://www.marxists.org/archive/marx/works/1867-c1/ch13.htm) —
+    the chapter distinguishing the technical function of directing
+    combined labor (the orchestra-conductor analogy) from the despotic
+    function of capitalist supervision.
+
+[^22]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
+    trans. 1934), on entrepreneurial profit vs. interest on capital; and
+    *Capitalism, Socialism and Democracy* (1942) on "creative
+    destruction."
+
+[^23]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
+    and Profit of
+    Enterprise"](https://www.marxists.org/archive/marx/works/1894-c3/ch23.htm) —
+    the chapter distinguishing "wages of superintendence" from "profit
+    of enterprise."
