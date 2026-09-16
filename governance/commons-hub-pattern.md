@@ -649,7 +649,7 @@ hosting collective Autistici/Inventati as a ["Specially Designated
 Global Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/)
 serves as a useful case study on how a satellite structured collective might have
 avoided a shut-down. We propose mitigations[^16] on two axes:
-network infrastructure, and financial (money in motion and money at rest) -- but first a recap.
+technical infrastructure, and financial structure (money in motion and money at rest) -- but first a recap.
 
 
 The US State department issued the designation on August 26.[^17] 
@@ -666,7 +666,7 @@ access over one customer.[^18]
 #### Mitigations
 
 
-*Technical Infrastructure — Network*
+*Technical Infrastructure - [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)*
 
 Domain choice is the first line of defense: `.com` and `.org` are
 both run by U.S.-based registries (Verisign and the Public Interest
@@ -685,8 +685,7 @@ registering the domain under its own name and merely licensing you
 usage rights. This delegated-ownership model, used by some
 anonymity-focused registrars, leaves you with no standing to transfer
 or reclaim the domain yourself if that registrar itself caves. 1984 also
-runs its own [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)
-hosting, and its
+runs its own DNS hosting, and its
 [nameservers](https://en.wikipedia.org/wiki/Name_server) are already
 pre-registered with ISNIC, sidestepping the separate registration
 step ISNIC otherwise requires.
@@ -733,10 +732,11 @@ that hosts the actual SMTP server — an organization that can face its
 own outages, state-actor pressure, or outright seizure, independent
 of the domain's registry status entirely. Worse, even a healthy mail server can be effectively silenced if
 major providers (Gmail, Outlook, and similar) start rejecting or
-spam-filtering *outbound* mail from the domain — affecting what the
-org sends, not what it receives — whether through direct pressure or
-simple reputation flagging. No registrar choice touches this failure
-mode at all.
+spam-filtering *outbound* mail from the domain. Such rejection would affect what the
+collective sends, not what it receives -- regardless of whether the rejection 
+was triggered by the provider caving under state actor pressure or
+simply getting caught by ordinary spam filters. No registrar choice
+touches this failure mode at all.
 
 A trusted individual handles this personally: they register a second
 domain and mail hosting plan under their own name and payment method
@@ -757,6 +757,9 @@ these fallback pieces — domain, mail, source repo, keys — lets them
 coordinate directly during an actual crisis, without depending on the
 same email infrastructure that might be the thing failing.
 
+
+
+[[[  THIS SECTION NEEDS A REWRITE ]]]
 *Financial Layer*
 
 For the financial layer: a payment rail and a bank vault are, in this
