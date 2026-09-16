@@ -35,8 +35,12 @@ open source software (OSS) around nonprofit and for-profit satellites*
   - [The labor-market half of the advantage: elite overproduction and AI-driven displacement](#the-labor-market-half-of-the-advantage-elite-overproduction-and-ai-driven-displacement)
   - [Cost advantages that a for-profit competitor can't match](#cost-advantages-that-a-for-profit-competitor-cant-match)
   - [Resilience through dispersion](#resilience-through-dispersion)
+    - [Case study: the takedown of Autistici/Inventati](#case-study-the-takedown-of-autisticiinventati)
+    - [Mitigations](#mitigations)
 - [Appendix A: Historical and Economic Grounding](#appendix-a-historical-and-economic-grounding)
   - [A.1 Why firms exist: Coase, the putting-out system, and what's changing now](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now)
+    - [The tooling wave](#the-tooling-wave)
+    - [The AI wave](#the-ai-wave)
   - [A.2 Marxist economics 101](#a2-marxist-economics-101)
     - [Use-value](#use-value)
     - [Value and socially necessary labor time](#value-and-socially-necessary-labor-time)
@@ -689,20 +693,32 @@ step ISNIC otherwise requires.
 
 
 An extra layer of protection is achievable (at the expense of more network configuration overhead) 
-by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror[^20][^21].
+by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror on
+[Tor](https://en.wikipedia.org/wiki/Tor_(network)) (short, historically, for
+"The Onion Router," though the Tor Project no longer treats it as a
+spelled-out acronym)[^20][^21].
 Unlike a `.is` (dot _is_) domain, a `.onion` (dot _onion_) address needs
 no DNS at all: it's self-certifying, derived directly from the
 service's own [keypair](https://spec.torproject.org/rend-spec/encoding-onion-addresses.html)[^22],
 and resolved through Tor's own distributed
 hidden-service directory — no registry, registrar, or nameserver in
-that chain for anyone to pressure. Put plainly: the `.is`/ISNIC choice
+that chain for a state actor to pressure. Put plainly: the
+`.is`/ISNIC choice
 is a pressure-resistant DNS dependency, but still a dependency; the
 onion mirror is a zero-DNS-dependency channel outright — a different
 category from any registrar, no matter how takedown-resistant. Treat
 it as routine, not an emergency-only
 bookmark — in daily use on an ordinary Tuesday, it's there the day
-something goes wrong. Worth flagging: using Tor at all can itself
-draw extra scrutiny.[^23]
+something goes wrong. Advertise it, too: set an
+`Onion-Location` HTTP header[^23] on the clearnet site
+pointing at the `.onion` URL — Tor Browser detects it automatically
+and offers visitors a one-click switch, no separate announcement
+needed. Publish the bare address as well, in the site footer and
+official bios, for anyone on a different Tor client. Verify it
+periodically rather than assuming it still works months later —
+`wget --server-response --spider` against the clearnet site, or just
+loading it in Tor Browser and confirming the prompt appears. Worth
+flagging: using Tor at all can itself draw extra scrutiny.[^24]
 
 [[[        THIS SECTION BEING EDITED NOW  -- not settled ]]]
 
@@ -772,7 +788,7 @@ decades, and a wave of more recent innovations in AI, especially
   coverage](https://en.wikipedia.org/wiki/Code_coverage), and
   [object-oriented
   metrics](https://www.geeksforgeeks.org/software-engineering/object-oriented-metrices-in-software-engineering/)
-  surface failures the moment they happen in the *present*.[^24]
+  surface failures the moment they happen in the *present*.[^25]
   [Agile boards](https://en.wikipedia.org/wiki/Kanban_board) and
   estimation — [story
   points](https://en.wikipedia.org/wiki/Planning_poker),
@@ -785,7 +801,7 @@ decades, and a wave of more recent innovations in AI, especially
   even one person software shops) to leverage the same compute capacity as larger companies.
 - **Scheduling**: is now enforceable via [issue
   trackers](https://en.wikipedia.org/wiki/Issue_tracking_system),
-  automated status checks, and rule-based status bots[^25], which nudge communication 
+  automated status checks, and rule-based status bots[^26], which nudge communication 
   channels on a fixed schedule when a deadline slips. These tools keep
   remote contributors coordinated against real deadlines without the
   need to clock in at some centralized office.
@@ -1095,7 +1111,7 @@ it would take to reproduce something today, not the labor
 historically sunk into it. So the physical mass of machinery keeps
 climbing (that's what pushes `q = c/v` up in the first place), but its
 value doesn't climb in lockstep, and `q` rises more slowly than
-automation alone would predict.[^26] Add to that foreign
+automation alone would predict.[^27] Add to that foreign
 trade (cheaper imported inputs, or higher-margin export markets) and a
 rising $s'$ that offsets $q$ for a while, and any of these can slow or
 reverse the fall in practice.
@@ -1118,7 +1134,7 @@ others:
 
 `p'` and ROIC are the tightest match — both ask the same question,
 profit per dollar of *total* capital committed, rather than margin on
-revenue alone.[^27] `q` and capital intensity are close too; it's a real
+revenue alone.[^28] `q` and capital intensity are close too; it's a real
 ratio tracked in corporate finance, just not always called that. `s'`
 has no standard named counterpart — the nearest real-world equivalent
 is informal, something like a labor-cost markup.
@@ -1180,16 +1196,16 @@ on exit aligns with their own stated principles.
 Row-by-row, here's where each one comes from:
 
 - **Row 1 (coordination)** — Marx, *Capital* Vol. 1, Ch. 13,
-  "Co-operation"[^28]: *"all combined labour on a large scale requires,
+  "Co-operation"[^29]: *"all combined labour on a large scale requires,
   more or less, a directing authority, in order to secure the
   harmonious working of the individual activities."*
-- **Row 2 (despotic surveillance)** — same chapter[^28]: *"by reason of
+- **Row 2 (despotic surveillance)** — same chapter[^29]: *"by reason of
   ... the unavoidable antagonism between the exploiter and the living
   and labouring raw material he exploits."*
-- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^29]
+- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^30]
   instead.
 - **Row 4 (rent)** — Marx, *Capital* Vol. 3, Ch. 23, "Interest and
-  Profit of Enterprise"[^30], quoting the capitalist's own rationale:
+  Profit of Enterprise"[^31], quoting the capitalist's own rationale:
   his profit of enterprise is *"itself rather a wage ... of
   superintendence of labor."*
 
@@ -1238,7 +1254,7 @@ mere ownership (#4) We think it deserves fair compensation.
 
 Joseph Schumpeter offers a cleaner theoretical home for this one gap than
 Marx does. He drew his own line between the entrepreneur's reward — a
-temporary payout for introducing what he called a "new combination"[^29] —
+temporary payout for introducing what he called a "new combination"[^30] —
 and the rentier's return on capital merely owned. That entrepreneurial
 reward, in his account, gets competed away once the innovation is copied.
 This aligns with our belief that the exit reward should recognize the labor
@@ -1435,7 +1451,14 @@ when it later leaves the retained-earnings pool as a distribution.
     A CA-issued cert exposes the `.onion` address in public Certificate
     Transparency logs, worth weighing against the anonymity goal here.
 
-[^23]: Leaked NSA XKeyscore source code showed Tor users
+[^23]: [Onion-Location — Join the Tor
+    Community](https://community.torproject.org/onion-services/advanced/onion-location/) —
+    the header must be served over HTTPS on the clearnet site (not the
+    onion site itself) and point to a valid `.onion` URL; test with
+    `wget --server-response --spider` or by loading the site in Tor
+    Browser and confirming the ".onion available" prompt appears.
+
+[^24]: Leaked NSA XKeyscore source code showed Tor users
     flagged for surveillance, some categorized outright as "extremists,"
     regardless of what they were actually doing on the network
     ([SiliconANGLE](https://siliconangle.com/2014/07/04/nsas-xkeyscore-dissected-all-tor-users-marked-as-extremists/),
@@ -1453,22 +1476,22 @@ when it later leaves the retained-earnings pool as a distribution.
     above. We maintain a running assessment of vetted VPN providers at
     [wiki.doikayt.org](https://wiki.doikayt.org/index.php/Category:VPN).
 
-[^24]: Down to a literal red light on someone's desk when a build
+[^25]: Down to a literal red light on someone's desk when a build
     breaks — see [this example of building a failure
     light](https://99x.io/Insights/blog/building-a-jenkins-failure-light-using-particle-photon)
     for a CI pipeline, wiring a Particle Photon board to a Jenkins job.
 
-[^25]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
+[^26]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
     bot that runs asynchronous standups and posts status updates
     directly to a channel, without a meeting.
 
-[^26]: Karl Marx, *Capital*, Vol. 1 (1867), Ch. 15, "Machinery and
+[^27]: Karl Marx, *Capital*, Vol. 1 (1867), Ch. 15, "Machinery and
     Modern Industry" — on machinery losing exchange-value the moment a
     cheaper-to-reproduce equivalent appears, regardless of its own physical
     condition or remaining use-value; Marx's term for this is **moral
     depreciation**, distinct from ordinary wear-and-tear depreciation.
 
-[^27]: Real companies tie executive compensation directly to
+[^28]: Real companies tie executive compensation directly to
     ROIC/ROCE performance targets, per their own SEC filings — e.g.
     [Phillips 66's 2021 proxy
     statement](https://www.sec.gov/Archives/edgar/data/1534701/000114036121010999/nc10021503x3_def14a.htm)
@@ -1480,18 +1503,18 @@ when it later leaves the retained-earnings pool as a distribution.
     standard valuation framework taught in the [CFA
     curriculum](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/equity-valuation-applications-and-processes).
 
-[^28]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
+[^29]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
     "Co-operation"](https://www.marxists.org/archive/marx/works/1867-c1/ch13.htm) —
     the chapter distinguishing the technical function of directing
     combined labor (the orchestra-conductor analogy) from the despotic
     function of capitalist supervision.
 
-[^29]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
+[^30]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
     trans. 1934), on entrepreneurial profit vs. interest on capital; and
     *Capitalism, Socialism and Democracy* (1942) on "creative
     destruction."
 
-[^30]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
+[^31]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
     and Profit of
     Enterprise"](https://www.marxists.org/archive/marx/works/1894-c3/ch23.htm) —
     the chapter distinguishing "wages of superintendence" from "profit
