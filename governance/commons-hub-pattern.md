@@ -690,7 +690,6 @@ runs its own DNS hosting, and its
 pre-registered with ISNIC, sidestepping the separate registration
 step ISNIC otherwise requires.
 
-
 An extra layer of protection is achievable (at the expense of more network configuration overhead) 
 by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror on
 [Tor](https://en.wikipedia.org/wiki/Tor_(network))[^20][^21].
@@ -723,40 +722,55 @@ Tor (even for experimental/research purposes)
 might itself draw extra scrutiny from state actors.[^24]
 
 
-*Technical Infrastructure — Email*
+*Technical Infrastructure — Key and Credential Custodianship*
 
-The Network section addresses resilience to attacks on a collective's
-domain; it doesn't protect the mail server sitting _behind_ the
-domain. A resilient `.is` domain still depends on the email provider
-that hosts the actual SMTP server — an organization that can face its
-own outages, state-actor pressure, or outright seizure, independent
-of the domain's registry status entirely. Worse, even a healthy mail server can be effectively silenced if
-major providers (Gmail, Outlook, and similar) start rejecting or
-spam-filtering *outbound* mail from the domain. Such rejection would affect what the
-collective sends, not what it receives -- regardless of whether the rejection 
-was triggered by the provider caving under state actor pressure or
-simply getting caught by ordinary spam filters. No registrar choice
-touches this failure mode at all.
+This section covers replication of the secret keys a collective needs to
+operate. There are two varieties: keys that govern the ability to ship new
+releases — GitHub Actions secrets together with npm publish tokens — and those
+that protect financial assets — specificaly, a multisig cosigner's wallet key. 
+Each is centralized on some entity's account or device. Losing access
+can freeze release or spending capability even while the underlying
+asset (the git repo and its history, the funds themselves) stays fully intact.
 
-A trusted individual handles this personally: they register a second
-domain and mail hosting plan under their own name and payment method
-— not the org's, so a coordinated action against the org's accounts
-can't reach it — with a genuinely different provider than the
-primary. They send and receive real mail from it regularly, so it
-isn't sitting unverified and isn't flagged as spam the day it's
-actually needed, and they track its own renewal dates rather than
-leaving that to chance. Publish that alternate address alongside the
-onion address — same footer, same bio, same routine-verification
-practice — so it's already known before it's needed. No incorporation
-required: owning it personally, using it routinely, and keeping it
-paid up is the entire job.
+**CI secrets.** GitHub Actions secrets are scoped to whichever GitHub
+org or repo holds them; suspend that account and the secrets — and
+every workflow that depends on them — go with it. The mitigation
+follows the same pattern as the domain and treasury: a trusted
+individual satellite keeps a personal mirror of the repository, with
+its own independently configured secrets, so the release pipeline
+survives even if the primary org's account doesn't.
 
-The same principle covers how the custodians themselves stay in
-touch: a small Signal group among the trusted individuals holding
-these fallback pieces — domain, mail, source repo, keys — lets them
-coordinate directly during an actual crisis, without depending on the
-same email infrastructure that might be the thing failing.
+**npm publish tokens.** Publish rights are tied to an npm user or org
+account; a suspended account can't publish a new version, even though
+everything already published stays live. Prefer npm's granular access
+tokens — scoped to specific packages, with a defined expiry, rather
+than a classic token with blanket publish rights[^32] — and keep a
+second maintainer's account (2FA-enabled, with its own recovery
+methods on file) able to publish as a fallback.
 
+**Crypto wallet keys.** The same single-point-of-failure risk shows up
+here too, at the level of an individual signer rather than the
+treasury as a whole: whoever holds a multisig cosigner key (§2) needs
+to protect that key without becoming a point of failure themselves. A
+hardware wallet, not a software or exchange-hosted one, is the
+baseline — it keeps the private key off any internet-connected device
+entirely. The seed phrase behind it needs its own backup, split or
+duplicated across more than one physical location, so a single fire,
+theft, or lost bag doesn't cost the org a signer. None of this should
+get improvised under pressure: a signer should periodically confirm
+they can still produce a valid signature with their own key, the same
+way the onion mirror and alternate domain above get periodically
+checked, rather than finding out a device has failed only when a
+transaction is actually due. And a signer's org key shouldn't double
+as their personal one — mixing the two means a personal wallet mishap
+can cost the org a signer, and an org-related dispute can expose a
+signer's own holdings.
+
+None of the roles described in this Technical Infrastructure section
+require a corporate entity. A domain registrant, a backup GitHub
+org-owner seat, a secondary npm publish account, and a hardware
+wallet holding a multisig cosigner key can each be held personally by
+a trusted individual satellite.
 
 
 [[[  THIS SECTION NEEDS A REWRITE ]]]
@@ -1562,3 +1576,8 @@ when it later leaves the retained-earnings pool as a distribution.
     Enterprise"](https://www.marxists.org/archive/marx/works/1894-c3/ch23.htm) —
     the chapter distinguishing "wages of superintendence" from "profit
     of enterprise."
+
+[^32]: [Creating and viewing access
+    tokens](https://docs.npmjs.com/creating-and-viewing-access-tokens/) —
+    npm's documentation on granular (package-scoped) tokens vs. classic
+    tokens.
