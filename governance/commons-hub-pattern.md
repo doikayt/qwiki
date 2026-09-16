@@ -616,128 +616,92 @@ In summary, the operational advantages that accrue from these two structural pro
 
 Concentrating capability in one place is inherently risky,
 whereas dispersed placement of resources increases resilience in the face of attack.
-Recent experience on multiple battlefields around the world have driven this 
-home to the US military establishment, whose leadership now states 
-plainly that "forces that are 
+Recent experience on multiple battlefields have driven this 
+home to the US military establishment, whose leadership now recognizes that "forces that are 
 concentrated and static are easy for enemy forces to detect and destroy."[^13] 
-Cloud infrastructure engineers learned long ago the downsides of concentrating 
-services in a single data center: one outage can take out _everything_.  Replication 
-across independent regions and providers is a much better strategy,
-as no one failure is fatal.
+Cloud infrastructure engineers have long been operationalizing this lesson --
+replicating services across regions instead of 
+concentrating them in a single data center, where one outage can take out _everything_.
 
-We propose applying this same logic to software collectives, which face
-increasing repression from both state actors and deplatforming[^14]
-from large corporations unwilling to tolerate wrongthink.[^15] 
-In light of such threats the distributed structure proposed in
-[§1](#1-the-commons-layer-and-its-satellites) can be seen
-as a preemptive counter-measure against these types of threats.
-Note that the referenced diagram posited the satellites
-surrounding a digital commons as 501(c)(3)'s. Here we add a slight twist -- 
-in that some satellites might be trusted individual rather than a corporation.
+We propose applying this same logic to software collectives —
+especially those with status-quo-challenging missions, which are
+increasingly at risk of repression by state actors and deplatforming[^14] by
+large corporations unwilling to tolerate wrongthink [^15].
+In light of such threats, the distributed structure proposed in
+[§1](#1-the-commons-layer-and-its-satellites) serves as a preemptive
+counter-measure.
+(Note that the referenced diagram posited the satellites
+surrounding a digital commons as 501(c)(3)'s, but here we add a slight twist -- 
+in that some satellites might be trusted individual rather than a corporation.)
 
-August 2026 supplied a real test case. The US government designated the
-Italian hosting collective Autistici/Inventati a ["Specially Designated
+
+#### Case study: the takedown of Autistici/Inventati 
+
+The recent (August 2026) US government designation of Italian
+hosting collective Autistici/Inventati as a ["Specially Designated
 Global Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/)
-entity over how its infrastructure was allegedly used by others — and
-within days its primary domain (website) and mail server, both
-concentrated in one operator, went dark for its entire user base.[^16]
-Its underlying software was already open source; what wasn't dispersed
-was the service itself. A multi-Satellite structure running the same
-shared code across independently governed, independently banked
-entities means one Satellite's takedown doesn't take the whole
-network's users down with it.
-
-=== AI slop after this.. needs cleanup  
+serves as a useful case study on how a collective with a satellite structure 
+might have avoided a shut-down. We propose mitigations[^25] on two axes:
+network infrastructure, and financial (money in motion and money at rest) -- but first a recap.
 
 
-But dispersing legal entities alone isn't enough. If every Satellite
-banks with the same institutions or registers domains through the same
-registry, one coordinated action — or a wave of banks and hosts
-preemptively cutting ties to limit their own exposure — can still hit
-several at once. Real resilience means deliberately varying banks,
-registrars, and jurisdictions, not just incorporating separately. The
-DAO's multisig crypto-treasury (§2) offers a partial hedge against the
-bank-level risk specifically — it can't be frozen the way an account
-can — but nothing protects the targeted Satellite itself; dispersion
-preserves the pattern and the other Satellites, not any single one of
-them.
+The US State department issued the designation on August 26.[^16] 
+Forty-eight hours later, the Public Interest Registry — the nonprofit 
+that runs the entire `.org` namespace — disabled `autistici.org`.[^17] 
+On the financial side, PayPal took out the payment rails first, freezing all  money
+in motion.[^17] Banca Etica followed by freezing the account itself —
+money at rest — unwilling to risk its own correspondent-banking access
+over one customer.[^17]
 
-The chokepoints are worth naming, because they show exactly where the
-damage happened. The State Department designation landed August 26;
-PayPal cut A/I off within days.[^17] Forty-eight hours later, the
-Public Interest Registry — the nonprofit running the entire `.org`
-namespace — disabled `autistici.org`.[^17] A/I's mail servers, sitting
-in Europe, were never touched; nothing about the software broke. "The
-failure happened at the domain registry and the payment rails" —
-layers no mail provider, and no amount of server dispersion,
-controls.[^18] Mail already delivered stayed readable; nothing new
-could arrive once the domain stopped resolving.[^19] The same day, an
-unrelated vulnerability let an attacker deface A/I's NoBlogs platform,
-dropping it into read-only mode for a couple of hours.[^17] Being
-visibly down invited more trouble, not less: on September 1, Banca
-Etica — an Italian bank outside direct U.S. jurisdiction — suspended
-A/I's account too, unwilling to risk its own U.S. correspondent-banking
-access over one customer.[^17] On September 6, A/I shut down for good —
-sixteen thousand mailboxes, ten thousand blogs, fifty-five hundred
-mailing lists gone. Their statement was blunt: "the possibility that
-our work may cause legal and financial consequences to those who are
-close to us... leaves us no choice."[^17] A/I itself couldn't say
-whether the registry acted on an explicit order or just preferred not
-to find out[^19] — which is the mechanism working as designed: no one
-downstream needs a direct order, only enough exposure to make
-compliance the safer bet.
+#### Mitigations
 
-None of it was a technical hack. It was a sanctions designation working
-exactly as intended — making it too risky for third parties (a
-registry, a bank, a payment processor) to keep serving the target, and
-letting them do the actual shutting-down. The mitigations split along
-one line: some need only *dispersed people* — a trusted individual in
-another jurisdiction, no incorporation required — others need
-*dispersed legal entities*, because the risk they cover is a different
-kind of risk.
 
-- **DNS/registry — individual-level.** `.org` is run by a single U.S.
-  nonprofit, so no registrar choice would have saved `autistici.org` —
-  the registry itself was the failure point. A trusted individual
-  outside U.S.-aligned reach can hold a mirror domain on a different
-  ccTLD, its fallback address pre-published somewhere that doesn't
-  depend on the primary domain resolving (a pinned Fediverse post, a
-  Matrix room, an onion service) — so users know where to look before
-  an outage, not during one. No entity needed, just someone not
-  organizationally entangled with whatever triggered the takedown.
+[[[        THIS SECTION BEING EDITED NOW  -- not settled ]]]
 
-- **Mail — individual-level.** SMTP is already federated; the
-  concentration here was organizational, not protocol-level. A trusted
-  individual running a backup MX in a different jurisdiction, through a
-  different registry, means one domain's failure doesn't stop the other
-  from accepting mail — just a second person with a server.
 
-- **Crypto keys — individual-level.** Multisig signers should be
-  individuals in different jurisdictions, holding their own cold,
-  self-custodied keys — not a shared wallet at a custodial exchange,
-  which will freeze any SDN-listed address the same way PayPal did.
-  Same "trusted person, not trusted org" pattern.
+*Network Infrastructure*
 
-- **Crypto pay rails — mostly individual-level.** Multisig protects the
-  treasury from being frozen like a bank account, but not the off-ramp:
-  once a Satellite's wallet lands on the SDN list, any U.S.-regulated
-  exchange refuses to cash it out — the same mechanism, one layer down.
-  A segregated wallet under a trusted individual contains that blast
-  radius. Full legal separation between entities only matters if it
-  becomes a courtroom question — whether Satellite A's designation can
-  legally reach Satellite B's assets.
+Domain choice is the first line of defense: `.com` and `.org` are
+both run by U.S.-based registries (Verisign and the Public Interest
+Registry, respectively), which the Autistici/Inventati case just
+showed are responsive to U.S. pressure. Pinning web branding to a
+domain outside U.S. jurisdiction avoids that exposure from the start.
 
-- **Banking — entity-level.** Here a Satellite's legal status actually
-  earns its keep. A trusted individual holding organizational funds
-  personally creates a different problem than a domain under someone's
-  name: commingled assets, personal liability, no continuity if they
-  die, disappear, or get sued — the whole arrangement resting on one
-  person's trustworthiness instead of a governed structure. Banca Etica
-  shows legal dispersion alone isn't enough if every Satellite's bank
-  clears dollars through the same correspondent network — which,
-  practically, is nearly all of them. No clean fix short of holding
-  reserves the DAO's crypto-treasury (§2) can reach without a bank in
-  the loop at all.
+Iceland's `.is` registry, run by the non-profit [ISNIC](https://www.isnic.is/en/), has a
+track record of resisting exactly the kind of takedown request that
+killed `autistici.org`; a privacy-focused registrar like Joker.com
+adds a second layer, making it harder to identify who's behind the
+domain in the first place. 
+
+One practical catch: ISNIC requires
+[nameservers](https://en.wikipedia.org/wiki/Name_server) to be
+pre-registered with them, so using a DNS host that
+already is — [1984.is](https://1984.is), an Icelandic
+privacy-focused provider, is a natural fit. 
+
+
+An extra layer of protection is achievable by maintaining a live
+[onion](https://en.wikipedia.org/wiki/.onion) mirror — at the expense
+of more network configuration and administration overhead. It should
+be part of the regular routine, not a dormant bookmark held in
+reserve for emergencies: if people already use it on an ordinary
+Tuesday, it's already there the moment something goes wrong.
+
+
+*Financial Layer*
+
+For the financial layer: a payment rail and a bank vault are, in this
+respect, the same chokepoint — both are reachable the moment the money
+moving through, or sitting in, them is denominated in U.S. dollars.
+Our structure holds reserves the DAO's crypto-treasury (§2) can reach
+directly, denominated outside the dollar-clearing system entirely —
+no correspondent bank, no USD off-ramp, nothing for a sanctions action
+to grab. Who holds the keys matters too, in a different way: a single
+signer is a single point of failure — if they die, disappear, or go
+dark, the funds go with them. Multisig custody split across several
+trusted individuals in different jurisdictions covers both failure
+modes at once: no institution left to freeze, and no one person whose
+death locks the treasury.
 
 None of this would have stopped the designation itself. It would have
 kept the Commons and every other Satellite running while the targeted
@@ -790,7 +754,7 @@ decades, and a wave of more recent innovations in AI, especially
   coverage](https://en.wikipedia.org/wiki/Code_coverage), and
   [object-oriented
   metrics](https://www.geeksforgeeks.org/software-engineering/object-oriented-metrices-in-software-engineering/)
-  surface failures the moment they happen in the *present*.[^20]
+  surface failures the moment they happen in the *present*.[^19]
   [Agile boards](https://en.wikipedia.org/wiki/Kanban_board) and
   estimation — [story
   points](https://en.wikipedia.org/wiki/Planning_poker),
@@ -803,7 +767,7 @@ decades, and a wave of more recent innovations in AI, especially
   even one person software shops) to leverage the same compute capacity as larger companies.
 - **Scheduling**: is now enforceable via [issue
   trackers](https://en.wikipedia.org/wiki/Issue_tracking_system),
-  automated status checks, and rule-based status bots[^21], which nudge communication 
+  automated status checks, and rule-based status bots[^20], which nudge communication 
   channels on a fixed schedule when a deadline slips. These tools keep
   remote contributors coordinated against real deadlines without the
   need to clock in at some centralized office.
@@ -1132,7 +1096,7 @@ others:
 
 `p'` and ROIC are the tightest match — both ask the same question,
 profit per dollar of *total* capital committed, rather than margin on
-revenue alone.[^22] `q` and capital intensity are close too; it's a real
+revenue alone.[^21] `q` and capital intensity are close too; it's a real
 ratio tracked in corporate finance, just not always called that. `s'`
 has no standard named counterpart — the nearest real-world equivalent
 is informal, something like a labor-cost markup.
@@ -1194,16 +1158,16 @@ on exit aligns with their own stated principles.
 Row-by-row, here's where each one comes from:
 
 - **Row 1 (coordination)** — Marx, *Capital* Vol. 1, Ch. 13,
-  "Co-operation"[^23]: *"all combined labour on a large scale requires,
+  "Co-operation"[^22]: *"all combined labour on a large scale requires,
   more or less, a directing authority, in order to secure the
   harmonious working of the individual activities."*
-- **Row 2 (despotic surveillance)** — same chapter[^23]: *"by reason of
+- **Row 2 (despotic surveillance)** — same chapter[^22]: *"by reason of
   ... the unavoidable antagonism between the exploiter and the living
   and labouring raw material he exploits."*
-- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^24]
+- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^23]
   instead.
 - **Row 4 (rent)** — Marx, *Capital* Vol. 3, Ch. 23, "Interest and
-  Profit of Enterprise"[^25], quoting the capitalist's own rationale:
+  Profit of Enterprise"[^24], quoting the capitalist's own rationale:
   his profit of enterprise is *"itself rather a wage ... of
   superintendence of labor."*
 
@@ -1252,7 +1216,7 @@ mere ownership (#4) We think it deserves fair compensation.
 
 Joseph Schumpeter offers a cleaner theoretical home for this one gap than
 Marx does. He drew his own line between the entrepreneur's reward — a
-temporary payout for introducing what he called a "new combination"[^24] —
+temporary payout for introducing what he called a "new combination"[^23] —
 and the rentier's return on capital merely owned. That entrepreneurial
 reward, in his account, gets competed away once the innovation is copied.
 This aligns with our belief that the exit reward should recognize the labor
@@ -1426,22 +1390,16 @@ when it later leaves the retained-earnings pool as a distribution.
     — scale (16,000 email accounts, 5,500 mailing lists, ~10,000 blogs, 1,500 websites); A/I's
     mail servers themselves, hosted in Europe, were never touched.
 
-[^19]: [Italian Email Service Faces Disruption After U.S. Sanctions —
-    emailexpert](https://emailexpert.com/italian-email-service-faces-disruption-after-u-s-sanctions/)
-    — users could read existing mail but not send or receive new mail once the domain stopped
-    resolving; A/I itself said it had not established whether Public Interest Registry acted on
-    an explicit OFAC instruction or preemptively.
-
-[^20]: Down to a literal red light on someone's desk when a build
+[^19]: Down to a literal red light on someone's desk when a build
     breaks — see [this example of building a failure
     light](https://99x.io/Insights/blog/building-a-jenkins-failure-light-using-particle-photon)
     for a CI pipeline, wiring a Particle Photon board to a Jenkins job.
 
-[^21]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
+[^20]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
     bot that runs asynchronous standups and posts status updates
     directly to a channel, without a meeting.
 
-[^22]: Real companies tie executive compensation directly to
+[^21]: Real companies tie executive compensation directly to
     ROIC/ROCE performance targets, per their own SEC filings — e.g.
     [Phillips 66's 2021 proxy
     statement](https://www.sec.gov/Archives/edgar/data/1534701/000114036121010999/nc10021503x3_def14a.htm)
@@ -1453,19 +1411,23 @@ when it later leaves the retained-earnings pool as a distribution.
     standard valuation framework taught in the [CFA
     curriculum](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/equity-valuation-applications-and-processes).
 
-[^23]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
+[^22]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
     "Co-operation"](https://www.marxists.org/archive/marx/works/1867-c1/ch13.htm) —
     the chapter distinguishing the technical function of directing
     combined labor (the orchestra-conductor analogy) from the despotic
     function of capitalist supervision.
 
-[^24]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
+[^23]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
     trans. 1934), on entrepreneurial profit vs. interest on capital; and
     *Capitalism, Socialism and Democracy* (1942) on "creative
     destruction."
 
-[^25]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
+[^24]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
     and Profit of
     Enterprise"](https://www.marxists.org/archive/marx/works/1894-c3/ch23.htm) —
     the chapter distinguishing "wages of superintendence" from "profit
     of enterprise."
+
+[^25]: In the spirit of full disclosure: these mitigations are not
+    something we have tested in practice. They're directions that
+    seem promising, and that we plan to explore.
