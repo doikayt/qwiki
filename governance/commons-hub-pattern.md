@@ -79,8 +79,8 @@ point where we have to ask whether human beings can even survive as a species un
 whatever model comes next. Assuming we do, the next question is
 whether the average working person ends up better off or worse — and while
 today's power structures tilt the scales toward worse, we argue 
-that the same forces driving that outcome also open opportunities for 
-alternative worker-friendly legal/financial/ownership structures to displace
+that [the same forces](#4-the-stakes-and-why-our-model-has-an-edge) driving that outcome also open
+opportunities for alternative worker-friendly legal/financial/ownership structures to displace
 the top-down corporate form that underpins late-stage disaster capitalism.
 
 In terms of our two opening questions our model's answers are:
@@ -425,8 +425,11 @@ flowchart TD
     linkStyle 7,8,9 stroke:#2ca02c,color:#2ca02c
 ```
 
-Allocation tracks loan repayment; whether an employee can keep those
-allocated shares if they leave follows a separate vesting schedule.[^8]
+Allocation moves shares out of the trust's loan-collateral account and into
+an employee's individual account as the acquisition debt gets repaid.
+This is mechanically tied to the loan repayment schedule, not to tenure. 
+Whether or not an employee can keep those allocated shares on exit is separately determined 
+by a service-based vesting schedule.[^8]
 
 #### When ESOPs make sense
 
@@ -505,7 +508,7 @@ decision-making, or equity. To clarify:
 
 | Mechanism | Scope | Duration | Economic value | Who's eligible |
 |---|---|---|---|---|
-| DAO (§2 above) | Per funded program | Episodic — ends when the program does | Cash, paid for services rendered | Self-selected opt-in contributors |
+| [DAO](#2-governance-layer--three-mechanisms) (§2 above) | Per funded program | Episodic — ends when the program does | Cash, paid for services rendered | Self-selected opt-in contributors |
 | [Token-based delegated authority](#token-based-delegated-authority) (see the *Contributor Guide*) | Ongoing | Decays with inactivity | None — pure voice | Registered committers who've earned trust |
 | ESOP | Ongoing | Vests over years | Real equity | Legally must be broad-based — ~all full-time employees |
 
@@ -641,17 +644,19 @@ The recent (August 2026) US government designation of Italian
 hosting collective Autistici/Inventati as a ["Specially Designated
 Global Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/)
 serves as a useful case study on how a collective with a satellite structure 
-might have avoided a shut-down. We propose mitigations[^25] on two axes:
+might have avoided a shut-down. We propose mitigations[^16] on two axes:
 network infrastructure, and financial (money in motion and money at rest) -- but first a recap.
 
 
-The US State department issued the designation on August 26.[^16] 
+The US State department issued the designation on August 26.[^17] 
 Forty-eight hours later, the Public Interest Registry — the nonprofit 
-that runs the entire `.org` namespace — disabled `autistici.org`.[^17] 
+that runs the entire `.org` namespace — disabled `autistici.org`[^18],
+taking out roughly 16,000 email accounts, 5,500 mailing lists, ~10,000
+blogs, and 1,500 websites in one stroke.[^19]
 On the financial side, PayPal took out the payment rails first, freezing all  money
-in motion.[^17] Banca Etica followed by freezing the account itself —
+in motion.[^18] Banca Etica followed by freezing the account itself —
 money at rest — unwilling to risk its own correspondent-banking access
-over one customer.[^17]
+over one customer.[^18]
 
 #### Mitigations
 
@@ -675,7 +680,8 @@ domain in the first place.
 
 One practical catch: ISNIC requires
 [nameservers](https://en.wikipedia.org/wiki/Name_server) to be
-pre-registered with them, so using a DNS host that
+pre-registered with them, so using a
+[DNS](https://en.wikipedia.org/wiki/Domain_Name_System) host that
 already is — [1984.is](https://1984.is), an Icelandic
 privacy-focused provider, is a natural fit. 
 
@@ -754,7 +760,7 @@ decades, and a wave of more recent innovations in AI, especially
   coverage](https://en.wikipedia.org/wiki/Code_coverage), and
   [object-oriented
   metrics](https://www.geeksforgeeks.org/software-engineering/object-oriented-metrices-in-software-engineering/)
-  surface failures the moment they happen in the *present*.[^19]
+  surface failures the moment they happen in the *present*.[^20]
   [Agile boards](https://en.wikipedia.org/wiki/Kanban_board) and
   estimation — [story
   points](https://en.wikipedia.org/wiki/Planning_poker),
@@ -767,7 +773,7 @@ decades, and a wave of more recent innovations in AI, especially
   even one person software shops) to leverage the same compute capacity as larger companies.
 - **Scheduling**: is now enforceable via [issue
   trackers](https://en.wikipedia.org/wiki/Issue_tracking_system),
-  automated status checks, and rule-based status bots[^20], which nudge communication 
+  automated status checks, and rule-based status bots[^21], which nudge communication 
   channels on a fixed schedule when a deadline slips. These tools keep
   remote contributors coordinated against real deadlines without the
   need to clock in at some centralized office.
@@ -1071,12 +1077,16 @@ just that — a _tendency_, not an iron law — and named several
 countervailing forces — pressures pushing the other way. Chief among
 them: cheapening the elements of *constant capital* itself. As the
 industries that produce machinery and raw materials grow more
-productive, each unit of `c` embodies less value than before — the
-physical mass of machinery increases, but its price doesn't rise in
-lockstep, so `q = c/v` climbs more slowly than automation alone would
-predict. Add to that foreign trade (cheaper imported inputs, or
-higher-margin export markets) and a rising $s'$ that offsets $q$ for a
-while, and any of these can slow or reverse the fall in practice.
+productive, each *new* unit of `c` costs less current labor-time to
+produce than an equivalent unit did before — value tracks the labor
+it would take to reproduce something today, not the labor
+historically sunk into it. So the physical mass of machinery keeps
+climbing (that's what pushes `q = c/v` up in the first place), but its
+value doesn't climb in lockstep, and `q` rises more slowly than
+automation alone would predict.[^22] Add to that foreign
+trade (cheaper imported inputs, or higher-margin export markets) and a
+rising $s'$ that offsets $q$ for a while, and any of these can slow or
+reverse the fall in practice.
 
 ##### In accounting terms
 
@@ -1096,7 +1106,7 @@ others:
 
 `p'` and ROIC are the tightest match — both ask the same question,
 profit per dollar of *total* capital committed, rather than margin on
-revenue alone.[^21] `q` and capital intensity are close too; it's a real
+revenue alone.[^23] `q` and capital intensity are close too; it's a real
 ratio tracked in corporate finance, just not always called that. `s'`
 has no standard named counterpart — the nearest real-world equivalent
 is informal, something like a labor-cost markup.
@@ -1158,16 +1168,16 @@ on exit aligns with their own stated principles.
 Row-by-row, here's where each one comes from:
 
 - **Row 1 (coordination)** — Marx, *Capital* Vol. 1, Ch. 13,
-  "Co-operation"[^22]: *"all combined labour on a large scale requires,
+  "Co-operation"[^24]: *"all combined labour on a large scale requires,
   more or less, a directing authority, in order to secure the
   harmonious working of the individual activities."*
-- **Row 2 (despotic surveillance)** — same chapter[^22]: *"by reason of
+- **Row 2 (despotic surveillance)** — same chapter[^24]: *"by reason of
   ... the unavoidable antagonism between the exploiter and the living
   and labouring raw material he exploits."*
-- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^23]
+- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^25]
   instead.
 - **Row 4 (rent)** — Marx, *Capital* Vol. 3, Ch. 23, "Interest and
-  Profit of Enterprise"[^24], quoting the capitalist's own rationale:
+  Profit of Enterprise"[^26], quoting the capitalist's own rationale:
   his profit of enterprise is *"itself rather a wage ... of
   superintendence of labor."*
 
@@ -1216,7 +1226,7 @@ mere ownership (#4) We think it deserves fair compensation.
 
 Joseph Schumpeter offers a cleaner theoretical home for this one gap than
 Marx does. He drew his own line between the entrepreneur's reward — a
-temporary payout for introducing what he called a "new combination"[^23] —
+temporary payout for introducing what he called a "new combination"[^25] —
 and the rentier's return on capital merely owned. That entrepreneurial
 reward, in his account, gets competed away once the innovation is copied.
 This aligns with our belief that the exit reward should recognize the labor
@@ -1370,14 +1380,18 @@ when it later leaves the retained-earnings pool as a distribution.
 
 [^15]: [wrongthink — Wiktionary](https://en.wiktionary.org/wiki/wrongthink).
 
-[^16]: [Designation of Autistici/Inventati as a Specially Designated
+[^16]: In the spirit of full disclosure: these mitigations are not
+    something we have tested in practice. They're directions that
+    seem promising, and that we plan to explore.
+
+[^17]: [Designation of Autistici/Inventati as a Specially Designated
     Global Terrorist — U.S. Department of
     State](https://www.state.gov/releases/office-of-the-spokesperson/2026/08/designation-of-autistici-inventati-as-a-specially-designated-global-terrorist)
     (August 26, 2026); [Autistici/Inventati press release — infrastructure
     impact timeline](https://www.inventati.org/campaign/press) (domain
     unreachable August 28, 2026).
 
-[^17]: Timeline of the August 2026 SDGT designation and aftermath: [Autistici/Inventati —
+[^18]: Timeline of the August 2026 SDGT designation and aftermath: [Autistici/Inventati —
     Wikipedia](https://en.wikipedia.org/wiki/Autistici/Inventati) (PayPal loss "within days";
     Public Interest Registry disabled autistici.org August 28, 2026, 48 hours after the
     designation; NoBlogs compromised the same day via a software vulnerability, ~2 hours of
@@ -1385,21 +1399,27 @@ when it later leaves the retained-earnings pool as a distribution.
     A/I's account September 1, 2026 citing risk of U.S. secondary sanctions, after consulting
     Italy's Ministry of Economy and Finance; A/I announced shutdown September 6, 2026).
 
-[^18]: [US Terror Listing Kills 16,000 Activist Email Accounts —
+[^19]: [US Terror Listing Kills 16,000 Activist Email Accounts —
     gblock.app](https://www.gblock.app/articles/autistici-inventati-shutdown-16000-activist-emails-2026)
     — scale (16,000 email accounts, 5,500 mailing lists, ~10,000 blogs, 1,500 websites); A/I's
     mail servers themselves, hosted in Europe, were never touched.
 
-[^19]: Down to a literal red light on someone's desk when a build
+[^20]: Down to a literal red light on someone's desk when a build
     breaks — see [this example of building a failure
     light](https://99x.io/Insights/blog/building-a-jenkins-failure-light-using-particle-photon)
     for a CI pipeline, wiring a Particle Photon board to a Jenkins job.
 
-[^20]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
+[^21]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
     bot that runs asynchronous standups and posts status updates
     directly to a channel, without a meeting.
 
-[^21]: Real companies tie executive compensation directly to
+[^22]: Karl Marx, *Capital*, Vol. 1 (1867), Ch. 15, "Machinery and
+    Modern Industry" — on machinery losing exchange-value the moment a
+    cheaper-to-reproduce equivalent appears, regardless of its own physical
+    condition or remaining use-value; Marx's term for this is **moral
+    depreciation**, distinct from ordinary wear-and-tear depreciation.
+
+[^23]: Real companies tie executive compensation directly to
     ROIC/ROCE performance targets, per their own SEC filings — e.g.
     [Phillips 66's 2021 proxy
     statement](https://www.sec.gov/Archives/edgar/data/1534701/000114036121010999/nc10021503x3_def14a.htm)
@@ -1411,23 +1431,19 @@ when it later leaves the retained-earnings pool as a distribution.
     standard valuation framework taught in the [CFA
     curriculum](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/equity-valuation-applications-and-processes).
 
-[^22]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
+[^24]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
     "Co-operation"](https://www.marxists.org/archive/marx/works/1867-c1/ch13.htm) —
     the chapter distinguishing the technical function of directing
     combined labor (the orchestra-conductor analogy) from the despotic
     function of capitalist supervision.
 
-[^23]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
+[^25]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
     trans. 1934), on entrepreneurial profit vs. interest on capital; and
     *Capitalism, Socialism and Democracy* (1942) on "creative
     destruction."
 
-[^24]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
+[^26]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
     and Profit of
     Enterprise"](https://www.marxists.org/archive/marx/works/1894-c3/ch23.htm) —
     the chapter distinguishing "wages of superintendence" from "profit
     of enterprise."
-
-[^25]: In the spirit of full disclosure: these mitigations are not
-    something we have tested in practice. They're directions that
-    seem promising, and that we plan to explore.
