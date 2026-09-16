@@ -290,7 +290,7 @@ exactly as any nonprofit board would.
 
 ### DAO
 
-The **DAO** mechanism governs exactly
+The **DAO** mechanism governs 
 one thing: how the proceeds of a funded program — a
 grant, a commercial-revenue-funded initiative, or a board-allocated
 budget — are split among the individual developers (and pods) who
@@ -635,7 +635,7 @@ In light of such threats, the distributed structure proposed in
 counter-measure.
 (Note that the referenced diagram posited the satellites
 surrounding a digital commons as 501(c)(3)'s, but here we add a slight twist -- 
-in that some satellites might be trusted individual rather than a corporation.)
+in that some satellites might be a trusted individual rather than a corporation.)
 
 
 #### Case study: the takedown of Autistici/Inventati 
@@ -661,7 +661,6 @@ over one customer.[^18]
 #### Mitigations
 
 
-[[[        THIS SECTION BEING EDITED NOW  -- not settled ]]]
 
 
 *Network Infrastructure*
@@ -669,16 +668,14 @@ over one customer.[^18]
 Domain choice is the first line of defense: `.com` and `.org` are
 both run by U.S.-based registries (Verisign and the Public Interest
 Registry, respectively), which the Autistici/Inventati case just
-showed are responsive to U.S. pressure. Pinning web branding to a
+showed are willing to cave under U.S. pressure. Pinning web branding to a
 domain outside U.S. jurisdiction avoids that exposure from the start.
-
 Iceland's `.is` registry, run by the non-profit [ISNIC](https://www.isnic.is/en/), has a
-track record of resisting exactly the kind of takedown request that
-killed `autistici.org`; a privacy-focused registrar like Joker.com
+track record of resisting the kind of takedown requests that
+killed `autistici.org`; a privacy-focused registrar like
+[Joker.com](https://joker.com)
 adds a second layer, making it harder to identify who's behind the
-domain in the first place. 
-
-One practical catch: ISNIC requires
+domain in the first place. One practical catch: ISNIC requires
 [nameservers](https://en.wikipedia.org/wiki/Name_server) to be
 pre-registered with them, so using a
 [DNS](https://en.wikipedia.org/wiki/Domain_Name_System) host that
@@ -686,13 +683,21 @@ already is — [1984.is](https://1984.is), an Icelandic
 privacy-focused provider, is a natural fit. 
 
 
-An extra layer of protection is achievable by maintaining a live
-[onion](https://en.wikipedia.org/wiki/.onion) mirror — at the expense
-of more network configuration and administration overhead. It should
-be part of the regular routine, not a dormant bookmark held in
-reserve for emergencies: if people already use it on an ordinary
-Tuesday, it's already there the moment something goes wrong.
+An extra layer of protection is achievable (at the expense of more network configuration overhead) 
+by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror[^20].
+Unlike a `.is` domain, a `.onion` (dot onion) address needs
+no DNS at all: it's self-certifying, derived directly from the
+service's own keypair, and resolved through Tor's own distributed
+hidden-service directory — no registry, registrar, or nameserver in
+that chain for anyone to pressure. Put plainly: the `.is`/ISNIC choice
+is a harder-to-reach DNS dependency, but still a dependency; the onion
+mirror is a zero-DNS-dependency channel outright — categorically
+different from just picking a second registrar, not a harder version
+of the same thing. Treat it as routine, not an emergency-only
+bookmark — in daily use on an ordinary Tuesday, it's there the day
+something goes wrong.
 
+[[[        THIS SECTION BEING EDITED NOW  -- not settled ]]]
 
 *Financial Layer*
 
@@ -760,7 +765,7 @@ decades, and a wave of more recent innovations in AI, especially
   coverage](https://en.wikipedia.org/wiki/Code_coverage), and
   [object-oriented
   metrics](https://www.geeksforgeeks.org/software-engineering/object-oriented-metrices-in-software-engineering/)
-  surface failures the moment they happen in the *present*.[^20]
+  surface failures the moment they happen in the *present*.[^21]
   [Agile boards](https://en.wikipedia.org/wiki/Kanban_board) and
   estimation — [story
   points](https://en.wikipedia.org/wiki/Planning_poker),
@@ -773,7 +778,7 @@ decades, and a wave of more recent innovations in AI, especially
   even one person software shops) to leverage the same compute capacity as larger companies.
 - **Scheduling**: is now enforceable via [issue
   trackers](https://en.wikipedia.org/wiki/Issue_tracking_system),
-  automated status checks, and rule-based status bots[^21], which nudge communication 
+  automated status checks, and rule-based status bots[^22], which nudge communication 
   channels on a fixed schedule when a deadline slips. These tools keep
   remote contributors coordinated against real deadlines without the
   need to clock in at some centralized office.
@@ -924,7 +929,7 @@ capital*: [`q`](#the-tendency-of-the-rate-of-profit-to-fall)).
 
 #### Surplus value
 
-There's a more basic source of profit, too — one that doesn't depend on
+There's also a more basic source of profit that doesn't depend on
 any competitive edge at all. A worker is paid a wage — this is **variable
 capital**, [`v`](#the-tendency-of-the-rate-of-profit-to-fall) — that covers
 roughly what it costs to maintain their lifestyle from one day to
@@ -936,7 +941,7 @@ time**. Whatever labor is input beyond that point — the **surplus labor time**
 produces *value*, but that *value* isn't paid for; the employer keeps it as
 **surplus value**, the source of profit. Much of that profit doesn't just
 sit still, either — competitive pressure pushes employers to reinvest
-that surplus into better machinery, chasing exactly the kind of edge
+that surplus into better machinery, chasing the same edge
 described in the previous  [section](#exchange-value-and-mechanization).
 
 #### Class struggle and contradictions
@@ -1083,7 +1088,7 @@ it would take to reproduce something today, not the labor
 historically sunk into it. So the physical mass of machinery keeps
 climbing (that's what pushes `q = c/v` up in the first place), but its
 value doesn't climb in lockstep, and `q` rises more slowly than
-automation alone would predict.[^22] Add to that foreign
+automation alone would predict.[^23] Add to that foreign
 trade (cheaper imported inputs, or higher-margin export markets) and a
 rising $s'$ that offsets $q$ for a while, and any of these can slow or
 reverse the fall in practice.
@@ -1106,7 +1111,7 @@ others:
 
 `p'` and ROIC are the tightest match — both ask the same question,
 profit per dollar of *total* capital committed, rather than margin on
-revenue alone.[^23] `q` and capital intensity are close too; it's a real
+revenue alone.[^24] `q` and capital intensity are close too; it's a real
 ratio tracked in corporate finance, just not always called that. `s'`
 has no standard named counterpart — the nearest real-world equivalent
 is informal, something like a labor-cost markup.
@@ -1139,9 +1144,9 @@ offset a rising $q$; stagnant or falling wages as employers cut $v$
 directly; specific jobs disappearing as machinery takes over the work
 that used to require them; and, periodically, a recession or a round
 of layoffs once capital can't find anywhere left to profitably go. It
-never reads as "the rate of profit is falling" — it reads as output
-climbing while a worker's own claim on it shrinks, which is exactly
-the disillusionment the ["Drivers" argument
+never reads as "the rate of profit is falling" — it feels like output
+climbing while a worker's own claim on it shrinks — the same
+disillusionment the ["Drivers" argument
 above](#drivers-of-the-dissolution-of-the-corporate-model----marxist-view)
 describes: working people noticing both that they no longer have
 work, and that the resulting abundance is being captured by a class
@@ -1168,29 +1173,29 @@ on exit aligns with their own stated principles.
 Row-by-row, here's where each one comes from:
 
 - **Row 1 (coordination)** — Marx, *Capital* Vol. 1, Ch. 13,
-  "Co-operation"[^24]: *"all combined labour on a large scale requires,
+  "Co-operation"[^25]: *"all combined labour on a large scale requires,
   more or less, a directing authority, in order to secure the
   harmonious working of the individual activities."*
-- **Row 2 (despotic surveillance)** — same chapter[^24]: *"by reason of
+- **Row 2 (despotic surveillance)** — same chapter[^25]: *"by reason of
   ... the unavoidable antagonism between the exploiter and the living
   and labouring raw material he exploits."*
-- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^25]
+- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^26]
   instead.
 - **Row 4 (rent)** — Marx, *Capital* Vol. 3, Ch. 23, "Interest and
-  Profit of Enterprise"[^26], quoting the capitalist's own rationale:
+  Profit of Enterprise"[^27], quoting the capitalist's own rationale:
   his profit of enterprise is *"itself rather a wage ... of
   superintendence of labor."*
 
-Coordination (#1) and surveillance (#2) come from one passage doing
-double duty: Marx splits what looks like a single "management" function
-into two, and the quotes above reflect that split. The first is a
-technical function, necessary in any social system, not just
-capitalism; Marx's own analogy is an orchestra needing a conductor.
-The second, despotic control specific to capitalism, has nothing to
-do with coordinating work and everything to do with extracting effort
-from workers who have no stake in the outcome.
-Marx's viewpoint (with which we concur) argues that coordination
-(#1) is clearly fair and surveillance (#2) is clearly not.
+Coordination (#1) and surveillance (#2) both come from the same
+discussion in *Capital*, Vol. 1, Ch. 13: Marx observes that capitalist
+"management" bundles two functions together, then pulls them apart.
+The first is a technical function, necessary in any social system, not
+just capitalism; Marx's own analogy is an orchestra needing a
+conductor. The second, despotic control specific to capitalism, has
+nothing to do with coordinating work and everything to do with
+extracting effort from workers who have no stake in the outcome.
+Marx's own verdict, which we share: coordination (#1) is fair,
+surveillance (#2) is not.
 
 Rent (#4) references Marx's description of how capitalist owners
 justify their residual profit claim by presenting it as just a bigger
@@ -1226,14 +1231,15 @@ mere ownership (#4) We think it deserves fair compensation.
 
 Joseph Schumpeter offers a cleaner theoretical home for this one gap than
 Marx does. He drew his own line between the entrepreneur's reward — a
-temporary payout for introducing what he called a "new combination"[^25] —
+temporary payout for introducing what he called a "new combination"[^26] —
 and the rentier's return on capital merely owned. That entrepreneurial
 reward, in his account, gets competed away once the innovation is copied.
 This aligns with our belief that the exit reward should recognize the labor
 of founding (differing from Marx), including fair pay for any salary
 foregone along the way — but should not be a function of a long-lived
-ownership stake, ongoing capital input, or a risk premium for having
-come in early.
+ownership stake, new [paid-in
+capital](https://en.wikipedia.org/wiki/Paid-in_capital), or a risk
+premium for having come in early.
 
 None of this is as clean in practice as the table makes it look. A
 founder's actual payout arrives as one blended number, not four
@@ -1404,22 +1410,27 @@ when it later leaves the retained-earnings pool as a distribution.
     — scale (16,000 email accounts, 5,500 mailing lists, ~10,000 blogs, 1,500 websites); A/I's
     mail servers themselves, hosted in Europe, were never touched.
 
-[^20]: Down to a literal red light on someone's desk when a build
+[^20]: [How Tor's onion services actually work —
+    YouTube](https://www.youtube.com/watch?v=hXF1X-UVRzI), on the
+    self-certifying address scheme and the distributed hidden-service
+    directory that resolves it.
+
+[^21]: Down to a literal red light on someone's desk when a build
     breaks — see [this example of building a failure
     light](https://99x.io/Insights/blog/building-a-jenkins-failure-light-using-particle-photon)
     for a CI pipeline, wiring a Particle Photon board to a Jenkins job.
 
-[^21]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
+[^22]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
     bot that runs asynchronous standups and posts status updates
     directly to a channel, without a meeting.
 
-[^22]: Karl Marx, *Capital*, Vol. 1 (1867), Ch. 15, "Machinery and
+[^23]: Karl Marx, *Capital*, Vol. 1 (1867), Ch. 15, "Machinery and
     Modern Industry" — on machinery losing exchange-value the moment a
     cheaper-to-reproduce equivalent appears, regardless of its own physical
     condition or remaining use-value; Marx's term for this is **moral
     depreciation**, distinct from ordinary wear-and-tear depreciation.
 
-[^23]: Real companies tie executive compensation directly to
+[^24]: Real companies tie executive compensation directly to
     ROIC/ROCE performance targets, per their own SEC filings — e.g.
     [Phillips 66's 2021 proxy
     statement](https://www.sec.gov/Archives/edgar/data/1534701/000114036121010999/nc10021503x3_def14a.htm)
@@ -1431,18 +1442,18 @@ when it later leaves the retained-earnings pool as a distribution.
     standard valuation framework taught in the [CFA
     curriculum](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/equity-valuation-applications-and-processes).
 
-[^24]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
+[^25]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
     "Co-operation"](https://www.marxists.org/archive/marx/works/1867-c1/ch13.htm) —
     the chapter distinguishing the technical function of directing
     combined labor (the orchestra-conductor analogy) from the despotic
     function of capitalist supervision.
 
-[^25]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
+[^26]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
     trans. 1934), on entrepreneurial profit vs. interest on capital; and
     *Capitalism, Socialism and Democracy* (1942) on "creative
     destruction."
 
-[^26]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
+[^27]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
     and Profit of
     Enterprise"](https://www.marxists.org/archive/marx/works/1894-c3/ch23.htm) —
     the chapter distinguishing "wages of superintendence" from "profit
