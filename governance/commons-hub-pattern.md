@@ -666,7 +666,7 @@ access over one customer.[^18]
 #### Mitigations
 
 
-*Network Infrastructure*
+*Technical Infrastructure — Network*
 
 Domain choice is the first line of defense: `.com` and `.org` are
 both run by U.S.-based registries (Verisign and the Public Interest
@@ -694,33 +694,68 @@ step ISNIC otherwise requires.
 
 An extra layer of protection is achievable (at the expense of more network configuration overhead) 
 by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror on
-[Tor](https://en.wikipedia.org/wiki/Tor_(network)) (short, historically, for
-"The Onion Router," though the Tor Project no longer treats it as a
-spelled-out acronym)[^20][^21].
+[Tor](https://en.wikipedia.org/wiki/Tor_(network))[^20][^21].
 Unlike a `.is` (dot _is_) domain, a `.onion` (dot _onion_) address needs
 no DNS at all: it's self-certifying, derived directly from the
 service's own [keypair](https://spec.torproject.org/rend-spec/encoding-onion-addresses.html)[^22],
 and resolved through Tor's own distributed
-hidden-service directory — no registry, registrar, or nameserver in
-that chain for a state actor to pressure. Put plainly: the
-`.is`/ISNIC choice
-is a pressure-resistant DNS dependency, but still a dependency; the
-onion mirror is a zero-DNS-dependency channel outright — a different
-category from any registrar, no matter how takedown-resistant. Treat
-it as routine, not an emergency-only
-bookmark — in daily use on an ordinary Tuesday, it's there the day
-something goes wrong. Advertise it, too: set an
-`Onion-Location` HTTP header[^23] on the clearnet site
-pointing at the `.onion` URL — Tor Browser detects it automatically
-and offers visitors a one-click switch, no separate announcement
-needed. Publish the bare address as well, in the site footer and
-official bios, for anyone on a different Tor client. Verify it
-periodically rather than assuming it still works months later —
-`wget --server-response --spider` against the clearnet site, or just
-loading it in Tor Browser and confirming the prompt appears. Worth
-flagging: using Tor at all can itself draw extra scrutiny.[^24]
+hidden-service directory. There is no registry, registrar, or nameserver in
+the chain for a state actor to pressure.  Note that the
+`.is`/ISNIC strategy relies on a pressure-resistant DNS dependency, but still a dependency; the
+onion mirror is a _zero_-DNS-dependency channel. It is in a different
+category from a registrar-based approach entirely, no matter how
+takedown-resistant the registrar.
 
-[[[        THIS SECTION BEING EDITED NOW  -- not settled ]]]
+Collectives pursing this approach should make verification and publication of their .onion
+presence a routine practice, rather than scrambling to put in to place in face 
+of a take-down action. Set an `Onion-Location` HTTP header[^23] on the
+[clearnet](https://en.wikipedia.org/wiki/Clearnet_(networking)) site
+pointing at the `.onion` URL, so [Tor
+Browser](https://en.wikipedia.org/wiki/Tor_(network)) detects it
+automatically
+and offers visitors a one-click switch with no separate announcement
+needed; publish the bare address too, in the site footer and official
+bios, for anyone on a different Tor client; and check periodically
+that it's actually still working — via `wget --server-response --spider`
+against the clearnet site, or just by loading it in a Tor Browser and
+confirming the prompt appears. This beats assuming a header set
+once still works months later.  Finally, a caveat: note that any use of
+Tor (even for experimental/research purposes)
+might itself draw extra scrutiny from state actors.[^24]
+
+
+*Technical Infrastructure — Email*
+
+The Network section addresses resilience to attacks on a collective's
+domain; it doesn't protect the mail server sitting _behind_ the
+domain. A resilient `.is` domain still depends on the email provider
+that hosts the actual SMTP server — an organization that can face its
+own outages, state-actor pressure, or outright seizure, independent
+of the domain's registry status entirely. Worse, even a healthy mail server can be effectively silenced if
+major providers (Gmail, Outlook, and similar) start rejecting or
+spam-filtering *outbound* mail from the domain — affecting what the
+org sends, not what it receives — whether through direct pressure or
+simple reputation flagging. No registrar choice touches this failure
+mode at all.
+
+A trusted individual handles this personally: they register a second
+domain and mail hosting plan under their own name and payment method
+— not the org's, so a coordinated action against the org's accounts
+can't reach it — with a genuinely different provider than the
+primary. They send and receive real mail from it regularly, so it
+isn't sitting unverified and isn't flagged as spam the day it's
+actually needed, and they track its own renewal dates rather than
+leaving that to chance. Publish that alternate address alongside the
+onion address — same footer, same bio, same routine-verification
+practice — so it's already known before it's needed. No incorporation
+required: owning it personally, using it routinely, and keeping it
+paid up is the entire job.
+
+The same principle covers how the custodians themselves stay in
+touch: a small Signal group among the trusted individuals holding
+these fallback pieces — domain, mail, source repo, keys — lets them
+coordinate directly during an actual crisis, without depending on the
+same email infrastructure that might be the thing failing.
 
 *Financial Layer*
 
@@ -1433,7 +1468,12 @@ when it later leaves the retained-earnings pool as a distribution.
     — scale (16,000 email accounts, 5,500 mailing lists, ~10,000 blogs, 1,500 websites); A/I's
     mail servers themselves, hosted in Europe, were never touched.
 
-[^20]: [How Tor's onion services actually work —
+[^20]: "Tor" is short, historically, for "The Onion Router," though the
+    Tor Project no longer treats it as a spelled-out acronym — see [Why
+    is it called
+    Tor?](https://support.torproject.org/about/why-is-it-called-tor/).
+    On how onion services actually work: [How Tor's onion services
+    actually work —
     YouTube](https://www.youtube.com/watch?v=hXF1X-UVRzI), on the
     self-certifying address scheme and the distributed hidden-service
     directory that resolves it.
