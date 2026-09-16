@@ -643,8 +643,8 @@ in that some satellites might be a trusted individual rather than a corporation.
 The recent (August 2026) US government designation of Italian
 hosting collective Autistici/Inventati as a ["Specially Designated
 Global Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/)
-serves as a useful case study on how a collective with a satellite structure 
-might have avoided a shut-down. We propose mitigations[^16] on two axes:
+serves as a useful case study on how a satellite structured collective might have
+avoided a shut-down. We propose mitigations[^16] on two axes:
 network infrastructure, and financial (money in motion and money at rest) -- but first a recap.
 
 
@@ -655,12 +655,11 @@ taking out roughly 16,000 email accounts, 5,500 mailing lists, ~10,000
 blogs, and 1,500 websites in one stroke.[^19]
 On the financial side, PayPal took out the payment rails first, freezing all  money
 in motion.[^18] Banca Etica followed by freezing the account itself —
-money at rest — unwilling to risk its own correspondent-banking access
-over one customer.[^18]
+money at rest — unwilling to risk its own
+[correspondent-banking](https://en.wikipedia.org/wiki/Correspondent_account)
+access over one customer.[^18]
 
 #### Mitigations
-
-
 
 
 *Network Infrastructure*
@@ -672,30 +671,38 @@ showed are willing to cave under U.S. pressure. Pinning web branding to a
 domain outside U.S. jurisdiction avoids that exposure from the start.
 Iceland's `.is` registry, run by the non-profit [ISNIC](https://www.isnic.is/en/), has a
 track record of resisting the kind of takedown requests that
-killed `autistici.org`; a privacy-focused registrar like
-[Joker.com](https://joker.com)
-adds a second layer, making it harder to identify who's behind the
-domain in the first place. One practical catch: ISNIC requires
-[nameservers](https://en.wikipedia.org/wiki/Name_server) to be
-pre-registered with them, so using a
-[DNS](https://en.wikipedia.org/wiki/Domain_Name_System) host that
-already is — [1984.is](https://1984.is), an Icelandic
-privacy-focused provider, is a natural fit. 
+killed `autistici.org`. Registering through [1984
+Hosting](https://1984.hosting/), an Icelandic provider with a stated
+commitment to anonymity and free expression, adds a second layer while
+avoiding a real risk some privacy-focused registrars carry: 1984 keeps
+you as the actual legal registrant with
+[WHOIS](https://en.wikipedia.org/wiki/WHOIS) privacy, rather than
+registering the domain under its own name and merely licensing you
+usage rights. This delegated-ownership model, used by some
+anonymity-focused registrars, leaves you with no standing to transfer
+or reclaim the domain yourself if that registrar itself caves. 1984 also
+runs its own [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)
+hosting, and its
+[nameservers](https://en.wikipedia.org/wiki/Name_server) are already
+pre-registered with ISNIC, sidestepping the separate registration
+step ISNIC otherwise requires.
 
 
 An extra layer of protection is achievable (at the expense of more network configuration overhead) 
-by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror[^20].
-Unlike a `.is` domain, a `.onion` (dot onion) address needs
+by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror[^20][^21].
+Unlike a `.is` (dot _is_) domain, a `.onion` (dot _onion_) address needs
 no DNS at all: it's self-certifying, derived directly from the
-service's own keypair, and resolved through Tor's own distributed
+service's own [keypair](https://spec.torproject.org/rend-spec/encoding-onion-addresses.html)[^22],
+and resolved through Tor's own distributed
 hidden-service directory — no registry, registrar, or nameserver in
 that chain for anyone to pressure. Put plainly: the `.is`/ISNIC choice
-is a harder-to-reach DNS dependency, but still a dependency; the onion
-mirror is a zero-DNS-dependency channel outright — categorically
-different from just picking a second registrar, not a harder version
-of the same thing. Treat it as routine, not an emergency-only
+is a pressure-resistant DNS dependency, but still a dependency; the
+onion mirror is a zero-DNS-dependency channel outright — a different
+category from any registrar, no matter how takedown-resistant. Treat
+it as routine, not an emergency-only
 bookmark — in daily use on an ordinary Tuesday, it's there the day
-something goes wrong.
+something goes wrong. Worth flagging: using Tor at all can itself
+draw extra scrutiny.[^23]
 
 [[[        THIS SECTION BEING EDITED NOW  -- not settled ]]]
 
@@ -765,7 +772,7 @@ decades, and a wave of more recent innovations in AI, especially
   coverage](https://en.wikipedia.org/wiki/Code_coverage), and
   [object-oriented
   metrics](https://www.geeksforgeeks.org/software-engineering/object-oriented-metrices-in-software-engineering/)
-  surface failures the moment they happen in the *present*.[^21]
+  surface failures the moment they happen in the *present*.[^24]
   [Agile boards](https://en.wikipedia.org/wiki/Kanban_board) and
   estimation — [story
   points](https://en.wikipedia.org/wiki/Planning_poker),
@@ -778,7 +785,7 @@ decades, and a wave of more recent innovations in AI, especially
   even one person software shops) to leverage the same compute capacity as larger companies.
 - **Scheduling**: is now enforceable via [issue
   trackers](https://en.wikipedia.org/wiki/Issue_tracking_system),
-  automated status checks, and rule-based status bots[^22], which nudge communication 
+  automated status checks, and rule-based status bots[^25], which nudge communication 
   channels on a fixed schedule when a deadline slips. These tools keep
   remote contributors coordinated against real deadlines without the
   need to clock in at some centralized office.
@@ -1088,7 +1095,7 @@ it would take to reproduce something today, not the labor
 historically sunk into it. So the physical mass of machinery keeps
 climbing (that's what pushes `q = c/v` up in the first place), but its
 value doesn't climb in lockstep, and `q` rises more slowly than
-automation alone would predict.[^23] Add to that foreign
+automation alone would predict.[^26] Add to that foreign
 trade (cheaper imported inputs, or higher-margin export markets) and a
 rising $s'$ that offsets $q$ for a while, and any of these can slow or
 reverse the fall in practice.
@@ -1111,7 +1118,7 @@ others:
 
 `p'` and ROIC are the tightest match — both ask the same question,
 profit per dollar of *total* capital committed, rather than margin on
-revenue alone.[^24] `q` and capital intensity are close too; it's a real
+revenue alone.[^27] `q` and capital intensity are close too; it's a real
 ratio tracked in corporate finance, just not always called that. `s'`
 has no standard named counterpart — the nearest real-world equivalent
 is informal, something like a labor-cost markup.
@@ -1173,16 +1180,16 @@ on exit aligns with their own stated principles.
 Row-by-row, here's where each one comes from:
 
 - **Row 1 (coordination)** — Marx, *Capital* Vol. 1, Ch. 13,
-  "Co-operation"[^25]: *"all combined labour on a large scale requires,
+  "Co-operation"[^28]: *"all combined labour on a large scale requires,
   more or less, a directing authority, in order to secure the
   harmonious working of the individual activities."*
-- **Row 2 (despotic surveillance)** — same chapter[^25]: *"by reason of
+- **Row 2 (despotic surveillance)** — same chapter[^28]: *"by reason of
   ... the unavoidable antagonism between the exploiter and the living
   and labouring raw material he exploits."*
-- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^26]
+- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^29]
   instead.
 - **Row 4 (rent)** — Marx, *Capital* Vol. 3, Ch. 23, "Interest and
-  Profit of Enterprise"[^27], quoting the capitalist's own rationale:
+  Profit of Enterprise"[^30], quoting the capitalist's own rationale:
   his profit of enterprise is *"itself rather a wage ... of
   superintendence of labor."*
 
@@ -1231,7 +1238,7 @@ mere ownership (#4) We think it deserves fair compensation.
 
 Joseph Schumpeter offers a cleaner theoretical home for this one gap than
 Marx does. He drew his own line between the entrepreneur's reward — a
-temporary payout for introducing what he called a "new combination"[^26] —
+temporary payout for introducing what he called a "new combination"[^29] —
 and the rentier's return on capital merely owned. That entrepreneurial
 reward, in his account, gets competed away once the innovation is copied.
 This aligns with our belief that the exit reward should recognize the labor
@@ -1415,22 +1422,53 @@ when it later leaves the retained-earnings pool as a distribution.
     self-certifying address scheme and the distributed hidden-service
     directory that resolves it.
 
-[^21]: Down to a literal red light on someone's desk when a build
+[^21]: [Set up Your Onion Service — Join the Tor
+    Community](https://community.torproject.org/onion-services/setup/) —
+    the step-by-step how-to: install Tor, stand up a local web server, and
+    add `HiddenServiceDir`/`HiddenServicePort` lines to `torrc`.
+
+[^22]: Operators who want defense-in-depth beyond Tor's own
+    encryption can layer HTTPS on top with either a self-signed or
+    CA-issued certificate, using a separate keypair from the onion
+    identity key itself — see [TLS Certificates for Onion
+    Services](https://onionservices.torproject.org/apps/base/certificates/).
+    A CA-issued cert exposes the `.onion` address in public Certificate
+    Transparency logs, worth weighing against the anonymity goal here.
+
+[^23]: Leaked NSA XKeyscore source code showed Tor users
+    flagged for surveillance, some categorized outright as "extremists,"
+    regardless of what they were actually doing on the network
+    ([SiliconANGLE](https://siliconangle.com/2014/07/04/nsas-xkeyscore-dissected-all-tor-users-marked-as-extremists/),
+    July 2014, on source code published by Tor developer Jacob Appelbaum
+    with German broadcasters NDR/WDR). A commonly suggested fix — routing
+    through a VPN before connecting to Tor — just relocates the trust
+    problem: CyberGhost, Private Internet Access, ZenMate, ExpressVPN,
+    and Intego, five brands most users assume are independent
+    competitors, are all owned by one company, Kape Technologies,
+    controlled by Israeli businessman Teddy Sagi
+    ([Wikipedia](https://en.wikipedia.org/wiki/Kape_Technologies)). Some
+    reporting alleges founder/executive ties to Israeli
+    signals-intelligence unit 8200 specifically; requires confirmation —
+    we haven't independently verified that beyond the ownership facts
+    above. We maintain a running assessment of vetted VPN providers at
+    [wiki.doikayt.org](https://wiki.doikayt.org/index.php/Category:VPN).
+
+[^24]: Down to a literal red light on someone's desk when a build
     breaks — see [this example of building a failure
     light](https://99x.io/Insights/blog/building-a-jenkins-failure-light-using-particle-photon)
     for a CI pipeline, wiring a Particle Photon board to a Jenkins job.
 
-[^22]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
+[^25]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
     bot that runs asynchronous standups and posts status updates
     directly to a channel, without a meeting.
 
-[^23]: Karl Marx, *Capital*, Vol. 1 (1867), Ch. 15, "Machinery and
+[^26]: Karl Marx, *Capital*, Vol. 1 (1867), Ch. 15, "Machinery and
     Modern Industry" — on machinery losing exchange-value the moment a
     cheaper-to-reproduce equivalent appears, regardless of its own physical
     condition or remaining use-value; Marx's term for this is **moral
     depreciation**, distinct from ordinary wear-and-tear depreciation.
 
-[^24]: Real companies tie executive compensation directly to
+[^27]: Real companies tie executive compensation directly to
     ROIC/ROCE performance targets, per their own SEC filings — e.g.
     [Phillips 66's 2021 proxy
     statement](https://www.sec.gov/Archives/edgar/data/1534701/000114036121010999/nc10021503x3_def14a.htm)
@@ -1442,18 +1480,18 @@ when it later leaves the retained-earnings pool as a distribution.
     standard valuation framework taught in the [CFA
     curriculum](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/equity-valuation-applications-and-processes).
 
-[^25]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
+[^28]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
     "Co-operation"](https://www.marxists.org/archive/marx/works/1867-c1/ch13.htm) —
     the chapter distinguishing the technical function of directing
     combined labor (the orchestra-conductor analogy) from the despotic
     function of capitalist supervision.
 
-[^26]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
+[^29]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
     trans. 1934), on entrepreneurial profit vs. interest on capital; and
     *Capitalism, Socialism and Democracy* (1942) on "creative
     destruction."
 
-[^27]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
+[^30]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
     and Profit of
     Enterprise"](https://www.marxists.org/archive/marx/works/1894-c3/ch23.htm) —
     the chapter distinguishing "wages of superintendence" from "profit
