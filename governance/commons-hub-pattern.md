@@ -11,6 +11,10 @@ open source software (OSS) around nonprofit and for-profit satellites*
 - Not written by a trained economist — this is a summary of the
   author's own research and reflection on equitable approaches to
   structuring, operating, and profiting from an OSS-focused enterprise.
+- Not battle tested — the patterns and strategies we propose below are
+  based on the emerging roadmap we are putting together for _our own_
+  collective, offered in the spirit of spurring discussion and
+  soliciting feedback from the OSS community.
 
 ---
 
@@ -705,21 +709,22 @@ category from a registrar-based approach entirely, no matter how
 takedown-resistant the registrar.
 
 Collectives pursing this approach should make verification and publication of their .onion
-presence a routine practice, rather than scrambling to put in to place in face 
+presence a routine practice, rather than scrambling to prepare in the face 
 of a take-down action. Set an `Onion-Location` HTTP header[^23] on the
 [clearnet](https://en.wikipedia.org/wiki/Clearnet_(networking)) site
 pointing at the `.onion` URL, so [Tor
 Browser](https://en.wikipedia.org/wiki/Tor_(network)) detects it
 automatically
 and offers visitors a one-click switch with no separate announcement
-needed; publish the bare address too, in the site footer and official
-bios, for anyone on a different Tor client; and check periodically
-that it's actually still working — via `wget --server-response --spider`
-against the clearnet site, or just by loading it in a Tor Browser and
-confirming the prompt appears. This beats assuming a header set
-once still works months later.  Finally, a caveat: note that any use of
-Tor (even for experimental/research purposes)
-might itself draw extra scrutiny from state actors.[^24]
+needed; publish the bare address too, in the site footer and
+official bios, for anyone on a different Tor client; and script both
+checks with [Playwright](https://playwright.dev/docs/network):
+fetch the clearnet site to confirm the `Onion-Location` header is
+still present, then point a second context's `proxy` at a local Tor
+daemon's SOCKS5 port (9050) and load the `.onion` URL directly, with
+hostname resolution happening proxy-side. A caveat: any use of Tor,
+even for research, may itself draw extra scrutiny from state
+actors.[^24]
 
 
 *Technical Infrastructure — Key and Credential Custodianship*
