@@ -701,6 +701,7 @@ step ISNIC otherwise requires.
 <tr><td>
 
 ```mermaid
+%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
 flowchart TD
     Client([Tor Client])
     Entry[Entry Node]
@@ -708,10 +709,10 @@ flowchart TD
     Exit[Exit Node]
     Dest([Destination])
 
-    Client -- "encrypted in 3 layers" --> Entry
-    Entry -- "1 layer peeled" --> Middle
-    Middle -- "2 layers peeled" --> Exit
-    Exit -- "fully decrypted" --> Dest
+    Client -- "3 layers" --> Entry
+    Entry -- "peel 1" --> Middle
+    Middle -- "peel 2" --> Exit
+    Exit -- "decrypted" --> Dest
 ```
 
 </td></tr>
