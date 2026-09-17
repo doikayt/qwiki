@@ -653,7 +653,7 @@ in that some satellites might be a trusted individual rather than a corporation.
 #### Case study: the takedown of Autistici/Inventati 
 
 The recent (August 2026) US government designation of Italian
-hosting collective Autistici/Inventati as a ["Specially Designated
+hosting collective Autistici/Inventati (A/I) as a ["Specially Designated
 Global Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/)
 serves as a useful case study on how a satellite structured collective might have
 avoided a shut-down. We propose mitigations[^16] on two  infrastructural axes:
@@ -670,20 +670,45 @@ Banca Etica followed by freezing the account itself as it was
 unwilling to risk its own [correspondent-banking](https://en.wikipedia.org/wiki/Correspondent_account)
 relationships over one customer.[^18]
 
+Jurisdiction factored in as much as a technology in this take down.
+First, on the technology side: [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)
+is hierarchical and centralized by design — a single registry is the
+authoritative source for every name under its
+[top-level domain](https://en.wikipedia.org/wiki/Top-level_domain) (TLD), 
+and every [resolver](https://en.wikipedia.org/wiki/Domain_Name_System#DNS_resolvers)
+worldwide trusts that record without question. That's precisely what
+makes a takedown effective with no technical attack at all: disable
+the registry entry, and the domain stops resolving globally and
+instantly, regardless of the underlying servers' ability to keep running. 
+
+On the jurisdiction side: the Public Interest Registry is a Virginia-based
+501(c)(3) — a US legal entity — and Verisign, which runs `.com`, is a
+Delaware corporation headquartered in California. Once the SDGT
+designation issued, both registries were subject to the  same US
+legal exposure that froze PayPal and Banca Etica's accounts. A US
+entity can't keep providing services (registration included), to a
+designated (targeted) party. That's what actually took `autistici.org` down —
+the registry's own legal obligation to stop serving it, layered on top
+of DNS's own centralized architecture giving that decision instant,
+global effect. A registry chartered outside the US isn't bound by that
+same compulsion, but the centralization problem remains — which is
+exactly what the onion-mirror mitigation (below) is built to route
+around.
+
 #### Mitigations
 
 
 *Technical Infrastructure - [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)*
 
-Domain choice is the first line of defense: `.com` and `.org` are
-both run by U.S.-based registries (Verisign and the Public Interest
-Registry, respectively), which the Autistici/Inventati case just
+Domain choice is the first line of defense: The popular choices, `.com` and `.org`, are, 
+as mentioned above, both adminstered by U.S.-based registries, which the Autistici/Inventati case just
 showed are willing to cave under U.S. pressure. Pinning web branding to a
 domain outside U.S. jurisdiction avoids that exposure from the start.
 Iceland's `.is` registry is operated by the non-profit
 [ISNIC](https://www.isnic.is/en/), which has a track record of
 resisting the kind of takedown requests that killed `autistici.org`.
-ISNIC runs the TLD itself, though — actually registering a domain
+ISNIC runs the [top-level domain](https://en.wikipedia.org/wiki/Top-level_domain)
+(TLD) itself, though — actually registering a domain
 still goes through a separate registrar. Registering the domain
 through [1984 Hosting](https://1984.hosting/), an Icelandic registrar
 with a stated commitment to anonymity and free expression, adds a
@@ -729,6 +754,8 @@ flowchart LR
     Middle -- "peel 2" --> Exit
     Exit -- "decrypted" --> Dest
 ```
+<p align="center"><sub>The Tor (onion router) network architecture: each relay hop peels
+away one layer of encryption.</sub></p>
 
 Collectives pursing this approach should make verification and publication of their .onion
 presence a routine practice, rather than scrambling to prepare in the face 
