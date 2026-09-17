@@ -666,10 +666,9 @@ that runs the entire `.org` namespace — disabled `autistici.org`[^18],
 taking out roughly 16,000 email accounts, 5,500 mailing lists, ~10,000
 blogs, and 1,500 websites in one stroke.[^19]
 On the financial side, PayPal took out the payment rails first, freezing all  money
-in motion.[^18] Banca Etica followed by freezing the account itself —
-money at rest — unwilling to risk its own
-[correspondent-banking](https://en.wikipedia.org/wiki/Correspondent_account)
-access over one customer.[^18]
+in motion.[^18] Banca Etica followed by freezing the account itself as it was 
+unwilling to risk its own [correspondent-banking](https://en.wikipedia.org/wiki/Correspondent_account)
+relationships over one customer.[^18]
 
 #### Mitigations
 
@@ -698,8 +697,10 @@ runs its own DNS hosting, and its
 pre-registered with ISNIC, sidestepping the separate registration
 step ISNIC otherwise requires.
 
+<div align="right" style="float:right; width:260px; margin-left:1em;">
+
 ```mermaid
-flowchart LR
+flowchart TD
     Client([Tor Client])
     Entry[Entry Node]
     Middle[Middle Relay]
@@ -711,6 +712,8 @@ flowchart LR
     Middle -- "2 layers peeled" --> Exit
     Exit -- "fully decrypted" --> Dest
 ```
+
+</div>
 
 An extra layer of protection is achievable (at the expense of more network configuration overhead) 
 by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror on
@@ -774,11 +777,11 @@ the same repository- and organization-level secrets [GitHub
 Actions](https://docs.github.com/en/actions) does[^33]. CI secrets are
 still scoped to whichever account holds them, though, regardless of
 host: suspend that account and the secrets — and every workflow that
-depends on them — go with it. Mitigate this risk by having 
-a trusted individual or satellite corporation keep a
-personal mirror of the repository, with its own independently
-configured secrets stored in a Bitwarden vault. This ensures
-that the release pipeline can publish, even if the primary org's account is locked.
+depends on them — go with it. Mitigate this risk with a satellite
+that keeps a personal mirror of the repository, with its own
+independently configured secrets stored in a Bitwarden vault. This
+ensures that the release pipeline can publish, even if the primary
+org's account is locked.
 
 **npm publish tokens.** This one raises tricky questions:
 npm has been owned by GitHub, and so by Microsoft,
