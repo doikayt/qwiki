@@ -701,23 +701,23 @@ around.
 *Technical Infrastructure - [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)*
 
 Domain choice is the first line of defense: The popular choices, `.com` and `.org`, are, 
-as mentioned above, both adminstered by U.S.-based registries, which the Autistici/Inventati case just
+as mentioned above, both administered by U.S.-based registries, which the Autistici/Inventati case just
 showed are willing to cave under U.S. pressure. Pinning web branding to a
 domain outside U.S. jurisdiction avoids that exposure from the start.
 Iceland's `.is` registry is operated by the non-profit
 [ISNIC](https://www.isnic.is/en/), which has a track record of
 resisting the kind of takedown requests that killed `autistici.org`.
 ISNIC runs the [top-level domain](https://en.wikipedia.org/wiki/Top-level_domain)
-(TLD) itself, though — actually registering a domain
+(TLD) itself (that is: `.is`.) Actually registering a domain under `.is` (e.g., mycompany.is)
 still goes through a separate registrar. Registering the domain
 through [1984 Hosting](https://1984.hosting/), an Icelandic registrar
 with a stated commitment to anonymity and free expression, adds a
 second layer of protection — this one over who controls the
 registration itself, rather than which jurisdiction the registry sits
-in — while avoiding a real risk some privacy-focused registrars carry:
-1984 keeps you as the actual legal registrant with
+in.  Registering with 1984 helps avoid a real risk some privacy-focused registrars carry, since they
+keep _you_ as the actual legal registrant with
 [WHOIS](https://en.wikipedia.org/wiki/WHOIS) privacy, rather than
-registering the domain under its own name and merely licensing you
+registering your domain under its own name and merely licensing you
 usage rights. This delegated-ownership model, used by some
 anonymity-focused registrars, leaves you with no standing to transfer
 or reclaim the domain yourself if that registrar itself caves. 1984 also
@@ -762,9 +762,9 @@ presence a routine practice, rather than scrambling to prepare in the face
 of a take-down action. Set an `Onion-Location` HTTP header[^23] on the
 [clearnet](https://en.wikipedia.org/wiki/Clearnet_(networking)) site
 pointing at the `.onion` URL, so [Tor
-Browsers](https://en.wikipedia.org/wiki/Tor_(network)) detect it
+Browsers](https://en.wikipedia.org/wiki/Tor_(network)) can detect it
 automatically
-and offers visitors a one-click switch with no separate announcement
+and offer visitors a one-click switch with no separate announcement
 needed; publish the bare `.onion` address too, in the site footer and
 official bios, for anyone on a different Tor client. Automate periodic
 checks with [Playwright](https://playwright.dev/docs/network):
@@ -804,8 +804,8 @@ Its [Forgejo Actions](https://docs.codeberg.org/ci/actions/) supports
 the same repository- and organization-level secrets [GitHub
 Actions](https://docs.github.com/en/actions) does[^33]. CI secrets are
 still scoped to whichever account holds them, though, regardless of
-host: suspend that account and the secrets — and every workflow that
-depends on them — go with it. Mitigate this risk with a satellite
+host. Once an account is suspended, its associated secrets — and every workflow that
+depends on them — are frozen. Mitigate this risk with a satellite
 that keeps a (regularly pulled/synced) personal mirror of the repository, with its own
 independently configured secrets stored in a Bitwarden vault. This
 ensures that the release pipeline can publish, even if the primary
