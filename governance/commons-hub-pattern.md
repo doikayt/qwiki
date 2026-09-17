@@ -13,8 +13,9 @@ Early concept draft.
 - Not written by a trained economist — this is a summary of the
   author's own research and reflection on equitable approaches to
   structuring, operating, and profiting from an OSS-focused enterprise.
-- Not battle tested -  the patterns and strategies we propose below are based on the emerging roadmap we 
-  are putting together for _our_ _ collective, offered in the spirit of 
+- Not battle tested -  the patterns, strategies and technical solutions we 
+  propose below are based on the emerging roadmap we 
+  are putting together for _our_  collective, and are offered in the spirit of 
   spurring discussion and soliciting feedback from the OSS community.
  
 
@@ -655,8 +656,8 @@ The recent (August 2026) US government designation of Italian
 hosting collective Autistici/Inventati as a ["Specially Designated
 Global Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/)
 serves as a useful case study on how a satellite structured collective might have
-avoided a shut-down. We propose mitigations[^16] on two axes:
-technical infrastructure, and financial structure (money in motion and money at rest) -- but first a recap.
+avoided a shut-down. We propose mitigations[^16] on two  infrastructural axes:
+technical, and financial -- but first a recap.
 
 
 The US State department issued the designation on August 26.[^17] 
@@ -697,6 +698,20 @@ runs its own DNS hosting, and its
 pre-registered with ISNIC, sidestepping the separate registration
 step ISNIC otherwise requires.
 
+```mermaid
+flowchart LR
+    Client([Tor Client])
+    Entry[Entry Node]
+    Middle[Middle Relay]
+    Exit[Exit Node]
+    Dest([Destination])
+
+    Client -- "encrypted in 3 layers" --> Entry
+    Entry -- "1 layer peeled" --> Middle
+    Middle -- "2 layers peeled" --> Exit
+    Exit -- "fully decrypted" --> Dest
+```
+
 An extra layer of protection is achievable (at the expense of more network configuration overhead) 
 by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror on
 [Tor](https://en.wikipedia.org/wiki/Tor_(network))[^20][^21].
@@ -719,26 +734,35 @@ pointing at the `.onion` URL, so [Tor
 Browser](https://en.wikipedia.org/wiki/Tor_(network)) detects it
 automatically
 and offers visitors a one-click switch with no separate announcement
-needed; publish the bare address too, in the site footer and
-official bios, for anyone on a different Tor client. Automate periodic 
+needed; publish the bare `.onion` address too, in the site footer and
+official bios, for anyone on a different Tor client. Automate periodic
 checks with [Playwright](https://playwright.dev/docs/network):
 fetch the clearnet site to confirm the `Onion-Location` header is
-still present, then point a second context's `proxy` at a local Tor
-daemon's SOCKS5 port (9050) and load the `.onion` URL directly, with
-hostname resolution happening proxy-side. A caveat: any use of Tor,
-even for research, may itself draw extra scrutiny from state
-actors.[^24]
+still present, then point a second context's `proxy` at the local Tor
+daemon's SOCKS5 endpoint (`127.0.0.1:9050` by default) and load the
+`.onion` URL directly, with hostname resolution happening proxy-side.
+A caveat: any use of Tor, even for research, may itself draw extra
+scrutiny from state actors.[^24]
 
 
 *Technical Infrastructure — Key and Credential Custodianship*
 
-This section covers replication of the secret keys a collective needs to
-operate. There are two varieties: keys that govern the ability to ship new
-releases — GitHub Actions secrets together with npm publish tokens — and those
-that protect financial assets — specificaly, a multisig cosigner's wallet key. 
-Each is centralized on some entity's account or device. Losing access
-can freeze release or spending capability even while the underlying
-asset (the git repo and its history, the funds themselves) stays fully intact.
+This section covers replication of the two varieties of keys and credentials a collective needs to
+operate:
+
+- operational: this covers GitHub Actions secrets, npm publish tokens,
+  and any other secrets required to build and publish a collective's software, and
+- financial: this would cover a multisig cosigner's wallet key, recovery codes, and credentials for
+  bank account logins, and the like
+
+The recommended vehicle for storing this type of sensitive information
+is a [Bitwarden](https://bitwarden.com) vault. Bitwarden is open
+source and free for up to two custodians, letting them access the
+full array of secrets through one shared set of credentials and
+(ideally) 2FA.
+
+
+
 
 **CI secrets.** GitHub Actions secrets are scoped to whichever GitHub
 org or repo holds them; suspend that account and the secrets — and
