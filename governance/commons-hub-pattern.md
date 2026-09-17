@@ -697,8 +697,19 @@ runs its own DNS hosting, and its
 pre-registered with ISNIC, sidestepping the separate registration
 step ISNIC otherwise requires.
 
-<table align="right" width="260">
-<tr><td>
+An extra layer of protection is achievable (at the expense of more network configuration overhead) 
+by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror on
+[Tor](https://en.wikipedia.org/wiki/Tor_(network))[^20][^21].
+Unlike a `.is` (dot _is_) domain, a `.onion` (dot _onion_) address needs
+no DNS at all: it's self-certifying, derived directly from the
+service's own [keypair](https://spec.torproject.org/rend-spec/encoding-onion-addresses.html)[^22],
+and resolved through Tor's own distributed
+hidden-service directory. There is no registry, registrar, or nameserver in
+the chain for a state actor to pressure.  Note that the
+`.is`/ISNIC strategy relies on a pressure-resistant DNS dependency, but still a dependency; the
+onion mirror is a _zero_-DNS-dependency channel. It is in a different
+category from a registrar-based approach entirely, no matter how
+takedown-resistant the registrar.
 
 ```mermaid
 %%{init: {"themeVariables": {"fontSize": "10px"}}}%%
@@ -715,29 +726,12 @@ flowchart TD
     Exit -- "decrypted" --> Dest
 ```
 
-</td></tr>
-</table>
-
-An extra layer of protection is achievable (at the expense of more network configuration overhead) 
-by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror on
-[Tor](https://en.wikipedia.org/wiki/Tor_(network))[^20][^21].
-Unlike a `.is` (dot _is_) domain, a `.onion` (dot _onion_) address needs
-no DNS at all: it's self-certifying, derived directly from the
-service's own [keypair](https://spec.torproject.org/rend-spec/encoding-onion-addresses.html)[^22],
-and resolved through Tor's own distributed
-hidden-service directory. There is no registry, registrar, or nameserver in
-the chain for a state actor to pressure.  Note that the
-`.is`/ISNIC strategy relies on a pressure-resistant DNS dependency, but still a dependency; the
-onion mirror is a _zero_-DNS-dependency channel. It is in a different
-category from a registrar-based approach entirely, no matter how
-takedown-resistant the registrar.
-
 Collectives pursing this approach should make verification and publication of their .onion
 presence a routine practice, rather than scrambling to prepare in the face 
 of a take-down action. Set an `Onion-Location` HTTP header[^23] on the
 [clearnet](https://en.wikipedia.org/wiki/Clearnet_(networking)) site
 pointing at the `.onion` URL, so [Tor
-Browser](https://en.wikipedia.org/wiki/Tor_(network)) detects it
+Browsers](https://en.wikipedia.org/wiki/Tor_(network)) detect it
 automatically
 and offers visitors a one-click switch with no separate announcement
 needed; publish the bare `.onion` address too, in the site footer and
