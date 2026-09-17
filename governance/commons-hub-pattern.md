@@ -854,18 +854,26 @@ finding out only when a transaction actually needs signing.
 [[[  THIS SECTION NEEDS A REWRITE ]]]
 *Financial Layer*
 
-For the financial layer: a payment rail and a bank vault are, in this
-respect, the same chokepoint — both are reachable the moment the money
-moving through, or sitting in, them is denominated in U.S. dollars.
-That's because a dollar is only ever actually settled inside the U.S.
-banking system: even a transaction between two non-U.S. parties still
-clears through Fedwire or CHIPS and the correspondent-banking
-relationships that connect foreign banks to them, and a non-U.S. bank
-holding USD deposits needs that same correspondent relationship just
-to make its dollars usable internationally. Cutting off correspondent
-access — exactly what happened to Banca Etica above — is enough to
-freeze either the payment or the deposit, without the U.S. government
-needing jurisdiction over the foreign bank itself.
+Both payment rails and bank accounts become vulnerable the moment a US dollar-denominated transaction moves
+through those rails, or results in a deposit into those accounts. Dollars must be settled inside the U.S. banking
+system — a system OFAC (the Treasury Department's Office of Foreign Assets Control) regulates under the 
+[IEEPA](https://en.wikipedia.org/wiki/International_Emergency_Economic_Powers_Act).
+Every U.S. bank must comply with OFAC's blocking orders.[^33]
+
+Even a transaction between two non-U.S. parties still clears through Fedwire
+or CHIPS and the correspondent-banking relationships that connect
+foreign banks to them, and a non-U.S. bank holding USD deposits needs
+that same correspondent relationship just to make its dollars usable
+internationally. OFAC doesn't need jurisdiction over the foreign bank
+itself to reach it this way: it regulates that bank's *U.S.*
+correspondent directly, which must refuse any transaction tied to a
+designated party — and a related Treasury/FinCEN authority (PATRIOT
+Act §311) can go further and bar U.S. banks from maintaining a
+correspondent account for the foreign bank at all, cutting off its
+dollar access entirely, not just for one flagged customer. That threat
+is exactly what drove Banca Etica to freeze the account itself, above,
+rather than wait and find out.
+
 Our structure holds reserves the DAO's crypto-treasury (§2) can reach
 directly, denominated outside the dollar-clearing system entirely —
 no correspondent bank, no USD off-ramp, nothing for a sanctions action
@@ -1668,3 +1676,13 @@ when it later leaves the retained-earnings pool as a distribution.
     tokens](https://docs.npmjs.com/creating-and-viewing-access-tokens/) —
     npm's documentation on granular (package-scoped) tokens vs. classic
     tokens.
+
+[^33]: OFAC's authority derives from the [International Emergency
+    Economic Powers Act](https://en.wikipedia.org/wiki/International_Emergency_Economic_Powers_Act)
+    (IEEPA); U.S. financial institutions must comply with its blocking
+    regulations. On the correspondent-account mechanism specifically:
+    [Section 311 Special Measures — eCFR Title 31, Part 1010, Subpart
+    F](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-F/subject-group-ECFRe5988d602e86fcf),
+    and FinCEN's [Iran correspondent-account
+    prohibition](https://www.fincen.gov/news/news-releases/final-regulation-implementing-section-312-usa-patriot-act-announced)
+    as a worked example of a §311 special measure in practice.
