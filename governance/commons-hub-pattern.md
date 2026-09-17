@@ -3,7 +3,9 @@
 *A replicable model for organizing collaboratively-developed
 open source software (OSS) around nonprofit and for-profit satellites*
 
-**Status:** Early concept draft.
+**Status:**: 
+
+Early concept draft.
 
 - Not reviewed by counsel — nothing in this document is legal, tax, or
   financial advice; consult qualified counsel and a CPA before acting
@@ -11,10 +13,11 @@ open source software (OSS) around nonprofit and for-profit satellites*
 - Not written by a trained economist — this is a summary of the
   author's own research and reflection on equitable approaches to
   structuring, operating, and profiting from an OSS-focused enterprise.
-- Not battle tested — the patterns and strategies we propose below are
-  based on the emerging roadmap we are putting together for _our own_
-  collective, offered in the spirit of spurring discussion and
-  soliciting feedback from the OSS community.
+- Not battle tested -  the patterns and strategies we propose below are based on the emerging roadmap we 
+  are putting together for _our_ _ collective, offered in the spirit of 
+  spurring discussion and soliciting feedback from the OSS community.
+ 
+
 
 ---
 
@@ -717,7 +720,7 @@ Browser](https://en.wikipedia.org/wiki/Tor_(network)) detects it
 automatically
 and offers visitors a one-click switch with no separate announcement
 needed; publish the bare address too, in the site footer and
-official bios, for anyone on a different Tor client; and script both
+official bios, for anyone on a different Tor client. Automate periodic 
 checks with [Playwright](https://playwright.dev/docs/network):
 fetch the clearnet site to confirm the `Onion-Location` header is
 still present, then point a second context's `proxy` at a local Tor
