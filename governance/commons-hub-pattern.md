@@ -857,6 +857,15 @@ finding out only when a transaction actually needs signing.
 For the financial layer: a payment rail and a bank vault are, in this
 respect, the same chokepoint — both are reachable the moment the money
 moving through, or sitting in, them is denominated in U.S. dollars.
+That's because a dollar is only ever actually settled inside the U.S.
+banking system: even a transaction between two non-U.S. parties still
+clears through Fedwire or CHIPS and the correspondent-banking
+relationships that connect foreign banks to them, and a non-U.S. bank
+holding USD deposits needs that same correspondent relationship just
+to make its dollars usable internationally. Cutting off correspondent
+access — exactly what happened to Banca Etica above — is enough to
+freeze either the payment or the deposit, without the U.S. government
+needing jurisdiction over the foreign bank itself.
 Our structure holds reserves the DAO's crypto-treasury (§2) can reach
 directly, denominated outside the dollar-clearing system entirely —
 no correspondent bank, no USD off-ramp, nothing for a sanctions action
