@@ -680,13 +680,17 @@ both run by U.S.-based registries (Verisign and the Public Interest
 Registry, respectively), which the Autistici/Inventati case just
 showed are willing to cave under U.S. pressure. Pinning web branding to a
 domain outside U.S. jurisdiction avoids that exposure from the start.
-Iceland's `.is` registry, run by the non-profit [ISNIC](https://www.isnic.is/en/), has a
-track record of resisting the kind of takedown requests that
-killed `autistici.org`. Registering through [1984
-Hosting](https://1984.hosting/), an Icelandic provider with a stated
-commitment to anonymity and free expression, adds a second layer while
-avoiding a real risk some privacy-focused registrars carry: 1984 keeps
-you as the actual legal registrant with
+Iceland's `.is` registry is operated by the non-profit
+[ISNIC](https://www.isnic.is/en/), which has a track record of
+resisting the kind of takedown requests that killed `autistici.org`.
+ISNIC runs the TLD itself, though — actually registering a domain
+still goes through a separate registrar. Registering the domain
+through [1984 Hosting](https://1984.hosting/), an Icelandic registrar
+with a stated commitment to anonymity and free expression, adds a
+second layer of protection — this one over who controls the
+registration itself, rather than which jurisdiction the registry sits
+in — while avoiding a real risk some privacy-focused registrars carry:
+1984 keeps you as the actual legal registrant with
 [WHOIS](https://en.wikipedia.org/wiki/WHOIS) privacy, rather than
 registering the domain under its own name and merely licensing you
 usage rights. This delegated-ownership model, used by some
@@ -697,7 +701,7 @@ runs its own DNS hosting, and its
 pre-registered with ISNIC, sidestepping the separate registration
 step ISNIC otherwise requires.
 
-An extra layer of protection is achievable (at the expense of more network configuration overhead) 
+A further layer of protection is achievable (at the expense of more network configuration overhead) 
 by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror on
 [Tor](https://en.wikipedia.org/wiki/Tor_(network))[^20][^21].
 Unlike a `.is` (dot _is_) domain, a `.onion` (dot _onion_) address needs
@@ -713,7 +717,7 @@ takedown-resistant the registrar.
 
 ```mermaid
 %%{init: {"themeVariables": {"fontSize": "10px"}}}%%
-flowchart TD
+flowchart LR
     Client([Tor Client])
     Entry[Entry Node]
     Middle[Middle Relay]
@@ -747,7 +751,7 @@ scrutiny from state actors.[^24]
 
 *Technical Infrastructure — Key and Credential Custodianship*
 
-This section covers replication of the keys and credentials a collective needs to
+This section covers replication of the two categories of keys and credentials a collective needs to
 function.
 
 - operational: this covers CI secrets, npm publish tokens,
@@ -775,7 +779,7 @@ Actions](https://docs.github.com/en/actions) does[^33]. CI secrets are
 still scoped to whichever account holds them, though, regardless of
 host: suspend that account and the secrets — and every workflow that
 depends on them — go with it. Mitigate this risk with a satellite
-that keeps a personal mirror of the repository, with its own
+that keeps a (regularly pulled/synced) personal mirror of the repository, with its own
 independently configured secrets stored in a Bitwarden vault. This
 ensures that the release pipeline can publish, even if the primary
 org's account is locked.
@@ -793,37 +797,31 @@ installability — anyone running `npm install` still resolves to
 npmjs.com unless they've reconfigured their own registry. Short of
 that unresolved gap: publish rights are tied to an npm user or org
 account, so a suspended account can't publish a new version even
-though everything already published stays live. Prefer npm's granular
-access tokens — scoped to specific packages, with a defined expiry,
-rather than a classic token with blanket publish rights[^32] — and
+though everything already published stays live. Prefer npm's
+[granular access
+tokens](https://docs.npmjs.com/creating-and-viewing-access-tokens/) —
+scoped to specific packages, with a defined expiry, rather than a
+classic token with blanket publish rights[^32] — and
 keep a second maintainer's account (2FA-enabled, with its own recovery
 methods on file) able to publish as a fallback.
 
-**Crypto wallet keys.** The same single-point-of-failure risk shows up
-here too, at the level of an individual signer rather than the
-treasury as a whole: whoever holds a multisig cosigner key (§2) needs
-to protect that key without becoming a point of failure themselves. A
+**Financial Keys and Credentials.** A multisig treasury (§2) needs
+several signers to agree before funds move, so no single signer can
+drain it — but each signer still personally holds one full private
+key, and protecting that key is entirely their own responsibility.
+Whoever holds a cosigner key needs to guard it without becoming a
+point of failure themselves. A
 [hardware wallet](https://en.wikipedia.org/wiki/Hardware_wallet), not
 a software or exchange-hosted one, is the baseline — it keeps the
 private key off any internet-connected device entirely. The [seed
 phrase](https://en.wikipedia.org/wiki/Seed_phrase) behind it needs its
 own backup, split or duplicated across more than one physical
-location, so a fire, a theft, or one bag lost in transit doesn't
-destroy every copy. None of this should get improvised under
+location, so losing any single copy — to a fire, a theft, or a bag
+left behind while traveling — doesn't destroy every copy. None of this should be set up under
 pressure: a signer should periodically confirm they can still produce
 a valid signature with their own key, the same way the onion mirror
 and alternate domain above get periodically checked, rather than
 finding out only when a transaction actually needs signing.
-And a signer's org key shouldn't double
-as their personal one — mixing the two means a personal wallet mishap
-can cost the org a signer, and an org-related dispute can expose a
-signer's own holdings.
-
-Note that none of the roles described in this section
-require a corporate entity. A domain registrant, a backup CI
-org-owner seat, a secondary npm publish account, and a hardware
-wallet holding a multisig cosigner key can each be held personally by
-a trusted individual acting as a satellite.
 
 
 [[[  THIS SECTION NEEDS A REWRITE ]]]
