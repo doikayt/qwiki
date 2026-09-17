@@ -747,10 +747,10 @@ scrutiny from state actors.[^24]
 
 *Technical Infrastructure — Key and Credential Custodianship*
 
-This section covers replication of the two varieties of keys and credentials a collective needs to
-operate:
+This section covers replication of the keys and credentials a collective needs to
+function.
 
-- operational: this covers GitHub Actions secrets, npm publish tokens,
+- operational: this covers CI secrets, npm publish tokens,
   and any other secrets required to build and publish a collective's software, and
 - financial: this would cover a multisig cosigner's wallet key, recovery codes, and credentials for
   bank account logins, and the like
@@ -759,50 +759,71 @@ The recommended vehicle for storing this type of sensitive information
 is a [Bitwarden](https://bitwarden.com) vault. Bitwarden is open
 source and (as of this writing) free for up to two custodians, letting them access the
 full array of secrets through one shared set of credentials and
-(ideally) 2FA.
+(ideally) 2FA. Note that the guidance below assumes a JavaScript/Node.js stack (our domain of expertise)  — 
+hence the focus on npm publish tokens. A different language stack would swap in its own
+package registry (PyPI, RubyGems, and the like.)
 
+**CI secrets.** [Codeberg](https://codeberg.org) is the assumed git
+host here, not GitHub — GitHub is a wholly-owned Microsoft subsidiary,
+a US company carrying the same deplatforming exposure already
+discussed for PayPal and the domain registries above.
+Codeberg, built on the open-source Forgejo, is EU-hosted and run by a
+nonprofit, for the same jurisdictional reasons as the `.is` domain.
+Its [Forgejo Actions](https://docs.codeberg.org/ci/actions/) supports
+the same repository- and organization-level secrets [GitHub
+Actions](https://docs.github.com/en/actions) does[^33]. CI secrets are
+still scoped to whichever account holds them, though, regardless of
+host: suspend that account and the secrets — and every workflow that
+depends on them — go with it. Mitigate this risk by having 
+a trusted individual or satellite corporation keep a
+personal mirror of the repository, with its own independently
+configured secrets stored in a Bitwarden vault. This ensures
+that the release pipeline can publish, even if the primary org's account is locked.
 
-
-
-**CI secrets.** GitHub Actions secrets are scoped to whichever GitHub
-org or repo holds them; suspend that account and the secrets — and
-every workflow that depends on them — go with it. The mitigation
-follows the same pattern as the domain and treasury: a trusted
-individual satellite keeps a personal mirror of the repository, with
-its own independently configured secrets, so the release pipeline
-survives even if the primary org's account doesn't.
-
-**npm publish tokens.** Publish rights are tied to an npm user or org
-account; a suspended account can't publish a new version, even though
-everything already published stays live. Prefer npm's granular access
-tokens — scoped to specific packages, with a defined expiry, rather
-than a classic token with blanket publish rights[^32] — and keep a
-second maintainer's account (2FA-enabled, with its own recovery
+**npm publish tokens.** This one raises tricky questions:
+npm has been owned by GitHub, and so by Microsoft,
+since 2020, which means it carries the identical deplatforming
+exposure the Codeberg move above was meant to get away from — but
+unlike git hosting, there's no jurisdiction-neutral registry the
+public actually can install packages from by default. A self-hosted, npm-compatible
+registry such as [Verdaccio](https://github.com/verdaccio/verdaccio)
+(MIT-licensed) lets the collective keep publishing internally if its
+npmjs.com account is suspended, but it doesn't solve public
+installability — anyone running `npm install` still resolves to
+npmjs.com unless they've reconfigured their own registry. Short of
+that unresolved gap: publish rights are tied to an npm user or org
+account, so a suspended account can't publish a new version even
+though everything already published stays live. Prefer npm's granular
+access tokens — scoped to specific packages, with a defined expiry,
+rather than a classic token with blanket publish rights[^32] — and
+keep a second maintainer's account (2FA-enabled, with its own recovery
 methods on file) able to publish as a fallback.
 
 **Crypto wallet keys.** The same single-point-of-failure risk shows up
 here too, at the level of an individual signer rather than the
 treasury as a whole: whoever holds a multisig cosigner key (§2) needs
 to protect that key without becoming a point of failure themselves. A
-hardware wallet, not a software or exchange-hosted one, is the
-baseline — it keeps the private key off any internet-connected device
-entirely. The seed phrase behind it needs its own backup, split or
-duplicated across more than one physical location, so a single fire,
-theft, or lost bag doesn't cost the org a signer. None of this should
-get improvised under pressure: a signer should periodically confirm
-they can still produce a valid signature with their own key, the same
-way the onion mirror and alternate domain above get periodically
-checked, rather than finding out a device has failed only when a
-transaction is actually due. And a signer's org key shouldn't double
+[hardware wallet](https://en.wikipedia.org/wiki/Hardware_wallet), not
+a software or exchange-hosted one, is the baseline — it keeps the
+private key off any internet-connected device entirely. The [seed
+phrase](https://en.wikipedia.org/wiki/Seed_phrase) behind it needs its
+own backup, split or duplicated across more than one physical
+location, so a fire, a theft, or one bag lost in transit doesn't
+destroy every copy. None of this should get improvised under
+pressure: a signer should periodically confirm they can still produce
+a valid signature with their own key, the same way the onion mirror
+and alternate domain above get periodically checked, rather than
+finding out only when a transaction actually needs signing.
+And a signer's org key shouldn't double
 as their personal one — mixing the two means a personal wallet mishap
 can cost the org a signer, and an org-related dispute can expose a
 signer's own holdings.
 
-None of the roles described in this Technical Infrastructure section
-require a corporate entity. A domain registrant, a backup GitHub
+Note that none of the roles described in this section
+require a corporate entity. A domain registrant, a backup CI
 org-owner seat, a secondary npm publish account, and a hardware
 wallet holding a multisig cosigner key can each be held personally by
-a trusted individual satellite.
+a trusted individual acting as a satellite.
 
 
 [[[  THIS SECTION NEEDS A REWRITE ]]]
