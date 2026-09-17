@@ -757,7 +757,7 @@ operate:
 
 The recommended vehicle for storing this type of sensitive information
 is a [Bitwarden](https://bitwarden.com) vault. Bitwarden is open
-source and free for up to two custodians, letting them access the
+source and (as of this writing) free for up to two custodians, letting them access the
 full array of secrets through one shared set of credentials and
 (ideally) 2FA.
 
