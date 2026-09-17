@@ -665,8 +665,8 @@ Forty-eight hours later, the Public Interest Registry — the nonprofit
 that runs the entire `.org` namespace — disabled `autistici.org`[^18],
 taking out roughly 16,000 email accounts, 5,500 mailing lists, ~10,000
 blogs, and 1,500 websites in one stroke.[^19]
-On the financial side, PayPal took out the payment rails first, freezing all  money
-in motion.[^18] Banca Etica followed by freezing the account itself as it was 
+On the financial side, PayPal took out the payment rails first [^18], and 
+Banca Etica followed by freezing the account itself as it was 
 unwilling to risk its own [correspondent-banking](https://en.wikipedia.org/wiki/Correspondent_account)
 relationships over one customer.[^18]
 
@@ -697,7 +697,8 @@ runs its own DNS hosting, and its
 pre-registered with ISNIC, sidestepping the separate registration
 step ISNIC otherwise requires.
 
-<div align="right" style="float:right; width:260px; margin-left:1em;">
+<table align="right" width="260">
+<tr><td>
 
 ```mermaid
 flowchart TD
@@ -713,7 +714,8 @@ flowchart TD
     Exit -- "fully decrypted" --> Dest
 ```
 
-</div>
+</td></tr>
+</table>
 
 An extra layer of protection is achievable (at the expense of more network configuration overhead) 
 by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror on
