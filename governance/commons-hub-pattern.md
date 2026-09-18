@@ -882,7 +882,7 @@ That threat is what drove Banca Etica to implement its freezing of A/I's assets.
 flowchart TD
     subgraph SAT["Satellite (nonprofit) — donor-funded"]
         Donor([Donor / Funder])
-        DonationProcessor[Giving Block - crypto-donation processor, not Doikayt's own]
+        DonationProcessor[Giving Block - crypto-donation processor, not the collective's own]
     end
 
     subgraph SUB["Subsidiary (for-profit) — customer revenue"]
