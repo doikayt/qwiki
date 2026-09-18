@@ -929,6 +929,7 @@ flowchart TD
     Treasury -.->|"4 deferred until<br/>F/T controller on board"| Hedge
 
     Hedge ~~~ DonationProcessor
+    Donor ~~~ SatBank
     VendorsFiat ~~~ LEGEND
 
     linkStyle 0,1,2,3,4,5 stroke:#d62728,color:#d62728
