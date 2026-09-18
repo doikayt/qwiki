@@ -875,6 +875,59 @@ maintaining that correspondent relationship at all. This would result in
 the cut-off of the foreign bank's dollar access entirely, not just one flagged customer.
 That threat is what drove Banca Etica to implement its freezing of A/I's assets.
 
+
+To mitigate the risk of a collective suffering A/I's fate, our model calls for holding
+long-term assets in a crypto currency that's hard to seize. We present two associated
+mechanisms, in increasing order of simplicity:
+
+- ETH for long-term holdings, with a DAI account covering short-term operating
+  expenses (our default recommendation)
+- A straight DAI account (see section below for an overview), with no ETH
+  intermediate step at all
+
+Both options share DAI's core property: no per-address freeze function[^35] exists for
+either ETH or DAI — they are identical in that regard, since ETH has no issuer or freeze
+key of its own, and DAI was deliberately built without one. The two diverge in the degree
+of downside that might affect your holdings, not in whether they can be seized.
+
+ETH is a freely-floating, unpegged asset — its price is set purely by the market, with
+nothing pulling it back toward any particular value. That gives it real volatility: ETH's
+worst historical drawdown was roughly -94% during the 2018 crash, and it fell -81% in
+2022[^36]. DAI, by contrast, is a pegged asset — designed to hold near $1 rather than
+float freely — and its worst historical dips have been far smaller and shorter than
+ETH's[^37].
+
+Another advantage of DAI is reduced paperwork: because it's received and spent at
+essentially the same value, converting it to fiat doesn't trigger a capital-gains event
+worth recording — DAI can be converted and paid out in a single transaction. ETH
+requires two: a disposal event (ETH into DAI or fiat) that has to be tracked for capital
+gains or losses, and then the actual payment.
+
+Holding ETH, though, comes with its own costs beyond volatility. Vendors who won't accept
+crypto directly still need to be paid in USD or a USD-backed instrument, so ETH has to be
+converted before it can reach them — and each of those conversions carries the
+accounting overhead just described. Even sitting still, ETH's volatility has a cost: an
+organization that wants to hedge a large ETH position against downside risk takes on
+real administrative burden to do it — a cost that generally isn't worth carrying until
+the organization's scale justifies a dedicated finance function to manage it.
+
+Given all that, a genuinely simpler alternative to the two-tier model shown in the
+diagram below is to hold the treasury entirely in DAI — no ETH intermediate step, no
+periodic batch-convert, no separate reserve to manage. The tradeoff is concentration: a
+treasury held entirely in DAI has zero exposure to ETH's volatility, but it also has zero
+diversification against anything going wrong specifically within Sky's own collateral or
+governance — every dollar in the treasury shares the same fate. The two-tier model exists
+specifically to avoid that concentration: holding ETH alongside DAI means part of the
+treasury depends on no protocol, no collateral, and no issuer at all, which is a form of
+resilience the all-DAI approach gives up in exchange for simplicity. Which tradeoff is
+right depends on how much administrative capacity a given collective actually has.
+
+The simplest rule might be: hold DAI only, accepting its risk, until the 501(c)(3)
+Satellite (or its subsidiary) can hire a treasurer — then let that person decide.
+
+
+*Financial Infrastructure Layer -- fund flows*
+
 <!-- TODO: this diagram has no heading/anchor above it, so nothing in the doc
      can actually link to it yet. The ETH-vs-DAI draft text refers to "the
      diagram below" in prose - that needs to become a real intra-doc hyperlink
@@ -959,56 +1012,7 @@ the multisig treasury shown here is the layer that carries out whatever
 that governance process decides, not a stand-in for it.
 
 
-To mitigate the risk of a collective suffering A/I's fate, our model calls for holding
-long-term assets in a crypto currency that's hard to seize. We present two associated
-mechanisms, in increasing order of simplicity:
-
-- ETH for long-term holdings, with a DAI account covering short-term operating
-  expenses (our default recommendation)
-- A straight DAI account (see section below for an overview), with no ETH
-  intermediate step at all
-
-Both options share DAI's core property: no per-address freeze function[^35] exists for
-either ETH or DAI — they are identical in that regard, since ETH has no issuer or freeze
-key of its own, and DAI was deliberately built without one. The two diverge in the degree
-of downside that might affect your holdings, not in whether they can be seized.
-
-ETH is a freely-floating, unpegged asset — its price is set purely by the market, with
-nothing pulling it back toward any particular value. That gives it real volatility: ETH's
-worst historical drawdown was roughly -94% during the 2018 crash, and it fell -81% in
-2022[^36]. DAI, by contrast, is a pegged asset — designed to hold near $1 rather than
-float freely — and its worst historical dips have been far smaller and shorter than
-ETH's[^37].
-
-Another advantage of DAI is reduced paperwork: because it's received and spent at
-essentially the same value, converting it to fiat doesn't trigger a capital-gains event
-worth recording — DAI can be converted and paid out in a single transaction. ETH
-requires two: a disposal event (ETH into DAI or fiat) that has to be tracked for capital
-gains or losses, and then the actual payment. This overhead compounds for ETH
-specifically, since vendors who won't accept crypto directly still need to be paid in
-USD or a USD-backed instrument — every payment to a fiat-only vendor means another ETH
-conversion, and another capital-gains event to track.
-
-Holding ETH also means living with real price volatility, and managing that isn't free
-either: an organization that wants to hedge a large ETH position against downside risk
-takes on real administrative burden to do it — a cost that generally isn't worth
-carrying until the organization's scale justifies a dedicated finance function to
-manage it.
-
-Given all that, a genuinely simpler alternative to the two-tier model shown in the
-diagram below is to hold the treasury entirely in DAI — no ETH intermediate step, no
-periodic batch-convert, no separate reserve to manage. The tradeoff is concentration: a
-treasury held entirely in DAI has zero exposure to ETH's volatility, but it also has zero
-diversification against anything going wrong specifically within Sky's own collateral or
-governance — every dollar in the treasury shares the same fate. The two-tier model exists
-specifically to avoid that concentration: holding ETH alongside DAI means part of the
-treasury depends on no protocol, no collateral, and no issuer at all, which is a form of
-resilience the all-DAI approach gives up in exchange for simplicity. Which tradeoff is
-right depends on how much administrative capacity a given collective actually has.
-
-The simplest rule might be: hold DAI only, accepting its risk, until the 501(c)(3)
-Satellite (or its subsidiary) can hire a treasurer — then let that person decide.
-
+-----  [[ might want to delete next para ]]
 None of this would have stopped the designation itself. It would have
 kept the Commons and every other Satellite running while the targeted
 one dealt with the consequences — which is the whole point of
