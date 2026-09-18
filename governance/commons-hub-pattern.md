@@ -925,13 +925,15 @@ flowchart TD
     DAIFloat -- "3 wallet-to-wallet, DAI discount" --> VendorsCrypto
     DAIFloat -- "3 processor converts + pays vendor in one settlement" --> OffRampJIT
     OffRampJIT -- "3" --> VendorsFiat
+    SatBank -- "3 ACH/card, routine ops" --> VendorsFiat
+    SubBank -- "3 ACH/card, routine ops" --> VendorsFiat
 
     ETHReserve -.->|"4 deferred until<br/>F/T controller on board"| Hedge
 
     linkStyle 0,1,2,3,4 stroke:#d62728,color:#d62728
     linkStyle 7,8,9 stroke:#1f77b4,color:#1f77b4
-    linkStyle 10,11,12,13,14 stroke:#2ca02c,color:#2ca02c
-    linkStyle 5,6,15 stroke:#888888,color:#888888,stroke-dasharray: 5 5
+    linkStyle 10,11,12,13,14,15,16 stroke:#2ca02c,color:#2ca02c
+    linkStyle 5,6,17 stroke:#888888,color:#888888,stroke-dasharray: 5 5
 
     classDef owned fill:#eaf2fb,stroke:#1f77b4,stroke-width:3px
     classDef external fill:#fdf0e3,stroke:#e07b00,stroke-width:2px,stroke-dasharray:3 3
