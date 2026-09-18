@@ -1692,3 +1692,17 @@ when it later leaves the retained-earnings pool as a distribution.
     or CHIPS. A non-U.S. bank needs a correspondent relationship with a
     U.S. bank just to make its own dollar holdings usable
     internationally — which is the relationship OFAC reaches through.
+
+---
+
+<a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="images/cc-by-sa-4.0.png" alt="CC BY-SA 4.0" width="88" height="31"></a>
+
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0
+International License](https://creativecommons.org/licenses/by-sa/4.0/) —
+free to use, share, and adapt, provided derivatives stay under the same
+open license.
+
+Attribution is required under the license above — and if you build on this
+pattern, we'd genuinely appreciate a heads-up or a shout-out to [Doikayt
+Mobilization Labs](https://doikayt.org). We'd be proud to see it out in the
+world.
