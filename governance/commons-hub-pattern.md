@@ -882,8 +882,8 @@ mechanisms, in increasing order of simplicity:
 
 - ETH for long-term holdings, with a DAI account covering short-term operating
   expenses (our default recommendation)
-- A straight DAI account (see section below for an overview), with no ETH
-  intermediate step at all
+- A straight DAI account ([see the backgrounder below](#dai-backgrounder)),
+  with no ETH intermediate step at all
 
 Both options share DAI's core property: no per-address freeze function[^35] exists for
 either ETH or DAI — they are identical in that regard, since ETH has no issuer or freeze
@@ -901,23 +901,25 @@ Another advantage of DAI is reduced paperwork: because it's received and spent a
 essentially the same value, converting it to fiat doesn't trigger a capital-gains event
 worth recording — DAI can be converted and paid out in a single transaction. ETH
 requires two: a disposal event (ETH into DAI or fiat) that has to be tracked for capital
-gains or losses, and then the actual payment.
+gains or losses, and then the actual payment. This overhead compounds for ETH
+specifically, since vendors who won't accept crypto directly still need to be paid in
+USD or a USD-backed instrument — every payment to a fiat-only vendor means another ETH
+conversion, and another capital-gains event to track.
 
-Holding ETH, though, comes with its own costs beyond volatility. Vendors who won't accept
-crypto directly still need to be paid in USD or a USD-backed instrument, so ETH has to be
-converted before it can reach them — and each of those conversions carries the
-accounting overhead just described. Even sitting still, ETH's volatility has a cost: an
-organization that wants to hedge a large ETH position against downside risk takes on
-real administrative burden to do it — a cost that generally isn't worth carrying until
-the organization's scale justifies a dedicated finance function to manage it.
+Holding ETH also means living with real price volatility, and managing that isn't free
+either: an organization that wants to hedge a large ETH position against downside risk
+takes on real administrative burden to do it — a cost that generally isn't worth
+carrying until the organization's scale justifies a dedicated finance function to
+manage it.
 
 Given all that, a genuinely simpler alternative to the two-tier model shown in the
-diagram below is to hold the treasury entirely in DAI — no ETH intermediate step, no
-periodic batch-convert, no separate reserve to manage. The tradeoff is concentration: a
-treasury held entirely in DAI has zero exposure to ETH's volatility, but it also has zero
-diversification against anything going wrong specifically within Sky's own collateral or
-governance — every dollar in the treasury shares the same fate. The two-tier model exists
-specifically to avoid that concentration: holding ETH alongside DAI means part of the
+[diagram below](#fund-flows-diagram) is to hold the treasury entirely in DAI — no ETH
+intermediate step, no periodic batch-convert, no separate reserve to manage. The
+tradeoff is concentration: a treasury held entirely in DAI has zero exposure to ETH's
+volatility, but it also has zero diversification against anything going wrong
+specifically within Sky's own collateral or governance — every dollar in the treasury
+shares the same fate. The two-tier model exists specifically to avoid that
+concentration: holding ETH alongside DAI means part of the
 treasury depends on no protocol, no collateral, and no issuer at all, which is a form of
 resilience the all-DAI approach gives up in exchange for simplicity. Which tradeoff is
 right depends on how much administrative capacity a given collective actually has.
@@ -926,13 +928,51 @@ The simplest rule might be: hold DAI only, accepting its risk, until the 501(c)(
 Satellite (or its subsidiary) can hire a treasurer — then let that person decide.
 
 
-*Financial Infrastructure Layer -- fund flows*
+<a id="dai-backgrounder"></a>
 
-<!-- TODO: this diagram has no heading/anchor above it, so nothing in the doc
-     can actually link to it yet. The ETH-vs-DAI draft text refers to "the
-     diagram below" in prose - that needs to become a real intra-doc hyperlink
-     once this diagram has a linkable heading (e.g. "### Financial flow
-     diagram" or similar) rather than staying a bare, unaddressable code block. -->
+*Financial Infrastructure Layer -- DAI backgrounder*
+
+DAI is a U.S.-dollar-pegged cryptocurrency created by Maker (now Sky) and designed to
+maintain a value of approximately one U.S. dollar without being a deposit at a
+conventional bank. Unlike a bank account or payment account, a DAI balance exists on a
+public blockchain and is controlled by the holder of the corresponding cryptographic
+keys. There is no bank, payment processor, or central DAI account administrator that can
+simply instruct the network to freeze a particular address. This distinction is
+important for a distributed collective: the organization can hold and transfer funds
+without making a conventional financial institution the single point at which a
+politically motivated designation, compliance decision, or correspondent-banking cutoff
+can immobilize its treasury.
+
+That resilience isn't unconditional, though, and it's worth being precise about where
+its limits actually sit rather than let a reader assume the treasury is untouchable.
+
+Sky's protocol has a legitimate circuit breaker built into it: the Emergency Shutdown
+Module, which MKR/SKY governance-token holders can trigger in response to a perceived
+existential threat to the system. Triggering it freezes the protocol and converts DAI
+from a freely spendable balance into a claim redeemable only through a settlement
+process — a real, if deliberately hard to reach, mechanism by which liquidity could stop
+on short notice.
+
+A smart contract's absence of a freeze key also doesn't extend that same immunity to the
+people who govern or maintain it. The clearest precedent is Tornado Cash: even after the
+underlying OFAC sanction on its smart-contract addresses was vacated by the Fifth
+Circuit, the U.S. Department of Justice still pursued one of its developers, Roman
+Storm, to a conviction on one charge, with a retrial pending on the remaining two. Sky
+has an identifiable foundation and a concentrated set of governance-token holders — a
+target class in its own right, independent of what the DAI contract itself can or
+cannot do.
+
+And DAI's own collateral base isn't purely decentralized crypto. Roughly 35-40% of it
+sits directly in USDC, held through Sky's Peg Stability Module — an amount Circle could
+freeze unilaterally, with no court order required, using the same freeze-key mechanism
+described above[^35]. That's not a freeze on any individual DAI holder's balance, but
+it's a real dependency the rest of this treasury strategy inherits whether or not it's
+acknowledged.
+
+
+<a id="fund-flows-diagram"></a>
+
+*Financial Infrastructure Layer -- fund flows*
 
 ```mermaid
 %%{init: {"themeVariables": {"fontSize": "10px"}}}%%
