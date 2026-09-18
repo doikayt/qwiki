@@ -884,13 +884,15 @@ flowchart TD
     FiatRail[Fiat processor / bank]
     OnRamp[Exchange on-ramp - KYC'd]
     Treasury[[Multisig Treasury]]
+    BatchConvert[Periodic ETH to DAI batch convert - monthly/qtrly, single multisig sign-off]
     DAIFloat[DAI - operating float]
     ETHReserve[ETH - long-term reserve]
-    Vault[Sky Vault - optional, conservative overcollateralization]
     Contributors{{Contributors}}
     ContribOfframp([Contributor's own fiat off-ramp])
     VendorsCrypto{{Vendors - crypto-accepting}}
+    OffRampJIT[Just-in-time off-ramp - no standing balance]
     VendorsFiat{{Vendors - fiat-only}}
+    Hedge[Hedging - staged: once FT controller hired]
 
     Donor -- "1 cash/USD" --> FiatRail
     FiatRail -- "1 conversion" --> OnRamp
@@ -899,17 +901,21 @@ flowchart TD
 
     Treasury -- "2 near-term float" --> DAIFloat
     Treasury -- "2 majority reserve" --> ETHReserve
-    ETHReserve -- "2 optional, conservative overcollateralization" --> Vault
-    Vault -- "2 mint" --> DAIFloat
+    ETHReserve -- "2 periodic batch, single sign-off" --> BatchConvert
+    BatchConvert -- "2" --> DAIFloat
 
     DAIFloat -- "3 wallet-to-wallet" --> Contributors
     Contributors -- "3 own responsibility" --> ContribOfframp
     DAIFloat -- "3 wallet-to-wallet, DAI discount" --> VendorsCrypto
-    Treasury -- "3 fiat rail" --> VendorsFiat
+    DAIFloat -- "3 just-in-time, no standing balance" --> OffRampJIT
+    OffRampJIT -- "3" --> VendorsFiat
+
+    ETHReserve -.->|"4 staged, not active"| Hedge
 
     linkStyle 0,1,2,3 stroke:#d62728,color:#d62728
     linkStyle 4,5,6,7 stroke:#1f77b4,color:#1f77b4
-    linkStyle 8,9,10,11 stroke:#2ca02c,color:#2ca02c
+    linkStyle 8,9,10,11,12 stroke:#2ca02c,color:#2ca02c
+    linkStyle 13 stroke:#888888,color:#888888,stroke-dasharray: 5 5
 ```
 
 
