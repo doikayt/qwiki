@@ -883,7 +883,6 @@ flowchart TD
     subgraph SAT["Satellite (nonprofit) — donor-funded"]
         Donor([Donor / Funder])
         SatBank[Bank account - near-term ops only]
-        DonationProcessor[Giving Block - HODL option, deposits land in Treasury as crypto]
     end
 
     subgraph SUB["Subsidiary (for-profit) — customer revenue"]
@@ -891,10 +890,10 @@ flowchart TD
         SubBank[Bank account - near-term ops only]
     end
 
-    Treasury[Multisig Treasury]
+    DonationProcessor[Giving Block - HODL option, deposits land in Treasury as crypto]
+    Treasury[Multisig Treasury - held as ETH]
     BatchConvert[Periodic ETH to DAI batch convert - monthly/qtrly, single multisig sign-off]
     DAIFloat[DAI - operating float]
-    ETHReserve[ETH - long-term reserve]
     Contributors{{Contributors}}
     ContribOfframp([Contributor's own fiat off-ramp])
     VendorsCrypto{{Vendors - crypto-accepting}}
@@ -909,14 +908,14 @@ flowchart TD
 
     Donor -- "1 cash/USD" --> SatBank
     SatBank -- "1 periodic sweep" --> Treasury
-    Donor -- "1 DAI directly, or ETH/BTC swappable" --> Treasury
+    Donor -- "1 DAI directly" --> DAIFloat
+    Donor -- "1 ETH/BTC swappable" --> Treasury
     Customer -- "1 card/ACH, mostly fiat" --> SubBank
     SubBank -- "1 periodic sweep" --> Treasury
 
     Donor -.->|"deferred until volume or<br/>Form 8283 threshold hit"| DonationProcessor
 
-    Treasury -- "2 majority reserve" --> ETHReserve
-    ETHReserve -- "2 periodic batch, single sign-off" --> BatchConvert
+    Treasury -- "2 periodic batch, single sign-off" --> BatchConvert
     BatchConvert -- "2" --> DAIFloat
 
     DAIFloat -- "3 wallet-to-wallet" --> Contributors
@@ -927,20 +926,20 @@ flowchart TD
     SatBank -- "3 ACH/card, routine ops" --> VendorsFiat
     SubBank -- "3 ACH/card, routine ops" --> VendorsFiat
 
-    ETHReserve -.->|"4 deferred until<br/>F/T controller on board"| Hedge
+    Treasury -.->|"4 deferred until<br/>F/T controller on board"| Hedge
 
     VendorsFiat ~~~ LEGEND
 
-    linkStyle 0,1,2,3,4 stroke:#d62728,color:#d62728
-    linkStyle 6,7,8 stroke:#1f77b4,color:#1f77b4
+    linkStyle 0,1,2,3,4,5 stroke:#d62728,color:#d62728
+    linkStyle 7,8 stroke:#1f77b4,color:#1f77b4
     linkStyle 9,10,11,12,13,14,15 stroke:#2ca02c,color:#2ca02c
-    linkStyle 5,16 stroke:#888888,color:#888888,stroke-dasharray: 5 5
+    linkStyle 6,16 stroke:#888888,color:#888888,stroke-dasharray: 5 5
 
     classDef owned fill:#eaf2fb,stroke:#1f77b4,stroke-width:3px
     classDef external fill:#fdf0e3,stroke:#e07b00,stroke-width:2px,stroke-dasharray:3 3
     class L1 owned
     class L2 external
-    class Treasury,SatBank,SubBank,BatchConvert,DAIFloat,ETHReserve,Hedge owned
+    class Treasury,SatBank,SubBank,BatchConvert,DAIFloat,Hedge owned
     class Donor,DonationProcessor,Customer,Contributors,ContribOfframp external
     class VendorsCrypto,OffRampJIT,VendorsFiat external
 ```
