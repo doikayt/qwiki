@@ -959,15 +959,54 @@ the multisig treasury shown here is the layer that carries out whatever
 that governance process decides, not a stand-in for it.
 
 
-Our structure holds reserves the DAO's crypto-treasury (§2) can reach
-directly, denominated outside the dollar-clearing system entirely —
-no correspondent bank, no USD off-ramp, nothing for a sanctions action
-to grab. Who holds the keys matters too, in a different way: a single
-signer is a single point of failure — if they die, disappear, or go
-dark, the funds go with them. Multisig custody split across several
-trusted individuals in different jurisdictions covers both failure
-modes at once: no institution left to freeze, and no one person whose
-death locks the treasury.
+To mitigate the risk of a collective suffering A/I's fate, our model calls for holding
+long-term assets in a crypto currency that's hard to seize. We present two associated
+mechanisms, in increasing order of simplicity:
+
+- ETH for long-term holdings, with a DAI account covering short-term operating
+  expenses (our default recommendation)
+- A straight DAI account (see section below for an overview), with no ETH
+  intermediate step at all
+
+Both options share DAI's core property: no per-address freeze function[^35] exists for
+either ETH or DAI — they are identical in that regard, since ETH has no issuer or freeze
+key of its own, and DAI was deliberately built without one. The two diverge in the degree
+of downside that might affect your holdings, not in whether they can be seized.
+
+ETH is a freely-floating, unpegged asset — its price is set purely by the market, with
+nothing pulling it back toward any particular value. That gives it real volatility: ETH's
+worst historical drawdown was roughly -94% during the 2018 crash, and it fell -81% in
+2022[^36]. DAI, by contrast, is a pegged asset — designed to hold near $1 rather than
+float freely — and its worst historical dips have been far smaller and shorter than
+ETH's[^37].
+
+Another advantage of DAI is reduced paperwork: because it's received and spent at
+essentially the same value, converting it to fiat doesn't trigger a capital-gains event
+worth recording — DAI can be converted and paid out in a single transaction. ETH
+requires two: a disposal event (ETH into DAI or fiat) that has to be tracked for capital
+gains or losses, and then the actual payment.
+
+Holding ETH, though, comes with its own costs beyond volatility. Vendors who won't accept
+crypto directly still need to be paid in USD or a USD-backed instrument, so ETH has to be
+converted before it can reach them — and each of those conversions carries the
+accounting overhead just described. Even sitting still, ETH's volatility has a cost: an
+organization that wants to hedge a large ETH position against downside risk takes on
+real administrative burden to do it — a cost that generally isn't worth carrying until
+the organization's scale justifies a dedicated finance function to manage it.
+
+Given all that, a genuinely simpler alternative to the two-tier model shown in the
+diagram below is to hold the treasury entirely in DAI — no ETH intermediate step, no
+periodic batch-convert, no separate reserve to manage. The tradeoff is concentration: a
+treasury held entirely in DAI has zero exposure to ETH's volatility, but it also has zero
+diversification against anything going wrong specifically within Sky's own collateral or
+governance — every dollar in the treasury shares the same fate. The two-tier model exists
+specifically to avoid that concentration: holding ETH alongside DAI means part of the
+treasury depends on no protocol, no collateral, and no issuer at all, which is a form of
+resilience the all-DAI approach gives up in exchange for simplicity. Which tradeoff is
+right depends on how much administrative capacity a given collective actually has.
+
+The simplest rule might be: hold DAI only, accepting its risk, until the 501(c)(3)
+Satellite (or its subsidiary) can hire a treasurer — then let that person decide.
 
 None of this would have stopped the designation itself. It would have
 kept the Commons and every other Satellite running while the targeted
@@ -1776,6 +1815,43 @@ when it later leaves the retained-earnings pool as a distribution.
     or CHIPS. A non-U.S. bank needs a correspondent relationship with a
     U.S. bank just to make its own dollar holdings usable
     internationally — which is the relationship OFAC reaches through.
+
+[^35]: A "freeze key" (or admin key) is a privileged function written into a
+    token's smart contract, callable only by the issuing company (the
+    company that mints the token), that adds a specific address to an
+    on-chain blocklist — the contract itself then refuses any transfer
+    involving that address, enforced by code rather than a request to a
+    bank. USDC's [smart
+    contract](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code)
+    implements `blacklist()`, which blocks an address from sending or
+    receiving; USDT's [smart
+    contract](https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7#code)
+    implements `addBlackList()`, which blocks sending only (funds can
+    still arrive and get stuck), plus a separate `destroyBlackFunds()`
+    function capable of actually burning a blacklisted balance — a
+    stronger capability than a simple freeze. DAI's contract has no
+    equivalent function at all.
+
+[^36]: [A Comparison of the 2018 Bear Market and 2022 Crypto Market
+    Drawdown — CoinMarketCap
+    Academy](https://coinmarketcap.com/academy/article/a-comparison-of-the-2018-bear-market-and-2022-crypto-market-drawdown).
+
+[^37]: DAI's worst dip on record came during the March 2023 Silicon Valley
+    Bank collapse. Circle disclosed that $3.3 billion of USDC's own
+    backing cash reserves were stuck at the failed bank, and USDC — a
+    stablecoin pegged to the US dollar — fell as low as roughly $0.87 on
+    some exchanges. Since DAI held a large share of its own collateral
+    in USDC, that wobble passed straight through to DAI's peg too: DAI
+    dropped to about $0.85, a roughly 15% dip. The dip happened at all
+    because DAI relies on USDC as collateral; it stayed brief because
+    the FDIC guaranteed all SVB depositors within days, so Circle's
+    reserves turned out to be fully intact, USDC recovered to $1, and
+    DAI's own peg followed it back up once its collateral was healthy
+    again. Recovery to full peg took 48 hours. [Market Analysis: Silicon
+    Valley Bank, Circle & USDC —
+    CoinDesk](https://data.coindesk.com/blogs/market-analysis-silicon-valley-bank-circle-usdc);
+    [DAI recovers after severe depeg caused by USDC ripple
+    effect](https://cryptonews.net/news/altcoins/20659725/).
 
 ---
 
