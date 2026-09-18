@@ -909,7 +909,6 @@ flowchart TD
     SubBank -- "1 surplus, regular cadence" --> Sweep
     Sweep -- "1" --> Treasury
 
-    Treasury -- "2 near-term float" --> DAIFloat
     Treasury -- "2 majority reserve" --> ETHReserve
     ETHReserve -- "2 periodic batch, single sign-off" --> BatchConvert
     BatchConvert -- "2" --> DAIFloat
@@ -923,9 +922,9 @@ flowchart TD
     ETHReserve -.->|"4 deferred until<br/>F/T controller on board"| Hedge
 
     linkStyle 0,1,2,3,4,5 stroke:#d62728,color:#d62728
-    linkStyle 6,7,8,9 stroke:#1f77b4,color:#1f77b4
-    linkStyle 10,11,12,13,14 stroke:#2ca02c,color:#2ca02c
-    linkStyle 15 stroke:#888888,color:#888888,stroke-dasharray: 5 5
+    linkStyle 6,7,8 stroke:#1f77b4,color:#1f77b4
+    linkStyle 9,10,11,12,13 stroke:#2ca02c,color:#2ca02c
+    linkStyle 14 stroke:#888888,color:#888888,stroke-dasharray: 5 5
 
     classDef owned fill:#eaf2fb,stroke:#1f77b4,stroke-width:3px
     classDef external fill:#fdf0e3,stroke:#e07b00,stroke-width:2px,stroke-dasharray:3 3
