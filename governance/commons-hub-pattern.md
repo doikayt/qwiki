@@ -5,7 +5,7 @@ open source software (OSS) around nonprofit and for-profit satellites*
 
 <table align="right" width="160">
 <tr><td><a href="https://doikayt.org"><img src="images/doikayt-logo.svg" alt="Doikayt logo" width="160"></a></td></tr>
-<tr><td><sub>Brought to you by Doikayt Mobilization Labs</sub></td></tr>
+<tr><td><sub>Brought to you by<br>Doikayt Mobilization Labs</sub></td></tr>
 </table>
 
 **Status:**: 
