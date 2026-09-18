@@ -930,6 +930,8 @@ flowchart TD
 
     ETHReserve -.->|"4 deferred until<br/>F/T controller on board"| Hedge
 
+    VendorsFiat ~~~ LEGEND
+
     linkStyle 0,1,2,3,4 stroke:#d62728,color:#d62728
     linkStyle 7,8,9 stroke:#1f77b4,color:#1f77b4
     linkStyle 10,11,12,13,14,15,16 stroke:#2ca02c,color:#2ca02c
