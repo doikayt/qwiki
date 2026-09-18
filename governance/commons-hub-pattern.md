@@ -856,23 +856,19 @@ finding out only when a transaction actually needs signing.
 
 Both payment rails and bank accounts become vulnerable the moment a US dollar-denominated transaction moves
 through those rails, or results in a deposit into those accounts. Dollars must be settled inside the U.S. banking
-system — a system OFAC (the Treasury Department's Office of Foreign Assets Control) regulates under the 
+system — which OFAC (the Treasury Department's Office of Foreign Assets Control) regulates under the 
 [IEEPA](https://en.wikipedia.org/wiki/International_Emergency_Economic_Powers_Act).
 Every U.S. bank must comply with OFAC's blocking orders.[^33]
 
-Even a transaction between two non-U.S. parties still clears through Fedwire
-or CHIPS and the correspondent-banking relationships that connect
-foreign banks to them, and a non-U.S. bank holding USD deposits needs
-that same correspondent relationship just to make its dollars usable
-internationally. OFAC doesn't need jurisdiction over the foreign bank
-itself to reach it this way: it regulates that bank's *U.S.*
-correspondent directly, which must refuse any transaction tied to a
-designated party — and a related Treasury/FinCEN authority (PATRIOT
-Act §311) can go further and bar U.S. banks from maintaining a
-correspondent account for the foreign bank at all, cutting off its
-dollar access entirely, not just for one flagged customer. That threat
-is exactly what drove Banca Etica to freeze the account itself, above,
-rather than wait and find out.
+Even a transaction between two non-U.S. parties still runs through the
+U.S. correspondent-banking system[^34] — so OFAC doesn't need
+jurisdiction over a foreign bank to reach it: it regulates that bank's
+*U.S.* correspondent directly. A related Treasury/FinCEN authority
+(PATRIOT Act §311) can go further still, barring U.S. banks from
+maintaining that correspondent relationship at all. This would result in 
+the cut-off of the foreign bank's dollar access entirely, not just one flagged customer.
+That threat is what drove Banca Etica to implement its freezing of A/I's assets.
+
 
 Our structure holds reserves the DAO's crypto-treasury (§2) can reach
 directly, denominated outside the dollar-clearing system entirely —
@@ -1686,3 +1682,8 @@ when it later leaves the retained-earnings pool as a distribution.
     and FinCEN's [Iran correspondent-account
     prohibition](https://www.fincen.gov/news/news-releases/final-regulation-implementing-section-312-usa-patriot-act-announced)
     as a worked example of a §311 special measure in practice.
+
+[^34]: Any USD-denominated transaction ultimately clears through Fedwire
+    or CHIPS. A non-U.S. bank needs a correspondent relationship with a
+    U.S. bank just to make its own dollar holdings usable
+    internationally — which is the relationship OFAC reaches through.
