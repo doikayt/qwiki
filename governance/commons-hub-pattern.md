@@ -880,24 +880,34 @@ That threat is what drove Banca Etica to implement its freezing of A/I's assets.
 ```mermaid
 %%{init: {"themeVariables": {"fontSize": "10px"}}}%%
 flowchart TD
-    Donor([Donor / Funder])
-    FiatRail[Fiat processor / bank]
-    OnRamp[Exchange on-ramp - KYC'd]
-    Treasury[[Multisig Treasury]]
+    subgraph SAT["Satellite (nonprofit) — donor-funded"]
+        Donor([Donor / Funder])
+        DonationProcessor[Giving Block - crypto-donation processor, not Doikayt's own]
+    end
+
+    subgraph SUB["Subsidiary (for-profit) — customer revenue"]
+        Customer([Paying customer])
+        SubBank[Subsidiary bank account - near-term ops only]
+        Sweep[Periodic profit sweep]
+    end
+
+    Treasury[[Multisig Treasury / Compensation Distribution DAO]]
     BatchConvert[Periodic ETH to DAI batch convert - monthly/qtrly, single multisig sign-off]
     DAIFloat[DAI - operating float]
     ETHReserve[ETH - long-term reserve]
     Contributors{{Contributors}}
     ContribOfframp([Contributor's own fiat off-ramp])
     VendorsCrypto{{Vendors - crypto-accepting}}
-    OffRampJIT[Just-in-time off-ramp - no standing balance]
+    OffRampJIT[Just-in-time off-ramp - processor]
     VendorsFiat{{Vendors - fiat-only}}
     Hedge[Hedging - staged: once FT controller hired]
 
-    Donor -- "1 cash/USD" --> FiatRail
-    FiatRail -- "1 conversion" --> OnRamp
-    OnRamp -- "1 lands as crypto" --> Treasury
+    Donor -- "1 cash/USD" --> DonationProcessor
+    DonationProcessor -- "1 auto-converts, deposits crypto" --> Treasury
     Donor -- "1 DAI directly, or ETH/BTC swappable" --> Treasury
+    Customer -- "1 card/ACH, mostly fiat" --> SubBank
+    SubBank -- "1 surplus, regular cadence" --> Sweep
+    Sweep -- "1" --> Treasury
 
     Treasury -- "2 near-term float" --> DAIFloat
     Treasury -- "2 majority reserve" --> ETHReserve
@@ -912,10 +922,16 @@ flowchart TD
 
     ETHReserve -.->|"4 deferred until<br/>F/T controller on board"| Hedge
 
-    linkStyle 0,1,2,3 stroke:#d62728,color:#d62728
-    linkStyle 4,5,6,7 stroke:#1f77b4,color:#1f77b4
-    linkStyle 8,9,10,11,12 stroke:#2ca02c,color:#2ca02c
-    linkStyle 13 stroke:#888888,color:#888888,stroke-dasharray: 5 5
+    linkStyle 0,1,2,3,4,5 stroke:#d62728,color:#d62728
+    linkStyle 6,7,8,9 stroke:#1f77b4,color:#1f77b4
+    linkStyle 10,11,12,13,14 stroke:#2ca02c,color:#2ca02c
+    linkStyle 15 stroke:#888888,color:#888888,stroke-dasharray: 5 5
+
+    classDef owned fill:#eaf2fb,stroke:#1f77b4,stroke-width:3px
+    classDef external fill:#fdf0e3,stroke:#e07b00,stroke-width:2px,stroke-dasharray:3 3
+    class Treasury,SubBank,Sweep,BatchConvert,DAIFloat,ETHReserve,Hedge owned
+    class Donor,DonationProcessor,Customer,Contributors,ContribOfframp external
+    class VendorsCrypto,OffRampJIT,VendorsFiat external
 ```
 
 
