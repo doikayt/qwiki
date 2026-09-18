@@ -875,7 +875,11 @@ maintaining that correspondent relationship at all. This would result in
 the cut-off of the foreign bank's dollar access entirely, not just one flagged customer.
 That threat is what drove Banca Etica to implement its freezing of A/I's assets.
 
-
+<!-- TODO: this diagram has no heading/anchor above it, so nothing in the doc
+     can actually link to it yet. The ETH-vs-DAI draft text refers to "the
+     diagram below" in prose - that needs to become a real intra-doc hyperlink
+     once this diagram has a linkable heading (e.g. "### Financial flow
+     diagram" or similar) rather than staying a bare, unaddressable code block. -->
 
 ```mermaid
 %%{init: {"themeVariables": {"fontSize": "10px"}}}%%
