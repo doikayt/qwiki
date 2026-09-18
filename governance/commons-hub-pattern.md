@@ -876,6 +876,44 @@ the cut-off of the foreign bank's dollar access entirely, not just one flagged c
 That threat is what drove Banca Etica to implement its freezing of A/I's assets.
 
 
+
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
+flowchart TD
+    Donor([Donor / Funder])
+    FiatRail[Fiat processor / bank]
+    OnRamp[Exchange on-ramp - KYC'd]
+    Treasury[[Multisig Treasury]]
+    DAIFloat[DAI - operating float]
+    ETHReserve[ETH - long-term reserve]
+    Vault[Sky Vault - optional, conservative overcollateralization]
+    Contributors{{Contributors}}
+    ContribOfframp([Contributor's own fiat off-ramp])
+    VendorsCrypto{{Vendors - crypto-accepting}}
+    VendorsFiat{{Vendors - fiat-only}}
+
+    Donor -- "1 cash/USD" --> FiatRail
+    FiatRail -- "1 conversion" --> OnRamp
+    OnRamp -- "1 lands as crypto" --> Treasury
+    Donor -- "1 DAI directly, or ETH/BTC swappable" --> Treasury
+
+    Treasury -- "2 near-term float" --> DAIFloat
+    Treasury -- "2 majority reserve" --> ETHReserve
+    ETHReserve -- "2 optional, conservative overcollateralization" --> Vault
+    Vault -- "2 mint" --> DAIFloat
+
+    DAIFloat -- "3 wallet-to-wallet" --> Contributors
+    Contributors -- "3 own responsibility" --> ContribOfframp
+    DAIFloat -- "3 wallet-to-wallet, DAI discount" --> VendorsCrypto
+    Treasury -- "3 fiat rail" --> VendorsFiat
+
+    linkStyle 0,1,2,3 stroke:#d62728,color:#d62728
+    linkStyle 4,5,6,7 stroke:#1f77b4,color:#1f77b4
+    linkStyle 8,9,10,11 stroke:#2ca02c,color:#2ca02c
+```
+
+
+
 Our structure holds reserves the DAO's crypto-treasury (§2) can reach
 directly, denominated outside the dollar-clearing system entirely —
 no correspondent bank, no USD off-ramp, nothing for a sanctions action
