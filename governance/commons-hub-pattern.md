@@ -883,6 +883,7 @@ flowchart TD
     subgraph SAT["Satellite (nonprofit) — donor-funded"]
         Donor([Donor / Funder])
         SatBank[Bank account - near-term ops only]
+        DonationProcessor[Giving Block - HODL option, tax receipt, no forced conversion]
     end
 
     subgraph SUB["Subsidiary (for-profit) — customer revenue"]
@@ -891,7 +892,6 @@ flowchart TD
     end
 
     Treasury[Multisig Treasury]
-    DonationProcessor[Giving Block - HODL option, tax receipt, no forced conversion]
     BatchConvert[Periodic ETH to DAI batch convert - monthly/qtrly, single multisig sign-off]
     DAIFloat[DAI - operating float]
     ETHReserve[ETH - long-term reserve]
