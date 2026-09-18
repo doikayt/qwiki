@@ -858,7 +858,7 @@ finding out only when a transaction actually needs signing.
 
 
 [[[  THIS SECTION NEEDS A REWRITE ]]]
-*Financial Layer*
+*Financial Infrastructure Layer*
 
 Both payment rails and bank accounts become vulnerable the moment a US dollar-denominated transaction moves
 through those rails, or results in a deposit into those accounts. Dollars must be settled inside the U.S. banking
@@ -882,16 +882,16 @@ That threat is what drove Banca Etica to implement its freezing of A/I's assets.
 flowchart TD
     subgraph SAT["Satellite (nonprofit) — donor-funded"]
         Donor([Donor / Funder])
-        DonationProcessor[Giving Block - crypto-donation processor, not the collective's own]
+        SatBank[Bank account - near-term ops only]
     end
 
     subgraph SUB["Subsidiary (for-profit) — customer revenue"]
         Customer([Paying customer])
-        SubBank[Subsidiary bank account - near-term ops only]
-        Sweep[Periodic profit sweep]
+        SubBank[Bank account - near-term ops only]
     end
 
     Treasury[Multisig Treasury]
+    DonationProcessor[Giving Block - HODL option, tax receipt, no forced conversion]
     BatchConvert[Periodic ETH to DAI batch convert - monthly/qtrly, single multisig sign-off]
     DAIFloat[DAI - operating float]
     ETHReserve[ETH - long-term reserve]
@@ -907,12 +907,14 @@ flowchart TD
         L2[External]
     end
 
-    Donor -- "1 cash/USD" --> DonationProcessor
-    DonationProcessor -- "1 auto-converts, deposits crypto" --> Treasury
+    Donor -- "1 cash/USD" --> SatBank
+    SatBank -- "1 periodic sweep" --> Treasury
     Donor -- "1 DAI directly, or ETH/BTC swappable" --> Treasury
     Customer -- "1 card/ACH, mostly fiat" --> SubBank
-    SubBank -- "1 surplus, regular cadence" --> Sweep
-    Sweep -- "1" --> Treasury
+    SubBank -- "1 periodic sweep" --> Treasury
+
+    Donor -.->|"deferred until volume or<br/>Form 8283 threshold hit"| DonationProcessor
+    DonationProcessor -.->|"HODL, deposits as crypto"| Treasury
 
     Treasury -- "2 majority reserve" --> ETHReserve
     ETHReserve -- "2 periodic batch, single sign-off" --> BatchConvert
@@ -926,16 +928,16 @@ flowchart TD
 
     ETHReserve -.->|"4 deferred until<br/>F/T controller on board"| Hedge
 
-    linkStyle 0,1,2,3,4,5 stroke:#d62728,color:#d62728
-    linkStyle 6,7,8 stroke:#1f77b4,color:#1f77b4
-    linkStyle 9,10,11,12,13 stroke:#2ca02c,color:#2ca02c
-    linkStyle 14 stroke:#888888,color:#888888,stroke-dasharray: 5 5
+    linkStyle 0,1,2,3,4 stroke:#d62728,color:#d62728
+    linkStyle 7,8,9 stroke:#1f77b4,color:#1f77b4
+    linkStyle 10,11,12,13,14 stroke:#2ca02c,color:#2ca02c
+    linkStyle 5,6,15 stroke:#888888,color:#888888,stroke-dasharray: 5 5
 
     classDef owned fill:#eaf2fb,stroke:#1f77b4,stroke-width:3px
     classDef external fill:#fdf0e3,stroke:#e07b00,stroke-width:2px,stroke-dasharray:3 3
     class L1 owned
     class L2 external
-    class Treasury,SubBank,Sweep,BatchConvert,DAIFloat,ETHReserve,Hedge owned
+    class Treasury,SatBank,SubBank,BatchConvert,DAIFloat,ETHReserve,Hedge owned
     class Donor,DonationProcessor,Customer,Contributors,ContribOfframp external
     class VendorsCrypto,OffRampJIT,VendorsFiat external
 ```
