@@ -1706,3 +1706,5 @@ Attribution is required under the license above — and if you build on this
 pattern, we'd genuinely appreciate a heads-up or a shout-out to [Doikayt
 Mobilization Labs](https://doikayt.org). We'd be proud to see it out in the
 world.
+
+[![Remember the USS Liberty!](https://badge.techforpalestine.org/ceasefire-now)](https://techforpalestine.org/learn-more)
