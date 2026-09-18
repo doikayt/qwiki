@@ -890,7 +890,7 @@ flowchart TD
         SubBank[Bank account - near-term ops only]
     end
 
-    DonationProcessor[Giving Block - streamline tax receipts,<br/>HODL to crypto]
+    DonationProcessor[Giving Block - streamline tax receipts,<br/>HODL to crypto, lands in Treasury]
     Treasury[Multisig Treasury - held as ETH]
     BatchConvert[Periodic ETH to DAI batch convert - monthly/qtrly, single multisig sign-off]
     DAIFloat[DAI - operating float]
@@ -931,12 +931,11 @@ flowchart TD
     Hedge ~~~ DonationProcessor
     Donor ~~~ SatBank
     VendorsFiat ~~~ LEGEND
-    DonationProcessor -.->|"held as ETH"| Treasury
 
     linkStyle 0,1,2,3,4,5 stroke:#d62728,color:#d62728
     linkStyle 7,8 stroke:#1f77b4,color:#1f77b4
     linkStyle 9,10,11,12,13,14,15 stroke:#2ca02c,color:#2ca02c
-    linkStyle 6,16,20 stroke:#888888,color:#888888,stroke-dasharray: 5 5
+    linkStyle 6,16 stroke:#888888,color:#888888,stroke-dasharray: 5 5
 
     classDef owned fill:#eaf2fb,stroke:#1f77b4,stroke-width:3px
     classDef external fill:#fdf0e3,stroke:#e07b00,stroke-width:2px,stroke-dasharray:3 3
