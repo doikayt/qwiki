@@ -891,7 +891,7 @@ flowchart TD
         Sweep[Periodic profit sweep]
     end
 
-    Treasury[[Multisig Treasury / Compensation Distribution DAO]]
+    Treasury[Multisig Treasury]
     BatchConvert[Periodic ETH to DAI batch convert - monthly/qtrly, single multisig sign-off]
     DAIFloat[DAI - operating float]
     ETHReserve[ETH - long-term reserve]
@@ -901,6 +901,11 @@ flowchart TD
     OffRampJIT[Just-in-time off-ramp - processor]
     VendorsFiat{{Vendors - fiat-only}}
     Hedge[Hedging - staged: once FT controller hired]
+
+    subgraph LEGEND["Legend"]
+        L1[Collective-owned]
+        L2[External]
+    end
 
     Donor -- "1 cash/USD" --> DonationProcessor
     DonationProcessor -- "1 auto-converts, deposits crypto" --> Treasury
@@ -928,11 +933,19 @@ flowchart TD
 
     classDef owned fill:#eaf2fb,stroke:#1f77b4,stroke-width:3px
     classDef external fill:#fdf0e3,stroke:#e07b00,stroke-width:2px,stroke-dasharray:3 3
+    class L1 owned
+    class L2 external
     class Treasury,SubBank,Sweep,BatchConvert,DAIFloat,ETHReserve,Hedge owned
     class Donor,DonationProcessor,Customer,Contributors,ContribOfframp external
     class VendorsCrypto,OffRampJIT,VendorsFiat external
 ```
 
+This diagram covers financial custody and execution only — how funds move,
+and what's crypto versus fiat, owned versus external. It intentionally
+leaves out the DAO's allocation vote and the Board's review/override
+authority, both already covered in [§2](#2-governance-layer--three-mechanisms);
+the multisig treasury shown here is the layer that carries out whatever
+that governance process decides, not a stand-in for it.
 
 
 Our structure holds reserves the DAO's crypto-treasury (§2) can reach
