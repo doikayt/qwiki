@@ -66,6 +66,7 @@ Early concept draft.
       - [Quantifying the drivers of disillusionment and dissolution](#quantifying-the-drivers-of-disillusionment-and-dissolution)
   - [A.3 Founder labor and fair reward](#a3-founder-labor-and-fair-reward)
   - [A.5 Income vs. retained earnings: a quick refresher](#a5-income-vs-retained-earnings-a-quick-refresher)
+- [Footnotes](#footnotes)
 
 ---
 
@@ -1695,16 +1696,15 @@ when it later leaves the retained-earnings pool as a distribution.
 
 ---
 
-<a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="images/cc-by-sa-4.0.png" alt="CC BY-SA 4.0" width="88" height="31"></a>
+<a href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="images/cc0.png" alt="CC0 1.0 Universal" width="88" height="31"></a>
 
-This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0
-International License](https://creativecommons.org/licenses/by-sa/4.0/) —
-free to use, share, and adapt, provided derivatives stay under the same
-open license.
+This work is released into the [public domain under
+CC0](https://creativecommons.org/publicdomain/zero/1.0/) — no rights
+reserved. Use it, share it, adapt it, use it in performance art — whatever
+you want! No permission or attribution needed.
 
-Attribution is required under the license above — and if you build on this
-pattern, we'd genuinely appreciate a heads-up or a shout-out to [Doikayt
-Mobilization Labs](https://doikayt.org). We'd be proud to see it out in the
-world.
+That said: we'd be grateful for a heads-up or a shout-out to [Doikayt
+Mobilization Labs](https://doikayt.org) if you create something new and
+useful on top of what we've done so far.
 
 [![Remember the USS Liberty!](https://badge.techforpalestine.org/ceasefire-now)](https://techforpalestine.org/learn-more)
