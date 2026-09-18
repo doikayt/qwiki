@@ -897,7 +897,7 @@ flowchart TD
     Contributors{{Contributors}}
     ContribOfframp([Contributor's own fiat off-ramp])
     VendorsCrypto{{Vendors - crypto-accepting}}
-    OffRampJIT[Just-in-time off-ramp - processor]
+    OffRampJIT[Request Finance - JIT off-ramp, pays vendor directly]
     VendorsFiat{{Vendors - fiat-only}}
     Hedge[Hedging - staged: once FT controller hired]
 
