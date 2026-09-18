@@ -652,9 +652,9 @@ In light of such threats, the distributed structure proposed in
 [§1](#1-the-commons-layer-and-its-satellites) serves as a preemptive
 counter-measure. Note that while the referenced diagram posited the satellites
 surrounding a digital commons as 501(c)(3)'s, it is also possible -- as
-the [Choosing Signers](#choosing-signers) subsection below explores --
-for a trusted individual to provide that same coordinated, resilient
-backup in the face of a take-down action.
+the [Trusted Backup Signer Election](#trusted-backup-signer-election)
+section below explores -- for a trusted individual to provide that same
+coordinated, resilient backup in the face of a take-down action.
 
 
 
@@ -860,84 +860,111 @@ and alternate domain above get periodically checked, rather than
 finding out only when a transaction actually needs signing.
 
 
-<a id="choosing-signers"></a>
+<a id="trusted-backup-signer-election"></a>
 
-*Choosing Signers: Trust, Jurisdiction, and an Open Question*
+*Trusted backup signer election*
 
-The parenthetical above raises a question it doesn't answer: if a trusted
-individual, not just a 501(c)(3) Satellite, can stand in as one of the
-coordinated backups a takedown action calls for, who counts as "trusted"
-enough to hold that role, and where do they need to be? This section
-focuses on treasury signers specifically, since that's where the stakes
-are most concentrated -- but the same underlying logic, a threshold of
-people rather than one maximally-trusted individual, applies just as
-directly to the CI secrets, npm publish tokens, and bank account access
-already covered above.
+This section picks up on the idea introduced above: individuals, not just
+501(c)(3)'s, can serve as **trusted backup signers** -- our shorthand for any
+person or entity with a role in coordinating to restore the ability to
+process transactions and continue publishing software in the face of a
+takedown action.
 
-The obvious move is to reuse the vetting standard [§2](#2-governance-layer--three-mechanisms)
-already established for token-based delegated authority: only someone
-already recognized as a trusted committer is eligible. But that standard
-was built to establish trust, not distance. DAO-pay eligibility runs
-through the [Contributor Guide](contributor-guide.md)'s wallet
-registration and tax documents intake -- a real paper trail tying the
-person to the collective. A signer recruited by that same standard is,
-by definition, someone the collective -- and, on subpoena, a state
-actor -- can already find. Vetting and arm's-length distance pull in
-opposite directions here, not the same one.
+Two structural properties should hold regardless of whether any given
+signer is an individual or a corporation:
 
-Jurisdiction adds a second constraint the vetting question alone
-doesn't solve: it has to mean a genuinely different country, not just a
-different U.S. state. The Autistici/Inventati designation above was
-federal action -- it reached Banca Etica in Italy and the Public
-Interest Registry in Virginia at the same time, through the same
-authority. Two signers who both live under U.S. federal jurisdiction
-offer no more resistance to that kind of order than one.
+- a threshold of M-of-N signers, rather than one maximally-trusted,
+  maximally-unfindable individual, so an attacker has to compel or
+  compromise several people at once, not just one (see *Why M-of-N*,
+  below); and
+- jurisdictional spread sized against more than just legal reach: no
+  single jurisdiction should hold enough signers that losing all of them
+  at once -- to arrest, detention, or a single legal action -- would drop
+  the group below threshold M. A designated-but-free signer can still
+  produce a signature; a detained one can't, no matter what the
+  multisig math says. The Autistici/Inventati designation above was a
+  single federal action that reached Virginia and Italy alike through
+  the same authority -- a reminder that "different U.S. state" doesn't
+  count as spread, and neither does "different country, same treaty
+  relationship with the US," if that relationship is close enough.
 
-Multisig is what resolves both constraints at once, by reframing the
-question itself: the goal was never one maximally-trusted,
-maximally-unfindable individual -- that person doesn't scale, and isn't
-really unfindable anyway. The goal is a threshold across jurisdictions.
-A threshold of M-of-N signers -- whether for treasury custody, CI
-secrets, bank account access, or any other credential a state actor
-might target -- means an attacker can't disable the collective by
-reaching one person or one jurisdiction; it has to compel or compromise
-M separate signers, ideally each in a different legal system, turning a
-single freeze or takedown order into a coordinated,
-cross-jurisdictional undertaking. The same structure gives every one of
-those systems room to recover from ordinary loss too: each keeps
-functioning even after losing up to N-M signers to any cause, attack
-included, until governance can replace them and restore the full
-roster. That reframing also splits two roles the parenthetical above
-risked merging: an individual acting as a Satellite
-([§1](#1-the-commons-layer-and-its-satellites)) does inherently visible
-work -- that's the point of the role -- while a multisig signer's job is
-narrower and doesn't require that same visibility.
+**Individual vs. corporate signers.** Each signer type carries a different
+trade-off. An individual has no corporate liability shield to stand behind,
+so the role comes with real personal exposure. A corporation doesn't carry
+that exposure the same way, and it doesn't die, and it doesn't misplace its
+keys to somebody's personal misfortune -- it has built-in succession (a
+board, staff, standard procedures) that outlives any one person's
+involvement. What it loses in exchange is exactly the arm's-length,
+hard-to-reach quality an individual signer can have: a corporate custodian
+is a known, addressable legal entity, the same risk class as a bank or a
+custodial stablecoin issuer[^35]. Neither type is strictly better -- a
+threshold that mixes both is how the trade-off actually gets resolved,
+rather than choosing one type for every seat.
 
-The same reframing extends naturally to a third kind of signer: a
-single corporate or institutional custodian. It buys continuity and
-succession -- an institution outlives any one person's health, memory,
-or relocation -- at the cost of maximal compellability, the same risk
-class as a bank or a custodial stablecoin issuer[^35]. That tradeoff is
-survivable only if the institutional signer is never sole or majority
-custody, and never load-bearing alone within the threshold -- exactly
-the same rule that applies to any other signer type.
+**Why M-of-N.** A threshold of M-of-N signers -- whether for treasury
+custody, CI secrets, bank account access, or any other credential a state
+actor might target -- means an attacker can't disable the collective by
+reaching one person or one jurisdiction; it has to compel or compromise M
+separate signers, ideally each in a different legal system, turning a
+single freeze or takedown order into a coordinated, cross-jurisdictional
+undertaking. The same structure gives every one of those systems room to
+recover from ordinary loss too: each keeps functioning even after losing up
+to N-M signers to any cause, attack included, until governance can replace
+them and restore the full roster.
 
-One further idea follows naturally from all of this, and it's worth
-naming even though it isn't part of the baseline recommendation: a
-shared, cross-collective trust network of vetted signers, serving
-multiple collectives adopting this pattern at once. It's tempting
-because it solves the recruiting problem -- a small pool of known,
-trusted people instead of every collective sourcing its own -- but it
-just relocates the single-point-of-failure problem to the ecosystem
-level instead of removing it. We flag it here as an open question, not
-a recommendation. If it's ever pursued, each collective should keep its
-own separate treasury wallet, with only the *roster* of people shared
-across collectives -- never a pooled or shared treasury.
+**Vetting.** The obvious move is to reuse the vetting standard
+[§2](#2-governance-layer--three-mechanisms) already established for
+token-based delegated authority: only someone already recognized as a
+trusted committer is eligible. But that standard was built to establish
+trust, not distance, and the gap between the two matters here specifically
+because of how it fails. A signer's own jurisdiction doesn't protect them
+from being *identified* -- wallet registration and tax documents intake,
+per the [Contributor Guide](contributor-guide.md), already puts the whole
+committer pool in one document the collective itself holds. The risk isn't
+that any one signer is easier to compel because they're on that list -- a
+free person in a genuinely different country is just as hard to reach as
+before. The risk is that the *whole roster* is enumerable from that one
+document, which means it's also targetable as a single batch: one
+subpoena, one designation action naming everyone at once, and the
+jurisdictional spread the M-of-N structure depends on gets bypassed
+entirely, not eroded signer by signer. Even in the most extreme version of
+this -- every US-based signer detained, every non-US signer individually
+designated at the same time -- neither the Commons nor the treasury is
+actually lost, since neither has a legal identity for any government
+action to seize; what's lost is the wrapper, and whichever signers had
+their physical key access cut off. Enough surviving, un-incapacitated
+signers can still move the treasury and, in time, stand up a new steward
+entity elsewhere. That possibility is exactly why the batch-enumeration
+risk is worth taking seriously in the first place -- it's the one thing
+that could take that resilience away in a single stroke.
 
-Multisig with jurisdictional diversity, mixing individual and
-institutional signers, is solid enough to state as the actual
-recommendation here. The cross-collective network stays an open
-question.
+**Bootstrapping the trusted-signer network.** A small, early-stage
+collective doesn't have five trusted, jurisdictionally-diverse signers on
+hand just because the theory says it should. The natural next idea is a
+shared, cross-collective trust network: a small roster of vetted,
+mission-aligned, technically credible people who serve as signers not just
+for one collective, but for every collective adopting this pattern. It's a
+genuinely appealing answer to the bootstrapping problem, and it comes with
+a genuinely serious new cost: it concentrates risk at exactly the level
+this whole section is trying to avoid concentrating it. Compromising or
+coercing that one shared roster no longer threatens a single collective's
+treasury -- it threatens every collective relying on it, simultaneously.
+That's the same single-point-of-failure structure this document argues
+against, just relocated from one organization to an entire ecosystem of
+them. If this idea is ever pursued, it should mean a shared roster of
+people signing on each collective's own separate treasury wallet -- never a
+pooled treasury across unrelated organizations, which would create its own
+commingling and fiduciary problems independent of the security question.
+
+We don't have a clean resolution to offer here, and we'd rather say so than
+paper over it. Multisig custody with jurisdictional diversity, mixing
+individual and institutional signers under a real threshold, is solid
+enough to state as this document's actual recommendation at the
+single-collective level. A shared, cross-collective signer network remains
+a genuinely open question -- promising enough to name, risky enough that we
+aren't ready to recommend it as part of the baseline model. Consistent with
+the rest of this document's front matter: offered to spur discussion, not
+presented as settled.
 
 
 [[[  THIS SECTION NEEDS A REWRITE ]]]
