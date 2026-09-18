@@ -907,10 +907,10 @@ flowchart TD
     DAIFloat -- "3 wallet-to-wallet" --> Contributors
     Contributors -- "3 own responsibility" --> ContribOfframp
     DAIFloat -- "3 wallet-to-wallet, DAI discount" --> VendorsCrypto
-    DAIFloat -- "3 just-in-time, no standing balance" --> OffRampJIT
+    DAIFloat -- "3 processor converts + pays vendor in one settlement" --> OffRampJIT
     OffRampJIT -- "3" --> VendorsFiat
 
-    ETHReserve -.->|"4 staged, not active"| Hedge
+    ETHReserve -.->|"4 deferred until<br/>F/T controller on board"| Hedge
 
     linkStyle 0,1,2,3 stroke:#d62728,color:#d62728
     linkStyle 4,5,6,7 stroke:#1f77b4,color:#1f77b4
