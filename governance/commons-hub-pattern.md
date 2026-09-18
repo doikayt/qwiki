@@ -984,15 +984,16 @@ Another advantage of DAI is reduced paperwork: because it's received and spent a
 essentially the same value, converting it to fiat doesn't trigger a capital-gains event
 worth recording — DAI can be converted and paid out in a single transaction. ETH
 requires two: a disposal event (ETH into DAI or fiat) that has to be tracked for capital
-gains or losses, and then the actual payment.
+gains or losses, and then the actual payment. This overhead compounds for ETH
+specifically, since vendors who won't accept crypto directly still need to be paid in
+USD or a USD-backed instrument — every payment to a fiat-only vendor means another ETH
+conversion, and another capital-gains event to track.
 
-Holding ETH, though, comes with its own costs beyond volatility. Vendors who won't accept
-crypto directly still need to be paid in USD or a USD-backed instrument, so ETH has to be
-converted before it can reach them — and each of those conversions carries the
-accounting overhead just described. Even sitting still, ETH's volatility has a cost: an
-organization that wants to hedge a large ETH position against downside risk takes on
-real administrative burden to do it — a cost that generally isn't worth carrying until
-the organization's scale justifies a dedicated finance function to manage it.
+Holding ETH also means living with real price volatility, and managing that isn't free
+either: an organization that wants to hedge a large ETH position against downside risk
+takes on real administrative burden to do it — a cost that generally isn't worth
+carrying until the organization's scale justifies a dedicated finance function to
+manage it.
 
 Given all that, a genuinely simpler alternative to the two-tier model shown in the
 diagram below is to hold the treasury entirely in DAI — no ETH intermediate step, no
