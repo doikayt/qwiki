@@ -890,7 +890,7 @@ flowchart TD
         SubBank[Bank account - near-term ops only]
     end
 
-    DonationProcessor[Giving Block - streamline tax receipts,<br/>HODL to crypto]
+    DonationProcessor[Giving Block - streamline tax receipts,<br/>configured to hold as crypto]
     Treasury[Multisig Treasury - held as ETH]
     BatchConvert[Periodic ETH to DAI batch convert - monthly/qtrly, single multisig sign-off]
     DAIFloat[DAI - operating float]
