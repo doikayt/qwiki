@@ -845,18 +845,19 @@ several signers to agree before funds move, so no single signer can
 drain it — but each signer still personally holds one full private
 key, and protecting that key is entirely their own responsibility.
 Whoever holds a cosigner key needs to guard it without becoming a
-point of failure themselves. A
-[hardware wallet](https://en.wikipedia.org/wiki/Hardware_wallet), not
+point of failure themselves. A [hardware wallet](https://en.wikipedia.org/wiki/Hardware_wallet), not
 a software or exchange-hosted one, is the baseline — it keeps the
 private key off any internet-connected device entirely. The [seed
-phrase](https://en.wikipedia.org/wiki/Seed_phrase) behind it needs its
-own backup, split or duplicated across more than one physical
-location, so losing any single copy — to a fire, a theft, or a bag
-left behind while traveling — doesn't destroy every copy. None of this should be set up under
+phrase](https://en.wikipedia.org/wiki/Seed_phrase) behind it needs its own backup, split or duplicated across more than one physical
+location, so losing any single copy — to a fire, a theft, or misplacement -- 
+doesn't destroy every copy. None of this should be set up under
 pressure: a signer should periodically confirm they can still produce
 a valid signature with their own key, the same way the onion mirror
 and alternate domain above get periodically checked, rather than
-finding out only when a transaction actually needs signing.
+finding out only when a transaction actually needs signing. Where
+those signers are located matters as much as how they guard the key —
+see [Trusted Backup Signer Election](#trusted-backup-signer-election)
+below for how jurisdictional spread factors into choosing them.
 
 
 <a id="trusted-backup-signer-election"></a>
@@ -873,20 +874,22 @@ signer is an individual or a corporation:
 - transactions are gated by a [quorum](https://en.wikipedia.org/wiki/Threshold_cryptosystem)
   of M-of-N signers, rather than one maximally-trusted,
   individual, so a sanctioning adversary has to compel or compromise several people at once, not just one;
-- maximal jurisdictional  dispesion among designated backup signers.
+- maximal jurisdictional dispersion among designated signers, sized so
+  that the signers outside any single jurisdiction can, by themselves,
+  still reach the M threshold -- meaning the total loss of every signer
+  in one jurisdiction (arrest, detention, a single legal action)
+  doesn't drop the group below quorum.
 
 The tradeoff between designating a corporation versus an indivudal as a
 trusted backup signer is that the individual has no corporate liability shield to stand behind, 
 with resultant real personal exposure to any individual in that role.
-The advantage of the corporation is not only in its legal shield, it also doesn't die -- that is:
+The corporation not only has the advantage of its legal shield, it also doesn't die -- that is:
 it has built-in succession (a board, staff, standard procedures) that outlives any one person's
 involvement. What a corporation loses in exchange is exactly the arm's-length,
 hard-to-reach quality an individual signer can have: a corporate custodian
-is a known, addressable legal entity, the same risk class as a bank or a
+is a known, addressable legal entity, carrying the same risk as a bank or a
 custodial stablecoin issuer[^35]. 
 
-
-[[[  THIS SECTION NEEDS A REWRITE ]]]
 
 *Trusted backup signer election -- team formation*
 
@@ -907,32 +910,55 @@ and then continue on to rebooting the collective around the still-intact commons
 
 **Bootstrapping the trusted-signer network.** A small, early-stage
 collective doesn't have five trusted, jurisdictionally-diverse signers on
-hand just because the theory says it should. The natural next idea is a
-shared, cross-collective trust network: a small roster of vetted,
-mission-aligned, technically credible people who serve as signers not just
-for one collective, but for every collective adopting this pattern. It's a
-genuinely appealing answer to the bootstrapping problem, and it comes with
-a genuinely serious new cost: it concentrates risk at exactly the level
-this whole section is trying to avoid concentrating it. Compromising or
-coercing that one shared roster no longer threatens a single collective's
-treasury -- it threatens every collective relying on it, simultaneously.
-That's the same single-point-of-failure structure this document argues
-against, just relocated from one organization to an entire ecosystem of
-them. If this idea is ever pursued, it should mean a shared roster of
-people signing on each collective's own separate treasury wallet -- never a
-pooled treasury across unrelated organizations, which would create its own
-commingling and fiduciary problems independent of the security question.
+hand just because the theory says it should -- and treating full
+jurisdictional dispersion as a day-one requirement would just block
+adoption of the whole pattern. Better to treat it as a target the roster
+grows into, not a gate: a 2-of-3 or 3-of-5 all-domestic signer set is a
+real, named gap to start from, not a failure of the model. The property
+isn't binary either -- going from zero non-domestic signers to one doesn't
+yet mean the treasury survives total domestic incapacitation, but it does
+force an attacker to reach outside their own jurisdiction for the first
+time, a real cost increase worth having even short of the full guarantee.
+The target to grow toward is the design rule above: enough non-domestic
+signers that they alone can reach the M threshold -- something an
+open-source project's naturally internationalizing contributor base tends
+to supply over time anyway.
 
-We don't have a clean resolution to offer here, and we'd rather say so than
-paper over it. Multisig custody with jurisdictional diversity, mixing
-individual and institutional signers under a real threshold, is solid
-enough to state as this document's actual recommendation at the
-single-collective level. A shared, cross-collective signer network remains
-a genuinely open question -- promising enough to name, risky enough that we
-aren't ready to recommend it as part of the baseline model. Consistent with
-the rest of this document's front matter: offered to spur discussion, not
+Two things can get there faster than personally recruiting and vetting
+individuals abroad from scratch. An institutional signer -- a foreign
+nonprofit fiscal sponsor, a specialized custody service with a non-US
+entity -- is faster to stand up than a trusted personal relationship,
+trading some compellability for speed, a reasonable bootstrap-phase
+tradeoff even if it's not the ideal steady-state mix. And a shared,
+cross-collective trust network -- a small roster of vetted,
+mission-aligned, technically credible people serving as signers for every
+collective adopting this pattern, not just one -- is arguably more useful
+here, as a bootstrap on-ramp for a collective with zero international
+contacts yet, than as permanent infrastructure. It comes with a genuinely
+serious cost as steady-state architecture: it concentrates risk at
+exactly the level this whole section is trying to avoid concentrating it.
+Compromising or coercing that one shared roster no longer threatens a
+single collective's treasury -- it threatens every collective relying on
+it, simultaneously, the same single-point-of-failure structure this
+document argues against, just relocated from one organization to an
+entire ecosystem of them. If it's used at all, it should mean a shared
+roster of *people* signing on each collective's own separate treasury
+wallet -- never a pooled treasury across unrelated organizations, which
+would create its own commingling and fiduciary problems independent of
+the security question -- and ideally a bridge a maturing collective grows
+out of as it builds its own independent non-domestic relationships, not a
+permanent dependency.
+
+We don't have a clean resolution to offer here, and we'd rather say so
+than paper over it. Multisig custody with jurisdictional diversity,
+mixing individual and institutional signers under a real threshold, is
+solid enough to state as this document's actual recommendation once a
+collective has grown into it. A shared, cross-collective signer network
+remains a genuinely open question as permanent infrastructure --
+promising enough to name as a bootstrap tool, risky enough that we aren't
+ready to recommend it as part of the baseline model. Consistent with the
+rest of this document's front matter: offered to spur discussion, not
 presented as settled.
-
 
 
 *Financial Infrastructure Layer*
@@ -946,8 +972,9 @@ Every U.S. bank must comply with OFAC's blocking orders.[^33]
 Even a transaction between two non-U.S. parties still runs through the
 U.S. correspondent-banking system[^34] — so OFAC doesn't need
 jurisdiction over a foreign bank to reach it: it regulates that bank's
-*U.S.* correspondent directly. A related Treasury/FinCEN authority
-(PATRIOT Act §311) can go further still, barring U.S. banks from
+*U.S.* correspondent directly. A related Treasury/[FinCEN](https://en.wikipedia.org/wiki/Financial_Crimes_Enforcement_Network)
+authority ([PATRIOT Act §311](https://www.fincen.gov/resources/statutes-and-regulations/usa-patriot-act))
+can go further still, barring U.S. banks from
 maintaining that correspondent relationship at all. This would result in 
 the cut-off of the foreign bank's dollar access entirely, not just one flagged customer.
 That threat is what drove Banca Etica to implement its freezing of A/I's assets.
