@@ -962,11 +962,9 @@ nothing pulling it back toward any particular value. That gives it real volatili
 worst historical drawdown was roughly -94% during the 2018 crash, and it fell -81% in
 2022[^36]. DAI, by contrast, is a pegged asset — designed to hold near $1 rather than
 float freely — and its worst historical dips have been far smaller and shorter than
-ETH's[^37]. So holding ETH also means living with real price volatility, and managing that isn't free
-either: an organization that wants to hedge a large ETH position against downside risk
-takes on real administrative burden to do it — a cost that generally isn't worth
-carrying until the organization's scale justifies a dedicated finance function to
-manage it.  
+ETH's[^37]. [Hedging](https://www.kraken.com/learn/trading/hedging-strategies) against
+ETH's volatility is possible, but the overhead only pays off once the organization is big
+enough to have a dedicated finance function.
 
 Another advantage of DAI is reduced paperwork: because it's received and spent at
 essentially the same value, converting it to fiat doesn't trigger a capital-gains event
