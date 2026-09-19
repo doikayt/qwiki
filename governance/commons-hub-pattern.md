@@ -650,10 +650,10 @@ increasingly at risk of repression by state actors and deplatforming[^14] by
 large corporations unwilling to tolerate wrongthink [^15].
 In light of such threats, the distributed structure proposed in
 [§1](#1-the-commons-layer-and-its-satellites) serves as a preemptive counter-measure.   The referenced diagram posits the satellites
-surrounding a digital commons as 501(c)(3) entities, but note 
+surrounding a digital commons as 501(c)(3) entities, but note that
 a trusted individual could provide that same
 coordinated, resilient backup in the face of a take-down action (as mentioned
-in [this section](#trusted-backup-signer-election).)
+in [this section](#trusted-signer-election).)
 
 
 
@@ -801,7 +801,7 @@ full array of secrets through one shared set of credentials and
 hence the focus on npm publish tokens. A different language stack would swap in its own
 package registry (PyPI, RubyGems, and the like.)
 
-**CI secrets.** [Codeberg](https://codeberg.org) is the assumed git
+*CI secrets.* [Codeberg](https://codeberg.org) is the assumed git
 host here, not GitHub — GitHub is a wholly-owned Microsoft subsidiary,
 a US company carrying the same exposure to deplatforming already
 discussed for PayPal and the domain registries above.
@@ -818,8 +818,8 @@ independently configured secrets stored in a Bitwarden vault. This
 ensures that the release pipeline can publish, even if the primary
 org's account is locked.
 
-**npm publish tokens.** This one raises tricky questions:
-npm has been owned by GitHub, and so by Microsoft,
+*npm publish tokens.* This one raises tricky questions:
+npm has been owned by GitHub, and therefore by Microsoft,
 since 2020, which means it carries the identical deplatforming
 exposure the Codeberg move above was meant to get away from — but
 unlike git hosting, there's no jurisdiction-neutral registry the
@@ -840,7 +840,7 @@ keep a second maintainer's account (2FA-enabled, with its own recovery
 methods on file) able to publish as a fallback./signer
 
 
-**Financial Keys and Credentials.** A multisig treasury (§2) needs
+*Financial Keys and Credentials.* A multisig treasury (§2) needs
 several signers to agree before funds move, so no single signer can
 drain it — but each signer still personally holds one full private
 key, and protecting that key is entirely their own responsibility.
@@ -850,25 +850,29 @@ a software or exchange-hosted one, is the baseline — it keeps the
 private key off any internet-connected device entirely. The [seed
 phrase](https://en.wikipedia.org/wiki/Seed_phrase) behind it needs its own backup, split or duplicated across more than one physical
 location, so losing any single copy — to a fire, a theft, or misplacement -- 
-doesn't destroy every copy. None of this should be set up under
+doesn't result in lock-out. None of this should be set up under
 pressure: a signer should periodically confirm they can still produce
 a valid signature with their own key, the same way the onion mirror
 and alternate domain above get periodically checked, rather than
 finding out only when a transaction actually needs signing. Where
 those signers are located matters as much as how they guard the key —
-see [Trusted Backup Signer Election](#trusted-backup-signer-election)
+see [Trusted Signer Election](#trusted-signer-election)
 below for how jurisdictional spread factors into choosing them.
 
 
-<a id="trusted-backup-signer-election"></a>
+<a id="trusted-signer-election"></a>
 
-*Trusted backup signer election*
+*Trusted signer election*
 
-This section picks up on the idea introduced above: individuals, not just
-501(c)(3)'s, can serve as **trusted backup signers** -- our shorthand for any
-person or entity with a role in coordinating the restoration of a
-collective's  ability  to preserve continuity of operations in the face of a take-down
-event. Two structural properties  must hold for the trusted backup roster, regardless of whether any given
+This section picks up on the idea introduced
+[above](#resilience-through-dispersion): individuals, not just
+501(c)(3)'s, can serve the satellite-like role of **trusted signer** -- our shorthand for any
+person or entity tasked with
+  - adding their vote to authorize a significant treasury transaction (in the course of normal operations) 
+  - coordinating the restoration of a collective's  ability  to reboot operations (in the face of a take-down
+event.)
+
+ Two structural properties  must hold for the trusted signer roster, regardless of whether any given
 signer is an individual or a corporation:
 
 - transactions are gated by a [quorum](https://en.wikipedia.org/wiki/Threshold_cryptosystem)
@@ -881,7 +885,7 @@ signer is an individual or a corporation:
   doesn't drop the group below quorum.
 
 The tradeoff between designating a corporation versus an indivudal as a
-trusted backup signer is that the individual has no corporate liability shield to stand behind, 
+trusted signer is that the individual has no corporate liability shield to stand behind, 
 with resultant real personal exposure to any individual in that role.
 The corporation not only has the advantage of its legal shield, it also doesn't die -- that is:
 it has built-in succession (a board, staff, standard procedures) that outlives any one person's
@@ -891,74 +895,33 @@ is a known, addressable legal entity, carrying the same risk as a bank or a
 custodial stablecoin issuer[^35]. 
 
 
-*Trusted backup signer election -- team formation*
+*Trusted signer election -- team formation*
 
 Trust is obviously a critical factor in nominating an individual as a
-trusted backup signer, and the obvious pool to draw from is the already-vetted 
+trusted signer, and the obvious pool to draw from is the already-vetted 
 roster of code committers who have earned some degree of 
 token-based delegated authority, as described in 
 [§2](#2-governance-layer--three-mechanisms).  It is instructive to think 
 through an absolute worst case scenarios to see what is being asked of 
-this team: e.g., an NDAA detention order that ends up with all of 
+a jurisdictionally dispersed team: e.g., an NDAA detention order that ends up with all of 
 US-based committers in an isolated work camp. In such a regrettable case,
 what is lost is the ability of the US-based 501c3 to 
-continue development or monetization of the commons. However, the backup 
+continue development or monetization of the commons. However, the surviving
 signers can still re-establish new fiat currency  accounts in 
 their jurisdiction around the still-accessible treasury, 
 and then continue on to rebooting the collective around the still-intact commons.
 
 
-**Bootstrapping the trusted-signer network.** A small, early-stage
-collective doesn't have five trusted, jurisdictionally-diverse signers on
-hand just because the theory says it should -- and treating full
-jurisdictional dispersion as a day-one requirement would just block
-adoption of the whole pattern. Better to treat it as a target the roster
-grows into, not a gate: a 2-of-3 or 3-of-5 all-domestic signer set is a
-real, named gap to start from, not a failure of the model. The property
-isn't binary either -- going from zero non-domestic signers to one doesn't
-yet mean the treasury survives total domestic incapacitation, but it does
-force an attacker to reach outside their own jurisdiction for the first
-time, a real cost increase worth having even short of the full guarantee.
-The target to grow toward is the design rule above: enough non-domestic
-signers that they alone can reach the M threshold -- something an
-open-source project's naturally internationalizing contributor base tends
-to supply over time anyway.
+*Bootstrapping the trusted-signer network.* 
 
-Two things can get there faster than personally recruiting and vetting
-individuals abroad from scratch. An institutional signer -- a foreign
-nonprofit fiscal sponsor, a specialized custody service with a non-US
-entity -- is faster to stand up than a trusted personal relationship,
-trading some compellability for speed, a reasonable bootstrap-phase
-tradeoff even if it's not the ideal steady-state mix. And a shared,
-cross-collective trust network -- a small roster of vetted,
-mission-aligned, technically credible people serving as signers for every
-collective adopting this pattern, not just one -- is arguably more useful
-here, as a bootstrap on-ramp for a collective with zero international
-contacts yet, than as permanent infrastructure. It comes with a genuinely
-serious cost as steady-state architecture: it concentrates risk at
-exactly the level this whole section is trying to avoid concentrating it.
-Compromising or coercing that one shared roster no longer threatens a
-single collective's treasury -- it threatens every collective relying on
-it, simultaneously, the same single-point-of-failure structure this
-document argues against, just relocated from one organization to an
-entire ecosystem of them. If it's used at all, it should mean a shared
-roster of *people* signing on each collective's own separate treasury
-wallet -- never a pooled treasury across unrelated organizations, which
-would create its own commingling and fiduciary problems independent of
-the security question -- and ideally a bridge a maturing collective grows
-out of as it builds its own independent non-domestic relationships, not a
-permanent dependency.
-
-We don't have a clean resolution to offer here, and we'd rather say so
-than paper over it. Multisig custody with jurisdictional diversity,
-mixing individual and institutional signers under a real threshold, is
-solid enough to state as this document's actual recommendation once a
-collective has grown into it. A shared, cross-collective signer network
-remains a genuinely open question as permanent infrastructure --
-promising enough to name as a bootstrap tool, risky enough that we aren't
-ready to recommend it as part of the baseline model. Consistent with the
-rest of this document's front matter: offered to spur discussion, not
-presented as settled.
+A small, early-stage collective could very well start off with just one founder, and at this 
+point multi-sig signing makes no sense. Even as the team grows,  geographic
+dispersion of trust and commiters should not be sought for its own sake. 
+It is better to think of the network evolving in stages:  
+as the collective grows going from no multi-sig to 
+a 2-of-3 or 3-of-5 all-domestic signer set, then maybe as trusted 
+committers from other jurisdictions join moving some of the responsibility from a 
+domestic signer to someone in the other jurisdiction.
 
 
 *Financial Infrastructure Layer*
