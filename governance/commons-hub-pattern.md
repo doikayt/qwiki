@@ -649,13 +649,11 @@ especially those with status-quo-challenging missions, which are
 increasingly at risk of repression by state actors and deplatforming[^14] by
 large corporations unwilling to tolerate wrongthink [^15].
 In light of such threats, the distributed structure proposed in
-[§1](#1-the-commons-layer-and-its-satellites) serves as a preemptive
-counter-measure. Note that while the referenced diagram posited the satellites
-surrounding a digital commons as 501(c)(3)'s, it is also possible -- as
-the [Trusted Backup Signer Election](#trusted-backup-signer-election)
-section below explores -- for a trusted individual to provide that same
-coordinated, resilient backup in the face of a take-down action.
-
+[§1](#1-the-commons-layer-and-its-satellites) serves as a preemptive counter-measure.   The referenced diagram posits the satellites
+surrounding a digital commons as 501(c)(3) entities, but note that  it is entirely possible that
+a trusted individual could provide that same
+coordinated, resilient backup in the face of a take-down action (as mentioned
+in [this section](#trusted-backup-signer-election).)
 
 
 
