@@ -693,7 +693,7 @@ instantly, regardless of the underlying servers' ability to keep running.
 On the jurisdiction side: the Public Interest Registry is a Virginia-based
 501(c)(3) — a US legal entity — and Verisign, which runs `.com`, is a
 Delaware corporation headquartered in California. Once the SDGT
-designation issued, both registries were subject to the  same US
+designation was issued, both registries were subject to the  same US
 legal exposure that froze PayPal and Banca Etica's accounts. A US
 entity can't keep providing services (registration included), to a
 designated (targeted) party. That's what actually took `autistici.org` down —
@@ -717,7 +717,7 @@ Iceland's `.is` registry is operated by the non-profit
 [ISNIC](https://www.isnic.is/en/), which has a track record of
 resisting the kind of takedown requests that killed `autistici.org`.
 ISNIC runs the [top-level domain](https://en.wikipedia.org/wiki/Top-level_domain)
-(TLD) itself (that is: `.is`.) Actually registering a domain under `.is` (e.g., mycompany.is)
+(TLD) itself (that is: `.is`.) Actually registering a domain under `.is` (e.g., company_xyz.is)
 still goes through a separate registrar. Registering the domain
 through [1984 Hosting](https://1984.hosting/), an Icelandic registrar
 with a stated commitment to anonymity and free expression, adds a
@@ -962,6 +962,7 @@ presented as settled.
 
 
 [[[  THIS SECTION NEEDS A REWRITE ]]]
+
 *Financial Infrastructure Layer*
 
 Both payment rails and bank accounts become vulnerable the moment a US dollar-denominated transaction moves
@@ -992,14 +993,18 @@ mechanisms, in increasing order of simplicity:
 Both options share DAI's core property: no per-address freeze function[^35] exists for
 either ETH or DAI — they are identical in that regard, since ETH has no issuer or freeze
 key of its own, and DAI was deliberately built without one. The two diverge in the degree
-of downside that might affect your holdings, not in whether they can be seized.
+of downside that might affect a collective's holdings, not in whether they can be seized.
 
 ETH is a freely-floating, unpegged asset — its price is set purely by the market, with
 nothing pulling it back toward any particular value. That gives it real volatility: ETH's
 worst historical drawdown was roughly -94% during the 2018 crash, and it fell -81% in
 2022[^36]. DAI, by contrast, is a pegged asset — designed to hold near $1 rather than
 float freely — and its worst historical dips have been far smaller and shorter than
-ETH's[^37].
+ETH's[^37]. So holding ETH also means living with real price volatility, and managing that isn't free
+either: an organization that wants to hedge a large ETH position against downside risk
+takes on real administrative burden to do it — a cost that generally isn't worth
+carrying until the organization's scale justifies a dedicated finance function to
+manage it.  
 
 Another advantage of DAI is reduced paperwork: because it's received and spent at
 essentially the same value, converting it to fiat doesn't trigger a capital-gains event
@@ -1007,24 +1012,20 @@ worth recording — DAI can be converted and paid out in a single transaction. E
 requires two: a disposal event (ETH into DAI or fiat) that has to be tracked for capital
 gains or losses, and then the actual payment. This overhead compounds for ETH
 specifically, since vendors who won't accept crypto directly still need to be paid in
-USD or a USD-backed instrument — every payment to a fiat-only vendor means another ETH
+USD or a USD-backed instrument. Every payment to a fiat-only vendor means another ETH
 conversion, and another capital-gains event to track.
 
-Holding ETH also means living with real price volatility, and managing that isn't free
-either: an organization that wants to hedge a large ETH position against downside risk
-takes on real administrative burden to do it — a cost that generally isn't worth
-carrying until the organization's scale justifies a dedicated finance function to
-manage it.
 
 Given all that, a genuinely simpler alternative to the two-tier model shown in the
-[diagram below](#fund-flows-diagram) is to hold the treasury entirely in DAI — no ETH
-intermediate step, no periodic batch-convert, no separate reserve to manage. The
+[diagram below](#fund-flows-diagram) is to hold the treasury entirely in DAI — with no ETH
+intermediate step, no periodic batch-convert, and no separate reserve to manage. The
 tradeoff is concentration: a treasury held entirely in DAI has zero exposure to ETH's
 volatility, but it also has zero diversification against anything going wrong
-specifically within Sky's own collateral or governance — every dollar in the treasury
+specifically within the DAI network's own collateral situtation or governance — every dollar in the treasury
 shares the same fate. The two-tier model exists specifically to avoid that
 concentration: holding ETH alongside DAI means part of the
-treasury depends on no protocol, no collateral, and no issuer at all, which is a form of
+treasury has zero dependencies on protocol-triggered Emergency Shutdown (see backgrounder), 
+collateral concentration, or issuer blacklisting, which is a form of
 resilience the all-DAI approach gives up in exchange for simplicity. Which tradeoff is
 right depends on how much administrative capacity a given collective actually has.
 
@@ -1046,6 +1047,62 @@ important for a distributed collective: the organization can hold and transfer f
 without making a conventional financial institution the single point at which a
 politically motivated designation, compliance decision, or correspondent-banking cutoff
 can immobilize its treasury.
+
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
+flowchart TD
+    subgraph INST["Institutions"]
+        Circle[Circle - issues USDC]
+        RWACustodian[RWA custodian/trustee]
+        Governance[Sky governance - SKY/MKR holders]
+    end
+
+    subgraph PROTO["Sky protocol - smart contracts"]
+        Vault[Vault/CDP]
+        PSM[Peg Stability Module]
+        ESM[Emergency Shutdown Module]
+        Buffer[Surplus buffer]
+    end
+
+    subgraph USERS["Individuals / Organizations"]
+        VaultOwner[Vault owner - locks collateral to mint]
+        Trader[Buyer - swaps existing crypto for DAI]
+        Holder[DAI holder - e.g. a collective's treasury]
+    end
+
+    ETHCollat[ETH/WBTC collateral]
+    USDC[USDC]
+    RWA[Tokenized Treasuries]
+    DAISupply((DAI in circulation))
+
+    VaultOwner -- locks --> ETHCollat
+    ETHCollat --> Vault
+    Vault -- mints, 145-175%+ overcollateralized --> DAISupply
+
+    Circle -- issues --> USDC
+    USDC -- deposited 1:1 --> PSM
+    PSM -- mints/burns --> DAISupply
+
+    RWACustodian -- holds --> RWA
+    RWA -- posted as collateral --> Vault
+
+    Trader -- swaps ETH/BTC/USDC/USD via CEX or DEX --> DAISupply
+    DAISupply -- wallet-to-wallet --> Holder
+
+    Governance -- sets risk parameters --> Vault
+    Governance -- can trigger --> ESM
+    ESM -- freezes --> DAISupply
+    PSM -.->|shortfall absorbed by| Buffer
+    RWA -.->|shortfall absorbed by| Buffer
+
+    classDef risk fill:#fdf0e3,stroke:#e07b00,stroke-width:2px
+    class Circle,RWACustodian,ESM risk
+```
+<p align="center"><sub>DAI's components and flows: minting against locked
+collateral, direct 1:1 acquisition via the Peg Stability Module, RWA
+custody, and Sky governance's Emergency Shutdown circuit breaker.
+Institutions (orange) are the points a state actor could pressure;
+individuals/organizations (bottom) are ordinary users.</sub></p>
 
 That resilience isn't unconditional, though, and it's worth being precise about where
 its limits actually sit rather than let a reader assume the treasury is untouchable.
