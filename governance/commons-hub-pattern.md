@@ -688,9 +688,10 @@ makes a takedown effective with no technical attack at all: disable
 the registry entry, and the domain stops resolving globally and
 instantly, regardless of the underlying servers' ability to keep running. 
 
-On the jurisdiction side: the Public Interest Registry is a Virginia-based
-501(c)(3) — a US legal entity — and Verisign, which runs `.com`, is a
-Delaware corporation headquartered in California. Once the SDGT
+On the jurisdiction side: the [Public Interest Registry](https://pir.org) which runs the
+`.org` domain is a Virginia-based 501(c)(3) — a US legal entity — and
+[Verisign](https://www.verisign.com), which runs `.com`, is a Delaware corporation
+headquartered in California. Once the SDGT
 designation was issued, both registries were subject to the  same US
 legal exposure that froze PayPal and Banca Etica's accounts. A US
 entity can't keep providing services (registration included), to a
