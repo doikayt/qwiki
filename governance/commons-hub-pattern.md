@@ -650,7 +650,7 @@ increasingly at risk of repression by state actors and deplatforming[^14] by
 large corporations unwilling to tolerate wrongthink [^15].
 In light of such threats, the distributed structure proposed in
 [§1](#1-the-commons-layer-and-its-satellites) serves as a preemptive counter-measure.   The referenced diagram posits the satellites
-surrounding a digital commons as 501(c)(3) entities, but note that  it is entirely possible that
+surrounding a digital commons as 501(c)(3) entities, but note 
 a trusted individual could provide that same
 coordinated, resilient backup in the face of a take-down action (as mentioned
 in [this section](#trusted-backup-signer-election).)
@@ -803,7 +803,7 @@ package registry (PyPI, RubyGems, and the like.)
 
 **CI secrets.** [Codeberg](https://codeberg.org) is the assumed git
 host here, not GitHub — GitHub is a wholly-owned Microsoft subsidiary,
-a US company carrying the same deplatforming exposure already
+a US company carrying the same exposure to deplatforming already
 discussed for PayPal and the domain registries above.
 Codeberg, built on the open-source Forgejo, is EU-hosted and run by a
 nonprofit, for the same jurisdictional reasons as the `.is` domain.
@@ -865,70 +865,45 @@ finding out only when a transaction actually needs signing.
 
 This section picks up on the idea introduced above: individuals, not just
 501(c)(3)'s, can serve as **trusted backup signers** -- our shorthand for any
-person or entity with a role in coordinating the restoration of
+person or entity with a role in coordinating the restoration of a
 collective's  ability  to preserve continuity of operations in the face of a take-down
-event.
-
-Two structural properties -- discussed in mre detail in   *Why M-of-N*, below --
-should hold regardless of whether any given
+event. Two structural properties  must hold for the trusted backup roster, regardless of whether any given
 signer is an individual or a corporation:
 
-- a threshold of M-of-N signers, rather than one maximally-trusted,
-  individual, so an attacker has to compel or
-  compromise several people at once, not just one
-  and
-- maximal jurisdictional  dispesion among designated backup signers
+- transactions are gated by a [quorum](https://en.wikipedia.org/wiki/Threshold_cryptosystem)
+  of M-of-N signers, rather than one maximally-trusted,
+  individual, so a sanctioning adversary has to compel or compromise several people at once, not just one;
+- maximal jurisdictional  dispesion among designated backup signers.
 
-
-**Individual vs. corporate signers.** Each signer type carries a different
-trade-off. An individual has no corporate liability shield to stand behind,
-so the role comes with real personal exposure. A corporation doesn't carry
-that exposure the same way, and it doesn't die, and it doesn't misplace its
-keys to somebody's personal misfortune -- it has built-in succession (a
-board, staff, standard procedures) that outlives any one person's
-involvement. What it loses in exchange is exactly the arm's-length,
+The tradeoff between designating a corporation versus an indivudal as a
+trusted backup signer is that the individual has no corporate liability shield to stand behind, 
+with resultant real personal exposure to any individual in that role.
+The advantage of the corporation is not only in its legal shield, it also doesn't die -- that is:
+it has built-in succession (a board, staff, standard procedures) that outlives any one person's
+involvement. What a corporation loses in exchange is exactly the arm's-length,
 hard-to-reach quality an individual signer can have: a corporate custodian
 is a known, addressable legal entity, the same risk class as a bank or a
-custodial stablecoin issuer[^35]. Neither type is strictly better -- a
-threshold that mixes both is how the trade-off actually gets resolved,
-rather than choosing one type for every seat.
+custodial stablecoin issuer[^35]. 
 
-**Why M-of-N.** A threshold of M-of-N signers -- whether for treasury
-custody, CI secrets, bank account access, or any other credential a state
-actor might target -- means an attacker can't disable the collective by
-reaching one person or one jurisdiction; it has to compel or compromise M
-separate signers, ideally each in a different legal system, turning a
-single freeze or takedown order into a coordinated, cross-jurisdictional
-undertaking. The same structure gives every one of those systems room to
-recover from ordinary loss too: each keeps functioning even after losing up
-to N-M signers to any cause, attack included, until governance can replace
-them and restore the full roster.
 
-**Vetting.** The obvious move is to reuse the vetting standard
-[§2](#2-governance-layer--three-mechanisms) already established for
-token-based delegated authority: only someone already recognized as a
-trusted committer is eligible. But that standard was built to establish
-trust, not distance, and the gap between the two matters here specifically
-because of how it fails. A signer's own jurisdiction doesn't protect them
-from being *identified* -- wallet registration and tax documents intake,
-per the [Contributor Guide](contributor-guide.md), already puts the whole
-committer pool in one document the collective itself holds. The risk isn't
-that any one signer is easier to compel because they're on that list -- a
-free person in a genuinely different country is just as hard to reach as
-before. The risk is that the *whole roster* is enumerable from that one
-document, which means it's also targetable as a single batch: one
-subpoena, one designation action naming everyone at once, and the
-jurisdictional spread the M-of-N structure depends on gets bypassed
-entirely, not eroded signer by signer. Even in the most extreme version of
-this -- every US-based signer detained, every non-US signer individually
-designated at the same time -- neither the Commons nor the treasury is
-actually lost, since neither has a legal identity for any government
-action to seize; what's lost is the wrapper, and whichever signers had
-their physical key access cut off. Enough surviving, un-incapacitated
-signers can still move the treasury and, in time, stand up a new steward
-entity elsewhere. That possibility is exactly why the batch-enumeration
-risk is worth taking seriously in the first place -- it's the one thing
-that could take that resilience away in a single stroke.
+[[[  THIS SECTION NEEDS A REWRITE ]]]
+
+*Trusted backup signer election -- team formation*
+
+Trust is obviously a critical factor in nominating an individual as a
+trusted backup signer, and the obvious pool to draw from is the already-vetted 
+roster of code committers who have earned some degree of 
+token-based delegated authority, as described in 
+[§2](#2-governance-layer--three-mechanisms).  It is instructive to think 
+through an absolute worst case scenarios to see what is being asked of 
+this team: e.g., an NDAA detention order that ends up with all of 
+US-based committers in an isolated work camp. In such a regrettable case,
+what is lost is the ability of the US-based 501c3 to 
+continue development or monetization of the commons. However, the backup 
+signers can still re-establish new fiat currency  accounts in 
+their jurisdiction around the still-accessible treasury, 
+and then continue on to rebooting the collective around the still-intact commons.
+
 
 **Bootstrapping the trusted-signer network.** A small, early-stage
 collective doesn't have five trusted, jurisdictionally-diverse signers on
@@ -959,7 +934,6 @@ the rest of this document's front matter: offered to spur discussion, not
 presented as settled.
 
 
-[[[  THIS SECTION NEEDS A REWRITE ]]]
 
 *Financial Infrastructure Layer*
 
@@ -1013,6 +987,8 @@ specifically, since vendors who won't accept crypto directly still need to be pa
 USD or a USD-backed instrument. Every payment to a fiat-only vendor means another ETH
 conversion, and another capital-gains event to track.
 
+
+[[[  REMAINDER OF THIS SECTION NEEDS A REWRITE ]]]
 
 Given all that, a genuinely simpler alternative to the two-tier model shown in the
 [diagram below](#fund-flows-diagram) is to hold the treasury entirely in DAI — with no ETH
