@@ -773,75 +773,12 @@ Satellite (or its subsidiary) can hire a treasurer — then let that person deci
 
 #### Fund flows
 
-```mermaid
-%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
-flowchart TD
-    subgraph SAT["Satellite (nonprofit) — donor-funded"]
-        Donor([Donor / Funder])
-        SatBank[Bank account - near-term ops only]
-    end
+<a href="diagrams/fund-flows.png"><img src="diagrams/fund-flows.png" width="100%"
+alt="Fund flows: donor and customer money in, a periodic ETH to DAI batch convert, and
+money out to contributors and vendors, in four numbered stages"></a>
 
-    subgraph SUB["Subsidiary (for-profit) — customer revenue"]
-        Customer([Paying customer])
-        SubBank[Bank account - near-term ops only]
-    end
-
-    DonationProcessor[Giving Block - streamline tax receipts,<br/>configured to hold as crypto]
-    Treasury[Multisig Treasury - held as ETH]
-    BatchConvert[Periodic ETH to DAI batch convert - monthly/qtrly, single multisig sign-off]
-    DAIFloat[DAI - operating float]
-    Contributors{{Contributors}}
-    ContribOfframp([Contributor's own fiat off-ramp])
-    VendorsCrypto{{Vendors - crypto-accepting}}
-    OffRampJIT[Request Finance - JIT off-ramp, pays vendor directly]
-    VendorsFiat{{Vendors - fiat-only}}
-    Hedge[Hedging - staged: once FT controller hired]
-
-    subgraph LEGEND["Legend"]
-        L1[Collective-owned]
-        L2[External]
-    end
-
-    Donor -- "① cash/USD" --> SatBank
-    SatBank -- "① periodic sweep" --> Treasury
-    Donor -- "① DAI directly" --> DAIFloat
-    Donor -- "① ETH/BTC swappable" --> Treasury
-    Customer -- "① card/ACH, mostly fiat" --> SubBank
-    SubBank -- "① periodic sweep" --> Treasury
-
-    Donor -.->|"deferred until volume or<br/>Form 8283 threshold hit"| DonationProcessor
-
-    Treasury -- "② periodic batch, single sign-off" --> BatchConvert
-    BatchConvert -- "2" --> DAIFloat
-
-    DAIFloat -- "③ wallet-to-wallet" --> Contributors
-    Contributors -- "③ own responsibility" --> ContribOfframp
-    DAIFloat -- "③ wallet-to-wallet, DAI discount" --> VendorsCrypto
-    DAIFloat -- "③ processor converts + pays vendor in one settlement" --> OffRampJIT
-    OffRampJIT -- "3" --> VendorsFiat
-    SatBank -- "③ ACH/card, routine ops" --> VendorsFiat
-    SubBank -- "③ ACH/card, routine ops" --> VendorsFiat
-
-    Treasury -.->|"④ deferred until<br/>F/T controller on board"| Hedge
-
-    Hedge ~~~ DonationProcessor
-    Donor ~~~ SatBank
-    VendorsFiat ~~~ LEGEND
-    DonationProcessor -.->|"held as ETH"| Treasury
-
-    linkStyle 0,1,2,3,4,5 stroke:#d62728,color:#d62728
-    linkStyle 7,8 stroke:#1f77b4,color:#1f77b4
-    linkStyle 9,10,11,12,13,14,15 stroke:#2ca02c,color:#2ca02c
-    linkStyle 6,16,20 stroke:#888888,color:#888888,stroke-dasharray: 5 5
-
-    classDef owned fill:#eaf2fb,stroke:#1f77b4,stroke-width:3px
-    classDef external fill:#fdf0e3,stroke:#e07b00,stroke-width:2px,stroke-dasharray:3 3
-    class L1 owned
-    class L2 external
-    class Treasury,SatBank,SubBank,BatchConvert,DAIFloat,Hedge owned
-    class Donor,DonationProcessor,Customer,Contributors,ContribOfframp external
-    class VendorsCrypto,OffRampJIT,VendorsFiat external
-```
+<sub>Click the diagram for full size. Editable source:
+[`diagrams/fund-flows.mmd`](diagrams/fund-flows.mmd).</sub>
 
 This diagram covers financial custody and execution only — how funds move,
 what's crypto versus fiat, and what's owned versus what's external. It intentionally
@@ -1667,81 +1604,13 @@ without making a conventional financial institution the single point at which a
 politically motivated designation, compliance decision, or correspondent-banking cutoff
 can immobilize its treasury.
 
-```mermaid
-%%{init: {"themeVariables": {"fontSize": "14px"}, "flowchart": {"nodeSpacing": 50, "rankSpacing": 70}}}%%
-flowchart TD
-    subgraph USERS["Individuals / Organizations"]
-        VaultOwner[Vault owner - locks collateral to mint]
-        Holder[DAI holder - buys and holds DAI, e.g. a collective's treasury]
-    end
+<a href="diagrams/dai-flows.png"><img src="diagrams/dai-flows.png" width="100%"
+alt="DAI components and flows: individuals and organizations at the top, the Sky protocol
+in the middle, institutions at the bottom, with sixteen numbered flows"></a>
 
-    Exchange[Exchange - CEX or DEX]
-    ETHCollat[ETH/WBTC collateral]
+<sub>Click the diagram for full size. Editable source:
+[`diagrams/dai-flows.mmd`](diagrams/dai-flows.mmd).</sub>
 
-    subgraph PROTO["Sky protocol - smart contracts"]
-        DAISupply((DAI in circulation))
-        PSM[Peg Stability Module]
-        Vault[Vault/CDP]
-        ESM[Emergency Shutdown Module]
-        Buffer[Surplus buffer]
-    end
-
-    USDC[USDC]
-    RWA[Tokenized Treasuries]
-
-    subgraph INST["Institutions"]
-        Circle[Circle - issues USDC]
-        RWACustodian[RWA custodian/trustee]
-        Governance[Sky governance - SKY/MKR holders]
-    end
-
-    VaultOwner -- "① locks" --> ETHCollat
-    ETHCollat -- "② posted as collateral" --> Vault
-    Vault -- "③ mints, 145-175%+ overcollateralized" --> DAISupply
-
-    Holder -- "④ swaps USDC" --> PSM
-    PSM -- "⑤ mints/burns" --> DAISupply
-    PSM -- "⑥ holds" --> USDC
-    USDC -- "⑦ issued by" --> Circle
-
-    Holder -- "⑧ swaps ETH/BTC/USDC/USD for DAI" --> Exchange
-    Exchange -- "⑨ trades existing DAI" --> DAISupply
-    Exchange -- "⑩ DAI" --> Holder
-
-    Vault -- "⑪ backed in part by" --> RWA
-    RWA -- "⑫ held by" --> RWACustodian
-
-    Vault -- "⑬ risk parameters set by" --> Governance
-    ESM -- "⑭ triggered by" --> Governance
-
-    DAISupply -- "⑮ can be frozen by" --> ESM
-    PSM -.->|"⑯ PSM and RWA shortfalls absorbed by"| Buffer
-
-    classDef user fill:#dbeafe,stroke:#2563eb,stroke-width:2px
-    classDef code fill:#dcfce7,stroke:#16a34a,stroke-width:2px
-    classDef asset fill:#f3f4f6,stroke:#6b7280,stroke-width:2px
-    classDef token fill:#ccfbf1,stroke:#0d9488,stroke-width:3px
-    classDef cutoff fill:#fdf0e3,stroke:#e07b00,stroke-width:3px
-    classDef legal fill:#fdf0e3,stroke:#e07b00,stroke-width:2px,stroke-dasharray:6 4
-    classDef breaker fill:#fee2e2,stroke:#dc2626,stroke-width:3px
-    class VaultOwner,Holder user
-    class Vault,PSM,Buffer code
-    class ETHCollat,USDC,RWA asset
-    class DAISupply token
-    class Circle,RWACustodian,Exchange cutoff
-    class Governance legal
-    class ESM breaker
-
-    style USERS fill:#f8fafc,stroke:#94a3b8
-    style PROTO fill:#f8fafc,stroke:#94a3b8
-    style INST fill:#f8fafc,stroke:#94a3b8
-
-    linkStyle 2,4 stroke:#16a34a,stroke-width:3px
-    linkStyle 3,7,8,9 stroke:#2563eb,stroke-width:3px
-    linkStyle 0,1,5,6,10,11 stroke:#6b7280,stroke-width:2px
-    linkStyle 12,13 stroke:#7c3aed,stroke-width:3px
-    linkStyle 14,15 stroke:#dc2626,stroke-width:2px,stroke-dasharray:5 4
-```
 *DAI's components and flows. The numbers follow the walkthrough below.*
 
 Boxes: $\color{#2563eb}{\text{blue}}$ = people and organizations ·
@@ -1755,7 +1624,7 @@ $\color{#2563eb}{\text{blue}}$ = DAI changes hands ·
 $\color{#6b7280}{\text{gray}}$ = custody and backing ·
 $\color{#7c3aed}{\text{purple}}$ = control · $\color{#dc2626}{\text{red dashed}}$ = stress path.
 
-Terms in the diagram:
+Entities in the diagram:
 
 - Vault owner: a person or organization that locks crypto in a Vault and mints DAI against
   it, in effect borrowing DAI against its collateral.
