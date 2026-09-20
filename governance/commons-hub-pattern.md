@@ -401,13 +401,14 @@ later document; a pointer back to it belongs here once that's written.)*
 ## 3. Resilience: surviving attack by design
 
 <a id="above-ref"></a>
-Having settled who governs the commons and its satellites, we turn to what happens when
-entrenched powers decide to shut them down. Any collective whose mission genuinely
-threatens that power, whether corporate or state, should expect to be targeted, and a
-model that is dispersed by design gives it a real chance of surviving such attempts. 
-This section lays out the principle, walks through a real takedown that a
-collective with a dispersed structure might have survived, and finally, 
-presents  _technical_  and _financial_ mitigations that turn the principle into practice.
+Having settled who governs the commons and its satellites, we pivot to what a collective
+can proactively do to survive a takedown attempt by a corporate or state actor. Any
+collective whose mission genuinely threatens entrenched power should expect to be
+targeted. We will explain
+[resilience through dispersion](#resilience-through-dispersion), the principle that
+dispersing a collective's people, assets, and infrastructure improves its odds of
+survival; walk through a real takedown that a dispersed structure might have survived; and
+present _technical_ and _financial_ mitigations that turn the principle into practice.
 
 
 ### Resilience through dispersion
