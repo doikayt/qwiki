@@ -406,7 +406,7 @@ can proactively do to survive a takedown attempt by a corporate or state actor. 
 collective whose mission genuinely threatens entrenched power should expect to be
 targeted. We will explain
 [resilience through dispersion](#resilience-through-dispersion), the principle that
-dispersing a collective's people, assets, and infrastructure improves its odds of
+dispersing any organization's people, assets, and infrastructure improves its odds of
 survival; walk through a real takedown that a dispersed structure might have survived; and
 present _technical_ and _financial_ mitigations that turn the principle into practice.
 

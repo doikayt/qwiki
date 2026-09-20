@@ -53,3 +53,36 @@ This is one of four companion documents split out of a single original draft (se
    - The rule assumes the jurisdictions act independently. Whether treaty or sanctions
      coordination makes that assumption fail for particular jurisdiction pairs is a
      factual and legal question for counsel, not settled here.
+
+3. **[Legal — requires confirmation] Corporate trusted signers as targets of legal process.**
+   The [Trusted signer election](commons-hub-pattern.md#trusted-signer-election) section
+   says a corporation acting as a trusted signer, with a physical address in public
+   records and a registered agent to serve, is "an easy target for direct legal process:
+   a subpoena, a seizure warrant, or a blocking order." This is drafted as a general
+   statement and has not had counsel review. Unresolved, needs counsel:
+   - Which of those processes can actually reach a corporate signer, and what each can
+     compel: a subpoena reaches records and testimony, but whether it can compel a
+     signature or a key turns on the compelled-production questions in item 2.
+   - Whether a seizure warrant can reach crypto assets or keys held by a corporate
+     signer, and on what showing.
+   - Whether a corporate signer incorporated outside the US is reachable by US process,
+     and by what route (service on a US agent, mutual legal assistance, or pressure on
+     intermediaries).
+   - Whether the corporate form gives the liability shield the section describes when the
+     signer's role is to hold a key or co-sign treasury transactions.
+
+4. **[Legal — requires confirmation] Tornado Cash as precedent for developer and
+   governance exposure.** [Appendix A.4](commons-hub-pattern.md#a4-dai-backgrounder) cites
+   the Tornado Cash matter for two points: that people who build or maintain code nobody
+   controls can still be prosecuted after a sanction on the code itself falls, and that a
+   protocol's foundation and concentrated governance-token holders are a target class
+   in their own right. The case facts (the Fifth Circuit's November 2024 reversal, the
+   March 2025 delisting, the August 2025 conviction on one count, and the April 2027
+   retrial date) were taken from secondary sources and one court-reporting site and have
+   not been checked against the dockets. Unresolved, needs counsel:
+   - Current status of the prosecution, including the pending acquittal motion, before
+     the document states any of it as settled.
+   - Whether the analogy carries from a mixer's developer to the participants who govern a
+     lending protocol, and on what liability theory (unlicensed money transmission, aiding
+     and abetting, or treatment of token holders as an association).
+
