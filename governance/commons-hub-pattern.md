@@ -102,10 +102,10 @@ doesn't: who holds the _power_ to organize production and claim its
 surplus — and what happens to that arrangement once automation makes
 human labor itself increasingly unnecessary.
 
-We later examine how the increasing sophistication and reach of AI make any
-confident forecast of the next dominant mode of production impossible — to the
-point where we have to ask whether human beings can even survive as a species under
-whatever model comes next. Assuming we do, the next question is
+We later examine how AI's increasing sophistication and reach are shaping the next
+dominant mode of production, to the point where we have to ask whether human beings can
+even survive as a species under it
+([Section 4](#4-the-stakes-and-why-our-model-has-an-edge)). Assuming we do, the next question is
 whether the average working person ends up better off or worse — and while
 today's power structures tilt the scales toward worse, we argue 
 that [the same forces](#4-the-stakes-and-why-our-model-has-an-edge) driving that outcome also open
