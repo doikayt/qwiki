@@ -339,7 +339,7 @@ determine -- by equally weighted voting -- what share of the
 disbursed funds each contributor or pod receives. The board has the ultimate
 authority to approve (the typical case) or reject that proposal.
 
-The vote itself runs on off-chain tooling
+The vote itself runs on [off-chain](https://csrc.nist.gov/glossary/term/off_chain) tooling
 ([Coordinape](https://coordinape.com)/[Snapshot](https://snapshot.org)); the
 [blockchain](https://en.wikipedia.org/wiki/Blockchain)-based leg is
 the treasury and payout — funds move from a
@@ -1667,7 +1667,8 @@ Entities in the diagram:
 - Vault owner: a person or organization that locks crypto in a Vault and mints DAI against
   it, in effect borrowing DAI against its collateral.
 - Tokenized Treasuries: blockchain tokens that represent claims on U.S. Treasury securities
-  held off-chain, one kind of real-world asset (RWA).
+  held [off-chain](https://csrc.nist.gov/glossary/term/off_chain), one kind of real-world
+  asset (RWA).
 - Peg Stability Module: a protocol contract that swaps USDC for newly minted DAI, which
   helps keep DAI trading close to one dollar.
 - Emergency Shutdown Module: the protocol's circuit breaker, which anyone can fire once
@@ -1735,12 +1736,12 @@ The orange and red parts of the diagram mark three limits: a circuit breaker bui
 the protocol, exposure for the people behind it, and a dependency on an issuer that can
 freeze.
 
-Sky's protocol has a legitimate circuit breaker built into it: the Emergency Shutdown
-Module, which MKR/SKY governance-token holders can trigger in response to a perceived
-existential threat to the system. Triggering it freezes the protocol and converts DAI
-from a freely spendable balance into a claim redeemable only through a settlement
-process — a real, if deliberately hard to reach, mechanism by which liquidity could stop
-on short notice.
+Sky's protocol does have a circuit breaker, built in by design: the Emergency Shutdown
+Module, which governance-token holders can set off by pledging (and burning) enough tokens,
+in response to a perceived existential threat to the system. Triggering it freezes the
+protocol and converts DAI from a freely spendable balance into a claim redeemable only
+through a settlement process — a real, if deliberately hard to reach, mechanism by which
+liquidity could stop on short notice.
 
 The second limit is the dashed-orange box. A smart contract's lack of a freeze key doesn't
 extend the same immunity to the people who govern or maintain it. The clearest precedent
