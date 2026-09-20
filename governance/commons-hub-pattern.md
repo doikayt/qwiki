@@ -802,27 +802,27 @@ flowchart TD
         L2[External]
     end
 
-    Donor -- "1 cash/USD" --> SatBank
-    SatBank -- "1 periodic sweep" --> Treasury
-    Donor -- "1 DAI directly" --> DAIFloat
-    Donor -- "1 ETH/BTC swappable" --> Treasury
-    Customer -- "1 card/ACH, mostly fiat" --> SubBank
-    SubBank -- "1 periodic sweep" --> Treasury
+    Donor -- "① cash/USD" --> SatBank
+    SatBank -- "① periodic sweep" --> Treasury
+    Donor -- "① DAI directly" --> DAIFloat
+    Donor -- "① ETH/BTC swappable" --> Treasury
+    Customer -- "① card/ACH, mostly fiat" --> SubBank
+    SubBank -- "① periodic sweep" --> Treasury
 
     Donor -.->|"deferred until volume or<br/>Form 8283 threshold hit"| DonationProcessor
 
-    Treasury -- "2 periodic batch, single sign-off" --> BatchConvert
+    Treasury -- "② periodic batch, single sign-off" --> BatchConvert
     BatchConvert -- "2" --> DAIFloat
 
-    DAIFloat -- "3 wallet-to-wallet" --> Contributors
-    Contributors -- "3 own responsibility" --> ContribOfframp
-    DAIFloat -- "3 wallet-to-wallet, DAI discount" --> VendorsCrypto
-    DAIFloat -- "3 processor converts + pays vendor in one settlement" --> OffRampJIT
+    DAIFloat -- "③ wallet-to-wallet" --> Contributors
+    Contributors -- "③ own responsibility" --> ContribOfframp
+    DAIFloat -- "③ wallet-to-wallet, DAI discount" --> VendorsCrypto
+    DAIFloat -- "③ processor converts + pays vendor in one settlement" --> OffRampJIT
     OffRampJIT -- "3" --> VendorsFiat
-    SatBank -- "3 ACH/card, routine ops" --> VendorsFiat
-    SubBank -- "3 ACH/card, routine ops" --> VendorsFiat
+    SatBank -- "③ ACH/card, routine ops" --> VendorsFiat
+    SubBank -- "③ ACH/card, routine ops" --> VendorsFiat
 
-    Treasury -.->|"4 deferred until<br/>F/T controller on board"| Hedge
+    Treasury -.->|"④ deferred until<br/>F/T controller on board"| Hedge
 
     Hedge ~~~ DonationProcessor
     Donor ~~~ SatBank
@@ -896,8 +896,8 @@ leans on Marxist economic analysis, our perspective on what constitutes _justly 
 founder labor on exit is more aligned with Schumpeter as discussed
 in [Appendix A.3](#a3-founder-labor-and-fair-reward).)
 
-The buyout (1), the ongoing vesting cycle (2), and an employee's eventual
-exit (3) are three separate flows of cash and shares — the last of these is what
+The buyout (①), the ongoing vesting cycle (②), and an employee's eventual
+exit (③) are three separate flows of cash and shares — the last of these is what
 creates the [repurchase obligation](#repurchase-obligation) discussed
 below. Here's how they connect:
 
@@ -911,16 +911,16 @@ flowchart TD
     Employees{{Employee accounts}}
     Departing([Departing employee])
 
-    Founder -- "1 sells shares" --> Trust
-    Lender -- "1 loan proceeds" --> Trust
-    Trust -- "1 purchase price" --> Founder
-    Company -- "2 tax-deductible contributions, annually" --> Trust
-    Trust -- "2 loan repayment" --> Lender
-    Trust -- "2 shares allocated as loan is repaid" --> Employees
-    Employees -- "2 vests over time" --> Employees
-    Employees -- "3 shares" --> Departing
-    Departing -- "3 vested shares (sellback)" --> Company
-    Company -- "3 repurchase obligation: cash at FMV" --> Departing
+    Founder -- "① sells shares" --> Trust
+    Lender -- "① loan proceeds" --> Trust
+    Trust -- "① purchase price" --> Founder
+    Company -- "② tax-deductible contributions, annually" --> Trust
+    Trust -- "② loan repayment" --> Lender
+    Trust -- "② shares allocated as loan is repaid" --> Employees
+    Employees -- "② vests over time" --> Employees
+    Employees -- "③ shares" --> Departing
+    Departing -- "③ vested shares (sellback)" --> Company
+    Company -- "③ repurchase obligation: cash at FMV" --> Departing
     linkStyle 0,1,2 stroke:#d62728,color:#d62728
     linkStyle 3,4,5,6 stroke:#1f77b4,color:#1f77b4
     linkStyle 7,8,9 stroke:#2ca02c,color:#2ca02c
@@ -1655,9 +1655,10 @@ mechanism sorts this out automatically.
 
 ### A.4 DAI backgrounder
 
-DAI is a U.S.-dollar-pegged cryptocurrency created by Maker (now Sky) and designed to
-maintain a value of approximately one U.S. dollar without being a deposit at a
-conventional bank. Unlike a bank account or payment account, a DAI balance exists on a
+DAI is a U.S.-dollar-pegged cryptocurrency created by
+[Maker](https://en.wikipedia.org/wiki/MakerDAO) (now [Sky](https://sky.money/)) and
+designed to maintain a value of approximately one U.S. dollar without being a deposit at
+a conventional bank. Unlike a bank account or payment account, a DAI balance exists on a
 public blockchain and is controlled by the holder of the corresponding cryptographic
 keys. There is no bank, payment processor, or central DAI account administrator that can
 simply instruct the network to freeze a particular address. This distinction is
@@ -1714,8 +1715,7 @@ flowchart TD
     ESM -- "⑭ triggered by" --> Governance
 
     DAISupply -- "⑮ can be frozen by" --> ESM
-    PSM -.->|"⑯ shortfall absorbed by"| Buffer
-    RWA -.-> Buffer
+    PSM -.->|"⑯ PSM and RWA shortfalls absorbed by"| Buffer
 
     classDef user fill:#dbeafe,stroke:#2563eb,stroke-width:2px
     classDef code fill:#dcfce7,stroke:#16a34a,stroke-width:2px
@@ -1740,17 +1740,46 @@ flowchart TD
     linkStyle 3,7,8,9 stroke:#2563eb,stroke-width:3px
     linkStyle 0,1,5,6,10,11 stroke:#6b7280,stroke-width:2px
     linkStyle 12,13 stroke:#7c3aed,stroke-width:3px
-    linkStyle 14,15,16 stroke:#dc2626,stroke-width:2px,stroke-dasharray:5 4
+    linkStyle 14,15 stroke:#dc2626,stroke-width:2px,stroke-dasharray:5 4
 ```
-<p align="center"><sub>DAI's components and flows. The numbers follow the walkthrough below.<br>
-Boxes: blue = people and organizations · green = code · gray = assets · teal = DAI ·
-solid orange = can cut you off · dashed orange = can be legally targeted · red = circuit
-breaker.<br>
-Arrows: green = DAI created · blue = DAI changes hands · gray = custody and backing ·
-purple = control · red dashed = stress path.</sub></p>
+*DAI's components and flows. The numbers follow the walkthrough below.*
 
-Following the numbers, DAI reaches someone's hands in three ways, and three more things
-sit underneath: what backs it, who sets the rules, and what happens under stress.
+Boxes: $\color{#2563eb}{\text{blue}}$ = people and organizations ·
+$\color{#16a34a}{\text{green}}$ = code · $\color{#6b7280}{\text{gray}}$ = assets ·
+$\color{#0d9488}{\text{teal}}$ = DAI · $\color{#e07b00}{\text{solid orange}}$ = can cut you off ·
+$\color{#e07b00}{\text{dashed orange}}$ = can be legally targeted ·
+$\color{#dc2626}{\text{red}}$ = circuit breaker.
+
+Arrows: $\color{#16a34a}{\text{green}}$ = DAI created ·
+$\color{#2563eb}{\text{blue}}$ = DAI changes hands ·
+$\color{#6b7280}{\text{gray}}$ = custody and backing ·
+$\color{#7c3aed}{\text{purple}}$ = control · $\color{#dc2626}{\text{red dashed}}$ = stress path.
+
+Terms in the diagram:
+
+- Vault owner: a person or organization that locks crypto in a Vault and mints DAI against
+  it, in effect borrowing DAI against its collateral.
+- Tokenized Treasuries: blockchain tokens that represent claims on U.S. Treasury securities
+  held off-chain, one kind of real-world asset (RWA).
+- Peg Stability Module: a protocol contract that swaps USDC for newly minted DAI, which
+  helps keep DAI trading close to one dollar.
+- Emergency Shutdown Module: the protocol's circuit breaker, which anyone can fire once
+  enough governance tokens have been pledged (and burned), halting the system and settling
+  holders' claims.
+- RWA custodian/trustee: the off-chain institution that legally holds the real-world assets
+  behind those tokens.
+
+Following the numbers, DAI reaches someone's hands in three ways:
+
+- minted against collateral (①–③)
+- minted against USDC (④–⑦)
+- bought on an exchange (⑧–⑩)
+
+Three more things sit underneath:
+
+- what backs it: real-world assets (⑪–⑫)
+- who sets the rules (⑬–⑭)
+- what happens when things go wrong (⑮–⑯)
 
 *Minted against collateral (①–③).* A vault owner locks crypto in the protocol (① and ②),
 and the Vault mints DAI against it (③). The collateral has to be worth more than the DAI
