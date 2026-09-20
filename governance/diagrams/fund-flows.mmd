@@ -26,27 +26,27 @@ flowchart TD
         L2[External]
     end
 
-    Donor -- "① cash/USD" --> SatBank
-    SatBank -- "① periodic sweep" --> Treasury
-    Donor -- "① DAI directly" --> DAIFloat
-    Donor -- "① ETH/BTC swappable" --> Treasury
-    Customer -- "① card/ACH, mostly fiat" --> SubBank
-    SubBank -- "① periodic sweep" --> Treasury
+    Donor -- "<b style='font-size:1.8em'>①</b> cash/USD" --> SatBank
+    SatBank -- "<b style='font-size:1.8em'>①</b> periodic sweep" --> Treasury
+    Donor -- "<b style='font-size:1.8em'>①</b> DAI directly" --> DAIFloat
+    Donor -- "<b style='font-size:1.8em'>①</b> ETH/BTC swappable" --> Treasury
+    Customer -- "<b style='font-size:1.8em'>①</b> card/ACH, mostly fiat" --> SubBank
+    SubBank -- "<b style='font-size:1.8em'>①</b> periodic sweep" --> Treasury
 
     Donor -.->|"deferred until volume or<br/>Form 8283 threshold hit"| DonationProcessor
 
-    Treasury -- "② periodic batch, single sign-off" --> BatchConvert
-    BatchConvert -- "②" --> DAIFloat
+    Treasury -- "<b style='font-size:1.8em'>②</b> periodic batch, single sign-off" --> BatchConvert
+    BatchConvert -- "<b style='font-size:1.8em'>②</b>" --> DAIFloat
 
-    DAIFloat -- "③ wallet-to-wallet" --> Contributors
-    Contributors -- "③ own responsibility" --> ContribOfframp
-    DAIFloat -- "③ wallet-to-wallet, DAI discount" --> VendorsCrypto
-    DAIFloat -- "③ processor converts +<br/>pays vendor in one settlement" --> OffRampJIT
-    OffRampJIT -- "③" --> VendorsFiat
-    SatBank -- "③ ACH/card,<br/>routine ops" --> VendorsFiat
-    SubBank -- "③ ACH/card,<br/>routine ops" --> VendorsFiat
+    DAIFloat -- "<b style='font-size:1.8em'>③</b> wallet-to-wallet" --> Contributors
+    Contributors -- "<b style='font-size:1.8em'>③</b> own responsibility" --> ContribOfframp
+    DAIFloat -- "<b style='font-size:1.8em'>③</b> wallet-to-wallet, DAI discount" --> VendorsCrypto
+    DAIFloat -- "<b style='font-size:1.8em'>③</b> processor converts +<br/>pays vendor in one settlement" --> OffRampJIT
+    OffRampJIT -- "<b style='font-size:1.8em'>③</b>" --> VendorsFiat
+    SatBank -- "<b style='font-size:1.8em'>③</b> ACH/card,<br/>routine ops" --> VendorsFiat
+    SubBank -- "<b style='font-size:1.8em'>③</b> ACH/card,<br/>routine ops" --> VendorsFiat
 
-    Treasury -.->|"④ deferred until<br/>F/T controller on board"| Hedge
+    Treasury -.->|"<b style='font-size:1.8em'>④</b> deferred until<br/>F/T controller on board"| Hedge
 
     SatBank ~~~ Customer
     VendorsFiat ~~~ LEGEND

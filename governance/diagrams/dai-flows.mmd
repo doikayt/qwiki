@@ -25,27 +25,27 @@ flowchart TD
         Governance[Sky governance - SKY/MKR holders]
     end
 
-    VaultOwner -- "① locks" --> ETHCollat
-    ETHCollat -- "② posted as collateral" --> Vault
-    Vault -- "③ mints, 145-175%+ overcollateralized" --> DAISupply
+    VaultOwner -- "<b style='font-size:1.8em'>①</b> locks" --> ETHCollat
+    ETHCollat -- "<b style='font-size:1.8em'>②</b> posted as collateral" --> Vault
+    Vault -- "<b style='font-size:1.8em'>③</b> mints, 145-175%+ overcollateralized" --> DAISupply
 
-    Holder -- "④ swaps USDC" --> PSM
-    PSM -- "⑤ mints/burns" --> DAISupply
-    PSM -- "⑥ holds" --> USDC
-    USDC -- "⑦ issued by" --> Circle
+    Holder -- "<b style='font-size:1.8em'>④</b> swaps USDC" --> PSM
+    PSM -- "<b style='font-size:1.8em'>⑤</b> mints/burns" --> DAISupply
+    PSM -- "<b style='font-size:1.8em'>⑥</b> holds" --> USDC
+    USDC -- "<b style='font-size:1.8em'>⑦</b> issued by" --> Circle
 
-    Holder -- "⑧ swaps ETH/BTC/USDC/USD for DAI" --> Exchange
-    Exchange -- "⑨ trades existing DAI" --> DAISupply
-    Exchange -- "⑩ DAI" --> Holder
+    Holder -- "<b style='font-size:1.8em'>⑧</b> swaps ETH/BTC/USDC/USD for DAI" --> Exchange
+    Exchange -- "<b style='font-size:1.8em'>⑨</b> trades existing DAI" --> DAISupply
+    Exchange -- "<b style='font-size:1.8em'>⑩</b> DAI" --> Holder
 
-    Vault -- "⑪ backed in part by" --> RWA
-    RWA -- "⑫ held by" --> RWACustodian
+    Vault -- "<b style='font-size:1.8em'>⑪</b> backed in part by" --> RWA
+    RWA -- "<b style='font-size:1.8em'>⑫</b> held by" --> RWACustodian
 
-    Vault -- "⑬ risk parameters set by" --> Governance
-    ESM -- "⑭ triggered by" --> Governance
+    Vault -- "<b style='font-size:1.8em'>⑬</b> risk parameters set by" --> Governance
+    ESM -- "<b style='font-size:1.8em'>⑭</b> triggered by" --> Governance
 
-    DAISupply -- "⑮ can be frozen by" --> ESM
-    PSM -.->|"⑯ PSM and RWA shortfalls absorbed by"| Buffer
+    DAISupply -- "<b style='font-size:1.8em'>⑮</b> can be frozen by" --> ESM
+    PSM -.->|"<b style='font-size:1.8em'>⑯</b> PSM and RWA shortfalls absorbed by"| Buffer
 
     classDef user fill:#dbeafe,stroke:#2563eb,stroke-width:2px
     classDef code fill:#dcfce7,stroke:#16a34a,stroke-width:2px
