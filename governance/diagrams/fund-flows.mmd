@@ -1,12 +1,12 @@
 %%{init: {"themeVariables": {"fontSize": "14px"}}}%%
 flowchart TD
     subgraph SAT["Satellite (nonprofit) — donor-funded"]
-        Donor([Donor / Funder])
+        Donor(Donor / Funder)
         SatBank[Bank account - near-term ops only]
     end
 
     subgraph SUB["Subsidiary (for-profit) — customer revenue"]
-        Customer([Paying customer])
+        Customer(Paying customer)
         SubBank[Bank account - near-term ops only]
     end
 
@@ -15,7 +15,7 @@ flowchart TD
     BatchConvert[Periodic ETH to DAI batch convert -<br/>monthly/qtrly, single multisig sign-off]
     DAIFloat[DAI - operating float]
     Contributors{{Contributors}}
-    ContribOfframp([Contributor's own fiat off-ramp])
+    ContribOfframp(Contributor's own fiat off-ramp)
     VendorsCrypto{{Vendors - crypto-accepting}}
     OffRampJIT[Request Finance - JIT off-ramp,<br/>pays vendor directly]
     VendorsFiat{{Vendors - fiat-only}}
