@@ -571,13 +571,13 @@ scrutiny from state actors.[^24]
 
 #### Technical infrastructure: key and credential custodianship
 
-This section covers replication of the two categories of keys and credentials a collective needs to
-function.
+This section covers the custody of the keys and credentials a collective needs to function.
+They fall into two categories:
 
-- operational: this covers CI secrets, npm publish tokens,
-  and any other secrets required to build and publish a collective's software, and
-- financial: this would cover a multisig cosigner's wallet key, recovery codes, and credentials for
-  bank account logins, and the like
+- operational: CI secrets, npm publish tokens, and any other secrets required to build and
+  publish a collective's software
+- financial: a multisig cosigner's wallet key, recovery codes, and credentials for bank
+  account logins, and the like
 
 The recommended vehicle for storing this type of sensitive information
 is a [Bitwarden](https://bitwarden.com) vault. Bitwarden is open
@@ -640,9 +640,9 @@ doesn't result in lock-out. None of this should be set up under
 pressure: a signer should periodically confirm they can still produce
 a valid signature with their own key, the same way the onion mirror
 and alternate domain above get periodically checked, rather than
-finding out only when a transaction actually needs signing. Where
+finding out only when a needed transaction is blocked. Where
 those signers are located matters as much as how they guard the key —
-and we next discuss how jurisdictional spread factors into choosing them.
+and we next discuss how jurisdictional spread should shape the trusted signer roster.
 
 
 <a id="trusted-signer-election"></a>
@@ -1672,16 +1672,18 @@ mechanism sorts this out automatically.
 ### A.4 DAI backgrounder
 
 DAI is a U.S.-dollar-pegged cryptocurrency created by
-[Maker](https://en.wikipedia.org/wiki/MakerDAO) (now [Sky](https://sky.money/)) and
+[Maker](https://makerdao.com/da/whitepaper/) (now [Sky](https://sky.money/)) and
 designed to maintain a value of approximately one U.S. dollar without being a deposit at
-a conventional bank. Unlike a bank account or payment account, a DAI balance exists on a
-public blockchain and is controlled by the holder of the corresponding cryptographic
-keys. There is no bank, payment processor, or central DAI account administrator that can
-simply instruct the network to freeze a particular address. This distinction is
-important for a distributed collective: the organization can hold and transfer funds
-without making a conventional financial institution the single point at which a
-politically motivated designation, compliance decision, or correspondent-banking cutoff
-can immobilize its treasury.
+a conventional bank. Sky has since offered USDS, an optional 1:1 upgrade from DAI, but
+this appendix is about DAI: USDS reportedly includes a freeze function that DAI lacks,[^42]
+so the properties described here do not carry over to it. Unlike a bank account or
+payment account, a DAI balance exists on a public blockchain and is controlled by the
+holder of the corresponding cryptographic keys. There is no bank, payment processor, or
+central DAI account administrator that can simply instruct the network to freeze a
+particular address. This distinction is important for a distributed collective: the
+organization can hold and transfer funds without making a conventional financial
+institution the single point at which a politically motivated designation, compliance
+decision, or correspondent-banking cutoff can immobilize its treasury.
 
 <a href="diagrams/dai-flows.png"><img src="diagrams/dai-flows.png" width="100%"
 alt="DAI components and flows: individuals and organizations at the top, the Sky protocol
@@ -2142,6 +2144,15 @@ when it later leaves the retained-earnings pool as a distribution.
     deadlocked on the other two, and his retrial is set for April 26, 2027, with a motion
     for acquittal still undecided, per [The Block's August 2026
     report](https://www.theblock.co/news/regulation/2026-08-26-tornado-cash-roman-storm-retrial-april-2027-412761).
+
+[^42]: USDS launched in September 2024 as an optional 1:1 upgrade for DAI holders, and DAI
+    itself remains active ([The
+    Block](https://www.theblock.co/post/313235/makerdao-mkr-sky-dai-stablecoin-usds)). DL
+    News reported in August 2024 that USDS "contains a freeze function in its code", while
+    DAI has none ([DL
+    News](https://www.dlnews.com/articles/defi/makerdao-sky-rebrand-brings-usds-stablecoin-freeze-function/)).
+    Whether that function is active today, and how it is governed, was not checked and
+    requires confirmation.
 
 ---
 
