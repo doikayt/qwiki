@@ -440,7 +440,7 @@ The recent (August 2026) US government designation of Italian
 hosting collective Autistici/Inventati (A/I) as a ["Specially Designated Global 
 Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/) 
 (SDGT) serves as a useful case study on how a satellite structured collective might have
-avoided a shut-down. We propose mitigations[^16] on two  infrastructural axes:
+avoided a shut-down. We propose mitigations on two  infrastructural axes:
 _technical_, and _financial_ -- but first a recap.
 
 
@@ -1934,10 +1934,6 @@ when it later leaves the retained-earnings pool as a distribution.
     (April 2026).
 
 [^15]: [wrongthink — Wiktionary](https://en.wiktionary.org/wiki/wrongthink).
-
-[^16]: In the spirit of full disclosure: these mitigations are not
-    something we have tested in practice. They're directions that
-    seem promising, and that we plan to explore.
 
 [^17]: [Designation of Autistici/Inventati as a Specially Designated
     Global Terrorist — U.S. Department of
