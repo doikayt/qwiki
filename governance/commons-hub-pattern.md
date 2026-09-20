@@ -640,7 +640,7 @@ doesn't result in lock-out. None of this should be set up under
 pressure: a signer should periodically confirm they can still produce
 a valid signature with their own key, the same way the onion mirror
 and alternate domain above get periodically checked, rather than
-finding out only when a needed transaction is blocked. Where
+finding out only when a critical transaction gets blocked. Where
 those signers are located matters as much as how they guard the key —
 and we next discuss how jurisdictional spread should shape the trusted signer roster.
 
@@ -741,9 +741,11 @@ abroad are steps toward that target, not benefits in themselves.
 
 ### Financial mitigations
 
-Both payment rails and bank accounts become vulnerable the moment a US dollar-denominated transaction moves
-through those rails, or results in a deposit into those accounts. Dollars must be settled inside the U.S. banking
-system — which OFAC (the Treasury Department's Office of Foreign Assets Control) regulates under the 
+Both payment rails and bank accounts become vulnerable the moment a US dollar-denominated
+transaction moves through those rails, or results in a deposit into those accounts.
+Dollars must be settled inside the U.S. banking system — which
+[OFAC](https://ofac.treasury.gov/) (the Treasury Department's Office of Foreign Assets
+Control) regulates under the
 [IEEPA](https://en.wikipedia.org/wiki/International_Emergency_Economic_Powers_Act).
 Every U.S. bank must comply with OFAC's blocking orders.[^33]
 
