@@ -400,13 +400,14 @@ later document; a pointer back to it belongs here once that's written.)*
 
 ## 3. Resilience: surviving attack by design
 
+<a id="above-ref"></a>
 Having settled who governs the commons and its satellites, we turn to what happens when
 entrenched powers decide to shut them down. Any collective whose mission genuinely
 threatens that power, whether corporate or state, should expect to be targeted, and a
 model that is dispersed by design gives it a real chance of surviving such attempts. 
 This section lays out the principle, walks through a real takedown that a
 collective with a dispersed structure might have survived, and finally, 
-presents  technical, custodial, and financial mitigations that turn the principle into practice.
+presents  _technical_  and _financial_ mitigations that turn the principle into practice.
 
 
 ### Resilience through dispersion
@@ -440,7 +441,7 @@ hosting collective Autistici/Inventati (A/I) as a ["Specially Designated Global
 Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/) 
 (SDGT) serves as a useful case study on how a satellite structured collective might have
 avoided a shut-down. We propose mitigations[^16] on two  infrastructural axes:
-technical, and financial -- but first a recap.
+_technical_, and _financial_ -- but first a recap.
 
 
 The US State department issued the designation on August 26.[^17] 
@@ -481,7 +482,10 @@ around.
 
 ### Technical mitigations
 
-Mitigations fall on the two axes named above, technical and financial. We start with
+
+
+Mitigations fall on the two axes named  at the start of the [previous section](#above-ref) --
+_technical_ and _financial_. We start with
 the technical axis: domains, keys and credentials, and the trusted signers who hold them.
 
 #### Technical infrastructure: [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)
@@ -640,6 +644,8 @@ and we next discuss how jurisdictional spread factors into choosing them.
 
 <a id="trusted-signer-election"></a>
 
+
+
 #### Trusted signer election
 
 This section picks up on the idea introduced
@@ -662,15 +668,15 @@ regardless of whether any given signer is an individual or a corporation:
   in one jurisdiction (arrest, detention, a single legal action)
   doesn't drop the group below quorum.
 
-The tradeoff between designating a corporation versus an indivudal as a
-trusted signer is that the individual has no corporate liability shield to stand behind, 
+The tradeoff between designating a corporation versus an individual as a
+trusted signer is that the individual has no corporate liability shield to stand behind,
 with resultant real personal exposure to any individual in that role.
 The corporation not only has the advantage of its legal shield, it also doesn't die -- that is:
 it has built-in succession (a board, staff, standard procedures) that outlives any one person's
-involvement. What a corporation loses in exchange is exactly the arm's-length,
-hard-to-reach quality an individual signer can have: a corporate custodian
-is a known, addressable legal entity, carrying the same risk as a bank or a
-custodial stablecoin issuer[^35]. 
+involvement. The main disadvantage of the corporation is its higher profile. Its status as a
+legal entity -- with a physical address recorded in public records, and a registered agent to
+serve -- makes it an easy target for direct legal process: a subpoena, a seizure warrant, or
+a blocking order.
 
 
 ##### Trusted signer team formation
@@ -680,10 +686,10 @@ trusted signer, and the obvious pool to draw from is the already-vetted
 roster of code committers who have earned some degree of 
 token-based delegated authority, as described in 
 [§2](#2-governance-layer--three-mechanisms).  It is instructive to think 
-through an absolute worst case scenarios to see what is being asked of 
+through an absolute worst case scenario to see what is being asked of 
 a jurisdictionally dispersed team: e.g., an NDAA detention order that ends up with all of 
 US-based committers in an isolated work camp. In such a regrettable case,
-what is lost is the ability of the US-based 501c3 to 
+what is materially lost is the ability of the US-based 501c3 to 
 continue development or monetization of the commons. However, the surviving
 signers can still re-establish new fiat currency  accounts in 
 their jurisdiction around the still-accessible treasury, 
