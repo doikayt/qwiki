@@ -1667,63 +1667,133 @@ politically motivated designation, compliance decision, or correspondent-banking
 can immobilize its treasury.
 
 ```mermaid
-%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
+%%{init: {"themeVariables": {"fontSize": "14px"}, "flowchart": {"nodeSpacing": 50, "rankSpacing": 70}}}%%
 flowchart TD
+    subgraph USERS["Individuals / Organizations"]
+        VaultOwner[Vault owner - locks collateral to mint]
+        Holder[DAI holder - buys and holds DAI, e.g. a collective's treasury]
+    end
+
+    Exchange[Exchange - CEX or DEX]
+    ETHCollat[ETH/WBTC collateral]
+
+    subgraph PROTO["Sky protocol - smart contracts"]
+        DAISupply((DAI in circulation))
+        PSM[Peg Stability Module]
+        Vault[Vault/CDP]
+        ESM[Emergency Shutdown Module]
+        Buffer[Surplus buffer]
+    end
+
+    USDC[USDC]
+    RWA[Tokenized Treasuries]
+
     subgraph INST["Institutions"]
         Circle[Circle - issues USDC]
         RWACustodian[RWA custodian/trustee]
         Governance[Sky governance - SKY/MKR holders]
     end
 
-    subgraph PROTO["Sky protocol - smart contracts"]
-        Vault[Vault/CDP]
-        PSM[Peg Stability Module]
-        ESM[Emergency Shutdown Module]
-        Buffer[Surplus buffer]
-    end
+    VaultOwner -- "① locks" --> ETHCollat
+    ETHCollat -- "② posted as collateral" --> Vault
+    Vault -- "③ mints, 145-175%+ overcollateralized" --> DAISupply
 
-    subgraph USERS["Individuals / Organizations"]
-        VaultOwner[Vault owner - locks collateral to mint]
-        Trader[Buyer - swaps existing crypto for DAI]
-        Holder[DAI holder - e.g. a collective's treasury]
-    end
+    Holder -- "④ swaps USDC" --> PSM
+    PSM -- "⑤ mints/burns" --> DAISupply
+    PSM -- "⑥ holds" --> USDC
+    USDC -- "⑦ issued by" --> Circle
 
-    ETHCollat[ETH/WBTC collateral]
-    USDC[USDC]
-    RWA[Tokenized Treasuries]
-    DAISupply((DAI in circulation))
+    Holder -- "⑧ swaps ETH/BTC/USDC/USD for DAI" --> Exchange
+    Exchange -- "⑨ trades existing DAI" --> DAISupply
+    Exchange -- "⑩ DAI" --> Holder
 
-    VaultOwner -- locks --> ETHCollat
-    ETHCollat --> Vault
-    Vault -- mints, 145-175%+ overcollateralized --> DAISupply
+    Vault -- "⑪ backed in part by" --> RWA
+    RWA -- "⑫ held by" --> RWACustodian
 
-    Circle -- issues --> USDC
-    USDC -- deposited 1:1 --> PSM
-    PSM -- mints/burns --> DAISupply
+    Vault -- "⑬ risk parameters set by" --> Governance
+    ESM -- "⑭ triggered by" --> Governance
 
-    RWACustodian -- holds --> RWA
-    RWA -- posted as collateral --> Vault
+    DAISupply -- "⑮ can be frozen by" --> ESM
+    PSM -.->|"⑯ shortfall absorbed by"| Buffer
+    RWA -.-> Buffer
 
-    Trader -- swaps ETH/BTC/USDC/USD via CEX or DEX --> DAISupply
-    DAISupply -- wallet-to-wallet --> Holder
+    classDef user fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    classDef code fill:#dcfce7,stroke:#16a34a,stroke-width:2px
+    classDef asset fill:#f3f4f6,stroke:#6b7280,stroke-width:2px
+    classDef token fill:#ccfbf1,stroke:#0d9488,stroke-width:3px
+    classDef cutoff fill:#fdf0e3,stroke:#e07b00,stroke-width:3px
+    classDef legal fill:#fdf0e3,stroke:#e07b00,stroke-width:2px,stroke-dasharray:6 4
+    classDef breaker fill:#fee2e2,stroke:#dc2626,stroke-width:3px
+    class VaultOwner,Holder user
+    class Vault,PSM,Buffer code
+    class ETHCollat,USDC,RWA asset
+    class DAISupply token
+    class Circle,RWACustodian,Exchange cutoff
+    class Governance legal
+    class ESM breaker
 
-    Governance -- sets risk parameters --> Vault
-    Governance -- can trigger --> ESM
-    ESM -- freezes --> DAISupply
-    PSM -.->|shortfall absorbed by| Buffer
-    RWA -.->|shortfall absorbed by| Buffer
+    style USERS fill:#f8fafc,stroke:#94a3b8
+    style PROTO fill:#f8fafc,stroke:#94a3b8
+    style INST fill:#f8fafc,stroke:#94a3b8
 
-    classDef risk fill:#fdf0e3,stroke:#e07b00,stroke-width:2px
-    class Circle,RWACustodian,ESM risk
+    linkStyle 2,4 stroke:#16a34a,stroke-width:3px
+    linkStyle 3,7,8,9 stroke:#2563eb,stroke-width:3px
+    linkStyle 0,1,5,6,10,11 stroke:#6b7280,stroke-width:2px
+    linkStyle 12,13 stroke:#7c3aed,stroke-width:3px
+    linkStyle 14,15,16 stroke:#dc2626,stroke-width:2px,stroke-dasharray:5 4
 ```
-<p align="center"><sub>DAI's components and flows: minting against locked
-collateral, direct 1:1 acquisition via the Peg Stability Module, RWA
-custody, and Sky governance's Emergency Shutdown circuit breaker.
-Institutions (orange) are the points a state actor could pressure;
-individuals/organizations (bottom) are ordinary users.</sub></p>
+<p align="center"><sub>DAI's components and flows. The numbers follow the walkthrough below.<br>
+Boxes: blue = people and organizations · green = code · gray = assets · teal = DAI ·
+solid orange = can cut you off · dashed orange = can be legally targeted · red = circuit
+breaker.<br>
+Arrows: green = DAI created · blue = DAI changes hands · gray = custody and backing ·
+purple = control · red dashed = stress path.</sub></p>
 
-That resilience isn't unconditional, though, and it's worth being precise about where
-its limits actually sit rather than let a reader assume the treasury is untouchable.
+Following the numbers, DAI reaches someone's hands in three ways, and three more things
+sit underneath: what backs it, who sets the rules, and what happens under stress.
+
+*Minted against collateral (①–③).* A vault owner locks crypto in the protocol (① and ②),
+and the Vault mints DAI against it (③). The collateral has to be worth more than the DAI
+minted against it, by a margin the diagram puts at 145% to 175% or more, so that a price
+drop doesn't leave DAI unbacked. Sky's core repository describes the design the same way:
+DAI creation isn't possible without collateral, and positions that turn risky are
+liquidated through auctions.[^40]
+
+*Minted against USDC (④–⑦).* Someone holding USDC can swap it for DAI through the Peg
+Stability Module (④). The module works as a specially authorized vault: it locks the
+incoming USDC and issues DAI against it (⑤ and ⑥), with a fee taken out of the DAI
+received.[^38] The catch sits at the far end of the path. Circle issues USDC (⑦) and can
+freeze it, which is why Circle is orange, and why everything minted this way inherits that
+exposure.
+
+*Bought on an exchange (⑧–⑩).* This is the path most collectives will actually use. They
+swap ETH, BTC, USDC, or dollars for DAI (⑧), an exchange sells them DAI that is already in
+circulation (⑨), and the DAI arrives in their wallet (⑩). Nothing new is minted on this
+path: the exchange is a marketplace, not an issuer. It's orange because a centralized
+exchange knows who you are and can refuse to serve you, which makes this the one leg where
+ordinary financial-institution controls still apply. A decentralized exchange is code
+rather than an institution, so only the centralized kind carries that exposure.
+
+*Backed in part by real-world assets (⑪–⑫).* Some of the backing is Tokenized Treasuries
+(⑪), held for the protocol by an RWA custodian (⑫). That makes the custodian a second
+institution that can be pressured, sitting behind what is otherwise code.
+
+*Who sets the rules (⑬–⑭).* Holders of Sky's governance tokens decide which collateral is
+accepted and how much DAI can be issued against each type (⑬).[^40] The same token holders
+also stand behind the emergency brake (⑭): they can pledge tokens, which are burned, and
+once enough are pledged anyone can fire the Emergency Shutdown Module. Sky describes it as
+a tool for a minority of holders to stop malicious governance or a critical bug.[^39]
+
+*When things go wrong (⑮–⑯).* The red arrows are the stress paths. If Emergency Shutdown
+fires, DAI stops behaving like a freely spendable balance and becomes a claim on a
+settlement process (⑮). And if a position in the Peg Stability Module or the real-world
+asset pool loses value, the shortfall is absorbed by the protocol's surplus buffer (⑯);
+debt the system can't otherwise cover is made good by diluting the governance token
+through an auction.[^40]
+
+The resilience described at the top of this backgrounder isn't unconditional, though, and
+it's worth being precise about where its limits actually sit rather than let a reader
+assume the treasury is untouchable.
 
 Sky's protocol has a legitimate circuit breaker built into it: the Emergency Shutdown
 Module, which MKR/SKY governance-token holders can trigger in response to a perceived
@@ -2055,6 +2125,29 @@ when it later leaves the retained-earnings pool as a distribution.
     CoinDesk](https://data.coindesk.com/blogs/market-analysis-silicon-valley-bank-circle-usdc);
     [DAI recovers after severe depeg caused by USDC ripple
     effect](https://cryptonews.net/news/altcoins/20659725/).
+
+[^38]: Sky's `dss-psm` repository describes the Peg Stability Module as a specially
+    authorized vault sitting behind a collateral join adapter: calling `sellGem()` locks
+    the incoming tokens, takes out a DAI loan, and issues DAI to the user, with a fee
+    subtracted from the DAI received. See
+    [sky-ecosystem/dss-psm](https://github.com/sky-ecosystem/dss-psm). Checked against
+    the repository README on 2026-09-20; fee levels are protocol parameters that can
+    change, so treat any specific rate as requiring confirmation.
+
+[^39]: Sky's `esm` repository: MKR holders `join` funds, which are immediately burnt;
+    once the total reaches a threshold, anyone can `fire` the module, which calls
+    `end.cage()` and triggers Emergency Shutdown (Global Settlement). The README frames
+    it as a way for a minority of holders to thwart malicious governance or a critical
+    bug. See [sky-ecosystem/esm](https://github.com/sky-ecosystem/esm). The README names
+    MKR; how SKY holders participate was not checked and requires confirmation.
+
+[^40]: Sky's core `dss` repository: DAI creation requires collateral, configuration is
+    changed through the governance layer, liquidations run as auctions, and "System Debt"
+    is covered by diluting the governance token through an auction while surplus is sold
+    for the same token. See [sky-ecosystem/dss](https://github.com/sky-ecosystem/dss).
+    Checked against the repository README on 2026-09-20. The README predates the SKY
+    rename and refers to MKR, and it does not describe the surplus buffer's place in the
+    loss order, so that detail requires confirmation.
 
 ---
 
