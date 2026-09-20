@@ -1824,6 +1824,10 @@ The resilience described at the top of this backgrounder isn't unconditional, th
 it's worth being precise about where its limits actually sit rather than let a reader
 assume the treasury is untouchable.
 
+The orange and red parts of the diagram mark three limits: a circuit breaker built into
+the protocol, exposure for the people behind it, and a dependency on an issuer that can
+freeze.
+
 Sky's protocol has a legitimate circuit breaker built into it: the Emergency Shutdown
 Module, which MKR/SKY governance-token holders can trigger in response to a perceived
 existential threat to the system. Triggering it freezes the protocol and converts DAI
@@ -1831,14 +1835,17 @@ from a freely spendable balance into a claim redeemable only through a settlemen
 process — a real, if deliberately hard to reach, mechanism by which liquidity could stop
 on short notice.
 
-A smart contract's absence of a freeze key also doesn't extend that same immunity to the
-people who govern or maintain it. The clearest precedent is Tornado Cash: even after the
-underlying OFAC sanction on its smart-contract addresses was vacated by the Fifth
-Circuit, the U.S. Department of Justice still pursued one of its developers, Roman
-Storm, to a conviction on one charge, with a retrial pending on the remaining two. Sky
-has an identifiable foundation and a concentrated set of governance-token holders — a
-target class in its own right, independent of what the DAI contract itself can or
-cannot do.
+The second limit is the dashed-orange box. A smart contract's lack of a freeze key doesn't
+extend the same immunity to the people who govern or maintain it. The clearest precedent
+is [Tornado Cash](https://en.wikipedia.org/wiki/Tornado_Cash), a
+[cryptocurrency mixer](https://en.wikipedia.org/wiki/Cryptocurrency_tumbler) built from
+smart contracts that, as the Fifth Circuit found, no one could update or control. That
+court held in November 2024 that OFAC could not sanction them as "property", and Treasury
+lifted the sanctions in March 2025. The U.S. Department of Justice still pursued one of
+its developers, Roman Storm, to a conviction on one charge in August 2025. The jury
+deadlocked on the other two, and a retrial is set for April 2027.[^41] Sky has an
+identifiable foundation and a concentrated set of governance-token holders — a target
+class in its own right, independent of what the DAI contract itself can or cannot do.
 
 And DAI's own collateral base isn't purely decentralized crypto. Roughly 35-40% of it
 sits directly in USDC, held through Sky's Peg Stability Module — an amount Circle could
@@ -2177,6 +2184,19 @@ when it later leaves the retained-earnings pool as a distribution.
     Checked against the repository README on 2026-09-20. The README predates the SKY
     rename and refers to MKR, and it does not describe the surplus buffer's place in the
     loss order, so that detail requires confirmation.
+
+[^41]: *Van Loon v. Department of the Treasury*, No. 23-50669 (5th Cir. Nov. 26, 2024): the
+    court reversed the district court and held that immutable smart contracts are not
+    "property" under IEEPA because no one can own or control them. See the
+    [opinion](https://www.ca5.uscourts.gov/opinions/pub/23/23-50669-CV0.pdf), located via
+    search and not read in full. Treasury delisted Tornado Cash on March 21, 2025 rather
+    than appeal, per [Venable's
+    summary](https://www.venable.com/insights/publications/2025/04/a-legal-whirlwind-settles-treasury-lifts-sanctions);
+    the date was not checked against Treasury's own notice and requires confirmation.
+    Storm was convicted in August 2025 on one count of money transmitting, the jury
+    deadlocked on the other two, and his retrial is set for April 26, 2027, with a motion
+    for acquittal still undecided, per [The Block's August 2026
+    report](https://www.theblock.co/news/regulation/2026-08-26-tornado-cash-roman-storm-retrial-april-2027-412761).
 
 ---
 
