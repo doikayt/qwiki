@@ -50,8 +50,9 @@ Early concept draft.
 - [4. The Stakes, and Why Our Model Has an Edge](#4-the-stakes-and-why-our-model-has-an-edge)
   - [The labor-market half of the advantage: elite overproduction and AI-driven displacement](#the-labor-market-half-of-the-advantage-elite-overproduction-and-ai-driven-displacement)
   - [Cost advantages that a for-profit competitor can't match](#cost-advantages-that-a-for-profit-competitor-cant-match)
+- [5. Resilience: Surviving Attack by Design](#5-resilience-surviving-attack-by-design)
   - [Resilience through dispersion](#resilience-through-dispersion)
-    - [Case study: the takedown of Autistici/Inventati](#case-study-the-takedown-of-autisticiinventati)
+  - [Case study: the takedown of Autistici/Inventati](#case-study-the-takedown-of-autisticiinventati)
   - [Mitigations](#mitigations)
     - [Technical infrastructure: DNS](#technical-infrastructure-dns)
     - [Technical infrastructure: key and credential custodianship](#technical-infrastructure-key-and-credential-custodianship)
@@ -111,6 +112,10 @@ today's power structures tilt the scales toward worse, we argue
 that [the same forces](#4-the-stakes-and-why-our-model-has-an-edge) driving that outcome also open
 opportunities for alternative worker-friendly legal/financial/ownership structures to displace
 the top-down corporate form that underpins late-stage disaster capitalism.
+The last of those opportunities is survivability: a collective that is dispersed by
+design is far harder to shut down, and we close by [walking through a real
+takedown](#5-resilience-surviving-attack-by-design) and the mitigations that would have
+kept a satellite-structured collective running through it.
 
 In terms of our two opening questions our model's answers are:
 
@@ -579,13 +584,17 @@ computational resources,  and political influence that enables
 AI research to proceed unregulated also determines who captures the 
 day-to-day gains from that same technology.
 
-None of that is inevitable, though, and this final section strikes a hopeful
-note. We start with two structural properties of our model that translate
-into real operational advantages. Then we look at the flip side: any
+None of that is inevitable, though, and this section strikes a hopeful
+note. Our model has three structural edges. The first two are operational: a
+labor market full of capable engineers who are being shut out of the traditional
+path, and a cost structure a for-profit competitor can't match. The third is that
+the model is dispersed by nature, so no single registry, payment processor, or
+subpoena can take the whole collective down. That last edge matters because any
 501(c)(3) pursuing a mission genuinely threatening to entrenched capital, or
-to a repressive state actor, should expect to be targeted for suppression —
-so we explore how we can build resilience properties into our model to
-withstand exactly that.
+to a repressive state actor, should expect to be targeted for suppression. It is
+also the one that depends most on how we build, which is why it gets its own
+section, [§5](#5-resilience-surviving-attack-by-design), after we cover the first
+two here.
 
 
 ### The labor-market half of the advantage: elite overproduction and AI-driven displacement
@@ -640,7 +649,18 @@ In summary, the operational advantages that accrue from these two structural pro
   - lower product marketing spend to figure out what to build
   - lower cost of recruiting and easier staff retention due to alignment around principles
 
+The third edge, resilience through dispersion, is the subject of the next section.
 
+
+
+## 5. Resilience: Surviving Attack by Design
+
+The third of the structural edges introduced in [§4](#4-the-stakes-and-why-our-model-has-an-edge)
+is that our model is dispersed by nature: there is no single server, bank account, or
+legal entity whose loss takes the collective down. That is an edge in the face of attack,
+and it holds only if we build for it. This section lays out the principle, walks through a
+real takedown that a dispersed structure might have survived, and then covers the
+technical, custodial, and financial mitigations that turn the principle into practice.
 
 
 ### Resilience through dispersion
@@ -667,7 +687,7 @@ in [this section](#trusted-signer-election).)
 
 
 
-#### Case study: the takedown of Autistici/Inventati 
+### Case study: the takedown of Autistici/Inventati 
 
 The recent (August 2026) US government designation of Italian
 hosting collective Autistici/Inventati (A/I) as a ["Specially Designated Global 
@@ -1186,11 +1206,12 @@ the multisig treasury shown here is the layer that carries out whatever
 that governance process decides, not a stand-in for it.
 
 
------  [[ might want to delete next para ]]
 None of this would have stopped the designation itself. It would have
 kept the Commons and every other Satellite running while the targeted
 one dealt with the consequences — which is the whole point of
-dispersion.
+dispersion. We can't stop a hostile state or corporation from picking us as a target, but
+we can decide in advance, through structure, whether that choice ends the work or only
+slows it down.
 
 ## Appendix A: Historical and Economic Grounding
 
