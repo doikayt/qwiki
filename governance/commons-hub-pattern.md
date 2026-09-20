@@ -30,38 +30,38 @@ Early concept draft.
 
 ---
 
-## Table of Contents
+## Table of contents
 
 - [Overview](#overview)
-- [Corporations as a Governance Technology, Not a Law of Nature](#corporations-as-a-governance-technology-not-a-law-of-nature)
+- [Corporations as a governance technology, not a law of nature](#corporations-as-a-governance-technology-not-a-law-of-nature)
   - [Factors favoring the emergence of the corporate model -- neoclassical view](#factors-favoring-the-emergence-of-the-corporate-model----neoclassical-view)
   - [Drivers of the dissolution of the corporate model -- Marxist view](#drivers-of-the-dissolution-of-the-corporate-model----marxist-view)
-- [1. The Commons Layer and Its Satellites](#1-the-commons-layer-and-its-satellites)
+- [1. The Commons layer and its Satellites](#1-the-commons-layer-and-its-satellites)
   - [Bulwarks against enclosure of our digital commons](#bulwarks-against-enclosure-of-our-digital-commons)
   - [The Tragedy of the Commons, proven wrong](#the-tragedy-of-the-commons-proven-wrong)
-- [2. Governance Layer — Three Mechanisms](#2-governance-layer--three-mechanisms)
+- [2. Governance layer — three mechanisms](#2-governance-layer--three-mechanisms)
   - [Board](#board)
   - [DAO](#dao)
   - [Token-based delegated authority](#token-based-delegated-authority)
-- [3. Distribution of Economic Benefits — From Founder Incentives to Broad-Based Ownership](#3-distribution-of-economic-benefits--from-founder-incentives-to-broad-based-ownership)
-  - [ESOPs in a nutshell](#esops-in-a-nutshell)
-  - [When ESOPs make sense](#when-esops-make-sense)
-  - [C-corp or S-corp?](#c-corp-or-s-corp)
-- [4. The Stakes, and Why Our Model Has an Edge](#4-the-stakes-and-why-our-model-has-an-edge)
-  - [The labor-market half of the advantage: elite overproduction and AI-driven displacement](#the-labor-market-half-of-the-advantage-elite-overproduction-and-ai-driven-displacement)
-  - [Cost advantages that a for-profit competitor can't match](#cost-advantages-that-a-for-profit-competitor-cant-match)
+- [3. Resilience: surviving attack by design](#3-resilience-surviving-attack-by-design)
   - [Resilience through dispersion](#resilience-through-dispersion)
-    - [Case study: the takedown of Autistici/Inventati](#case-study-the-takedown-of-autisticiinventati)
-  - [Mitigations](#mitigations)
+  - [Case study: the takedown of Autistici/Inventati](#case-study-the-takedown-of-autisticiinventati)
+  - [Technical mitigations](#technical-mitigations)
     - [Technical infrastructure: DNS](#technical-infrastructure-dns)
     - [Technical infrastructure: key and credential custodianship](#technical-infrastructure-key-and-credential-custodianship)
     - [Trusted signer election](#trusted-signer-election)
-      - [Team formation](#team-formation)
-      - [Bootstrapping the trusted-signer network](#bootstrapping-the-trusted-signer-network)
-    - [Financial infrastructure layer](#financial-infrastructure-layer)
-      - [DAI backgrounder](#dai-backgrounder)
-      - [Fund flows](#fund-flows)
-- [Appendix A: Historical and Economic Grounding](#appendix-a-historical-and-economic-grounding)
+      - [Trusted signer team formation](#trusted-signer-team-formation)
+  - [Financial mitigations](#financial-mitigations)
+    - [DAI backgrounder](#dai-backgrounder)
+    - [Fund flows](#fund-flows)
+- [4. Distribution of economic benefits — from founder incentives to broad-based ownership](#4-distribution-of-economic-benefits--from-founder-incentives-to-broad-based-ownership)
+  - [ESOPs in a nutshell](#esops-in-a-nutshell)
+  - [When ESOPs make sense](#when-esops-make-sense)
+  - [C-corp or S-corp?](#c-corp-or-s-corp)
+- [5. The stakes, and why our model has an edge](#5-the-stakes-and-why-our-model-has-an-edge)
+  - [The labor-market half of the advantage: elite overproduction and AI-driven displacement](#the-labor-market-half-of-the-advantage-elite-overproduction-and-ai-driven-displacement)
+  - [Cost advantages that a for-profit competitor can't match](#cost-advantages-that-a-for-profit-competitor-cant-match)
+- [Appendix A: historical and economic grounding](#appendix-a-historical-and-economic-grounding)
   - [A.1 Why firms exist: Coase, the putting-out system, and what's changing now](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now)
     - [The tooling wave](#the-tooling-wave)
     - [The AI wave](#the-ai-wave)
@@ -104,13 +104,21 @@ human labor itself increasingly unnecessary.
 
 We later examine how AI's increasing sophistication and reach are shaping the next
 dominant mode of production, to the point where we have to ask whether human beings can
-even survive as a species under it
-([Section 4](#4-the-stakes-and-why-our-model-has-an-edge)). Assuming we do, the next question is
-whether the average working person ends up better off or worse — and while
-today's power structures tilt the scales toward worse, we argue 
-that [the same forces](#4-the-stakes-and-why-our-model-has-an-edge) driving that outcome also open
-opportunities for alternative worker-friendly legal/financial/ownership structures to displace
-the top-down corporate form that underpins late-stage disaster capitalism.
+even survive as a species in the coming years
+([Section 5](#5-the-stakes-and-why-our-model-has-an-edge)). Assuming we do, the next
+question is whether the average working person ends up better off or worse — and today's
+power structures stack the deck in favor of _way_ worse. Our [resilience
+section](#3-resilience-surviving-attack-by-design) walks through a concrete recent example
+of entrenched power playing a stacked hand: the August 2026 takedown of the Italian
+hosting collective
+[Autistici/Inventati](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/)
+(A/I). It then details technical and financial measures that a collective can take to
+survive in the face of such takedown attempts.
+
+We close on [a hopeful note](#5-the-stakes-and-why-our-model-has-an-edge) -- examining 
+how advantages built into our proposed model open opportunities for alternative
+worker-friendly legal/financial/ownership structures to displace the top-down corporate
+form that underpins late-stage disaster capitalism.
 
 In terms of our two opening questions our model's answers are:
 
@@ -126,7 +134,7 @@ DAO](#dao).
 
 
 
-## Corporations as a Governance Technology, Not a Law of Nature
+## Corporations as a governance technology, not a law of nature
 
 The corporation is not a naturally occurring phenomenon. It is a socially
 produced, historically specific answer to **two fundamental questions**: when people
@@ -224,7 +232,7 @@ established.
 
 
 
-## 1. The Commons Layer and Its Satellites
+## 1. The Commons layer and its Satellites
 
 At the center of our proposed model is a **Commons**: a body of 
 collaboratively developed
@@ -306,7 +314,7 @@ rather than to land, water, or fisheries.
 
 
 
-## 2. Governance Layer — Three Mechanisms
+## 2. Governance layer — three mechanisms
 
 ### Board
 
@@ -390,7 +398,570 @@ Register](legal-risk-register.md), respectively.
 formerly summarized in this section — will get its own detailed treatment in a
 later document; a pointer back to it belongs here once that's written.)*
 
-## 3. Distribution of Economic Benefits — From Founder Incentives to Broad-Based Ownership
+## 3. Resilience: surviving attack by design
+
+Having settled who governs the commons and its satellites, we turn to what happens when
+entrenched powers decide to shut them down. Any collective whose mission genuinely
+threatens that power, whether corporate or state, should expect to be targeted, and a
+model that is dispersed by design gives it a real chance of surviving such attempts. 
+This section lays out the principle, walks through a real takedown that a
+collective with a dispersed structure might have survived, and finally, 
+presents  technical, custodial, and financial mitigations that turn the principle into practice.
+
+
+### Resilience through dispersion
+
+Concentrating capability in one place is inherently risky,
+whereas dispersed placement of resources increases resilience in the face of attack.
+Recent experience on multiple battlefields have driven this 
+home to the US military establishment, whose leadership now recognizes that "forces that are 
+concentrated and static are easy for enemy forces to detect and destroy."[^13] 
+Cloud infrastructure engineers have long been operationalizing this lesson --
+replicating services across regions instead of 
+concentrating them in a single data center, where one outage can take out _everything_.
+
+We propose applying this same logic to software collectives —
+especially those with status-quo-challenging missions, which are
+increasingly at risk of repression by state actors and deplatforming[^14] by
+large corporations unwilling to tolerate wrongthink [^15].
+In light of such threats, the distributed structure proposed in
+[§1](#1-the-commons-layer-and-its-satellites) serves as a preemptive counter-measure.   The referenced diagram posits the satellites
+surrounding a digital commons as 501(c)(3) entities, but note that
+a trusted individual could provide that same
+coordinated, resilient backup in the face of a take-down action (as mentioned
+in [this section](#trusted-signer-election).)
+
+
+
+### Case study: the takedown of Autistici/Inventati 
+
+The recent (August 2026) US government designation of Italian
+hosting collective Autistici/Inventati (A/I) as a ["Specially Designated Global 
+Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/) 
+(SDGT) serves as a useful case study on how a satellite structured collective might have
+avoided a shut-down. We propose mitigations[^16] on two  infrastructural axes:
+technical, and financial -- but first a recap.
+
+
+The US State department issued the designation on August 26.[^17] 
+Forty-eight hours later, the Public Interest Registry — the nonprofit 
+that runs the entire `.org` namespace — disabled `autistici.org`[^18],
+taking out roughly 16,000 email accounts, 5,500 mailing lists, ~10,000
+blogs, and 1,500 websites in one stroke.[^19]
+On the financial side, PayPal took out the payment rails first [^18], and 
+Banca Etica followed by freezing the account itself as it was 
+unwilling to risk its own [correspondent-banking](https://en.wikipedia.org/wiki/Correspondent_account)
+relationships over one customer.[^18]
+
+Jurisdiction factored in as much as a technology in this take down.
+First, on the technology side: [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)
+is hierarchical and centralized by design — a single registry is the
+authoritative source for every name under its
+[top-level domain](https://en.wikipedia.org/wiki/Top-level_domain) (TLD), 
+and every [resolver](https://en.wikipedia.org/wiki/Domain_Name_System#DNS_resolvers)
+worldwide trusts that record without question. That's precisely what
+makes a takedown effective with no technical attack at all: disable
+the registry entry, and the domain stops resolving globally and
+instantly, regardless of the underlying servers' ability to keep running. 
+
+On the jurisdiction side: the [Public Interest Registry](https://pir.org) which runs the
+`.org` domain is a Virginia-based 501(c)(3) — a US legal entity.
+[Verisign](https://www.verisign.com), which runs `.com`, is a Delaware corporation
+headquartered in California. Once the SDGT
+designation was issued, both registries were subject to the  same US
+legal exposure that froze PayPal and Banca Etica's accounts. A US
+entity can't keep providing services (registration included), to a
+designated (targeted) party. That's what actually took `autistici.org` down —
+the registry's own legal obligation to stop serving it, layered on top
+of DNS's own centralized architecture giving that decision instant,
+global effect. A registry chartered outside the US isn't bound by that
+same compulsion, but the centralization problem remains — which is
+exactly what the onion-mirror mitigation (below) is built to route
+around.
+
+### Technical mitigations
+
+Mitigations fall on the two axes named above, technical and financial. We start with
+the technical axis: domains, keys and credentials, and the trusted signers who hold them.
+
+#### Technical infrastructure: [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)
+
+Domain choice is the first line of defense: The popular choices, `.com` and `.org`, are, 
+as mentioned above, both administered by U.S.-based registries, which the Autistici/Inventati case just
+showed are willing to cave under U.S. pressure. Pinning web branding to a
+domain outside U.S. jurisdiction avoids that exposure from the start.
+Iceland's `.is` registry is operated by the non-profit
+[ISNIC](https://www.isnic.is/en/), which has a track record of
+resisting the kind of takedown requests that killed `autistici.org`.
+While ISNIC runs the `.is`  [top-level domain](https://en.wikipedia.org/wiki/Top-level_domain)
+(TLD), in order to actually _register_ a domain under `.is` (e.g., company_xyz.is)
+you need to go through a _separate_ registrar. Registering the domain
+through [1984 Hosting](https://1984.hosting/), an Icelandic registrar
+with a stated commitment to anonymity and free expression, adds a
+second layer of protection — this one over who controls the
+registration itself, rather than which jurisdiction the registry sits
+in.  Registering with 1984 helps avoid a real risk some privacy-focused registrars carry, since this registrar
+keeps _you_ as the actual legal registrant with
+[WHOIS](https://en.wikipedia.org/wiki/WHOIS) privacy, rather than
+registering your domain under its own name and merely licensing you back
+usage rights. This license-back model, used by some
+anonymity-focused registrars, leaves you with no standing to transfer
+or reclaim the domain yourself if that registrar itself caves. 1984 also
+runs its own DNS hosting, and its
+[nameservers](https://en.wikipedia.org/wiki/Name_server) are already
+pre-registered with ISNIC, sidestepping the separate registration
+step ISNIC otherwise requires.
+
+A further layer of protection is achievable (at the expense of more network configuration overhead) 
+by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror on
+[Tor](https://en.wikipedia.org/wiki/Tor_(network))[^20][^21].
+Unlike a `.is` (dot _is_) domain, a `.onion` (dot _onion_) address needs
+no DNS at all: it's self-certifying, derived directly from the
+service's own [keypair](https://spec.torproject.org/rend-spec/encoding-onion-addresses.html)[^22],
+and resolved through Tor's own distributed
+hidden-service directory. There is no registry, registrar, or nameserver in
+the chain for a state actor to pressure.  Note that the
+`.is`/ISNIC strategy relies on a pressure-resistant DNS dependency, but still has a dependency; the
+onion mirror is a _zero_-DNS-dependency channel. It is in a different
+category from a registrar-based approach entirely, no matter how
+takedown-resistant the registrar.
+
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
+flowchart LR
+    Client([Tor Client])
+    Entry[Entry Node]
+    Middle[Middle Relay]
+    Exit[Exit Node]
+    Dest([Destination])
+
+    Client -- "3 layers" --> Entry
+    Entry -- "peel 1" --> Middle
+    Middle -- "peel 2" --> Exit
+    Exit -- "decrypted" --> Dest
+```
+<p align="center"><sub>The Tor (onion router) network architecture: each relay hop peels
+away one layer of encryption.</sub></p>
+
+Collectives pursing this approach should make verification and publication of their .onion
+presence a routine practice, rather than scrambling to prepare in the face 
+of a take-down action. Set an `Onion-Location` HTTP header[^23] on the
+[clearnet](https://en.wikipedia.org/wiki/Clearnet_(networking)) site
+pointing at the `.onion` URL, so [Tor
+Browsers](https://en.wikipedia.org/wiki/Tor_(network)) can detect it
+automatically
+and offer visitors a one-click switch with no separate announcement
+needed. Publish the bare `.onion` address too -- in the site footer and
+official bios, for anyone on a different Tor client. Automate periodic
+checks with [Playwright](https://playwright.dev/docs/network):
+fetch the clearnet site to confirm the `Onion-Location` header is
+still present, then point a second context's `proxy` at the local Tor
+daemon's SOCKS5 endpoint (`127.0.0.1:9050` by default) and load the
+`.onion` URL directly, with hostname resolution happening proxy-side.
+A caveat: any use of Tor, even for research, may itself draw extra
+scrutiny from state actors.[^24]
+
+
+#### Technical infrastructure: key and credential custodianship
+
+This section covers replication of the two categories of keys and credentials a collective needs to
+function.
+
+- operational: this covers CI secrets, npm publish tokens,
+  and any other secrets required to build and publish a collective's software, and
+- financial: this would cover a multisig cosigner's wallet key, recovery codes, and credentials for
+  bank account logins, and the like
+
+The recommended vehicle for storing this type of sensitive information
+is a [Bitwarden](https://bitwarden.com) vault. Bitwarden is open
+source and (as of this writing) free for up to two custodians, letting them access the
+full array of secrets through one shared set of credentials and
+(ideally) 2FA. Note that the guidance below assumes a JavaScript/Node.js stack (our domain of expertise)  — 
+hence the focus on npm publish tokens. A different language stack would swap in its own
+package registry (PyPI, RubyGems, and the like.)
+
+*CI secrets.* [Codeberg](https://codeberg.org) is the assumed git
+host here, not GitHub — GitHub is a wholly-owned Microsoft subsidiary,
+a US company carrying the same exposure to deplatforming already
+discussed for PayPal and the domain registries above.
+Codeberg, built on the open-source Forgejo, is EU-hosted and run by a
+nonprofit, for the same jurisdictional reasons as the `.is` domain.
+Its [Forgejo Actions](https://docs.codeberg.org/ci/actions/) supports
+the same repository- and organization-level secrets [GitHub
+Actions](https://docs.github.com/en/actions) does[^33]. CI secrets are
+still scoped to whichever account holds them, though, regardless of
+host. Once an account is suspended, its associated secrets — and every workflow that
+depends on them — are frozen. Mitigate this risk with a satellite
+that keeps a (regularly pulled/synced) personal mirror of the repository, with its own
+independently configured secrets stored in a Bitwarden vault. This
+ensures that the release pipeline can publish, even if the primary
+org's account is locked.
+
+*npm publish tokens.* This one raises tricky questions:
+npm has been owned by GitHub, and therefore by Microsoft,
+since 2020, which means it carries the identical deplatforming
+exposure the Codeberg move above was meant to get away from — but
+unlike git hosting, there's no jurisdiction-neutral registry the
+public actually can install packages from by default. A self-hosted, npm-compatible
+registry such as [Verdaccio](https://github.com/verdaccio/verdaccio)
+(MIT-licensed) lets the collective keep publishing internally if its
+npmjs.com account is suspended, but it doesn't solve public
+installability — anyone running `npm install` still resolves to
+npmjs.com unless they've reconfigured their own registry. Short of
+that unresolved gap: publish rights are tied to an npm user or org
+account, so a suspended account can't publish a new version even
+though everything already published stays live. Prefer npm's
+[granular access
+tokens](https://docs.npmjs.com/creating-and-viewing-access-tokens/) —
+scoped to specific packages, with a defined expiry, rather than a
+classic token with blanket publish rights[^32] — and
+keep a second maintainer's account (2FA-enabled, with its own recovery
+methods on file) able to publish as a fallback./signer
+
+
+*Financial Keys and Credentials.* A multisig treasury (§2) needs
+several signers to agree before funds move, so no single signer can
+drain it — but each signer still personally holds one full private
+key, and protecting that key is entirely their own responsibility.
+Whoever holds a cosigner key needs to guard it without becoming a
+point of failure themselves. A [hardware wallet](https://en.wikipedia.org/wiki/Hardware_wallet), not
+a software or exchange-hosted one, is the baseline — it keeps the
+private key off any internet-connected device entirely. The [seed
+phrase](https://en.wikipedia.org/wiki/Seed_phrase) behind it needs its own backup, split or duplicated across more than one physical
+location, so losing any single copy — to a fire, a theft, or misplacement -- 
+doesn't result in lock-out. None of this should be set up under
+pressure: a signer should periodically confirm they can still produce
+a valid signature with their own key, the same way the onion mirror
+and alternate domain above get periodically checked, rather than
+finding out only when a transaction actually needs signing. Where
+those signers are located matters as much as how they guard the key —
+and we next discuss how jurisdictional spread factors into choosing them.
+
+
+<a id="trusted-signer-election"></a>
+
+#### Trusted signer election
+
+This section picks up on the idea introduced
+near the [start of this section](#resilience-through-dispersion): individuals, not just
+501(c)(3)'s, can serve the satellite-like role of **trusted signer** -- our shorthand for any
+person or entity tasked with
+  - adding their vote to authorize a significant treasury transaction (in the course of normal operations) 
+  - coordinating the restoration of a collective's  ability  to reboot operations (in the face of a take-down
+event.)
+
+Two structural properties  ideally hold for the trusted signer roster, 
+regardless of whether any given signer is an individual or a corporation:
+
+- transactions are gated by a [quorum](https://en.wikipedia.org/wiki/Threshold_cryptosystem)
+  of M-of-N signers, rather than one maximally-trusted,
+  individual, so a sanctioning adversary has to compel or compromise several people at once, not just one;
+- maximal jurisdictional dispersion among designated signers, sized so
+  that the signers outside any single jurisdiction can, by themselves,
+  still reach the M threshold -- meaning the total loss of every signer
+  in one jurisdiction (arrest, detention, a single legal action)
+  doesn't drop the group below quorum.
+
+The tradeoff between designating a corporation versus an indivudal as a
+trusted signer is that the individual has no corporate liability shield to stand behind, 
+with resultant real personal exposure to any individual in that role.
+The corporation not only has the advantage of its legal shield, it also doesn't die -- that is:
+it has built-in succession (a board, staff, standard procedures) that outlives any one person's
+involvement. What a corporation loses in exchange is exactly the arm's-length,
+hard-to-reach quality an individual signer can have: a corporate custodian
+is a known, addressable legal entity, carrying the same risk as a bank or a
+custodial stablecoin issuer[^35]. 
+
+
+##### Trusted signer team formation
+
+Trust is obviously a critical factor in nominating an individual as a
+trusted signer, and the obvious pool to draw from is the already-vetted 
+roster of code committers who have earned some degree of 
+token-based delegated authority, as described in 
+[§2](#2-governance-layer--three-mechanisms).  It is instructive to think 
+through an absolute worst case scenarios to see what is being asked of 
+a jurisdictionally dispersed team: e.g., an NDAA detention order that ends up with all of 
+US-based committers in an isolated work camp. In such a regrettable case,
+what is lost is the ability of the US-based 501c3 to 
+continue development or monetization of the commons. However, the surviving
+signers can still re-establish new fiat currency  accounts in 
+their jurisdiction around the still-accessible treasury, 
+and then continue on to rebooting the collective around the still-intact commons.
+
+A small, early-stage collective could very well start off with just one founder, and at this 
+point multi-sig signing makes no sense. Even as the team grows,  geographic
+dispersion of trust and commiters should not be sought for its own sake. 
+It is better to think of the network evolving in stages:  as the collective grows it 
+would go from no multi-sig to a _2-of-3_ or _3-of-5_ all-domestic signer set. Then as trusted 
+committers from other jurisdictions join, the collective could move
+some of the responsibility from a domestic signer to someone in the other jurisdiction. 
+
+
+### Financial mitigations
+
+Both payment rails and bank accounts become vulnerable the moment a US dollar-denominated transaction moves
+through those rails, or results in a deposit into those accounts. Dollars must be settled inside the U.S. banking
+system — which OFAC (the Treasury Department's Office of Foreign Assets Control) regulates under the 
+[IEEPA](https://en.wikipedia.org/wiki/International_Emergency_Economic_Powers_Act).
+Every U.S. bank must comply with OFAC's blocking orders.[^33]
+
+Even a transaction between two non-U.S. parties still runs through the
+U.S. correspondent-banking system[^34] — so OFAC doesn't need
+jurisdiction over a foreign bank to reach it: it regulates that bank's
+*U.S.* correspondent directly. A related Treasury/[FinCEN](https://en.wikipedia.org/wiki/Financial_Crimes_Enforcement_Network)
+authority ([PATRIOT Act §311](https://www.fincen.gov/resources/statutes-and-regulations/usa-patriot-act))
+can go further still, barring U.S. banks from
+maintaining that correspondent relationship at all. This would result in 
+the cut-off of the foreign bank's dollar access entirely, not just one flagged customer.
+That threat is what drove Banca Etica to implement its freezing of A/I's assets.
+
+
+To mitigate the risk of a collective suffering A/I's fate, our model calls for holding
+long-term assets in a crypto currency that's hard to seize. We present two associated
+mechanisms, in increasing order of simplicity:
+
+- ETH for long-term holdings, with a DAI account covering short-term operating
+  expenses (our default recommendation)
+- A straight DAI account ([see the backgrounder below](#dai-backgrounder)),
+  with no ETH intermediate step at all
+
+Both options share DAI's core property: no per-address freeze function[^35] exists for
+either ETH or DAI — they are identical in that regard, since ETH has no issuer or freeze
+key of its own, and DAI was deliberately built without one. The two diverge in the degree
+of downside that might affect a collective's holdings, not in whether they can be seized.
+
+ETH is a freely-floating, unpegged asset — its price is set purely by the market, with
+nothing pulling it back toward any particular value. That gives it real volatility: ETH's
+worst historical drawdown was roughly -94% during the 2018 crash, and it fell -81% in
+2022[^36]. DAI, by contrast, is a pegged asset — designed to hold near $1 rather than
+float freely — and its worst historical dips have been far smaller and shorter than
+ETH's[^37]. [Hedging](https://www.kraken.com/learn/trading/hedging-strategies) against
+ETH's volatility is possible, but the overhead only pays off once the organization is big
+enough to have a dedicated finance function.
+
+Another advantage of DAI is reduced paperwork: because it's received and spent at
+essentially the same value, converting it to fiat doesn't trigger a capital-gains event
+worth recording — DAI can be converted and paid out in a single transaction. ETH
+requires two: a disposal event (ETH into DAI or fiat) that has to be tracked for capital
+gains or losses, and then the actual payment. This overhead compounds for ETH
+specifically, since vendors who won't accept crypto directly still need to be paid in
+USD or a USD-backed instrument. Every payment to a fiat-only vendor means another ETH
+conversion, and another capital-gains event to track.
+
+
+[[[  REMAINDER OF THIS SECTION NEEDS A REWRITE ]]]
+
+Given all that, a genuinely simpler alternative to the two-tier model shown in the
+[diagram below](#fund-flows-diagram) is to hold the treasury entirely in DAI — with no ETH
+intermediate step, no periodic batch-convert, and no separate reserve to manage. The
+tradeoff is concentration: a treasury held entirely in DAI has zero exposure to ETH's
+volatility, but it also has zero diversification against anything going wrong
+specifically within the DAI network's own collateral situtation or governance — every dollar in the treasury
+shares the same fate. The two-tier model exists specifically to avoid that
+concentration: holding ETH alongside DAI means part of the
+treasury has zero dependencies on protocol-triggered Emergency Shutdown (see backgrounder), 
+collateral concentration, or issuer blacklisting, which is a form of
+resilience the all-DAI approach gives up in exchange for simplicity. Which tradeoff is
+right depends on how much administrative capacity a given collective actually has.
+
+The simplest rule might be: hold DAI only, accepting its risk, until the 501(c)(3)
+Satellite (or its subsidiary) can hire a treasurer — then let that person decide.
+
+
+<a id="dai-backgrounder"></a>
+
+#### DAI backgrounder
+
+DAI is a U.S.-dollar-pegged cryptocurrency created by Maker (now Sky) and designed to
+maintain a value of approximately one U.S. dollar without being a deposit at a
+conventional bank. Unlike a bank account or payment account, a DAI balance exists on a
+public blockchain and is controlled by the holder of the corresponding cryptographic
+keys. There is no bank, payment processor, or central DAI account administrator that can
+simply instruct the network to freeze a particular address. This distinction is
+important for a distributed collective: the organization can hold and transfer funds
+without making a conventional financial institution the single point at which a
+politically motivated designation, compliance decision, or correspondent-banking cutoff
+can immobilize its treasury.
+
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
+flowchart TD
+    subgraph INST["Institutions"]
+        Circle[Circle - issues USDC]
+        RWACustodian[RWA custodian/trustee]
+        Governance[Sky governance - SKY/MKR holders]
+    end
+
+    subgraph PROTO["Sky protocol - smart contracts"]
+        Vault[Vault/CDP]
+        PSM[Peg Stability Module]
+        ESM[Emergency Shutdown Module]
+        Buffer[Surplus buffer]
+    end
+
+    subgraph USERS["Individuals / Organizations"]
+        VaultOwner[Vault owner - locks collateral to mint]
+        Trader[Buyer - swaps existing crypto for DAI]
+        Holder[DAI holder - e.g. a collective's treasury]
+    end
+
+    ETHCollat[ETH/WBTC collateral]
+    USDC[USDC]
+    RWA[Tokenized Treasuries]
+    DAISupply((DAI in circulation))
+
+    VaultOwner -- locks --> ETHCollat
+    ETHCollat --> Vault
+    Vault -- mints, 145-175%+ overcollateralized --> DAISupply
+
+    Circle -- issues --> USDC
+    USDC -- deposited 1:1 --> PSM
+    PSM -- mints/burns --> DAISupply
+
+    RWACustodian -- holds --> RWA
+    RWA -- posted as collateral --> Vault
+
+    Trader -- swaps ETH/BTC/USDC/USD via CEX or DEX --> DAISupply
+    DAISupply -- wallet-to-wallet --> Holder
+
+    Governance -- sets risk parameters --> Vault
+    Governance -- can trigger --> ESM
+    ESM -- freezes --> DAISupply
+    PSM -.->|shortfall absorbed by| Buffer
+    RWA -.->|shortfall absorbed by| Buffer
+
+    classDef risk fill:#fdf0e3,stroke:#e07b00,stroke-width:2px
+    class Circle,RWACustodian,ESM risk
+```
+<p align="center"><sub>DAI's components and flows: minting against locked
+collateral, direct 1:1 acquisition via the Peg Stability Module, RWA
+custody, and Sky governance's Emergency Shutdown circuit breaker.
+Institutions (orange) are the points a state actor could pressure;
+individuals/organizations (bottom) are ordinary users.</sub></p>
+
+That resilience isn't unconditional, though, and it's worth being precise about where
+its limits actually sit rather than let a reader assume the treasury is untouchable.
+
+Sky's protocol has a legitimate circuit breaker built into it: the Emergency Shutdown
+Module, which MKR/SKY governance-token holders can trigger in response to a perceived
+existential threat to the system. Triggering it freezes the protocol and converts DAI
+from a freely spendable balance into a claim redeemable only through a settlement
+process — a real, if deliberately hard to reach, mechanism by which liquidity could stop
+on short notice.
+
+A smart contract's absence of a freeze key also doesn't extend that same immunity to the
+people who govern or maintain it. The clearest precedent is Tornado Cash: even after the
+underlying OFAC sanction on its smart-contract addresses was vacated by the Fifth
+Circuit, the U.S. Department of Justice still pursued one of its developers, Roman
+Storm, to a conviction on one charge, with a retrial pending on the remaining two. Sky
+has an identifiable foundation and a concentrated set of governance-token holders — a
+target class in its own right, independent of what the DAI contract itself can or
+cannot do.
+
+And DAI's own collateral base isn't purely decentralized crypto. Roughly 35-40% of it
+sits directly in USDC, held through Sky's Peg Stability Module — an amount Circle could
+freeze unilaterally, with no court order required, using the same freeze-key mechanism
+described above[^35]. That's not a freeze on any individual DAI holder's balance, but
+it's a real dependency the rest of this treasury strategy inherits whether or not it's
+acknowledged.
+
+
+<a id="fund-flows-diagram"></a>
+
+#### Fund flows
+
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
+flowchart TD
+    subgraph SAT["Satellite (nonprofit) — donor-funded"]
+        Donor([Donor / Funder])
+        SatBank[Bank account - near-term ops only]
+    end
+
+    subgraph SUB["Subsidiary (for-profit) — customer revenue"]
+        Customer([Paying customer])
+        SubBank[Bank account - near-term ops only]
+    end
+
+    DonationProcessor[Giving Block - streamline tax receipts,<br/>configured to hold as crypto]
+    Treasury[Multisig Treasury - held as ETH]
+    BatchConvert[Periodic ETH to DAI batch convert - monthly/qtrly, single multisig sign-off]
+    DAIFloat[DAI - operating float]
+    Contributors{{Contributors}}
+    ContribOfframp([Contributor's own fiat off-ramp])
+    VendorsCrypto{{Vendors - crypto-accepting}}
+    OffRampJIT[Request Finance - JIT off-ramp, pays vendor directly]
+    VendorsFiat{{Vendors - fiat-only}}
+    Hedge[Hedging - staged: once FT controller hired]
+
+    subgraph LEGEND["Legend"]
+        L1[Collective-owned]
+        L2[External]
+    end
+
+    Donor -- "1 cash/USD" --> SatBank
+    SatBank -- "1 periodic sweep" --> Treasury
+    Donor -- "1 DAI directly" --> DAIFloat
+    Donor -- "1 ETH/BTC swappable" --> Treasury
+    Customer -- "1 card/ACH, mostly fiat" --> SubBank
+    SubBank -- "1 periodic sweep" --> Treasury
+
+    Donor -.->|"deferred until volume or<br/>Form 8283 threshold hit"| DonationProcessor
+
+    Treasury -- "2 periodic batch, single sign-off" --> BatchConvert
+    BatchConvert -- "2" --> DAIFloat
+
+    DAIFloat -- "3 wallet-to-wallet" --> Contributors
+    Contributors -- "3 own responsibility" --> ContribOfframp
+    DAIFloat -- "3 wallet-to-wallet, DAI discount" --> VendorsCrypto
+    DAIFloat -- "3 processor converts + pays vendor in one settlement" --> OffRampJIT
+    OffRampJIT -- "3" --> VendorsFiat
+    SatBank -- "3 ACH/card, routine ops" --> VendorsFiat
+    SubBank -- "3 ACH/card, routine ops" --> VendorsFiat
+
+    Treasury -.->|"4 deferred until<br/>F/T controller on board"| Hedge
+
+    Hedge ~~~ DonationProcessor
+    Donor ~~~ SatBank
+    VendorsFiat ~~~ LEGEND
+    DonationProcessor -.->|"held as ETH"| Treasury
+
+    linkStyle 0,1,2,3,4,5 stroke:#d62728,color:#d62728
+    linkStyle 7,8 stroke:#1f77b4,color:#1f77b4
+    linkStyle 9,10,11,12,13,14,15 stroke:#2ca02c,color:#2ca02c
+    linkStyle 6,16,20 stroke:#888888,color:#888888,stroke-dasharray: 5 5
+
+    classDef owned fill:#eaf2fb,stroke:#1f77b4,stroke-width:3px
+    classDef external fill:#fdf0e3,stroke:#e07b00,stroke-width:2px,stroke-dasharray:3 3
+    class L1 owned
+    class L2 external
+    class Treasury,SatBank,SubBank,BatchConvert,DAIFloat,Hedge owned
+    class Donor,DonationProcessor,Customer,Contributors,ContribOfframp external
+    class VendorsCrypto,OffRampJIT,VendorsFiat external
+```
+
+This diagram covers financial custody and execution only — how funds move,
+what's crypto versus fiat, and what's owned versus what's external. It intentionally
+leaves out the DAO's allocation vote and the Board's review/override
+authority, both already covered in [§2](#2-governance-layer--three-mechanisms);
+the multisig treasury shown here is the layer that carries out whatever
+that governance process decides, not a stand-in for it.
+
+
+No aspect of this structure  would have stopped  the designation itself. It would have
+kept the Commons and every other Satellite running while the targeted
+Satellite dealt with the consequences. That is the whole point of
+dispersion: a collective can't escape being in the cross-hairs of a hostile state or 
+corporation, but it can decide in advance, through structure, whether 
+such targeting ends its work or only slows it down.
+
+Resilience protects the collective from pressure applied from outside. The next question
+is what keeps its founders and contributors committed from the inside: who benefits from
+the work, and how.
+
+
+## 4. Distribution of economic benefits — from founder incentives to broad-based ownership
 
 In an ideal world, commitment to mission would be sufficient motivation for a 
 founding steward to adopt our  proposed model. But self-interest and the  desire for
@@ -557,7 +1128,7 @@ decision-making, or equity. To clarify:
 
 ---
 
-## 4. The Stakes, and Why Our Model Has an Edge
+## 5. The stakes, and why our model has an edge
 
 The past year (2026, as of this writing) has seen rapid, measurable progress
 toward AI writing the software that builds AI itself.[^11]   This
@@ -580,12 +1151,11 @@ AI research to proceed unregulated also determines who captures the
 day-to-day gains from that same technology.
 
 None of that is inevitable, though, and this final section strikes a hopeful
-note. We start with two structural properties of our model that translate
-into real operational advantages. Then we look at the flip side: any
-501(c)(3) pursuing a mission genuinely threatening to entrenched capital, or
-to a repressive state actor, should expect to be targeted for suppression —
-so we explore how we can build resilience properties into our model to
-withstand exactly that.
+note. Our model draws on two advantages: one from the labor market side, and one from its
+cost structure -- and both build on the protection covered earlier: a collective
+dispersed by design is hard to take down, so it can keep working through the suppression
+that any 501(c)(3) with a genuinely threatening mission should expect. We take the two
+advantages in turn.
 
 
 ### The labor-market half of the advantage: elite overproduction and AI-driven displacement
@@ -635,564 +1205,20 @@ have structurally similar versions of the same problem. Because the software tha
 those problems is now proven, free and open, a collective can move into that adjacent,
 better-funded market at a cost structure a for-profit incumbent can't match.
 
-In summary, the operational advantages that accrue from these two structural properties are:
+In summary, the operational advantages that accrue from these two are:
   - lower cost of customer acquisition 
   - lower product marketing spend to figure out what to build
   - lower cost of recruiting and easier staff retention due to alignment around principles
 
+Our collective is putting these advantages to work now, and we would look forward to comparing 
+notes with other founders interested in launching collectives along the lines of the model proposed
+here.  Find us at [doikayt.org](https://doikayt.org).
 
 
 
-### Resilience through dispersion
 
-Concentrating capability in one place is inherently risky,
-whereas dispersed placement of resources increases resilience in the face of attack.
-Recent experience on multiple battlefields have driven this 
-home to the US military establishment, whose leadership now recognizes that "forces that are 
-concentrated and static are easy for enemy forces to detect and destroy."[^13] 
-Cloud infrastructure engineers have long been operationalizing this lesson --
-replicating services across regions instead of 
-concentrating them in a single data center, where one outage can take out _everything_.
 
-We propose applying this same logic to software collectives —
-especially those with status-quo-challenging missions, which are
-increasingly at risk of repression by state actors and deplatforming[^14] by
-large corporations unwilling to tolerate wrongthink [^15].
-In light of such threats, the distributed structure proposed in
-[§1](#1-the-commons-layer-and-its-satellites) serves as a preemptive counter-measure.   The referenced diagram posits the satellites
-surrounding a digital commons as 501(c)(3) entities, but note that
-a trusted individual could provide that same
-coordinated, resilient backup in the face of a take-down action (as mentioned
-in [this section](#trusted-signer-election).)
-
-
-
-#### Case study: the takedown of Autistici/Inventati 
-
-The recent (August 2026) US government designation of Italian
-hosting collective Autistici/Inventati (A/I) as a ["Specially Designated Global 
-Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/) 
-(SDGT) serves as a useful case study on how a satellite structured collective might have
-avoided a shut-down. We propose mitigations[^16] on two  infrastructural axes:
-technical, and financial -- but first a recap.
-
-
-The US State department issued the designation on August 26.[^17] 
-Forty-eight hours later, the Public Interest Registry — the nonprofit 
-that runs the entire `.org` namespace — disabled `autistici.org`[^18],
-taking out roughly 16,000 email accounts, 5,500 mailing lists, ~10,000
-blogs, and 1,500 websites in one stroke.[^19]
-On the financial side, PayPal took out the payment rails first [^18], and 
-Banca Etica followed by freezing the account itself as it was 
-unwilling to risk its own [correspondent-banking](https://en.wikipedia.org/wiki/Correspondent_account)
-relationships over one customer.[^18]
-
-Jurisdiction factored in as much as a technology in this take down.
-First, on the technology side: [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)
-is hierarchical and centralized by design — a single registry is the
-authoritative source for every name under its
-[top-level domain](https://en.wikipedia.org/wiki/Top-level_domain) (TLD), 
-and every [resolver](https://en.wikipedia.org/wiki/Domain_Name_System#DNS_resolvers)
-worldwide trusts that record without question. That's precisely what
-makes a takedown effective with no technical attack at all: disable
-the registry entry, and the domain stops resolving globally and
-instantly, regardless of the underlying servers' ability to keep running. 
-
-On the jurisdiction side: the [Public Interest Registry](https://pir.org) which runs the
-`.org` domain is a Virginia-based 501(c)(3) — a US legal entity.
-[Verisign](https://www.verisign.com), which runs `.com`, is a Delaware corporation
-headquartered in California. Once the SDGT
-designation was issued, both registries were subject to the  same US
-legal exposure that froze PayPal and Banca Etica's accounts. A US
-entity can't keep providing services (registration included), to a
-designated (targeted) party. That's what actually took `autistici.org` down —
-the registry's own legal obligation to stop serving it, layered on top
-of DNS's own centralized architecture giving that decision instant,
-global effect. A registry chartered outside the US isn't bound by that
-same compulsion, but the centralization problem remains — which is
-exactly what the onion-mirror mitigation (below) is built to route
-around.
-
-### Mitigations
-
-
-#### Technical infrastructure: [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)
-
-Domain choice is the first line of defense: The popular choices, `.com` and `.org`, are, 
-as mentioned above, both administered by U.S.-based registries, which the Autistici/Inventati case just
-showed are willing to cave under U.S. pressure. Pinning web branding to a
-domain outside U.S. jurisdiction avoids that exposure from the start.
-Iceland's `.is` registry is operated by the non-profit
-[ISNIC](https://www.isnic.is/en/), which has a track record of
-resisting the kind of takedown requests that killed `autistici.org`.
-While ISNIC runs the `.is`  [top-level domain](https://en.wikipedia.org/wiki/Top-level_domain)
-(TLD), in order to actually _register_ a domain under `.is` (e.g., company_xyz.is)
-you need to go through a _separate_ registrar. Registering the domain
-through [1984 Hosting](https://1984.hosting/), an Icelandic registrar
-with a stated commitment to anonymity and free expression, adds a
-second layer of protection — this one over who controls the
-registration itself, rather than which jurisdiction the registry sits
-in.  Registering with 1984 helps avoid a real risk some privacy-focused registrars carry, since this registrar
-keeps _you_ as the actual legal registrant with
-[WHOIS](https://en.wikipedia.org/wiki/WHOIS) privacy, rather than
-registering your domain under its own name and merely licensing you back
-usage rights. This license-back model, used by some
-anonymity-focused registrars, leaves you with no standing to transfer
-or reclaim the domain yourself if that registrar itself caves. 1984 also
-runs its own DNS hosting, and its
-[nameservers](https://en.wikipedia.org/wiki/Name_server) are already
-pre-registered with ISNIC, sidestepping the separate registration
-step ISNIC otherwise requires.
-
-A further layer of protection is achievable (at the expense of more network configuration overhead) 
-by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror on
-[Tor](https://en.wikipedia.org/wiki/Tor_(network))[^20][^21].
-Unlike a `.is` (dot _is_) domain, a `.onion` (dot _onion_) address needs
-no DNS at all: it's self-certifying, derived directly from the
-service's own [keypair](https://spec.torproject.org/rend-spec/encoding-onion-addresses.html)[^22],
-and resolved through Tor's own distributed
-hidden-service directory. There is no registry, registrar, or nameserver in
-the chain for a state actor to pressure.  Note that the
-`.is`/ISNIC strategy relies on a pressure-resistant DNS dependency, but still has a dependency; the
-onion mirror is a _zero_-DNS-dependency channel. It is in a different
-category from a registrar-based approach entirely, no matter how
-takedown-resistant the registrar.
-
-```mermaid
-%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
-flowchart LR
-    Client([Tor Client])
-    Entry[Entry Node]
-    Middle[Middle Relay]
-    Exit[Exit Node]
-    Dest([Destination])
-
-    Client -- "3 layers" --> Entry
-    Entry -- "peel 1" --> Middle
-    Middle -- "peel 2" --> Exit
-    Exit -- "decrypted" --> Dest
-```
-<p align="center"><sub>The Tor (onion router) network architecture: each relay hop peels
-away one layer of encryption.</sub></p>
-
-Collectives pursing this approach should make verification and publication of their .onion
-presence a routine practice, rather than scrambling to prepare in the face 
-of a take-down action. Set an `Onion-Location` HTTP header[^23] on the
-[clearnet](https://en.wikipedia.org/wiki/Clearnet_(networking)) site
-pointing at the `.onion` URL, so [Tor
-Browsers](https://en.wikipedia.org/wiki/Tor_(network)) can detect it
-automatically
-and offer visitors a one-click switch with no separate announcement
-needed. Publish the bare `.onion` address too -- in the site footer and
-official bios, for anyone on a different Tor client. Automate periodic
-checks with [Playwright](https://playwright.dev/docs/network):
-fetch the clearnet site to confirm the `Onion-Location` header is
-still present, then point a second context's `proxy` at the local Tor
-daemon's SOCKS5 endpoint (`127.0.0.1:9050` by default) and load the
-`.onion` URL directly, with hostname resolution happening proxy-side.
-A caveat: any use of Tor, even for research, may itself draw extra
-scrutiny from state actors.[^24]
-
-
-#### Technical infrastructure: key and credential custodianship
-
-This section covers replication of the two categories of keys and credentials a collective needs to
-function.
-
-- operational: this covers CI secrets, npm publish tokens,
-  and any other secrets required to build and publish a collective's software, and
-- financial: this would cover a multisig cosigner's wallet key, recovery codes, and credentials for
-  bank account logins, and the like
-
-The recommended vehicle for storing this type of sensitive information
-is a [Bitwarden](https://bitwarden.com) vault. Bitwarden is open
-source and (as of this writing) free for up to two custodians, letting them access the
-full array of secrets through one shared set of credentials and
-(ideally) 2FA. Note that the guidance below assumes a JavaScript/Node.js stack (our domain of expertise)  — 
-hence the focus on npm publish tokens. A different language stack would swap in its own
-package registry (PyPI, RubyGems, and the like.)
-
-*CI secrets.* [Codeberg](https://codeberg.org) is the assumed git
-host here, not GitHub — GitHub is a wholly-owned Microsoft subsidiary,
-a US company carrying the same exposure to deplatforming already
-discussed for PayPal and the domain registries above.
-Codeberg, built on the open-source Forgejo, is EU-hosted and run by a
-nonprofit, for the same jurisdictional reasons as the `.is` domain.
-Its [Forgejo Actions](https://docs.codeberg.org/ci/actions/) supports
-the same repository- and organization-level secrets [GitHub
-Actions](https://docs.github.com/en/actions) does[^33]. CI secrets are
-still scoped to whichever account holds them, though, regardless of
-host. Once an account is suspended, its associated secrets — and every workflow that
-depends on them — are frozen. Mitigate this risk with a satellite
-that keeps a (regularly pulled/synced) personal mirror of the repository, with its own
-independently configured secrets stored in a Bitwarden vault. This
-ensures that the release pipeline can publish, even if the primary
-org's account is locked.
-
-*npm publish tokens.* This one raises tricky questions:
-npm has been owned by GitHub, and therefore by Microsoft,
-since 2020, which means it carries the identical deplatforming
-exposure the Codeberg move above was meant to get away from — but
-unlike git hosting, there's no jurisdiction-neutral registry the
-public actually can install packages from by default. A self-hosted, npm-compatible
-registry such as [Verdaccio](https://github.com/verdaccio/verdaccio)
-(MIT-licensed) lets the collective keep publishing internally if its
-npmjs.com account is suspended, but it doesn't solve public
-installability — anyone running `npm install` still resolves to
-npmjs.com unless they've reconfigured their own registry. Short of
-that unresolved gap: publish rights are tied to an npm user or org
-account, so a suspended account can't publish a new version even
-though everything already published stays live. Prefer npm's
-[granular access
-tokens](https://docs.npmjs.com/creating-and-viewing-access-tokens/) —
-scoped to specific packages, with a defined expiry, rather than a
-classic token with blanket publish rights[^32] — and
-keep a second maintainer's account (2FA-enabled, with its own recovery
-methods on file) able to publish as a fallback./signer
-
-
-*Financial Keys and Credentials.* A multisig treasury (§2) needs
-several signers to agree before funds move, so no single signer can
-drain it — but each signer still personally holds one full private
-key, and protecting that key is entirely their own responsibility.
-Whoever holds a cosigner key needs to guard it without becoming a
-point of failure themselves. A [hardware wallet](https://en.wikipedia.org/wiki/Hardware_wallet), not
-a software or exchange-hosted one, is the baseline — it keeps the
-private key off any internet-connected device entirely. The [seed
-phrase](https://en.wikipedia.org/wiki/Seed_phrase) behind it needs its own backup, split or duplicated across more than one physical
-location, so losing any single copy — to a fire, a theft, or misplacement -- 
-doesn't result in lock-out. None of this should be set up under
-pressure: a signer should periodically confirm they can still produce
-a valid signature with their own key, the same way the onion mirror
-and alternate domain above get periodically checked, rather than
-finding out only when a transaction actually needs signing. Where
-those signers are located matters as much as how they guard the key —
-see [Trusted Signer Election](#trusted-signer-election)
-below for how jurisdictional spread factors into choosing them.
-
-
-<a id="trusted-signer-election"></a>
-
-#### Trusted signer election
-
-This section picks up on the idea introduced
-[above](#resilience-through-dispersion): individuals, not just
-501(c)(3)'s, can serve the satellite-like role of **trusted signer** -- our shorthand for any
-person or entity tasked with
-  - adding their vote to authorize a significant treasury transaction (in the course of normal operations) 
-  - coordinating the restoration of a collective's  ability  to reboot operations (in the face of a take-down
-event.)
-
- Two structural properties  must hold for the trusted signer roster, regardless of whether any given
-signer is an individual or a corporation:
-
-- transactions are gated by a [quorum](https://en.wikipedia.org/wiki/Threshold_cryptosystem)
-  of M-of-N signers, rather than one maximally-trusted,
-  individual, so a sanctioning adversary has to compel or compromise several people at once, not just one;
-- maximal jurisdictional dispersion among designated signers, sized so
-  that the signers outside any single jurisdiction can, by themselves,
-  still reach the M threshold -- meaning the total loss of every signer
-  in one jurisdiction (arrest, detention, a single legal action)
-  doesn't drop the group below quorum.
-
-The tradeoff between designating a corporation versus an indivudal as a
-trusted signer is that the individual has no corporate liability shield to stand behind, 
-with resultant real personal exposure to any individual in that role.
-The corporation not only has the advantage of its legal shield, it also doesn't die -- that is:
-it has built-in succession (a board, staff, standard procedures) that outlives any one person's
-involvement. What a corporation loses in exchange is exactly the arm's-length,
-hard-to-reach quality an individual signer can have: a corporate custodian
-is a known, addressable legal entity, carrying the same risk as a bank or a
-custodial stablecoin issuer[^35]. 
-
-
-##### Team formation
-
-Trust is obviously a critical factor in nominating an individual as a
-trusted signer, and the obvious pool to draw from is the already-vetted 
-roster of code committers who have earned some degree of 
-token-based delegated authority, as described in 
-[§2](#2-governance-layer--three-mechanisms).  It is instructive to think 
-through an absolute worst case scenarios to see what is being asked of 
-a jurisdictionally dispersed team: e.g., an NDAA detention order that ends up with all of 
-US-based committers in an isolated work camp. In such a regrettable case,
-what is lost is the ability of the US-based 501c3 to 
-continue development or monetization of the commons. However, the surviving
-signers can still re-establish new fiat currency  accounts in 
-their jurisdiction around the still-accessible treasury, 
-and then continue on to rebooting the collective around the still-intact commons.
-
-
-##### Bootstrapping the trusted-signer network
-
-A small, early-stage collective could very well start off with just one founder, and at this 
-point multi-sig signing makes no sense. Even as the team grows,  geographic
-dispersion of trust and commiters should not be sought for its own sake. 
-It is better to think of the network evolving in stages:  
-as the collective grows going from no multi-sig to 
-a 2-of-3 or 3-of-5 all-domestic signer set, then maybe as trusted 
-committers from other jurisdictions join moving some of the responsibility from a 
-domestic signer to someone in the other jurisdiction.
-
-
-#### Financial infrastructure layer
-
-Both payment rails and bank accounts become vulnerable the moment a US dollar-denominated transaction moves
-through those rails, or results in a deposit into those accounts. Dollars must be settled inside the U.S. banking
-system — which OFAC (the Treasury Department's Office of Foreign Assets Control) regulates under the 
-[IEEPA](https://en.wikipedia.org/wiki/International_Emergency_Economic_Powers_Act).
-Every U.S. bank must comply with OFAC's blocking orders.[^33]
-
-Even a transaction between two non-U.S. parties still runs through the
-U.S. correspondent-banking system[^34] — so OFAC doesn't need
-jurisdiction over a foreign bank to reach it: it regulates that bank's
-*U.S.* correspondent directly. A related Treasury/[FinCEN](https://en.wikipedia.org/wiki/Financial_Crimes_Enforcement_Network)
-authority ([PATRIOT Act §311](https://www.fincen.gov/resources/statutes-and-regulations/usa-patriot-act))
-can go further still, barring U.S. banks from
-maintaining that correspondent relationship at all. This would result in 
-the cut-off of the foreign bank's dollar access entirely, not just one flagged customer.
-That threat is what drove Banca Etica to implement its freezing of A/I's assets.
-
-
-To mitigate the risk of a collective suffering A/I's fate, our model calls for holding
-long-term assets in a crypto currency that's hard to seize. We present two associated
-mechanisms, in increasing order of simplicity:
-
-- ETH for long-term holdings, with a DAI account covering short-term operating
-  expenses (our default recommendation)
-- A straight DAI account ([see the backgrounder below](#dai-backgrounder)),
-  with no ETH intermediate step at all
-
-Both options share DAI's core property: no per-address freeze function[^35] exists for
-either ETH or DAI — they are identical in that regard, since ETH has no issuer or freeze
-key of its own, and DAI was deliberately built without one. The two diverge in the degree
-of downside that might affect a collective's holdings, not in whether they can be seized.
-
-ETH is a freely-floating, unpegged asset — its price is set purely by the market, with
-nothing pulling it back toward any particular value. That gives it real volatility: ETH's
-worst historical drawdown was roughly -94% during the 2018 crash, and it fell -81% in
-2022[^36]. DAI, by contrast, is a pegged asset — designed to hold near $1 rather than
-float freely — and its worst historical dips have been far smaller and shorter than
-ETH's[^37]. [Hedging](https://www.kraken.com/learn/trading/hedging-strategies) against
-ETH's volatility is possible, but the overhead only pays off once the organization is big
-enough to have a dedicated finance function.
-
-Another advantage of DAI is reduced paperwork: because it's received and spent at
-essentially the same value, converting it to fiat doesn't trigger a capital-gains event
-worth recording — DAI can be converted and paid out in a single transaction. ETH
-requires two: a disposal event (ETH into DAI or fiat) that has to be tracked for capital
-gains or losses, and then the actual payment. This overhead compounds for ETH
-specifically, since vendors who won't accept crypto directly still need to be paid in
-USD or a USD-backed instrument. Every payment to a fiat-only vendor means another ETH
-conversion, and another capital-gains event to track.
-
-
-[[[  REMAINDER OF THIS SECTION NEEDS A REWRITE ]]]
-
-Given all that, a genuinely simpler alternative to the two-tier model shown in the
-[diagram below](#fund-flows-diagram) is to hold the treasury entirely in DAI — with no ETH
-intermediate step, no periodic batch-convert, and no separate reserve to manage. The
-tradeoff is concentration: a treasury held entirely in DAI has zero exposure to ETH's
-volatility, but it also has zero diversification against anything going wrong
-specifically within the DAI network's own collateral situtation or governance — every dollar in the treasury
-shares the same fate. The two-tier model exists specifically to avoid that
-concentration: holding ETH alongside DAI means part of the
-treasury has zero dependencies on protocol-triggered Emergency Shutdown (see backgrounder), 
-collateral concentration, or issuer blacklisting, which is a form of
-resilience the all-DAI approach gives up in exchange for simplicity. Which tradeoff is
-right depends on how much administrative capacity a given collective actually has.
-
-The simplest rule might be: hold DAI only, accepting its risk, until the 501(c)(3)
-Satellite (or its subsidiary) can hire a treasurer — then let that person decide.
-
-
-<a id="dai-backgrounder"></a>
-
-##### DAI backgrounder
-
-DAI is a U.S.-dollar-pegged cryptocurrency created by Maker (now Sky) and designed to
-maintain a value of approximately one U.S. dollar without being a deposit at a
-conventional bank. Unlike a bank account or payment account, a DAI balance exists on a
-public blockchain and is controlled by the holder of the corresponding cryptographic
-keys. There is no bank, payment processor, or central DAI account administrator that can
-simply instruct the network to freeze a particular address. This distinction is
-important for a distributed collective: the organization can hold and transfer funds
-without making a conventional financial institution the single point at which a
-politically motivated designation, compliance decision, or correspondent-banking cutoff
-can immobilize its treasury.
-
-```mermaid
-%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
-flowchart TD
-    subgraph INST["Institutions"]
-        Circle[Circle - issues USDC]
-        RWACustodian[RWA custodian/trustee]
-        Governance[Sky governance - SKY/MKR holders]
-    end
-
-    subgraph PROTO["Sky protocol - smart contracts"]
-        Vault[Vault/CDP]
-        PSM[Peg Stability Module]
-        ESM[Emergency Shutdown Module]
-        Buffer[Surplus buffer]
-    end
-
-    subgraph USERS["Individuals / Organizations"]
-        VaultOwner[Vault owner - locks collateral to mint]
-        Trader[Buyer - swaps existing crypto for DAI]
-        Holder[DAI holder - e.g. a collective's treasury]
-    end
-
-    ETHCollat[ETH/WBTC collateral]
-    USDC[USDC]
-    RWA[Tokenized Treasuries]
-    DAISupply((DAI in circulation))
-
-    VaultOwner -- locks --> ETHCollat
-    ETHCollat --> Vault
-    Vault -- mints, 145-175%+ overcollateralized --> DAISupply
-
-    Circle -- issues --> USDC
-    USDC -- deposited 1:1 --> PSM
-    PSM -- mints/burns --> DAISupply
-
-    RWACustodian -- holds --> RWA
-    RWA -- posted as collateral --> Vault
-
-    Trader -- swaps ETH/BTC/USDC/USD via CEX or DEX --> DAISupply
-    DAISupply -- wallet-to-wallet --> Holder
-
-    Governance -- sets risk parameters --> Vault
-    Governance -- can trigger --> ESM
-    ESM -- freezes --> DAISupply
-    PSM -.->|shortfall absorbed by| Buffer
-    RWA -.->|shortfall absorbed by| Buffer
-
-    classDef risk fill:#fdf0e3,stroke:#e07b00,stroke-width:2px
-    class Circle,RWACustodian,ESM risk
-```
-<p align="center"><sub>DAI's components and flows: minting against locked
-collateral, direct 1:1 acquisition via the Peg Stability Module, RWA
-custody, and Sky governance's Emergency Shutdown circuit breaker.
-Institutions (orange) are the points a state actor could pressure;
-individuals/organizations (bottom) are ordinary users.</sub></p>
-
-That resilience isn't unconditional, though, and it's worth being precise about where
-its limits actually sit rather than let a reader assume the treasury is untouchable.
-
-Sky's protocol has a legitimate circuit breaker built into it: the Emergency Shutdown
-Module, which MKR/SKY governance-token holders can trigger in response to a perceived
-existential threat to the system. Triggering it freezes the protocol and converts DAI
-from a freely spendable balance into a claim redeemable only through a settlement
-process — a real, if deliberately hard to reach, mechanism by which liquidity could stop
-on short notice.
-
-A smart contract's absence of a freeze key also doesn't extend that same immunity to the
-people who govern or maintain it. The clearest precedent is Tornado Cash: even after the
-underlying OFAC sanction on its smart-contract addresses was vacated by the Fifth
-Circuit, the U.S. Department of Justice still pursued one of its developers, Roman
-Storm, to a conviction on one charge, with a retrial pending on the remaining two. Sky
-has an identifiable foundation and a concentrated set of governance-token holders — a
-target class in its own right, independent of what the DAI contract itself can or
-cannot do.
-
-And DAI's own collateral base isn't purely decentralized crypto. Roughly 35-40% of it
-sits directly in USDC, held through Sky's Peg Stability Module — an amount Circle could
-freeze unilaterally, with no court order required, using the same freeze-key mechanism
-described above[^35]. That's not a freeze on any individual DAI holder's balance, but
-it's a real dependency the rest of this treasury strategy inherits whether or not it's
-acknowledged.
-
-
-<a id="fund-flows-diagram"></a>
-
-##### Fund flows
-
-```mermaid
-%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
-flowchart TD
-    subgraph SAT["Satellite (nonprofit) — donor-funded"]
-        Donor([Donor / Funder])
-        SatBank[Bank account - near-term ops only]
-    end
-
-    subgraph SUB["Subsidiary (for-profit) — customer revenue"]
-        Customer([Paying customer])
-        SubBank[Bank account - near-term ops only]
-    end
-
-    DonationProcessor[Giving Block - streamline tax receipts,<br/>configured to hold as crypto]
-    Treasury[Multisig Treasury - held as ETH]
-    BatchConvert[Periodic ETH to DAI batch convert - monthly/qtrly, single multisig sign-off]
-    DAIFloat[DAI - operating float]
-    Contributors{{Contributors}}
-    ContribOfframp([Contributor's own fiat off-ramp])
-    VendorsCrypto{{Vendors - crypto-accepting}}
-    OffRampJIT[Request Finance - JIT off-ramp, pays vendor directly]
-    VendorsFiat{{Vendors - fiat-only}}
-    Hedge[Hedging - staged: once FT controller hired]
-
-    subgraph LEGEND["Legend"]
-        L1[Collective-owned]
-        L2[External]
-    end
-
-    Donor -- "1 cash/USD" --> SatBank
-    SatBank -- "1 periodic sweep" --> Treasury
-    Donor -- "1 DAI directly" --> DAIFloat
-    Donor -- "1 ETH/BTC swappable" --> Treasury
-    Customer -- "1 card/ACH, mostly fiat" --> SubBank
-    SubBank -- "1 periodic sweep" --> Treasury
-
-    Donor -.->|"deferred until volume or<br/>Form 8283 threshold hit"| DonationProcessor
-
-    Treasury -- "2 periodic batch, single sign-off" --> BatchConvert
-    BatchConvert -- "2" --> DAIFloat
-
-    DAIFloat -- "3 wallet-to-wallet" --> Contributors
-    Contributors -- "3 own responsibility" --> ContribOfframp
-    DAIFloat -- "3 wallet-to-wallet, DAI discount" --> VendorsCrypto
-    DAIFloat -- "3 processor converts + pays vendor in one settlement" --> OffRampJIT
-    OffRampJIT -- "3" --> VendorsFiat
-    SatBank -- "3 ACH/card, routine ops" --> VendorsFiat
-    SubBank -- "3 ACH/card, routine ops" --> VendorsFiat
-
-    Treasury -.->|"4 deferred until<br/>F/T controller on board"| Hedge
-
-    Hedge ~~~ DonationProcessor
-    Donor ~~~ SatBank
-    VendorsFiat ~~~ LEGEND
-    DonationProcessor -.->|"held as ETH"| Treasury
-
-    linkStyle 0,1,2,3,4,5 stroke:#d62728,color:#d62728
-    linkStyle 7,8 stroke:#1f77b4,color:#1f77b4
-    linkStyle 9,10,11,12,13,14,15 stroke:#2ca02c,color:#2ca02c
-    linkStyle 6,16,20 stroke:#888888,color:#888888,stroke-dasharray: 5 5
-
-    classDef owned fill:#eaf2fb,stroke:#1f77b4,stroke-width:3px
-    classDef external fill:#fdf0e3,stroke:#e07b00,stroke-width:2px,stroke-dasharray:3 3
-    class L1 owned
-    class L2 external
-    class Treasury,SatBank,SubBank,BatchConvert,DAIFloat,Hedge owned
-    class Donor,DonationProcessor,Customer,Contributors,ContribOfframp external
-    class VendorsCrypto,OffRampJIT,VendorsFiat external
-```
-
-This diagram covers financial custody and execution only — how funds move,
-and what's crypto versus fiat, owned versus external. It intentionally
-leaves out the DAO's allocation vote and the Board's review/override
-authority, both already covered in [§2](#2-governance-layer--three-mechanisms);
-the multisig treasury shown here is the layer that carries out whatever
-that governance process decides, not a stand-in for it.
-
-
------  [[ might want to delete next para ]]
-None of this would have stopped the designation itself. It would have
-kept the Commons and every other Satellite running while the targeted
-one dealt with the consequences — which is the whole point of
-dispersion.
-
-## Appendix A: Historical and Economic Grounding
+## Appendix A: historical and economic grounding
 
 
 ### A.1 Why firms exist: Coase, the putting-out system, and what's changing now
@@ -1270,7 +1296,7 @@ for any human involvement in scheduling starts to
 shrink -- thereby bringing us that much closer to the
 [lights-out](https://en.wikipedia.org/wiki/Lights_out_(manufacturing))
 software factory-style model that we first mention in 
-[§4](#4-the-stakes-and-why-our-model-has-an-edge).
+[§5](#5-the-stakes-and-why-our-model-has-an-edge).
 
 
 ### A.2 Marxist economics 101
@@ -1727,7 +1753,7 @@ mechanism sorts this out automatically.
 
 ### A.5 Income vs. retained earnings: a quick refresher
 
-The [C-corp or S-corp?](#c-corp-or-s-corp) discussion in Section 3
+The [C-corp or S-corp?](#c-corp-or-s-corp) discussion in Section 4
 turns on a distinction worth making explicit: **income** is a *flow*,
 measured over a period — a quarter, a year — as revenue minus all
 expenses ([COGS](https://en.wikipedia.org/wiki/Cost_of_goods_sold), operating costs, interest, taxes) for that period. It
