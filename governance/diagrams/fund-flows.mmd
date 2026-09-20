@@ -1,4 +1,4 @@
-%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
+%%{init: {"themeVariables": {"fontSize": "14px"}}}%%
 flowchart TD
     subgraph SAT["Satellite (nonprofit) — donor-funded"]
         Donor([Donor / Funder])
@@ -12,14 +12,14 @@ flowchart TD
 
     DonationProcessor[Giving Block - streamline tax receipts,<br/>configured to hold as crypto]
     Treasury[Multisig Treasury - held as ETH]
-    BatchConvert[Periodic ETH to DAI batch convert - monthly/qtrly, single multisig sign-off]
+    BatchConvert[Periodic ETH to DAI batch convert -<br/>monthly/qtrly, single multisig sign-off]
     DAIFloat[DAI - operating float]
     Contributors{{Contributors}}
     ContribOfframp([Contributor's own fiat off-ramp])
     VendorsCrypto{{Vendors - crypto-accepting}}
-    OffRampJIT[Request Finance - JIT off-ramp, pays vendor directly]
+    OffRampJIT[Request Finance - JIT off-ramp,<br/>pays vendor directly]
     VendorsFiat{{Vendors - fiat-only}}
-    Hedge[Hedging - staged: once FT controller hired]
+    Hedge[Hedging - staged:<br/>once FT controller hired]
 
     subgraph LEGEND["Legend"]
         L1[Collective-owned]
@@ -41,22 +41,21 @@ flowchart TD
     DAIFloat -- "③ wallet-to-wallet" --> Contributors
     Contributors -- "③ own responsibility" --> ContribOfframp
     DAIFloat -- "③ wallet-to-wallet, DAI discount" --> VendorsCrypto
-    DAIFloat -- "③ processor converts + pays vendor in one settlement" --> OffRampJIT
+    DAIFloat -- "③ processor converts +<br/>pays vendor in one settlement" --> OffRampJIT
     OffRampJIT -- "③" --> VendorsFiat
-    SatBank -- "③ ACH/card, routine ops" --> VendorsFiat
-    SubBank -- "③ ACH/card, routine ops" --> VendorsFiat
+    SatBank -- "③ ACH/card,<br/>routine ops" --> VendorsFiat
+    SubBank -- "③ ACH/card,<br/>routine ops" --> VendorsFiat
 
     Treasury -.->|"④ deferred until<br/>F/T controller on board"| Hedge
 
-    Hedge ~~~ DonationProcessor
-    Donor ~~~ SatBank
+    SatBank ~~~ Customer
     VendorsFiat ~~~ LEGEND
-    DonationProcessor -.->|"held as ETH"| Treasury
+    DonationProcessor -.-> Treasury
 
     linkStyle 0,1,2,3,4,5 stroke:#d62728,color:#d62728
     linkStyle 7,8 stroke:#1f77b4,color:#1f77b4
     linkStyle 9,10,11,12,13,14,15 stroke:#2ca02c,color:#2ca02c
-    linkStyle 6,16,20 stroke:#888888,color:#888888,stroke-dasharray: 5 5
+    linkStyle 6,16,19 stroke:#888888,color:#888888,stroke-dasharray: 5 5
 
     classDef owned fill:#eaf2fb,stroke:#1f77b4,stroke-width:3px
     classDef external fill:#fdf0e3,stroke:#e07b00,stroke-width:2px,stroke-dasharray:3 3
