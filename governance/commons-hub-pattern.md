@@ -806,7 +806,7 @@ collateral concentration, or issuer blacklisting, which is a form of
 resilience the all-DAI approach gives up in exchange for simplicity. Which tradeoff is
 right depends on how much administrative capacity a given collective actually has.
 
-The simplest rule might be: hold DAI only, accepting its risk, until the 501(c)(3)
+The simplest rule: hold DAI only, accepting its risk, until the 501(c)(3)
 Satellite (or its subsidiary) can hire a treasurer — then let that person decide.
 
 
@@ -828,10 +828,10 @@ authority, both already covered in [§2](#2-governance-layer--three-mechanisms);
 the multisig treasury shown here is the layer that carries out whatever
 that governance process decides, not a stand-in for it.
 
-*Reading the diagram.* Arrows: $\color{#d62728}{\text{red}}$ = money in (①) ·
-$\color{#1f77b4}{\text{blue}}$ = converting ETH to DAI (②) ·
-$\color{#2ca02c}{\text{green}}$ = money out (③) ·
-$\color{#888888}{\text{gray dashed}}$ = deferred or pass-through
+*Reading the diagram.* Arrows: $\color{red}{\text{red}}$ = money in (①) ·
+$\color{blue}{\text{blue}}$ = converting ETH to DAI (②) ·
+$\color{green}{\text{green}}$ = money out (③) ·
+$\color{gray}{\text{gray dashed}}$ = deferred or pass-through
 (④ and the dotted lines).
 Boxes are blue if the collective owns them and dashed orange if they are external.
 
@@ -1673,17 +1673,17 @@ mechanism sorts this out automatically.
 
 DAI is a U.S.-dollar-pegged cryptocurrency created by
 [Maker](https://makerdao.com/da/whitepaper/) (now [Sky](https://sky.money/)) and
-designed to maintain a value of approximately one U.S. dollar without being a deposit at
-a conventional bank. Sky has since offered USDS, an optional 1:1 upgrade from DAI, but
-this appendix is about DAI: USDS reportedly includes a freeze function that DAI lacks,[^42]
-so the properties described here do not carry over to it. Unlike a bank account or
-payment account, a DAI balance exists on a public blockchain and is controlled by the
-holder of the corresponding cryptographic keys. There is no bank, payment processor, or
-central DAI account administrator that can simply instruct the network to freeze a
-particular address. This distinction is important for a distributed collective: the
-organization can hold and transfer funds without making a conventional financial
-institution the single point at which a politically motivated designation, compliance
-decision, or correspondent-banking cutoff can immobilize its treasury.
+designed to maintain a value of approximately one U.S. dollar without being a deposit at a
+conventional bank. Sky has since offered USDS, an optional 1:1 upgrade from DAI, but this
+appendix is about DAI: USDS reportedly includes a freeze function that DAI lacks,[^42] so
+the properties described here do not carry over to USDS. Unlike a bank account, a DAI
+balance exists on a public blockchain and is controlled by the holder of the corresponding
+cryptographic keys. There is no bank, payment processor, or central DAI account
+administrator that can simply instruct the network to freeze a particular address. This
+distinction is important for a distributed collective: the organization can hold and
+transfer funds without making a conventional financial institution the single point at
+which a politically motivated designation, compliance decision, or correspondent-banking
+cutoff can immobilize its treasury.
 
 <a href="diagrams/dai-flows.png"><img src="diagrams/dai-flows.png" width="100%"
 alt="DAI components and flows: individuals and organizations at the top, the Sky protocol
@@ -1694,16 +1694,16 @@ in the middle, institutions at the bottom, with sixteen numbered flows"></a>
 
 *DAI's components and flows. The numbers follow the walkthrough below.*
 
-Boxes: $\color{#2563eb}{\text{blue}}$ = people and organizations ·
-$\color{#16a34a}{\text{green}}$ = code · $\color{#6b7280}{\text{gray}}$ = assets ·
-$\color{#0d9488}{\text{teal}}$ = DAI · $\color{#e07b00}{\text{solid orange}}$ = can cut you off ·
-$\color{#e07b00}{\text{dashed orange}}$ = can be legally targeted ·
-$\color{#dc2626}{\text{red}}$ = circuit breaker.
+Boxes: $\color{blue}{\text{blue}}$ = people and organizations ·
+$\color{green}{\text{green}}$ = code · $\color{gray}{\text{gray}}$ = assets ·
+$\color{teal}{\text{teal}}$ = DAI · $\color{orange}{\text{solid orange}}$ = can cut you off ·
+$\color{orange}{\text{dashed orange}}$ = can be legally targeted ·
+$\color{red}{\text{red}}$ = circuit breaker.
 
-Arrows: $\color{#16a34a}{\text{green}}$ = DAI created ·
-$\color{#2563eb}{\text{blue}}$ = DAI changes hands ·
-$\color{#6b7280}{\text{gray}}$ = custody and backing ·
-$\color{#7c3aed}{\text{purple}}$ = control · $\color{#dc2626}{\text{red dashed}}$ = stress path.
+Arrows: $\color{green}{\text{green}}$ = DAI created ·
+$\color{blue}{\text{blue}}$ = DAI changes hands ·
+$\color{gray}{\text{gray}}$ = custody and backing ·
+$\color{purple}{\text{purple}}$ = control · $\color{red}{\text{red dashed}}$ = stress path.
 
 Entities in the diagram:
 
