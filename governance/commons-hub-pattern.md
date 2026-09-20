@@ -52,7 +52,6 @@ Early concept draft.
     - [Trusted signer election](#trusted-signer-election)
       - [Trusted signer team formation](#trusted-signer-team-formation)
   - [Financial mitigations](#financial-mitigations)
-    - [DAI backgrounder](#dai-backgrounder)
     - [Fund flows](#fund-flows)
 - [4. Distribution of economic benefits — from founder incentives to broad-based ownership](#4-distribution-of-economic-benefits--from-founder-incentives-to-broad-based-ownership)
   - [ESOPs in a nutshell](#esops-in-a-nutshell)
@@ -76,6 +75,7 @@ Early concept draft.
       - [In accounting terms](#in-accounting-terms)
       - [Quantifying the drivers of disillusionment and dissolution](#quantifying-the-drivers-of-disillusionment-and-dissolution)
   - [A.3 Founder labor and fair reward](#a3-founder-labor-and-fair-reward)
+  - [A.4 DAI backgrounder](#a4-dai-backgrounder)
   - [A.5 Income vs. retained earnings: a quick refresher](#a5-income-vs-retained-earnings-a-quick-refresher)
 - [Footnotes](#footnotes)
 
@@ -723,7 +723,7 @@ mechanisms, in increasing order of simplicity:
 
 - ETH for long-term holdings, with a DAI account covering short-term operating
   expenses (our default recommendation)
-- A straight DAI account ([see the backgrounder below](#dai-backgrounder)),
+- A straight DAI account ([see Appendix A.4](#a4-dai-backgrounder)),
   with no ETH intermediate step at all
 
 Both options share DAI's core property: no per-address freeze function[^35] exists for
@@ -760,111 +760,13 @@ volatility, but it also has zero diversification against anything going wrong
 specifically within the DAI network's own collateral situtation or governance — every dollar in the treasury
 shares the same fate. The two-tier model exists specifically to avoid that
 concentration: holding ETH alongside DAI means part of the
-treasury has zero dependencies on protocol-triggered Emergency Shutdown (see backgrounder), 
+treasury has zero dependencies on protocol-triggered Emergency Shutdown (see [Appendix A.4](#a4-dai-backgrounder)), 
 collateral concentration, or issuer blacklisting, which is a form of
 resilience the all-DAI approach gives up in exchange for simplicity. Which tradeoff is
 right depends on how much administrative capacity a given collective actually has.
 
 The simplest rule might be: hold DAI only, accepting its risk, until the 501(c)(3)
 Satellite (or its subsidiary) can hire a treasurer — then let that person decide.
-
-
-<a id="dai-backgrounder"></a>
-
-#### DAI backgrounder
-
-DAI is a U.S.-dollar-pegged cryptocurrency created by Maker (now Sky) and designed to
-maintain a value of approximately one U.S. dollar without being a deposit at a
-conventional bank. Unlike a bank account or payment account, a DAI balance exists on a
-public blockchain and is controlled by the holder of the corresponding cryptographic
-keys. There is no bank, payment processor, or central DAI account administrator that can
-simply instruct the network to freeze a particular address. This distinction is
-important for a distributed collective: the organization can hold and transfer funds
-without making a conventional financial institution the single point at which a
-politically motivated designation, compliance decision, or correspondent-banking cutoff
-can immobilize its treasury.
-
-```mermaid
-%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
-flowchart TD
-    subgraph INST["Institutions"]
-        Circle[Circle - issues USDC]
-        RWACustodian[RWA custodian/trustee]
-        Governance[Sky governance - SKY/MKR holders]
-    end
-
-    subgraph PROTO["Sky protocol - smart contracts"]
-        Vault[Vault/CDP]
-        PSM[Peg Stability Module]
-        ESM[Emergency Shutdown Module]
-        Buffer[Surplus buffer]
-    end
-
-    subgraph USERS["Individuals / Organizations"]
-        VaultOwner[Vault owner - locks collateral to mint]
-        Trader[Buyer - swaps existing crypto for DAI]
-        Holder[DAI holder - e.g. a collective's treasury]
-    end
-
-    ETHCollat[ETH/WBTC collateral]
-    USDC[USDC]
-    RWA[Tokenized Treasuries]
-    DAISupply((DAI in circulation))
-
-    VaultOwner -- locks --> ETHCollat
-    ETHCollat --> Vault
-    Vault -- mints, 145-175%+ overcollateralized --> DAISupply
-
-    Circle -- issues --> USDC
-    USDC -- deposited 1:1 --> PSM
-    PSM -- mints/burns --> DAISupply
-
-    RWACustodian -- holds --> RWA
-    RWA -- posted as collateral --> Vault
-
-    Trader -- swaps ETH/BTC/USDC/USD via CEX or DEX --> DAISupply
-    DAISupply -- wallet-to-wallet --> Holder
-
-    Governance -- sets risk parameters --> Vault
-    Governance -- can trigger --> ESM
-    ESM -- freezes --> DAISupply
-    PSM -.->|shortfall absorbed by| Buffer
-    RWA -.->|shortfall absorbed by| Buffer
-
-    classDef risk fill:#fdf0e3,stroke:#e07b00,stroke-width:2px
-    class Circle,RWACustodian,ESM risk
-```
-<p align="center"><sub>DAI's components and flows: minting against locked
-collateral, direct 1:1 acquisition via the Peg Stability Module, RWA
-custody, and Sky governance's Emergency Shutdown circuit breaker.
-Institutions (orange) are the points a state actor could pressure;
-individuals/organizations (bottom) are ordinary users.</sub></p>
-
-That resilience isn't unconditional, though, and it's worth being precise about where
-its limits actually sit rather than let a reader assume the treasury is untouchable.
-
-Sky's protocol has a legitimate circuit breaker built into it: the Emergency Shutdown
-Module, which MKR/SKY governance-token holders can trigger in response to a perceived
-existential threat to the system. Triggering it freezes the protocol and converts DAI
-from a freely spendable balance into a claim redeemable only through a settlement
-process — a real, if deliberately hard to reach, mechanism by which liquidity could stop
-on short notice.
-
-A smart contract's absence of a freeze key also doesn't extend that same immunity to the
-people who govern or maintain it. The clearest precedent is Tornado Cash: even after the
-underlying OFAC sanction on its smart-contract addresses was vacated by the Fifth
-Circuit, the U.S. Department of Justice still pursued one of its developers, Roman
-Storm, to a conviction on one charge, with a retrial pending on the remaining two. Sky
-has an identifiable foundation and a concentrated set of governance-token holders — a
-target class in its own right, independent of what the DAI contract itself can or
-cannot do.
-
-And DAI's own collateral base isn't purely decentralized crypto. Roughly 35-40% of it
-sits directly in USDC, held through Sky's Peg Stability Module — an amount Circle could
-freeze unilaterally, with no court order required, using the same freeze-key mechanism
-described above[^35]. That's not a freeze on any individual DAI holder's balance, but
-it's a real dependency the rest of this treasury strategy inherits whether or not it's
-acknowledged.
 
 
 <a id="fund-flows-diagram"></a>
@@ -1750,6 +1652,102 @@ work for as long as the founder holds it. The longer that holding
 period, the more the payout shifts from reward for founding toward
 reward for having owned stock while others built. Nothing in the ESOP
 mechanism sorts this out automatically.
+
+### A.4 DAI backgrounder
+
+DAI is a U.S.-dollar-pegged cryptocurrency created by Maker (now Sky) and designed to
+maintain a value of approximately one U.S. dollar without being a deposit at a
+conventional bank. Unlike a bank account or payment account, a DAI balance exists on a
+public blockchain and is controlled by the holder of the corresponding cryptographic
+keys. There is no bank, payment processor, or central DAI account administrator that can
+simply instruct the network to freeze a particular address. This distinction is
+important for a distributed collective: the organization can hold and transfer funds
+without making a conventional financial institution the single point at which a
+politically motivated designation, compliance decision, or correspondent-banking cutoff
+can immobilize its treasury.
+
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
+flowchart TD
+    subgraph INST["Institutions"]
+        Circle[Circle - issues USDC]
+        RWACustodian[RWA custodian/trustee]
+        Governance[Sky governance - SKY/MKR holders]
+    end
+
+    subgraph PROTO["Sky protocol - smart contracts"]
+        Vault[Vault/CDP]
+        PSM[Peg Stability Module]
+        ESM[Emergency Shutdown Module]
+        Buffer[Surplus buffer]
+    end
+
+    subgraph USERS["Individuals / Organizations"]
+        VaultOwner[Vault owner - locks collateral to mint]
+        Trader[Buyer - swaps existing crypto for DAI]
+        Holder[DAI holder - e.g. a collective's treasury]
+    end
+
+    ETHCollat[ETH/WBTC collateral]
+    USDC[USDC]
+    RWA[Tokenized Treasuries]
+    DAISupply((DAI in circulation))
+
+    VaultOwner -- locks --> ETHCollat
+    ETHCollat --> Vault
+    Vault -- mints, 145-175%+ overcollateralized --> DAISupply
+
+    Circle -- issues --> USDC
+    USDC -- deposited 1:1 --> PSM
+    PSM -- mints/burns --> DAISupply
+
+    RWACustodian -- holds --> RWA
+    RWA -- posted as collateral --> Vault
+
+    Trader -- swaps ETH/BTC/USDC/USD via CEX or DEX --> DAISupply
+    DAISupply -- wallet-to-wallet --> Holder
+
+    Governance -- sets risk parameters --> Vault
+    Governance -- can trigger --> ESM
+    ESM -- freezes --> DAISupply
+    PSM -.->|shortfall absorbed by| Buffer
+    RWA -.->|shortfall absorbed by| Buffer
+
+    classDef risk fill:#fdf0e3,stroke:#e07b00,stroke-width:2px
+    class Circle,RWACustodian,ESM risk
+```
+<p align="center"><sub>DAI's components and flows: minting against locked
+collateral, direct 1:1 acquisition via the Peg Stability Module, RWA
+custody, and Sky governance's Emergency Shutdown circuit breaker.
+Institutions (orange) are the points a state actor could pressure;
+individuals/organizations (bottom) are ordinary users.</sub></p>
+
+That resilience isn't unconditional, though, and it's worth being precise about where
+its limits actually sit rather than let a reader assume the treasury is untouchable.
+
+Sky's protocol has a legitimate circuit breaker built into it: the Emergency Shutdown
+Module, which MKR/SKY governance-token holders can trigger in response to a perceived
+existential threat to the system. Triggering it freezes the protocol and converts DAI
+from a freely spendable balance into a claim redeemable only through a settlement
+process — a real, if deliberately hard to reach, mechanism by which liquidity could stop
+on short notice.
+
+A smart contract's absence of a freeze key also doesn't extend that same immunity to the
+people who govern or maintain it. The clearest precedent is Tornado Cash: even after the
+underlying OFAC sanction on its smart-contract addresses was vacated by the Fifth
+Circuit, the U.S. Department of Justice still pursued one of its developers, Roman
+Storm, to a conviction on one charge, with a retrial pending on the remaining two. Sky
+has an identifiable foundation and a concentrated set of governance-token holders — a
+target class in its own right, independent of what the DAI contract itself can or
+cannot do.
+
+And DAI's own collateral base isn't purely decentralized crypto. Roughly 35-40% of it
+sits directly in USDC, held through Sky's Peg Stability Module — an amount Circle could
+freeze unilaterally, with no court order required, using the same freeze-key mechanism
+described above[^35]. That's not a freeze on any individual DAI holder's balance, but
+it's a real dependency the rest of this treasury strategy inherits whether or not it's
+acknowledged.
+
 
 ### A.5 Income vs. retained earnings: a quick refresher
 
