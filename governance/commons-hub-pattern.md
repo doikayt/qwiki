@@ -49,7 +49,15 @@ Early concept draft.
   - [Cost advantages that a for-profit competitor can't match](#cost-advantages-that-a-for-profit-competitor-cant-match)
   - [Resilience through dispersion](#resilience-through-dispersion)
     - [Case study: the takedown of Autistici/Inventati](#case-study-the-takedown-of-autisticiinventati)
-    - [Mitigations](#mitigations)
+- [Mitigations](#mitigations)
+  - [Technical infrastructure: DNS](#technical-infrastructure-dns)
+  - [Technical infrastructure: key and credential custodianship](#technical-infrastructure-key-and-credential-custodianship)
+  - [Trusted signer election](#trusted-signer-election)
+    - [Team formation](#team-formation)
+    - [Bootstrapping the trusted-signer network](#bootstrapping-the-trusted-signer-network)
+  - [Financial infrastructure layer](#financial-infrastructure-layer)
+    - [DAI backgrounder](#dai-backgrounder)
+    - [Fund flows](#fund-flows)
 - [Appendix A: Historical and Economic Grounding](#appendix-a-historical-and-economic-grounding)
   - [A.1 Why firms exist: Coase, the putting-out system, and what's changing now](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now)
     - [The tooling wave](#the-tooling-wave)
@@ -703,10 +711,10 @@ same compulsion, but the centralization problem remains — which is
 exactly what the onion-mirror mitigation (below) is built to route
 around.
 
-#### Mitigations
+### Mitigations
 
 
-*Technical Infrastructure - [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)*
+#### Technical infrastructure: [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)
 
 Domain choice is the first line of defense: The popular choices, `.com` and `.org`, are, 
 as mentioned above, both administered by U.S.-based registries, which the Autistici/Inventati case just
@@ -784,7 +792,7 @@ A caveat: any use of Tor, even for research, may itself draw extra
 scrutiny from state actors.[^24]
 
 
-*Technical Infrastructure — Key and Credential Custodianship*
+#### Technical infrastructure: key and credential custodianship
 
 This section covers replication of the two categories of keys and credentials a collective needs to
 function.
@@ -863,7 +871,7 @@ below for how jurisdictional spread factors into choosing them.
 
 <a id="trusted-signer-election"></a>
 
-*Trusted signer election*
+#### Trusted signer election
 
 This section picks up on the idea introduced
 [above](#resilience-through-dispersion): individuals, not just
@@ -896,7 +904,7 @@ is a known, addressable legal entity, carrying the same risk as a bank or a
 custodial stablecoin issuer[^35]. 
 
 
-*Trusted signer election -- team formation*
+##### Team formation
 
 Trust is obviously a critical factor in nominating an individual as a
 trusted signer, and the obvious pool to draw from is the already-vetted 
@@ -913,7 +921,7 @@ their jurisdiction around the still-accessible treasury,
 and then continue on to rebooting the collective around the still-intact commons.
 
 
-*Bootstrapping the trusted-signer network.* 
+##### Bootstrapping the trusted-signer network
 
 A small, early-stage collective could very well start off with just one founder, and at this 
 point multi-sig signing makes no sense. Even as the team grows,  geographic
@@ -925,7 +933,7 @@ committers from other jurisdictions join moving some of the responsibility from 
 domestic signer to someone in the other jurisdiction.
 
 
-*Financial Infrastructure Layer*
+#### Financial infrastructure layer
 
 Both payment rails and bank accounts become vulnerable the moment a US dollar-denominated transaction moves
 through those rails, or results in a deposit into those accounts. Dollars must be settled inside the U.S. banking
@@ -998,7 +1006,7 @@ Satellite (or its subsidiary) can hire a treasurer — then let that person deci
 
 <a id="dai-backgrounder"></a>
 
-*Financial Infrastructure Layer -- DAI backgrounder*
+##### DAI backgrounder
 
 DAI is a U.S.-dollar-pegged cryptocurrency created by Maker (now Sky) and designed to
 maintain a value of approximately one U.S. dollar without being a deposit at a
@@ -1096,7 +1104,7 @@ acknowledged.
 
 <a id="fund-flows-diagram"></a>
 
-*Financial Infrastructure Layer -- fund flows*
+##### Fund flows
 
 ```mermaid
 %%{init: {"themeVariables": {"fontSize": "10px"}}}%%
