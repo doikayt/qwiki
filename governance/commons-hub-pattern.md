@@ -145,9 +145,13 @@ questions differently: [guilds](https://en.wikipedia.org/wiki/Guild),
 [joint-stock charters](https://en.wikipedia.org/wiki/Joint-stock_company),
 the industrial corporation, the modern [platform
 company](https://en.wikipedia.org/wiki/Platform_economy). Each is a governance
-structure for collective production and economic benefit, adopted — and later
-challenged — because the previous model no longer served elites
-with the power to change it. 
+structure for collective production and economic benefit -- adopted because the previous
+model no longer served rival elite factions with the power to change it. We see this in
+landowners enclosing common land, merchants and investors pooling capital in joint-stock
+charters, and factory owners displacing the guilds and the putting-out system. The modern
+platform company has not yet met its challenger; the AI wave described in
+[Appendix A.1](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now)
+is a candidate.[^42]
 <table align="right" width="150">
 <tr><td><img src="images/enclosure.jpg" alt="1793 Enclosure Act for Shifnal" width="150"></td></tr>
 <tr><td><sub>Enclosure Act for Shifnal, 1793<br>(Shropshire Archives 539/1/5/3).<br>Public domain, via Wikimedia Commons.</sub></td></tr>
@@ -321,9 +325,10 @@ rather than to land, water, or fisheries.
 The 501(c)(3)'s **Board** of directors sets the mission, priorities, and policy 
 for each Satellite through ordinary nonprofit governance. 
 There is no [DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization)
-involved in setting priorities or policy. The board decides what to build,
-how to fund those  programs, and what the organization's direction is -- 
-exactly as any nonprofit board would.
+involved in setting priorities or policy. The board decides which programs the
+organization funds, how to fund them, and what its long-term direction is -- exactly as
+any nonprofit board would. It does not run the product roadmap: what to build day to day
+belongs to [token-based delegated authority](#token-based-delegated-authority).
 
 ### DAO
 
@@ -404,7 +409,7 @@ later document; a pointer back to it belongs here once that's written.)*
 Having settled who governs the commons and its satellites, we pivot to what a collective
 can proactively do to survive a takedown attempt by a corporate or state actor. Any
 collective whose mission genuinely threatens entrenched power should expect to be
-targeted. We will explain
+targeted. So in the ensuing sections, we will explain
 [resilience through dispersion](#resilience-through-dispersion), the principle that
 dispersing any organization's people, assets, and infrastructure improves its odds of
 survival; walk through a real takedown that a dispersed structure might have survived; and
@@ -1192,7 +1197,7 @@ decades, and a wave of more recent innovations in AI, especially
   rentable by the hour -- which enables individual remote developers (and 
   even one person software shops) to leverage the same compute capacity as larger companies.
 - **Scheduling**: is now enforceable via [issue
-  trackers](https://en.wikipedia.org/wiki/Issue_tracking_system),
+  trackers](https://en.wikipedia.org/wiki/Project_management_software),
   automated status checks, and rule-based status bots[^26], which nudge communication 
   channels on a fixed schedule when a deadline slips. These tools keep
   remote contributors coordinated against real deadlines without the
@@ -2140,6 +2145,17 @@ when it later leaves the retained-earnings pool as a distribution.
     deadlocked on the other two, and his retrial is set for April 26, 2027, with a motion
     for acquittal still undecided, per [The Block's August 2026
     report](https://www.theblock.co/news/regulation/2026-08-26-tornado-cash-roman-storm-retrial-april-2027-412761).
+
+[^42]: Regulation is not the challenge meant here. The EU's [Digital Markets
+    Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R1925)
+    (Regulation (EU) 2022/1925), the August 2024 U.S. ruling that Google unlawfully
+    maintained a monopoly in general search ([*United States v.
+    Google*](https://en.wikipedia.org/wiki/United_States_v._Google_LLC_(2020))), and the UK
+    Supreme Court's 2021 holding that Uber drivers are "workers" ([*Uber BV v
+    Aslam*](https://www.supremecourt.uk/cases/uksc-2019-0029), [2021] UKSC 5) all
+    constrain platform practices from inside the existing order. None puts a rival form,
+    backed by a rival elite faction, in its place. The status of the Google remedies and
+    appeals was not checked and may have moved since; that point requires confirmation.
 
 ---
 
