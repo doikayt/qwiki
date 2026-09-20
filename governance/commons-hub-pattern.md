@@ -2098,15 +2098,19 @@ when it later leaves the retained-earnings pool as a distribution.
     Bank collapse. Circle disclosed that $3.3 billion of USDC's own
     backing cash reserves were stuck at the failed bank, and USDC — a
     stablecoin pegged to the US dollar — fell as low as roughly $0.87 on
-    some exchanges. Since DAI held a large share of its own collateral
-    in USDC, that wobble passed straight through to DAI's peg too: DAI
-    dropped to about $0.85, a roughly 15% dip. The dip happened at all
-    because DAI relies on USDC as collateral; it stayed brief because
-    the FDIC guaranteed all SVB depositors within days, so Circle's
-    reserves turned out to be fully intact, USDC recovered to $1, and
-    DAI's own peg followed it back up once its collateral was healthy
-    again. Recovery to full peg took 48 hours. [Market Analysis: Silicon
-    Valley Bank, Circle & USDC —
+    some exchanges. Since DAI held over half of its collateral in USDC at
+    the time (roughly 35-40% today), that wobble passed straight through
+    to DAI's peg too: DAI fell as low as roughly $0.85-0.90 depending on
+    the venue, a dip of about 10-15%. The dip happened at all because DAI
+    relies on USDC as collateral; it stayed brief because Treasury, the
+    Federal Reserve, and the FDIC announced on Sunday, March 12, two days
+    after the bank failed, that all SVB depositors would be protected, so
+    Circle's reserves turned out to be fully intact, USDC recovered to
+    $1, and DAI's own peg followed it back up once its collateral was
+    healthy again. Recovery to full peg took 48 hours. [DAI Depegs to
+    Lifetime Lows —
+    CoinDesk](https://www.coindesk.com/markets/2023/03/11/dai-depegs-as-stablecoin-rout-plagues-crypto);
+    [Market Analysis: Silicon Valley Bank, Circle & USDC —
     CoinDesk](https://data.coindesk.com/blogs/market-analysis-silicon-valley-bank-circle-usdc);
     [DAI recovers after severe depeg caused by USDC ripple
     effect](https://cryptonews.net/news/altcoins/20659725/).
