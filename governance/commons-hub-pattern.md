@@ -50,7 +50,7 @@ Early concept draft.
     - [Technical infrastructure: DNS](#technical-infrastructure-dns)
     - [Technical infrastructure: key and credential custodianship](#technical-infrastructure-key-and-credential-custodianship)
     - [Trusted signer election](#trusted-signer-election)
-      - [Trusted signer team formation](#trusted-signer-team-formation)
+      - [Trusted signer roster design and jurisdictional dispersal](#trusted-signer-roster-design-and-jurisdictional-dispersal)
   - [Financial mitigations](#financial-mitigations)
     - [Fund flows](#fund-flows)
 - [4. Distribution of economic benefits — from founder incentives to broad-based ownership](#4-distribution-of-economic-benefits--from-founder-incentives-to-broad-based-ownership)
@@ -661,7 +661,7 @@ regardless of whether any given signer is an individual or a corporation:
 
 - transactions are gated by a [quorum](https://en.wikipedia.org/wiki/Threshold_cryptosystem)
   of M-of-N signers, rather than one maximally-trusted,
-  individual, so a sanctioning adversary has to compel or compromise several people at once, not just one;
+  individual -- so a sanctioning adversary has to compel or compromise several people at once, not just one;
 - maximal jurisdictional dispersion among designated signers, sized so
   that the signers outside any single jurisdiction can, by themselves,
   still reach the M threshold -- meaning the total loss of every signer
@@ -679,29 +679,61 @@ serve -- makes it an easy target for direct legal process: a subpoena, a seizure
 a blocking order.
 
 
-##### Trusted signer team formation
+##### Trusted signer roster design and jurisdictional dispersal
 
 Trust is obviously a critical factor in nominating an individual as a
 trusted signer, and the obvious pool to draw from is the already-vetted 
 roster of code committers who have earned some degree of 
 token-based delegated authority, as described in 
 [§2](#2-governance-layer--three-mechanisms).  It is instructive to think 
-through an absolute worst case scenario to see what is being asked of 
-a jurisdictionally dispersed team: e.g., an NDAA detention order that ends up with all of 
+through an _absolute worst case_ scenario to see what is being asked of 
+a jurisdictionally dispersed team -- perhaps one involving
+an NDAA detention order that ends up with all of 
 US-based committers in an isolated work camp. In such a regrettable case,
 what is materially lost is the ability of the US-based 501c3 to 
 continue development or monetization of the commons. However, the surviving
 signers can still re-establish new fiat currency  accounts in 
-their jurisdiction around the still-accessible treasury, 
+their jurisdiction(s) around the still-accessible treasury, 
 and then continue on to rebooting the collective around the still-intact commons.
 
-A small, early-stage collective could very well start off with just one founder, and at this 
-point multi-sig signing makes no sense. Even as the team grows,  geographic
-dispersion of trust and commiters should not be sought for its own sake. 
-It is better to think of the network evolving in stages:  as the collective grows it 
-would go from no multi-sig to a _2-of-3_ or _3-of-5_ all-domestic signer set. Then as trusted 
-committers from other jurisdictions join, the collective could move
-some of the responsibility from a domestic signer to someone in the other jurisdiction. 
+Dispersing the signers serves two competing goals. The first is coercion resistance: no
+one jurisdiction holds enough signers to reach the M threshold, so no government can force
+a transaction by itself. The second is availability: losing one jurisdiction, through a
+detention, a seizure, or a single legal action, still leaves at least M signers able to
+sign. Whether both can be met depends on how many jurisdictions the roster spans, and the
+simplest case shows the tension at its sharpest: two jurisdictions, the U.S. and one
+other. Keeping the U.S. signers below M means the U.S. cannot force a transaction
+(coercion resistance), but then the other jurisdiction must hold at least M for the
+treasury to survive the loss of the U.S. team (availability), and now that jurisdiction
+can sign alone, which sacrifices coercion resistance.
+
+So a two-jurisdiction roster has to give up one goal somewhere. Because the team and the
+501(c)(3) are U.S.-based, the natural choice is to protect against U.S. government
+initiated take-downs and accept the second jurisdiction's exposure. In a 3-of-5 roster
+that means two signers in the U.S. and three in the other jurisdiction. The cost is that
+the second jurisdiction's government, or a U.S. request to it, becomes the pressure
+point, and losing that jurisdiction's signers freezes the treasury. The extreme version,
+M-1 signers in the U.S. and a single signer abroad, is weaker still: losing that one
+signer freezes the treasury too.
+
+A third jurisdiction removes the trade-off. Spread the same five signers as two in the
+U.S., two in a second jurisdiction, and one in a third, and no jurisdiction holds a quorum
+while losing any one jurisdiction still leaves three. The general rule is that no
+jurisdiction holds more than the smaller of M-1 and N-M signers, which forces at least
+three jurisdictions for a 3-of-5 roster. The rule assumes the jurisdictions act
+independently. If two of them coordinate, through treaty or sanctions alignment, their
+signers count together. Even then, a remote signer is harder to pressure, not immune.
+
+Looking at how the roster might evolve: a small, early-stage collective could start off
+with just one founder, and at this point multi-sig signing makes no sense. Even as the
+team grows, geographic dispersion of trust and committers should not be sought for its own
+sake. It is better to think of the network evolving in stages: as the collective grows it
+would go from no multi-sig to a _2-of-3_ or _3-of-5_ all-domestic signer set. Then as
+trusted committers from other jurisdictions join, the collective could move some of the
+responsibility from a domestic signer to someone in the other jurisdiction. Each move
+should be judged against the two goals above. A single signer abroad adds little:
+coercion resistance only begins once the U.S. holds fewer than M signers, so early moves
+abroad are steps toward that target, not benefits in themselves.
 
 
 ### Financial mitigations

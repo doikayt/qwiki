@@ -4,7 +4,7 @@
 [`commons-hub-pattern.md`](commons-hub-pattern.md) and
 [`contributor-guide.md`](contributor-guide.md).*
 
-**Status:** Stub. Only the item below is populated so far. The full risk list from the
+**Status:** Stub. Only the items below are populated so far. The full risk list from the
 original single-doc draft (DAO scope vs. fiduciary duty, compensation-vs-profit-sharing
 characterization, board-delegation formality, securities-law exposure for tactical
 governance tokens, crypto valuation/withholding, DAO legal wrapper, etc.) has not yet
@@ -31,3 +31,25 @@ This is one of four companion documents split out of a single original draft (se
      threshold-crossing purposes the same way a cash payment would be.
    - Whether any backup-withholding exposure exists on the sub-$600, no-W-9 payments
      themselves, or whether that risk only attaches once the $600 threshold is crossed.
+
+2. **[Legal — requires confirmation] Jurisdictional dispersal of trusted signers.**
+   [Trusted signer roster design and jurisdictional
+   dispersal](commons-hub-pattern.md#trusted-signer-roster-design-and-jurisdictional-dispersal)
+   proposes capping the signers in any one jurisdiction at the smaller of M-1 and N-M, so
+   that no single government can force a treasury transaction and losing one jurisdiction
+   does not stall the treasury. The threshold rule is the author's own analysis and has
+   not had an independent technical or security review. The legal questions are
+   unresolved and need counsel:
+   - Whether a US court or agency can compel a US-based signer to sign a transaction,
+     produce a key, or unlock a hardware wallet, and how compelled-production doctrine
+     applies to keys and signing acts.
+   - Whether deliberately placing enough signers outside the US to keep a compelled US
+     quorum from forming could be characterized as obstruction or as sanctions or blocking
+     evasion if the US-based entity is later designated or served with a blocking order.
+   - Whether signers located abroad, or the roster as a whole, create licensing,
+     custody, or money-transmission exposure under their own jurisdictions' law.
+   - The personal liability of an individual signer, who has no corporate liability
+     shield (see the corporation-versus-individual tradeoff in the same section).
+   - The rule assumes the jurisdictions act independently. Whether treaty or sanctions
+     coordination makes that assumption fail for particular jurisdiction pairs is a
+     factual and legal question for counsel, not settled here.
