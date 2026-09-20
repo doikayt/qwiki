@@ -146,12 +146,7 @@ questions differently: [guilds](https://en.wikipedia.org/wiki/Guild),
 the industrial corporation, the modern [platform
 company](https://en.wikipedia.org/wiki/Platform_economy). Each is a governance
 structure for collective production and economic benefit -- adopted because the previous
-model no longer served rival elite factions with the power to change it. We see this in
-landowners enclosing common land, merchants and investors pooling capital in joint-stock
-charters, and factory owners displacing the guilds and the putting-out system. The modern
-platform company has not yet met its challenger; the AI wave described in
-[Appendix A.1](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now)
-is a candidate.[^42]
+model no longer served rival elite factions with the power to change it.
 <table align="right" width="150">
 <tr><td><img src="images/enclosure.jpg" alt="1793 Enclosure Act for Shifnal" width="150"></td></tr>
 <tr><td><sub>Enclosure Act for Shifnal, 1793<br>(Shropshire Archives 539/1/5/3).<br>Public domain, via Wikimedia Commons.</sub></td></tr>
@@ -159,12 +154,14 @@ is a candidate.[^42]
 
 The wave of English enclosure that began around the mid-1700s[^1]
 was driven by landowners who benefited from privatizing common land, not by
-commoners demanding it; joint-stock charters emerged to mobilize capital
+commoners demanding it. Joint-stock charters emerged to mobilize capital
 for merchants and investors who needed a legal vehicle for it, not from popular
-pressure. Governance structures tend to change when they stop working for
-whoever has enough power to rewrite them.
+pressure. Later, factory owners displaced the guilds and the putting-out system (see
+[Appendix A.1](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now)).
+The modern platform company has not yet met its challenger, though
+[AI-driven production](#the-ai-wave) looks like a likely candidate.
 
-This document treats our two fundamental questions as still open, and
+The remainder of our discussion treats our two fundamental questions as still open, and
 attempts to answer them for a specific mode of production: collaboratively
 developed [open source software](https://en.wikipedia.org/wiki/Open-source_software)
 (OSS). It's the _open_ in OSS — open in who may profit from it, open in who
@@ -2145,17 +2142,6 @@ when it later leaves the retained-earnings pool as a distribution.
     deadlocked on the other two, and his retrial is set for April 26, 2027, with a motion
     for acquittal still undecided, per [The Block's August 2026
     report](https://www.theblock.co/news/regulation/2026-08-26-tornado-cash-roman-storm-retrial-april-2027-412761).
-
-[^42]: Regulation is not the challenge meant here. The EU's [Digital Markets
-    Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R1925)
-    (Regulation (EU) 2022/1925), the August 2024 U.S. ruling that Google unlawfully
-    maintained a monopoly in general search ([*United States v.
-    Google*](https://en.wikipedia.org/wiki/United_States_v._Google_LLC_(2020))), and the UK
-    Supreme Court's 2021 holding that Uber drivers are "workers" ([*Uber BV v
-    Aslam*](https://www.supremecourt.uk/cases/uksc-2019-0029), [2021] UKSC 5) all
-    constrain platform practices from inside the existing order. None puts a rival form,
-    backed by a rival elite faction, in its place. The status of the Google remedies and
-    appeals was not checked and may have moved since; that point requires confirmation.
 
 ---
 
