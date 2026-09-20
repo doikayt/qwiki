@@ -12,12 +12,15 @@ open source software (OSS) around nonprofit and for-profit satellites*
 
 Early concept draft.
 
-- Not reviewed by counsel — nothing in this document is legal, tax, or
-  financial advice; consult qualified counsel and a CPA before acting
-  on anything discussed here.
+- Not reviewed by counsel
+  - nothing in this document is legal, tax, or financial advice;
+  - consult qualified counsel and a CPA before acting on anything discussed herein.
+- Not offered as guidance to any sanctioned or designated party.
+  - this analysis is intended soley for educational and organizational-design purposes.
+  - readers are responsible for complying with their jurisdiction's applicable laws, including sanctions regimes.
 - Not written by a trained economist — this is a summary of the
   author's own research and reflection on equitable approaches to
-  structuring, operating, and profiting from an OSS-focused enterprise.
+  structuring, operating, and generating wealth from an OSS-focused enterprise.
 - Not battle tested -  the patterns, strategies and technical solutions we 
   propose below are based on the emerging roadmap we 
   are putting together for _our_  collective, and are offered in the spirit of 
@@ -49,15 +52,15 @@ Early concept draft.
   - [Cost advantages that a for-profit competitor can't match](#cost-advantages-that-a-for-profit-competitor-cant-match)
   - [Resilience through dispersion](#resilience-through-dispersion)
     - [Case study: the takedown of Autistici/Inventati](#case-study-the-takedown-of-autisticiinventati)
-- [Mitigations](#mitigations)
-  - [Technical infrastructure: DNS](#technical-infrastructure-dns)
-  - [Technical infrastructure: key and credential custodianship](#technical-infrastructure-key-and-credential-custodianship)
-  - [Trusted signer election](#trusted-signer-election)
-    - [Team formation](#team-formation)
-    - [Bootstrapping the trusted-signer network](#bootstrapping-the-trusted-signer-network)
-  - [Financial infrastructure layer](#financial-infrastructure-layer)
-    - [DAI backgrounder](#dai-backgrounder)
-    - [Fund flows](#fund-flows)
+  - [Mitigations](#mitigations)
+    - [Technical infrastructure: DNS](#technical-infrastructure-dns)
+    - [Technical infrastructure: key and credential custodianship](#technical-infrastructure-key-and-credential-custodianship)
+    - [Trusted signer election](#trusted-signer-election)
+      - [Team formation](#team-formation)
+      - [Bootstrapping the trusted-signer network](#bootstrapping-the-trusted-signer-network)
+    - [Financial infrastructure layer](#financial-infrastructure-layer)
+      - [DAI backgrounder](#dai-backgrounder)
+      - [Fund flows](#fund-flows)
 - [Appendix A: Historical and Economic Grounding](#appendix-a-historical-and-economic-grounding)
   - [A.1 Why firms exist: Coase, the putting-out system, and what's changing now](#a1-why-firms-exist-coase-the-putting-out-system-and-whats-changing-now)
     - [The tooling wave](#the-tooling-wave)
@@ -158,7 +161,7 @@ round peg for corporate law's square hole. The corporate form defaults to
 a single, exclusive top-down structure built for
 concentrating both decision-making authority and economic benefit, 
 not the diffuse, non-exclusive shape
-open production actually takes.
+open source development actually takes.
 
 
 ### Factors favoring the emergence of the corporate model -- neoclassical view
@@ -367,8 +370,7 @@ wallet registration and tax documents intake.)
 
 In practice this authority is held as a
 [blockchain](https://en.wikipedia.org/wiki/Blockchain)-based token (or
-equivalent [smart
-contract](https://en.wikipedia.org/wiki/Smart_contract) access-control
+equivalent [smart contract](https://en.wikipedia.org/wiki/Smart_contract) access-control
 mechanism) rather than a database record, so eligibility and
 non-transferability can be checked programmatically. It cannot be bought or
 sold — it is granted on trust, never transferable for payment — which is
@@ -582,7 +584,7 @@ note. We start with two structural properties of our model that translate
 into real operational advantages. Then we look at the flip side: any
 501(c)(3) pursuing a mission genuinely threatening to entrenched capital, or
 to a repressive state actor, should expect to be targeted for suppression —
-so we walk through the resilience properties built into our model to
+so we explore how we can build resilience properties into our model to
 withstand exactly that.
 
 
@@ -668,9 +670,9 @@ in [this section](#trusted-signer-election).)
 #### Case study: the takedown of Autistici/Inventati 
 
 The recent (August 2026) US government designation of Italian
-hosting collective Autistici/Inventati (A/I) as a ["Specially Designated
-Global Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/)
-serves as a useful case study on how a satellite structured collective might have
+hosting collective Autistici/Inventati (A/I) as a ["Specially Designated Global 
+Terrorist"](https://decode39.com/16319/autistici-inventati-case-sets-a-new-counterterrorism-precedent-irdi-says/) 
+(SDGT) serves as a useful case study on how a satellite structured collective might have
 avoided a shut-down. We propose mitigations[^16] on two  infrastructural axes:
 technical, and financial -- but first a recap.
 
@@ -697,7 +699,7 @@ the registry entry, and the domain stops resolving globally and
 instantly, regardless of the underlying servers' ability to keep running. 
 
 On the jurisdiction side: the [Public Interest Registry](https://pir.org) which runs the
-`.org` domain is a Virginia-based 501(c)(3) — a US legal entity — and
+`.org` domain is a Virginia-based 501(c)(3) — a US legal entity.
 [Verisign](https://www.verisign.com), which runs `.com`, is a Delaware corporation
 headquartered in California. Once the SDGT
 designation was issued, both registries were subject to the  same US
@@ -723,18 +725,18 @@ domain outside U.S. jurisdiction avoids that exposure from the start.
 Iceland's `.is` registry is operated by the non-profit
 [ISNIC](https://www.isnic.is/en/), which has a track record of
 resisting the kind of takedown requests that killed `autistici.org`.
-ISNIC runs the [top-level domain](https://en.wikipedia.org/wiki/Top-level_domain)
-(TLD) itself (that is: `.is`.) Actually registering a domain under `.is` (e.g., company_xyz.is)
-still goes through a separate registrar. Registering the domain
+While ISNIC runs the `.is`  [top-level domain](https://en.wikipedia.org/wiki/Top-level_domain)
+(TLD), in order to actually _register_ a domain under `.is` (e.g., company_xyz.is)
+you need to go through a _separate_ registrar. Registering the domain
 through [1984 Hosting](https://1984.hosting/), an Icelandic registrar
 with a stated commitment to anonymity and free expression, adds a
 second layer of protection — this one over who controls the
 registration itself, rather than which jurisdiction the registry sits
-in.  Registering with 1984 helps avoid a real risk some privacy-focused registrars carry, since they
-keep _you_ as the actual legal registrant with
+in.  Registering with 1984 helps avoid a real risk some privacy-focused registrars carry, since this registrar
+keeps _you_ as the actual legal registrant with
 [WHOIS](https://en.wikipedia.org/wiki/WHOIS) privacy, rather than
-registering your domain under its own name and merely licensing you
-usage rights. This delegated-ownership model, used by some
+registering your domain under its own name and merely licensing you back
+usage rights. This license-back model, used by some
 anonymity-focused registrars, leaves you with no standing to transfer
 or reclaim the domain yourself if that registrar itself caves. 1984 also
 runs its own DNS hosting, and its
@@ -751,7 +753,7 @@ service's own [keypair](https://spec.torproject.org/rend-spec/encoding-onion-add
 and resolved through Tor's own distributed
 hidden-service directory. There is no registry, registrar, or nameserver in
 the chain for a state actor to pressure.  Note that the
-`.is`/ISNIC strategy relies on a pressure-resistant DNS dependency, but still a dependency; the
+`.is`/ISNIC strategy relies on a pressure-resistant DNS dependency, but still has a dependency; the
 onion mirror is a _zero_-DNS-dependency channel. It is in a different
 category from a registrar-based approach entirely, no matter how
 takedown-resistant the registrar.
@@ -781,7 +783,7 @@ pointing at the `.onion` URL, so [Tor
 Browsers](https://en.wikipedia.org/wiki/Tor_(network)) can detect it
 automatically
 and offer visitors a one-click switch with no separate announcement
-needed; publish the bare `.onion` address too, in the site footer and
+needed. Publish the bare `.onion` address too -- in the site footer and
 official bios, for anyone on a different Tor client. Automate periodic
 checks with [Playwright](https://playwright.dev/docs/network):
 fetch the clearnet site to confirm the `Onion-Location` header is
