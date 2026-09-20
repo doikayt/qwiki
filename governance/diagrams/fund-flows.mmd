@@ -26,27 +26,27 @@ flowchart TD
         L2[External]
     end
 
-    Donor -- "<b style='font-size:1.8em'>①</b> cash/USD" --> SatBank
-    SatBank -- "<b style='font-size:1.8em'>①</b> periodic sweep" --> Treasury
-    Donor -- "<b style='font-size:1.8em'>①</b> DAI directly" --> DAIFloat
-    Donor -- "<b style='font-size:1.8em'>①</b> ETH/BTC swappable" --> Treasury
-    Customer -- "<b style='font-size:1.8em'>①</b> card/ACH, mostly fiat" --> SubBank
-    SubBank -- "<b style='font-size:1.8em'>①</b> periodic sweep" --> Treasury
+    Donor -- "<b style='font-size:2.3em'>①</b> cash/USD" --> SatBank
+    SatBank -- "<b style='font-size:2.3em'>①</b> periodic sweep" --> Treasury
+    Donor -- "<b style='font-size:2.3em'>①</b> DAI directly" --> DAIFloat
+    Donor -- "<b style='font-size:2.3em'>①</b> ETH/BTC swappable" --> Treasury
+    Customer -- "<b style='font-size:2.3em'>①</b> card/ACH, mostly fiat" --> SubBank
+    SubBank -- "<b style='font-size:2.3em'>①</b> periodic sweep" --> Treasury
 
     Donor -.->|"deferred until volume or<br/>Form 8283 threshold hit"| DonationProcessor
 
-    Treasury -- "<b style='font-size:1.8em'>②</b> periodic batch, single sign-off" --> BatchConvert
-    BatchConvert -- "<b style='font-size:1.8em'>②</b>" --> DAIFloat
+    Treasury -- "<b style='font-size:2.3em'>②</b> periodic batch, single sign-off" --> BatchConvert
+    BatchConvert -- "<b style='font-size:2.3em'>②</b>" --> DAIFloat
 
-    DAIFloat -- "<b style='font-size:1.8em'>③</b> wallet-to-wallet" --> Contributors
-    Contributors -- "<b style='font-size:1.8em'>③</b> own responsibility" --> ContribOfframp
-    DAIFloat -- "<b style='font-size:1.8em'>③</b> wallet-to-wallet, DAI discount" --> VendorsCrypto
-    DAIFloat -- "<b style='font-size:1.8em'>③</b> processor converts +<br/>pays vendor in one settlement" --> OffRampJIT
-    OffRampJIT -- "<b style='font-size:1.8em'>③</b>" --> VendorsFiat
-    SatBank -- "<b style='font-size:1.8em'>③</b> ACH/card,<br/>routine ops" --> VendorsFiat
-    SubBank -- "<b style='font-size:1.8em'>③</b> ACH/card,<br/>routine ops" --> VendorsFiat
+    DAIFloat -- "<b style='font-size:2.3em'>③</b> wallet-to-wallet" --> Contributors
+    Contributors -- "<b style='font-size:2.3em'>③</b> own responsibility" --> ContribOfframp
+    DAIFloat -- "<b style='font-size:2.3em'>③</b> wallet-to-wallet, DAI discount" --> VendorsCrypto
+    DAIFloat -- "<b style='font-size:2.3em'>③</b> processor converts +<br/>pays vendor in one settlement" --> OffRampJIT
+    OffRampJIT -- "<b style='font-size:2.3em'>③</b>" --> VendorsFiat
+    SatBank -- "<b style='font-size:2.3em'>③</b> ACH/card,<br/>routine ops" --> VendorsFiat
+    SubBank -- "<b style='font-size:2.3em'>③</b> ACH/card,<br/>routine ops" --> VendorsFiat
 
-    Treasury -.->|"<b style='font-size:1.8em'>④</b> deferred until<br/>F/T controller on board"| Hedge
+    Treasury -.->|"<b style='font-size:2.3em'>④</b> deferred until<br/>F/T controller on board"| Hedge
 
     SatBank ~~~ Customer
     VendorsFiat ~~~ LEGEND

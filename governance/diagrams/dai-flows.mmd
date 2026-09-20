@@ -25,27 +25,27 @@ flowchart TD
         Governance[Sky governance - SKY/MKR holders]
     end
 
-    VaultOwner -- "<b style='font-size:1.8em'>①</b> locks" --> ETHCollat
-    ETHCollat -- "<b style='font-size:1.8em'>②</b> posted as collateral" --> Vault
-    Vault -- "<b style='font-size:1.8em'>③</b> mints, 145-175%+ overcollateralized" --> DAISupply
+    VaultOwner -- "<b style='font-size:2.3em'>①</b> locks" --> ETHCollat
+    ETHCollat -- "<b style='font-size:2.3em'>②</b> posted as collateral" --> Vault
+    Vault -- "<b style='font-size:2.3em'>③</b> mints, 145-175%+ overcollateralized" --> DAISupply
 
-    Holder -- "<b style='font-size:1.8em'>④</b> swaps USDC" --> PSM
-    PSM -- "<b style='font-size:1.8em'>⑤</b> mints/burns" --> DAISupply
-    PSM -- "<b style='font-size:1.8em'>⑥</b> holds" --> USDC
-    USDC -- "<b style='font-size:1.8em'>⑦</b> issued by" --> Circle
+    Holder -- "<b style='font-size:2.3em'>④</b> swaps USDC" --> PSM
+    PSM -- "<b style='font-size:2.3em'>⑤</b> mints/burns" --> DAISupply
+    PSM -- "<b style='font-size:2.3em'>⑥</b> holds" --> USDC
+    USDC -- "<b style='font-size:2.3em'>⑦</b> issued by" --> Circle
 
-    Holder -- "<b style='font-size:1.8em'>⑧</b> swaps ETH/BTC/USDC/USD for DAI" --> Exchange
-    Exchange -- "<b style='font-size:1.8em'>⑨</b> trades existing DAI" --> DAISupply
-    Exchange -- "<b style='font-size:1.8em'>⑩</b> DAI" --> Holder
+    Holder -- "<b style='font-size:2.3em'>⑧</b> swaps ETH/BTC/USDC/USD for DAI" --> Exchange
+    Exchange -- "<b style='font-size:2.3em'>⑨</b> trades existing DAI" --> DAISupply
+    Exchange -- "<b style='font-size:2.3em'>⑩</b> DAI" --> Holder
 
-    Vault -- "<b style='font-size:1.8em'>⑪</b> backed in part by" --> RWA
-    RWA -- "<b style='font-size:1.8em'>⑫</b> held by" --> RWACustodian
+    Vault -- "<b style='font-size:2.3em'>⑪</b> backed in part by" --> RWA
+    RWA -- "<b style='font-size:2.3em'>⑫</b> held by" --> RWACustodian
 
-    Vault -- "<b style='font-size:1.8em'>⑬</b> risk parameters set by" --> Governance
-    ESM -- "<b style='font-size:1.8em'>⑭</b> triggered by" --> Governance
+    Vault -- "<b style='font-size:2.3em'>⑬</b> risk parameters set by" --> Governance
+    ESM -- "<b style='font-size:2.3em'>⑭</b> triggered by" --> Governance
 
-    DAISupply -- "<b style='font-size:1.8em'>⑮</b> can be frozen by" --> ESM
-    PSM -.->|"<b style='font-size:1.8em'>⑯</b> PSM and RWA shortfalls absorbed by"| Buffer
+    DAISupply -- "<b style='font-size:2.3em'>⑮</b> can be frozen by" --> ESM
+    PSM -.->|"<b style='font-size:2.3em'>⑯</b> PSM and RWA shortfalls absorbed by"| Buffer
 
     classDef user fill:#dbeafe,stroke:#2563eb,stroke-width:2px
     classDef code fill:#dcfce7,stroke:#16a34a,stroke-width:2px
