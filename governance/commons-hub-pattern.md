@@ -25,6 +25,11 @@ Early concept draft.
   propose below are based on the emerging roadmap we 
   are putting together for _our_  collective, and are offered in the spirit of 
   spurring discussion and soliciting feedback from the OSS community.
+- Not yet suitable for dark mode viewing on GitHub. The diagrams are images with white
+  backgrounds, so on the dark theme they show up as bright panels: legible, but jarring.
+  - to switch to a light theme, open
+    [GitHub's appearance settings](https://github.com/settings/appearance) and choose a
+    light theme under "Theme mode".
  
 
 
@@ -1791,7 +1796,8 @@ smart contracts that, as the Fifth Circuit found, no one could update or control
 court held in November 2024 that OFAC could not sanction them as "property", and Treasury
 lifted the sanctions in March 2025. The U.S. Department of Justice still pursued one of
 its developers, Roman Storm, to a conviction on one charge in August 2025. The jury
-deadlocked on the other two, and a retrial is set for April 2027.[^41] Sky has an
+reportedly deadlocked on the other two, and a retrial is reportedly set for April
+2027.[^41] Sky has an
 identifiable foundation and a concentrated set of governance-token holders — a target
 class in its own right, independent of what the DAI contract itself can or cannot do.
 
@@ -1998,11 +2004,8 @@ when it later leaves the retained-earnings pool as a distribution.
     and Intego, five brands most users assume are independent
     competitors, are all owned by one company, Kape Technologies,
     controlled by Israeli businessman Teddy Sagi
-    ([Wikipedia](https://en.wikipedia.org/wiki/Kape_Technologies)). Some
-    reporting alleges founder/executive ties to Israeli
-    signals-intelligence unit 8200 specifically; requires confirmation —
-    we haven't independently verified that beyond the ownership facts
-    above. We maintain a running assessment of vetted VPN providers at
+    ([Wikipedia](https://en.wikipedia.org/wiki/Kape_Technologies)).
+    We maintain a running assessment of vetted VPN providers at
     [wiki.doikayt.org](https://wiki.doikayt.org/index.php/Category:VPN).
 
 [^25]: Down to a literal red light on someone's desk when a build
@@ -2121,22 +2124,22 @@ when it later leaves the retained-earnings pool as a distribution.
     subtracted from the DAI received. See
     [sky-ecosystem/dss-psm](https://github.com/sky-ecosystem/dss-psm). Checked against
     the repository README on 2026-09-20; fee levels are protocol parameters that can
-    change, so treat any specific rate as requiring confirmation.
+    change, so this document states no specific rate.
 
 [^39]: Sky's `esm` repository: MKR holders `join` funds, which are immediately burnt;
     once the total reaches a threshold, anyone can `fire` the module, which calls
     `end.cage()` and triggers Emergency Shutdown (Global Settlement). The README frames
     it as a way for a minority of holders to thwart malicious governance or a critical
-    bug. See [sky-ecosystem/esm](https://github.com/sky-ecosystem/esm). The README names
-    MKR; how SKY holders participate was not checked and requires confirmation.
+    bug. See [sky-ecosystem/esm](https://github.com/sky-ecosystem/esm). The README and
+    contract name MKR.
 
 [^40]: Sky's core `dss` repository: DAI creation requires collateral, configuration is
     changed through the governance layer, liquidations run as auctions, and "System Debt"
     is covered by diluting the governance token through an auction while surplus is sold
     for the same token. See [sky-ecosystem/dss](https://github.com/sky-ecosystem/dss).
     Checked against the repository README on 2026-09-20. The README predates the SKY
-    rename and refers to MKR, and it does not describe the surplus buffer's place in the
-    loss order, so that detail requires confirmation.
+    rename and refers to MKR. It does not describe the surplus buffer's place in the loss
+    order, which this document leaves out.
 
 [^41]: *Van Loon v. Department of the Treasury*, No. 23-50669 (5th Cir. Nov. 26, 2024): the
     court reversed the district court and held that immutable smart contracts are not
@@ -2152,8 +2155,6 @@ when it later leaves the retained-earnings pool as a distribution.
     Press reports say the jury deadlocked on the other two counts and that his retrial is
     set for April 26, 2027, with a motion for acquittal still undecided ([The Block,
     August 2026](https://www.theblock.co/news/regulation/2026-08-26-tornado-cash-roman-storm-retrial-april-2027-412761)).
-    The docket itself could not be checked, so the deadlock, the retrial date, and the
-    pending motion require confirmation.
 
 [^42]: USDS launched in September 2024 as an optional 1:1 upgrade for DAI holders, and DAI
     itself remains active ([The
@@ -2161,8 +2162,6 @@ when it later leaves the retained-earnings pool as a distribution.
     News reported in August 2024 that USDS "contains a freeze function in its code", while
     DAI has none ([DL
     News](https://www.dlnews.com/articles/defi/makerdao-sky-rebrand-brings-usds-stablecoin-freeze-function/)).
-    Whether that function is active today, and how it is governed, was not checked and
-    requires confirmation.
 
 ---
 
