@@ -837,14 +837,14 @@ Dashed $\color{orange}{\text{orange}}$ boxes are external parties, outside both 
 
 *Money in* ($\color{red}{\text{①}}$). Donor gifts reach the Satellite and customer revenue reaches
 the subsidiary. A donor can send cash to the Satellite's bank account, DAI directly to the
-operating float, or ETH or BTC straight to the treasury. Customers pay the subsidiary by card or
-ACH, mostly in fiat. Whatever lands in a bank account is swept periodically into the multisig
-treasury and held as ETH. That is the reason both bank accounts are labeled "near-term ops only":
-bank accounts are the one part of this structure a U.S. freeze can reach, so we keep as little in
-them as possible. The Satellite and its subsidiary are separate legal entities, which is why each
-keeps its own bank account. Everything downstream of the sweep, from the treasury to the DAI
-float, belongs to the Satellite, so the subsidiary's sweep is a distribution from a wholly-owned
-subsidiary to its parent.
+operating float, ETH straight to the treasury, or BTC, which is swapped to ETH on arrival.
+Customers pay the subsidiary by card or ACH, mostly in fiat. Whatever lands in a bank account is
+swept periodically into the multisig treasury and held as ETH. That is the reason both bank
+accounts are labeled "near-term ops only": bank accounts are the one part of this structure a U.S.
+freeze can reach, so we keep as little in them as possible. The Satellite and its subsidiary are
+separate legal entities, which is why each keeps its own bank account. Everything downstream of
+the sweep, from the treasury to the DAI float, belongs to the Satellite, so the subsidiary's sweep
+is a distribution from a wholly-owned subsidiary to its parent.
 
 *Converting* ($\color{blue}{\text{②}}$). Once a month or quarter, a batch converts part of the ETH
 treasury into DAI on a single multisig sign-off, refilling the operating float. This is the

@@ -30,7 +30,7 @@ flowchart TD
     Donor -- "<b style='font-size:2.3em'>①</b> cash/USD" --> SatBank
     SatBank -- "<b style='font-size:2.3em'>①</b> periodic sweep" --> Treasury
     Donor -- "<b style='font-size:2.3em'>①</b> DAI directly" --> DAIFloat
-    Donor -- "<b style='font-size:2.3em'>①</b> ETH/BTC swappable" --> Treasury
+    Donor -- "<b style='font-size:2.3em'>①</b> ETH, or BTC swapped to ETH" --> Treasury
     Customer -- "<b style='font-size:2.3em'>①</b> card/ACH, mostly fiat" --> SubBank
     SubBank -- "<b style='font-size:2.3em'>①</b> periodic sweep" --> Treasury
 
