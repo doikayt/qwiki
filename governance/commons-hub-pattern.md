@@ -871,12 +871,11 @@ funds sit in ETH and DAI, which have no per-address freeze function, subject to 
 described in [Appendix A.4](#a4-dai-backgrounder).
 
 
-No aspect of this structure  would have stopped  the designation itself. It would have
-kept the Commons and every other Satellite running while the targeted
-Satellite dealt with the consequences. That is the whole point of
-dispersion: a collective can't escape being in the cross-hairs of a hostile state or 
-corporation, but it can decide in advance, through structure, whether 
-such targeting ends its work or only slows it down.
+None of this would have stopped the sanctioning of A/I in the first place. What it would
+have done is keep the Commons and every other Satellite running while the targeted
+Satellite dealt with the consequences. That is the whole point of dispersion: a collective
+can't escape being in the cross-hairs of a hostile state or corporation, but it can decide
+in advance, through structure, whether such targeting ends its work or only slows it down.
 
 Resilience protects the collective from pressure applied from outside. The next question
 is what keeps its founders and contributors committed from the inside: who benefits from
