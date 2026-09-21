@@ -1717,9 +1717,10 @@ Entities in the diagram:
   asset (RWA).
 - Peg Stability Module: a protocol contract that swaps USDC for newly minted DAI, which
   helps keep DAI trading close to one dollar.
-- Emergency Shutdown Module: the protocol's circuit breaker, which anyone can fire once
-  enough governance tokens have been pledged (and burned), halting the system and settling
-  holders' claims.
+- Emergency Shutdown Module: the human override. Governance-token holders can vote to shut
+  the system down by giving up tokens for good, a costly vote meant for emergencies such as
+  captured governance or a critical bug. Once enough tokens are given up, anyone can trigger
+  the shutdown, which halts the protocol and turns each DAI into a claim on the collateral.
 - RWA custodian/trustee: the off-chain institution that legally holds the real-world assets
   behind those tokens.
 
@@ -1768,9 +1769,9 @@ pressured, sitting behind what is otherwise code.
 *Who sets the rules* ($\color{purple}{\text{⑬}}$–$\color{purple}{\text{⑭}}$). Holders of Sky's
 governance tokens decide which collateral is accepted and how much DAI can be issued against each
 type ($\color{purple}{\text{⑬}}$).[^40] The same token holders also stand behind the emergency
-brake ($\color{purple}{\text{⑭}}$): they can pledge tokens, which are burned, and once enough are
-pledged anyone can fire the Emergency Shutdown Module. Sky describes it as a tool for a minority
-of holders to stop malicious governance or a critical bug.[^39]
+brake ($\color{purple}{\text{⑭}}$): they can vote to shut the system down by giving up tokens for
+good, and once enough are given up anyone can trigger the Emergency Shutdown Module. Sky describes
+it as a tool for a minority of holders to stop malicious governance or a critical bug.[^39]
 
 *When things go wrong* ($\color{red}{\text{⑮}}$–$\color{red}{\text{⑯}}$). The red arrows are the
 stress paths. If Emergency Shutdown fires, DAI stops behaving like a freely spendable balance and
@@ -1787,12 +1788,11 @@ The orange and red parts of the diagram mark three limits: a circuit breaker bui
 the protocol, exposure for the people behind it, and a dependency on an issuer that can
 freeze.
 
-Sky's protocol does have a circuit breaker, built in by design: the Emergency Shutdown
-Module, which governance-token holders can set off by pledging (and burning) enough tokens,
-in response to a perceived existential threat to the system. Triggering it freezes the
-protocol and converts DAI from a freely spendable balance into a claim redeemable only
-through a settlement process — a real, if deliberately hard to reach, mechanism by which
-liquidity could stop on short notice.
+Sky's protocol does have a circuit breaker, built in by design: the Emergency Shutdown Module,
+which governance-token holders can trigger by giving up enough tokens for good, in response to a
+perceived existential threat to the system. Triggering it freezes the protocol and converts DAI
+from a freely spendable balance into a claim redeemable only through a settlement process — a
+real, if deliberately hard to reach, mechanism by which liquidity could stop on short notice.
 
 The second limit is the dashed-orange box. A smart contract's lack of a freeze key doesn't
 extend the same immunity to the people who govern or maintain it. The clearest precedent
