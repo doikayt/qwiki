@@ -519,6 +519,7 @@ runs its own DNS hosting, and its
 pre-registered with ISNIC, sidestepping the separate registration
 step ISNIC otherwise requires.
 
+<a id="onion-mirror"></a>
 A further layer of protection is achievable (at the expense of more network configuration overhead) 
 by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror on
 [Tor](https://en.wikipedia.org/wiki/Tor_(network))[^20][^21].
@@ -623,7 +624,7 @@ tokens](https://docs.npmjs.com/creating-and-viewing-access-tokens/) —
 scoped to specific packages, with a defined expiry, rather than a
 classic token with blanket publish rights[^32] — and
 keep a second maintainer's account (2FA-enabled, with its own recovery
-methods on file) able to publish as a fallback./signer
+methods on file) as a fallback publish channel.
 
 
 *Financial Keys and Credentials.* A multisig treasury (§2) needs
@@ -637,11 +638,12 @@ private key off any internet-connected device entirely. The [seed
 phrase](https://en.wikipedia.org/wiki/Seed_phrase) behind it needs its own backup, split or duplicated across more than one physical
 location, so losing any single copy — to a fire, a theft, or misplacement -- 
 doesn't result in lock-out. None of this should be set up under
-pressure: a signer should periodically confirm they can still produce
-a valid signature with their own key, the same way the onion mirror
-and alternate domain above get periodically checked, rather than
-finding out only when a critical transaction gets blocked. Where
-those signers are located matters as much as how they guard the key —
+pressure: a signer should periodically confirm their ability to produce
+a valid signature with their key (the same way the
+[onion mirror](#onion-mirror) and [alternate domain](#technical-infrastructure-dns)
+above get periodically checked), rather than finding out only when a critical
+transaction gets blocked. Where
+signers are located matters as much as how they guard the key —
 and we next discuss how jurisdictional spread should shape the trusted signer roster.
 
 
@@ -2099,12 +2101,14 @@ when it later leaves the retained-earnings pool as a distribution.
     backing cash reserves were stuck at the failed bank, and USDC — a
     stablecoin pegged to the US dollar — fell as low as roughly $0.87 on
     some exchanges. Since DAI held over half of its collateral in USDC at
-    the time (roughly 35-40% today), that wobble passed straight through
+    the time (as opposed to roughly 35-40% today), that wobble passed straight through
     to DAI's peg too: DAI fell as low as roughly $0.85-0.90 depending on
-    the venue, a dip of about 10-15%. The dip happened at all because DAI
-    relies on USDC as collateral; it stayed brief because Treasury, the
+    the venue, a dip of about 10-15%. The fact the dip happened at all was due to DAI's 
+    reliance on USDC as collateral; it stayed brief because Treasury, the
     Federal Reserve, and the FDIC announced on Sunday, March 12, two days
-    after the bank failed, that all SVB depositors would be protected, so
+    after the bank failed, that all SVB depositors would be protected
+    ([joint
+    statement](https://home.treasury.gov/news/press-releases/jy1337)), so
     Circle's reserves turned out to be fully intact, USDC recovered to
     $1, and DAI's own peg followed it back up once its collateral was
     healthy again. Recovery to full peg took 48 hours. [DAI Depegs to
@@ -2141,15 +2145,19 @@ when it later leaves the retained-earnings pool as a distribution.
 [^41]: *Van Loon v. Department of the Treasury*, No. 23-50669 (5th Cir. Nov. 26, 2024): the
     court reversed the district court and held that immutable smart contracts are not
     "property" under IEEPA because no one can own or control them. See the
-    [opinion](https://www.ca5.uscourts.gov/opinions/pub/23/23-50669-CV0.pdf), located via
-    search and not read in full. Treasury delisted Tornado Cash on March 21, 2025 rather
-    than appeal, per [Venable's
-    summary](https://www.venable.com/insights/publications/2025/04/a-legal-whirlwind-settles-treasury-lifts-sanctions);
-    the date was not checked against Treasury's own notice and requires confirmation.
-    Storm was convicted in August 2025 on one count of money transmitting, the jury
-    deadlocked on the other two, and his retrial is set for April 26, 2027, with a motion
-    for acquittal still undecided, per [The Block's August 2026
-    report](https://www.theblock.co/news/regulation/2026-08-26-tornado-cash-roman-storm-retrial-april-2027-412761).
+    [opinion](https://www.ca5.uscourts.gov/opinions/pub/23/23-50669-CV0.pdf). Treasury
+    delisted Tornado Cash on March 21, 2025, exercising its discretion to remove the
+    sanctions ([Treasury press
+    release](https://home.treasury.gov/news/press-releases/sb0057); [OFAC recent
+    actions](https://ofac.treasury.gov/recent-actions/20250321)). Storm was convicted in
+    August 2025 on one count of conspiracy to operate an unlicensed money transmitting
+    business ([DOJ press
+    release](https://www.justice.gov/usao-sdny/pr/founder-tornado-cash-crypto-mixing-service-convicted-knowingly-transmitting-criminal)).
+    Press reports say the jury deadlocked on the other two counts and that his retrial is
+    set for April 26, 2027, with a motion for acquittal still undecided ([The Block,
+    August 2026](https://www.theblock.co/news/regulation/2026-08-26-tornado-cash-roman-storm-retrial-april-2027-412761)).
+    The docket itself could not be checked, so the deadlock, the retrial date, and the
+    pending motion require confirmation.
 
 [^42]: USDS launched in September 2024 as an optional 1:1 upgrade for DAI holders, and DAI
     itself remains active ([The

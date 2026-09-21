@@ -76,10 +76,11 @@ This is one of four companion documents split out of a single original draft (se
    the Tornado Cash matter for two points: that people who build or maintain code nobody
    controls can still be prosecuted after a sanction on the code itself falls, and that a
    protocol's foundation and concentrated governance-token holders are a target class
-   in their own right. The case facts (the Fifth Circuit's November 2024 reversal, the
-   March 2025 delisting, the August 2025 conviction on one count, and the April 2027
-   retrial date) were taken from secondary sources and one court-reporting site and have
-   not been checked against the dockets. Unresolved, needs counsel:
+   in their own right. The Fifth Circuit's November 2024 reversal, the March 2025
+   delisting, and the August 2025 conviction on one count were checked against the court,
+   Treasury, and DOJ pages. The jury deadlock on the other two counts, the April 2027
+   retrial date, and the pending acquittal motion rest on press reports, and the docket
+   itself could not be accessed. Unresolved, needs counsel:
    - Current status of the prosecution, including the pending acquittal motion, before
      the document states any of it as settled.
    - Whether the analogy carries from a mixer's developer to the participants who govern a
