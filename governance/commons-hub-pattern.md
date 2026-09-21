@@ -1779,13 +1779,9 @@ Peg Stability Module or the real-world asset pool loses value, the shortfall is 
 protocol's surplus buffer ($\color{red}{\text{⑯}}$); debt the system can't otherwise cover is made
 good by diluting the governance token through an auction.[^39]
 
-The resilience described at the top of this backgrounder isn't unconditional, though, and
-it's worth being precise about where its limits actually sit rather than let a reader
-assume the treasury is untouchable.
-
-The orange and red parts of the diagram mark three limits: a circuit breaker built into
-the protocol, exposure for the people behind it, and a dependency on an issuer that can
-freeze.
+That resilience has limits. The orange and red parts of the diagram mark three of them: a
+circuit breaker built into the protocol, exposure for the people behind it, and a dependency
+on an issuer that can freeze.
 
 Sky's protocol does have a circuit breaker, built in by design: the Emergency Shutdown Module,
 which governance-token holders can trigger by giving up enough tokens for good, in response to a
