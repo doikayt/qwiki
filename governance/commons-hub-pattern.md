@@ -1725,54 +1725,59 @@ Entities in the diagram:
 
 Following the numbers, DAI reaches someone's hands in three ways:
 
-- minted against collateral (①–③)
-- minted against USDC (④–⑦)
-- bought on an exchange (⑧–⑩)
+- minted against collateral ($\color{gray}{\text{①}}$–$\color{green}{\text{③}}$)
+- minted against USDC ($\color{blue}{\text{④}}$–$\color{gray}{\text{⑦}}$)
+- bought on an exchange ($\color{blue}{\text{⑧}}$–$\color{blue}{\text{⑩}}$)
 
 Three more things sit underneath:
 
-- what backs it: real-world assets (⑪–⑫)
-- who sets the rules (⑬–⑭)
-- what happens when things go wrong (⑮–⑯)
+- what backs it: real-world assets ($\color{gray}{\text{⑪}}$–$\color{gray}{\text{⑫}}$)
+- who sets the rules ($\color{purple}{\text{⑬}}$–$\color{purple}{\text{⑭}}$)
+- what happens when things go wrong ($\color{red}{\text{⑮}}$–$\color{red}{\text{⑯}}$)
 
-*Minted against collateral (①–③).* A vault owner locks crypto in the protocol (① and ②),
-and the Vault mints DAI against it (③). The collateral has to be worth more than the DAI
-minted against it, by a margin the diagram puts at 145% to 175% or more, so that a price
-drop doesn't leave DAI unbacked. Sky's core repository describes the design the same way:
-DAI creation isn't possible without collateral, and positions that turn risky are
-liquidated through auctions.[^40]
+*Minted against collateral* ($\color{gray}{\text{①}}$–$\color{green}{\text{③}}$). A vault owner
+locks crypto in the protocol ($\color{gray}{\text{①}}$ and $\color{gray}{\text{②}}$), and the
+Vault mints DAI against it ($\color{green}{\text{③}}$). The collateral has to be worth more than
+the DAI minted against it, by a margin the diagram puts at 145% to 175% or more, so that a price
+drop doesn't leave DAI unbacked. Sky's core repository describes the design the same way: DAI
+creation isn't possible without collateral, and positions that turn risky are liquidated through
+auctions.[^40]
 
-*Minted against USDC (④–⑦).* Someone holding USDC can swap it for DAI through the Peg
-Stability Module (④). The module works as a specially authorized vault: it locks the
-incoming USDC and issues DAI against it (⑤ and ⑥), with a fee taken out of the DAI
-received.[^38] The catch sits at the far end of the path. [Circle](https://www.circle.com/) 
-issues USDC (⑦) and can freeze it, which is why Circle is orange, and 
-why everything minted this way inherits that exposure.
+*Minted against USDC* ($\color{blue}{\text{④}}$–$\color{gray}{\text{⑦}}$). Someone holding USDC
+can swap it for DAI through the Peg Stability Module ($\color{blue}{\text{④}}$). The module works
+as a specially authorized vault: it locks the incoming USDC and issues DAI against it
+($\color{green}{\text{⑤}}$ and $\color{gray}{\text{⑥}}$), with a fee taken out of the DAI
+received.[^38] The catch sits at the far end of the path. [Circle](https://www.circle.com/) issues
+USDC ($\color{gray}{\text{⑦}}$) and can freeze it, which is why Circle is orange, and why
+everything minted this way inherits that exposure.
 
-*Bought on an exchange (⑧–⑩).* This is the path most collectives will actually use. They
-swap ETH, BTC, USDC, or dollars for DAI (⑧), an exchange sells them DAI that is already in
-circulation (⑨), and the DAI arrives in their wallet (⑩). Nothing new is minted on this
-path: the exchange is a marketplace, not an issuer. It's orange because a centralized
-exchange knows who you are and can refuse to serve you, which makes this the one leg where
-ordinary financial-institution controls still apply. A decentralized exchange is code
-rather than an institution, so only the centralized kind carries that exposure.
+*Bought on an exchange* ($\color{blue}{\text{⑧}}$–$\color{blue}{\text{⑩}}$). This is the path most
+collectives will actually use. They swap ETH, BTC, USDC, or dollars for DAI
+($\color{blue}{\text{⑧}}$), an exchange sells them DAI that is already in circulation
+($\color{blue}{\text{⑨}}$), and the DAI arrives in their wallet ($\color{blue}{\text{⑩}}$).
+Nothing new is minted on this path: the exchange is a marketplace, not an issuer. It's orange
+because a centralized exchange knows who you are and can refuse to serve you, which makes this the
+one leg where ordinary financial-institution controls still apply. A decentralized exchange is
+code rather than an institution, so only the centralized kind carries that exposure.
 
-*Backed in part by real-world assets (⑪–⑫).* Some of the backing is Tokenized Treasuries
-(⑪), held for the protocol by an RWA custodian (⑫). That makes the custodian a second
-institution that can be pressured, sitting behind what is otherwise code.
+*Backed in part by real-world assets* ($\color{gray}{\text{⑪}}$–$\color{gray}{\text{⑫}}$). Some of
+the backing is Tokenized Treasuries ($\color{gray}{\text{⑪}}$), held for the protocol by an RWA
+custodian ($\color{gray}{\text{⑫}}$). That makes the custodian a second institution that can be
+pressured, sitting behind what is otherwise code.
 
-*Who sets the rules (⑬–⑭).* Holders of Sky's governance tokens decide which collateral is
-accepted and how much DAI can be issued against each type (⑬).[^40] The same token holders
-also stand behind the emergency brake (⑭): they can pledge tokens, which are burned, and
-once enough are pledged anyone can fire the Emergency Shutdown Module. Sky describes it as
-a tool for a minority of holders to stop malicious governance or a critical bug.[^39]
+*Who sets the rules* ($\color{purple}{\text{⑬}}$–$\color{purple}{\text{⑭}}$). Holders of Sky's
+governance tokens decide which collateral is accepted and how much DAI can be issued against each
+type ($\color{purple}{\text{⑬}}$).[^40] The same token holders also stand behind the emergency
+brake ($\color{purple}{\text{⑭}}$): they can pledge tokens, which are burned, and once enough are
+pledged anyone can fire the Emergency Shutdown Module. Sky describes it as a tool for a minority
+of holders to stop malicious governance or a critical bug.[^39]
 
-*When things go wrong (⑮–⑯).* The red arrows are the stress paths. If Emergency Shutdown
-fires, DAI stops behaving like a freely spendable balance and becomes a claim on a
-settlement process (⑮). And if a position in the Peg Stability Module or the real-world
-asset pool loses value, the shortfall is absorbed by the protocol's surplus buffer (⑯);
-debt the system can't otherwise cover is made good by diluting the governance token
-through an auction.[^40]
+*When things go wrong* ($\color{red}{\text{⑮}}$–$\color{red}{\text{⑯}}$). The red arrows are the
+stress paths. If Emergency Shutdown fires, DAI stops behaving like a freely spendable balance and
+becomes a claim on a settlement process ($\color{red}{\text{⑮}}$). And if a position in the Peg
+Stability Module or the real-world asset pool loses value, the shortfall is absorbed by the
+protocol's surplus buffer ($\color{red}{\text{⑯}}$); debt the system can't otherwise cover is made
+good by diluting the governance token through an auction.[^40]
 
 The resilience described at the top of this backgrounder isn't unconditional, though, and
 it's worth being precise about where its limits actually sit rather than let a reader
