@@ -855,10 +855,10 @@ small swaps, also keeps signer effort and capital-gains events low.
 *Money out* ($\color{green}{\text{③}}$). Everything paid out comes from the DAI float.
 Contributors are paid wallet to wallet, and converting to fiat is their own responsibility.
 Crypto-accepting vendors are paid the same way, at a discount for paying in DAI. Fiat-only vendors
-are paid through a just-in-time off-ramp ([Request Finance](https://www.request.finance/)): a
-processor converts the DAI and pays the vendor directly in one settlement, so no fiat sits in the
-collective's accounts along the way. Routine operating costs still go out by ACH or card from the
-two near-term bank accounts.
+are paid through a just-in-time off-ramp ([Request Finance](https://www.request.finance/)), a
+processor that converts the DAI and pays the vendor directly in one settlement, so no fiat sits in
+the collective's accounts along the way. Routine operating costs still go out by ACH or card from
+the two near-term bank accounts.
 
 *Held back for now* ($\color{gray}{\text{④}}$ and the dotted lines). Hedging the ETH treasury
 waits until a treasurer is on board, for the overhead reasons given earlier. The donation
