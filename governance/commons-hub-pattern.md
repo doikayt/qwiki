@@ -812,7 +812,7 @@ its subsidiary) can hire a treasurer, and then let that person decide.
 
 #### Fund flows
 
-<a href="diagrams/fund-flows.png"><img src="diagrams/fund-flows.png" width="100%"
+<a href="diagrams/fund-flows.svg"><img src="diagrams/fund-flows.png" width="100%"
 alt="Fund flows: donor and customer money in, a periodic ETH to DAI batch convert, and
 money out to contributors and vendors, in four numbered stages"></a>
 
@@ -1689,7 +1689,7 @@ transfer funds without making a conventional financial institution the single po
 which a politically motivated designation, compliance decision, or correspondent-banking
 cutoff can immobilize its treasury.
 
-<a href="diagrams/dai-flows.png"><img src="diagrams/dai-flows.png" width="100%"
+<a href="diagrams/dai-flows.svg"><img src="diagrams/dai-flows.png" width="100%"
 alt="DAI components and flows: individuals and organizations at the top, the Sky protocol
 in the middle, institutions at the bottom, with sixteen numbered flows"></a>
 

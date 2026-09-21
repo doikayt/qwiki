@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// Render every diagrams/*.mmd (Mermaid source) to a PNG next to it.
+// Render every diagrams/*.mmd (Mermaid source) to a PNG and an SVG next to it.
+// The PNG is embedded inline; the SVG is the click-through, sharp at any zoom.
 // Usage: node governance/diagrams/render-diagrams.mjs [name ...]
 //   With no names, renders all .mmd files. Names are file stems, e.g. "dai-flows".
 // Needs Mermaid CLI (mmdc) on PATH or in MMDC, and a Chromium: set CHROMIUM if it
@@ -34,8 +35,8 @@ if (sources.length === 0) {
 }
 
 let failed = 0;
-for (const file of sources) {
-  const out = file.replace(/\.mmd$/, '.png');
+for (const file of sources) for (const ext of ['png', 'svg']) {
+  const out = file.replace(/\.mmd$/, `.${ext}`);
   const r = spawnSync(mmdc, [
     '-p', puppeteerConfig,
     '-i', join(here, file),
