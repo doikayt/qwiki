@@ -14,7 +14,7 @@ flowchart TD
         SubBank[Bank account - near-term ops only]
     end
 
-    DonationProcessor[Giving Block - streamline tax receipts,<br/>configured to hold as crypto]
+    DonationProcessor[Giving Block - streamlines tax receipts<br/>for crypto donations]
     Contributors{{Contributors}}
     ContribOfframp(Contributor's own fiat off-ramp)
     VendorsCrypto{{Vendors - crypto-accepting}}
@@ -51,7 +51,7 @@ flowchart TD
 
     SatBank ~~~ Customer
     VendorsFiat ~~~ LEGEND
-    DonationProcessor -.-> Treasury
+    DonationProcessor -.-> SatBank
 
     linkStyle 0,1,2,3,4,5 stroke:#d62728,color:#d62728
     linkStyle 7,8 stroke:#1f77b4,color:#1f77b4
