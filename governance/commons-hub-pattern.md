@@ -8,7 +8,7 @@
 *A replicable model for organizing collaboratively-developed
 open source software (OSS) around nonprofit and for-profit satellites*
 
-**Status:**: 
+**Status:**
 
 Early concept draft.
 
@@ -16,14 +16,14 @@ Early concept draft.
   - nothing in this document is legal, tax, or financial advice;
   - consult qualified counsel and a CPA before acting on anything discussed herein.
 - Not offered as guidance to any sanctioned or designated party.
-  - this analysis is intended soley for educational and organizational-design purposes.
+  - this analysis is intended solely for educational and organizational-design purposes.
   - readers are responsible for complying with their jurisdiction's applicable laws, including sanctions regimes.
 - Not written by a trained economist — this is a summary of the
   author's own research and reflection on equitable approaches to
   structuring, operating, and generating wealth from an OSS-focused enterprise.
-- Not battle tested -  the patterns, strategies and technical solutions we 
-  propose below are based on the emerging roadmap we 
-  are putting together for _our_  collective, and are offered in the spirit of 
+- Not battle tested — the patterns, strategies and technical solutions we
+  propose below are based on the emerging roadmap we
+  are putting together for _our_ collective, and are offered in the spirit of
   spurring discussion and soliciting feedback from the OSS community.
 - Not yet suitable for dark mode viewing on GitHub. The diagrams are images with white
   backgrounds, so on the dark theme they show up as bright panels: legible, but jarring.
