@@ -753,8 +753,8 @@ Dollars must be settled inside the U.S. banking system — which
 [OFAC](https://ofac.treasury.gov/) (the Treasury Department's Office of Foreign Assets
 Control) polices through sanctions issued under the
 [IEEPA](https://en.wikipedia.org/wiki/International_Emergency_Economic_Powers_Act).
-Every U.S. bank must comply with OFAC's blocking orders,[^33] but such an order reaches
-only the designated party's property and interests in property.
+Every U.S. bank must comply with OFAC's blocking orders (primary sanctions),[^33] but such
+an order reaches only the designated party's property and interests in property.
 
 [Secondary sanctions](https://en.wikipedia.org/wiki/Secondary_sanctions) reach further, to
 the foreign bank itself and with it every customer the bank serves. Since 2019, Treasury
