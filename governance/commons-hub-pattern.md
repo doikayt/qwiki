@@ -1698,7 +1698,8 @@ in the middle, institutions at the bottom, with sixteen numbered flows"></a>
 *DAI's components and flows. The numbers follow the walkthrough below.*
 
 Boxes: $\color{blue}{\text{blue}}$ = people and organizations ·
-$\color{green}{\text{green}}$ = code · $\color{gray}{\text{gray}}$ = assets ·
+$\color{green}{\text{green}}$ = smart-contract code (everything in the green box, including the
+pink and red boxes) · $\color{gray}{\text{gray}}$ = assets ·
 $\color{deeppink}{\text{pink}}$ = DAI · $\color{orange}{\text{solid orange}}$ = can cut you off ·
 $\color{orange}{\text{dashed orange}}$ = can be legally targeted ·
 $\color{red}{\text{red}}$ = circuit breaker.
