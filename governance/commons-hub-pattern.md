@@ -1715,10 +1715,11 @@ Entities in the diagram:
   asset (RWA).
 - Peg Stability Module: a protocol contract that swaps USDC for newly minted DAI, which
   helps keep DAI trading close to one dollar.
-- Emergency Shutdown Module: the human override. Governance-token holders can vote to shut
-  the system down by giving up tokens for good, a costly vote meant for emergencies such as
-  captured governance or a critical bug. Once enough tokens are given up, anyone can trigger
-  the shutdown, which halts the protocol and turns each DAI into a claim on the collateral.
+- Emergency Shutdown Module: the human override. Governance-token holders can vote to shut the
+  system down by giving up tokens for good, a costly vote meant for emergencies such as captured
+  governance or a critical bug. Once enough tokens are given up, anyone can trigger the shutdown,
+  which halts the protocol and turns each DAI into a (less liquid) claim on the underlying
+  collateral.
 - Real-world asset custodian/trustee: the off-chain institution that legally holds the real-world
   assets behind those tokens.
 
