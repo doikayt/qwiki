@@ -88,24 +88,22 @@ Early concept draft.
 
 ## Overview
 
-This document presents a replicable organizational model for equitable,
-collaborative development and monetization of an
-[open source](https://en.wikipedia.org/wiki/Open-source_software) commons. Before
-detailing the mechanics of the model — including how incoming funds from grants
-and earned revenue get distributed among contributors through a narrowly-scoped
-[DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization) (a
-Decentralized Autonomous Organization) — we look at some of the historical and
-economic factors which make the emergence of a new model inevitable. We note how
-the standard corporate form arose as a specific historical answer to the
-economic questions of (a) who governs production, and (b) who benefits from that production? We first
-analyze these questions through the lens of neoclassical economists — in
-particular how [Coase's 1937 transaction-cost
-account](https://en.wikipedia.org/wiki/The_Nature_of_the_Firm) explains why
-hierarchical structures usually win out. Next up is a dialectical-materialist (Marxist)
-reading of the same shift, wherein we ask a question transaction-cost economics
-doesn't: who holds the _power_ to organize production and claim its
-surplus — and what happens to that arrangement once automation makes
-human labor itself increasingly unnecessary.
+This document presents a replicable organizational model for equitable, collaborative
+development and monetization of an [open
+source](https://en.wikipedia.org/wiki/Open-source_software) commons. Before outlining the
+mechanics of the model — including how incoming funds from grants and earned revenue get
+distributed among contributors through a narrowly-scoped
+[DAO](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization) (a Decentralized
+Autonomous Organization) — we look at some of the historical and economic factors which make the
+emergence of a new model inevitable. We note how the standard corporate form arose as a specific
+historical answer to the economic questions of (a) who governs production, and (b) who benefits
+from that production? We first analyze these questions through the lens of neoclassical
+economists — in particular how [Coase's 1937 transaction-cost
+account](https://en.wikipedia.org/wiki/The_Nature_of_the_Firm) explains why hierarchical
+structures usually win out. Next up is a dialectical-materialist (Marxist) reading of the same
+shift, wherein we ask a question transaction-cost economics doesn't: who holds the _power_ to
+organize production and claim its surplus — and what happens to that arrangement once automation
+makes human labor itself increasingly unnecessary.
 
 We later examine how AI's increasing sophistication and reach are shaping the next
 dominant mode of production, to the point where we have to ask whether human beings can
@@ -120,21 +118,21 @@ hosting collective
 (A/I). It then details technical and financial measures that a collective can take to
 survive in the face of such takedown attempts.
 
-We close on [a hopeful note](#5-the-stakes-and-why-our-model-has-an-edge) -- examining 
+We close on [a hopeful note](#5-the-stakes-and-why-our-model-has-an-edge) -- examining
 how advantages built into our proposed model open opportunities for alternative
 worker-friendly legal/financial/ownership structures to displace the top-down corporate
 form that underpins late-stage disaster capitalism.
 
 In terms of our two opening questions our model's answers are:
 
-- Who governs: the contributors to the commons themselves -- through
-[token-based delegated authority](#token-based-delegated-authority)
-that vests with earned trust and decays on inactivity (rather than
-accumulating into permanent control).
+- Who governs: day to day, the contributors to the commons themselves -- through
+  [token-based delegated authority](#token-based-delegated-authority)
+  that vests with earned trust and decays on inactivity (rather than
+  accumulating into permanent control). Mission and policy stay with each Satellite's Board.
 
 - Who benefits: the people who did the work on a given funded
-program, by their own [equally-weighted vote through a
-DAO](#dao). 
+  program, by their own [equally-weighted vote through a
+  DAO](#dao), subject to Board approval.
 
 
 
@@ -401,9 +399,8 @@ concentration caps, and the full securities-law analysis — is being written
 up in the [Contributor Guide](contributor-guide.md) and [Legal Risk
 Register](legal-risk-register.md), respectively.
 
-*(Proceeds distribution via the funded-program-allocation DAO — the mechanic
-formerly summarized in this section — will get its own detailed treatment in a
-later document; a pointer back to it belongs here once that's written.)*
+The DAO's proceeds-distribution mechanic will get its own detailed treatment in a later
+document.
 
 ## 3. Resilience: surviving attack by design
 
