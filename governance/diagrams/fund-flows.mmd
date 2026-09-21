@@ -25,7 +25,6 @@ flowchart TD
         L1[Asset or account held by an entity]
         L1b[[Process run by an entity]]
         L2[External party or service,<br/>outside both entities]
-        L3[Yellow box: legal entity]
     end
 
     Donor -- "<b style='font-size:2.3em'>①</b> cash/USD" --> SatBank
@@ -60,10 +59,8 @@ flowchart TD
     linkStyle 6,16,19 stroke:#888888,color:#888888,stroke-dasharray: 5 5
 
     classDef owned fill:#eaf2fb,stroke:#1f77b4,stroke-width:3px
-    classDef entity fill:#ffffde,stroke:#aaaa33,stroke-width:1px
     classDef external fill:#fdf0e3,stroke:#e07b00,stroke-width:2px,stroke-dasharray:3 3
     class L1,L1b owned
-    class L3 entity
     class L2 external
     class Treasury,SatBank,SubBank,BatchConvert,DAIFloat,Hedge owned
     class Donor,DonationProcessor,Customer,Contributors,ContribOfframp external
