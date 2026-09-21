@@ -820,50 +820,49 @@ money out to contributors and vendors, in four numbered stages"></a>
 [`diagrams/fund-flows.mmd`](diagrams/fund-flows.mmd).</sub>
 
 This diagram covers financial custody and execution only — how funds move,
-what's crypto versus fiat, and what's owned versus what's external. It intentionally
+what's crypto versus fiat, and what's internal versus what's external. It intentionally
 leaves out the DAO's allocation vote and the Board's review/override
 authority, both already covered in [§2](#2-governance-layer--three-mechanisms);
 the multisig treasury shown here is the layer that executes whatever
 that governance process decides.
 
-*Reading the diagram.* Arrows: $\color{red}{\text{red}}$ = money in (①) ·
-$\color{blue}{\text{blue}}$ = converting ETH to DAI (②) ·
-$\color{green}{\text{green}}$ = money out (③) ·
-$\color{gray}{\text{gray dashed}}$ = deferred or pass-through
-(④ and the dotted lines).
-Blue boxes are assets or accounts held by the Satellite or its subsidiary, and blue
-double-barred boxes are processes they run. Dashed orange boxes are external parties,
-outside both entities.
+*Reading the diagram.* Arrows: $\color{red}{\text{red}}$ = money in
+($\color{red}{\text{①}}$) · $\color{blue}{\text{blue}}$ = converting ETH to DAI
+($\color{blue}{\text{②}}$) · $\color{green}{\text{green}}$ = money out
+($\color{green}{\text{③}}$) · $\color{gray}{\text{gray dashed}}$ = deferred or pass-through
+($\color{gray}{\text{④}}$ and the dotted lines).
+$\color{blue}{\text{Blue}}$ boxes are assets or accounts held by the Satellite or its
+subsidiary, and $\color{blue}{\text{blue}}$ double-barred boxes are processes they run.
+Dashed $\color{orange}{\text{orange}}$ boxes are external parties, outside both entities.
 
-*Money in (①).* Donor gifts reach the Satellite and customer revenue reaches the
-subsidiary. A donor can send cash to the Satellite's bank account, DAI directly to the
-operating float, or ETH or BTC straight to the treasury. Customers pay the subsidiary by
-card or ACH, mostly in fiat. Whatever lands in a bank account is swept periodically into
-the multisig treasury and held as ETH. That is the reason both bank accounts are labeled
-"near-term ops only": bank accounts are the one part of this structure a U.S. freeze can
-reach, so we keep as little in them as possible. The Satellite and its subsidiary are
-separate legal entities, which is why each keeps its own bank account. Everything
-downstream of the sweep, from the treasury to the DAI float, belongs to the Satellite,
-so the subsidiary's sweep is a distribution from a wholly-owned subsidiary to its parent.
+*Money in ($\color{red}{\text{①}}$).* Donor gifts reach the Satellite and customer revenue reaches
+the subsidiary. A donor can send cash to the Satellite's bank account, DAI directly to the
+operating float, or ETH or BTC straight to the treasury. Customers pay the subsidiary by card or
+ACH, mostly in fiat. Whatever lands in a bank account is swept periodically into the multisig
+treasury and held as ETH. That is the reason both bank accounts are labeled "near-term ops only":
+bank accounts are the one part of this structure a U.S. freeze can reach, so we keep as little in
+them as possible. The Satellite and its subsidiary are separate legal entities, which is why each
+keeps its own bank account. Everything downstream of the sweep, from the treasury to the DAI
+float, belongs to the Satellite, so the subsidiary's sweep is a distribution from a wholly-owned
+subsidiary to its parent.
 
-*Converting (②).* Once a month or quarter, a batch converts part of the ETH treasury into
-DAI on a single multisig sign-off, refilling the operating float. This is the two-tier
-model in practice. The ETH holds long-term value where no bank can freeze it, and the DAI
-is the stable working balance the collective actually spends. One periodic batch, in place
-of many small swaps, also keeps signer effort and capital-gains events low.
+*Converting ($\color{blue}{\text{②}}$).* Once a month or quarter, a batch converts part of the ETH
+treasury into DAI on a single multisig sign-off, refilling the operating float. This is the
+two-tier model in practice. The ETH holds long-term value where no bank can freeze it, and the DAI
+is the stable working balance the collective actually spends. One periodic batch, in place of many
+small swaps, also keeps signer effort and capital-gains events low.
 
-*Money out (③).* Everything paid out comes from the DAI float. Contributors are paid
-wallet to wallet, and converting to fiat is their own responsibility. Crypto-accepting
-vendors are paid the same way, at a discount for paying in DAI. Fiat-only vendors are paid
-through a just-in-time off-ramp: a processor converts the DAI and pays the vendor directly
-in one settlement, so no fiat sits in the collective's accounts along the way. Routine
+*Money out ($\color{green}{\text{③}}$).* Everything paid out comes from the DAI float.
+Contributors are paid wallet to wallet, and converting to fiat is their own responsibility.
+Crypto-accepting vendors are paid the same way, at a discount for paying in DAI. Fiat-only vendors
+are paid through a just-in-time off-ramp: a processor converts the DAI and pays the vendor
+directly in one settlement, so no fiat sits in the collective's accounts along the way. Routine
 operating costs still go out by ACH or card from the two near-term bank accounts.
 
-*Held back for now (④ and the dotted lines).* Hedging the ETH treasury waits until a
-treasurer is on board, for the overhead reasons given earlier. The donation
-processor (Giving Block) waits until donation volume or the Form 8283 reporting threshold
-makes it worthwhile. When adopted, it is configured to hold gifts as crypto, so they still
-arrive as ETH.
+*Held back for now ($\color{gray}{\text{④}}$ and the dotted lines).* Hedging the ETH treasury
+waits until a treasurer is on board, for the overhead reasons given earlier. The donation
+processor (Giving Block) waits until donation volume or the Form 8283 reporting threshold makes it
+worthwhile. When adopted, it is configured to hold gifts as crypto, so they still arrive as ETH.
 
 *What this buys.* The only places a bank freeze can bite are the two small operating
 accounts. The bulk of the funds sit in ETH and DAI, which have no per-address freeze
