@@ -1699,7 +1699,7 @@ in the middle, institutions at the bottom, with sixteen numbered flows"></a>
 
 Boxes: $\color{blue}{\text{blue}}$ = people and organizations ·
 $\color{green}{\text{green}}$ = code · $\color{gray}{\text{gray}}$ = assets ·
-$\color{teal}{\text{teal}}$ = DAI · $\color{orange}{\text{solid orange}}$ = can cut you off ·
+$\color{black}{\text{black}}$ = DAI · $\color{orange}{\text{solid orange}}$ = can cut you off ·
 $\color{orange}{\text{dashed orange}}$ = can be legally targeted ·
 $\color{red}{\text{red}}$ = circuit breaker.
 
