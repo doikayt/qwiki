@@ -87,3 +87,39 @@ This is one of four companion documents split out of a single original draft (se
      lending protocol, and on what liability theory (unlicensed money transmission, aiding
      and abetting, or treatment of token holders as an association).
 
+5. **[Legal — requires confirmation] Ownership of the shared treasury and cross-entity
+   payments.** The [Fund flows](commons-hub-pattern.md#fund-flows) diagram puts the
+   multisig treasury, the batch convert, the DAI float, and hedging inside the Satellite
+   (the 501(c)(3)), sweeps both entities' bank accounts into that treasury, and describes
+   the subsidiary's sweep as a distribution from a wholly-owned subsidiary to its parent.
+   None of that has had counsel review. Unresolved, needs counsel:
+   - Whether the subsidiary's sweep is properly characterized and documented as a
+     distribution to its parent, and whether it stays outside the parent's unrelated
+     business income.
+   - Whether the subsidiary's operating costs and its contributors' pay can come out of
+     the Satellite's DAI float, and what intercompany arrangement (services agreement,
+     arm's-length pricing, reimbursement) keeps each entity's books and obligations
+     separate.
+   - Whether pooling both entities' funds in one treasury weakens the corporate
+     separateness that protects each, or strains the Satellite's charitable-purpose and
+     private-benefit limits.
+   - Whether restricted gifts can be honored, and tracked, once they are swept into a
+     single ETH treasury.
+   - If part of the subsidiary is later sold to an ESOP (item 6), it is no longer wholly
+     owned, and distributions to the parent would be shared with the trust.
+
+6. **[Legal — requires confirmation] "Wholly-owned subsidiary" versus a founder selling
+   shares to an ESOP.** [§1](commons-hub-pattern.md#1-the-commons-layer-and-its-satellites)
+   describes the for-profit subsidiary as wholly owned by the Satellite, which keeps
+   mission and governance control.
+   [§4](commons-hub-pattern.md#4-distribution-of-economic-benefits--from-founder-incentives-to-broad-based-ownership)
+   has a founder selling stock to an ESOP trust. Both cannot describe the same shares, and
+   the document does not yet say which holder is the seller. Unresolved, needs counsel and
+   a drafting decision:
+   - Whether the seller would be the Satellite (a charity selling a controlled asset, with
+     fair-value, private-benefit, and board-approval questions) or a founder who holds
+     equity in the subsidiary directly, in which case it is not wholly owned.
+   - How the Satellite keeps mission and governance control once an ESOP owns part of the
+     subsidiary.
+   - Whether the IRC §1042 deferral described in §4 is available at all when the seller
+     is a nonprofit rather than an individual founder.
