@@ -746,17 +746,19 @@ Both payment rails and bank accounts become vulnerable the moment a US dollar-de
 transaction moves through those rails, or results in a deposit into those accounts.
 Dollars must be settled inside the U.S. banking system — which
 [OFAC](https://ofac.treasury.gov/) (the Treasury Department's Office of Foreign Assets
-Control) regulates under the
+Control) polices through sanctions issued under the
 [IEEPA](https://en.wikipedia.org/wiki/International_Emergency_Economic_Powers_Act).
-Every U.S. bank must comply with OFAC's blocking orders.[^33]
+Every U.S. bank must comply with OFAC's blocking orders,[^33] but such an order reaches
+only the designated party's property and interests in property.
 
-Even a transaction between two non-U.S. parties still runs through the U.S.
-correspondent-banking system,[^34] and that gives Treasury a second, wider lever: the
-foreign bank itself. Since 2019, Treasury can bar a foreign bank from holding
-correspondent accounts at U.S. banks if the bank knowingly conducts or facilitates
-significant transactions for a blocked party.[^43] Serving one flagged customer can
-therefore cost a bank its dollar access entirely. That is the threat Banca Etica cited on
-September 1, when it suspended A/I's account for fear of U.S. secondary sanctions.[^18]
+A second, wider lever targets the foreign bank itself, and with it every customer the bank
+serves. Since 2019, Treasury can bar a foreign bank from holding correspondent accounts at
+U.S. banks if the bank knowingly conducts or facilitates significant transactions for a
+blocked party.[^43] The threat is credible because even a dollar payment between two
+non-U.S. parties clears through the U.S. correspondent-banking system,[^34] so an excluded
+bank loses dollar access for all customers, not just the flagged one. Banca Etica cited
+this kind of exposure on September 1, when it suspended A/I's account for fear of U.S.
+secondary sanctions.[^18]
 
 
 To mitigate the risk of a collective suffering A/I's fate, our model calls for holding
@@ -773,32 +775,31 @@ the full treatment.
 >
 > The two differ in price stability and in paperwork. ETH floats freely, and fell roughly
 > 94% in the 2018 crash and 81% in 2022;[^36] DAI's worst dips have been far smaller and
-> shorter.[^37] [Hedging](https://www.kraken.com/learn/trading/hedging-strategies) ETH's
-> swings only pays off once the organization can justify hiring a treasurer. DAI is also
-> received and spent at about the same value, so converting it to fiat creates no
-> capital-gains event worth recording, and payout takes a single transaction. ETH takes
-> two: a disposal to track for gains or losses, then the payment.
+> shorter.[^37] [Hedging](https://www.kraken.com/learn/trading/hedging-strategies) against
+> ETH's swings is possible, but pays off only once the organization can justify hiring a
+> treasurer. DAI is also received and spent at about the same value, so converting it to
+> fiat produces essentially no gain or loss to record, and payout takes a single
+> transaction. ETH takes two: a disposal to track for gains or losses, then the payment.
 
-We present two mechanisms, in increasing order of simplicity:
+There are thus two ways to hold a collective's treasury, listed in increasing order of simplicity:
 
 - ETH for long-term holdings, with a DAI account covering short-term operating
   expenses (the two-tier model)
 - A straight DAI account, with no ETH intermediate step at all
 
-The two-tier model buys resilience with extra steps. The ETH reserve carries none of DAI's
-own risks: no protocol-triggered Emergency Shutdown (see
+The two-tier model shown in the diagram below buys resilience with extra steps. The ETH
+reserve carries none of DAI's own risks: no protocol-triggered Emergency Shutdown (see
 [Appendix A.4](#a4-dai-backgrounder)) and no collateral concentration, including the USDC
 that Circle can freeze. The DAI float handles spending, so a vendor who won't accept
 crypto gets paid from a stable balance instead of triggering an ETH sale, and another
 capital-gains event, on every invoice.
 
-The all-DAI treasury drops the ETH reserve, the periodic batch convert, and the second
-balance to manage. The price is concentration: no exposure to ETH's volatility, but every
-dollar shares the fate of DAI's collateral and governance. Which tradeoff fits depends on
-a collective's administrative capacity, so the simplest rule is to hold DAI only,
-accepting that risk, until the 501(c)(3) Satellite (or its subsidiary) can hire a
-treasurer, and then let that person decide. The diagram below shows the two-tier model in
-full.
+The all-DAI treasury option (not shown in the diagram) drops the ETH reserve, the periodic
+batch convert, and the second balance to manage. The price is concentration: exposure to
+ETH's volatility is avoided, but every dollar shares the fate of DAI's collateral and
+governance. Which tradeoff fits depends on a collective's administrative capacity, so the
+simplest rule is to hold DAI only, accepting that risk, until the 501(c)(3) Satellite (or
+its subsidiary) can hire a treasurer, and then let that person decide.
 
 
 <a id="fund-flows-diagram"></a>
@@ -816,8 +817,8 @@ This diagram covers financial custody and execution only — how funds move,
 what's crypto versus fiat, and what's owned versus what's external. It intentionally
 leaves out the DAO's allocation vote and the Board's review/override
 authority, both already covered in [§2](#2-governance-layer--three-mechanisms);
-the multisig treasury shown here is the layer that carries out whatever
-that governance process decides, not a stand-in for it.
+the multisig treasury shown here is the layer that executes whatever
+that governance process decides.
 
 *Reading the diagram.* Arrows: $\color{red}{\text{red}}$ = money in (①) ·
 $\color{blue}{\text{blue}}$ = converting ETH to DAI (②) ·
@@ -848,7 +849,7 @@ in one settlement, so no fiat sits in the collective's accounts along the way. R
 operating costs still go out by ACH or card from the two near-term bank accounts.
 
 *Held back for now (④ and the dotted lines).* Hedging the ETH treasury waits until a
-dedicated controller is on board, for the overhead reasons given earlier. The donation
+treasurer is on board, for the overhead reasons given earlier. The donation
 processor (Giving Block) waits until donation volume or the Form 8283 reporting threshold
 makes it worthwhile. When adopted, it is configured to hold gifts as crypto, so they still
 arrive as ETH.
