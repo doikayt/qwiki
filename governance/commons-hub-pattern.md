@@ -750,76 +750,55 @@ Control) regulates under the
 [IEEPA](https://en.wikipedia.org/wiki/International_Emergency_Economic_Powers_Act).
 Every U.S. bank must comply with OFAC's blocking orders.[^33]
 
-Even a transaction between two non-U.S. parties still runs through the
-U.S. correspondent-banking system[^34] — so OFAC doesn't need
-jurisdiction over a foreign bank to reach it: it regulates that bank's
-*U.S.* correspondent directly. A related Treasury/[FinCEN](https://en.wikipedia.org/wiki/Financial_Crimes_Enforcement_Network)
-authority ([PATRIOT Act §311](https://www.fincen.gov/resources/statutes-and-regulations/usa-patriot-act))
-can go further still, barring U.S. banks from
-maintaining any correspondent account for the foreign bank. That would cut off the bank's
-direct access to U.S. dollar clearing, rather than just affecting one flagged customer.
-As far as we can tell, Treasury did not use §311 against Banca Etica or A/I. The reported
-reason for the freeze is that Banca Etica feared U.S. secondary sanctions.[^18]
+Even a transaction between two non-U.S. parties still runs through the U.S.
+correspondent-banking system,[^34] and that gives Treasury a second, wider lever: the
+foreign bank itself. Since 2019, Treasury can bar a foreign bank from holding
+correspondent accounts at U.S. banks if the bank knowingly conducts or facilitates
+significant transactions for a blocked party.[^43] Serving one flagged customer can
+therefore cost a bank its dollar access entirely. That is the threat Banca Etica cited on
+September 1, when it suspended A/I's account for fear of U.S. secondary sanctions.[^18]
 
 
 To mitigate the risk of a collective suffering A/I's fate, our model calls for holding
 long-term assets in crypto currencies that are hard to seize. Our top candidates are
 [ETH](https://en.wikipedia.org/wiki/Ether_(cryptocurrency)) and
-[DAI](#a4-dai-backgrounder). DAI is less well known, so here is a quick definition.
+[DAI](https://en.wikipedia.org/wiki/Dai_(cryptocurrency)). DAI is less well known, so a
+short definition and a comparison with ETH follow. The [appendix](#a4-dai-backgrounder) has
+the full treatment.
 
-> **DAI** is a U.S.-dollar-pegged cryptocurrency created by
-> [Maker](https://makerdao.com/da/whitepaper/) (now [Sky](https://sky.money/)), designed to
-> hold a value near $1 without being a bank deposit. A DAI balance is controlled by whoever
-> holds the keys, and no issuer can freeze an address. See
-> [Appendix A.4](#a4-dai-backgrounder) for how it works.
+> **DAI** is a U.S.-dollar-pegged cryptocurrency designed to hold near $1 without being a
+> bank deposit. Like ETH, it has no per-address freeze function,[^35] so no issuer can lock
+> a customer out by targeting their address (the limits are in
+> [Appendix A.4](#a4-dai-backgrounder)).
+>
+> The two differ in price stability and in paperwork. ETH floats freely, and fell roughly
+> 94% in the 2018 crash and 81% in 2022;[^36] DAI's worst dips have been far smaller and
+> shorter.[^37] [Hedging](https://www.kraken.com/learn/trading/hedging-strategies) ETH's
+> swings only pays off once the organization can justify hiring a treasurer. DAI is also
+> received and spent at about the same value, so converting it to fiat creates no
+> capital-gains event worth recording, and payout takes a single transaction. ETH takes
+> two: a disposal to track for gains or losses, then the payment.
 
-We present two associated mechanisms, in increasing order of simplicity:
+We present two mechanisms, in increasing order of simplicity:
 
 - ETH for long-term holdings, with a DAI account covering short-term operating
-  expenses (our default recommendation)
+  expenses (the two-tier model)
 - A straight DAI account, with no ETH intermediate step at all
 
-Both options share DAI's core property: no per-address freeze function[^35] exists for
-either ETH or DAI — they are identical in that regard, since ETH has no issuer or freeze
-key of its own, and DAI was deliberately built without one. The two diverge in the degree
-of downside that might affect a collective's holdings, not in whether they can be seized.
+The two-tier model buys resilience with extra steps. The ETH reserve carries none of DAI's
+own risks: no protocol-triggered Emergency Shutdown (see
+[Appendix A.4](#a4-dai-backgrounder)) and no collateral concentration, including the USDC
+that Circle can freeze. The DAI float handles spending, so a vendor who won't accept
+crypto gets paid from a stable balance instead of triggering an ETH sale, and another
+capital-gains event, on every invoice.
 
-ETH is a freely-floating, unpegged asset — its price is set purely by the market, with
-nothing pulling it back toward any particular value. That gives it real volatility: ETH's
-worst historical drawdown was roughly -94% during the 2018 crash, and it fell -81% in
-2022[^36]. DAI, by contrast, is a pegged asset — designed to hold near $1 rather than
-float freely — and its worst historical dips have been far smaller and shorter than
-ETH's[^37]. [Hedging](https://www.kraken.com/learn/trading/hedging-strategies) against
-ETH's volatility is possible, but the overhead only pays off once the organization is big
-enough to have a dedicated finance function.
-
-Another advantage of DAI is reduced paperwork: because it's received and spent at
-essentially the same value, converting it to fiat doesn't trigger a capital-gains event
-worth recording — DAI can be converted and paid out in a single transaction. ETH
-requires two: a disposal event (ETH into DAI or fiat) that has to be tracked for capital
-gains or losses, and then the actual payment. This overhead compounds for ETH
-specifically, since vendors who won't accept crypto directly still need to be paid in
-USD or a USD-backed instrument. Every payment to a fiat-only vendor means another ETH
-conversion, and another capital-gains event to track.
-
-
-[[[  REMAINDER OF THIS SECTION NEEDS A REWRITE ]]]
-
-Given all that, a genuinely simpler alternative to the two-tier model shown in the
-[diagram below](#fund-flows-diagram) is to hold the treasury entirely in DAI — with no ETH
-intermediate step, no periodic batch-convert, and no separate reserve to manage. The
-tradeoff is concentration: a treasury held entirely in DAI has zero exposure to ETH's
-volatility, but it also has zero diversification against anything going wrong
-specifically within the DAI network's own collateral situtation or governance — every dollar in the treasury
-shares the same fate. The two-tier model exists specifically to avoid that
-concentration: holding ETH alongside DAI means part of the
-treasury has zero dependencies on protocol-triggered Emergency Shutdown (see [Appendix A.4](#a4-dai-backgrounder)), 
-collateral concentration, or issuer blacklisting, which is a form of
-resilience the all-DAI approach gives up in exchange for simplicity. Which tradeoff is
-right depends on how much administrative capacity a given collective actually has.
-
-The simplest rule: hold DAI only, accepting its risk, until the 501(c)(3)
-Satellite (or its subsidiary) can hire a treasurer — then let that person decide.
+The all-DAI treasury drops the ETH reserve, the periodic batch convert, and the second
+balance to manage. The price is concentration: no exposure to ETH's volatility, but every
+dollar shares the fate of DAI's collateral and governance. Which tradeoff fits depends on
+a collective's administrative capacity, so the simplest rule is to hold DAI only,
+accepting that risk, until the 501(c)(3) Satellite (or its subsidiary) can hire a
+treasurer, and then let that person decide. The diagram below shows the two-tier model in
+full.
 
 
 <a id="fund-flows-diagram"></a>
@@ -2072,17 +2051,20 @@ when it later leaves the retained-earnings pool as a distribution.
 [^33]: OFAC's authority derives from the [International Emergency
     Economic Powers Act](https://en.wikipedia.org/wiki/International_Emergency_Economic_Powers_Act)
     (IEEPA); U.S. financial institutions must comply with its blocking
-    regulations. On the correspondent-account mechanism specifically:
-    [Section 311 Special Measures — eCFR Title 31, Part 1010, Subpart
-    F](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-F/subject-group-ECFRe5988d602e86fcf),
-    and FinCEN's [Iran correspondent-account
-    prohibition](https://www.fincen.gov/news/news-releases/final-regulation-implementing-section-312-usa-patriot-act-announced)
-    as a worked example of a §311 special measure in practice.
+    regulations.
 
 [^34]: Any USD-denominated transaction ultimately clears through Fedwire
     or CHIPS. A non-U.S. bank needs a correspondent relationship with a
     U.S. bank just to make its own dollar holdings usable
     internationally — which is the relationship OFAC reaches through.
+
+[^43]: Executive Order 13224 blocks the property of designated terrorists. [Executive Order
+    13886](https://trumpwhitehouse.archives.gov/presidential-actions/executive-order-modernizing-sanctions-combat-terrorism/)
+    (September 10, 2019) added the authority to "prohibit the opening, and prohibit or impose
+    strict conditions on the maintaining, in the United States, of a correspondent account or
+    payable-through account" of a foreign financial institution that has "knowingly conducted
+    or facilitated any significant transaction on behalf of" a blocked person. Treasury can
+    also designate a bank outright, which cuts it off from dollar clearing in one step.
 
 [^35]: A "freeze key" (or admin key) is a privileged function written into a
     token's smart contract, callable only by the issuing company (the
