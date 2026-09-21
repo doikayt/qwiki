@@ -795,10 +795,10 @@ There are thus two ways to hold a collective's treasury, listed in increasing or
 
 The diagram below depicts the first of these, the two-tier model. Its ETH reserve carries
 none of DAI's own risks: no protocol-triggered Emergency Shutdown (see
-[Appendix A.4](#a4-dai-backgrounder)) and no collateral concentration, including the USDC
-that Circle can freeze. The DAI float handles spending, so a vendor who won't accept
-crypto gets paid from a stable balance instead of triggering an ETH sale, and another
-capital-gains event, on every invoice.
+[Appendix A.4](#a4-dai-backgrounder)), and no dependence on DAI's collateral, part of
+which is USDC that Circle can freeze. The DAI float handles spending, so a vendor who
+won't accept crypto gets paid from a stable balance instead of triggering an ETH sale,
+and another capital-gains event, on every invoice.
 
 The all-DAI treasury option (not shown in the diagram) drops the ETH reserve, the periodic
 batch convert, and the second balance to manage. The price is concentration: exposure to
