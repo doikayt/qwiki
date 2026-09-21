@@ -738,7 +738,7 @@ trusted committers from other jurisdictions join, the collective could move some
 responsibility from a domestic signer to someone in the other jurisdiction. Each move
 should be judged against the two goals above. A single signer abroad adds little:
 coercion resistance only begins once the U.S. holds fewer than M signers, so early moves
-abroad are steps toward that target, not benefits in themselves.
+abroad are steps toward that target, not immediate wins.
 
 
 ### Financial mitigations
