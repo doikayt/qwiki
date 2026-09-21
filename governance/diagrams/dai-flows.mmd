@@ -21,7 +21,7 @@ flowchart TD
 
     subgraph INST["Institutions"]
         Circle[Circle - issues USDC]
-        RWACustodian[RWA custodian/trustee]
+        RWACustodian[Real-world asset custodian/trustee]
         Governance[Sky governance - SKY/MKR holders]
     end
 
@@ -45,7 +45,7 @@ flowchart TD
     ESM -- "<b style='font-size:2.3em'>⑭</b> triggered by" --> Governance
 
     DAISupply -- "<b style='font-size:2.3em'>⑮</b> can be frozen by" --> ESM
-    PSM -.->|"<b style='font-size:2.3em'>⑯</b> PSM and RWA shortfalls absorbed by"| Buffer
+    PSM -.->|"<b style='font-size:2.3em'>⑯</b> Peg Stability Module and real-world asset shortfalls absorbed by"| Buffer
 
     classDef user fill:#dbeafe,stroke:#2563eb,stroke-width:2px
     classDef code fill:#ffffff,stroke:#16a34a,stroke-width:2px

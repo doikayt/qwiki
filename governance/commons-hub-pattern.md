@@ -1722,7 +1722,7 @@ Entities in the diagram:
   the system down by giving up tokens for good, a costly vote meant for emergencies such as
   captured governance or a critical bug. Once enough tokens are given up, anyone can trigger
   the shutdown, which halts the protocol and turns each DAI into a claim on the collateral.
-- RWA custodian/trustee: the off-chain institution that legally holds the real-world assets
+- Real-world asset custodian/trustee: the off-chain institution that legally holds the real-world assets
   behind those tokens.
 
 Following the numbers, DAI reaches someone's hands in three ways:
