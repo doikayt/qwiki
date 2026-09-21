@@ -1801,12 +1801,13 @@ reportedly deadlocked on the other two, and a retrial is reportedly set for Apri
 identifiable foundation and a concentrated set of governance-token holders — a target
 class in its own right, independent of what the DAI contract itself can or cannot do.
 
-And DAI's own collateral base isn't purely decentralized crypto. Roughly 35-40% of it
-sits directly in USDC, held through Sky's Peg Stability Module — an amount Circle could
-freeze unilaterally, with no court order required, using the same freeze-key mechanism
-described above[^22]. That's not a freeze on any individual DAI holder's balance, but
-it's a real dependency the rest of this treasury strategy inherits whether or not it's
-acknowledged.
+And DAI's own collateral base isn't purely decentralized crypto. Roughly 35-40% of it sits
+directly in USDC, held through Sky's Peg Stability Module — an amount Circle could freeze
+unilaterally, with no court order required, using the same freeze-key mechanism described
+above[^22]. That wouldn't freeze any individual DAI holder's balance, but it would cut the
+collateral behind every DAI, and the shortfall could pull DAI's price below a dollar, as it did in
+March 2023 when USDC briefly lost its peg.[^24] It is a real dependency that the rest of this
+treasury strategy inherits.
 
 
 ### A.5 Income vs. retained earnings: a quick refresher
