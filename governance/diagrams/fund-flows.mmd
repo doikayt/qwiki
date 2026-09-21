@@ -1,8 +1,12 @@
 %%{init: {"themeVariables": {"fontSize": "14px"}}}%%
 flowchart TD
-    subgraph SAT["Satellite (nonprofit) — donor-funded"]
+    subgraph SAT["Satellite (nonprofit) — donor-funded, owns the treasury"]
         Donor(Donor / Funder)
         SatBank[Bank account - near-term ops only]
+        Treasury[Multisig Treasury - held as ETH]
+        BatchConvert[Periodic ETH to DAI batch convert -<br/>monthly/qtrly, single multisig sign-off]
+        DAIFloat[DAI - operating float]
+        Hedge[Hedging - staged:<br/>once treasurer hired]
     end
 
     subgraph SUB["Subsidiary (for-profit) — customer revenue"]
@@ -11,15 +15,11 @@ flowchart TD
     end
 
     DonationProcessor[Giving Block - streamline tax receipts,<br/>configured to hold as crypto]
-    Treasury[Multisig Treasury - held as ETH]
-    BatchConvert[Periodic ETH to DAI batch convert -<br/>monthly/qtrly, single multisig sign-off]
-    DAIFloat[DAI - operating float]
     Contributors{{Contributors}}
     ContribOfframp(Contributor's own fiat off-ramp)
     VendorsCrypto{{Vendors - crypto-accepting}}
     OffRampJIT[Request Finance - JIT off-ramp,<br/>pays vendor directly]
     VendorsFiat{{Vendors - fiat-only}}
-    Hedge[Hedging - staged:<br/>once FT controller hired]
 
     subgraph LEGEND["Legend"]
         L1[Collective-owned]
@@ -46,7 +46,7 @@ flowchart TD
     SatBank -- "<b style='font-size:2.3em'>③</b> ACH/card,<br/>routine ops" --> VendorsFiat
     SubBank -- "<b style='font-size:2.3em'>③</b> ACH/card,<br/>routine ops" --> VendorsFiat
 
-    Treasury -.->|"<b style='font-size:2.3em'>④</b> deferred until<br/>F/T controller on board"| Hedge
+    Treasury -.->|"<b style='font-size:2.3em'>④</b> deferred until<br/>treasurer on board"| Hedge
 
     SatBank ~~~ Customer
     VendorsFiat ~~~ LEGEND
