@@ -403,14 +403,14 @@ later document; a pointer back to it belongs here once that's written.)*
 ## 3. Resilience: surviving attack by design
 
 <a id="above-ref"></a>
-Having settled who governs the commons and its satellites, we pivot to what a collective
+We now move from governance issues, to the question of what a collective
 can proactively do to survive a takedown attempt by a corporate or state actor. Any
-collective whose mission genuinely threatens entrenched power should expect to be
-targeted. So in the ensuing sections, we will explain
+collective whose mission genuinely threatens entrenched power should _expect_ to be
+targeted. So in the ensuing sections we will:  explain
 [resilience through dispersion](#resilience-through-dispersion), the principle that
-dispersing any organization's people, assets, and infrastructure improves its odds of
-survival; walk through a real takedown that a dispersed structure might have survived; and
-present _technical_ and _financial_ mitigations that turn the principle into practice.
+spreading out any organization's people, assets, and infrastructure improves its odds of
+survival; walk through a real takedown that a distributed structure might have survived;
+and present _technical_ and _financial_ mitigations that turn the principle into practice.
 
 
 ### Resilience through dispersion
@@ -484,8 +484,6 @@ exactly what the onion-mirror mitigation (below) is built to route
 around.
 
 ### Technical mitigations
-
-
 
 Mitigations fall on the two axes named  at the start of the [previous section](#above-ref) --
 _technical_ and _financial_. We start with
@@ -665,8 +663,8 @@ Two structural properties  ideally hold for the trusted signer roster,
 regardless of whether any given signer is an individual or a corporation:
 
 - transactions are gated by a [quorum](https://en.wikipedia.org/wiki/Threshold_cryptosystem)
-  of M-of-N signers, rather than one maximally-trusted,
-  individual -- so a sanctioning adversary has to compel or compromise several people at once, not just one;
+  of M-of-N signers, rather than one maximally-trusted individual -- 
+  so a sanctioning adversary has to compel or compromise several people at once, not just one;
 - maximal jurisdictional dispersion among designated signers, sized so
   that the signers outside any single jurisdiction can, by themselves,
   still reach the M threshold -- meaning the total loss of every signer
@@ -697,7 +695,7 @@ an NDAA detention order that ends up with all of
 US-based committers in an isolated work camp. In such a regrettable case,
 what is materially lost is the ability of the US-based 501c3 to 
 continue development or monetization of the commons. However, the surviving
-signers can still re-establish new fiat currency  accounts in 
+dispersed signers can still re-establish new fiat currency  accounts in 
 their jurisdiction(s) around the still-accessible treasury, 
 and then continue on to rebooting the collective around the still-intact commons.
 
@@ -721,13 +719,14 @@ point, and losing that jurisdiction's signers freezes the treasury. The extreme 
 M-1 signers in the U.S. and a single signer abroad, is weaker still: losing that one
 signer freezes the treasury too.
 
-A third jurisdiction removes the trade-off. Spread the same five signers as two in the
-U.S., two in a second jurisdiction, and one in a third, and no jurisdiction holds a quorum
-while losing any one jurisdiction still leaves three. The general rule is that no
+A third jurisdiction removes the trade-off. Spread the same five signers as: two in the
+U.S., two in a second jurisdiction, and one in a third -- then no jurisdiction holds a quorum,
+and losing any one jurisdiction still leaves three. The general rule is that no
 jurisdiction holds more than the smaller of M-1 and N-M signers, which forces at least
 three jurisdictions for a 3-of-5 roster. The rule assumes the jurisdictions act
 independently. If two of them coordinate, through treaty or sanctions alignment, their
-signers count together. Even then, a remote signer is harder to pressure, not immune.
+signers count together. Even then, a remote signer is harder to pressure, although
+not completely immune.
 
 Looking at how the roster might evolve: a small, early-stage collective could start off
 with just one founder, and at this point multi-sig signing makes no sense. Even as the
@@ -735,7 +734,7 @@ team grows, geographic dispersion of trust and committers should not be sought f
 sake. It is better to think of the network evolving in stages: as the collective grows it
 would go from no multi-sig to a _2-of-3_ or _3-of-5_ all-domestic signer set. Then as
 trusted committers from other jurisdictions join, the collective could move some of the
-responsibility from a domestic signer to someone in the other jurisdiction. Each move
+responsibility from domestic signers to designees in other jurisdictions. Each move
 should be judged against the two goals above. A single signer abroad adds little:
 coercion resistance only begins once the U.S. holds fewer than M signers, so early moves
 abroad are steps toward that target, not immediate wins.
@@ -757,19 +756,28 @@ jurisdiction over a foreign bank to reach it: it regulates that bank's
 *U.S.* correspondent directly. A related Treasury/[FinCEN](https://en.wikipedia.org/wiki/Financial_Crimes_Enforcement_Network)
 authority ([PATRIOT Act §311](https://www.fincen.gov/resources/statutes-and-regulations/usa-patriot-act))
 can go further still, barring U.S. banks from
-maintaining that correspondent relationship at all. This would result in 
-the cut-off of the foreign bank's dollar access entirely, not just one flagged customer.
-That threat is what drove Banca Etica to implement its freezing of A/I's assets.
+maintaining any correspondent account for the foreign bank. That would cut off the bank's
+direct access to U.S. dollar clearing, rather than just affecting one flagged customer.
+As far as we can tell, Treasury did not use §311 against Banca Etica or A/I. The reported
+reason for the freeze is that Banca Etica feared U.S. secondary sanctions.[^18]
 
 
 To mitigate the risk of a collective suffering A/I's fate, our model calls for holding
-long-term assets in a crypto currency that's hard to seize. We present two associated
-mechanisms, in increasing order of simplicity:
+long-term assets in crypto currencies that are hard to seize. Our top candidates are
+[ETH](https://en.wikipedia.org/wiki/Ether_(cryptocurrency)) and
+[DAI](#a4-dai-backgrounder). DAI is less well known, so here is a quick definition.
+
+> **DAI** is a U.S.-dollar-pegged cryptocurrency created by
+> [Maker](https://makerdao.com/da/whitepaper/) (now [Sky](https://sky.money/)), designed to
+> hold a value near $1 without being a bank deposit. A DAI balance is controlled by whoever
+> holds the keys, and no issuer can freeze an address. See
+> [Appendix A.4](#a4-dai-backgrounder) for how it works.
+
+We present two associated mechanisms, in increasing order of simplicity:
 
 - ETH for long-term holdings, with a DAI account covering short-term operating
   expenses (our default recommendation)
-- A straight DAI account ([see Appendix A.4](#a4-dai-backgrounder)),
-  with no ETH intermediate step at all
+- A straight DAI account, with no ETH intermediate step at all
 
 Both options share DAI's core property: no per-address freeze function[^35] exists for
 either ETH or DAI — they are identical in that regard, since ETH has no issuer or freeze
@@ -1746,9 +1754,9 @@ liquidated through auctions.[^40]
 *Minted against USDC (④–⑦).* Someone holding USDC can swap it for DAI through the Peg
 Stability Module (④). The module works as a specially authorized vault: it locks the
 incoming USDC and issues DAI against it (⑤ and ⑥), with a fee taken out of the DAI
-received.[^38] The catch sits at the far end of the path. Circle issues USDC (⑦) and can
-freeze it, which is why Circle is orange, and why everything minted this way inherits that
-exposure.
+received.[^38] The catch sits at the far end of the path. [Circle](https://www.circle.com/) 
+issues USDC (⑦) and can freeze it, which is why Circle is orange, and 
+why everything minted this way inherits that exposure.
 
 *Bought on an exchange (⑧–⑩).* This is the path most collectives will actually use. They
 swap ETH, BTC, USDC, or dollars for DAI (⑧), an exchange sells them DAI that is already in
