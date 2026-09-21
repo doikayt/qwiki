@@ -825,7 +825,9 @@ $\color{blue}{\text{blue}}$ = converting ETH to DAI (②) ·
 $\color{green}{\text{green}}$ = money out (③) ·
 $\color{gray}{\text{gray dashed}}$ = deferred or pass-through
 (④ and the dotted lines).
-Boxes are blue if the collective owns them and dashed orange if they are external.
+Blue boxes are assets or accounts held by the Satellite or its subsidiary, and blue
+double-barred boxes are processes they run. Dashed orange boxes are external parties,
+outside both entities.
 
 *Money in (①).* Donor gifts reach the Satellite and customer revenue reaches the
 subsidiary. A donor can send cash to the Satellite's bank account, DAI directly to the
