@@ -835,7 +835,7 @@ $\color{blue}{\text{Blue}}$ boxes are assets or accounts held by the Satellite o
 subsidiary, and $\color{blue}{\text{blue}}$ double-barred boxes are processes they run.
 Dashed $\color{orange}{\text{orange}}$ boxes are external parties, outside both entities.
 
-*Money in ($\color{red}{\text{①}}$).* Donor gifts reach the Satellite and customer revenue reaches
+*Money in* ($\color{red}{\text{①}}$). Donor gifts reach the Satellite and customer revenue reaches
 the subsidiary. A donor can send cash to the Satellite's bank account, DAI directly to the
 operating float, or ETH or BTC straight to the treasury. Customers pay the subsidiary by card or
 ACH, mostly in fiat. Whatever lands in a bank account is swept periodically into the multisig
@@ -846,13 +846,13 @@ keeps its own bank account. Everything downstream of the sweep, from the treasur
 float, belongs to the Satellite, so the subsidiary's sweep is a distribution from a wholly-owned
 subsidiary to its parent.
 
-*Converting ($\color{blue}{\text{②}}$).* Once a month or quarter, a batch converts part of the ETH
+*Converting* ($\color{blue}{\text{②}}$). Once a month or quarter, a batch converts part of the ETH
 treasury into DAI on a single multisig sign-off, refilling the operating float. This is the
 two-tier model in practice. The ETH holds long-term value where no bank can freeze it, and the DAI
 is the stable working balance the collective actually spends. One periodic batch, in place of many
 small swaps, also keeps signer effort and capital-gains events low.
 
-*Money out ($\color{green}{\text{③}}$).* Everything paid out comes from the DAI float.
+*Money out* ($\color{green}{\text{③}}$). Everything paid out comes from the DAI float.
 Contributors are paid wallet to wallet, and converting to fiat is their own responsibility.
 Crypto-accepting vendors are paid the same way, at a discount for paying in DAI. Fiat-only vendors
 are paid through a just-in-time off-ramp ([Request Finance](https://www.request.finance/)): a
@@ -860,7 +860,7 @@ processor converts the DAI and pays the vendor directly in one settlement, so no
 collective's accounts along the way. Routine operating costs still go out by ACH or card from the
 two near-term bank accounts.
 
-*Held back for now ($\color{gray}{\text{④}}$ and the dotted lines).* Hedging the ETH treasury
+*Held back for now* ($\color{gray}{\text{④}}$ and the dotted lines). Hedging the ETH treasury
 waits until a treasurer is on board, for the overhead reasons given earlier. The donation
 processor ([Giving Block](https://thegivingblock.com/)), which streamlines tax receipts for crypto
 donations, waits until donation volume or the Form 8283 reporting threshold makes it worthwhile.
