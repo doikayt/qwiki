@@ -1783,11 +1783,10 @@ That resilience has limits. The orange and red parts of the diagram mark three o
 circuit breaker built into the protocol, exposure for the people behind it, and a dependency
 on an issuer that can freeze.
 
-Sky's protocol does have a circuit breaker, built in by design: the Emergency Shutdown Module,
-which governance-token holders can trigger by giving up enough tokens for good, in response to a
-perceived existential threat to the system. Triggering it freezes the protocol and converts DAI
-from a freely spendable balance into a claim redeemable only through a settlement process — a
-real, if deliberately hard to reach, mechanism by which liquidity could stop on short notice.
+The first limit is the Emergency Shutdown Module. Once governance-token holders trigger it, DAI
+stops being a freely spendable balance and becomes a claim redeemable only through a settlement
+process. The mechanism is deliberately hard to reach, but it means a treasury's liquidity could
+stop on short notice.
 
 The second limit is the dashed-orange box. A smart contract's lack of a freeze key doesn't
 extend the same immunity to the people who govern or maintain it. The clearest precedent
