@@ -424,15 +424,15 @@ Concentrating capability in one place is inherently risky,
 whereas dispersed placement of resources increases resilience in the face of attack.
 Recent experience on multiple battlefields have driven this 
 home to the US military establishment, whose leadership now recognizes that "forces that are 
-concentrated and static are easy for enemy forces to detect and destroy."[^13] 
+concentrated and static are easy for enemy forces to detect and destroy."[^7] 
 Cloud infrastructure engineers have long been operationalizing this lesson --
 replicating services across regions instead of 
 concentrating them in a single data center, where one outage can take out _everything_.
 
 We propose applying this same logic to software collectives —
 especially those with status-quo-challenging missions, which are
-increasingly at risk of repression by state actors and deplatforming[^14] by
-large corporations unwilling to tolerate wrongthink [^15].
+increasingly at risk of repression by state actors and deplatforming[^8] by
+large corporations unwilling to tolerate wrongthink [^9].
 In light of such threats, the distributed structure proposed in
 [§1](#1-the-commons-layer-and-its-satellites) serves as a preemptive counter-measure.   The referenced diagram posits the satellites
 surrounding a digital commons as 501(c)(3) entities, but note that
@@ -452,15 +452,15 @@ avoided a shut-down. We propose mitigations on two  infrastructural axes:
 _technical_, and _financial_ -- but first a recap.
 
 
-The US State department issued the designation on August 26.[^17] 
+The US State department issued the designation on August 26.[^10] 
 Forty-eight hours later, the Public Interest Registry — the nonprofit 
-that runs the entire `.org` namespace — disabled `autistici.org`[^18],
+that runs the entire `.org` namespace — disabled `autistici.org`[^11],
 taking out roughly 16,000 email accounts, 5,500 mailing lists, ~10,000
-blogs, and 1,500 websites in one stroke.[^19]
-On the financial side, PayPal took out the payment rails first [^18], and 
+blogs, and 1,500 websites in one stroke.[^12]
+On the financial side, PayPal took out the payment rails first [^11], and 
 Banca Etica followed by freezing the account itself as it was 
 unwilling to risk its own [correspondent-banking](https://en.wikipedia.org/wiki/Correspondent_account)
-relationships over one customer.[^18]
+relationships over one customer.[^11]
 
 Jurisdiction factored in as much as a technology in this take down.
 First, on the technology side: [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)
@@ -525,10 +525,10 @@ step ISNIC otherwise requires.
 <a id="onion-mirror"></a>
 A further layer of protection is achievable (at the expense of more network configuration overhead) 
 by maintaining a live [onion](https://en.wikipedia.org/wiki/.onion) mirror on
-[Tor](https://en.wikipedia.org/wiki/Tor_(network))[^20][^21].
+[Tor](https://en.wikipedia.org/wiki/Tor_(network))[^13][^14].
 Unlike a `.is` (dot _is_) domain, a `.onion` (dot _onion_) address needs
 no DNS at all: it's self-certifying, derived directly from the
-service's own [keypair](https://spec.torproject.org/rend-spec/encoding-onion-addresses.html)[^22],
+service's own [keypair](https://spec.torproject.org/rend-spec/encoding-onion-addresses.html)[^15],
 and resolved through Tor's own distributed
 hidden-service directory. There is no registry, registrar, or nameserver in
 the chain for a state actor to pressure.  Note that the
@@ -556,7 +556,7 @@ away one layer of encryption.</sub></p>
 
 Collectives pursing this approach should make verification and publication of their .onion
 presence a routine practice, rather than scrambling to prepare in the face 
-of a take-down action. Set an `Onion-Location` HTTP header[^23] on the
+of a take-down action. Set an `Onion-Location` HTTP header[^16] on the
 [clearnet](https://en.wikipedia.org/wiki/Clearnet_(networking)) site
 pointing at the `.onion` URL, so [Tor
 Browsers](https://en.wikipedia.org/wiki/Tor_(network)) can detect it
@@ -570,7 +570,7 @@ still present, then point a second context's `proxy` at the local Tor
 daemon's SOCKS5 endpoint (`127.0.0.1:9050` by default) and load the
 `.onion` URL directly, with hostname resolution happening proxy-side.
 A caveat: any use of Tor, even for research, may itself draw extra
-scrutiny from state actors.[^24]
+scrutiny from state actors.[^17]
 
 
 #### Technical infrastructure: key and credential custodianship
@@ -599,7 +599,7 @@ Codeberg, built on the open-source Forgejo, is EU-hosted and run by a
 nonprofit, for the same jurisdictional reasons as the `.is` domain.
 Its [Forgejo Actions](https://docs.codeberg.org/ci/actions/) supports
 the same repository- and organization-level secrets [GitHub
-Actions](https://docs.github.com/en/actions) does[^33]. CI secrets are
+Actions](https://docs.github.com/en/actions) does[^18]. CI secrets are
 still scoped to whichever account holds them, though, regardless of
 host. Once an account is suspended, its associated secrets — and every workflow that
 depends on them — are frozen. Mitigate this risk with a satellite
@@ -625,7 +625,7 @@ though everything already published stays live. Prefer npm's
 [granular access
 tokens](https://docs.npmjs.com/creating-and-viewing-access-tokens/) —
 scoped to specific packages, with a defined expiry, rather than a
-classic token with blanket publish rights[^32] — and
+classic token with blanket publish rights[^19] — and
 keep a second maintainer's account (2FA-enabled, with its own recovery
 methods on file) as a fallback publish channel.
 
@@ -753,18 +753,18 @@ Dollars must be settled inside the U.S. banking system — which
 [OFAC](https://ofac.treasury.gov/) (the Treasury Department's Office of Foreign Assets
 Control) polices through sanctions issued under the
 [IEEPA](https://en.wikipedia.org/wiki/International_Emergency_Economic_Powers_Act).
-Every U.S. bank must comply with OFAC's blocking orders (primary sanctions),[^33] but such
+Every U.S. bank must comply with OFAC's blocking orders (primary sanctions),[^18] but such
 an order reaches only the designated party's property and interests in property.
 
 [Secondary sanctions](https://en.wikipedia.org/wiki/Secondary_sanctions) reach further, to
 the foreign bank itself and with it every customer the bank serves. Since 2019, Treasury
 can bar a foreign bank from holding correspondent accounts at U.S. banks if the bank
-knowingly conducts or facilitates significant transactions for a blocked party.[^43] The
+knowingly conducts or facilitates significant transactions for a blocked party.[^20] The
 threat is credible because dollar-denominated payments, even between two non-U.S. parties,
-ordinarily clear through the U.S. correspondent-banking system,[^34] so an excluded bank
+ordinarily clear through the U.S. correspondent-banking system,[^21] so an excluded bank
 loses dollar access for all customers, not just the flagged one. Banca Etica cited this
 kind of exposure on September 1, when it suspended A/I's account for fear of U.S.
-secondary sanctions.[^18]
+secondary sanctions.[^11]
 
 
 To mitigate the risk of a collective suffering A/I's fate, our model calls for holding
@@ -775,13 +775,13 @@ short definition and a comparison with ETH follow. The [appendix](#a4-dai-backgr
 the full treatment.
 
 > **DAI** is a U.S.-dollar-pegged cryptocurrency designed to hold near $1 without being a
-> bank deposit. Like ETH, it has no per-address freeze function,[^35] so no issuer can lock
+> bank deposit. Like ETH, it has no per-address freeze function,[^22] so no issuer can lock
 > a customer out by targeting their address (the limits are in
 > [Appendix A.4](#a4-dai-backgrounder)).
 >
 > The two differ in price stability and in paperwork. ETH floats freely, and fell roughly
-> 94% in the 2018 crash and 81% in 2022;[^36] DAI's worst dips have been far smaller and
-> shorter.[^37] [Hedging](https://www.kraken.com/learn/trading/hedging-strategies) against
+> 94% in the 2018 crash and 81% in 2022;[^23] DAI's worst dips have been far smaller and
+> shorter.[^24] [Hedging](https://www.kraken.com/learn/trading/hedging-strategies) against
 > ETH's swings is possible, but pays off only once the organization can justify hiring a
 > treasurer. DAI is also received and spent at about the same value, so converting it to
 > fiat produces essentially no gain or loss to record, and payout takes a single
@@ -902,7 +902,7 @@ employees, vesting it to them over years of service. Congress built it
 as a tax-favored path to convert employees into genuine owners rather
 than just wage earners. How broadly that ownership has to be shared
 isn't left to a founder's discretion, though — federal law specifies 
-the rules.[^7] Concretely, the trust itself is the stock purchaser: it
+the rules.[^25] Concretely, the trust itself is the stock purchaser: it
 buys back the founder's shares directly — typically financed by a loan
 that the company then repays over time via tax-deductible
 contributions to the trust. This provides founders a liquid exit path that
@@ -949,7 +949,7 @@ Allocation moves shares out of the trust's loan-collateral account and into
 an employee's individual account as the acquisition debt gets repaid.
 This is mechanically tied to the loan repayment schedule, not to tenure. 
 Whether or not an employee can keep those allocated shares on exit is separately determined 
-by a service-based vesting schedule.[^8]
+by a service-based vesting schedule.[^26]
 
 #### When ESOPs make sense
 
@@ -1008,9 +1008,9 @@ details:
   - Because an ESOP trust is itself tax-exempt, whatever share of the
     company an ESOP owns generates income tax-free at the corporate
     level — a 100%-ESOP-owned S-corp can end up owing no federal
-    income tax at all.[^9]
+    income tax at all.[^27]
   - That tax exemption comes with its own extra safeguard against
-    insider concentration.[^10]
+    insider concentration.[^28]
   - Doesn't get §1042: that deferral is C-corp only.
 
 The C-corp/S-corp election is mutually exclusive, and the two reward
@@ -1052,7 +1052,7 @@ decision-making, or equity. To clarify:
 ## 5. The stakes, and why our model has an edge
 
 The past year (2026, as of this writing) has seen rapid, measurable progress
-toward AI writing the software that builds AI itself.[^11]   This
+toward AI writing the software that builds AI itself.[^29]   This
 mirrors recent progress toward 
 ["lights-out manufacturing"](https://en.wikipedia.org/wiki/Lights_out_(manufacturing)) 
 -- robots building new robots with minimal human involvment -- in the 
@@ -1089,7 +1089,7 @@ elite-track positions than it has positions to absorb them into, intra-elite
 competition intensifies and average outcomes for elite aspirants decline.
 Some fraction of those aspirants then tend to become "counter-elites,"
 turning their training and ambition toward organizing opposition to the
-existing order rather than joining it.[^12]
+existing order rather than joining it.[^30]
 
 This is playing out in the current U.S. software labor market: an
 education system that has spent two decades producing what is now an over-supply of
@@ -1185,7 +1185,7 @@ decades, and a wave of more recent innovations in AI, especially
   coverage](https://en.wikipedia.org/wiki/Code_coverage), and
   [object-oriented
   metrics](https://www.geeksforgeeks.org/software-engineering/object-oriented-metrices-in-software-engineering/)
-  surface failures the moment they happen in the *present*.[^25]
+  surface failures the moment they happen in the *present*.[^31]
   [Agile boards](https://en.wikipedia.org/wiki/Kanban_board) and
   estimation — [story
   points](https://en.wikipedia.org/wiki/Planning_poker),
@@ -1198,7 +1198,7 @@ decades, and a wave of more recent innovations in AI, especially
   even one person software shops) to leverage the same compute capacity as larger companies.
 - **Scheduling**: is now enforceable via [issue
   trackers](https://en.wikipedia.org/wiki/Project_management_software),
-  automated status checks, and rule-based status bots[^26], which nudge communication 
+  automated status checks, and rule-based status bots[^32], which nudge communication 
   channels on a fixed schedule when a deadline slips. These tools keep
   remote contributors coordinated against real deadlines without the
   need to clock in at some centralized office.
@@ -1508,7 +1508,7 @@ it would take to reproduce something today, not the labor
 historically sunk into it. So the physical mass of machinery keeps
 climbing (that's what pushes `q = c/v` up in the first place), but its
 value doesn't climb in lockstep, and `q` rises more slowly than
-automation alone would predict.[^27] Add to that foreign
+automation alone would predict.[^33] Add to that foreign
 trade (cheaper imported inputs, or higher-margin export markets) and a
 rising $s'$ that offsets $q$ for a while, and any of these can slow or
 reverse the fall in practice.
@@ -1531,7 +1531,7 @@ others:
 
 `p'` and ROIC are the tightest match — both ask the same question,
 profit per dollar of *total* capital committed, rather than margin on
-revenue alone.[^28] `q` and capital intensity are close too; it's a real
+revenue alone.[^34] `q` and capital intensity are close too; it's a real
 ratio tracked in corporate finance, just not always called that. `s'`
 has no standard named counterpart — the nearest real-world equivalent
 is informal, something like a labor-cost markup.
@@ -1593,16 +1593,16 @@ on exit aligns with their own stated principles.
 Row-by-row, here's where each one comes from:
 
 - **Row 1 (coordination)** — Marx, *Capital* Vol. 1, Ch. 13,
-  "Co-operation"[^29]: *"all combined labour on a large scale requires,
+  "Co-operation"[^35]: *"all combined labour on a large scale requires,
   more or less, a directing authority, in order to secure the
   harmonious working of the individual activities."*
-- **Row 2 (despotic surveillance)** — same chapter[^29]: *"by reason of
+- **Row 2 (despotic surveillance)** — same chapter[^35]: *"by reason of
   ... the unavoidable antagonism between the exploiter and the living
   and labouring raw material he exploits."*
-- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^30]
+- **Row 3 (founding labor)** — not Marx. Sourced from Schumpeter[^36]
   instead.
 - **Row 4 (rent)** — Marx, *Capital* Vol. 3, Ch. 23, "Interest and
-  Profit of Enterprise"[^31], quoting the capitalist's own rationale:
+  Profit of Enterprise"[^37], quoting the capitalist's own rationale:
   his profit of enterprise is *"itself rather a wage ... of
   superintendence of labor."*
 
@@ -1651,7 +1651,7 @@ mere ownership (#4) We think it deserves fair compensation.
 
 Joseph Schumpeter offers a cleaner theoretical home for this one gap than
 Marx does. He drew his own line between the entrepreneur's reward — a
-temporary payout for introducing what he called a "new combination"[^30] —
+temporary payout for introducing what he called a "new combination"[^36] —
 and the rentier's return on capital merely owned. That entrepreneurial
 reward, in his account, gets competed away once the innovation is copied.
 This aligns with our belief that the exit reward should recognize the labor
@@ -1678,7 +1678,7 @@ DAI is a U.S.-dollar-pegged cryptocurrency created by
 [Maker](https://makerdao.com/da/whitepaper/) (now [Sky](https://sky.money/)) and
 designed to maintain a value of approximately one U.S. dollar without being a deposit at a
 conventional bank. Sky has since offered USDS, an optional 1:1 upgrade from DAI, but this
-appendix is about DAI: USDS reportedly includes a freeze function that DAI lacks,[^42] so
+appendix is about DAI: USDS reportedly includes a freeze function that DAI lacks,[^38] so
 the properties described here do not carry over to USDS. Unlike a bank account, a DAI
 balance exists on a public blockchain and is controlled by the holder of the corresponding
 cryptographic keys. There is no bank, payment processor, or central DAI account
@@ -1742,13 +1742,13 @@ Vault mints DAI against it ($\color{green}{\text{③}}$). The collateral has to 
 the DAI minted against it, by a margin the diagram puts at 145% to 175% or more, so that a price
 drop doesn't leave DAI unbacked. Sky's core repository describes the design the same way: DAI
 creation isn't possible without collateral, and positions that turn risky are liquidated through
-auctions.[^40]
+auctions.[^39]
 
 *Minted against USDC* ($\color{blue}{\text{④}}$–$\color{gray}{\text{⑦}}$). Someone holding USDC
 can swap it for DAI through the Peg Stability Module ($\color{blue}{\text{④}}$). The module works
 as a specially authorized vault: it locks the incoming USDC and issues DAI against it
 ($\color{green}{\text{⑤}}$ and $\color{gray}{\text{⑥}}$), with a fee taken out of the DAI
-received.[^38] The catch sits at the far end of the path. [Circle](https://www.circle.com/) issues
+received.[^40] The catch sits at the far end of the path. [Circle](https://www.circle.com/) issues
 USDC ($\color{gray}{\text{⑦}}$) and can freeze it, which is why Circle is orange, and why
 everything minted this way inherits that exposure.
 
@@ -1768,17 +1768,17 @@ pressured, sitting behind what is otherwise code.
 
 *Who sets the rules* ($\color{purple}{\text{⑬}}$–$\color{purple}{\text{⑭}}$). Holders of Sky's
 governance tokens decide which collateral is accepted and how much DAI can be issued against each
-type ($\color{purple}{\text{⑬}}$).[^40] The same token holders also stand behind the emergency
+type ($\color{purple}{\text{⑬}}$).[^39] The same token holders also stand behind the emergency
 brake ($\color{purple}{\text{⑭}}$): they can vote to shut the system down by giving up tokens for
 good, and once enough are given up anyone can trigger the Emergency Shutdown Module. Sky describes
-it as a tool for a minority of holders to stop malicious governance or a critical bug.[^39]
+it as a tool for a minority of holders to stop malicious governance or a critical bug.[^41]
 
 *When things go wrong* ($\color{red}{\text{⑮}}$–$\color{red}{\text{⑯}}$). The red arrows are the
 stress paths. If Emergency Shutdown fires, DAI stops behaving like a freely spendable balance and
 becomes a claim on a settlement process ($\color{red}{\text{⑮}}$). And if a position in the Peg
 Stability Module or the real-world asset pool loses value, the shortfall is absorbed by the
 protocol's surplus buffer ($\color{red}{\text{⑯}}$); debt the system can't otherwise cover is made
-good by diluting the governance token through an auction.[^40]
+good by diluting the governance token through an auction.[^39]
 
 The resilience described at the top of this backgrounder isn't unconditional, though, and
 it's worth being precise about where its limits actually sit rather than let a reader
@@ -1803,14 +1803,14 @@ court held in November 2024 that OFAC could not sanction them as "property", and
 lifted the sanctions in March 2025. The U.S. Department of Justice still pursued one of
 its developers, Roman Storm, to a conviction on one charge in August 2025. The jury
 reportedly deadlocked on the other two, and a retrial is reportedly set for April
-2027.[^41] Sky has an
+2027.[^42] Sky has an
 identifiable foundation and a concentrated set of governance-token holders — a target
 class in its own right, independent of what the DAI contract itself can or cannot do.
 
 And DAI's own collateral base isn't purely decentralized crypto. Roughly 35-40% of it
 sits directly in USDC, held through Sky's Peg Stability Module — an amount Circle could
 freeze unilaterally, with no court order required, using the same freeze-key mechanism
-described above[^35]. That's not a freeze on any individual DAI holder's balance, but
+described above[^22]. That's not a freeze on any individual DAI holder's balance, but
 it's a real dependency the rest of this treasury strategy inherits whether or not it's
 acknowledged.
 
@@ -1889,46 +1889,7 @@ when it later leaves the retained-earnings pool as a distribution.
 
 [^6]: [Elinor Ostrom — Wikipedia](https://en.wikipedia.org/wiki/Elinor_Ostrom)
 
-[^7]: ERISA requires broad-based coverage — generally, every employee
-    meeting minimal age and service thresholds must be eligible — and
-    nondiscriminatory allocation formulas that can't disproportionately
-    favor highly compensated employees over everyone else. The law is
-    built to prevent an ESOP in name only, with a small circle of
-    insiders collecting most of its actual value.
-
-[^8]: Allocation and vesting are different clocks. Shares move out of the loan's
-    collateral (suspense) account into an employee's individual account as the acquisition
-    debt gets repaid — that's allocation, and it's mechanically tied to the loan. Whether the
-    employee has a non-forfeitable right to *keep* shares already allocated to them is governed
-    separately, by a service-based vesting schedule (e.g., graded vesting over several years);
-    an employee can hold allocated shares that would still be forfeited if they left early.
-
-[^9]: [NCEO, "ESOPs in S
-    Corporations"](https://www.nceo.org/what-is-employee-ownership/esops/esops-s-corporations) —
-    on the federal tax exemption for S-corp income attributable to ESOP
-    ownership, and the ~4,000-plus 100%-ESOP-owned S-corps counted in a
-    2022 survey.
-
-[^10]: Without a safeguard, a founder could structure an S-corp ESOP
-    so the company pays no tax while the shares' actual value stays
-    concentrated among a small circle of insiders rather than reaching
-    rank-and-file employees. [IRC §409(p) — IRS, "Preventing the
-    occurrence of a nonallocation
-    year"](https://www.irs.gov/retirement-plans/issue-snapshot-preventing-the-occurrence-of-a-nonallocation-year-under-section-409p),
-    added by Congress in 2001, blocks this: a "disqualified person"
-    (anyone owning 10%+ of deemed-owned ESOP shares, or 20%+ with
-    family) can't have ESOP assets accrue to them in any year where
-    disqualified persons collectively hold 50%+ of the company's
-    equity. Violations carry a 50% excise tax, deemed taxable
-    distributions to participants, loss of the ESOP's tax-qualified
-    status, and termination of the company's S-corp election.
-
-[^11]: [arxiv.org/abs/2607.07663](https://arxiv.org/abs/2607.07663)
-
-[^12]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
-    [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
-
-[^13]: US Army Field Manual FM 3-0, quoted in [Army 2030: Disperse Or
+[^7]: US Army Field Manual FM 3-0, quoted in [Army 2030: Disperse Or
     Die — Network And
     Live](https://breakingdefense.com/2022/10/army-2030-disperse-or-die-network-and-live/),
     Breaking Defense (2022). The stakes are visible in Ukraine: drone
@@ -1938,7 +1899,7 @@ when it later leaves the retained-earnings pool as a distribution.
     Affairs](https://carnegieendowment.org/research/2026/04/ukraine-russia-war-changing-warfare-practice-military-strategy),
     Carnegie Endowment for International Peace (April 2026).
 
-[^14]: Rainey Reitman (former EFF Activism Director), *Transaction
+[^8]: Rainey Reitman (former EFF Activism Director), *Transaction
     Denied*, documents cases of financial institutions and payment
     processors freezing accounts or blocking transactions over
     speech-related concerns — including teachers, journalists, and
@@ -1947,16 +1908,16 @@ when it later leaves the retained-earnings pool as a distribution.
     Denied](https://www.eff.org/deeplinks/2026/04/former-eff-activism-directors-new-book-transaction-denied-explores-what-happens)
     (April 2026).
 
-[^15]: [wrongthink — Wiktionary](https://en.wiktionary.org/wiki/wrongthink).
+[^9]: [wrongthink — Wiktionary](https://en.wiktionary.org/wiki/wrongthink).
 
-[^17]: [Designation of Autistici/Inventati as a Specially Designated
+[^10]: [Designation of Autistici/Inventati as a Specially Designated
     Global Terrorist — U.S. Department of
     State](https://www.state.gov/releases/office-of-the-spokesperson/2026/08/designation-of-autistici-inventati-as-a-specially-designated-global-terrorist)
     (August 26, 2026); [Autistici/Inventati press release — infrastructure
     impact timeline](https://www.inventati.org/campaign/press) (domain
     unreachable August 28, 2026).
 
-[^18]: Timeline of the August 2026 SDGT designation and aftermath: [Autistici/Inventati —
+[^11]: Timeline of the August 2026 SDGT designation and aftermath: [Autistici/Inventati —
     Wikipedia](https://en.wikipedia.org/wiki/Autistici/Inventati) (PayPal loss "within days";
     Public Interest Registry disabled autistici.org August 28, 2026, 48 hours after the
     designation; NoBlogs compromised the same day via a software vulnerability, ~2 hours of
@@ -1964,12 +1925,12 @@ when it later leaves the retained-earnings pool as a distribution.
     A/I's account September 1, 2026 citing risk of U.S. secondary sanctions, after consulting
     Italy's Ministry of Economy and Finance; A/I announced shutdown September 6, 2026).
 
-[^19]: [US Terror Listing Kills 16,000 Activist Email Accounts —
+[^12]: [US Terror Listing Kills 16,000 Activist Email Accounts —
     gblock.app](https://www.gblock.app/articles/autistici-inventati-shutdown-16000-activist-emails-2026)
     — scale (16,000 email accounts, 5,500 mailing lists, ~10,000 blogs, 1,500 websites); A/I's
     mail servers themselves, hosted in Europe, were never touched.
 
-[^20]: "Tor" is short, historically, for "The Onion Router," though the
+[^13]: "Tor" is short, historically, for "The Onion Router," though the
     Tor Project no longer treats it as a spelled-out acronym — see [Why
     is it called
     Tor?](https://support.torproject.org/about/why-is-it-called-tor/).
@@ -1979,12 +1940,12 @@ when it later leaves the retained-earnings pool as a distribution.
     self-certifying address scheme and the distributed hidden-service
     directory that resolves it.
 
-[^21]: [Set up Your Onion Service — Join the Tor
+[^14]: [Set up Your Onion Service — Join the Tor
     Community](https://community.torproject.org/onion-services/setup/) —
     the step-by-step how-to: install Tor, stand up a local web server, and
     add `HiddenServiceDir`/`HiddenServicePort` lines to `torrc`.
 
-[^22]: Operators who want defense-in-depth beyond Tor's own
+[^15]: Operators who want defense-in-depth beyond Tor's own
     encryption can layer HTTPS on top with either a self-signed or
     CA-issued certificate, using a separate keypair from the onion
     identity key itself — see [TLS Certificates for Onion
@@ -1992,14 +1953,14 @@ when it later leaves the retained-earnings pool as a distribution.
     A CA-issued cert exposes the `.onion` address in public Certificate
     Transparency logs, worth weighing against the anonymity goal here.
 
-[^23]: [Onion-Location — Join the Tor
+[^16]: [Onion-Location — Join the Tor
     Community](https://community.torproject.org/onion-services/advanced/onion-location/) —
     the header must be served over HTTPS on the clearnet site (not the
     onion site itself) and point to a valid `.onion` URL; test with
     `wget --server-response --spider` or by loading the site in Tor
     Browser and confirming the ".onion available" prompt appears.
 
-[^24]: Leaked NSA XKeyscore source code showed Tor users
+[^17]: Leaked NSA XKeyscore source code showed Tor users
     flagged for surveillance, some categorized outright as "extremists,"
     regardless of what they were actually doing on the network
     ([SiliconANGLE](https://siliconangle.com/2014/07/04/nsas-xkeyscore-dissected-all-tor-users-marked-as-extremists/),
@@ -2014,66 +1975,17 @@ when it later leaves the retained-earnings pool as a distribution.
     We maintain a running assessment of vetted VPN providers at
     [wiki.doikayt.org](https://wiki.doikayt.org/index.php/Category:VPN).
 
-[^25]: Down to a literal red light on someone's desk when a build
-    breaks — see [this example of building a failure
-    light](https://99x.io/Insights/blog/building-a-jenkins-failure-light-using-particle-photon)
-    for a CI pipeline, wiring a Particle Photon board to a Jenkins job.
-
-[^26]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
-    bot that runs asynchronous standups and posts status updates
-    directly to a channel, without a meeting.
-
-[^27]: Karl Marx, *Capital*, Vol. 1 (1867), Ch. 15, "Machinery and
-    Modern Industry" — on machinery losing exchange-value the moment a
-    cheaper-to-reproduce equivalent appears, regardless of its own physical
-    condition or remaining use-value; Marx's term for this is **moral
-    depreciation**, distinct from ordinary wear-and-tear depreciation.
-
-[^28]: Real companies tie executive compensation directly to
-    ROIC/ROCE performance targets, per their own SEC filings — e.g.
-    [Phillips 66's 2021 proxy
-    statement](https://www.sec.gov/Archives/edgar/data/1534701/000114036121010999/nc10021503x3_def14a.htm)
-    (50% of performance-share payout tied to after-tax ROCE) and
-    [Schlumberger/SLB's 2025 proxy
-    statement](https://www.sec.gov/Archives/edgar/data/87347/000130817925000029/slb_courtesy-pdf.pdf)
-    (three-year average ROCE benchmarked against competitors). On the
-    analyst side, comparing ROIC against WACC (cost of capital) is a
-    standard valuation framework taught in the [CFA
-    curriculum](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/equity-valuation-applications-and-processes).
-
-[^29]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
-    "Co-operation"](https://www.marxists.org/archive/marx/works/1867-c1/ch13.htm) —
-    the chapter distinguishing the technical function of directing
-    combined labor (the orchestra-conductor analogy) from the despotic
-    function of capitalist supervision.
-
-[^30]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
-    trans. 1934), on entrepreneurial profit vs. interest on capital; and
-    *Capitalism, Socialism and Democracy* (1942) on "creative
-    destruction."
-
-[^31]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
-    and Profit of
-    Enterprise"](https://www.marxists.org/archive/marx/works/1894-c3/ch23.htm) —
-    the chapter distinguishing "wages of superintendence" from "profit
-    of enterprise."
-
-[^32]: [Creating and viewing access
-    tokens](https://docs.npmjs.com/creating-and-viewing-access-tokens/) —
-    npm's documentation on granular (package-scoped) tokens vs. classic
-    tokens.
-
-[^33]: OFAC's authority derives from the [International Emergency
+[^18]: OFAC's authority derives from the [International Emergency
     Economic Powers Act](https://en.wikipedia.org/wiki/International_Emergency_Economic_Powers_Act)
     (IEEPA); U.S. financial institutions must comply with its blocking
     regulations.
 
-[^34]: Any USD-denominated transaction ultimately clears through Fedwire
-    or CHIPS. A non-U.S. bank needs a correspondent relationship with a
-    U.S. bank just to make its own dollar holdings usable
-    internationally — which is the relationship OFAC reaches through.
+[^19]: [Creating and viewing access
+    tokens](https://docs.npmjs.com/creating-and-viewing-access-tokens/) —
+    npm's documentation on granular (package-scoped) tokens vs. classic
+    tokens.
 
-[^43]: Executive Order 13224 blocks the property of designated terrorists. [Executive Order
+[^20]: Executive Order 13224 blocks the property of designated terrorists. [Executive Order
     13886](https://trumpwhitehouse.archives.gov/presidential-actions/executive-order-modernizing-sanctions-combat-terrorism/)
     (September 10, 2019) added the authority to "prohibit the opening, and prohibit or impose
     strict conditions on the maintaining, in the United States, of a correspondent account or
@@ -2081,7 +1993,12 @@ when it later leaves the retained-earnings pool as a distribution.
     or facilitated any significant transaction on behalf of" a blocked person. Treasury can
     also designate a bank outright, which cuts it off from dollar clearing in one step.
 
-[^35]: A "freeze key" (or admin key) is a privileged function written into a
+[^21]: Any USD-denominated transaction ultimately clears through Fedwire
+    or CHIPS. A non-U.S. bank needs a correspondent relationship with a
+    U.S. bank just to make its own dollar holdings usable
+    internationally — which is the relationship OFAC reaches through.
+
+[^22]: A "freeze key" (or admin key) is a privileged function written into a
     token's smart contract, callable only by the issuing company (the
     company that mints the token), that adds a specific address to an
     on-chain blocklist — the contract itself then refuses any transfer
@@ -2097,11 +2014,11 @@ when it later leaves the retained-earnings pool as a distribution.
     stronger capability than a simple freeze. DAI's contract has no
     equivalent function at all.
 
-[^36]: [A Comparison of the 2018 Bear Market and 2022 Crypto Market
+[^23]: [A Comparison of the 2018 Bear Market and 2022 Crypto Market
     Drawdown — CoinMarketCap
     Academy](https://coinmarketcap.com/academy/article/a-comparison-of-the-2018-bear-market-and-2022-crypto-market-drawdown).
 
-[^37]: DAI's worst dip on record came during the March 2023 Silicon Valley
+[^24]: DAI's worst dip on record came during the March 2023 Silicon Valley
     Bank collapse. Circle disclosed that $3.3 billion of USDC's own
     backing cash reserves were stuck at the failed bank, and USDC — a
     stablecoin pegged to the US dollar — fell as low as roughly $0.87 on
@@ -2124,22 +2041,97 @@ when it later leaves the retained-earnings pool as a distribution.
     [DAI recovers after severe depeg caused by USDC ripple
     effect](https://cryptonews.net/news/altcoins/20659725/).
 
-[^38]: Sky's `dss-psm` repository describes the Peg Stability Module as a specially
-    authorized vault sitting behind a collateral join adapter: calling `sellGem()` locks
-    the incoming tokens, takes out a DAI loan, and issues DAI to the user, with a fee
-    subtracted from the DAI received. See
-    [sky-ecosystem/dss-psm](https://github.com/sky-ecosystem/dss-psm). Checked against
-    the repository README on 2026-09-20; fee levels are protocol parameters that can
-    change, so this document states no specific rate.
+[^25]: ERISA requires broad-based coverage — generally, every employee
+    meeting minimal age and service thresholds must be eligible — and
+    nondiscriminatory allocation formulas that can't disproportionately
+    favor highly compensated employees over everyone else. The law is
+    built to prevent an ESOP in name only, with a small circle of
+    insiders collecting most of its actual value.
 
-[^39]: Sky's `esm` repository: MKR holders `join` funds, which are immediately burnt;
-    once the total reaches a threshold, anyone can `fire` the module, which calls
-    `end.cage()` and triggers Emergency Shutdown (Global Settlement). The README frames
-    it as a way for a minority of holders to thwart malicious governance or a critical
-    bug. See [sky-ecosystem/esm](https://github.com/sky-ecosystem/esm). The README and
-    contract name MKR.
+[^26]: Allocation and vesting are different clocks. Shares move out of the loan's
+    collateral (suspense) account into an employee's individual account as the acquisition
+    debt gets repaid — that's allocation, and it's mechanically tied to the loan. Whether the
+    employee has a non-forfeitable right to *keep* shares already allocated to them is governed
+    separately, by a service-based vesting schedule (e.g., graded vesting over several years);
+    an employee can hold allocated shares that would still be forfeited if they left early.
 
-[^40]: Sky's core `dss` repository: DAI creation requires collateral, configuration is
+[^27]: [NCEO, "ESOPs in S
+    Corporations"](https://www.nceo.org/what-is-employee-ownership/esops/esops-s-corporations) —
+    on the federal tax exemption for S-corp income attributable to ESOP
+    ownership, and the ~4,000-plus 100%-ESOP-owned S-corps counted in a
+    2022 survey.
+
+[^28]: Without a safeguard, a founder could structure an S-corp ESOP
+    so the company pays no tax while the shares' actual value stays
+    concentrated among a small circle of insiders rather than reaching
+    rank-and-file employees. [IRC §409(p) — IRS, "Preventing the
+    occurrence of a nonallocation
+    year"](https://www.irs.gov/retirement-plans/issue-snapshot-preventing-the-occurrence-of-a-nonallocation-year-under-section-409p),
+    added by Congress in 2001, blocks this: a "disqualified person"
+    (anyone owning 10%+ of deemed-owned ESOP shares, or 20%+ with
+    family) can't have ESOP assets accrue to them in any year where
+    disqualified persons collectively hold 50%+ of the company's
+    equity. Violations carry a 50% excise tax, deemed taxable
+    distributions to participants, loss of the ESOP's tax-qualified
+    status, and termination of the company's S-corp election.
+
+[^29]: [arxiv.org/abs/2607.07663](https://arxiv.org/abs/2607.07663)
+
+[^30]: [Elite overproduction — Wikipedia](https://en.wikipedia.org/wiki/Elite_overproduction);
+    [Structural-Demographic Theory — Peter Turchin](https://peterturchin.com/structural-demographic-theory/)
+
+[^31]: Down to a literal red light on someone's desk when a build
+    breaks — see [this example of building a failure
+    light](https://99x.io/Insights/blog/building-a-jenkins-failure-light-using-particle-photon)
+    for a CI pipeline, wiring a Particle Photon board to a Jenkins job.
+
+[^32]: [Geekbot](https://geekbot.com/) is one example — a Slack/Teams
+    bot that runs asynchronous standups and posts status updates
+    directly to a channel, without a meeting.
+
+[^33]: Karl Marx, *Capital*, Vol. 1 (1867), Ch. 15, "Machinery and
+    Modern Industry" — on machinery losing exchange-value the moment a
+    cheaper-to-reproduce equivalent appears, regardless of its own physical
+    condition or remaining use-value; Marx's term for this is **moral
+    depreciation**, distinct from ordinary wear-and-tear depreciation.
+
+[^34]: Real companies tie executive compensation directly to
+    ROIC/ROCE performance targets, per their own SEC filings — e.g.
+    [Phillips 66's 2021 proxy
+    statement](https://www.sec.gov/Archives/edgar/data/1534701/000114036121010999/nc10021503x3_def14a.htm)
+    (50% of performance-share payout tied to after-tax ROCE) and
+    [Schlumberger/SLB's 2025 proxy
+    statement](https://www.sec.gov/Archives/edgar/data/87347/000130817925000029/slb_courtesy-pdf.pdf)
+    (three-year average ROCE benchmarked against competitors). On the
+    analyst side, comparing ROIC against WACC (cost of capital) is a
+    standard valuation framework taught in the [CFA
+    curriculum](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/equity-valuation-applications-and-processes).
+
+[^35]: Karl Marx, *Capital*, Vol. 1 (1867), [Ch. 13,
+    "Co-operation"](https://www.marxists.org/archive/marx/works/1867-c1/ch13.htm) —
+    the chapter distinguishing the technical function of directing
+    combined labor (the orchestra-conductor analogy) from the despotic
+    function of capitalist supervision.
+
+[^36]: Joseph Schumpeter, *The Theory of Economic Development* (1911;
+    trans. 1934), on entrepreneurial profit vs. interest on capital; and
+    *Capitalism, Socialism and Democracy* (1942) on "creative
+    destruction."
+
+[^37]: Karl Marx, *Capital*, Vol. 3 (1894), [Part V, Ch. 23, "Interest
+    and Profit of
+    Enterprise"](https://www.marxists.org/archive/marx/works/1894-c3/ch23.htm) —
+    the chapter distinguishing "wages of superintendence" from "profit
+    of enterprise."
+
+[^38]: USDS launched in September 2024 as an optional 1:1 upgrade for DAI holders, and DAI
+    itself remains active ([The
+    Block](https://www.theblock.co/post/313235/makerdao-mkr-sky-dai-stablecoin-usds)). DL
+    News reported in August 2024 that USDS "contains a freeze function in its code", while
+    DAI has none ([DL
+    News](https://www.dlnews.com/articles/defi/makerdao-sky-rebrand-brings-usds-stablecoin-freeze-function/)).
+
+[^39]: Sky's core `dss` repository: DAI creation requires collateral, configuration is
     changed through the governance layer, liquidations run as auctions, and "System Debt"
     is covered by diluting the governance token through an auction while surplus is sold
     for the same token. See [sky-ecosystem/dss](https://github.com/sky-ecosystem/dss).
@@ -2147,7 +2139,22 @@ when it later leaves the retained-earnings pool as a distribution.
     rename and refers to MKR. It does not describe the surplus buffer's place in the loss
     order, which this document leaves out.
 
-[^41]: *Van Loon v. Department of the Treasury*, No. 23-50669 (5th Cir. Nov. 26, 2024): the
+[^40]: Sky's `dss-psm` repository describes the Peg Stability Module as a specially
+    authorized vault sitting behind a collateral join adapter: calling `sellGem()` locks
+    the incoming tokens, takes out a DAI loan, and issues DAI to the user, with a fee
+    subtracted from the DAI received. See
+    [sky-ecosystem/dss-psm](https://github.com/sky-ecosystem/dss-psm). Checked against
+    the repository README on 2026-09-20; fee levels are protocol parameters that can
+    change, so this document states no specific rate.
+
+[^41]: Sky's `esm` repository: MKR holders `join` funds, which are immediately burnt;
+    once the total reaches a threshold, anyone can `fire` the module, which calls
+    `end.cage()` and triggers Emergency Shutdown (Global Settlement). The README frames
+    it as a way for a minority of holders to thwart malicious governance or a critical
+    bug. See [sky-ecosystem/esm](https://github.com/sky-ecosystem/esm). The README and
+    contract name MKR.
+
+[^42]: *Van Loon v. Department of the Treasury*, No. 23-50669 (5th Cir. Nov. 26, 2024): the
     court reversed the district court and held that immutable smart contracts are not
     "property" under IEEPA because no one can own or control them. See the
     [opinion](https://www.ca5.uscourts.gov/opinions/pub/23/23-50669-CV0.pdf). Treasury
@@ -2162,12 +2169,6 @@ when it later leaves the retained-earnings pool as a distribution.
     set for April 26, 2027, with a motion for acquittal still undecided ([The Block,
     August 2026](https://www.theblock.co/news/regulation/2026-08-26-tornado-cash-roman-storm-retrial-april-2027-412761)).
 
-[^42]: USDS launched in September 2024 as an optional 1:1 upgrade for DAI holders, and DAI
-    itself remains active ([The
-    Block](https://www.theblock.co/post/313235/makerdao-mkr-sky-dai-stablecoin-usds)). DL
-    News reported in August 2024 that USDS "contains a freeze function in its code", while
-    DAI has none ([DL
-    News](https://www.dlnews.com/articles/defi/makerdao-sky-rebrand-brings-usds-stablecoin-freeze-function/)).
 
 ---
 
