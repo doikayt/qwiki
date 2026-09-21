@@ -866,9 +866,9 @@ processor ([Giving Block](https://thegivingblock.com/)), which streamlines tax r
 donations, waits until donation volume or the [Form
 8283](https://www.irs.gov/forms-pubs/about-form-8283) reporting threshold makes it worthwhile.
 
-*What this buys.* The only places a bank freeze can bite are the two small operating
-accounts. The bulk of the funds sit in ETH and DAI, which have no per-address freeze
-function, subject to the DAI limits described in [Appendix A.4](#a4-dai-backgrounder).
+*What this buys.* A bank freeze can reach only the two small operating accounts. The bulk of the
+funds sit in ETH and DAI, which have no per-address freeze function, subject to the DAI limits
+described in [Appendix A.4](#a4-dai-backgrounder).
 
 
 No aspect of this structure  would have stopped  the designation itself. It would have
