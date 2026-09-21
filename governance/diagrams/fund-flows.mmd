@@ -17,9 +17,9 @@ flowchart TD
     DonationProcessor[Giving Block - streamlines tax receipts<br/>for crypto donations]
     Contributors{{Contributors}}
     ContribOfframp(Contributor's own fiat off-ramp)
-    VendorsCrypto{{Vendors - crypto-accepting}}
+    VendorsCrypto{{Vendors - DAI-accepting}}
     OffRampJIT[Request Finance - JIT off-ramp,<br/>pays vendor directly]
-    VendorsFiat{{Vendors - fiat-only}}
+    VendorsFiat{{Vendors - not accepting DAI,<br/>paid in fiat}}
 
     subgraph LEGEND["Legend"]
         L1[Asset or account held by an entity]
@@ -41,7 +41,7 @@ flowchart TD
 
     DAIFloat -- "<b style='font-size:2.3em'>③</b> wallet-to-wallet" --> Contributors
     Contributors -- "<b style='font-size:2.3em'>③</b> own responsibility" --> ContribOfframp
-    DAIFloat -- "<b style='font-size:2.3em'>③</b> wallet-to-wallet, DAI discount" --> VendorsCrypto
+    DAIFloat -- "<b style='font-size:2.3em'>③</b> wallet-to-wallet, potential discount" --> VendorsCrypto
     DAIFloat -- "<b style='font-size:2.3em'>③</b> processor converts +<br/>pays vendor in one settlement" --> OffRampJIT
     OffRampJIT -- "<b style='font-size:2.3em'>③</b>" --> VendorsFiat
     SatBank -- "<b style='font-size:2.3em'>③</b> ACH/card,<br/>routine ops" --> VendorsFiat

@@ -793,12 +793,12 @@ There are thus two ways to hold a collective's treasury, listed in increasing or
   expenses (the two-tier model)
 - A straight DAI account, with no ETH intermediate step at all
 
-The diagram below depicts the first of these, the two-tier model. Its ETH reserve carries
-none of DAI's own risks: no protocol-triggered Emergency Shutdown (see
-[Appendix A.4](#a4-dai-backgrounder)), and no dependence on DAI's collateral, part of
-which is USDC that Circle can freeze. The DAI float handles spending, so a vendor who
-won't accept crypto gets paid from a stable balance instead of triggering an ETH sale,
-and another capital-gains event, on every invoice.
+The diagram below depicts the first of these, the two-tier model. Its ETH reserve carries none of
+DAI's own risks: no protocol-triggered Emergency Shutdown (see [Appendix
+A.4](#a4-dai-backgrounder)), and no dependence on DAI's collateral, part of which is USDC that
+Circle can freeze. The DAI float handles spending, so a vendor who won't accept DAI gets paid from
+a stable balance instead of triggering an ETH sale, and another capital-gains event, on every
+invoice.
 
 The all-DAI treasury option (not shown in the diagram) drops the ETH reserve, the periodic
 batch convert, and the second balance to manage. The price is concentration: exposure to
@@ -854,11 +854,11 @@ small swaps, also keeps signer effort and capital-gains events low.
 
 *Money out* ($\color{green}{\text{③}}$). Everything paid out comes from the DAI float.
 Contributors are paid wallet to wallet, and converting to fiat is their own responsibility.
-Crypto-accepting vendors are paid the same way, at a discount for paying in DAI. Fiat-only vendors
-are paid through a just-in-time off-ramp ([Request Finance](https://www.request.finance/)), a
-processor that converts the DAI and pays the vendor directly in one settlement, so no fiat sits in
-the collective's accounts along the way. Routine operating costs still go out by ACH or card from
-the two near-term bank accounts.
+Vendors that accept DAI are paid the same way, potentially at a discount. Vendors that don't
+accept DAI are paid through a just-in-time off-ramp ([Request
+Finance](https://www.request.finance/)), a processor that converts the DAI and pays the vendor
+directly in one settlement, so no fiat sits in the collective's accounts along the way. Routine
+operating costs still go out by ACH or card from the two near-term bank accounts.
 
 *Held back for now* ($\color{gray}{\text{④}}$ and the dotted lines). Hedging the ETH treasury
 waits until a treasurer is on board, for the overhead reasons given earlier. The donation
