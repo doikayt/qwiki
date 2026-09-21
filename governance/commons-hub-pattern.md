@@ -759,11 +759,11 @@ only the designated party's property and interests in property.
 A second, wider lever targets the foreign bank itself, and with it every customer the bank
 serves. Since 2019, Treasury can bar a foreign bank from holding correspondent accounts at
 U.S. banks if the bank knowingly conducts or facilitates significant transactions for a
-blocked party.[^43] The threat is credible because even a dollar payment between two
-non-U.S. parties clears through the U.S. correspondent-banking system,[^34] so an excluded
-bank loses dollar access for all customers, not just the flagged one. Banca Etica cited
-this kind of exposure on September 1, when it suspended A/I's account for fear of U.S.
-secondary sanctions.[^18]
+blocked party.[^43] The threat is credible because dollar-denominated payments, even
+between two non-U.S. parties, ordinarily clear through the U.S. correspondent-banking
+system,[^34] so an excluded bank loses dollar access for all customers, not just the
+flagged one. Banca Etica cited this kind of exposure on September 1, when it suspended
+A/I's account for fear of U.S. secondary sanctions.[^18]
 
 
 To mitigate the risk of a collective suffering A/I's fate, our model calls for holding
