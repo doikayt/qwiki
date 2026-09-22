@@ -56,9 +56,16 @@ $COMPOSE up -d
 echo "==> Running schema update for extensions (AbuseFilter etc.)..."
 $COMPOSE exec -T mediawiki php maintenance/run.php update --quick
 
-echo "==> Waiting for wiki to answer HTTP requests..."
+echo "==> Waiting for wiki API to answer JSON requests..."
 WIKI_URL="http://localhost:8080"
-until curl -sf --max-time 2 "$WIKI_URL" > /dev/null; do
+# Checking "/" isn't enough -- the main page can start responding before
+# api.php's PHP workers have picked up the restored LocalSettings.php,
+# which leaves a window where callers get an HTML error/redirect page
+# instead of JSON (see import-wiki-content.sh's own SyntaxError failures
+# when it races this). Poll api.php itself and require valid JSON back.
+until curl -sf --max-time 2 \
+    "$WIKI_URL/api.php?action=query&meta=siteinfo&format=json" 2>/dev/null \
+    | grep -q '"general"'; do
   echo "   ..."
   sleep 2
 done

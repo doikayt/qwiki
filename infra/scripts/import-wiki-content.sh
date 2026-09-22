@@ -7,9 +7,15 @@ REPO_ROOT="$(git -C "$SCRIPT_DIR" rev-parse --show-toplevel)"
 WIKI_URL="http://localhost:8080"
 CONTENT_DIR="${1:-$REPO_ROOT/example/wiki-content-files}"
 
-echo "==> Checking wiki is up..."
-if ! curl -sf --max-time 5 "$WIKI_URL" > /dev/null; then
-  echo "ERROR: Wiki not reachable at $WIKI_URL"
+echo "==> Checking wiki API is up..."
+# Check api.php itself, not just "/" -- the main page can answer before
+# api.php's PHP workers have picked up config, which otherwise surfaces
+# later as a cryptic "Unexpected token '<'" JSON-parse crash out of
+# deploy.ts instead of a clear error here.
+if ! curl -sf --max-time 5 \
+    "$WIKI_URL/api.php?action=query&meta=siteinfo&format=json" 2>/dev/null \
+    | grep -q '"general"'; then
+  echo "ERROR: Wiki API not reachable/ready at $WIKI_URL/api.php"
   echo "       Start it with: docker compose -f infra/docker-compose.yml up -d"
   exit 1
 fi
