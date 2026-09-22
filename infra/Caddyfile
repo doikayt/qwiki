@@ -1,4 +1,12 @@
 wiki.doikayt.org {
+	# Special:Drilldown (Cargo) generates an unbounded space of uncached,
+	# expensive DB queries via facet-filter combinations in the URL --
+	# not linked from any content page, so blocking it doesn't affect
+	# normal readers. Added after a distributed scraper (thousands of
+	# distinct IPs) saturated mariadb/Apache by crawling it.
+	@drilldown path /index.php/Special:Drilldown*
+	respond @drilldown "Temporarily disabled due to automated abuse." 503
+
 	reverse_proxy mediawiki:80
 }
 
