@@ -1,0 +1,73 @@
+%%{init: {"themeVariables": {"fontSize": "14px"}, "flowchart": {"nodeSpacing": 50, "rankSpacing": 70}}}%%
+flowchart TD
+    subgraph USERS["Individuals / Organizations"]
+        VaultOwner[Vault owner - locks collateral to mint]
+        Holder[DAI holder - buys and holds DAI, e.g. a collective's treasury]
+    end
+
+    Exchange[Exchange - CEX or DEX]
+    ETHCollat[ETH/WBTC collateral]
+
+    subgraph PROTO["Sky protocol - smart contracts"]
+        DAISupply((DAI in circulation))
+        PSM[Peg Stability Module]
+        Vault[Vault/CDP]
+        ESM[Emergency Shutdown Module]
+        Buffer[Surplus buffer]
+    end
+
+    USDC[USDC]
+    RWA[Tokenized Treasuries]
+
+    subgraph INST["Institutions"]
+        Circle[Circle - issues USDC]
+        RWACustodian[Real-world asset custodian/trustee]
+        Governance[Sky governance - SKY/MKR holders]
+    end
+
+    VaultOwner -- "<b style='font-size:2.3em'>①</b> locks" --> ETHCollat
+    ETHCollat -- "<b style='font-size:2.3em'>②</b> posted as collateral" --> Vault
+    Vault -- "<b style='font-size:2.3em'>③</b> mints, 145-175%+ overcollateralized" --> DAISupply
+
+    Holder -- "<b style='font-size:2.3em'>④</b> swaps USDC" --> PSM
+    PSM -- "<b style='font-size:2.3em'>⑤</b> mints/burns" --> DAISupply
+    PSM -- "<b style='font-size:2.3em'>⑥</b> holds" --> USDC
+    USDC -- "<b style='font-size:2.3em'>⑦</b> issued by" --> Circle
+
+    Holder -- "<b style='font-size:2.3em'>⑧</b> swaps ETH/BTC/USDC/USD for DAI" --> Exchange
+    Exchange -- "<b style='font-size:2.3em'>⑨</b> trades existing DAI" --> DAISupply
+    Exchange -- "<b style='font-size:2.3em'>⑩</b> DAI" --> Holder
+
+    Vault -- "<b style='font-size:2.3em'>⑪</b> backed in part by" --> RWA
+    RWA -- "<b style='font-size:2.3em'>⑫</b> held by" --> RWACustodian
+
+    Vault -- "<b style='font-size:2.3em'>⑬</b> risk parameters set by" --> Governance
+    ESM -- "<b style='font-size:2.3em'>⑭</b> triggered by" --> Governance
+
+    DAISupply -- "<b style='font-size:2.3em'>⑮</b> can be frozen by" --> ESM
+    PSM -.->|"<b style='font-size:2.3em'>⑯</b> Peg Stability Module and real-world asset shortfalls absorbed by"| Buffer
+
+    classDef user fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    classDef code fill:#ffffff,stroke:#16a34a,stroke-width:2px
+    classDef asset fill:#f3f4f6,stroke:#6b7280,stroke-width:2px
+    classDef token fill:#fbcfe8,stroke:#be185d,stroke-width:3px
+    classDef cutoff fill:#fdf0e3,stroke:#e07b00,stroke-width:3px
+    classDef legal fill:#fdf0e3,stroke:#e07b00,stroke-width:2px,stroke-dasharray:6 4
+    classDef breaker fill:#fee2e2,stroke:#dc2626,stroke-width:3px
+    class VaultOwner,Holder user
+    class Vault,PSM,Buffer code
+    class ETHCollat,USDC,RWA asset
+    class DAISupply token
+    class Circle,RWACustodian,Exchange cutoff
+    class Governance legal
+    class ESM breaker
+
+    style USERS fill:#f8fafc,stroke:#94a3b8
+    style PROTO fill:#f0fdf4,stroke:#16a34a,stroke-width:2px
+    style INST fill:#f8fafc,stroke:#94a3b8
+
+    linkStyle 2,4 stroke:#16a34a,stroke-width:3px,color:#16a34a
+    linkStyle 3,7,8,9 stroke:#2563eb,stroke-width:3px,color:#2563eb
+    linkStyle 0,1,5,6,10,11 stroke:#6b7280,stroke-width:2px,color:#6b7280
+    linkStyle 12,13 stroke:#7c3aed,stroke-width:3px,color:#7c3aed
+    linkStyle 14,15 stroke:#dc2626,stroke-width:2px,stroke-dasharray:5 4,color:#dc2626
