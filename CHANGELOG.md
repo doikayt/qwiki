@@ -1,5 +1,14 @@
 # @datalackey/qwiki
 
+## 0.1.62
+
+### Patch Changes
+
+-   - fix(infra): block Special:Drilldown to stop scraper-driven DB overload
+    - fix(infra): wait for wiki API readiness, not just main page
+    - feat(website): add Manifesto link to sidebar nav
+    - fix: repair split sentence in rate-of-profit section
+
 ## 0.1.61
 
 ### Patch Changes
