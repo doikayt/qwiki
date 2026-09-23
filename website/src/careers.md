@@ -23,13 +23,18 @@ We're looking for a co-founder to help build and lead our company from the groun
   Node.js -- this is all useful, but secondary to architectural judgment. Someone with the right foundation can 
   pick up the tech stack fairly easily
 
-### Intern
+### Internships
+
+*Background required for all internship roles*
+
+- *Comp Sci, EE* bachelor's or higher, or advanced degree in another STEM
+  discipline and a demonstrated portfolio of equivalent experience
+- Proven record as an activist or volunteer for causes aligned with our mission
+
+#### Software/Development Intern
 
 *Ideal Profile*
 
-- Proven record as an activist or volunteer for causes aligned with our mission
-- *Comp Sci, EE* B.S. or above, or  degree in other STEM discipline and a demonstrated
-  portfolio of equivalent experience
 - Familiarity with *agentic AI* coding tools (e.g., Cursor, Claude Code)
 - TypeScript / node-JS / web development experience
 - Comfortable developing on Linux (or at least able to tweak existing Linux/bash scripts to run on MacOS)
@@ -37,8 +42,6 @@ We're looking for a co-founder to help build and lead our company from the groun
 *Responsibilities*
 
 - Handle light-to-medium difficulty enhancements to our existing platform and tools.
-- Write and publish articles explaining the novel principles behind the tech
-  we've built so far.
 - Engage with campaigns and operations initiatives run by organizations we
   align with.
   - Help them apply the tools we have developed in-house or gained expertise in.
@@ -53,10 +56,44 @@ We're looking for a co-founder to help build and lead our company from the groun
   - Real-world impact. The tools you help create go straight to activists and mission-aligned organizations.
   - For grad students/senior undergrads: a KILLER thesis project that will have real world impact.
 
+#### Marketing Communications Intern
 
-## Benefits/Compensation
+*Ideal Profile*
 
-Until we get funding: no money.
+- Strong technical writing skills, as well as ability to address social implications of new technologies.
+- Track record of published articles or comparable writing samples, ideally
+  explaining technical or complex topics for a general audience
+- Interest in (or prior experience with) grant writing or nonprofit fundraising
+
+*Responsibilities*
+
+- Write and publish articles explaining the novel principles behind the tech
+  we've built so far.
+- Write applications for grants and non-profit fiscal sponsorships.
+- Help build our public presence -- newsletter content, social media, and
+  outreach materials aimed at mission-aligned organizations.
+
+*What's In It For Me*
+
+- Learn how to leverage AI in research/writing if you don't know how already.
+- Direct mentorship on both the technical content and the nonprofit/grant
+  landscape from the core team.
+- A byline on published work explaining genuinely novel technology.
+- Real-world impact: the funding proposals and articles you write directly
+  support the collective's ability to operate and grow.
+- For grad students/senior undergrads: a portfolio-building opportunity with
+  real organizational stakes.
+
+
+## Compensation
+
+We are in our initial stages, so funding is sporadic, but still occasionally
+available for some projects.
+
+In these instances, we pay out in cryptocurrency: ETH or DAI. We are
+are committed to using sanction and debanking-resistant payment
+systems, and we look for that same commitment from our potential colleagues.
+
 Eventually we plan to pay salaries at the low-to-mid end of the market -- per a [compensation policy][comp-philosophy]  
 that is transparent and formula-based.  This plus meaningful equity in the for-profit subsidiary as it grows. 
 
@@ -66,7 +103,7 @@ Bay Area or Remote
 
 ## Hours
 
-For both roles we are flexible in how we start working together, but prefer someone who is able to 
+For all roles we are flexible in how we start working together, but prefer someone who is able to 
 commit at least 20 hours per week.
 
 
