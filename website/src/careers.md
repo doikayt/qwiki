@@ -27,9 +27,20 @@ We're looking for a co-founder to help build and lead our company from the groun
 
 *Background required for all internship roles*
 
-- *Comp Sci, EE* bachelor's or higher, or advanced degree in another STEM
+- Comp Sci, EE bachelor's or higher, or advanced degree in another STEM
   discipline and a demonstrated portfolio of equivalent experience
 - Proven record as an activist or volunteer for causes aligned with our mission
+
+
+*Responsibilities applicable to all internship roles*
+
+- Engage with campaigns and operations initiatives run by organizations we
+  align with.
+  - Help them apply the tools we have developed in-house or gained expertise in.
+  - This external engagement will be critical in ensuring our product idea
+    pipeline meets the on-the-ground needs of our user base.
+
+
 
 #### Software/Development Intern
 
@@ -42,11 +53,6 @@ We're looking for a co-founder to help build and lead our company from the groun
 *Responsibilities*
 
 - Handle light-to-medium difficulty enhancements to our existing platform and tools.
-- Engage with campaigns and operations initiatives run by organizations we
-  align with.
-  - Help them apply the tools we have developed in-house or gained expertise in.
-  - This external engagement will be critical in ensuring our product idea
-    pipeline meets the on-the-ground needs of our user base.
 
 *What's In It For Me*
 
