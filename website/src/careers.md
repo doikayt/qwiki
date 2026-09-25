@@ -44,6 +44,9 @@ We're looking for a co-founder to help build and lead our company from the groun
 
 #### Software/Development Intern
 
+*Compensation: Currently unpaid (volunteer basis) -- see the [Compensation](#compensation)
+section below for how that could change.*
+
 *Ideal Profile*
 
 - Familiarity with *agentic AI* coding tools (e.g., Cursor, Claude Code)
@@ -63,6 +66,9 @@ We're looking for a co-founder to help build and lead our company from the groun
   - For grad students/senior undergrads: a KILLER thesis project that will have real world impact.
 
 #### Marketing Communications Intern
+
+*Compensation: A $1,000 stipend is currently available for this role -- scope is
+open and negotiable, reach out via [Contact](#contact) below to discuss.*
 
 *Ideal Profile*
 
@@ -99,6 +105,9 @@ available for some projects.
 In these instances, we pay out in cryptocurrency: ETH or DAI. We are
 are committed to using sanction and debanking-resistant payment
 systems, and we look for that same commitment from our potential colleagues.
+
+As of September 2026, that funding is available for the Marketing Communications
+Intern role specifically -- see that listing above for the current amount and terms.
 
 Eventually we plan to pay salaries at the low-to-mid end of the market -- per a [compensation policy][comp-philosophy]  
 that is transparent and formula-based.  This plus meaningful equity in the for-profit subsidiary as it grows. 
