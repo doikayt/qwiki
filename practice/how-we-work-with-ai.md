@@ -88,7 +88,7 @@ The best way we've found to put this to work is by:
 
 The second point has real science behind it: the interplay of _neuroplasticity_ 
 and [_associative learning_](https://en.wikipedia.org/wiki/Learning#Associative_learning)  ensures that
-associated something you just learned with some other  thing you know about reinforces 
+associating something you just learned with some other  thing you know about reinforces 
 the impression of both things. [Neural] "cells that fire together, wire together"
 ([Shatz, 1992](https://en.wikipedia.org/wiki/Carla_J._Shatz)). We explore it further below.
 
