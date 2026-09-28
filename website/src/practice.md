@@ -107,7 +107,7 @@ type — and then just links straight down to the file that does it:
 >We pull out the RuntimeSpec via entry.runtime, which we type
 >initially as 'unknown' (since there is no published guarantee we can rely on), but we
 >then prove to the type checker that it is compatible with our RuntimeSpec type if it passes the guard
->[assertRuntimeSpec](https://github.com/datalackey/gas-demodulify-plugin/blob/bfe9372eb7133b0edb17f26d8c9441d86af90ab6/src/plugin/code-emission/CodeEmitter.ts#L251)
+>[assertRuntimeSpec](https://github.com/doikayt/gas-demodulify-plugin/blob/bfe9372eb7133b0edb17f26d8c9441d86af90ab6/src/plugin/code-emission/CodeEmitter.ts#L251)
 
 
 And the code links back. Sitting right on the `WebpackRuntimeSpec` type in
