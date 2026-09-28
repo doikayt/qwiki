@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.63
+
+### Patch Changes
+
+-   - fix(wiki): load mediawiki.api explicitly before using mw.Api in Common.js
+
 ## 0.1.62
 
 ### Patch Changes
