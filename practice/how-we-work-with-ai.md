@@ -95,15 +95,20 @@ the impression of both things. [Neural] "cells that fire together, wire together
 
 ## Case study: linking backgrounders to code
 
-Here's an example of compiler plugin-in like code that our founder wrote      we wrote that we -- compiler numskulls had we've found of doing this well:
+Here's an example from some webpack plugin-in code that our 
+founder wrote when he was just starting to learn about webpack:
+
 [`gas-demodulify-plugin`](https://github.com/doikayt/gas-demodulify-plugin)'s design
-doc. Its backgrounder,
-[`docs/plugin-design.md`](https://github.com/doikayt/gas-demodulify-plugin/blob/main/docs/plugin-design.md),
+doc and  its associated backgrounder,
+[`docs/plugin-design.md`](https://github.com/doikayt/gas-demodulify-plugin/blob/main/docs/plugin-design.md#rationale-for-referencing-webpacks-internal-runtimespec),
 walks through *why* the plugin needs to reach into Webpack's internal `RuntimeSpec`
 type — and then just links straight down to the file that does it:
 
-> The core logic responsible for emitting GAS-safe output lives in
-> [CodeEmitter.ts](../src/plugin/code-emission/CodeEmitter.ts)...
+>We pull out the RuntimeSpec via entry.runtime, which we type
+>initially as 'unknown' (since there is no published guarantee we can rely on), but we
+>then prove to the type checker that it is compatible with our RuntimeSpec type if it passes the guard
+>[assertRuntimeSpec](https://github.com/datalackey/gas-demodulify-plugin/blob/bfe9372eb7133b0edb17f26d8c9441d86af90ab6/src/plugin/code-emission/CodeEmitter.ts#L251)
+
 
 And the code links back. Sitting right on the `WebpackRuntimeSpec` type in
 [`CodeEmitter.ts`](https://github.com/doikayt/gas-demodulify-plugin/blob/main/src/plugin/code-emission/CodeEmitter.ts)
