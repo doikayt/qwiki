@@ -259,25 +259,30 @@ raw: true
 		var batches = [];
 		for ( var i = 0; i < titles.length; i += 50 ) { batches.push( titles.slice( i, i + 50 ) ); }
 
-		batches.forEach( function ( batch ) {
-			new mw.Api().get( {
-				action: 'query',
-				titles: batch.join( '|' ),
-				prop: 'revisions',
-				rvprop: 'content',
-				rvslots: 'main',
-				formatversion: 2
-			} ).then( function ( data ) {
-				var titleToDesc = {};
-				( ( data.query && data.query.pages ) || [] ).forEach( function ( page ) {
-					batch.forEach( function ( t ) { delete categoryDescPending[ t ]; } );
-					if ( !page.revisions ) { return; }
-					var desc = firstParagraph( page.revisions[ 0 ].slots.main.content );
-					if ( !desc ) { return; }
-					categoryDescCache[ page.title ] = desc;
-					titleToDesc[ page.title ] = desc;
+		// mw.Api lives in the mediawiki.api module, which "site" (what Common.js
+		// becomes) does not pull in automatically -- load it explicitly first, or
+		// `new mw.Api()` throws "mw.Api is not a constructor".
+		mw.loader.using( 'mediawiki.api' ).then( function () {
+			batches.forEach( function ( batch ) {
+				new mw.Api().get( {
+					action: 'query',
+					titles: batch.join( '|' ),
+					prop: 'revisions',
+					rvprop: 'content',
+					rvslots: 'main',
+					formatversion: 2
+				} ).then( function ( data ) {
+					var titleToDesc = {};
+					( ( data.query && data.query.pages ) || [] ).forEach( function ( page ) {
+						batch.forEach( function ( t ) { delete categoryDescPending[ t ]; } );
+						if ( !page.revisions ) { return; }
+						var desc = firstParagraph( page.revisions[ 0 ].slots.main.content );
+						if ( !desc ) { return; }
+						categoryDescCache[ page.title ] = desc;
+						titleToDesc[ page.title ] = desc;
+					} );
+					applyCategoryDescriptions( titleToDesc );
 				} );
-				applyCategoryDescriptions( titleToDesc );
 			} );
 		} );
 	}
@@ -333,26 +338,31 @@ raw: true
 
 	var GITHUB_REPO = 'https://github.com/doikayt/qwiki';
 
-	new mw.Api().get( {
-		action: 'query',
-		titles: 'MediaWiki:Doikayt-build-commit',
-		prop: 'revisions',
-		rvprop: 'content',
-		rvslots: 'main'
-	} ).then( function ( data ) {
-		var pages = data.query.pages;
-		var page  = pages[ Object.keys( pages )[ 0 ] ];
-		if ( !page.revisions ) { return; }
-		var commit = page.revisions[ 0 ].slots.main[ '*' ].trim();
-		if ( !commit ) { return; }
-		var short = commit.slice( 0, 7 );
-		var $link = $( '<a>' ).attr( {
-			href:   GITHUB_REPO + '/commit/' + commit,
-			target: '_blank',
-			rel:    'noopener'
-		} ).text( 'built at ' + short );
-		$( '#footer-info' ).append(
-			$( '<li>' ).attr( 'id', 'footer-info-buildcommit' ).append( $link )
-		);
+	// mw.Api lives in the mediawiki.api module, which "site" (what Common.js
+	// becomes) does not pull in automatically -- load it explicitly first, or
+	// `new mw.Api()` throws "mw.Api is not a constructor".
+	mw.loader.using( 'mediawiki.api' ).then( function () {
+		new mw.Api().get( {
+			action: 'query',
+			titles: 'MediaWiki:Doikayt-build-commit',
+			prop: 'revisions',
+			rvprop: 'content',
+			rvslots: 'main'
+		} ).then( function ( data ) {
+			var pages = data.query.pages;
+			var page  = pages[ Object.keys( pages )[ 0 ] ];
+			if ( !page.revisions ) { return; }
+			var commit = page.revisions[ 0 ].slots.main[ '*' ].trim();
+			if ( !commit ) { return; }
+			var short = commit.slice( 0, 7 );
+			var $link = $( '<a>' ).attr( {
+				href:   GITHUB_REPO + '/commit/' + commit,
+				target: '_blank',
+				rel:    'noopener'
+			} ).text( 'built at ' + short );
+			$( '#footer-info' ).append(
+				$( '<li>' ).attr( 'id', 'footer-info-buildcommit' ).append( $link )
+			);
+		} );
 	} );
 }() );
