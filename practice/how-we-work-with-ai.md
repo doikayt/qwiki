@@ -28,7 +28,7 @@ the End in Mind](https://www.goodreads.com/quotes/1401614-to-begin-with-the-end-
 We strive to approach things from the end _user's_ perspective, the highest level of abstraction
 that actually matters. 
 
-When you sketch out the end state first, you
+When you sketch out your desired end state first, you
 often see early on that some of your ideas lead nowhere, or to a non-intuitive workflow
 for your end users. You can always abandon those directions before you've sunk real
 time into building them out.
@@ -54,10 +54,10 @@ first.
 We  pay particular attention to reviewing 
 code at the 'seams' of a proposed design -- that is code that exposes any 
 aspect of functionality to some higher layer -- whether  that layer is calling code, or an
-end user. If what we're reviewing is unclear, we ask for more documentation. 
-If a comment uses unfamiliar terminology, or a section uses an
-unfamiliar syntax pattern, we ask for an explanation — and we weigh folding such explanations back
-into the comments (or a _backgrounder_ document), so it's there for the next person too.
+end user. If what we're reviewing is unclear, we instruct the AI to generate more documentation.
+Upon review,  if we find a comment using unfamiliar terminology, or a section using an
+unfamiliar syntax pattern, we ask for further explanation — and we weigh folding such explanations back
+into the original comments (or a _backgrounder_ document), so it's there for the next person too.
 Does that mean we scrutinize every numeric value in, say, some CSS the AI dumped out?
 Since our attention is limited, probably not — CSS gone wrong is at
 worst a rendering issue on one page -- not something that would kneecap an app completely.
@@ -95,7 +95,7 @@ the impression of both things. [Neural] "cells that fire together, wire together
 
 ## Case study: linking backgrounders to code
 
-Here's an example from some webpack plugin-in code that our 
+Here's an example from some [Webpack](https://webpack.js.org/) plugin-in code that our 
 founder wrote when he was just starting to learn about webpack:
 
 [`gas-demodulify-plugin`](https://github.com/doikayt/gas-demodulify-plugin)'s design
@@ -130,9 +130,10 @@ plain relative link when pointing at a whole file that isn't going anywhere, and
 commit-pinned permalink down to exact line numbers when the claim is precise enough
 that a refactor could make it stale. Second, the backgrounder doesn't try to explain
 everything itself — it says outright that the *why* lives in the doc and the *precise
-invariants* live in the source file's own comments. One altitude per document,
-cross-linked, so you can start reading from either end and still land in the same
-place.
+invariants* live in the source file's own comments. Each document sticks to one level
+of detail — high-level rationale in the markdown, precise mechanics in the code
+comments — and they link to each other, so you can start reading from either one and
+still find your way to the rest.
 
 ## Other Strategies to More Effectively Leverage AI
 
