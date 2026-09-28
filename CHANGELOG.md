@@ -1,5 +1,11 @@
 # @datalackey/qwiki
 
+## 0.1.64
+
+### Patch Changes
+
+-   - feat(website): make "How We Work With AI" a real site page
+
 ## 0.1.63
 
 ### Patch Changes
