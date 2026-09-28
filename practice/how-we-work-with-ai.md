@@ -25,7 +25,7 @@ Because:
 
 Documentation-first is just one aspect of a more general rule we follow: [Begin with
 the End in Mind](https://www.goodreads.com/quotes/1401614-to-begin-with-the-end-in-mind-means-to-start).
-We approach things from the end _user's_ perspective, the highest level of abstraction
+We strive to approach things from the end _user's_ perspective, the highest level of abstraction
 that actually matters. 
 
 When you sketch out the end state first, you
@@ -44,7 +44,7 @@ Keep in mind that, while the most important end state you are pursuing is useful
 new functionality, a secondary end state objective is to have code that
 is easy to understand, modify and obtain -- by future new members of the team, or maybe even 
 'future you'. It is for the benefit of these future colleagues that you develop 
-the _backgrounders_ we cover in [below](#teach-it-forward).
+the _backgrounders_ we cover [below](#teach-it-forward).
 
 ## Understand Before Using
 
